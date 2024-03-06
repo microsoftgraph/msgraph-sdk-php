@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent implements Parsable 
 {
     /**
-     * Instantiates a new enrollmentTroubleshootingEvent and sets the default values.
+     * Instantiates a new EnrollmentTroubleshootingEvent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

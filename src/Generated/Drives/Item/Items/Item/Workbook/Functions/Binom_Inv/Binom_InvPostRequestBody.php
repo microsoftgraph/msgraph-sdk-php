@@ -19,7 +19,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new binom_InvPostRequestBody and sets the default values.
+     * Instantiates a new Binom_InvPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

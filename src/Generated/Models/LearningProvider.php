@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class LearningProvider extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new learningProvider and sets the default values.
+     * Instantiates a new LearningProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();

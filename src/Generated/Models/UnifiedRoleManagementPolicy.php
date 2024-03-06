@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class UnifiedRoleManagementPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

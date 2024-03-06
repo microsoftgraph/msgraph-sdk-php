@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class RegistryValueEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new registryValueEvidence and sets the default values.
+     * Instantiates a new RegistryValueEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class SearchAlteration implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new searchAlteration and sets the default values.
+     * Instantiates a new SearchAlteration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

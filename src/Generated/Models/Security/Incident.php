@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Incident extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new incident and sets the default values.
+     * Instantiates a new Incident and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -106,7 +106,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the incident.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -195,7 +195,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The identity that last modified the incident.
      * @return string|null
     */
     public function getLastModifiedBy(): ?string {
@@ -219,7 +219,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
+     * Gets the redirectIncidentId property value. Only populated in case an incident is grouped with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @return string|null
     */
     public function getRedirectIncidentId(): ?string {
@@ -255,7 +255,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the systemTags property value. The systemTags property
+     * Gets the systemTags property value. The system tags associated with the incident.
      * @return array<string>|null
     */
     public function getSystemTags(): ?array {
@@ -354,7 +354,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the incident.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -386,7 +386,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The identity that last modified the incident.
      * @param string|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?string $value): void {
@@ -402,7 +402,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the redirectIncidentId property value. Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
+     * Sets the redirectIncidentId property value. Only populated in case an incident is grouped with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      * @param string|null $value Value to set for the redirectIncidentId property.
     */
     public function setRedirectIncidentId(?string $value): void {
@@ -426,7 +426,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the systemTags property value. The systemTags property
+     * Sets the systemTags property value. The system tags associated with the incident.
      * @param array<string>|null $value Value to set for the systemTags property.
     */
     public function setSystemTags(?array $value): void {

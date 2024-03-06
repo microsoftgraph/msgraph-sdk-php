@@ -16,7 +16,7 @@ class ParentSectionRequestBuilderGetRequestConfiguration extends BaseRequestConf
     public ?ParentSectionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new parentSectionRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ParentSectionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ParentSectionRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ParentSectionRequestBuilderGetRequestConfiguration extends BaseRequestConf
     }
 
     /**
-     * Instantiates a new parentSectionRequestBuilderGetQueryParameters.
+     * Instantiates a new ParentSectionRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ParentSectionRequestBuilderGetQueryParameters

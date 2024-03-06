@@ -16,7 +16,7 @@ class IdentityProtectionRequestBuilderGetRequestConfiguration extends BaseReques
     public ?IdentityProtectionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new identityProtectionRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IdentityProtectionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IdentityProtectionRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IdentityProtectionRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new identityProtectionRequestBuilderGetQueryParameters.
+     * Instantiates a new IdentityProtectionRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return IdentityProtectionRequestBuilderGetQueryParameters

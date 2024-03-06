@@ -16,7 +16,7 @@ class TokenIssuancePoliciesRequestBuilderGetRequestConfiguration extends BaseReq
     public ?TokenIssuancePoliciesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new tokenIssuancePoliciesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TokenIssuancePoliciesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TokenIssuancePoliciesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TokenIssuancePoliciesRequestBuilderGetRequestConfiguration extends BaseReq
     }
 
     /**
-     * Instantiates a new tokenIssuancePoliciesRequestBuilderGetQueryParameters.
+     * Instantiates a new TokenIssuancePoliciesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

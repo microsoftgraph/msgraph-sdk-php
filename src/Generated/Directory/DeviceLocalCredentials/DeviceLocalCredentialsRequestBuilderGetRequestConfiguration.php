@@ -16,7 +16,7 @@ class DeviceLocalCredentialsRequestBuilderGetRequestConfiguration extends BaseRe
     public ?DeviceLocalCredentialsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deviceLocalCredentialsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeviceLocalCredentialsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeviceLocalCredentialsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeviceLocalCredentialsRequestBuilderGetRequestConfiguration extends BaseRe
     }
 
     /**
-     * Instantiates a new deviceLocalCredentialsRequestBuilderGetQueryParameters.
+     * Instantiates a new DeviceLocalCredentialsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

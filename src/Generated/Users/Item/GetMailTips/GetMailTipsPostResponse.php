@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class GetMailTipsPostResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new getMailTipsPostResponse and sets the default values.
+     * Instantiates a new GetMailTipsPostResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

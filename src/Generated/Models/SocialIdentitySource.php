@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SocialIdentitySource extends IdentitySource implements Parsable 
 {
     /**
-     * Instantiates a new socialIdentitySource and sets the default values.
+     * Instantiates a new SocialIdentitySource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

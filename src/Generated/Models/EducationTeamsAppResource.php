@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationTeamsAppResource extends EducationResource implements Parsable 
 {
     /**
-     * Instantiates a new educationTeamsAppResource and sets the default values.
+     * Instantiates a new EducationTeamsAppResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

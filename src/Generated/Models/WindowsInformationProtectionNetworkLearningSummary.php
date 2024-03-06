@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsInformationProtectionNetworkLearningSummary extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.
+     * Instantiates a new WindowsInformationProtectionNetworkLearningSummary and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable 
 {
     /**
-     * Instantiates a new samlOrWsFedProvider and sets the default values.
+     * Instantiates a new SamlOrWsFedProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();

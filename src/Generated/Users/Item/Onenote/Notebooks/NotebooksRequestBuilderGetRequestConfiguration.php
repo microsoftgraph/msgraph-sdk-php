@@ -16,7 +16,7 @@ class NotebooksRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?NotebooksRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new notebooksRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new NotebooksRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param NotebooksRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class NotebooksRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new notebooksRequestBuilderGetQueryParameters.
+     * Instantiates a new NotebooksRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

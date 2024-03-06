@@ -16,7 +16,7 @@ class RelatedHostsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     public ?RelatedHostsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new relatedHostsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RelatedHostsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RelatedHostsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RelatedHostsRequestBuilderGetRequestConfiguration extends BaseRequestConfi
     }
 
     /**
-     * Instantiates a new relatedHostsRequestBuilderGetQueryParameters.
+     * Instantiates a new RelatedHostsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

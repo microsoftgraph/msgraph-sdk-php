@@ -21,7 +21,7 @@ class DeviceOperatingSystemSummary implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deviceOperatingSystemSummary and sets the default values.
+     * Instantiates a new DeviceOperatingSystemSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

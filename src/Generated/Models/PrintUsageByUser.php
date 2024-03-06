@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintUsageByUser extends PrintUsage implements Parsable 
 {
     /**
-     * Instantiates a new printUsageByUser and sets the default values.
+     * Instantiates a new PrintUsageByUser and sets the default values.
     */
     public function __construct() {
         parent::__construct();

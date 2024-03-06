@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TargetManager extends SubjectSet implements Parsable 
 {
     /**
-     * Instantiates a new targetManager and sets the default values.
+     * Instantiates a new TargetManager and sets the default values.
     */
     public function __construct() {
         parent::__construct();

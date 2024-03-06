@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new conditionalAccessPolicy and sets the default values.
+     * Instantiates a new ConditionalAccessPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

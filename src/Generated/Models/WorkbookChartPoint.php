@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartPoint extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChartPoint and sets the default values.
+     * Instantiates a new WorkbookChartPoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();

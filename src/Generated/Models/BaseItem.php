@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BaseItem extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new baseItem and sets the default values.
+     * Instantiates a new BaseItem and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,12 +26,14 @@ class BaseItem extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.baseSitePage': return new BaseSitePage();
                 case '#microsoft.graph.drive': return new Drive();
                 case '#microsoft.graph.driveItem': return new DriveItem();
                 case '#microsoft.graph.list': return new EscapedList();
                 case '#microsoft.graph.listItem': return new ListItem();
                 case '#microsoft.graph.sharedDriveItem': return new SharedDriveItem();
                 case '#microsoft.graph.site': return new Site();
+                case '#microsoft.graph.sitePage': return new SitePage();
             }
         }
         return new BaseItem();

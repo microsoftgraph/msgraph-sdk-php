@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedPermissionClassification extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedPermissionClassification and sets the default values.
+     * Instantiates a new DelegatedPermissionClassification and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -25,7 +25,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     }
 
     /**
-     * Gets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
+     * Gets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn't support $filter.
      * @return PermissionClassificationType|null
     */
     public function getClassification(): ?PermissionClassificationType {
@@ -85,7 +85,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
     }
 
     /**
-     * Sets the classification property value. The classification value being given. Possible value: low. Doesn't support $filter.
+     * Sets the classification property value. The classification value. Possible values: low, medium (preview), high (preview). Doesn't support $filter.
      * @param PermissionClassificationType|null $value Value to set for the classification property.
     */
     public function setClassification(?PermissionClassificationType $value): void {

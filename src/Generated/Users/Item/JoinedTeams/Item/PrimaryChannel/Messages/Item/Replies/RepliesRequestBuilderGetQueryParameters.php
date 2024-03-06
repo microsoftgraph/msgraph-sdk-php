@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\M
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, simply call get channel message.
+ * List all the replies to a message in a channel of a team. This method lists only the replies of the specified message, if any. To get the message itself, call get channel message.
 */
 class RepliesRequestBuilderGetQueryParameters 
 {
@@ -58,7 +58,7 @@ class RepliesRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new repliesRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new RepliesRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

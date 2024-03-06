@@ -20,7 +20,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getStaffAvailabilityPostRequestBody and sets the default values.
+     * Instantiates a new GetStaffAvailabilityPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

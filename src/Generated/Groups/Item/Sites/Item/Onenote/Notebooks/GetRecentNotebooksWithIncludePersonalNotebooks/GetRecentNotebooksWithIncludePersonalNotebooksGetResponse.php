@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class GetRecentNotebooksWithIncludePersonalNotebooksGetResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksGetResponse and sets the default values.
+     * Instantiates a new GetRecentNotebooksWithIncludePersonalNotebooksGetResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

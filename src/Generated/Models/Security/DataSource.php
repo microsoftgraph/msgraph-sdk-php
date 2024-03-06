@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DataSource extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new dataSource and sets the default values.
+     * Instantiates a new DataSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

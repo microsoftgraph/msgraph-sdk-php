@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class IntelligenceProfile extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new intelligenceProfile and sets the default values.
+     * Instantiates a new IntelligenceProfile and sets the default values.
     */
     public function __construct() {
         parent::__construct();

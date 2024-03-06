@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new teamsAppRemovedEventMessageDetail and sets the default values.
+     * Instantiates a new TeamsAppRemovedEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

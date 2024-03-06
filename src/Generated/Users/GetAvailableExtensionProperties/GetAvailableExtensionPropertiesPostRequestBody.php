@@ -18,7 +18,7 @@ class GetAvailableExtensionPropertiesPostRequestBody implements AdditionalDataHo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new getAvailableExtensionPropertiesPostRequestBody and sets the default values.
+     * Instantiates a new GetAvailableExtensionPropertiesPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

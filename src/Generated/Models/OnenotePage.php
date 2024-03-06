@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable 
 {
     /**
-     * Instantiates a new onenotePage and sets the default values.
+     * Instantiates a new OnenotePage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

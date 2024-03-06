@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AzureCommunicationServicesUserIdentity extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new azureCommunicationServicesUserIdentity and sets the default values.
+     * Instantiates a new AzureCommunicationServicesUserIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

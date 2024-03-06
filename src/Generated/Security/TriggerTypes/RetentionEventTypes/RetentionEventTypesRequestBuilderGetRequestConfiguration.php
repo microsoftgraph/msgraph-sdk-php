@@ -16,7 +16,7 @@ class RetentionEventTypesRequestBuilderGetRequestConfiguration extends BaseReque
     public ?RetentionEventTypesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new retentionEventTypesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RetentionEventTypesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RetentionEventTypesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RetentionEventTypesRequestBuilderGetRequestConfiguration extends BaseReque
     }
 
     /**
-     * Instantiates a new retentionEventTypesRequestBuilderGetQueryParameters.
+     * Instantiates a new RetentionEventTypesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

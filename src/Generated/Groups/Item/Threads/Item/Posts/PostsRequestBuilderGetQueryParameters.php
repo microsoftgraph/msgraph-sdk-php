@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation.
+ * Get the posts of the specified thread. You can specify both the parent conversation and the thread, or,you can specify the thread without referencing the parent conversation.
 */
 class PostsRequestBuilderGetQueryParameters 
 {
@@ -52,7 +52,7 @@ class PostsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new postsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new PostsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

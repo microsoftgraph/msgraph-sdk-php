@@ -18,7 +18,7 @@ class LocalizedLabel implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new localizedLabel and sets the default values.
+     * Instantiates a new LocalizedLabel and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

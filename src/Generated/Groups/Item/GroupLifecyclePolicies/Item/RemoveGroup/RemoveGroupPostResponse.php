@@ -18,7 +18,7 @@ class RemoveGroupPostResponse implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new removeGroupPostResponse and sets the default values.
+     * Instantiates a new RemoveGroupPostResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

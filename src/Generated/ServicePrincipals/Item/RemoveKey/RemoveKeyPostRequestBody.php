@@ -18,7 +18,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new removeKeyPostRequestBody and sets the default values.
+     * Instantiates a new RemoveKeyPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

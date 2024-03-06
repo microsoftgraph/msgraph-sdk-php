@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GitHubOrganizationEvidence extends AlertEvidence implements Parsable 
 {
     /**
-     * Instantiates a new gitHubOrganizationEvidence and sets the default values.
+     * Instantiates a new GitHubOrganizationEvidence and sets the default values.
     */
     public function __construct() {
         parent::__construct();

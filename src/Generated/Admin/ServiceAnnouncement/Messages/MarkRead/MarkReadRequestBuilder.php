@@ -40,8 +40,7 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
     public function post(MarkReadPostRequestBody $body, ?MarkReadRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [MarkReadPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

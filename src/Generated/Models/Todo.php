@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Todo extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new todo and sets the default values.
+     * Instantiates a new Todo and sets the default values.
     */
     public function __construct() {
         parent::__construct();

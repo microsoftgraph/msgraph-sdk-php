@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable 
 {
     /**
-     * Instantiates a new windowsMicrosoftEdgeApp and sets the default values.
+     * Instantiates a new WindowsMicrosoftEdgeApp and sets the default values.
     */
     public function __construct() {
         parent::__construct();

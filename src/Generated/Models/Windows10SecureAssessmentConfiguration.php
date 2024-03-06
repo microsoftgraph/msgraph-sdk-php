@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
+     * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

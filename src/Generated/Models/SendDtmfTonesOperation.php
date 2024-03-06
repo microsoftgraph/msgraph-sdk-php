@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SendDtmfTonesOperation extends CommsOperation implements Parsable 
 {
     /**
-     * Instantiates a new sendDtmfTonesOperation and sets the default values.
+     * Instantiates a new SendDtmfTonesOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkforceIntegration extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new workforceIntegration and sets the default values.
+     * Instantiates a new WorkforceIntegration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

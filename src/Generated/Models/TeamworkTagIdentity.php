@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamworkTagIdentity extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new teamworkTagIdentity and sets the default values.
+     * Instantiates a new TeamworkTagIdentity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

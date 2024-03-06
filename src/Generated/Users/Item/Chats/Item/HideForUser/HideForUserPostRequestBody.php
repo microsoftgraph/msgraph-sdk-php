@@ -19,7 +19,7 @@ class HideForUserPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new hideForUserPostRequestBody and sets the default values.
+     * Instantiates a new HideForUserPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

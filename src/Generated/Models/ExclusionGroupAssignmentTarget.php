@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExclusionGroupAssignmentTarget extends GroupAssignmentTarget implements Parsable 
 {
     /**
-     * Instantiates a new exclusionGroupAssignmentTarget and sets the default values.
+     * Instantiates a new ExclusionGroupAssignmentTarget and sets the default values.
     */
     public function __construct() {
         parent::__construct();

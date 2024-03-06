@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TermsAndConditionsAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new termsAndConditionsAssignment and sets the default values.
+     * Instantiates a new TermsAndConditionsAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class AcceptedSendersRequestBuilderGetRequestConfiguration extends BaseRequestCo
     public ?AcceptedSendersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new acceptedSendersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AcceptedSendersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AcceptedSendersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AcceptedSendersRequestBuilderGetRequestConfiguration extends BaseRequestCo
     }
 
     /**
-     * Instantiates a new acceptedSendersRequestBuilderGetQueryParameters.
+     * Instantiates a new AcceptedSendersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

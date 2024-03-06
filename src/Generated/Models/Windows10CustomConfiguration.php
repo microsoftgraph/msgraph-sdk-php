@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Windows10CustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new windows10CustomConfiguration and sets the default values.
+     * Instantiates a new Windows10CustomConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

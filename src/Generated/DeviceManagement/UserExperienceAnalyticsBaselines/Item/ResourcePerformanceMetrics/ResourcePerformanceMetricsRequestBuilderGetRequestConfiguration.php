@@ -16,7 +16,7 @@ class ResourcePerformanceMetricsRequestBuilderGetRequestConfiguration extends Ba
     public ?ResourcePerformanceMetricsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new resourcePerformanceMetricsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ResourcePerformanceMetricsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ResourcePerformanceMetricsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ResourcePerformanceMetricsRequestBuilderGetRequestConfiguration extends Ba
     }
 
     /**
-     * Instantiates a new resourcePerformanceMetricsRequestBuilderGetQueryParameters.
+     * Instantiates a new ResourcePerformanceMetricsRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ResourcePerformanceMetricsRequestBuilderGetQueryParameters

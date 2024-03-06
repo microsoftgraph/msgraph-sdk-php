@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable 
 {
     /**
-     * Instantiates a new unifiedRoleAssignmentScheduleRequest and sets the default values.
+     * Instantiates a new UnifiedRoleAssignmentScheduleRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -37,7 +37,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     * Gets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand and $select nested in $expand.
      * @return UnifiedRoleEligibilitySchedule|null
     */
     public function getActivatedUsing(): ?UnifiedRoleEligibilitySchedule {
@@ -147,7 +147,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the principal property value. The principal that's getting a role assignment through the request. Supports $expand.
+     * Gets the principal property value. The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
@@ -171,7 +171,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
+     * Gets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand and $select nested in $expand.
      * @return UnifiedRoleDefinition|null
     */
     public function getRoleDefinition(): ?UnifiedRoleDefinition {
@@ -207,7 +207,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Gets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+     * Gets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand and $select nested in $expand.
      * @return UnifiedRoleAssignmentSchedule|null
     */
     public function getTargetSchedule(): ?UnifiedRoleAssignmentSchedule {
@@ -275,7 +275,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand.
+     * Sets the activatedUsing property value. If the request is from an eligible administrator to activate a role, this parameter will show the related eligible assignment for that activation. Otherwise, it's null. Supports $expand and $select nested in $expand.
      * @param UnifiedRoleEligibilitySchedule|null $value Value to set for the activatedUsing property.
     */
     public function setActivatedUsing(?UnifiedRoleEligibilitySchedule $value): void {
@@ -331,7 +331,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the principal property value. The principal that's getting a role assignment through the request. Supports $expand.
+     * Sets the principal property value. The principal that's getting a role assignment through the request. Supports $expand and $select nested in $expand for id only.
      * @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value): void {
@@ -347,7 +347,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand.
+     * Sets the roleDefinition property value. Detailed information for the unifiedRoleDefinition object that is referenced through the roleDefinitionId property. Supports $expand and $select nested in $expand.
      * @param UnifiedRoleDefinition|null $value Value to set for the roleDefinition property.
     */
     public function setRoleDefinition(?UnifiedRoleDefinition $value): void {
@@ -371,7 +371,7 @@ class UnifiedRoleAssignmentScheduleRequest extends Request implements Parsable
     }
 
     /**
-     * Sets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+     * Sets the targetSchedule property value. The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand and $select nested in $expand.
      * @param UnifiedRoleAssignmentSchedule|null $value Value to set for the targetSchedule property.
     */
     public function setTargetSchedule(?UnifiedRoleAssignmentSchedule $value): void {

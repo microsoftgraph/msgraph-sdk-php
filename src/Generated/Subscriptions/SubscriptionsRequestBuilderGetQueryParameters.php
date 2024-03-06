@@ -22,7 +22,7 @@ class SubscriptionsRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new subscriptionsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new SubscriptionsRequestBuilderGetQueryParameters and sets the default values.
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
     */

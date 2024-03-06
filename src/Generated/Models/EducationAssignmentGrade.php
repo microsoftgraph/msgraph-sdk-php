@@ -19,7 +19,7 @@ class EducationAssignmentGrade implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new educationAssignmentGrade and sets the default values.
+     * Instantiates a new EducationAssignmentGrade and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

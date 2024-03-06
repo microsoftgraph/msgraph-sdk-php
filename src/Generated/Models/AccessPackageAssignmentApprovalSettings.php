@@ -19,7 +19,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessPackageAssignmentApprovalSettings and sets the default values.
+     * Instantiates a new AccessPackageAssignmentApprovalSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

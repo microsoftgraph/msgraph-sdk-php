@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FeatureRolloutPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new featureRolloutPolicy and sets the default values.
+     * Instantiates a new FeatureRolloutPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

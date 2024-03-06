@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Workflow extends WorkflowBase implements Parsable 
 {
     /**
-     * Instantiates a new workflow and sets the default values.
+     * Instantiates a new Workflow and sets the default values.
     */
     public function __construct() {
         parent::__construct();

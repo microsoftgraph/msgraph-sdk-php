@@ -22,7 +22,7 @@ class BestPracticesMetricsRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new bestPracticesMetricsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new BestPracticesMetricsRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

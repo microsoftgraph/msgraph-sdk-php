@@ -19,7 +19,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new audioConferencing and sets the default values.
+     * Instantiates a new AudioConferencing and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

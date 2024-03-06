@@ -19,7 +19,7 @@ class Error_TypePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new error_TypePostRequestBody and sets the default values.
+     * Instantiates a new Error_TypePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

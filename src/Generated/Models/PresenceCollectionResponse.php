@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PresenceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new presenceCollectionResponse and sets the default values.
+     * Instantiates a new PresenceCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IncludeAllAccountTargetContent extends AccountTargetContent implements Parsable 
 {
     /**
-     * Instantiates a new includeAllAccountTargetContent and sets the default values.
+     * Instantiates a new IncludeAllAccountTargetContent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

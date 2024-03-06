@@ -22,7 +22,7 @@ class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseRequestBuild
      * @param string|null $user Usage: User='{User}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $user = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/calendar/allowedCalendarSharingRoles(User=\'{User}\'){?%24top,%24skip,%24search,%24filter,%24count}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/calendar/allowedCalendarSharingRoles(User=\'{User}\'){?%24count,%24filter,%24search,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['User'] = $user;
@@ -41,8 +41,7 @@ class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseRequestBuild
     public function get(?AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [AllowedCalendarSharingRolesWithUserGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

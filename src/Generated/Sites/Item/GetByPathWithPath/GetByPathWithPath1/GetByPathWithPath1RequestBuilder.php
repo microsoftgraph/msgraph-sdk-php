@@ -18,6 +18,7 @@ use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\La
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\Lists\ListsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPath1\TermStore\TermStoreRequestBuilder;
@@ -117,6 +118,13 @@ class GetByPathWithPath1RequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the pages property of the microsoft.graph.site entity.
+    */
+    public function pages(): PagesRequestBuilder {
+        return new PagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.
     */
     public function permissions(): PermissionsRequestBuilder {
@@ -170,8 +178,7 @@ class GetByPathWithPath1RequestBuilder extends BaseRequestBuilder
     public function get(?GetByPathWithPath1RequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Site::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

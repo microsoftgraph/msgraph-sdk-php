@@ -18,7 +18,7 @@ class AttributeMappingParameterSchema implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new attributeMappingParameterSchema and sets the default values.
+     * Instantiates a new AttributeMappingParameterSchema and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

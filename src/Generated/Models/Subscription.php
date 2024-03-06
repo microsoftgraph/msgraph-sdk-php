@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Subscription extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new subscription and sets the default values.
+     * Instantiates a new Subscription and sets the default values.
     */
     public function __construct() {
         parent::__construct();

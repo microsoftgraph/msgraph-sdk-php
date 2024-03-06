@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SkypeForBusinessUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new skypeForBusinessUserConversationMember and sets the default values.
+     * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();

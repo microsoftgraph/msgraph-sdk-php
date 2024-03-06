@@ -16,7 +16,7 @@ class BitlockerRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     public ?BitlockerRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bitlockerRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BitlockerRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BitlockerRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BitlockerRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
     }
 
     /**
-     * Instantiates a new bitlockerRequestBuilderGetQueryParameters.
+     * Instantiates a new BitlockerRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return BitlockerRequestBuilderGetQueryParameters

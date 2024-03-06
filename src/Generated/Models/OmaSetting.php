@@ -21,7 +21,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new omaSetting and sets the default values.
+     * Instantiates a new OmaSetting and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -10,7 +10,7 @@ use Psr\Http\Message\StreamInterface;
 class DriveItemVersion extends BaseItemVersion implements Parsable 
 {
     /**
-     * Instantiates a new driveItemVersion and sets the default values.
+     * Instantiates a new DriveItemVersion and sets the default values.
     */
     public function __construct() {
         parent::__construct();

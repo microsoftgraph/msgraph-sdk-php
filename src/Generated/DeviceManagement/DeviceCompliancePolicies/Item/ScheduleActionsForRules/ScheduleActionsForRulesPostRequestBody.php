@@ -20,7 +20,7 @@ class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHolder, Ba
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new scheduleActionsForRulesPostRequestBody and sets the default values.
+     * Instantiates a new ScheduleActionsForRulesPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

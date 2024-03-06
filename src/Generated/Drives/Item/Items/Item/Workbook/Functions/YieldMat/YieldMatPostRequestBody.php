@@ -19,7 +19,7 @@ class YieldMatPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new yieldMatPostRequestBody and sets the default values.
+     * Instantiates a new YieldMatPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

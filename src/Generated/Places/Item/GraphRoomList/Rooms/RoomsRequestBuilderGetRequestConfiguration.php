@@ -16,7 +16,7 @@ class RoomsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?RoomsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new roomsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RoomsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RoomsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RoomsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new roomsRequestBuilderGetQueryParameters.
+     * Instantiates a new RoomsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

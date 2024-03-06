@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AudioRoutingGroup extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new audioRoutingGroup and sets the default values.
+     * Instantiates a new AudioRoutingGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

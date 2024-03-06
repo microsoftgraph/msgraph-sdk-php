@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookChartAxisFormat extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new workbookChartAxisFormat and sets the default values.
+     * Instantiates a new WorkbookChartAxisFormat and sets the default values.
     */
     public function __construct() {
         parent::__construct();

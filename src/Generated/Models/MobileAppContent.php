@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class MobileAppContent extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new mobileAppContent and sets the default values.
+     * Instantiates a new MobileAppContent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

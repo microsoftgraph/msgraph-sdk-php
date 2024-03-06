@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BrowserSharedCookie extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new browserSharedCookie and sets the default values.
+     * Instantiates a new BrowserSharedCookie and sets the default values.
     */
     public function __construct() {
         parent::__construct();

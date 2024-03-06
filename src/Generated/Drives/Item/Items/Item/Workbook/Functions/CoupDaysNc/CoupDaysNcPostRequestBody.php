@@ -19,7 +19,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new coupDaysNcPostRequestBody and sets the default values.
+     * Instantiates a new CoupDaysNcPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

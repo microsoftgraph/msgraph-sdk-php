@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable 
 {
     /**
-     * Instantiates a new sectionGroup and sets the default values.
+     * Instantiates a new SectionGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

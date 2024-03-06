@@ -16,7 +16,7 @@ class NotificationMessageTemplatesRequestBuilderGetRequestConfiguration extends 
     public ?NotificationMessageTemplatesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new notificationMessageTemplatesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new NotificationMessageTemplatesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param NotificationMessageTemplatesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class NotificationMessageTemplatesRequestBuilderGetRequestConfiguration extends 
     }
 
     /**
-     * Instantiates a new notificationMessageTemplatesRequestBuilderGetQueryParameters.
+     * Instantiates a new NotificationMessageTemplatesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -21,7 +21,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary implements Additional
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new userExperienceAnalyticsCloudManagementDevicesSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsCloudManagementDevicesSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

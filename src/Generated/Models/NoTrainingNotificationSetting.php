@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class NoTrainingNotificationSetting extends EndUserNotificationSetting implements Parsable 
 {
     /**
-     * Instantiates a new noTrainingNotificationSetting and sets the default values.
+     * Instantiates a new NoTrainingNotificationSetting and sets the default values.
     */
     public function __construct() {
         parent::__construct();

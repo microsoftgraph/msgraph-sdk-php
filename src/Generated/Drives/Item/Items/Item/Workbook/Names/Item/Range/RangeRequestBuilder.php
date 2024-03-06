@@ -31,23 +31,22 @@ class RangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of range object.
+     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
      * @param RangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookRange|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/range-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/nameditem-range?view=graph-rest-1.0 Find more info here
     */
     public function get(?RangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [WorkbookRange::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Retrieve the properties and relationships of range object.
+     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
      * @param RangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -19,7 +19,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new preAuthorizedApplication and sets the default values.
+     * Instantiates a new PreAuthorizedApplication and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

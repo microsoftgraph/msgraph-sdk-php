@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AzureActiveDirectoryTenant extends IdentitySource implements Parsable 
 {
     /**
-     * Instantiates a new azureActiveDirectoryTenant and sets the default values.
+     * Instantiates a new AzureActiveDirectoryTenant and sets the default values.
     */
     public function __construct() {
         parent::__construct();

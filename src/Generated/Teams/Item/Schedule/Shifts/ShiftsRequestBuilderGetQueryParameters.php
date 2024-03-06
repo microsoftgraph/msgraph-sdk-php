@@ -52,7 +52,7 @@ class ShiftsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new shiftsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new ShiftsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values

@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
     */
     public function __construct() {
         parent::__construct();

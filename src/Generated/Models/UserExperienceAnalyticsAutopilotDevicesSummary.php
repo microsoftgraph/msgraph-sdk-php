@@ -21,7 +21,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary implements AdditionalDataHo
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new userExperienceAnalyticsAutopilotDevicesSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAutopilotDevicesSummary and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

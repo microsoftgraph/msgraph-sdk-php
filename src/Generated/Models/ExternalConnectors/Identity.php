@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Identity extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new identity and sets the default values.
+     * Instantiates a new Identity and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class RetentionLabelSettings implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new retentionLabelSettings and sets the default values.
+     * Instantiates a new RetentionLabelSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

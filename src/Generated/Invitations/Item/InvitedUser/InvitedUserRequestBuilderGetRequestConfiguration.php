@@ -16,7 +16,7 @@ class InvitedUserRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?InvitedUserRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new invitedUserRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InvitedUserRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InvitedUserRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InvitedUserRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new invitedUserRequestBuilderGetQueryParameters.
+     * Instantiates a new InvitedUserRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InvitedUserRequestBuilderGetQueryParameters

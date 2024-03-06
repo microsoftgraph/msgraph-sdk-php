@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AppManagementPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new appManagementPolicyCollectionResponse and sets the default values.
+     * Instantiates a new AppManagementPolicyCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

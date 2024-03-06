@@ -16,7 +16,7 @@ class BrandingRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?BrandingRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new brandingRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new BrandingRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param BrandingRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class BrandingRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new brandingRequestBuilderGetQueryParameters.
+     * Instantiates a new BrandingRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return BrandingRequestBuilderGetQueryParameters

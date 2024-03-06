@@ -18,7 +18,7 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new driveItemUploadableProperties and sets the default values.
+     * Instantiates a new DriveItemUploadableProperties and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -68,6 +68,18 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
     }
 
     /**
+     * Gets the driveItemSource property value. Information about the drive item source. Read-write. Only on OneDrive for Business and SharePoint.
+     * @return DriveItemSource|null
+    */
+    public function getDriveItemSource(): ?DriveItemSource {
+        $val = $this->getBackingStore()->get('driveItemSource');
+        if (is_null($val) || $val instanceof DriveItemSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveItemSource'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -75,15 +87,17 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
         $o = $this;
         return  [
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
+            'driveItemSource' => fn(ParseNode $n) => $o->setDriveItemSource($n->getObjectValue([DriveItemSource::class, 'createFromDiscriminatorValue'])),
             'fileSize' => fn(ParseNode $n) => $o->setFileSize($n->getIntegerValue()),
             'fileSystemInfo' => fn(ParseNode $n) => $o->setFileSystemInfo($n->getObjectValue([FileSystemInfo::class, 'createFromDiscriminatorValue'])),
+            'mediaSource' => fn(ParseNode $n) => $o->setMediaSource($n->getObjectValue([MediaSource::class, 'createFromDiscriminatorValue'])),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
-     * Gets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+     * Gets the fileSize property value. Provides an expected file size to perform a quota check before uploading. Only on OneDrive Personal.
      * @return int|null
     */
     public function getFileSize(): ?int {
@@ -104,6 +118,18 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'fileSystemInfo'");
+    }
+
+    /**
+     * Gets the mediaSource property value. Media source information. Read-write. Only on OneDrive for Business and SharePoint.
+     * @return MediaSource|null
+    */
+    public function getMediaSource(): ?MediaSource {
+        $val = $this->getBackingStore()->get('mediaSource');
+        if (is_null($val) || $val instanceof MediaSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaSource'");
     }
 
     /**
@@ -136,8 +162,10 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('description', $this->getDescription());
+        $writer->writeObjectValue('driveItemSource', $this->getDriveItemSource());
         $writer->writeIntegerValue('fileSize', $this->getFileSize());
         $writer->writeObjectValue('fileSystemInfo', $this->getFileSystemInfo());
+        $writer->writeObjectValue('mediaSource', $this->getMediaSource());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -168,7 +196,15 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+     * Sets the driveItemSource property value. Information about the drive item source. Read-write. Only on OneDrive for Business and SharePoint.
+     * @param DriveItemSource|null $value Value to set for the driveItemSource property.
+    */
+    public function setDriveItemSource(?DriveItemSource $value): void {
+        $this->getBackingStore()->set('driveItemSource', $value);
+    }
+
+    /**
+     * Sets the fileSize property value. Provides an expected file size to perform a quota check before uploading. Only on OneDrive Personal.
      * @param int|null $value Value to set for the fileSize property.
     */
     public function setFileSize(?int $value): void {
@@ -181,6 +217,14 @@ class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel
     */
     public function setFileSystemInfo(?FileSystemInfo $value): void {
         $this->getBackingStore()->set('fileSystemInfo', $value);
+    }
+
+    /**
+     * Sets the mediaSource property value. Media source information. Read-write. Only on OneDrive for Business and SharePoint.
+     * @param MediaSource|null $value Value to set for the mediaSource property.
+    */
+    public function setMediaSource(?MediaSource $value): void {
+        $this->getBackingStore()->set('mediaSource', $value);
     }
 
     /**

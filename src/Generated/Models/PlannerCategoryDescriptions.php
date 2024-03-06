@@ -18,7 +18,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new plannerCategoryDescriptions and sets the default values.
+     * Instantiates a new PlannerCategoryDescriptions and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

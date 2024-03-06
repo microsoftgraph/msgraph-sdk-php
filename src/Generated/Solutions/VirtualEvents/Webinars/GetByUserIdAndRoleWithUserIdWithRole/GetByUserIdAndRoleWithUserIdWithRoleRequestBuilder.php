@@ -23,7 +23,7 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuil
      * @param string|null $userId Usage: userId='{userId}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $role = null, ?string $userId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/virtualEvents/webinars/getByUserIdAndRole(userId=\'{userId}\',role=\'{role}\'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/virtualEvents/webinars/getByUserIdAndRole(userId=\'{userId}\',role=\'{role}\'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['role'] = $role;
@@ -43,8 +43,7 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuil
     public function get(?GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
-                '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [GetByUserIdAndRoleWithUserIdWithRoleGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }

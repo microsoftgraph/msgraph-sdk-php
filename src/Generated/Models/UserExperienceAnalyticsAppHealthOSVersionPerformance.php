@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
     */
     public function __construct() {
         parent::__construct();

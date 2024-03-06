@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessScheduleRequest implements Parsable 
 {
     /**
-     * Instantiates a new privilegedAccessGroupEligibilityScheduleRequest and sets the default values.
+     * Instantiates a new PrivilegedAccessGroupEligibilityScheduleRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -55,7 +55,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
+     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -79,7 +79,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Gets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
+     * Gets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @return DirectoryObject|null
     */
     public function getPrincipal(): ?DirectoryObject {
@@ -150,7 +150,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand.
+     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
@@ -166,7 +166,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Sets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand.
+     * Sets the principal property value. References the principal that's in the scope of the membership or ownership eligibility request through the group that's governed by PIM. Supports $expand and $select nested in $expand for id only.
      * @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsAppInstalledEventMessageDetail extends EventMessageDetail implements Parsable 
 {
     /**
-     * Instantiates a new teamsAppInstalledEventMessageDetail and sets the default values.
+     * Instantiates a new TeamsAppInstalledEventMessageDetail and sets the default values.
     */
     public function __construct() {
         parent::__construct();

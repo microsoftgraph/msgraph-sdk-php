@@ -16,7 +16,7 @@ class AuthenticationMethodModesRequestBuilderGetRequestConfiguration extends Bas
     public ?AuthenticationMethodModesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new authenticationMethodModesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodModesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AuthenticationMethodModesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AuthenticationMethodModesRequestBuilderGetRequestConfiguration extends Bas
     }
 
     /**
-     * Instantiates a new authenticationMethodModesRequestBuilderGetQueryParameters.
+     * Instantiates a new AuthenticationMethodModesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

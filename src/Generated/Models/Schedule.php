@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Schedule extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new schedule and sets the default values.
+     * Instantiates a new Schedule and sets the default values.
     */
     public function __construct() {
         parent::__construct();

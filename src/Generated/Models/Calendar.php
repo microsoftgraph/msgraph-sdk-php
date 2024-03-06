@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Calendar extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new calendar and sets the default values.
+     * Instantiates a new Calendar and sets the default values.
     */
     public function __construct() {
         parent::__construct();

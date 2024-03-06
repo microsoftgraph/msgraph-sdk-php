@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class BrowserSiteList extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new browserSiteList and sets the default values.
+     * Instantiates a new BrowserSiteList and sets the default values.
     */
     public function __construct() {
         parent::__construct();

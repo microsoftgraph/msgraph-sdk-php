@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EducationUser extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationUser and sets the default values.
+     * Instantiates a new EducationUser and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -236,7 +236,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+     * Gets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Read-Only. Supports $filter.
      * @return string|null
     */
     public function getMail(): ?string {
@@ -700,7 +700,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
+     * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.com. Read-Only. Supports $filter.
      * @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value): void {

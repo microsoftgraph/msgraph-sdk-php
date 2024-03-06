@@ -19,7 +19,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new directRoutingLogRow and sets the default values.
+     * Instantiates a new DirectRoutingLogRow and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -185,7 +185,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
+     * Gets the finalSipCode property value. The final response code with which the call ended. For more information, see RFC 3261.
      * @return int|null
     */
     public function getFinalSipCode(): ?int {
@@ -221,7 +221,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the inviteDateTime property value. When the initial invite was sent.
+     * Gets the inviteDateTime property value. The date and time when the initial invite was sent.
      * @return DateTime|null
     */
     public function getInviteDateTime(): ?DateTime {
@@ -281,7 +281,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
+     * Gets the startDateTime property value. Call start time.For failed and unanswered calls, this value can be equal to the invite or failure time.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -341,7 +341,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
+     * Gets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -463,7 +463,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the finalSipCode property value. The code with which the call ended. For more information, see RFC 3261.
+     * Sets the finalSipCode property value. The final response code with which the call ended. For more information, see RFC 3261.
      * @param int|null $value Value to set for the finalSipCode property.
     */
     public function setFinalSipCode(?int $value): void {
@@ -487,7 +487,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the inviteDateTime property value. When the initial invite was sent.
+     * Sets the inviteDateTime property value. The date and time when the initial invite was sent.
      * @param DateTime|null $value Value to set for the inviteDateTime property.
     */
     public function setInviteDateTime(?DateTime $value): void {
@@ -527,7 +527,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this can be equal to the invite or failure time.
+     * Sets the startDateTime property value. Call start time.For failed and unanswered calls, this value can be equal to the invite or failure time.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -567,7 +567,7 @@ class DirectRoutingLogRow implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP Address, and can be the same as the user's email address.
+     * Sets the userPrincipalName property value. UserPrincipalName (sign-in name) in Microsoft Entra ID. This value is usually the same as the user's SIP Address, and can be the same as the user's email address.
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

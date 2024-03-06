@@ -20,7 +20,7 @@ class SslCertificateEntity implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new sslCertificateEntity and sets the default values.
+     * Instantiates a new SslCertificateEntity and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

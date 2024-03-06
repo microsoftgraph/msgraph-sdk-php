@@ -16,7 +16,7 @@ class ApprovalRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     public ?ApprovalRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new approvalRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ApprovalRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ApprovalRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ApprovalRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
     }
 
     /**
-     * Instantiates a new approvalRequestBuilderGetQueryParameters.
+     * Instantiates a new ApprovalRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ApprovalRequestBuilderGetQueryParameters

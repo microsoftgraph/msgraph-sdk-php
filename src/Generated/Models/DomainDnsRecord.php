@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DomainDnsRecord extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new domainDnsRecord and sets the default values.
+     * Instantiates a new DomainDnsRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

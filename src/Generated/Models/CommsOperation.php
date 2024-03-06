@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CommsOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new commsOperation and sets the default values.
+     * Instantiates a new CommsOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -16,7 +16,7 @@ class ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration exte
     public ?ApplePushNotificationCertificateRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new applePushNotificationCertificateRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ApplePushNotificationCertificateRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration exte
     }
 
     /**
-     * Instantiates a new applePushNotificationCertificateRequestBuilderGetQueryParameters.
+     * Instantiates a new ApplePushNotificationCertificateRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ApplePushNotificationCertificateRequestBuilderGetQueryParameters

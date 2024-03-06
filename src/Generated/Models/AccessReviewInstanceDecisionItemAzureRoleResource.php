@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessReviewInstanceDecisionItemResource implements Parsable 
 {
     /**
-     * Instantiates a new accessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
+     * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -18,7 +18,7 @@ class WatermarkProtectionValues implements AdditionalDataHolder, BackedModel, Pa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new watermarkProtectionValues and sets the default values.
+     * Instantiates a new WatermarkProtectionValues and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

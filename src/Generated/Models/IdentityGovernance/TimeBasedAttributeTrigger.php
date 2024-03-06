@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Parsable 
 {
     /**
-     * Instantiates a new timeBasedAttributeTrigger and sets the default values.
+     * Instantiates a new TimeBasedAttributeTrigger and sets the default values.
     */
     public function __construct() {
         parent::__construct();

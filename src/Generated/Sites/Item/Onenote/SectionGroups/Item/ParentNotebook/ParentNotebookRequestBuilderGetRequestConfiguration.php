@@ -16,7 +16,7 @@ class ParentNotebookRequestBuilderGetRequestConfiguration extends BaseRequestCon
     public ?ParentNotebookRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new parentNotebookRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ParentNotebookRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ParentNotebookRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ParentNotebookRequestBuilderGetRequestConfiguration extends BaseRequestCon
     }
 
     /**
-     * Instantiates a new parentNotebookRequestBuilderGetQueryParameters.
+     * Instantiates a new ParentNotebookRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ParentNotebookRequestBuilderGetQueryParameters

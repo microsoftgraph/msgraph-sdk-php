@@ -19,7 +19,7 @@ class PriceDiscPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new priceDiscPostRequestBody and sets the default values.
+     * Instantiates a new PriceDiscPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

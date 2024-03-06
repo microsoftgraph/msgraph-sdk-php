@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements Parsable 
 {
     /**
-     * Instantiates a new onenoteEntityHierarchyModel and sets the default values.
+     * Instantiates a new OnenoteEntityHierarchyModel and sets the default values.
     */
     public function __construct() {
         parent::__construct();

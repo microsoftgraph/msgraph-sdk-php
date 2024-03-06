@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class Store extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new store and sets the default values.
+     * Instantiates a new Store and sets the default values.
     */
     public function __construct() {
         parent::__construct();

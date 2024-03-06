@@ -19,7 +19,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new tbillEqPostRequestBody and sets the default values.
+     * Instantiates a new TbillEqPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

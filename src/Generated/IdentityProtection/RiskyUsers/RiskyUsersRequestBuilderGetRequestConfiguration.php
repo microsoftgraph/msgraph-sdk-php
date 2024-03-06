@@ -16,7 +16,7 @@ class RiskyUsersRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     public ?RiskyUsersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new riskyUsersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RiskyUsersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RiskyUsersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class RiskyUsersRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
     }
 
     /**
-     * Instantiates a new riskyUsersRequestBuilderGetQueryParameters.
+     * Instantiates a new RiskyUsersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

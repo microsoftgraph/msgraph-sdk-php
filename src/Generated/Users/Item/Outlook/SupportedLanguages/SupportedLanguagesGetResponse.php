@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class SupportedLanguagesGetResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new supportedLanguagesGetResponse and sets the default values.
+     * Instantiates a new SupportedLanguagesGetResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EnrollmentConfigurationAssignmentCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new enrollmentConfigurationAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new EnrollmentConfigurationAssignmentCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

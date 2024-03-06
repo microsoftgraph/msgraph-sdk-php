@@ -16,7 +16,7 @@ class EnvironmentRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     public ?EnvironmentRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new environmentRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new EnvironmentRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param EnvironmentRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class EnvironmentRequestBuilderGetRequestConfiguration extends BaseRequestConfig
     }
 
     /**
-     * Instantiates a new environmentRequestBuilderGetQueryParameters.
+     * Instantiates a new EnvironmentRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EnvironmentRequestBuilderGetQueryParameters

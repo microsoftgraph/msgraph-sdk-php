@@ -18,7 +18,7 @@ class ClearPresencePostRequestBody implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new clearPresencePostRequestBody and sets the default values.
+     * Instantiates a new ClearPresencePostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

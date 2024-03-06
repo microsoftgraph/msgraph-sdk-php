@@ -16,7 +16,7 @@ class ComplianceManagementPartnersRequestBuilderGetRequestConfiguration extends 
     public ?ComplianceManagementPartnersRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new complianceManagementPartnersRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ComplianceManagementPartnersRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ComplianceManagementPartnersRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ComplianceManagementPartnersRequestBuilderGetRequestConfiguration extends 
     }
 
     /**
-     * Instantiates a new complianceManagementPartnersRequestBuilderGetQueryParameters.
+     * Instantiates a new ComplianceManagementPartnersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

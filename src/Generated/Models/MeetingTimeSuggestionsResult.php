@@ -19,7 +19,7 @@ class MeetingTimeSuggestionsResult implements AdditionalDataHolder, BackedModel,
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
+     * Instantiates a new MeetingTimeSuggestionsResult and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

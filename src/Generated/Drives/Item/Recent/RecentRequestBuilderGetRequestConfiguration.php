@@ -16,7 +16,7 @@ class RecentRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     public ?RecentRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new recentRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new RecentRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param RecentRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,8 +27,9 @@ class RecentRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
     }
 
     /**
-     * Instantiates a new recentRequestBuilderGetQueryParameters.
+     * Instantiates a new RecentRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class RecentRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
      * @param int|null $top Show only the first n items
      * @return RecentRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): RecentRequestBuilderGetQueryParameters {
-        return new RecentRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): RecentRequestBuilderGetQueryParameters {
+        return new RecentRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

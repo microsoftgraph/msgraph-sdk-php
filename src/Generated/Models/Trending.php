@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Trending extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new trending and sets the default values.
+     * Instantiates a new Trending and sets the default values.
     */
     public function __construct() {
         parent::__construct();

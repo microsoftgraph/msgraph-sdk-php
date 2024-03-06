@@ -19,7 +19,7 @@ class UpdateRecordingStatusPostRequestBody implements AdditionalDataHolder, Back
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new updateRecordingStatusPostRequestBody and sets the default values.
+     * Instantiates a new UpdateRecordingStatusPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

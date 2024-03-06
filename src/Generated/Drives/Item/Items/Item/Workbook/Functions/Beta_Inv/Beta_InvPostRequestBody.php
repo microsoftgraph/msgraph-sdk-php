@@ -19,7 +19,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new beta_InvPostRequestBody and sets the default values.
+     * Instantiates a new Beta_InvPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ChatMessage extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new chatMessage and sets the default values.
+     * Instantiates a new ChatMessage and sets the default values.
     */
     public function __construct() {
         parent::__construct();

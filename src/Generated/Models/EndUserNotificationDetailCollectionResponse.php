@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class EndUserNotificationDetailCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new endUserNotificationDetailCollectionResponse and sets the default values.
+     * Instantiates a new EndUserNotificationDetailCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();

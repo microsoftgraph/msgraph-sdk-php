@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class ManagedAppConfiguration extends ManagedAppPolicy implements Parsable 
 {
     /**
-     * Instantiates a new managedAppConfiguration and sets the default values.
+     * Instantiates a new ManagedAppConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

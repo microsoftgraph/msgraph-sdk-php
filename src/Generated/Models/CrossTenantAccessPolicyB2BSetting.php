@@ -18,7 +18,7 @@ class CrossTenantAccessPolicyB2BSetting implements AdditionalDataHolder, BackedM
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new crossTenantAccessPolicyB2BSetting and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyB2BSetting and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

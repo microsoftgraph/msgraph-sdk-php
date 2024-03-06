@@ -16,7 +16,7 @@ class SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration extends Base
     public ?SwapShiftsChangeRequestsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new swapShiftsChangeRequestsRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param SwapShiftsChangeRequestsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration extends Base
     }
 
     /**
-     * Instantiates a new swapShiftsChangeRequestsRequestBuilderGetQueryParameters.
+     * Instantiates a new SwapShiftsChangeRequestsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

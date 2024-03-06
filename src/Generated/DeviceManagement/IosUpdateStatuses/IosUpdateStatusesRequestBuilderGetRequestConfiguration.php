@@ -16,7 +16,7 @@ class IosUpdateStatusesRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?IosUpdateStatusesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new iosUpdateStatusesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new IosUpdateStatusesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param IosUpdateStatusesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class IosUpdateStatusesRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new iosUpdateStatusesRequestBuilderGetQueryParameters.
+     * Instantiates a new IosUpdateStatusesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

@@ -14,7 +14,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class DeviceManagementExportJob extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceManagementExportJob and sets the default values.
+     * Instantiates a new DeviceManagementExportJob and sets the default values.
     */
     public function __construct() {
         parent::__construct();

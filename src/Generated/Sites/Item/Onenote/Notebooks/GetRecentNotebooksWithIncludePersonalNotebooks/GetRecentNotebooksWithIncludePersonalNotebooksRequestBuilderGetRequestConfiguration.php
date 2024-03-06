@@ -16,7 +16,7 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConf
     public ?GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConf
     }
 
     /**
-     * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters.
+     * Instantiates a new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

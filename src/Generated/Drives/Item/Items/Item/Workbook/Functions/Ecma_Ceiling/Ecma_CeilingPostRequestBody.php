@@ -19,7 +19,7 @@ class Ecma_CeilingPostRequestBody implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new ecma_CeilingPostRequestBody and sets the default values.
+     * Instantiates a new Ecma_CeilingPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

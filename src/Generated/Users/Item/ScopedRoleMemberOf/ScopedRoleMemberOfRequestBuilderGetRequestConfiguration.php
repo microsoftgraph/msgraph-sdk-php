@@ -16,7 +16,7 @@ class ScopedRoleMemberOfRequestBuilderGetRequestConfiguration extends BaseReques
     public ?ScopedRoleMemberOfRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new scopedRoleMemberOfRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new ScopedRoleMemberOfRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param ScopedRoleMemberOfRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class ScopedRoleMemberOfRequestBuilderGetRequestConfiguration extends BaseReques
     }
 
     /**
-     * Instantiates a new scopedRoleMemberOfRequestBuilderGetQueryParameters.
+     * Instantiates a new ScopedRoleMemberOfRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

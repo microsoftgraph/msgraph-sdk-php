@@ -16,7 +16,7 @@ class GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration exten
     public ?GetManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param GetManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration exten
     }
 
     /**
-     * Instantiates a new getManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters.
+     * Instantiates a new GetManagedAppDiagnosticStatusesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases

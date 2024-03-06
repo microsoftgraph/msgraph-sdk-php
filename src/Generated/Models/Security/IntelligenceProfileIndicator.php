@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class IntelligenceProfileIndicator extends Indicator implements Parsable 
 {
     /**
-     * Instantiates a new intelligenceProfileIndicator and sets the default values.
+     * Instantiates a new IntelligenceProfileIndicator and sets the default values.
     */
     public function __construct() {
         parent::__construct();

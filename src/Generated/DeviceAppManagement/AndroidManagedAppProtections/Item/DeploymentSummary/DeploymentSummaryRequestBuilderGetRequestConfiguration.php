@@ -16,7 +16,7 @@ class DeploymentSummaryRequestBuilderGetRequestConfiguration extends BaseRequest
     public ?DeploymentSummaryRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new deploymentSummaryRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new DeploymentSummaryRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param DeploymentSummaryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class DeploymentSummaryRequestBuilderGetRequestConfiguration extends BaseRequest
     }
 
     /**
-     * Instantiates a new deploymentSummaryRequestBuilderGetQueryParameters.
+     * Instantiates a new DeploymentSummaryRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DeploymentSummaryRequestBuilderGetQueryParameters

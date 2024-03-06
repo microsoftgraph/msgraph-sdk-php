@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Agreements\AgreementsRequestBuilder;
 use Microsoft\Graph\Generated\AppCatalogs\AppCatalogsRequestBuilder;
 use Microsoft\Graph\Generated\Applications\ApplicationsRequestBuilder;
 use Microsoft\Graph\Generated\ApplicationsWithAppId\ApplicationsWithAppIdRequestBuilder;
+use Microsoft\Graph\Generated\ApplicationsWithUniqueName\ApplicationsWithUniqueNameRequestBuilder;
 use Microsoft\Graph\Generated\ApplicationTemplates\ApplicationTemplatesRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\AuditLogsRequestBuilder;
 use Microsoft\Graph\Generated\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
@@ -42,6 +43,7 @@ use Microsoft\Graph\Generated\GroupLifecyclePolicies\GroupLifecyclePoliciesReque
 use Microsoft\Graph\Generated\Groups\GroupsRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettings\GroupSettingsRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\GroupSettingTemplatesRequestBuilder;
+use Microsoft\Graph\Generated\GroupsWithUniqueName\GroupsWithUniqueNameRequestBuilder;
 use Microsoft\Graph\Generated\Identity\IdentityRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\IdentityGovernanceRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\IdentityProtectionRequestBuilder;
@@ -567,6 +569,15 @@ class BaseGraphClient extends BaseRequestBuilder
     }
 
     /**
+     * Provides operations to manage the collection of application entities.
+     * @param string $uniqueName Alternate key of application
+     * @return ApplicationsWithUniqueNameRequestBuilder
+    */
+    public function applicationsWithUniqueName(string $uniqueName): ApplicationsWithUniqueNameRequestBuilder {
+        return new ApplicationsWithUniqueNameRequestBuilder($this->pathParameters, $this->requestAdapter, $uniqueName);
+    }
+
+    /**
      * Instantiates a new BaseGraphClient and sets the default values.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
      * @param BackingStoreFactory|null $backingStore The backing store to use for the models.
@@ -600,6 +611,15 @@ class BaseGraphClient extends BaseRequestBuilder
     */
     public function directoryRolesWithRoleTemplateId(string $roleTemplateId): DirectoryRolesWithRoleTemplateIdRequestBuilder {
         return new DirectoryRolesWithRoleTemplateIdRequestBuilder($this->pathParameters, $this->requestAdapter, $roleTemplateId);
+    }
+
+    /**
+     * Provides operations to manage the collection of group entities.
+     * @param string $uniqueName Alternate key of group
+     * @return GroupsWithUniqueNameRequestBuilder
+    */
+    public function groupsWithUniqueName(string $uniqueName): GroupsWithUniqueNameRequestBuilder {
+        return new GroupsWithUniqueNameRequestBuilder($this->pathParameters, $this->requestAdapter, $uniqueName);
     }
 
     /**

@@ -16,7 +16,7 @@ class InferenceClassificationRequestBuilderGetRequestConfiguration extends BaseR
     public ?InferenceClassificationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new inferenceClassificationRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new InferenceClassificationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param InferenceClassificationRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class InferenceClassificationRequestBuilderGetRequestConfiguration extends BaseR
     }
 
     /**
-     * Instantiates a new inferenceClassificationRequestBuilderGetQueryParameters.
+     * Instantiates a new InferenceClassificationRequestBuilderGetQueryParameters.
      * @param array<string>|null $select Select properties to be returned
      * @return InferenceClassificationRequestBuilderGetQueryParameters
     */

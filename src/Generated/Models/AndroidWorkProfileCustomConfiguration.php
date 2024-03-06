@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new androidWorkProfileCustomConfiguration and sets the default values.
+     * Instantiates a new AndroidWorkProfileCustomConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

@@ -19,7 +19,7 @@ class CountAPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new countAPostRequestBody and sets the default values.
+     * Instantiates a new CountAPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

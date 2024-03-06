@@ -16,7 +16,7 @@ class TitleRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     public ?TitleRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new titleRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TitleRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TitleRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TitleRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
     }
 
     /**
-     * Instantiates a new titleRequestBuilderGetQueryParameters.
+     * Instantiates a new TitleRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TitleRequestBuilderGetQueryParameters

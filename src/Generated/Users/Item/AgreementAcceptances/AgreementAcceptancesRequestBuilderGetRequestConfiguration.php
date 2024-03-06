@@ -16,7 +16,7 @@ class AgreementAcceptancesRequestBuilderGetRequestConfiguration extends BaseRequ
     public ?AgreementAcceptancesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new agreementAcceptancesRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new AgreementAcceptancesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param AgreementAcceptancesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class AgreementAcceptancesRequestBuilderGetRequestConfiguration extends BaseRequ
     }
 
     /**
-     * Instantiates a new agreementAcceptancesRequestBuilderGetQueryParameters.
+     * Instantiates a new AgreementAcceptancesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

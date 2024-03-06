@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TeamsTemplate extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new teamsTemplate and sets the default values.
+     * Instantiates a new TeamsTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

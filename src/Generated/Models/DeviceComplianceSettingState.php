@@ -13,7 +13,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DeviceComplianceSettingState extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new deviceComplianceSettingState and sets the default values.
+     * Instantiates a new DeviceComplianceSettingState and sets the default values.
     */
     public function __construct() {
         parent::__construct();

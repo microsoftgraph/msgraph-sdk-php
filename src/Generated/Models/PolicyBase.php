@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PolicyBase extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new policyBase and sets the default values.
+     * Instantiates a new PolicyBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();

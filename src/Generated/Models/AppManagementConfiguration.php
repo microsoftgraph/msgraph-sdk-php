@@ -19,7 +19,7 @@ class AppManagementConfiguration implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new appManagementConfiguration and sets the default values.
+     * Instantiates a new AppManagementConfiguration and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

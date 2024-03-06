@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PrivilegedAccessGroup extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new privilegedAccessGroup and sets the default values.
+     * Instantiates a new PrivilegedAccessGroup and sets the default values.
     */
     public function __construct() {
         parent::__construct();

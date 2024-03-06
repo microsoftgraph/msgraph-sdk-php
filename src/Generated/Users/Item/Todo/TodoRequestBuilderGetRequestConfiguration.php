@@ -16,7 +16,7 @@ class TodoRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     public ?TodoRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new todoRequestBuilderGetRequestConfiguration and sets the default values.
+     * Instantiates a new TodoRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
      * @param TodoRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
@@ -27,7 +27,7 @@ class TodoRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
     }
 
     /**
-     * Instantiates a new todoRequestBuilderGetQueryParameters.
+     * Instantiates a new TodoRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TodoRequestBuilderGetQueryParameters

@@ -18,7 +18,7 @@ class PasswordResetResponse implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new passwordResetResponse and sets the default values.
+     * Instantiates a new PasswordResetResponse and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -18,7 +18,7 @@ class CopyToSectionGroupPostRequestBody implements AdditionalDataHolder, BackedM
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new copyToSectionGroupPostRequestBody and sets the default values.
+     * Instantiates a new CopyToSectionGroupPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

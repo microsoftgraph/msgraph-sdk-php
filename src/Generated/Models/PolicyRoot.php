@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class PolicyRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new policyRoot and sets the default values.
+     * Instantiates a new PolicyRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -168,6 +168,18 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * @return DeviceRegistrationPolicy|null
+    */
+    public function getDeviceRegistrationPolicy(): ?DeviceRegistrationPolicy {
+        $val = $this->getBackingStore()->get('deviceRegistrationPolicy');
+        if (is_null($val) || $val instanceof DeviceRegistrationPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceRegistrationPolicy'");
+    }
+
+    /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @return array<FeatureRolloutPolicy>|null
     */
@@ -199,6 +211,7 @@ class PolicyRoot extends Entity implements Parsable
             'conditionalAccessPolicies' => fn(ParseNode $n) => $o->setConditionalAccessPolicies($n->getCollectionOfObjectValues([ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
             'crossTenantAccessPolicy' => fn(ParseNode $n) => $o->setCrossTenantAccessPolicy($n->getObjectValue([CrossTenantAccessPolicy::class, 'createFromDiscriminatorValue'])),
             'defaultAppManagementPolicy' => fn(ParseNode $n) => $o->setDefaultAppManagementPolicy($n->getObjectValue([TenantAppManagementPolicy::class, 'createFromDiscriminatorValue'])),
+            'deviceRegistrationPolicy' => fn(ParseNode $n) => $o->setDeviceRegistrationPolicy($n->getObjectValue([DeviceRegistrationPolicy::class, 'createFromDiscriminatorValue'])),
             'featureRolloutPolicies' => fn(ParseNode $n) => $o->setFeatureRolloutPolicies($n->getCollectionOfObjectValues([FeatureRolloutPolicy::class, 'createFromDiscriminatorValue'])),
             'homeRealmDiscoveryPolicies' => fn(ParseNode $n) => $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues([HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'])),
             'identitySecurityDefaultsEnforcementPolicy' => fn(ParseNode $n) => $o->setIdentitySecurityDefaultsEnforcementPolicy($n->getObjectValue([IdentitySecurityDefaultsEnforcementPolicy::class, 'createFromDiscriminatorValue'])),
@@ -323,6 +336,7 @@ class PolicyRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('conditionalAccessPolicies', $this->getConditionalAccessPolicies());
         $writer->writeObjectValue('crossTenantAccessPolicy', $this->getCrossTenantAccessPolicy());
         $writer->writeObjectValue('defaultAppManagementPolicy', $this->getDefaultAppManagementPolicy());
+        $writer->writeObjectValue('deviceRegistrationPolicy', $this->getDeviceRegistrationPolicy());
         $writer->writeCollectionOfObjectValues('featureRolloutPolicies', $this->getFeatureRolloutPolicies());
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->getHomeRealmDiscoveryPolicies());
         $writer->writeObjectValue('identitySecurityDefaultsEnforcementPolicy', $this->getIdentitySecurityDefaultsEnforcementPolicy());
@@ -419,6 +433,14 @@ class PolicyRoot extends Entity implements Parsable
     */
     public function setDefaultAppManagementPolicy(?TenantAppManagementPolicy $value): void {
         $this->getBackingStore()->set('defaultAppManagementPolicy', $value);
+    }
+
+    /**
+     * Sets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * @param DeviceRegistrationPolicy|null $value Value to set for the deviceRegistrationPolicy property.
+    */
+    public function setDeviceRegistrationPolicy(?DeviceRegistrationPolicy $value): void {
+        $this->getBackingStore()->set('deviceRegistrationPolicy', $value);
     }
 
     /**

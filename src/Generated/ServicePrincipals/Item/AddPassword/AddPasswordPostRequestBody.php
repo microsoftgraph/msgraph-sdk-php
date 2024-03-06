@@ -19,7 +19,7 @@ class AddPasswordPostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new addPasswordPostRequestBody and sets the default values.
+     * Instantiates a new AddPasswordPostRequestBody and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

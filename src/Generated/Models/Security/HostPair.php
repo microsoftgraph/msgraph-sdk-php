@@ -11,7 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class HostPair extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new hostPair and sets the default values.
+     * Instantiates a new HostPair and sets the default values.
     */
     public function __construct() {
         parent::__construct();

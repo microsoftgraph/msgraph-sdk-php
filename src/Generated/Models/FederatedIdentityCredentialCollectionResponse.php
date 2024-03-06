@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 class FederatedIdentityCredentialCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
     /**
-     * Instantiates a new federatedIdentityCredentialCollectionResponse and sets the default values.
+     * Instantiates a new FederatedIdentityCredentialCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();
