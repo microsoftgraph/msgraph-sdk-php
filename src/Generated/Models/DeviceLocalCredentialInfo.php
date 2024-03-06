@@ -41,6 +41,18 @@ class DeviceLocalCredentialInfo extends Entity implements Parsable
     }
 
     /**
+     * Gets the device local credential id property value. 
+     * @return string|null
+    */
+    public function getDeviceLocalCredentialId(): ?string {
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceName'");
+    }
+    
+    /**
      * Gets the deviceName property value. Display name of the device that the local credentials are associated with.
      * @return string|null
     */
