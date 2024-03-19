@@ -68,7 +68,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
+     * Gets the field property value. Computes aggregation on the field while the field exists in the current entity type. Required.
      * @return string|null
     */
     public function getField(): ?string {
@@ -106,7 +106,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
+     * Gets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
      * @return int|null
     */
     public function getSize(): ?int {
@@ -154,7 +154,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the field property value. Computes aggregation on the field while the field exists in current entity type. Required.
+     * Sets the field property value. Computes aggregation on the field while the field exists in the current entity type. Required.
      * @param string|null $value Value to set for the field property.
     */
     public function setField(?string $value): void {
@@ -170,7 +170,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. Optional.
+     * Sets the size property value. The number of searchBucket resources to be returned. This isn't required when the range is provided manually in the search request. The minimum accepted size is 1, and the maximum is 65535. Optional.
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {

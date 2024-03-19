@@ -54,7 +54,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
+     * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @return bool|null
     */
     public function getContinueOnError(): ?bool {
@@ -90,7 +90,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Gets the executionSequence property value. An integer that states in what order the task will run in a workflow.Supports $orderby.
+     * Gets the executionSequence property value. An integer that states in what order the task runs in a workflow.Supports $orderby.
      * @return int|null
     */
     public function getExecutionSequence(): ?int {
@@ -133,7 +133,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Gets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks. Required.Supports $filter(eq, ne).
+     * Gets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.Supports $filter(eq, ne).
      * @return string|null
     */
     public function getTaskDefinitionId(): ?string {
@@ -192,7 +192,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Sets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow will stop, and subsequent tasks will not run. Optional.
+     * Sets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @param bool|null $value Value to set for the continueOnError property.
     */
     public function setContinueOnError(?bool $value): void {
@@ -216,7 +216,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Sets the executionSequence property value. An integer that states in what order the task will run in a workflow.Supports $orderby.
+     * Sets the executionSequence property value. An integer that states in what order the task runs in a workflow.Supports $orderby.
      * @param int|null $value Value to set for the executionSequence property.
     */
     public function setExecutionSequence(?int $value): void {
@@ -232,7 +232,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Sets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see supported tasks. Required.Supports $filter(eq, ne).
+     * Sets the taskDefinitionId property value. A unique template identifier for the task. For more information about the tasks that Lifecycle Workflows currently supports and their unique identifiers, see Configure the arguments for built-in Lifecycle Workflow tasks. Required.Supports $filter(eq, ne).
      * @param string|null $value Value to set for the taskDefinitionId property.
     */
     public function setTaskDefinitionId(?string $value): void {

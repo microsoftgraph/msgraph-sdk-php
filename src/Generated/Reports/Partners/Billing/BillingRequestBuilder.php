@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Partners\Billing\Billing;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Manifests\ManifestsRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\ReconciliationRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Usage\UsageRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,6 +32,13 @@ class BillingRequestBuilder extends BaseRequestBuilder
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the reconciliation property of the microsoft.graph.partners.billing.billing entity.
+    */
+    public function reconciliation(): ReconciliationRequestBuilder {
+        return new ReconciliationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

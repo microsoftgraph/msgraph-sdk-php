@@ -64,6 +64,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.kubernetesSecretEvidence': return new KubernetesSecretEvidence();
                 case '#microsoft.graph.security.kubernetesServiceAccountEvidence': return new KubernetesServiceAccountEvidence();
                 case '#microsoft.graph.security.kubernetesServiceEvidence': return new KubernetesServiceEvidence();
+                case '#microsoft.graph.security.mailboxConfigurationEvidence': return new MailboxConfigurationEvidence();
                 case '#microsoft.graph.security.mailboxEvidence': return new MailboxEvidence();
                 case '#microsoft.graph.security.mailClusterEvidence': return new MailClusterEvidence();
                 case '#microsoft.graph.security.malwareEvidence': return new MalwareEvidence();

@@ -45,7 +45,7 @@ class LastMessagePreviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
      * @param LastMessagePreviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessageInfo|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class LastMessagePreviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
      * @param LastMessagePreviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -26,7 +26,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Gets the deletedChats property value. The deletedChats property
+     * Gets the deletedChats property value. A collection of deleted chats.
      * @return array<DeletedChat>|null
     */
     public function getDeletedChats(): ?array {
@@ -106,7 +106,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Sets the deletedChats property value. The deletedChats property
+     * Sets the deletedChats property value. A collection of deleted chats.
      * @param array<DeletedChat>|null $value Value to set for the deletedChats property.
     */
     public function setDeletedChats(?array $value): void {

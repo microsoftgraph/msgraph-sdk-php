@@ -52,7 +52,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudClipboardItemCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from users
+     * Represents a collection of Cloud Clipboard items.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

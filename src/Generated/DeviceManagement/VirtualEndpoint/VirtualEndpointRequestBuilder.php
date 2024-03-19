@@ -5,6 +5,10 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\AuditEvents\AuditEventsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\CloudPCsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\DeviceImagesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\GalleryImages\GalleryImagesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\OnPremisesConnectionsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\ProvisioningPolicies\ProvisioningPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSettings\UserSettingsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -24,6 +28,34 @@ class VirtualEndpointRequestBuilder extends BaseRequestBuilder
     */
     public function auditEvents(): AuditEventsRequestBuilder {
         return new AuditEventsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity.
+    */
+    public function cloudPCs(): CloudPCsRequestBuilder {
+        return new CloudPCsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the deviceImages property of the microsoft.graph.virtualEndpoint entity.
+    */
+    public function deviceImages(): DeviceImagesRequestBuilder {
+        return new DeviceImagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the galleryImages property of the microsoft.graph.virtualEndpoint entity.
+    */
+    public function galleryImages(): GalleryImagesRequestBuilder {
+        return new GalleryImagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity.
+    */
+    public function onPremisesConnections(): OnPremisesConnectionsRequestBuilder {
+        return new OnPremisesConnectionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -20,4 +20,7 @@ class RiskDetail extends Enum {
     public const M365_D_ADMIN_DISMISSED_DETECTION = 'm365DAdminDismissedDetection';
     public const ADMIN_CONFIRMED_SERVICE_PRINCIPAL_COMPROMISED = 'adminConfirmedServicePrincipalCompromised';
     public const ADMIN_DISMISSED_ALL_RISK_FOR_SERVICE_PRINCIPAL = 'adminDismissedAllRiskForServicePrincipal';
+    public const USER_CHANGED_PASSWORD_ON_PREMISES = 'userChangedPasswordOnPremises';
+    public const ADMIN_DISMISSED_RISK_FOR_SIGN_IN = 'adminDismissedRiskForSignIn';
+    public const ADMIN_CONFIRMED_ACCOUNT_SAFE = 'adminConfirmedAccountSafe';
 }

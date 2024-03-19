@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * Entity representing a job to export a report
+ * Entity representing a job to export a report.
 */
 class DeviceManagementExportJob extends Entity implements Parsable 
 {
@@ -81,7 +81,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the format property value. Possible values for the file format of a report
+     * Gets the format property value. Possible values for the file format of a report.
      * @return DeviceManagementReportFileFormat|null
     */
     public function getFormat(): ?DeviceManagementReportFileFormat {
@@ -93,7 +93,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the localizationType property value. Configures how the requested export job is localized
+     * Gets the localizationType property value. Configures how the requested export job is localized.
      * @return DeviceManagementExportJobLocalizationType|null
     */
     public function getLocalizationType(): ?DeviceManagementExportJobLocalizationType {
@@ -155,7 +155,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Possible statuses associated with a generated report
+     * Gets the status property value. Possible statuses associated with a generated report.
      * @return DeviceManagementReportStatus|null
     */
     public function getStatus(): ?DeviceManagementReportStatus {
@@ -213,7 +213,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the format property value. Possible values for the file format of a report
+     * Sets the format property value. Possible values for the file format of a report.
      * @param DeviceManagementReportFileFormat|null $value Value to set for the format property.
     */
     public function setFormat(?DeviceManagementReportFileFormat $value): void {
@@ -221,7 +221,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the localizationType property value. Configures how the requested export job is localized
+     * Sets the localizationType property value. Configures how the requested export job is localized.
      * @param DeviceManagementExportJobLocalizationType|null $value Value to set for the localizationType property.
     */
     public function setLocalizationType(?DeviceManagementExportJobLocalizationType $value): void {
@@ -261,7 +261,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Possible statuses associated with a generated report
+     * Sets the status property value. Possible statuses associated with a generated report.
      * @param DeviceManagementReportStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DeviceManagementReportStatus $value): void {

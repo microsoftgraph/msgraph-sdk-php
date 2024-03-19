@@ -24,8 +24,10 @@ use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskReport;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\UserProcessingResult;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\WorkflowTemplate;
 use Microsoft\Graph\Generated\Models\Partners\Billing\AzureUsage;
+use Microsoft\Graph\Generated\Models\Partners\Billing\BilledReconciliation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\BilledUsage;
 use Microsoft\Graph\Generated\Models\Partners\Billing\Billing;
+use Microsoft\Graph\Generated\Models\Partners\Billing\BillingReconciliation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\ExportSuccessOperation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\FailedOperation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\Manifest;
@@ -165,6 +167,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.addLargeGalleryViewOperation': return new AddLargeGalleryViewOperation();
                 case '#microsoft.graph.adminConsentRequestPolicy': return new AdminConsentRequestPolicy();
                 case '#microsoft.graph.administrativeUnit': return new AdministrativeUnit();
+                case '#microsoft.graph.adminMicrosoft365Apps': return new AdminMicrosoft365Apps();
                 case '#microsoft.graph.agreement': return new Agreement();
                 case '#microsoft.graph.agreementAcceptance': return new AgreementAcceptance();
                 case '#microsoft.graph.agreementFile': return new AgreementFile();
@@ -268,7 +271,11 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
                 case '#microsoft.graph.cloudClipboardItem': return new CloudClipboardItem();
                 case '#microsoft.graph.cloudClipboardRoot': return new CloudClipboardRoot();
+                case '#microsoft.graph.cloudPC': return new CloudPC();
                 case '#microsoft.graph.cloudPcAuditEvent': return new CloudPcAuditEvent();
+                case '#microsoft.graph.cloudPcDeviceImage': return new CloudPcDeviceImage();
+                case '#microsoft.graph.cloudPcGalleryImage': return new CloudPcGalleryImage();
+                case '#microsoft.graph.cloudPcOnPremisesConnection': return new CloudPcOnPremisesConnection();
                 case '#microsoft.graph.cloudPcProvisioningPolicy': return new CloudPcProvisioningPolicy();
                 case '#microsoft.graph.cloudPcProvisioningPolicyAssignment': return new CloudPcProvisioningPolicyAssignment();
                 case '#microsoft.graph.cloudPcUserSetting': return new CloudPcUserSetting();
@@ -342,6 +349,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.deviceLocalCredentialInfo': return new DeviceLocalCredentialInfo();
                 case '#microsoft.graph.deviceLogCollectionResponse': return new DeviceLogCollectionResponse();
                 case '#microsoft.graph.deviceManagement': return new DeviceManagement();
+                case '#microsoft.graph.deviceManagementCachedReportConfiguration': return new DeviceManagementCachedReportConfiguration();
                 case '#microsoft.graph.deviceManagementExchangeConnector': return new DeviceManagementExchangeConnector();
                 case '#microsoft.graph.deviceManagementExportJob': return new DeviceManagementExportJob();
                 case '#microsoft.graph.deviceManagementPartner': return new DeviceManagementPartner();
@@ -499,6 +507,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.localizedNotificationMessage': return new LocalizedNotificationMessage();
                 case '#microsoft.graph.loginPage': return new LoginPage();
                 case '#microsoft.graph.longRunningOperation': return new LongRunningOperation();
+                case '#microsoft.graph.m365AppsInstallationOptions': return new M365AppsInstallationOptions();
                 case '#microsoft.graph.macOSCompliancePolicy': return new MacOSCompliancePolicy();
                 case '#microsoft.graph.macOSCustomConfiguration': return new MacOSCustomConfiguration();
                 case '#microsoft.graph.macOSDeviceFeaturesConfiguration': return new MacOSDeviceFeaturesConfiguration();
@@ -593,8 +602,10 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.participantLeftNotification': return new ParticipantLeftNotification();
                 case '#microsoft.graph.partners': return new Partners();
                 case '#microsoft.graph.partners.billing.azureUsage': return new AzureUsage();
+                case '#microsoft.graph.partners.billing.billedReconciliation': return new BilledReconciliation();
                 case '#microsoft.graph.partners.billing.billedUsage': return new BilledUsage();
                 case '#microsoft.graph.partners.billing.billing': return new Billing();
+                case '#microsoft.graph.partners.billing.billingReconciliation': return new BillingReconciliation();
                 case '#microsoft.graph.partners.billing.exportSuccessOperation': return new ExportSuccessOperation();
                 case '#microsoft.graph.partners.billing.failedOperation': return new FailedOperation();
                 case '#microsoft.graph.partners.billing.manifest': return new Manifest();
@@ -920,6 +931,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.windows10CompliancePolicy': return new Windows10CompliancePolicy();
                 case '#microsoft.graph.windows10CustomConfiguration': return new Windows10CustomConfiguration();
                 case '#microsoft.graph.windows10EndpointProtectionConfiguration': return new Windows10EndpointProtectionConfiguration();
+                case '#microsoft.graph.windows10EnrollmentCompletionPageConfiguration': return new Windows10EnrollmentCompletionPageConfiguration();
                 case '#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration': return new Windows10EnterpriseModernAppManagementConfiguration();
                 case '#microsoft.graph.windows10GeneralConfiguration': return new Windows10GeneralConfiguration();
                 case '#microsoft.graph.windows10MobileCompliancePolicy': return new Windows10MobileCompliancePolicy();

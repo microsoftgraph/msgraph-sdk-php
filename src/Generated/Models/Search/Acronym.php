@@ -37,7 +37,7 @@ class Acronym extends SearchAnswer implements Parsable
     }
 
     /**
-     * Gets the standsFor property value. The standsFor property
+     * Gets the standsFor property value. What the acronym stands for.
      * @return string|null
     */
     public function getStandsFor(): ?string {
@@ -71,7 +71,7 @@ class Acronym extends SearchAnswer implements Parsable
     }
 
     /**
-     * Sets the standsFor property value. The standsFor property
+     * Sets the standsFor property value. What the acronym stands for.
      * @param string|null $value Value to set for the standsFor property.
     */
     public function setStandsFor(?string $value): void {

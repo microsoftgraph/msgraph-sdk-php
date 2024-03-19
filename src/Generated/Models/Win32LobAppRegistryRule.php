@@ -81,7 +81,7 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
 
     /**
-     * Gets the operationType property value. Contains all supported registry data detection type.
+     * Gets the operationType property value. A list of possible operations for rules used to make determinations about an application based on registry keys or values. Unless noted, the values can be used with either detection or requirement rules.
      * @return Win32LobAppRegistryRuleOperationType|null
     */
     public function getOperationType(): ?Win32LobAppRegistryRuleOperationType {
@@ -155,7 +155,7 @@ class Win32LobAppRegistryRule extends Win32LobAppRule implements Parsable
     }
 
     /**
-     * Sets the operationType property value. Contains all supported registry data detection type.
+     * Sets the operationType property value. A list of possible operations for rules used to make determinations about an application based on registry keys or values. Unless noted, the values can be used with either detection or requirement rules.
      * @param Win32LobAppRegistryRuleOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?Win32LobAppRegistryRuleOperationType $value): void {

@@ -27,7 +27,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Gets the connectionInfo property value. The connectionInfo property
+     * Gets the connectionInfo property value. Connection information of an environment used to connect to a resource.
      * @return ConnectionInfo|null
     */
     public function getConnectionInfo(): ?ConnectionInfo {
@@ -173,7 +173,7 @@ class AccessPackageResourceEnvironment extends Entity implements Parsable
     }
 
     /**
-     * Sets the connectionInfo property value. The connectionInfo property
+     * Sets the connectionInfo property value. Connection information of an environment used to connect to a resource.
      * @param ConnectionInfo|null $value Value to set for the connectionInfo property.
     */
     public function setConnectionInfo(?ConnectionInfo $value): void {

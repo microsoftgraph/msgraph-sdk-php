@@ -40,6 +40,34 @@ class VirtualEndpoint extends Entity implements Parsable
     }
 
     /**
+     * Gets the cloudPCs property value. The cloudPCs property
+     * @return array<CloudPC>|null
+    */
+    public function getCloudPCs(): ?array {
+        $val = $this->getBackingStore()->get('cloudPCs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudPC::class);
+            /** @var array<CloudPC>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudPCs'");
+    }
+
+    /**
+     * Gets the deviceImages property value. The deviceImages property
+     * @return array<CloudPcDeviceImage>|null
+    */
+    public function getDeviceImages(): ?array {
+        $val = $this->getBackingStore()->get('deviceImages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudPcDeviceImage::class);
+            /** @var array<CloudPcDeviceImage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceImages'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -47,9 +75,41 @@ class VirtualEndpoint extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'auditEvents' => fn(ParseNode $n) => $o->setAuditEvents($n->getCollectionOfObjectValues([CloudPcAuditEvent::class, 'createFromDiscriminatorValue'])),
+            'cloudPCs' => fn(ParseNode $n) => $o->setCloudPCs($n->getCollectionOfObjectValues([CloudPC::class, 'createFromDiscriminatorValue'])),
+            'deviceImages' => fn(ParseNode $n) => $o->setDeviceImages($n->getCollectionOfObjectValues([CloudPcDeviceImage::class, 'createFromDiscriminatorValue'])),
+            'galleryImages' => fn(ParseNode $n) => $o->setGalleryImages($n->getCollectionOfObjectValues([CloudPcGalleryImage::class, 'createFromDiscriminatorValue'])),
+            'onPremisesConnections' => fn(ParseNode $n) => $o->setOnPremisesConnections($n->getCollectionOfObjectValues([CloudPcOnPremisesConnection::class, 'createFromDiscriminatorValue'])),
             'provisioningPolicies' => fn(ParseNode $n) => $o->setProvisioningPolicies($n->getCollectionOfObjectValues([CloudPcProvisioningPolicy::class, 'createFromDiscriminatorValue'])),
             'userSettings' => fn(ParseNode $n) => $o->setUserSettings($n->getCollectionOfObjectValues([CloudPcUserSetting::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the galleryImages property value. The galleryImages property
+     * @return array<CloudPcGalleryImage>|null
+    */
+    public function getGalleryImages(): ?array {
+        $val = $this->getBackingStore()->get('galleryImages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudPcGalleryImage::class);
+            /** @var array<CloudPcGalleryImage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'galleryImages'");
+    }
+
+    /**
+     * Gets the onPremisesConnections property value. The onPremisesConnections property
+     * @return array<CloudPcOnPremisesConnection>|null
+    */
+    public function getOnPremisesConnections(): ?array {
+        $val = $this->getBackingStore()->get('onPremisesConnections');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudPcOnPremisesConnection::class);
+            /** @var array<CloudPcOnPremisesConnection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesConnections'");
     }
 
     /**
@@ -87,6 +147,10 @@ class VirtualEndpoint extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('auditEvents', $this->getAuditEvents());
+        $writer->writeCollectionOfObjectValues('cloudPCs', $this->getCloudPCs());
+        $writer->writeCollectionOfObjectValues('deviceImages', $this->getDeviceImages());
+        $writer->writeCollectionOfObjectValues('galleryImages', $this->getGalleryImages());
+        $writer->writeCollectionOfObjectValues('onPremisesConnections', $this->getOnPremisesConnections());
         $writer->writeCollectionOfObjectValues('provisioningPolicies', $this->getProvisioningPolicies());
         $writer->writeCollectionOfObjectValues('userSettings', $this->getUserSettings());
     }
@@ -97,6 +161,38 @@ class VirtualEndpoint extends Entity implements Parsable
     */
     public function setAuditEvents(?array $value): void {
         $this->getBackingStore()->set('auditEvents', $value);
+    }
+
+    /**
+     * Sets the cloudPCs property value. The cloudPCs property
+     * @param array<CloudPC>|null $value Value to set for the cloudPCs property.
+    */
+    public function setCloudPCs(?array $value): void {
+        $this->getBackingStore()->set('cloudPCs', $value);
+    }
+
+    /**
+     * Sets the deviceImages property value. The deviceImages property
+     * @param array<CloudPcDeviceImage>|null $value Value to set for the deviceImages property.
+    */
+    public function setDeviceImages(?array $value): void {
+        $this->getBackingStore()->set('deviceImages', $value);
+    }
+
+    /**
+     * Sets the galleryImages property value. The galleryImages property
+     * @param array<CloudPcGalleryImage>|null $value Value to set for the galleryImages property.
+    */
+    public function setGalleryImages(?array $value): void {
+        $this->getBackingStore()->set('galleryImages', $value);
+    }
+
+    /**
+     * Sets the onPremisesConnections property value. The onPremisesConnections property
+     * @param array<CloudPcOnPremisesConnection>|null $value Value to set for the onPremisesConnections property.
+    */
+    public function setOnPremisesConnections(?array $value): void {
+        $this->getBackingStore()->set('onPremisesConnections', $value);
     }
 
     /**

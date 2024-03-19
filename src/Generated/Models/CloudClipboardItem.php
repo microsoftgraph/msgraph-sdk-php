@@ -27,7 +27,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -39,7 +39,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expires and after that the object is no longer available. The default and also maximum TTL is 12 hours after the creation, but it might change for performance optimization.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -65,7 +65,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the client's request. DateTime in UTC when the object was modified by the client.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -77,7 +77,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the payloads property value. The payloads property
+     * Gets the payloads property value. A cloudClipboardItem can have multiple cloudClipboardItemPayload objects in the payloads. A window can place more than one clipboard object on the clipboard. Each one represents the same information in a different clipboard format.
      * @return array<CloudClipboardItemPayload>|null
     */
     public function getPayloads(): ?array {
@@ -103,7 +103,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -111,7 +111,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Set by the server. DateTime in UTC when the object expires and after that the object is no longer available. The default and also maximum TTL is 12 hours after the creation, but it might change for performance optimization.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -119,7 +119,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the client's request. DateTime in UTC when the object was modified by the client.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -127,7 +127,7 @@ class CloudClipboardItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the payloads property value. The payloads property
+     * Sets the payloads property value. A cloudClipboardItem can have multiple cloudClipboardItemPayload objects in the payloads. A window can place more than one clipboard object on the clipboard. Each one represents the same information in a different clipboard format.
      * @param array<CloudClipboardItemPayload>|null $value Value to set for the payloads property.
     */
     public function setPayloads(?array $value): void {
