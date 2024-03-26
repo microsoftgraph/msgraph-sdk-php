@@ -56,7 +56,7 @@ class CloudPcUserRoleScopeTagInfo implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Scope tag display name.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -93,7 +93,7 @@ class CloudPcUserRoleScopeTagInfo implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the roleScopeTagId property value. The roleScopeTagId property
+     * Gets the roleScopeTagId property value. Scope tag identity.
      * @return string|null
     */
     public function getRoleScopeTagId(): ?string {
@@ -132,7 +132,7 @@ class CloudPcUserRoleScopeTagInfo implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Scope tag display name.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -148,7 +148,7 @@ class CloudPcUserRoleScopeTagInfo implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the roleScopeTagId property value. The roleScopeTagId property
+     * Sets the roleScopeTagId property value. Scope tag identity.
      * @param string|null $value Value to set for the roleScopeTagId property.
     */
     public function setRoleScopeTagId(?string $value): void {

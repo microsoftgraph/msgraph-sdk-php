@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\AuditEvents
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get auditEvents from deviceManagement
+ * Read the properties and relationships of a cloudPcAuditEvent object.
 */
 class CloudPcAuditEventItemRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Settings\Windows\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get windows from users
+ * Read the properties and relationships of a windowsSetting object by passing the ID of the setting in the URL. This method gets the setting for the signed-in user.
 */
 class WindowsSettingItemRequestBuilderGetQueryParameters 
 {

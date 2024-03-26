@@ -6,10 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
-use Microsoft\Graph\Generated\Sites\Item\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Sites\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Sites\Remove\RemoveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -21,24 +19,10 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class SitesRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * Provides operations to call the add method.
-    */
-    public function add(): AddRequestBuilder {
-        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the remove method.
-    */
-    public function remove(): RemoveRequestBuilder {
-        return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

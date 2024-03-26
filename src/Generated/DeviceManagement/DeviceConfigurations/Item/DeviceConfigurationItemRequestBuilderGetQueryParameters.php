@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the windows10TeamGeneralConfiguration object.
+ * Read properties and relationships of the deviceConfiguration object.
 */
 class DeviceConfigurationItemRequestBuilderGetQueryParameters 
 {

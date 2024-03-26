@@ -56,7 +56,7 @@ class CloudPcAuditProperty implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name for this property.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -82,7 +82,7 @@ class CloudPcAuditProperty implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the newValue property value. The newValue property
+     * Gets the newValue property value. The new value for this property.
      * @return string|null
     */
     public function getNewValue(): ?string {
@@ -106,7 +106,7 @@ class CloudPcAuditProperty implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the oldValue property value. The oldValue property
+     * Gets the oldValue property value. The old value for this property.
      * @return string|null
     */
     public function getOldValue(): ?string {
@@ -146,7 +146,7 @@ class CloudPcAuditProperty implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for this property.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -154,7 +154,7 @@ class CloudPcAuditProperty implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the newValue property value. The newValue property
+     * Sets the newValue property value. The new value for this property.
      * @param string|null $value Value to set for the newValue property.
     */
     public function setNewValue(?string $value): void {
@@ -170,7 +170,7 @@ class CloudPcAuditProperty implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the oldValue property value. The oldValue property
+     * Sets the oldValue property value. The old value for this property.
      * @param string|null $value Value to set for the oldValue property.
     */
     public function setOldValue(?string $value): void {

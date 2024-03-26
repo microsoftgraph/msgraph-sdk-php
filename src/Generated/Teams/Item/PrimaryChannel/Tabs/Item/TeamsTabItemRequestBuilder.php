@@ -69,7 +69,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTab|null>
@@ -124,7 +124,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the specified tab.This can be used to configure the content of the tab.
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

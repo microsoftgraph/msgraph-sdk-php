@@ -26,7 +26,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the bulkUpload property value. The bulkUpload property
+     * Gets the bulkUpload property value. The bulk upload operation for the job.
      * @return BulkUpload|null
     */
     public function getBulkUpload(): ?BulkUpload {
@@ -130,7 +130,7 @@ class SynchronizationJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the bulkUpload property value. The bulkUpload property
+     * Sets the bulkUpload property value. The bulk upload operation for the job.
      * @param BulkUpload|null $value Value to set for the bulkUpload property.
     */
     public function setBulkUpload(?BulkUpload $value): void {

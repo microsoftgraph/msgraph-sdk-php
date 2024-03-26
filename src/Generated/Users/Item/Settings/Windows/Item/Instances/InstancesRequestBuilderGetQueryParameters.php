@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Settings\Windows\Item\Instances;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get instances from users
+ * Get a list of windowsSettingInstance objects and their properties for the signed-in user.
 */
 class InstancesRequestBuilderGetQueryParameters 
 {

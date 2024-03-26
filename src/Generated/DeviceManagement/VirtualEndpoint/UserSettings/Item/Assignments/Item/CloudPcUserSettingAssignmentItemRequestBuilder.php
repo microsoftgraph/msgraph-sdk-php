@@ -45,7 +45,7 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get assignments from deviceManagement
+     * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSetting.
      * @param CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcUserSettingAssignment|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get assignments from deviceManagement
+     * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSetting.
      * @param CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

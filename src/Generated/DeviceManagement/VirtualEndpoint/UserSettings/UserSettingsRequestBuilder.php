@@ -52,10 +52,11 @@ class UserSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get userSettings from deviceManagement
+     * Get a list of cloudPcUserSetting objects and their properties.
      * @param UserSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcUserSettingCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualendpoint-list-usersettings?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserSettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class UserSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to userSettings for deviceManagement
+     * Create a new cloudPcUserSetting object.
      * @param CloudPcUserSetting $body The request body
      * @param UserSettingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcUserSetting|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualendpoint-post-usersettings?view=graph-rest-1.0 Find more info here
     */
     public function post(CloudPcUserSetting $body, ?UserSettingsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class UserSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get userSettings from deviceManagement
+     * Get a list of cloudPcUserSetting objects and their properties.
      * @param UserSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class UserSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to userSettings for deviceManagement
+     * Create a new cloudPcUserSetting object.
      * @param CloudPcUserSetting $body The request body
      * @param UserSettingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

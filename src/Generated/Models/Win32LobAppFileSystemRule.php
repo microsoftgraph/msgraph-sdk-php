@@ -81,7 +81,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
     }
 
     /**
-     * Gets the operationType property value. Contains all supported file system detection type.
+     * Gets the operationType property value. A list of possible operations for rules used to make determinations about an application based on files or folders. Unless noted, can be used with either detection or requirement rules.
      * @return Win32LobAppFileSystemOperationType|null
     */
     public function getOperationType(): ?Win32LobAppFileSystemOperationType {
@@ -155,7 +155,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
     }
 
     /**
-     * Sets the operationType property value. Contains all supported file system detection type.
+     * Sets the operationType property value. A list of possible operations for rules used to make determinations about an application based on files or folders. Unless noted, can be used with either detection or requirement rules.
      * @param Win32LobAppFileSystemOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?Win32LobAppFileSystemOperationType $value): void {

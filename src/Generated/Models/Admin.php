@@ -75,11 +75,24 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'edge' => fn(ParseNode $n) => $o->setEdge($n->getObjectValue([Edge::class, 'createFromDiscriminatorValue'])),
+            'microsoft365Apps' => fn(ParseNode $n) => $o->setMicrosoft365Apps($n->getObjectValue([AdminMicrosoft365Apps::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'people' => fn(ParseNode $n) => $o->setPeople($n->getObjectValue([PeopleAdminSettings::class, 'createFromDiscriminatorValue'])),
             'serviceAnnouncement' => fn(ParseNode $n) => $o->setServiceAnnouncement($n->getObjectValue([ServiceAnnouncement::class, 'createFromDiscriminatorValue'])),
             'sharepoint' => fn(ParseNode $n) => $o->setSharepoint($n->getObjectValue([Sharepoint::class, 'createFromDiscriminatorValue'])),
         ];
+    }
+
+    /**
+     * Gets the microsoft365Apps property value. A container for the Microsoft 365 apps admin functionality.
+     * @return AdminMicrosoft365Apps|null
+    */
+    public function getMicrosoft365Apps(): ?AdminMicrosoft365Apps {
+        $val = $this->getBackingStore()->get('microsoft365Apps');
+        if (is_null($val) || $val instanceof AdminMicrosoft365Apps) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'microsoft365Apps'");
     }
 
     /**
@@ -136,6 +149,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('edge', $this->getEdge());
+        $writer->writeObjectValue('microsoft365Apps', $this->getMicrosoft365Apps());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('people', $this->getPeople());
         $writer->writeObjectValue('serviceAnnouncement', $this->getServiceAnnouncement());
@@ -165,6 +179,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setEdge(?Edge $value): void {
         $this->getBackingStore()->set('edge', $value);
+    }
+
+    /**
+     * Sets the microsoft365Apps property value. A container for the Microsoft 365 apps admin functionality.
+     * @param AdminMicrosoft365Apps|null $value Value to set for the microsoft365Apps property.
+    */
+    public function setMicrosoft365Apps(?AdminMicrosoft365Apps $value): void {
+        $this->getBackingStore()->set('microsoft365Apps', $value);
     }
 
     /**

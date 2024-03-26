@@ -54,7 +54,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
+     * Gets the businessPhones property value. Telephone number for the organization. Although this property is a string collection, only one number can be set.
      * @return array<string>|null
     */
     public function getBusinessPhones(): ?array {
@@ -94,7 +94,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the country property value. Country/region name of the address for the organization.
+     * Gets the country property value. Country or region name of the address for the organization.
      * @return string|null
     */
     public function getCountry(): ?string {
@@ -118,7 +118,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the createdDateTime property value. Timestamp of when the organization was created. The value can't be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -278,7 +278,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object isn't synced from on-premises active directory (default).
      * @return bool|null
     */
     public function getOnPremisesSyncEnabled(): ?bool {
@@ -418,7 +418,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
+     * Gets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
      * @return string|null
     */
     public function getTenantType(): ?string {
@@ -495,7 +495,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
+     * Sets the businessPhones property value. Telephone number for the organization. Although this property is a string collection, only one number can be set.
      * @param array<string>|null $value Value to set for the businessPhones property.
     */
     public function setBusinessPhones(?array $value): void {
@@ -519,7 +519,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the country property value. Country/region name of the address for the organization.
+     * Sets the country property value. Country or region name of the address for the organization.
      * @param string|null $value Value to set for the country property.
     */
     public function setCountry(?string $value): void {
@@ -535,7 +535,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the createdDateTime property value. Timestamp of when the organization was created. The value can't be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -591,7 +591,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
+     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object isn't synced from on-premises active directory (default).
      * @param bool|null $value Value to set for the onPremisesSyncEnabled property.
     */
     public function setOnPremisesSyncEnabled(?bool $value): void {
@@ -679,7 +679,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
+     * Sets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
      * @param string|null $value Value to set for the tenantType property.
     */
     public function setTenantType(?string $value): void {

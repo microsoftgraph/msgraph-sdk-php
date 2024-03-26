@@ -38,7 +38,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Gets the proposedNewTime property value. The proposedNewTime property
+     * Gets the proposedNewTime property value. An alternate date/time proposed by an invitee for a meeting request to start and end. Read-only. Not filterable.
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
@@ -50,7 +50,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Gets the responseType property value. The responseType property
+     * Gets the responseType property value. Specifies the type of response to a meeting request. Possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
      * @return ResponseType|null
     */
     public function getResponseType(): ?ResponseType {
@@ -72,7 +72,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Sets the proposedNewTime property value. The proposedNewTime property
+     * Sets the proposedNewTime property value. An alternate date/time proposed by an invitee for a meeting request to start and end. Read-only. Not filterable.
      * @param TimeSlot|null $value Value to set for the proposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {
@@ -80,7 +80,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Sets the responseType property value. The responseType property
+     * Sets the responseType property value. Specifies the type of response to a meeting request. Possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
      * @param ResponseType|null $value Value to set for the responseType property.
     */
     public function setResponseType(?ResponseType $value): void {

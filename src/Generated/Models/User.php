@@ -814,6 +814,7 @@ class User extends DirectoryObject implements Parsable
                 /** @var array<string>|null $val */
                 $this->setSkills($val);
             },
+            'sponsors' => fn(ParseNode $n) => $o->setSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
             'streetAddress' => fn(ParseNode $n) => $o->setStreetAddress($n->getStringValue()),
             'surname' => fn(ParseNode $n) => $o->setSurname($n->getStringValue()),
@@ -1727,6 +1728,20 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the sponsors property value. The sponsors property
+     * @return array<DirectoryObject>|null
+    */
+    public function getSponsors(): ?array {
+        $val = $this->getBackingStore()->get('sponsors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sponsors'");
+    }
+
+    /**
      * Gets the state property value. The state or province in the user's address. Maximum length is 128 characters. Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return string|null
     */
@@ -1959,6 +1974,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeObjectValue('signInActivity', $this->getSignInActivity());
         $writer->writeDateTimeValue('signInSessionsValidFromDateTime', $this->getSignInSessionsValidFromDateTime());
         $writer->writeCollectionOfPrimitiveValues('skills', $this->getSkills());
+        $writer->writeCollectionOfObjectValues('sponsors', $this->getSponsors());
         $writer->writeStringValue('state', $this->getState());
         $writer->writeStringValue('streetAddress', $this->getStreetAddress());
         $writer->writeStringValue('surname', $this->getSurname());
@@ -2904,6 +2920,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setSkills(?array $value): void {
         $this->getBackingStore()->set('skills', $value);
+    }
+
+    /**
+     * Sets the sponsors property value. The sponsors property
+     * @param array<DirectoryObject>|null $value Value to set for the sponsors property.
+    */
+    public function setSponsors(?array $value): void {
+        $this->getBackingStore()->set('sponsors', $value);
     }
 
     /**

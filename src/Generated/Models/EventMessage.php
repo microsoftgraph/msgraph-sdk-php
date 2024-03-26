@@ -90,7 +90,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the isDelegated property value. The isDelegated property
+     * Gets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
      * @return bool|null
     */
     public function getIsDelegated(): ?bool {
@@ -126,7 +126,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the meetingMessageType property value. The meetingMessageType property
+     * Gets the meetingMessageType property value. The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      * @return MeetingMessageType|null
     */
     public function getMeetingMessageType(): ?MeetingMessageType {
@@ -216,7 +216,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the isDelegated property value. The isDelegated property
+     * Sets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
      * @param bool|null $value Value to set for the isDelegated property.
     */
     public function setIsDelegated(?bool $value): void {
@@ -240,7 +240,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the meetingMessageType property value. The meetingMessageType property
+     * Sets the meetingMessageType property value. The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      * @param MeetingMessageType|null $value Value to set for the meetingMessageType property.
     */
     public function setMeetingMessageType(?MeetingMessageType $value): void {

@@ -49,7 +49,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the applicationDisplayName property value. The applicationDisplayName property
+     * Gets the applicationDisplayName property value. Name of the application.
      * @return string|null
     */
     public function getApplicationDisplayName(): ?string {
@@ -61,7 +61,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the applicationId property value. The applicationId property
+     * Gets the applicationId property value. Microsoft Entra application ID.
      * @return string|null
     */
     public function getApplicationId(): ?string {
@@ -109,7 +109,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. IP address.
      * @return string|null
     */
     public function getIpAddress(): ?string {
@@ -133,7 +133,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the remoteTenantId property value. The remoteTenantId property
+     * Gets the remoteTenantId property value. The delegated partner tenant ID.
      * @return string|null
     */
     public function getRemoteTenantId(): ?string {
@@ -145,7 +145,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the remoteUserId property value. The remoteUserId property
+     * Gets the remoteUserId property value. The delegated partner user ID.
      * @return string|null
     */
     public function getRemoteUserId(): ?string {
@@ -157,7 +157,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the servicePrincipalName property value. The servicePrincipalName property
+     * Gets the servicePrincipalName property value. Service Principal Name (SPN).
      * @return string|null
     */
     public function getServicePrincipalName(): ?string {
@@ -169,7 +169,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. Microsoft Entra user ID.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -181,7 +181,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPermissions property value. The userPermissions property
+     * Gets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
      * @return array<string>|null
     */
     public function getUserPermissions(): ?array {
@@ -195,7 +195,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. User Principal Name (UPN).
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -207,7 +207,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userRoleScopeTags property value. The userRoleScopeTags property
+     * Gets the userRoleScopeTags property value. List of role scope tags.
      * @return array<CloudPcUserRoleScopeTagInfo>|null
     */
     public function getUserRoleScopeTags(): ?array {
@@ -248,7 +248,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the applicationDisplayName property value. The applicationDisplayName property
+     * Sets the applicationDisplayName property value. Name of the application.
      * @param string|null $value Value to set for the applicationDisplayName property.
     */
     public function setApplicationDisplayName(?string $value): void {
@@ -256,7 +256,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the applicationId property value. The applicationId property
+     * Sets the applicationId property value. Microsoft Entra application ID.
      * @param string|null $value Value to set for the applicationId property.
     */
     public function setApplicationId(?string $value): void {
@@ -272,7 +272,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. IP address.
      * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
@@ -288,7 +288,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the remoteTenantId property value. The remoteTenantId property
+     * Sets the remoteTenantId property value. The delegated partner tenant ID.
      * @param string|null $value Value to set for the remoteTenantId property.
     */
     public function setRemoteTenantId(?string $value): void {
@@ -296,7 +296,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the remoteUserId property value. The remoteUserId property
+     * Sets the remoteUserId property value. The delegated partner user ID.
      * @param string|null $value Value to set for the remoteUserId property.
     */
     public function setRemoteUserId(?string $value): void {
@@ -304,7 +304,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the servicePrincipalName property value. The servicePrincipalName property
+     * Sets the servicePrincipalName property value. Service Principal Name (SPN).
      * @param string|null $value Value to set for the servicePrincipalName property.
     */
     public function setServicePrincipalName(?string $value): void {
@@ -312,7 +312,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. Microsoft Entra user ID.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
@@ -320,7 +320,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPermissions property value. The userPermissions property
+     * Sets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
      * @param array<string>|null $value Value to set for the userPermissions property.
     */
     public function setUserPermissions(?array $value): void {
@@ -328,7 +328,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. User Principal Name (UPN).
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
@@ -336,7 +336,7 @@ class CloudPcAuditActor implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userRoleScopeTags property value. The userRoleScopeTags property
+     * Sets the userRoleScopeTags property value. List of role scope tags.
      * @param array<CloudPcUserRoleScopeTagInfo>|null $value Value to set for the userRoleScopeTags property.
     */
     public function setUserRoleScopeTags(?array $value): void {

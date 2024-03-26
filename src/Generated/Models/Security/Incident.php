@@ -168,6 +168,7 @@ class Incident extends Entity implements Parsable
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getStringValue()),
             'lastUpdateDateTime' => fn(ParseNode $n) => $o->setLastUpdateDateTime($n->getDateTimeValue()),
             'redirectIncidentId' => fn(ParseNode $n) => $o->setRedirectIncidentId($n->getStringValue()),
+            'resolvingComment' => fn(ParseNode $n) => $o->setResolvingComment($n->getStringValue()),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(AlertSeverity::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(IncidentStatus::class)),
             'systemTags' => function (ParseNode $n) {
@@ -228,6 +229,18 @@ class Incident extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'redirectIncidentId'");
+    }
+
+    /**
+     * Gets the resolvingComment property value. The resolvingComment property
+     * @return string|null
+    */
+    public function getResolvingComment(): ?string {
+        $val = $this->getBackingStore()->get('resolvingComment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resolvingComment'");
     }
 
     /**
@@ -299,6 +312,7 @@ class Incident extends Entity implements Parsable
         $writer->writeStringValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
         $writer->writeStringValue('redirectIncidentId', $this->getRedirectIncidentId());
+        $writer->writeStringValue('resolvingComment', $this->getResolvingComment());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeCollectionOfPrimitiveValues('systemTags', $this->getSystemTags());
@@ -407,6 +421,14 @@ class Incident extends Entity implements Parsable
     */
     public function setRedirectIncidentId(?string $value): void {
         $this->getBackingStore()->set('redirectIncidentId', $value);
+    }
+
+    /**
+     * Sets the resolvingComment property value. The resolvingComment property
+     * @param string|null $value Value to set for the resolvingComment property.
+    */
+    public function setResolvingComment(?string $value): void {
+        $this->getBackingStore()->set('resolvingComment', $value);
     }
 
     /**

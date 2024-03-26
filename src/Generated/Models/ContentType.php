@@ -26,7 +26,7 @@ class ContentType extends Entity implements Parsable
     }
 
     /**
-     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Gets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type is applied to the lists in the enforced sites.
      * @return array<string>|null
     */
     public function getAssociatedHubsUrls(): ?array {
@@ -94,7 +94,7 @@ class ContentType extends Entity implements Parsable
     }
 
     /**
-     * Gets the columns property value. The collection of column definitions for this contentType.
+     * Gets the columns property value. The collection of column definitions for this content type.
      * @return array<ColumnDefinition>|null
     */
     public function getColumns(): ?array {
@@ -264,7 +264,7 @@ class ContentType extends Entity implements Parsable
     }
 
     /**
-     * Gets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+     * Gets the propagateChanges property value. If true, any changes made to the content type are pushed to inherited content types and lists that implement the content type.
      * @return bool|null
     */
     public function getPropagateChanges(): ?bool {
@@ -327,7 +327,7 @@ class ContentType extends Entity implements Parsable
     }
 
     /**
-     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * Sets the associatedHubsUrls property value. List of canonical URLs for hub sites with which this content type is associated to. This will contain all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type is applied to the lists in the enforced sites.
      * @param array<string>|null $value Value to set for the associatedHubsUrls property.
     */
     public function setAssociatedHubsUrls(?array $value): void {
@@ -367,7 +367,7 @@ class ContentType extends Entity implements Parsable
     }
 
     /**
-     * Sets the columns property value. The collection of column definitions for this contentType.
+     * Sets the columns property value. The collection of column definitions for this content type.
      * @param array<ColumnDefinition>|null $value Value to set for the columns property.
     */
     public function setColumns(?array $value): void {
@@ -455,7 +455,7 @@ class ContentType extends Entity implements Parsable
     }
 
     /**
-     * Sets the propagateChanges property value. If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
+     * Sets the propagateChanges property value. If true, any changes made to the content type are pushed to inherited content types and lists that implement the content type.
      * @param bool|null $value Value to set for the propagateChanges property.
     */
     public function setPropagateChanges(?bool $value): void {

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Admin;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\Edge\EdgeRequestBuilder;
+use Microsoft\Graph\Generated\Admin\Microsoft365Apps\Microsoft365AppsRequestBuilder;
 use Microsoft\Graph\Generated\Admin\People\PeopleRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Sharepoint\SharepointRequestBuilder;
@@ -25,6 +26,13 @@ class AdminRequestBuilder extends BaseRequestBuilder
     */
     public function edge(): EdgeRequestBuilder {
         return new EdgeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the microsoft365Apps property of the microsoft.graph.admin entity.
+    */
+    public function microsoft365Apps(): Microsoft365AppsRequestBuilder {
+        return new Microsoft365AppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

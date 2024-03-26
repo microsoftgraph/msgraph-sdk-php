@@ -50,7 +50,7 @@ class ChecklistItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Field indicating the title of checklistItem.
+     * Gets the displayName property value. Indicates the title of the checklistItem.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -76,7 +76,7 @@ class ChecklistItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the isChecked property value. State indicating whether the item is checked off or not.
+     * Gets the isChecked property value. State that indicates whether the item is checked off or not.
      * @return bool|null
     */
     public function getIsChecked(): ?bool {
@@ -116,7 +116,7 @@ class ChecklistItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Field indicating the title of checklistItem.
+     * Sets the displayName property value. Indicates the title of the checklistItem.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -124,7 +124,7 @@ class ChecklistItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the isChecked property value. State indicating whether the item is checked off or not.
+     * Sets the isChecked property value. State that indicates whether the item is checked off or not.
      * @param bool|null $value Value to set for the isChecked property.
     */
     public function setIsChecked(?bool $value): void {

@@ -61,6 +61,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
             'instanceId' => fn(ParseNode $n) => $o->setInstanceId($n->getIntegerValue()),
             'instanceName' => fn(ParseNode $n) => $o->setInstanceName($n->getStringValue()),
             'saasAppId' => fn(ParseNode $n) => $o->setSaasAppId($n->getIntegerValue()),
+            'stream' => fn(ParseNode $n) => $o->setStream($n->getObjectValue([Stream::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -101,6 +102,18 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
+     * Gets the stream property value. The stream property
+     * @return Stream|null
+    */
+    public function getStream(): ?Stream {
+        $val = $this->getBackingStore()->get('stream');
+        if (is_null($val) || $val instanceof Stream) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stream'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -111,6 +124,7 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
         $writer->writeIntegerValue('instanceId', $this->getInstanceId());
         $writer->writeStringValue('instanceName', $this->getInstanceName());
         $writer->writeIntegerValue('saasAppId', $this->getSaasAppId());
+        $writer->writeObjectValue('stream', $this->getStream());
     }
 
     /**
@@ -151,6 +165,14 @@ class CloudApplicationEvidence extends AlertEvidence implements Parsable
     */
     public function setSaasAppId(?int $value): void {
         $this->getBackingStore()->set('saasAppId', $value);
+    }
+
+    /**
+     * Sets the stream property value. The stream property
+     * @param Stream|null $value Value to set for the stream property.
+    */
+    public function setStream(?Stream $value): void {
+        $this->getBackingStore()->set('stream', $value);
     }
 
 }

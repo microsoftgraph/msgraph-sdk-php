@@ -27,7 +27,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the activity property value. The activity property
+     * Gets the activity property value. The friendly name of the audit activity.
      * @return string|null
     */
     public function getActivity(): ?string {
@@ -39,7 +39,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the activityDateTime property value. The activityDateTime property
+     * Gets the activityDateTime property value. The date time in UTC when the activity was performed. Read-only.
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
@@ -75,7 +75,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the activityType property value. The activityType property
+     * Gets the activityType property value. The type of activity that was performed. Read-only.
      * @return string|null
     */
     public function getActivityType(): ?string {
@@ -111,7 +111,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the componentName property value. The componentName property
+     * Gets the componentName property value. The component name for the audit event. Read-only.
      * @return string|null
     */
     public function getComponentName(): ?string {
@@ -123,7 +123,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the correlationId property value. The correlationId property
+     * Gets the correlationId property value. The client request ID that is used to correlate activity within the system. Read-only.
      * @return string|null
     */
     public function getCorrelationId(): ?string {
@@ -135,7 +135,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name for the audit event. Read-only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -168,7 +168,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. The list of cloudPcAuditResource objects. Read-only.
      * @return array<CloudPcAuditResource>|null
     */
     public function getResources(): ?array {
@@ -201,7 +201,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the activity property value. The activity property
+     * Sets the activity property value. The friendly name of the audit activity.
      * @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value): void {
@@ -209,7 +209,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the activityDateTime property value. The activityDateTime property
+     * Sets the activityDateTime property value. The date time in UTC when the activity was performed. Read-only.
      * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
@@ -233,7 +233,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the activityType property value. The activityType property
+     * Sets the activityType property value. The type of activity that was performed. Read-only.
      * @param string|null $value Value to set for the activityType property.
     */
     public function setActivityType(?string $value): void {
@@ -257,7 +257,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the componentName property value. The componentName property
+     * Sets the componentName property value. The component name for the audit event. Read-only.
      * @param string|null $value Value to set for the componentName property.
     */
     public function setComponentName(?string $value): void {
@@ -265,7 +265,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the correlationId property value. The correlationId property
+     * Sets the correlationId property value. The client request ID that is used to correlate activity within the system. Read-only.
      * @param string|null $value Value to set for the correlationId property.
     */
     public function setCorrelationId(?string $value): void {
@@ -273,7 +273,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the audit event. Read-only.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -281,7 +281,7 @@ class CloudPcAuditEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. The list of cloudPcAuditResource objects. Read-only.
      * @param array<CloudPcAuditResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {

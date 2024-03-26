@@ -57,7 +57,7 @@ class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the modified resource entity.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -83,7 +83,7 @@ class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the modifiedProperties property value. The modifiedProperties property
+     * Gets the modifiedProperties property value. The list of modified properties.
      * @return array<CloudPcAuditProperty>|null
     */
     public function getModifiedProperties(): ?array {
@@ -109,7 +109,7 @@ class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the resourceId property value. The resourceId property
+     * Gets the resourceId property value. The unique identifier of the modified resource entity.
      * @return string|null
     */
     public function getResourceId(): ?string {
@@ -149,7 +149,7 @@ class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the modified resource entity.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -157,7 +157,7 @@ class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the modifiedProperties property value. The modifiedProperties property
+     * Sets the modifiedProperties property value. The list of modified properties.
      * @param array<CloudPcAuditProperty>|null $value Value to set for the modifiedProperties property.
     */
     public function setModifiedProperties(?array $value): void {
@@ -173,7 +173,7 @@ class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the resourceId property value. The resourceId property
+     * Sets the resourceId property value. The unique identifier of the modified resource entity.
      * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {

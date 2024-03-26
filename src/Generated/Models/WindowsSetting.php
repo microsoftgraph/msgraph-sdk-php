@@ -40,7 +40,7 @@ class WindowsSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the instances property value. The instances property
+     * Gets the instances property value. A collection of setting values for a given windowsSetting.
      * @return array<WindowsSettingInstance>|null
     */
     public function getInstances(): ?array {
@@ -54,7 +54,7 @@ class WindowsSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the payloadType property value. The payloadType property
+     * Gets the payloadType property value. The type of setting payloads contained in the instances navigation property.
      * @return string|null
     */
     public function getPayloadType(): ?string {
@@ -78,7 +78,7 @@ class WindowsSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the windowsDeviceId property value. The windowsDeviceId property
+     * Gets the windowsDeviceId property value. A unique identifier for the device the setting might belong to if it is of the settingType backup.
      * @return string|null
     */
     public function getWindowsDeviceId(): ?string {
@@ -102,7 +102,7 @@ class WindowsSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the instances property value. The instances property
+     * Sets the instances property value. A collection of setting values for a given windowsSetting.
      * @param array<WindowsSettingInstance>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value): void {
@@ -110,7 +110,7 @@ class WindowsSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the payloadType property value. The payloadType property
+     * Sets the payloadType property value. The type of setting payloads contained in the instances navigation property.
      * @param string|null $value Value to set for the payloadType property.
     */
     public function setPayloadType(?string $value): void {
@@ -126,7 +126,7 @@ class WindowsSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the windowsDeviceId property value. The windowsDeviceId property
+     * Sets the windowsDeviceId property value. A unique identifier for the device the setting might belong to if it is of the settingType backup.
      * @param string|null $value Value to set for the windowsDeviceId property.
     */
     public function setWindowsDeviceId(?string $value): void {
