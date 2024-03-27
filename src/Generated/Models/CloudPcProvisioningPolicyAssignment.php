@@ -26,7 +26,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignedUsers property value. The assignedUsers property
+     * Gets the assignedUsers property value. The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. Read-only. Supports$expand.
      * @return array<User>|null
     */
     public function getAssignedUsers(): ?array {
@@ -52,7 +52,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the target property value. The target property
+     * Gets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
      * @return CloudPcManagementAssignmentTarget|null
     */
     public function getTarget(): ?CloudPcManagementAssignmentTarget {
@@ -74,7 +74,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignedUsers property value. The assignedUsers property
+     * Sets the assignedUsers property value. The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. Read-only. Supports$expand.
      * @param array<User>|null $value Value to set for the assignedUsers property.
     */
     public function setAssignedUsers(?array $value): void {
@@ -82,7 +82,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the target property value. The target property
+     * Sets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
      * @param CloudPcManagementAssignmentTarget|null $value Value to set for the target property.
     */
     public function setTarget(?CloudPcManagementAssignmentTarget $value): void {

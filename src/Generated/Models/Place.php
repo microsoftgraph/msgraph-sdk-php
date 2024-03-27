@@ -71,7 +71,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     * Gets the geoCoordinates property value. Specifies the place location in latitude, longitude, and (optionally) altitude coordinates.
      * @return OutlookGeoCoordinates|null
     */
     public function getGeoCoordinates(): ?OutlookGeoCoordinates {
@@ -123,7 +123,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
+     * Sets the geoCoordinates property value. Specifies the place location in latitude, longitude, and (optionally) altitude coordinates.
      * @param OutlookGeoCoordinates|null $value Value to set for the geoCoordinates property.
     */
     public function setGeoCoordinates(?OutlookGeoCoordinates $value): void {

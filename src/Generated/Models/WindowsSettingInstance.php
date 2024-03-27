@@ -26,7 +26,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Set by the server. Represents the dateTime in UTC when the object was created on the server.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -38,7 +38,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Set by the server. The object expires at the specified dateTime in UTC, making it unavailable after that time.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -64,7 +64,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user's Windows device that modified the object at the specified dateTime in UTC.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -76,7 +76,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Gets the payload property value. The payload property
+     * Gets the payload property value. Base64-encoded JSON setting value.
      * @return string|null
     */
     public function getPayload(): ?string {
@@ -100,7 +100,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Set by the server. Represents the dateTime in UTC when the object was created on the server.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -108,7 +108,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Set by the server. The object expires at the specified dateTime in UTC, making it unavailable after that time.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -116,7 +116,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Set by the server if not provided in the request from the Windows client device. Refers to the user's Windows device that modified the object at the specified dateTime in UTC.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -124,7 +124,7 @@ class WindowsSettingInstance extends Entity implements Parsable
     }
 
     /**
-     * Sets the payload property value. The payload property
+     * Sets the payload property value. Base64-encoded JSON setting value.
      * @param string|null $value Value to set for the payload property.
     */
     public function setPayload(?string $value): void {

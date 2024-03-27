@@ -116,7 +116,6 @@ class MobileLobApp extends MobileApp implements Parsable
         $writer->writeStringValue('committedContentVersion', $this->getCommittedContentVersion());
         $writer->writeCollectionOfObjectValues('contentVersions', $this->getContentVersions());
         $writer->writeStringValue('fileName', $this->getFileName());
-        $writer->writeIntegerValue('size', $this->getSize());
     }
 
     /**

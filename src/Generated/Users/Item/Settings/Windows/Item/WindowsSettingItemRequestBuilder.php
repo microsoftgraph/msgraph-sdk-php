@@ -53,10 +53,11 @@ class WindowsSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get windows from users
+     * Read the properties and relationships of a windowsSetting object by passing the ID of the setting in the URL. This method gets the setting for the signed-in user.
      * @param WindowsSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsSetting|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/windowssetting-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsSettingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class WindowsSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get windows from users
+     * Read the properties and relationships of a windowsSetting object by passing the ID of the setting in the URL. This method gets the setting for the signed-in user.
      * @param WindowsSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

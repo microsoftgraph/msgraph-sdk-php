@@ -56,7 +56,7 @@ class CloudClipboardItemPayload implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. The formatName version of the value of a cloud clipboard encoded in base64.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -81,7 +81,7 @@ class CloudClipboardItemPayload implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the formatName property value. The formatName property
+     * Gets the formatName property value. For a list of possible values see formatName values.
      * @return string|null
     */
     public function getFormatName(): ?string {
@@ -132,7 +132,7 @@ class CloudClipboardItemPayload implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. The formatName version of the value of a cloud clipboard encoded in base64.
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -140,7 +140,7 @@ class CloudClipboardItemPayload implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the formatName property value. The formatName property
+     * Sets the formatName property value. For a list of possible values see formatName values.
      * @param string|null $value Value to set for the formatName property.
     */
     public function setFormatName(?string $value): void {

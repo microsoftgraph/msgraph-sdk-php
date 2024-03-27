@@ -36,7 +36,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The search answer description that is shown on the search results page.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -48,7 +48,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The search answer name that is displayed in search results.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -75,7 +75,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Details of the user who created or last modified the search answer. Read-only.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -87,7 +87,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the search answer was created or last edited. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -99,7 +99,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they are directed to the specified URL.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -124,7 +124,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The search answer description that is shown on the search results page.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -132,7 +132,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The search answer name that is displayed in search results.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -140,7 +140,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Details of the user who created or last modified the search answer. Read-only.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -148,7 +148,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the search answer was created or last edited. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -156,7 +156,7 @@ class SearchAnswer extends Entity implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they are directed to the specified URL.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

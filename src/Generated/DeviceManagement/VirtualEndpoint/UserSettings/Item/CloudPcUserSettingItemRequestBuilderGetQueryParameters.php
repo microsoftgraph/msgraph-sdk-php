@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSetting
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get userSettings from deviceManagement
+ * Read the properties and relationships of a cloudPcUserSetting object.
 */
 class CloudPcUserSettingItemRequestBuilderGetQueryParameters 
 {

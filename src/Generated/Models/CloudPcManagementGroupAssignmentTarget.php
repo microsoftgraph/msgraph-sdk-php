@@ -38,7 +38,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
     }
 
     /**
-     * Gets the groupId property value. The groupId property
+     * Gets the groupId property value. The ID of the target group for the assignment.
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -50,7 +50,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
     }
 
     /**
-     * Gets the servicePlanId property value. The servicePlanId property
+     * Gets the servicePlanId property value. The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
      * @return string|null
     */
     public function getServicePlanId(): ?string {
@@ -72,7 +72,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
     }
 
     /**
-     * Sets the groupId property value. The groupId property
+     * Sets the groupId property value. The ID of the target group for the assignment.
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -80,7 +80,7 @@ class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAssignment
     }
 
     /**
-     * Sets the servicePlanId property value. The servicePlanId property
+     * Sets the servicePlanId property value. The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
      * @param string|null $value Value to set for the servicePlanId property.
     */
     public function setServicePlanId(?string $value): void {

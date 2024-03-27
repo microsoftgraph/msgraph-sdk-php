@@ -37,7 +37,7 @@ class CloudClipboardRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the items property value. The items property
+     * Gets the items property value. Represents a collection of Cloud Clipboard items.
      * @return array<CloudClipboardItem>|null
     */
     public function getItems(): ?array {
@@ -60,7 +60,7 @@ class CloudClipboardRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the items property value. The items property
+     * Sets the items property value. Represents a collection of Cloud Clipboard items.
      * @param array<CloudClipboardItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {

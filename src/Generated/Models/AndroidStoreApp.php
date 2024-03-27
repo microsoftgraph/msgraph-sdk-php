@@ -85,7 +85,6 @@ class AndroidStoreApp extends MobileApp implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('appStoreUrl', $this->getAppStoreUrl());
         $writer->writeObjectValue('minimumSupportedOperatingSystem', $this->getMinimumSupportedOperatingSystem());
-        $writer->writeStringValue('packageId', $this->getPackageId());
     }
 
     /**

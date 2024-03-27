@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\CloudClipboard\Items;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get items from users
+ * Represents a collection of Cloud Clipboard items.
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

@@ -31,7 +31,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a linkedResource object.
+     * Delete a linkedResource object.
      * @param LinkedResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -77,7 +77,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a linkedResource object.
+     * Delete a linkedResource object.
      * @param LinkedResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

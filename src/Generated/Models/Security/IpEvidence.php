@@ -46,6 +46,7 @@ class IpEvidence extends AlertEvidence implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'countryLetterCode' => fn(ParseNode $n) => $o->setCountryLetterCode($n->getStringValue()),
             'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
+            'stream' => fn(ParseNode $n) => $o->setStream($n->getObjectValue([Stream::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -62,6 +63,18 @@ class IpEvidence extends AlertEvidence implements Parsable
     }
 
     /**
+     * Gets the stream property value. The stream property
+     * @return Stream|null
+    */
+    public function getStream(): ?Stream {
+        $val = $this->getBackingStore()->get('stream');
+        if (is_null($val) || $val instanceof Stream) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stream'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -69,6 +82,7 @@ class IpEvidence extends AlertEvidence implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('countryLetterCode', $this->getCountryLetterCode());
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeObjectValue('stream', $this->getStream());
     }
 
     /**
@@ -85,6 +99,14 @@ class IpEvidence extends AlertEvidence implements Parsable
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
+    }
+
+    /**
+     * Sets the stream property value. The stream property
+     * @param Stream|null $value Value to set for the stream property.
+    */
+    public function setStream(?Stream $value): void {
+        $this->getBackingStore()->set('stream', $value);
     }
 
 }

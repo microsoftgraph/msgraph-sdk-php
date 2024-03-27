@@ -40,6 +40,18 @@ class Alert extends Entity implements Parsable
     }
 
     /**
+     * Gets the additionalData property value. A collection of other alert properties, including user-defined properties. Any custom details defined in the alert, and any dynamic content in the alert details, are stored here.
+     * @return Dictionary|null
+    */
+    public function getAdditionalDataProperty(): ?Dictionary {
+        $val = $this->getBackingStore()->get('additionalDataProperty');
+        if (is_null($val) || $val instanceof Dictionary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalDataProperty'");
+    }
+
+    /**
      * Gets the alertPolicyId property value. The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.
      * @return string|null
     */
@@ -195,6 +207,7 @@ class Alert extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'actorDisplayName' => fn(ParseNode $n) => $o->setActorDisplayName($n->getStringValue()),
+            'additionalData' => fn(ParseNode $n) => $o->setAdditionalDataProperty($n->getObjectValue([Dictionary::class, 'createFromDiscriminatorValue'])),
             'alertPolicyId' => fn(ParseNode $n) => $o->setAlertPolicyId($n->getStringValue()),
             'alertWebUrl' => fn(ParseNode $n) => $o->setAlertWebUrl($n->getStringValue()),
             'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
@@ -469,6 +482,7 @@ class Alert extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('actorDisplayName', $this->getActorDisplayName());
+        $writer->writeObjectValue('additionalData', $this->getAdditionalDataProperty());
         $writer->writeStringValue('alertPolicyId', $this->getAlertPolicyId());
         $writer->writeStringValue('alertWebUrl', $this->getAlertWebUrl());
         $writer->writeStringValue('assignedTo', $this->getAssignedTo());
@@ -507,6 +521,14 @@ class Alert extends Entity implements Parsable
     */
     public function setActorDisplayName(?string $value): void {
         $this->getBackingStore()->set('actorDisplayName', $value);
+    }
+
+    /**
+     * Sets the additionalData property value. A collection of other alert properties, including user-defined properties. Any custom details defined in the alert, and any dynamic content in the alert details, are stored here.
+     * @param Dictionary|null $value Value to set for the additionalData property.
+    */
+    public function setAdditionalDataProperty(?Dictionary $value): void {
+        $this->getBackingStore()->set('additionalDataProperty', $value);
     }
 
     /**

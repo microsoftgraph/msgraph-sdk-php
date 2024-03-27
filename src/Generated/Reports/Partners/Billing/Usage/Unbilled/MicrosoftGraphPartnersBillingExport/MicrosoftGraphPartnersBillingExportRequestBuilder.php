@@ -31,7 +31,7 @@ class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Export the unbilled Azure usage data for a specific billing period and a given currency.
+     * Export unbilled Azure usage data for a specific billing period and currency.
      * @param ExportPostRequestBody $body The request body
      * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Operation|null>
@@ -47,7 +47,7 @@ class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Export the unbilled Azure usage data for a specific billing period and a given currency.
+     * Export unbilled Azure usage data for a specific billing period and currency.
      * @param ExportPostRequestBody $body The request body
      * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

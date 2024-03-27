@@ -32,8 +32,21 @@ class UserEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'stream' => fn(ParseNode $n) => $o->setStream($n->getObjectValue([Stream::class, 'createFromDiscriminatorValue'])),
             'userAccount' => fn(ParseNode $n) => $o->setUserAccount($n->getObjectValue([UserAccount::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the stream property value. The stream property
+     * @return Stream|null
+    */
+    public function getStream(): ?Stream {
+        $val = $this->getBackingStore()->get('stream');
+        if (is_null($val) || $val instanceof Stream) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stream'");
     }
 
     /**
@@ -54,7 +67,16 @@ class UserEvidence extends AlertEvidence implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('stream', $this->getStream());
         $writer->writeObjectValue('userAccount', $this->getUserAccount());
+    }
+
+    /**
+     * Sets the stream property value. The stream property
+     * @param Stream|null $value Value to set for the stream property.
+    */
+    public function setStream(?Stream $value): void {
+        $this->getBackingStore()->set('stream', $value);
     }
 
     /**

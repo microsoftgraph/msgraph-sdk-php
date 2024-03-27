@@ -28,7 +28,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the analytics property value. Analytics about the view activities that took place in this site.
+     * Gets the analytics property value. Analytics about the view activities that took place on this site.
      * @return ItemAnalytics|null
     */
     public function getAnalytics(): ?ItemAnalytics {
@@ -257,7 +257,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Gets the root property value. If present, provides the root site in the site collection. Read-only.
      * @return Root|null
     */
     public function getRoot(): ?Root {
@@ -362,7 +362,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the analytics property value. Analytics about the view activities that took place in this site.
+     * Sets the analytics property value. Analytics about the view activities that took place on this site.
      * @param ItemAnalytics|null $value Value to set for the analytics property.
     */
     public function setAnalytics(?ItemAnalytics $value): void {
@@ -482,7 +482,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the root property value. If present, indicates that this is the root site in the site collection. Read-only.
+     * Sets the root property value. If present, provides the root site in the site collection. Read-only.
      * @param Root|null $value Value to set for the root property.
     */
     public function setRoot(?Root $value): void {
