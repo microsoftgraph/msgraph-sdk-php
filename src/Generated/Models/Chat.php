@@ -90,7 +90,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
      * @return ChatMessageInfo|null
     */
     public function getLastMessagePreview(): ?ChatMessageInfo {
@@ -102,7 +102,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     * Gets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or the list of members was last changed. Read-only.
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
@@ -220,7 +220,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     * Gets the viewpoint property value. Represents caller-specific information about the chat, such as the last message read date and time. This property is populated only when the request is made in a delegated context.
      * @return ChatViewpoint|null
     */
     public function getViewpoint(): ?ChatViewpoint {
@@ -291,7 +291,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * Sets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages were sent in the chat. Currently, only the list chats operation supports this property.
      * @param ChatMessageInfo|null $value Value to set for the lastMessagePreview property.
     */
     public function setLastMessagePreview(?ChatMessageInfo $value): void {
@@ -299,7 +299,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     * Sets the lastUpdatedDateTime property value. Date and time at which the chat was renamed or the list of members was last changed. Read-only.
      * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value): void {
@@ -371,7 +371,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     * Sets the viewpoint property value. Represents caller-specific information about the chat, such as the last message read date and time. This property is populated only when the request is made in a delegated context.
      * @param ChatViewpoint|null $value Value to set for the viewpoint property.
     */
     public function setViewpoint(?ChatViewpoint $value): void {

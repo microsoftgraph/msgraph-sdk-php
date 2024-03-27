@@ -51,7 +51,7 @@ class AssignedUsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get assignedUsers from deviceManagement
+     * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. Read-only. Supports$expand.
      * @param AssignedUsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserCollectionResponse|null>
      * @throws Exception
@@ -65,7 +65,7 @@ class AssignedUsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get assignedUsers from deviceManagement
+     * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. Read-only. Supports$expand.
      * @param AssignedUsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

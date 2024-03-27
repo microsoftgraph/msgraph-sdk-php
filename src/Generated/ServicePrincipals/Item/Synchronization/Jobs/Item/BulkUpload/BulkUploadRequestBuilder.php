@@ -53,7 +53,7 @@ class BulkUploadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      * @param BulkUploadRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BulkUpload|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class BulkUploadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get bulkUpload from servicePrincipals
+     * The bulk upload operation for the job.
      * @param BulkUploadRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

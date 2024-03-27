@@ -71,7 +71,6 @@ class MobileAppCategory extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
-        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
     }
 
     /**

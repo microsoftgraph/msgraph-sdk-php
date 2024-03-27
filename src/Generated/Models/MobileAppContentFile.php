@@ -162,10 +162,6 @@ class MobileAppContentFile extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('azureStorageUri', $this->getAzureStorageUri());
-        $writer->writeDateTimeValue('azureStorageUriExpirationDateTime', $this->getAzureStorageUriExpirationDateTime());
-        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
-        $writer->writeBooleanValue('isCommitted', $this->getIsCommitted());
         $writer->writeBinaryContent('manifest', $this->getManifest());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeIntegerValue('size', $this->getSize());

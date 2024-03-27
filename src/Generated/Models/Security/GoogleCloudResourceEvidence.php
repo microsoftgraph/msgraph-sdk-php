@@ -32,6 +32,7 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'fullResourceName' => fn(ParseNode $n) => $o->setFullResourceName($n->getStringValue()),
             'location' => fn(ParseNode $n) => $o->setLocation($n->getStringValue()),
             'locationType' => fn(ParseNode $n) => $o->setLocationType($n->getEnumValue(GoogleCloudLocationType::class)),
             'projectId' => fn(ParseNode $n) => $o->setProjectId($n->getStringValue()),
@@ -39,6 +40,18 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
             'resourceName' => fn(ParseNode $n) => $o->setResourceName($n->getStringValue()),
             'resourceType' => fn(ParseNode $n) => $o->setResourceType($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the fullResourceName property value. The fullResourceName property
+     * @return string|null
+    */
+    public function getFullResourceName(): ?string {
+        $val = $this->getBackingStore()->get('fullResourceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fullResourceName'");
     }
 
     /**
@@ -119,12 +132,21 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('fullResourceName', $this->getFullResourceName());
         $writer->writeStringValue('location', $this->getLocation());
         $writer->writeEnumValue('locationType', $this->getLocationType());
         $writer->writeStringValue('projectId', $this->getProjectId());
         $writer->writeIntegerValue('projectNumber', $this->getProjectNumber());
         $writer->writeStringValue('resourceName', $this->getResourceName());
         $writer->writeStringValue('resourceType', $this->getResourceType());
+    }
+
+    /**
+     * Sets the fullResourceName property value. The fullResourceName property
+     * @param string|null $value Value to set for the fullResourceName property.
+    */
+    public function setFullResourceName(?string $value): void {
+        $this->getBackingStore()->set('fullResourceName', $value);
     }
 
     /**

@@ -27,7 +27,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignments property value. The assignments property
+     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSetting.
      * @return array<CloudPcUserSettingAssignment>|null
     */
     public function getAssignments(): ?array {
@@ -41,7 +41,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the setting was created. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -53,7 +53,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The setting name displayed in the user interface.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -82,7 +82,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the setting was last modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -94,7 +94,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the localAdminEnabled property value. The localAdminEnabled property
+     * Gets the localAdminEnabled property value. Indicates whether the local admin option is enabled. The default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
      * @return bool|null
     */
     public function getLocalAdminEnabled(): ?bool {
@@ -106,7 +106,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the resetEnabled property value. The resetEnabled property
+     * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
      * @return bool|null
     */
     public function getResetEnabled(): ?bool {
@@ -118,7 +118,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the restorePointSetting property value. The restorePointSetting property
+     * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @return CloudPcRestorePointSetting|null
     */
     public function getRestorePointSetting(): ?CloudPcRestorePointSetting {
@@ -145,7 +145,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignments property value. The assignments property
+     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSetting.
      * @param array<CloudPcUserSettingAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {
@@ -153,7 +153,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the setting was created. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -161,7 +161,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The setting name displayed in the user interface.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -169,7 +169,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the setting was last modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -177,7 +177,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the localAdminEnabled property value. The localAdminEnabled property
+     * Sets the localAdminEnabled property value. Indicates whether the local admin option is enabled. The default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
      * @param bool|null $value Value to set for the localAdminEnabled property.
     */
     public function setLocalAdminEnabled(?bool $value): void {
@@ -185,7 +185,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the resetEnabled property value. The resetEnabled property
+     * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
      * @param bool|null $value Value to set for the resetEnabled property.
     */
     public function setResetEnabled(?bool $value): void {
@@ -193,7 +193,7 @@ class CloudPcUserSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the restorePointSetting property value. The restorePointSetting property
+     * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @param CloudPcRestorePointSetting|null $value Value to set for the restorePointSetting property.
     */
     public function setRestorePointSetting(?CloudPcRestorePointSetting $value): void {

@@ -35,6 +35,7 @@ class Billing extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'manifests' => fn(ParseNode $n) => $o->setManifests($n->getCollectionOfObjectValues([Manifest::class, 'createFromDiscriminatorValue'])),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([Operation::class, 'createFromDiscriminatorValue'])),
+            'reconciliation' => fn(ParseNode $n) => $o->setReconciliation($n->getObjectValue([BillingReconciliation::class, 'createFromDiscriminatorValue'])),
             'usage' => fn(ParseNode $n) => $o->setUsage($n->getObjectValue([AzureUsage::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -68,6 +69,18 @@ class Billing extends Entity implements Parsable
     }
 
     /**
+     * Gets the reconciliation property value. The reconciliation property
+     * @return BillingReconciliation|null
+    */
+    public function getReconciliation(): ?BillingReconciliation {
+        $val = $this->getBackingStore()->get('reconciliation');
+        if (is_null($val) || $val instanceof BillingReconciliation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reconciliation'");
+    }
+
+    /**
      * Gets the usage property value. The usage property
      * @return AzureUsage|null
     */
@@ -87,6 +100,7 @@ class Billing extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('manifests', $this->getManifests());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeObjectValue('reconciliation', $this->getReconciliation());
         $writer->writeObjectValue('usage', $this->getUsage());
     }
 
@@ -104,6 +118,14 @@ class Billing extends Entity implements Parsable
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
+    }
+
+    /**
+     * Sets the reconciliation property value. The reconciliation property
+     * @param BillingReconciliation|null $value Value to set for the reconciliation property.
+    */
+    public function setReconciliation(?BillingReconciliation $value): void {
+        $this->getBackingStore()->set('reconciliation', $value);
     }
 
     /**

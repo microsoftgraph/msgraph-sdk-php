@@ -57,7 +57,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The answer variation description that is shown on the search results page.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -69,7 +69,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The answer variation name that is displayed in search results.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -97,7 +97,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the languageTag property value. The languageTag property
+     * Gets the languageTag property value. The country or region that can view this answer variation.
      * @return string|null
     */
     public function getLanguageTag(): ?string {
@@ -121,7 +121,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the platform property value. The platform property
+     * Gets the platform property value. The device or operating system that can view this answer variation. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @return DevicePlatformType|null
     */
     public function getPlatform(): ?DevicePlatformType {
@@ -133,7 +133,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they're directed to the specified URL.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -175,7 +175,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The answer variation description that is shown on the search results page.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -183,7 +183,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The answer variation name that is displayed in search results.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -191,7 +191,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the languageTag property value. The languageTag property
+     * Sets the languageTag property value. The country or region that can view this answer variation.
      * @param string|null $value Value to set for the languageTag property.
     */
     public function setLanguageTag(?string $value): void {
@@ -207,7 +207,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the platform property value. The platform property
+     * Sets the platform property value. The device or operating system that can view this answer variation. Possible values are: android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, unknown, androidASOP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      * @param DevicePlatformType|null $value Value to set for the platform property.
     */
     public function setPlatform(?DevicePlatformType $value): void {
@@ -215,7 +215,7 @@ class AnswerVariant implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The URL link for the answer variation. When users select this answer variation from the search results, they're directed to the specified URL.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

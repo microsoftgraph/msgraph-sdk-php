@@ -57,7 +57,7 @@ class MacOSDmgApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image)
+     * Gets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image). This collection can contain a maximum of 500 elements.
      * @return array<MacOSIncludedApp>|null
     */
     public function getIncludedApps(): ?array {
@@ -128,7 +128,7 @@ class MacOSDmgApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image)
+     * Sets the includedApps property value. The list of .apps expected to be installed by the DMG (Apple Disk Image). This collection can contain a maximum of 500 elements.
      * @param array<MacOSIncludedApp>|null $value Value to set for the includedApps property.
     */
     public function setIncludedApps(?array $value): void {

@@ -52,7 +52,7 @@ class DeletedChatsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @param DeletedChatsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeletedChatCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class DeletedChatsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deletedChats from teamwork
+     * Read the properties and relationships of a deletedChat object.
      * @param DeletedChatsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

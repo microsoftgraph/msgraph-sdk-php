@@ -356,7 +356,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Gets the onPremisesSecurityIdentifier property value. The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
      * @return string|null
     */
     public function getOnPremisesSecurityIdentifier(): ?string {
@@ -728,7 +728,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Sets the onPremisesSecurityIdentifier property value. The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
      * @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
     public function setOnPremisesSecurityIdentifier(?string $value): void {

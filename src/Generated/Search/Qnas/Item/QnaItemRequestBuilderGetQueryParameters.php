@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Search\Qnas\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get qnas from search
+ * Read the properties and relationships of a qna object.
 */
 class QnaItemRequestBuilderGetQueryParameters 
 {

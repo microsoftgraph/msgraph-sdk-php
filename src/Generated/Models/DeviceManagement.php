@@ -898,7 +898,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the virtualEndpoint property value. The virtualEndpoint property
+     * Gets the virtualEndpoint property value. Virtual endpoint
      * @return VirtualEndpoint|null
     */
     public function getVirtualEndpoint(): ?VirtualEndpoint {
@@ -1523,7 +1523,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the virtualEndpoint property value. The virtualEndpoint property
+     * Sets the virtualEndpoint property value. Virtual endpoint
      * @param VirtualEndpoint|null $value Value to set for the virtualEndpoint property.
     */
     public function setVirtualEndpoint(?VirtualEndpoint $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get bulkUpload from servicePrincipals
+ * The bulk upload operation for the job.
 */
 class BulkUploadRequestBuilderGetQueryParameters 
 {

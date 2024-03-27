@@ -56,7 +56,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the domainJoinType property value. The domainJoinType property
+     * Gets the domainJoinType property value. Specifies the method by which the provisioned Cloud PC joins Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave the regionName property empty. If you choose the azureADJoin type, provide a value for either the onPremisesConnectionId or the regionName property. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @return CloudPcDomainJoinType|null
     */
     public function getDomainJoinType(): ?CloudPcDomainJoinType {
@@ -95,7 +95,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the onPremisesConnectionId property value. The onPremisesConnectionId property
+     * Gets the onPremisesConnectionId property value. The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Microsoft Entra joined. If you enter an onPremisesConnectionId, leave the regionName property empty.
      * @return string|null
     */
     public function getOnPremisesConnectionId(): ?string {
@@ -107,7 +107,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the regionGroup property value. The regionGroup property
+     * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when they provision a Cloud PC, and the Cloud PC is put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, southKorea. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: norway, switzerland, southKorea. Read-only.
      * @return CloudPcRegionGroup|null
     */
     public function getRegionGroup(): ?CloudPcRegionGroup {
@@ -119,7 +119,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the regionName property value. The regionName property
+     * Gets the regionName property value. The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. Within this region, the Windows 365 service creates and manages the underlying virtual network. This option is available only when the IT admin selects Microsoft Entra joined as the domain join type. If you enter a regionName, leave the onPremisesConnectionId property empty.
      * @return string|null
     */
     public function getRegionName(): ?string {
@@ -160,7 +160,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the domainJoinType property value. The domainJoinType property
+     * Sets the domainJoinType property value. Specifies the method by which the provisioned Cloud PC joins Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave the regionName property empty. If you choose the azureADJoin type, provide a value for either the onPremisesConnectionId or the regionName property. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @param CloudPcDomainJoinType|null $value Value to set for the domainJoinType property.
     */
     public function setDomainJoinType(?CloudPcDomainJoinType $value): void {
@@ -176,7 +176,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the onPremisesConnectionId property value. The onPremisesConnectionId property
+     * Sets the onPremisesConnectionId property value. The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Microsoft Entra joined. If you enter an onPremisesConnectionId, leave the regionName property empty.
      * @param string|null $value Value to set for the onPremisesConnectionId property.
     */
     public function setOnPremisesConnectionId(?string $value): void {
@@ -184,7 +184,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the regionGroup property value. The regionGroup property
+     * Sets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when they provision a Cloud PC, and the Cloud PC is put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, southKorea. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: norway, switzerland, southKorea. Read-only.
      * @param CloudPcRegionGroup|null $value Value to set for the regionGroup property.
     */
     public function setRegionGroup(?CloudPcRegionGroup $value): void {
@@ -192,7 +192,7 @@ class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the regionName property value. The regionName property
+     * Sets the regionName property value. The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. Within this region, the Windows 365 service creates and manages the underlying virtual network. This option is available only when the IT admin selects Microsoft Entra joined as the domain join type. If you enter a regionName, leave the onPremisesConnectionId property empty.
      * @param string|null $value Value to set for the regionName property.
     */
     public function setRegionName(?string $value): void {

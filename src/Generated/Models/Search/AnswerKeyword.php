@@ -85,7 +85,7 @@ class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the keywords property value. The keywords property
+     * Gets the keywords property value. A collection of keywords used to trigger the search answer.
      * @return array<string>|null
     */
     public function getKeywords(): ?array {
@@ -99,7 +99,7 @@ class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the matchSimilarKeywords property value. The matchSimilarKeywords property
+     * Gets the matchSimilarKeywords property value. If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
      * @return bool|null
     */
     public function getMatchSimilarKeywords(): ?bool {
@@ -123,7 +123,7 @@ class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the reservedKeywords property value. The reservedKeywords property
+     * Gets the reservedKeywords property value. Unique keywords that guarantee the search answer is triggered.
      * @return array<string>|null
     */
     public function getReservedKeywords(): ?array {
@@ -165,7 +165,7 @@ class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the keywords property value. The keywords property
+     * Sets the keywords property value. A collection of keywords used to trigger the search answer.
      * @param array<string>|null $value Value to set for the keywords property.
     */
     public function setKeywords(?array $value): void {
@@ -173,7 +173,7 @@ class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the matchSimilarKeywords property value. The matchSimilarKeywords property
+     * Sets the matchSimilarKeywords property value. If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
      * @param bool|null $value Value to set for the matchSimilarKeywords property.
     */
     public function setMatchSimilarKeywords(?bool $value): void {
@@ -189,7 +189,7 @@ class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the reservedKeywords property value. The reservedKeywords property
+     * Sets the reservedKeywords property value. Unique keywords that guarantee the search answer is triggered.
      * @param array<string>|null $value Value to set for the reservedKeywords property.
     */
     public function setReservedKeywords(?array $value): void {
