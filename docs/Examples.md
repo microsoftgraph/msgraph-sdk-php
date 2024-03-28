@@ -23,7 +23,7 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 ```
 
-To make requests on behalf of an already signed in user where your front-end application has already acquired an access token for the user, you can use the `OnBehalfOfContext` which uses the [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to fetch
+To make requests on behalf of an already signed in user, where your front-end application has already acquired an access token for the user, you can use the `OnBehalfOfContext` which uses the [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to fetch
 an access token for your backend application to access the Microsoft Graph API. To do this, you pass the already acquired access token as the "assertion";
 
 ```php
@@ -92,9 +92,9 @@ $graphServiceClient = GraphServiceClient::createWithRequestAdapter($requestAdapt
 Using the `TokenRequestContext`, an instance of the `GraphServiceClient` requests access tokens and refresh tokens.
 The tokens are stored by default in an in-memory cache so that future requests using the same instance of the `GraphServiceClient` can re-use the previously acquired tokens.
 
-The default in-memory cache is a map/dictionary with a unique key identifying a user/application with a tenant and a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object as its value. The unique key ensures the right token for a user is retrieved from the cache. For `TokenRequestContexts` that do not require a signed in user (application permissions), the cache key will be **`{tenantId}-{clientId}`** and for those that require a signed in user (delegated permissions), the cache key will be
+The default in-memory cache is a map/dictionary with a unique key identifying a user/application with a tenant and a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object as its value. The unique key ensures the right token for a user is retrieved from the cache. For `TokenRequestContexts` that do not require a signed-in user (application permissions), the cache key will be **`{tenantId}-{clientId}`** and for those that require a signed-in user (delegated permissions), the cache key will be
 **`{tenantId}-{clientId}-{userId}`**. The `AccessToken` object carries both the `access_token`, its expiry and a `refresh_token` if available.
-The in-memory cache lives as a PHP object within the your application's PHP process and is destroyed when the process terminates.
+The in-memory cache lives as a PHP object within your application's PHP process and is destroyed when the process terminates.
 
 For scenarios where an application requires a signed-in user, retaining the same
 instance of the `GraphServiceClient` across multiple requests to your application for the same user's session is not feasible. This section outlines
@@ -105,10 +105,10 @@ how your application can retrieve access tokens from the SDK and pass already ac
 The SDK provides a mechanism to expose the access token and refresh token that it acquires to your application for use in future requests. This would prevent the SDK from making a new
 token request with each `GraphServiceClient` your application instantiates. It also allows your application to prevent its users from signing in with each request within a session.
 
-By default a `GraphServiceClient` instance caches access tokens in a built-in [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/InMemoryAccessTokenCache.php). The cache will be populated with a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object which carries both the `access_token`, its expiry and a `refresh_token` if available. When the `GraphServiceClient` instance is re-used for a request with the same user/application, the in-memory cache is checked for a valid token otherwise a new token request is made.
+By default, a `GraphServiceClient` instance caches access tokens in a built-in [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/InMemoryAccessTokenCache.php). The cache will be populated with a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object which carries both the `access_token`, its expiry and a `refresh_token` if available. When the `GraphServiceClient` instance is re-used for a request with the same user/application, the in-memory cache is checked for a valid token otherwise a new token request is made.
 
 However, to get the cached token that the SDK requests for a user/application you
-can initialise an `InMemoryAccessTokenCache` or pass a custom implementation of the [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface interface and pass it as a parameter when initialising the `GraphServiceClient`. The two approaches are outlined below:
+can initialise an `InMemoryAccessTokenCache` or pass a custom implementation of the [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface and pass it as a parameter when initialising the `GraphServiceClient`. The two approaches are outlined below:
 
 ### Using an InMemoryAccessTokenCache instance
 
@@ -150,8 +150,8 @@ A custom [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-
 custom cache via the `persistAccessToken()` method.
 
 By default, the SDK adds a unique cache key/identifier to a `TokenRequestContext` that uniquely identifies the tenant, client and user (if applicable).
-For `TokenRequestContexts` that do not require a signed in user (application permissions), the cache key will be
-**`{tenantId}-{clientId}`** and for those that require a signed in user (delegated permissions), the cache key will be
+For `TokenRequestContexts` that do not require a signed-in user (application permissions), the cache key will be
+**`{tenantId}-{clientId}`** and for those that require a signed-in user (delegated permissions), the cache key will be
 **`{tenantId}-{clientId}-{userId}`**.
 
 Alternatively, you can override the default cache key
@@ -173,7 +173,7 @@ The SDK provides a built-in implementation of this interface via an [`InMemoryAc
 This is also useful when re-using a previously retrieved access token for a signed-in user during a previous request.
 
 The SDK will check the cache for a valid token before considering requesting a new token. If the provided token is expired
-and a refresh token is present, the access token will be refreshed and persisted to the cache. If no refresh token is provided, the SDK requests attempts to retrieve a new access token and persists it to the cache. In cases where a signed in user is present, e.g. authorization_code OAuth flows, the new token request will most likely fail because no valid `authorization_code` will be present meaning the user has to sign in again.
+and a refresh token is present, the access token will be refreshed and persisted to the cache. If no refresh token is provided, the SDK requests attempts to retrieve a new access token and persists it to the cache. In cases where a signed-in user is present, e.g. authorization_code OAuth flows, the new token request will most likely fail because no valid `authorization_code` will be present meaning the user has to sign in again.
 
 ### Using the `InMemoryAccessTokenCache`
 
@@ -264,8 +264,8 @@ $graphServiceClient = GraphServiceClient::createWithAuthenticationProvider(
 The SDK retrieves cached tokens using a cache key/identifier on the `TokenRequestContext`. The cache key
 on the `TokenRequestContext` is set using `setCacheKey()` which accepts an [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object.
 
-The `TokenRequestContext` uses the `AccessToken` to generate a unique identifier per user, client and tenant. For `TokenRequestContexts` that do not require a signed in user (application permissions), the cache key will be
-**`{tenantId}-{clientId}`** and for those that require a signed in user (delegated permissions), the cache key will be
+The `TokenRequestContext` uses the `AccessToken` to generate a unique identifier per user, client and tenant. For `TokenRequestContexts` that do not require a signed-in user (application permissions), the cache key will be
+**`{tenantId}-{clientId}`** and for those that require a signed-in user (delegated permissions), the cache key will be
 **`{tenantId}-{clientId}-{userId}`**.
 
 For this scenario, the custom AccessTokenCache will need to be initialized in a way that the cache key set on the
@@ -410,7 +410,7 @@ Ensure you have the [right permissions](https://docs.microsoft.com/en-us/graph/a
 
 ```php
 
-use Microsoft\Graph\Generated\Me\SendMail\SendMailPostRequestBody;
+use Microsoft\Graph\Generated\Users\Item\SendMail\SendMailPostRequestBody;
 use Microsoft\Graph\Generated\Models\BodyType;
 use Microsoft\Graph\Generated\Models\EmailAddress;
 use Microsoft\Graph\Generated\Models\ItemBody;
