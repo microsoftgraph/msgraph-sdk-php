@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Invitation extends Entity implements Parsable 
 {
@@ -35,6 +36,7 @@ class Invitation extends Entity implements Parsable
             'invitedUserDisplayName' => fn(ParseNode $n) => $o->setInvitedUserDisplayName($n->getStringValue()),
             'invitedUserEmailAddress' => fn(ParseNode $n) => $o->setInvitedUserEmailAddress($n->getStringValue()),
             'invitedUserMessageInfo' => fn(ParseNode $n) => $o->setInvitedUserMessageInfo($n->getObjectValue([InvitedUserMessageInfo::class, 'createFromDiscriminatorValue'])),
+            'invitedUserSponsors' => fn(ParseNode $n) => $o->setInvitedUserSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'invitedUserType' => fn(ParseNode $n) => $o->setInvitedUserType($n->getStringValue()),
             'inviteRedeemUrl' => fn(ParseNode $n) => $o->setInviteRedeemUrl($n->getStringValue()),
             'inviteRedirectUrl' => fn(ParseNode $n) => $o->setInviteRedirectUrl($n->getStringValue()),
@@ -90,6 +92,20 @@ class Invitation extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserMessageInfo'");
+    }
+
+    /**
+     * Gets the invitedUserSponsors property value. The invitedUserSponsors property
+     * @return array<DirectoryObject>|null
+    */
+    public function getInvitedUserSponsors(): ?array {
+        $val = $this->getBackingStore()->get('invitedUserSponsors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserSponsors'");
     }
 
     /**
@@ -174,6 +190,7 @@ class Invitation extends Entity implements Parsable
         $writer->writeStringValue('invitedUserDisplayName', $this->getInvitedUserDisplayName());
         $writer->writeStringValue('invitedUserEmailAddress', $this->getInvitedUserEmailAddress());
         $writer->writeObjectValue('invitedUserMessageInfo', $this->getInvitedUserMessageInfo());
+        $writer->writeCollectionOfObjectValues('invitedUserSponsors', $this->getInvitedUserSponsors());
         $writer->writeStringValue('invitedUserType', $this->getInvitedUserType());
         $writer->writeStringValue('inviteRedeemUrl', $this->getInviteRedeemUrl());
         $writer->writeStringValue('inviteRedirectUrl', $this->getInviteRedirectUrl());
@@ -212,6 +229,14 @@ class Invitation extends Entity implements Parsable
     */
     public function setInvitedUserMessageInfo(?InvitedUserMessageInfo $value): void {
         $this->getBackingStore()->set('invitedUserMessageInfo', $value);
+    }
+
+    /**
+     * Sets the invitedUserSponsors property value. The invitedUserSponsors property
+     * @param array<DirectoryObject>|null $value Value to set for the invitedUserSponsors property.
+    */
+    public function setInvitedUserSponsors(?array $value): void {
+        $this->getBackingStore()->set('invitedUserSponsors', $value);
     }
 
     /**

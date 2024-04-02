@@ -51,7 +51,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
      * @param ConversationThreadItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConversationThreadItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,11 +62,11 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
+     * Get a thread object.
      * @param ConversationThreadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThread|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationThreadItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -111,7 +111,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
+     * Get a thread object.
      * @param ConversationThreadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
