@@ -118,7 +118,7 @@ class AppliesToRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DirectoryObject $body, ?AppliesToRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/featureRolloutPolicies/{featureRolloutPolicy%2Did}/appliesTo';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

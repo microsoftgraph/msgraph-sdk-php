@@ -142,7 +142,7 @@ class GroupSettingTemplatesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(GroupSettingTemplate $body, ?GroupSettingTemplatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groupSettingTemplates';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

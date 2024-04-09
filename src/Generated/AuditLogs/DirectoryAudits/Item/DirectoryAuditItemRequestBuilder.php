@@ -81,7 +81,7 @@ class DirectoryAuditItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DirectoryAuditItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/auditLogs/directoryAudits/{directoryAudit%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -121,7 +121,7 @@ class DirectoryAuditItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(DirectoryAudit $body, ?DirectoryAuditItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/auditLogs/directoryAudits/{directoryAudit%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -111,7 +111,7 @@ class RubricsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(EducationRubric $body, ?RubricsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/users/{educationUser%2Did}/rubrics';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

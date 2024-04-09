@@ -109,7 +109,7 @@ class RoomsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Room $body, ?RoomsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/places/{place%2Did}/graph.roomList/rooms';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

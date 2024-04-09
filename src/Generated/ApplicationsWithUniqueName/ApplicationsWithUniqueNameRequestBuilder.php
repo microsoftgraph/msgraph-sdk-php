@@ -86,7 +86,7 @@ class ApplicationsWithUniqueNameRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ApplicationsWithUniqueNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications(uniqueName=\'{uniqueName}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -126,7 +126,7 @@ class ApplicationsWithUniqueNameRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Application $body, ?ApplicationsWithUniqueNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications(uniqueName=\'{uniqueName}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -85,7 +85,7 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents(externalId=\'{externalId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -125,7 +125,7 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(LearningContent $body, ?LearningContentsWithExternalIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents(externalId=\'{externalId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

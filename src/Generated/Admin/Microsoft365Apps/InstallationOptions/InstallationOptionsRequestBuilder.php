@@ -82,7 +82,7 @@ class InstallationOptionsRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?InstallationOptionsRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/microsoft365Apps/installationOptions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class InstallationOptionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(M365AppsInstallationOptions $body, ?InstallationOptionsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/microsoft365Apps/installationOptions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

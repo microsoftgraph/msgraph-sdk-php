@@ -54,11 +54,11 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of conversation object.
+     * The group's conversations.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Conversation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,7 +75,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ConversationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -87,7 +87,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of conversation object.
+     * The group's conversations.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

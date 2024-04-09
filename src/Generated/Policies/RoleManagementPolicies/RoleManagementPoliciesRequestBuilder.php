@@ -110,7 +110,7 @@ class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(UnifiedRoleManagementPolicy $body, ?RoleManagementPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/roleManagementPolicies';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

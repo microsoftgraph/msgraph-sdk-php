@@ -110,7 +110,7 @@ class ProvisioningRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ProvisioningObjectSummary $body, ?ProvisioningRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/auditLogs/provisioning';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

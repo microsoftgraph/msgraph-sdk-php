@@ -65,7 +65,7 @@ class TablesRequestBuilder extends BaseRequestBuilder
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workbook-list-tables?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/table-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TablesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -128,7 +128,7 @@ class TablesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WorkbookTable $body, ?TablesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

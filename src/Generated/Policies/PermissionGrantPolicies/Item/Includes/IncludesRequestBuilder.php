@@ -111,7 +111,7 @@ class IncludesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PermissionGrantConditionSet $body, ?IncludesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/includes';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

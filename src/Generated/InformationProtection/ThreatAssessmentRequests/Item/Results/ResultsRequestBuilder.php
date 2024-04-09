@@ -109,7 +109,7 @@ class ResultsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ThreatAssessmentResult $body, ?ResultsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}/results';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

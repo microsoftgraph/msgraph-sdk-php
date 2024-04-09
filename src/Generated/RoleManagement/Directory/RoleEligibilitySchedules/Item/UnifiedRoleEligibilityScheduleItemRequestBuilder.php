@@ -113,7 +113,7 @@ class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseRequestBuilde
     */
     public function toDeleteRequestInformation(?UnifiedRoleEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -153,7 +153,7 @@ class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseRequestBuilde
     */
     public function toPatchRequestInformation(UnifiedRoleEligibilitySchedule $body, ?UnifiedRoleEligibilityScheduleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

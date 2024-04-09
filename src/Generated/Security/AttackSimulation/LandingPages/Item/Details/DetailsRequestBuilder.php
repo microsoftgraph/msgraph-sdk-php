@@ -109,7 +109,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(LandingPageDetail $body, ?DetailsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/landingPages/{landingPage%2Did}/details';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

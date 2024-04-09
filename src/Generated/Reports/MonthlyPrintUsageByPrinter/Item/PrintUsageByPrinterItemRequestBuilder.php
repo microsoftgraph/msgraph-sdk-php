@@ -80,7 +80,7 @@ class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?PrintUsageByPrinterItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/reports/monthlyPrintUsageByPrinter/{printUsageByPrinter%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -120,7 +120,7 @@ class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(PrintUsageByPrinter $body, ?PrintUsageByPrinterItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/reports/monthlyPrintUsageByPrinter/{printUsageByPrinter%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

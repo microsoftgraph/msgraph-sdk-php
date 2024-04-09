@@ -82,7 +82,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DetailsRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/buckets/{plannerBucket%2Did}/tasks/{plannerTask%2Did}/details';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(PlannerTaskDetails $body, ?DetailsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/buckets/{plannerBucket%2Did}/tasks/{plannerTask%2Did}/details';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

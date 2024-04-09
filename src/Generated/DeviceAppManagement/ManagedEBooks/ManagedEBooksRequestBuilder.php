@@ -111,7 +111,7 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ManagedEBook $body, ?ManagedEBooksRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/managedEBooks';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

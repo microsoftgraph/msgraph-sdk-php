@@ -141,7 +141,7 @@ class DirectoryObjectsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DirectoryObject $body, ?DirectoryObjectsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directoryObjects';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

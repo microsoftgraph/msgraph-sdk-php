@@ -86,7 +86,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ApplicationsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications(appId=\'{appId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -126,7 +126,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Application $body, ?ApplicationsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications(appId=\'{appId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

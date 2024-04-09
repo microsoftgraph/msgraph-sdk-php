@@ -110,7 +110,7 @@ class SecureScoresRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SecureScore $body, ?SecureScoresRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/secureScores';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

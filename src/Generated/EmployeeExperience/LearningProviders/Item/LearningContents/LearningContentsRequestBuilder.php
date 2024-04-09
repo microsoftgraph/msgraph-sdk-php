@@ -110,7 +110,7 @@ class LearningContentsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(LearningContent $body, ?LearningContentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

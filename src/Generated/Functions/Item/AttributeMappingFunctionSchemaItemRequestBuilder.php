@@ -80,7 +80,7 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
     */
     public function toDeleteRequestInformation(?AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/functions/{attributeMappingFunctionSchema%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -120,7 +120,7 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
     */
     public function toPatchRequestInformation(AttributeMappingFunctionSchema $body, ?AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/functions/{attributeMappingFunctionSchema%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

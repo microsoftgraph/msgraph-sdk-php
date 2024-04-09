@@ -82,7 +82,7 @@ class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?RetentionEventTypeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/triggerTypes/retentionEventTypes/{retentionEventType%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(RetentionEventType $body, ?RetentionEventTypeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/triggerTypes/retentionEventTypes/{retentionEventType%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

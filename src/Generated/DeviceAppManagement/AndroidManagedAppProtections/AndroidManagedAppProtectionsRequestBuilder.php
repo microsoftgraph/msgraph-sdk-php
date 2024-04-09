@@ -111,7 +111,7 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/androidManagedAppProtections';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

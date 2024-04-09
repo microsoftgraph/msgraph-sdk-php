@@ -111,7 +111,7 @@ class ResourceOperationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ResourceOperation $body, ?ResourceOperationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/resourceOperations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

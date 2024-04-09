@@ -67,12 +67,12 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new editionUpgradeConfiguration object.
+     * Create a new windows10SecureAssessmentConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10secureassessmentconfiguration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceConfiguration $body, ?DeviceConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -104,14 +104,14 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new editionUpgradeConfiguration object.
+     * Create a new windows10SecureAssessmentConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(DeviceConfiguration $body, ?DeviceConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/deviceConfigurations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

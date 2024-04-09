@@ -88,7 +88,7 @@ class MailboxSettingsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(MailboxSettings $body, ?MailboxSettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}/list/lastModifiedByUser/mailboxSettings';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

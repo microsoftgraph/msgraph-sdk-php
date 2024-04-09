@@ -120,7 +120,7 @@ class EligibilitySchedulesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PrivilegedAccessGroupEligibilitySchedule $body, ?EligibilitySchedulesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/privilegedAccess/group/eligibilitySchedules';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

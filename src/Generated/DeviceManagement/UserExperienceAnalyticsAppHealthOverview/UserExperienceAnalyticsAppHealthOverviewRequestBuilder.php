@@ -88,7 +88,7 @@ class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends BaseRequest
     */
     public function toDeleteRequestInformation(?UserExperienceAnalyticsAppHealthOverviewRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthOverview';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsAppHealthOverviewRequestBuilder extends BaseRequest
     */
     public function toPatchRequestInformation(UserExperienceAnalyticsCategory $body, ?UserExperienceAnalyticsAppHealthOverviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthOverview';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

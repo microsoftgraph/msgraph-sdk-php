@@ -80,7 +80,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     */
     public function toDeleteRequestInformation(?CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -120,7 +120,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     */
     public function toPatchRequestInformation(CertificateBasedAuthConfiguration $body, ?CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

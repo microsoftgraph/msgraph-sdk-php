@@ -120,7 +120,7 @@ class AssignmentSchedulesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PrivilegedAccessGroupAssignmentSchedule $body, ?AssignmentSchedulesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/privilegedAccess/group/assignmentSchedules';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

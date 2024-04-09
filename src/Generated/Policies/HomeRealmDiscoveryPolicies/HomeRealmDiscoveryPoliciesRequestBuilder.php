@@ -111,7 +111,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/homeRealmDiscoveryPolicies';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

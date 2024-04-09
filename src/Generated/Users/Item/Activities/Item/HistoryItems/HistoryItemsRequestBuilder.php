@@ -109,7 +109,7 @@ class HistoryItemsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ActivityHistoryItem $body, ?HistoryItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/activities/{userActivity%2Did}/historyItems';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {
