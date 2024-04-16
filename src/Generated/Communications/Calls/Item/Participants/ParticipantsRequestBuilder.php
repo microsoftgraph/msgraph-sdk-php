@@ -118,7 +118,7 @@ class ParticipantsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Participant $body, ?ParticipantsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/participants';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

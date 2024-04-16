@@ -91,7 +91,7 @@ class RubricRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?RubricRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/rubric';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -131,7 +131,7 @@ class RubricRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(EducationRubric $body, ?RubricRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/rubric';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

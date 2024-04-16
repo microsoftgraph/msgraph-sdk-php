@@ -110,7 +110,7 @@ class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ContentSharingSession $body, ?ContentSharingSessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

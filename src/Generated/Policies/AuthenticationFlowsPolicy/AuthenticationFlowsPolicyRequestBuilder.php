@@ -82,7 +82,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?AuthenticationFlowsPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/authenticationFlowsPolicy';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(AuthenticationFlowsPolicy $body, ?AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/authenticationFlowsPolicy';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

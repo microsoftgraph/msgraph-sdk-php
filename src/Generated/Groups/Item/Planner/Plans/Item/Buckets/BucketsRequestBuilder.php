@@ -110,7 +110,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PlannerBucket $body, ?BucketsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/planner/plans/{plannerPlan%2Did}/buckets';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

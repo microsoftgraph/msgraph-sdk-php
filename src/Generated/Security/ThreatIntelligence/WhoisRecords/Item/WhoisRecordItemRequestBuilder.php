@@ -97,7 +97,7 @@ class WhoisRecordItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?WhoisRecordItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/whoisRecords/{whoisRecord%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -137,7 +137,7 @@ class WhoisRecordItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(WhoisRecord $body, ?WhoisRecordItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/whoisRecords/{whoisRecord%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

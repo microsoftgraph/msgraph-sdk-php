@@ -26,7 +26,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the canvasLayout property value. The canvasLayout property
+     * Gets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @return CanvasLayout|null
     */
     public function getCanvasLayout(): ?CanvasLayout {
@@ -56,7 +56,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the promotionKind property value. The promotionKind property
+     * Gets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @return PagePromotionType|null
     */
     public function getPromotionKind(): ?PagePromotionType {
@@ -68,7 +68,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the reactions property value. The reactions property
+     * Gets the reactions property value. Reactions information for the page.
      * @return ReactionsFacet|null
     */
     public function getReactions(): ?ReactionsFacet {
@@ -80,7 +80,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the showComments property value. The showComments property
+     * Gets the showComments property value. Determines whether or not to show comments at the bottom of the page.
      * @return bool|null
     */
     public function getShowComments(): ?bool {
@@ -92,7 +92,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the showRecommendedPages property value. The showRecommendedPages property
+     * Gets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
      * @return bool|null
     */
     public function getShowRecommendedPages(): ?bool {
@@ -104,7 +104,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the thumbnailWebUrl property value. The thumbnailWebUrl property
+     * Gets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
      * @return string|null
     */
     public function getThumbnailWebUrl(): ?string {
@@ -116,7 +116,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the titleArea property value. The titleArea property
+     * Gets the titleArea property value. Title area on the SharePoint page.
      * @return TitleArea|null
     */
     public function getTitleArea(): ?TitleArea {
@@ -128,7 +128,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Gets the webParts property value. The webParts property
+     * Gets the webParts property value. Collection of webparts on the SharePoint page.
      * @return array<WebPart>|null
     */
     public function getWebParts(): ?array {
@@ -158,7 +158,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the canvasLayout property value. The canvasLayout property
+     * Sets the canvasLayout property value. Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @param CanvasLayout|null $value Value to set for the canvasLayout property.
     */
     public function setCanvasLayout(?CanvasLayout $value): void {
@@ -166,7 +166,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the promotionKind property value. The promotionKind property
+     * Sets the promotionKind property value. Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
      * @param PagePromotionType|null $value Value to set for the promotionKind property.
     */
     public function setPromotionKind(?PagePromotionType $value): void {
@@ -174,7 +174,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the reactions property value. The reactions property
+     * Sets the reactions property value. Reactions information for the page.
      * @param ReactionsFacet|null $value Value to set for the reactions property.
     */
     public function setReactions(?ReactionsFacet $value): void {
@@ -182,7 +182,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the showComments property value. The showComments property
+     * Sets the showComments property value. Determines whether or not to show comments at the bottom of the page.
      * @param bool|null $value Value to set for the showComments property.
     */
     public function setShowComments(?bool $value): void {
@@ -190,7 +190,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the showRecommendedPages property value. The showRecommendedPages property
+     * Sets the showRecommendedPages property value. Determines whether or not to show recommended pages at the bottom of the page.
      * @param bool|null $value Value to set for the showRecommendedPages property.
     */
     public function setShowRecommendedPages(?bool $value): void {
@@ -198,7 +198,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the thumbnailWebUrl property value. The thumbnailWebUrl property
+     * Sets the thumbnailWebUrl property value. Url of the sitePage's thumbnail image
      * @param string|null $value Value to set for the thumbnailWebUrl property.
     */
     public function setThumbnailWebUrl(?string $value): void {
@@ -206,7 +206,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the titleArea property value. The titleArea property
+     * Sets the titleArea property value. Title area on the SharePoint page.
      * @param TitleArea|null $value Value to set for the titleArea property.
     */
     public function setTitleArea(?TitleArea $value): void {
@@ -214,7 +214,7 @@ class SitePage extends BaseSitePage implements Parsable
     }
 
     /**
-     * Sets the webParts property value. The webParts property
+     * Sets the webParts property value. Collection of webparts on the SharePoint page.
      * @param array<WebPart>|null $value Value to set for the webParts property.
     */
     public function setWebParts(?array $value): void {

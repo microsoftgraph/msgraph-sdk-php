@@ -32,10 +32,11 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BaseSitePageCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/basesitepage-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -46,11 +47,12 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to pages for sites
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param BaseSitePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BaseSitePage|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-1.0 Find more info here
     */
     public function post(BaseSitePage $body, ?PagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -61,7 +63,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from sites
+     * Get the collection of [baseSitePage][] objects from the site pages [list][] in a [site][]. All pages in the site are returned (with pagination). Sort alphabetically by name in ascending order. The following table lists the available subtypes.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -82,14 +84,14 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to pages for sites
+     * Create a new [sitePage][] in the site pages [list][] in a [site][].
      * @param BaseSitePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(BaseSitePage $body, ?PagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/getByPath(path=\'{path}\')/getByPath(path=\'{path1}\')/pages';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

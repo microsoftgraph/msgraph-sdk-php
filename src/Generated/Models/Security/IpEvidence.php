@@ -46,6 +46,7 @@ class IpEvidence extends AlertEvidence implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'countryLetterCode' => fn(ParseNode $n) => $o->setCountryLetterCode($n->getStringValue()),
             'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
+            'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([GeoLocation::class, 'createFromDiscriminatorValue'])),
             'stream' => fn(ParseNode $n) => $o->setStream($n->getObjectValue([Stream::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -60,6 +61,18 @@ class IpEvidence extends AlertEvidence implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'ipAddress'");
+    }
+
+    /**
+     * Gets the location property value. The location property
+     * @return GeoLocation|null
+    */
+    public function getLocation(): ?GeoLocation {
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || $val instanceof GeoLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -82,6 +95,7 @@ class IpEvidence extends AlertEvidence implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('countryLetterCode', $this->getCountryLetterCode());
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
+        $writer->writeObjectValue('location', $this->getLocation());
         $writer->writeObjectValue('stream', $this->getStream());
     }
 
@@ -99,6 +113,14 @@ class IpEvidence extends AlertEvidence implements Parsable
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
+    }
+
+    /**
+     * Sets the location property value. The location property
+     * @param GeoLocation|null $value Value to set for the location property.
+    */
+    public function setLocation(?GeoLocation $value): void {
+        $this->getBackingStore()->set('location', $value);
     }
 
     /**

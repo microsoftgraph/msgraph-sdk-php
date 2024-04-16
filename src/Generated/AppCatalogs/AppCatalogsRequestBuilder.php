@@ -96,7 +96,7 @@ class AppCatalogsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(AppCatalogs $body, ?AppCatalogsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/appCatalogs';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

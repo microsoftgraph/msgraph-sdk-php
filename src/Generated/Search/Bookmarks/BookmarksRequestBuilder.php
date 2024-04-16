@@ -111,7 +111,7 @@ class BookmarksRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Bookmark $body, ?BookmarksRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/search/bookmarks';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

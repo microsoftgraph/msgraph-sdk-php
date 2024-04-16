@@ -104,7 +104,7 @@ class RoleManagementRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(RoleManagement $body, ?RoleManagementRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/roleManagement';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

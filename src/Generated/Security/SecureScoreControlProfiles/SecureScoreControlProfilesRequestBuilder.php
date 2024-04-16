@@ -110,7 +110,7 @@ class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SecureScoreControlProfile $body, ?SecureScoreControlProfilesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/secureScoreControlProfiles';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

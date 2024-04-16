@@ -83,7 +83,7 @@ class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?OAuth2PermissionGrantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/oauth2PermissionGrants/{oAuth2PermissionGrant%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -123,7 +123,7 @@ class OAuth2PermissionGrantItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(OAuth2PermissionGrant $body, ?OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/oauth2PermissionGrants/{oAuth2PermissionGrant%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

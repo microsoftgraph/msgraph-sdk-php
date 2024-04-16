@@ -110,7 +110,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(RiskyServicePrincipalHistoryItem $body, ?HistoryRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

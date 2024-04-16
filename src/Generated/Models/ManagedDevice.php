@@ -288,6 +288,18 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
+     * Gets the enrollmentProfileName property value. Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+     * @return string|null
+    */
+    public function getEnrollmentProfileName(): ?string {
+        $val = $this->getBackingStore()->get('enrollmentProfileName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enrollmentProfileName'");
+    }
+
+    /**
      * Gets the ethernetMacAddress property value. Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      * @return string|null
     */
@@ -363,6 +375,7 @@ class ManagedDevice extends Entity implements Parsable
             'easDeviceId' => fn(ParseNode $n) => $o->setEasDeviceId($n->getStringValue()),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'enrolledDateTime' => fn(ParseNode $n) => $o->setEnrolledDateTime($n->getDateTimeValue()),
+            'enrollmentProfileName' => fn(ParseNode $n) => $o->setEnrollmentProfileName($n->getStringValue()),
             'ethernetMacAddress' => fn(ParseNode $n) => $o->setEthernetMacAddress($n->getStringValue()),
             'exchangeAccessState' => fn(ParseNode $n) => $o->setExchangeAccessState($n->getEnumValue(DeviceManagementExchangeAccessState::class)),
             'exchangeAccessStateReason' => fn(ParseNode $n) => $o->setExchangeAccessStateReason($n->getEnumValue(DeviceManagementExchangeAccessStateReason::class)),
@@ -1006,6 +1019,14 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function setEnrolledDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('enrolledDateTime', $value);
+    }
+
+    /**
+     * Sets the enrollmentProfileName property value. Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+     * @param string|null $value Value to set for the enrollmentProfileName property.
+    */
+    public function setEnrollmentProfileName(?string $value): void {
+        $this->getBackingStore()->set('enrollmentProfileName', $value);
     }
 
     /**

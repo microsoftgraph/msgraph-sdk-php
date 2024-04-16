@@ -91,7 +91,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ColumnDefinition $body, ?ColumnsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/getByPath(path=\'{path}\')/columns';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

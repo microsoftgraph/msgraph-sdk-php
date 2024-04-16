@@ -46,11 +46,11 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a conversationMember from a chat.
+     * Retrieve a conversationMember from a chat or channel.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMember|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationMemberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ConversationMemberItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/chats/{chat%2Did}/members/{conversationMember%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -94,7 +94,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a conversationMember from a chat.
+     * Retrieve a conversationMember from a chat or channel.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +122,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ConversationMember $body, ?ConversationMemberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/chats/{chat%2Did}/members/{conversationMember%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

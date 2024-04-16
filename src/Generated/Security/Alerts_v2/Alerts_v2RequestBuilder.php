@@ -110,7 +110,7 @@ class Alerts_v2RequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Alert $body, ?Alerts_v2RequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/alerts_v2';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -109,7 +109,7 @@ class ActivitiesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ExternalActivity $body, ?ActivitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/connections/{externalConnection%2Did}/items/{externalItem%2Did}/activities';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

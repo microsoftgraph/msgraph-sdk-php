@@ -119,7 +119,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?LearningProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -159,7 +159,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(LearningProvider $body, ?LearningProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

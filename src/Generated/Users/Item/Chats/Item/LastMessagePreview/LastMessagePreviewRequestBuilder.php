@@ -80,7 +80,7 @@ class LastMessagePreviewRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?LastMessagePreviewRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/lastMessagePreview';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -120,7 +120,7 @@ class LastMessagePreviewRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ChatMessageInfo $body, ?LastMessagePreviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/lastMessagePreview';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

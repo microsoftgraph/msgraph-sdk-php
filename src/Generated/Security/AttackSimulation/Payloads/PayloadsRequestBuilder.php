@@ -110,7 +110,7 @@ class PayloadsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Payload $body, ?PayloadsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/payloads';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

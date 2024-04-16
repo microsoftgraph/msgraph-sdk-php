@@ -97,7 +97,7 @@ class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?HostSslCertificateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/hostSslCertificates/{hostSslCertificate%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -137,7 +137,7 @@ class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(HostSslCertificate $body, ?HostSslCertificateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/hostSslCertificates/{hostSslCertificate%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -109,7 +109,7 @@ class TeamsTemplatesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TeamsTemplate $body, ?TeamsTemplatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/teamsTemplates';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -55,10 +55,11 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property pages for groups
+     * Delete a [baseSitePage][] from the site pages [list][] in a [site][].
      * @param BaseSitePageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/basesitepage-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BaseSitePageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -69,10 +70,11 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from groups
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      * @param BaseSitePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BaseSitePage|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BaseSitePageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,13 +100,13 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property pages for groups
+     * Delete a [baseSitePage][] from the site pages [list][] in a [site][].
      * @param BaseSitePageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?BaseSitePageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -116,7 +118,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from groups
+     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
      * @param BaseSitePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +146,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(BaseSitePage $body, ?BaseSitePageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

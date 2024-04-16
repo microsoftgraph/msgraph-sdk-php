@@ -111,7 +111,7 @@ class SchemaExtensionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SchemaExtension $body, ?SchemaExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/schemaExtensions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -28,12 +28,25 @@ class ResetPasscodeActionResult extends DeviceActionResult implements Parsable
     }
 
     /**
+     * Gets the errorCode property value. RotateBitLockerKeys action error code. Valid values 0 to 2147483647
+     * @return int|null
+    */
+    public function getErrorCode(): ?int {
+        $val = $this->getBackingStore()->get('errorCode');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorCode'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'errorCode' => fn(ParseNode $n) => $o->setErrorCode($n->getIntegerValue()),
             'passcode' => fn(ParseNode $n) => $o->setPasscode($n->getStringValue()),
         ]);
     }
@@ -56,7 +69,16 @@ class ResetPasscodeActionResult extends DeviceActionResult implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeIntegerValue('errorCode', $this->getErrorCode());
         $writer->writeStringValue('passcode', $this->getPasscode());
+    }
+
+    /**
+     * Sets the errorCode property value. RotateBitLockerKeys action error code. Valid values 0 to 2147483647
+     * @param int|null $value Value to set for the errorCode property.
+    */
+    public function setErrorCode(?int $value): void {
+        $this->getBackingStore()->set('errorCode', $value);
     }
 
     /**

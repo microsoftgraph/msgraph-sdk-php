@@ -110,7 +110,7 @@ class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AuthenticationMethodModeDetail $body, ?AuthenticationMethodModesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identity/conditionalAccess/authenticationStrength/authenticationMethodModes';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

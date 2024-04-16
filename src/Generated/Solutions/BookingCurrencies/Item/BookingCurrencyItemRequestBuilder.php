@@ -81,7 +81,7 @@ class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?BookingCurrencyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -121,7 +121,7 @@ class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(BookingCurrency $body, ?BookingCurrencyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

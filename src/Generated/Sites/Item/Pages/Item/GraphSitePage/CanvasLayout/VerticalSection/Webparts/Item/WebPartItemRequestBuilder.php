@@ -53,7 +53,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webparts from sites
+     * The set of web parts in this section.
      * @param WebPartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebPart|null>
      * @throws Exception
@@ -88,7 +88,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?WebPartItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/verticalSection/webparts/{webPart%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -100,7 +100,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webparts from sites
+     * The set of web parts in this section.
      * @param WebPartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(WebPart $body, ?WebPartItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/verticalSection/webparts/{webPart%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

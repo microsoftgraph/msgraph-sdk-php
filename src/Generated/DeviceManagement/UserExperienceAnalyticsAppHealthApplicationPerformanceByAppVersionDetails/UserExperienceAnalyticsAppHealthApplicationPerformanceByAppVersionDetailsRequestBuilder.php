@@ -109,7 +109,7 @@ class UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsR
     */
     public function toPostRequestInformation(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails $body, ?UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

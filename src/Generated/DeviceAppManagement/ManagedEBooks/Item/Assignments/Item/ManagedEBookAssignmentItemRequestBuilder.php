@@ -46,11 +46,11 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosVppEBookAssignment object.
+     * Read properties and relationships of the managedEBookAssignment object.
      * @param ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +61,12 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a iosVppEBookAssignment object.
+     * Update the properties of a managedEBookAssignment object.
      * @param ManagedEBookAssignment $body The request body
      * @param ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedEBookAssignment $body, ?ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -83,7 +83,7 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/assignments/{managedEBookAssignment%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -95,7 +95,7 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosVppEBookAssignment object.
+     * Read properties and relationships of the managedEBookAssignment object.
      * @param ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,14 +116,14 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a iosVppEBookAssignment object.
+     * Update the properties of a managedEBookAssignment object.
      * @param ManagedEBookAssignment $body The request body
      * @param ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(ManagedEBookAssignment $body, ?ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/assignments/{managedEBookAssignment%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

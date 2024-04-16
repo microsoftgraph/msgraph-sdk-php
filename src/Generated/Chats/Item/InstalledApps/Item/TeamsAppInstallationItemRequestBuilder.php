@@ -106,7 +106,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/chats/{chat%2Did}/installedApps/{teamsAppInstallation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -146,7 +146,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(TeamsAppInstallation $body, ?TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/chats/{chat%2Did}/installedApps/{teamsAppInstallation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -109,7 +109,7 @@ class DomainDnsRecordsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DomainDnsRecord $body, ?DomainDnsRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/domainDnsRecords';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

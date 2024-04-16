@@ -88,7 +88,7 @@ class InternetExplorerModeRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?InternetExplorerModeRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/edge/internetExplorerMode';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -128,7 +128,7 @@ class InternetExplorerModeRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(InternetExplorerMode $body, ?InternetExplorerModeRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/edge/internetExplorerMode';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLa
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get columns from sites
+ * The set of vertical columns in this section.
 */
 class HorizontalSectionColumnItemRequestBuilderGetQueryParameters 
 {

@@ -179,7 +179,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
+     * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @return array<SubjectSet>|null
     */
     public function getPrimaryApprovers(): ?array {
@@ -290,7 +290,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors or externalSponsors.
+     * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @param array<SubjectSet>|null $value Value to set for the primaryApprovers property.
     */
     public function setPrimaryApprovers(?array $value): void {

@@ -91,7 +91,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ExternalGroupItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/external/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -131,7 +131,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ExternalGroup $body, ?ExternalGroupItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/external/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

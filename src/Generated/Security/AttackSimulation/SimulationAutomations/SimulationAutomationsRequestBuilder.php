@@ -110,7 +110,7 @@ class SimulationAutomationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SimulationAutomation $body, ?SimulationAutomationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/simulationAutomations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

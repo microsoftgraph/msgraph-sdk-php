@@ -5,6 +5,8 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\DeltaWithToken\DeltaWithTokenRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\ListItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ListItemCollectionResponse;
@@ -24,6 +26,13 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -49,6 +58,15 @@ class ItemsRequestBuilder extends BaseRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
+    }
+
+    /**
+     * Provides operations to call the delta method.
+     * @param string $token Usage: token='{token}'
+     * @return DeltaWithTokenRequestBuilder
+    */
+    public function deltaWithToken(string $token): DeltaWithTokenRequestBuilder {
+        return new DeltaWithTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $token);
     }
 
     /**
@@ -111,7 +129,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/list/items';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

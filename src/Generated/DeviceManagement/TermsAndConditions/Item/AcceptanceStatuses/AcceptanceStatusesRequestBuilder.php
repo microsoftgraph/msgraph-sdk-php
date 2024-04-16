@@ -111,7 +111,7 @@ class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TermsAndConditionsAcceptanceStatus $body, ?AcceptanceStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/acceptanceStatuses';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

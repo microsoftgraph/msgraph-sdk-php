@@ -89,7 +89,7 @@ class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?SimulationAutomationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/simulationAutomations/{simulationAutomation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -129,7 +129,7 @@ class SimulationAutomationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(SimulationAutomation $body, ?SimulationAutomationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/simulationAutomations/{simulationAutomation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

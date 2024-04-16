@@ -109,7 +109,7 @@ class HostComponentsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(HostComponent $body, ?HostComponentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/hostComponents';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

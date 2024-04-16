@@ -89,7 +89,7 @@ class AdministrativeUnitRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(AdministrativeUnit $body, ?AdministrativeUnitRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/schools/{educationSchool%2Did}/administrativeUnit';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -90,7 +90,7 @@ class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?PrintTaskTriggerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}/taskTriggers/{printTaskTrigger%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -130,7 +130,7 @@ class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(PrintTaskTrigger $body, ?PrintTaskTriggerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}/taskTriggers/{printTaskTrigger%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

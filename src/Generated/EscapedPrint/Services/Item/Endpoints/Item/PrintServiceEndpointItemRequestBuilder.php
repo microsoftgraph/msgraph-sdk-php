@@ -81,7 +81,7 @@ class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?PrintServiceEndpointItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/services/{printService%2Did}/endpoints/{printServiceEndpoint%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -121,7 +121,7 @@ class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(PrintServiceEndpoint $body, ?PrintServiceEndpointItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/services/{printService%2Did}/endpoints/{printServiceEndpoint%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

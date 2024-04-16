@@ -56,7 +56,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dataVersion property value. The dataVersion property
+     * Gets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
      * @return string|null
     */
     public function getDataVersion(): ?string {
@@ -68,7 +68,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the web part.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -108,7 +108,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Properties bag of the web part.
      * @return Json|null
     */
     public function getProperties(): ?Json {
@@ -120,7 +120,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the serverProcessedContent property value. The serverProcessedContent property
+     * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @return ServerProcessedContent|null
     */
     public function getServerProcessedContent(): ?ServerProcessedContent {
@@ -132,7 +132,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the web part.
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -174,7 +174,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dataVersion property value. The dataVersion property
+     * Sets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
      * @param string|null $value Value to set for the dataVersion property.
     */
     public function setDataVersion(?string $value): void {
@@ -182,7 +182,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the web part.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -198,7 +198,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Properties bag of the web part.
      * @param Json|null $value Value to set for the properties property.
     */
     public function setProperties(?Json $value): void {
@@ -206,7 +206,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the serverProcessedContent property value. The serverProcessedContent property
+     * Sets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @param ServerProcessedContent|null $value Value to set for the serverProcessedContent property.
     */
     public function setServerProcessedContent(?ServerProcessedContent $value): void {
@@ -214,7 +214,7 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the web part.
      * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {

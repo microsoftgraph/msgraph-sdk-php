@@ -37,7 +37,7 @@ class MessageRule extends Entity implements Parsable
     }
 
     /**
-     * Gets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * Gets the conditions property value. Conditions that when fulfilled trigger the corresponding actions for that rule.
      * @return MessageRulePredicates|null
     */
     public function getConditions(): ?MessageRulePredicates {
@@ -163,7 +163,7 @@ class MessageRule extends Entity implements Parsable
     }
 
     /**
-     * Sets the conditions property value. Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * Sets the conditions property value. Conditions that when fulfilled trigger the corresponding actions for that rule.
      * @param MessageRulePredicates|null $value Value to set for the conditions property.
     */
     public function setConditions(?MessageRulePredicates $value): void {

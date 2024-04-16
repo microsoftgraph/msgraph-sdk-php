@@ -119,7 +119,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(EducationCategory $body, ?AssignmentCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignmentCategories';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -97,7 +97,7 @@ class HostPairItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?HostPairItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/hostPairs/{hostPair%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -137,7 +137,7 @@ class HostPairItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(HostPair $body, ?HostPairItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/hostPairs/{hostPair%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

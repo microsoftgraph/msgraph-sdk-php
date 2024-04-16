@@ -109,7 +109,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PrintTask $body, ?TasksRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/shares/{printerShare%2Did}/jobs/{printJob%2Did}/tasks';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

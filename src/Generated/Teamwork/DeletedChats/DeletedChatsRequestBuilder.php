@@ -109,7 +109,7 @@ class DeletedChatsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DeletedChat $body, ?DeletedChatsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/teamwork/deletedChats';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -82,7 +82,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     */
     public function toDeleteRequestInformation(?OnPremisesDirectorySynchronizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory/onPremisesSynchronization/{onPremisesDirectorySynchronization%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     */
     public function toPatchRequestInformation(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory/onPremisesSynchronization/{onPremisesDirectorySynchronization%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

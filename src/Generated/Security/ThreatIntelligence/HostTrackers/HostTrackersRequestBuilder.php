@@ -109,7 +109,7 @@ class HostTrackersRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(HostTracker $body, ?HostTrackersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/hostTrackers';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

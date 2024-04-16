@@ -109,7 +109,7 @@ class LanguageDetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TrainingLanguageDetail $body, ?LanguageDetailsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/trainings/{training%2Did}/languageDetails';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

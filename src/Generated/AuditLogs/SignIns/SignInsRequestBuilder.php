@@ -110,7 +110,7 @@ class SignInsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SignIn $body, ?SignInsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/auditLogs/signIns';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

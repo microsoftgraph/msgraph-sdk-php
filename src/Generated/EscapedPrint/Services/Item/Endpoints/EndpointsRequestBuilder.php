@@ -110,7 +110,7 @@ class EndpointsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PrintServiceEndpoint $body, ?EndpointsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/services/{printService%2Did}/endpoints';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

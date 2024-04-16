@@ -37,7 +37,7 @@ class TextWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Gets the innerHtml property value. The innerHtml property
+     * Gets the innerHtml property value. The HTML string in text web part.
      * @return string|null
     */
     public function getInnerHtml(): ?string {
@@ -58,7 +58,7 @@ class TextWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Sets the innerHtml property value. The innerHtml property
+     * Sets the innerHtml property value. The HTML string in text web part.
      * @param string|null $value Value to set for the innerHtml property.
     */
     public function setInnerHtml(?string $value): void {

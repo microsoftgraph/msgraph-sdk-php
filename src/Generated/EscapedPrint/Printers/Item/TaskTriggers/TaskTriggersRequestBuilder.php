@@ -111,7 +111,7 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PrintTaskTrigger $body, ?TaskTriggersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}/taskTriggers';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

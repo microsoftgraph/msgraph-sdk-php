@@ -111,7 +111,7 @@ class NamedLocationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(NamedLocation $body, ?NamedLocationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identity/conditionalAccess/namedLocations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {
