@@ -19,5 +19,5 @@ namespace Microsoft\Graph;
 final class GraphConstants
 {
     const API_VERSION = "v1.0";
-    const SDK_VERSION = "2.4.0";
+    const SDK_VERSION = "2.5.0";
 }
