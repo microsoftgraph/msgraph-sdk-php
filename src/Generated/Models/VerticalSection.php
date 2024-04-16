@@ -26,7 +26,7 @@ class VerticalSection extends Entity implements Parsable
     }
 
     /**
-     * Gets the emphasis property value. The emphasis property
+     * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @return SectionEmphasisType|null
     */
     public function getEmphasis(): ?SectionEmphasisType {
@@ -50,7 +50,7 @@ class VerticalSection extends Entity implements Parsable
     }
 
     /**
-     * Gets the webparts property value. The webparts property
+     * Gets the webparts property value. The set of web parts in this section.
      * @return array<WebPart>|null
     */
     public function getWebparts(): ?array {
@@ -74,7 +74,7 @@ class VerticalSection extends Entity implements Parsable
     }
 
     /**
-     * Sets the emphasis property value. The emphasis property
+     * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param SectionEmphasisType|null $value Value to set for the emphasis property.
     */
     public function setEmphasis(?SectionEmphasisType $value): void {
@@ -82,7 +82,7 @@ class VerticalSection extends Entity implements Parsable
     }
 
     /**
-     * Sets the webparts property value. The webparts property
+     * Sets the webparts property value. The set of web parts in this section.
      * @param array<WebPart>|null $value Value to set for the webparts property.
     */
     public function setWebparts(?array $value): void {

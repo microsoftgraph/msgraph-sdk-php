@@ -121,7 +121,7 @@ class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?GroupSettingTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groupSettingTemplates/{groupSettingTemplate%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -161,7 +161,7 @@ class GroupSettingTemplateItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(GroupSettingTemplate $body, ?GroupSettingTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groupSettingTemplates/{groupSettingTemplate%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

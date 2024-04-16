@@ -48,7 +48,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the alternativeText property value. The alternativeText property
+     * Gets the alternativeText property value. Alternative text on the title area.
      * @return string|null
     */
     public function getAlternativeText(): ?string {
@@ -68,7 +68,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the enableGradientEffect property value. The enableGradientEffect property
+     * Gets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
      * @return bool|null
     */
     public function getEnableGradientEffect(): ?bool {
@@ -101,7 +101,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the imageWebUrl property value. The imageWebUrl property
+     * Gets the imageWebUrl property value. URL of the image in the title area.
      * @return string|null
     */
     public function getImageWebUrl(): ?string {
@@ -113,7 +113,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the layout property value. The layout property
+     * Gets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @return TitleAreaLayoutType|null
     */
     public function getLayout(): ?TitleAreaLayoutType {
@@ -137,7 +137,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the serverProcessedContent property value. The serverProcessedContent property
+     * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @return ServerProcessedContent|null
     */
     public function getServerProcessedContent(): ?ServerProcessedContent {
@@ -149,7 +149,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the showAuthor property value. The showAuthor property
+     * Gets the showAuthor property value. Indicates whether the author should be shown in title area.
      * @return bool|null
     */
     public function getShowAuthor(): ?bool {
@@ -161,7 +161,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the showPublishedDate property value. The showPublishedDate property
+     * Gets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
      * @return bool|null
     */
     public function getShowPublishedDate(): ?bool {
@@ -173,7 +173,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the showTextBlockAboveTitle property value. The showTextBlockAboveTitle property
+     * Gets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
      * @return bool|null
     */
     public function getShowTextBlockAboveTitle(): ?bool {
@@ -185,7 +185,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the textAboveTitle property value. The textAboveTitle property
+     * Gets the textAboveTitle property value. The text above title line.
      * @return string|null
     */
     public function getTextAboveTitle(): ?string {
@@ -197,7 +197,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the textAlignment property value. The textAlignment property
+     * Gets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @return TitleAreaTextAlignmentType|null
     */
     public function getTextAlignment(): ?TitleAreaTextAlignmentType {
@@ -236,7 +236,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the alternativeText property value. The alternativeText property
+     * Sets the alternativeText property value. Alternative text on the title area.
      * @param string|null $value Value to set for the alternativeText property.
     */
     public function setAlternativeText(?string $value): void {
@@ -252,7 +252,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the enableGradientEffect property value. The enableGradientEffect property
+     * Sets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
      * @param bool|null $value Value to set for the enableGradientEffect property.
     */
     public function setEnableGradientEffect(?bool $value): void {
@@ -260,7 +260,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the imageWebUrl property value. The imageWebUrl property
+     * Sets the imageWebUrl property value. URL of the image in the title area.
      * @param string|null $value Value to set for the imageWebUrl property.
     */
     public function setImageWebUrl(?string $value): void {
@@ -268,7 +268,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the layout property value. The layout property
+     * Sets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
      * @param TitleAreaLayoutType|null $value Value to set for the layout property.
     */
     public function setLayout(?TitleAreaLayoutType $value): void {
@@ -284,7 +284,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the serverProcessedContent property value. The serverProcessedContent property
+     * Sets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @param ServerProcessedContent|null $value Value to set for the serverProcessedContent property.
     */
     public function setServerProcessedContent(?ServerProcessedContent $value): void {
@@ -292,7 +292,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the showAuthor property value. The showAuthor property
+     * Sets the showAuthor property value. Indicates whether the author should be shown in title area.
      * @param bool|null $value Value to set for the showAuthor property.
     */
     public function setShowAuthor(?bool $value): void {
@@ -300,7 +300,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the showPublishedDate property value. The showPublishedDate property
+     * Sets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
      * @param bool|null $value Value to set for the showPublishedDate property.
     */
     public function setShowPublishedDate(?bool $value): void {
@@ -308,7 +308,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the showTextBlockAboveTitle property value. The showTextBlockAboveTitle property
+     * Sets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
      * @param bool|null $value Value to set for the showTextBlockAboveTitle property.
     */
     public function setShowTextBlockAboveTitle(?bool $value): void {
@@ -316,7 +316,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the textAboveTitle property value. The textAboveTitle property
+     * Sets the textAboveTitle property value. The text above title line.
      * @param string|null $value Value to set for the textAboveTitle property.
     */
     public function setTextAboveTitle(?string $value): void {
@@ -324,7 +324,7 @@ class TitleArea implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the textAlignment property value. The textAlignment property
+     * Sets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
      * @param TitleAreaTextAlignmentType|null $value Value to set for the textAlignment property.
     */
     public function setTextAlignment(?TitleAreaTextAlignmentType $value): void {

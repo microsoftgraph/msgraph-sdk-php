@@ -52,7 +52,7 @@ class WebPartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webParts from sites
+     * Collection of webparts on the SharePoint page.
      * @param WebPartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebPartCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class WebPartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webParts from sites
+     * Collection of webparts on the SharePoint page.
      * @param WebPartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,7 +109,7 @@ class WebPartsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WebPart $body, ?WebPartsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/webParts';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

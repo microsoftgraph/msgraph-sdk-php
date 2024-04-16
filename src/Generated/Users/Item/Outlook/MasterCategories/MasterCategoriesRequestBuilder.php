@@ -52,7 +52,7 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the categories that have been defined for the user.
+     * Get all the categories that have been defined for a user.
      * @param MasterCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OutlookCategoryCollectionResponse|null>
      * @throws Exception
@@ -83,7 +83,7 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the categories that have been defined for the user.
+     * Get all the categories that have been defined for a user.
      * @param MasterCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +111,7 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(OutlookCategory $body, ?MasterCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/outlook/masterCategories';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

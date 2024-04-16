@@ -56,7 +56,7 @@ class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the commentCount property value. The commentCount property
+     * Gets the commentCount property value. Count of comments.
      * @return int|null
     */
     public function getCommentCount(): ?int {
@@ -82,7 +82,7 @@ class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the likeCount property value. The likeCount property
+     * Gets the likeCount property value. Count of likes.
      * @return int|null
     */
     public function getLikeCount(): ?int {
@@ -106,7 +106,7 @@ class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the shareCount property value. The shareCount property
+     * Gets the shareCount property value. Count of shares.
      * @return int|null
     */
     public function getShareCount(): ?int {
@@ -146,7 +146,7 @@ class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the commentCount property value. The commentCount property
+     * Sets the commentCount property value. Count of comments.
      * @param int|null $value Value to set for the commentCount property.
     */
     public function setCommentCount(?int $value): void {
@@ -154,7 +154,7 @@ class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the likeCount property value. The likeCount property
+     * Sets the likeCount property value. Count of likes.
      * @param int|null $value Value to set for the likeCount property.
     */
     public function setLikeCount(?int $value): void {
@@ -170,7 +170,7 @@ class ReactionsFacet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the shareCount property value. The shareCount property
+     * Sets the shareCount property value. Count of shares.
      * @param int|null $value Value to set for the shareCount property.
     */
     public function setShareCount(?int $value): void {

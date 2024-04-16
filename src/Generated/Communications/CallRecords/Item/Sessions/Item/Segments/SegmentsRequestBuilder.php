@@ -109,7 +109,7 @@ class SegmentsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Segment $body, ?SegmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/communications/callRecords/{callRecord%2Did}/sessions/{session%2Did}/segments';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

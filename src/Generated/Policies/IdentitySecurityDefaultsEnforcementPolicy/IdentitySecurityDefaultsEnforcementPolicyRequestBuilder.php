@@ -82,7 +82,7 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     */
     public function toDeleteRequestInformation(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     */
     public function toPatchRequestInformation(IdentitySecurityDefaultsEnforcementPolicy $body, ?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

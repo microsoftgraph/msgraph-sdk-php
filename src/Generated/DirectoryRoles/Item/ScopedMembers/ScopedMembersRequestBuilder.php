@@ -110,7 +110,7 @@ class ScopedMembersRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ScopedRoleMembership $body, ?ScopedMembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directoryRoles/{directoryRole%2Did}/scopedMembers';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

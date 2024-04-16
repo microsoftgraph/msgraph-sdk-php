@@ -64,11 +64,12 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update entity in servicePrincipals by appId
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0 Find more info here
     */
     public function patch(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +86,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals(appId=\'{appId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -118,14 +119,14 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update entity in servicePrincipals by appId
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals(appId=\'{appId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

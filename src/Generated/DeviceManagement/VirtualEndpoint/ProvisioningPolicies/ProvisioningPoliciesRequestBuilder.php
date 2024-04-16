@@ -111,7 +111,7 @@ class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(CloudPcProvisioningPolicy $body, ?ProvisioningPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

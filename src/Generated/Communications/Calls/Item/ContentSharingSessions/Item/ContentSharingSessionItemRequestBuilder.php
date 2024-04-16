@@ -81,7 +81,7 @@ class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ContentSharingSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions/{contentSharingSession%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -121,7 +121,7 @@ class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ContentSharingSession $body, ?ContentSharingSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/contentSharingSessions/{contentSharingSession%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

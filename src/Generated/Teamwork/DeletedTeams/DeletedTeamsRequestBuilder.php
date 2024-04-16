@@ -118,7 +118,7 @@ class DeletedTeamsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DeletedTeam $body, ?DeletedTeamsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/teamwork/deletedTeams';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

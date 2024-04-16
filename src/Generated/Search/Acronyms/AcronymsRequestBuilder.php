@@ -111,7 +111,7 @@ class AcronymsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Acronym $body, ?AcronymsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/search/acronyms';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

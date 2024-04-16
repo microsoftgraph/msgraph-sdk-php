@@ -61,7 +61,7 @@ class CanvasLayoutRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get canvasLayout from groups
+     * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @param CanvasLayoutRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CanvasLayout|null>
      * @throws Exception
@@ -96,7 +96,7 @@ class CanvasLayoutRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?CanvasLayoutRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -108,7 +108,7 @@ class CanvasLayoutRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get canvasLayout from groups
+     * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical sections.
      * @param CanvasLayoutRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class CanvasLayoutRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(CanvasLayout $body, ?CanvasLayoutRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

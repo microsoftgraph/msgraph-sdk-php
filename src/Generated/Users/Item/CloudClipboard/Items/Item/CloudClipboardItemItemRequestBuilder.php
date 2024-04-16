@@ -80,7 +80,7 @@ class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?CloudClipboardItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/cloudClipboard/items/{cloudClipboardItem%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -120,7 +120,7 @@ class CloudClipboardItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(CloudClipboardItem $body, ?CloudClipboardItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/cloudClipboard/items/{cloudClipboardItem%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

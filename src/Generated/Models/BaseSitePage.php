@@ -46,7 +46,7 @@ class BaseSitePage extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the pageLayout property value. The pageLayout property
+     * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @return PageLayoutType|null
     */
     public function getPageLayout(): ?PageLayoutType {
@@ -58,7 +58,7 @@ class BaseSitePage extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the publishingState property value. The publishingState property
+     * Gets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @return PublicationFacet|null
     */
     public function getPublishingState(): ?PublicationFacet {
@@ -70,7 +70,7 @@ class BaseSitePage extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the sitePage.
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -93,7 +93,7 @@ class BaseSitePage extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the pageLayout property value. The pageLayout property
+     * Sets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      * @param PageLayoutType|null $value Value to set for the pageLayout property.
     */
     public function setPageLayout(?PageLayoutType $value): void {
@@ -101,7 +101,7 @@ class BaseSitePage extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the publishingState property value. The publishingState property
+     * Sets the publishingState property value. The publishing status and the MM.mm version of the page.
      * @param PublicationFacet|null $value Value to set for the publishingState property.
     */
     public function setPublishingState(?PublicationFacet $value): void {
@@ -109,7 +109,7 @@ class BaseSitePage extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the sitePage.
      * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {

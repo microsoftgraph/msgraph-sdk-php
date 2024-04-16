@@ -109,7 +109,7 @@ class ProtectedAppLockerFilesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WindowsInformationProtectionAppLockerFile $body, ?ProtectedAppLockerFilesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}/protectedAppLockerFiles';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -84,7 +84,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     */
     public function toDeleteRequestInformation(?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -124,7 +124,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     */
     public function toPatchRequestInformation(LearningCourseActivity $body, ?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/learningCourseActivities(externalcourseActivityId=\'{externalcourseActivityId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

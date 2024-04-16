@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\LicenseDetails;
 use Microsoft\Graph\Generated\Models\LicenseDetailsCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\LicenseDetails\GetTeamsLicensingDetails\GetTeamsLicensingDetailsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getTeamsLicensingDetails method.
+    */
+    public function getTeamsLicensingDetails(): GetTeamsLicensingDetailsRequestBuilder {
+        return new GetTeamsLicensingDetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -110,7 +118,7 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(LicenseDetails $body, ?LicenseDetailsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/licenseDetails';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

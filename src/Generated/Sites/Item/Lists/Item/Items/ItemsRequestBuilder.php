@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ListItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\DeltaWithToken\DeltaWithTokenRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\ListItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -18,6 +20,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param string $listItemId The unique identifier of listItem
@@ -41,6 +50,15 @@ class ItemsRequestBuilder extends BaseRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
+    }
+
+    /**
+     * Provides operations to call the delta method.
+     * @param string $token Usage: token='{token}'
+     * @return DeltaWithTokenRequestBuilder
+    */
+    public function deltaWithToken(string $token): DeltaWithTokenRequestBuilder {
+        return new DeltaWithTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $token);
     }
 
     /**
@@ -103,7 +121,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

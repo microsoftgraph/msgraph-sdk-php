@@ -110,7 +110,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AgreementFileLocalization $body, ?LocalizationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/agreements/{agreement%2Did}/file/localizations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

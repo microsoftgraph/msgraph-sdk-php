@@ -83,7 +83,7 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ProfileCardPropertyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/people/profileCardProperties/{profileCardProperty%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -123,7 +123,7 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ProfileCardProperty $body, ?ProfileCardPropertyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/people/profileCardProperties/{profileCardProperty%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -110,7 +110,7 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TimeOffRequest $body, ?TimeOffRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/timeOffRequests';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

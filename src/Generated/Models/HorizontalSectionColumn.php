@@ -38,7 +38,7 @@ class HorizontalSectionColumn extends Entity implements Parsable
     }
 
     /**
-     * Gets the webparts property value. The webparts property
+     * Gets the webparts property value. The collection of WebParts in this column.
      * @return array<WebPart>|null
     */
     public function getWebparts(): ?array {
@@ -52,7 +52,7 @@ class HorizontalSectionColumn extends Entity implements Parsable
     }
 
     /**
-     * Gets the width property value. The width property
+     * Gets the width property value. Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.
      * @return int|null
     */
     public function getWidth(): ?int {
@@ -74,7 +74,7 @@ class HorizontalSectionColumn extends Entity implements Parsable
     }
 
     /**
-     * Sets the webparts property value. The webparts property
+     * Sets the webparts property value. The collection of WebParts in this column.
      * @param array<WebPart>|null $value Value to set for the webparts property.
     */
     public function setWebparts(?array $value): void {
@@ -82,7 +82,7 @@ class HorizontalSectionColumn extends Entity implements Parsable
     }
 
     /**
-     * Sets the width property value. The width property
+     * Sets the width property value. Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.
      * @param int|null $value Value to set for the width property.
     */
     public function setWidth(?int $value): void {

@@ -109,7 +109,7 @@ class UserExperienceAnalyticsScoreHistoryRequestBuilder extends BaseRequestBuild
     */
     public function toPostRequestInformation(UserExperienceAnalyticsScoreHistory $body, ?UserExperienceAnalyticsScoreHistoryRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/userExperienceAnalyticsScoreHistory';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

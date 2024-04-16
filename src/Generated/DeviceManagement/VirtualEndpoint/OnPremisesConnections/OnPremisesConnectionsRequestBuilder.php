@@ -111,7 +111,7 @@ class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(CloudPcOnPremisesConnection $body, ?OnPremisesConnectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

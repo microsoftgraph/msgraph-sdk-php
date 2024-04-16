@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Labels\LabelsRequestBuilder;
 use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
@@ -61,6 +62,13 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     */
     public function incidents(): IncidentsRequestBuilder {
         return new IncidentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the labels property of the microsoft.graph.security entity.
+    */
+    public function labels(): LabelsRequestBuilder {
+        return new LabelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -184,7 +192,7 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Security $body, ?SecurityRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

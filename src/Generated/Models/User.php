@@ -1728,7 +1728,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the sponsors property value. The sponsors property
+     * Gets the sponsors property value. The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return array<DirectoryObject>|null
     */
     public function getSponsors(): ?array {
@@ -1840,7 +1840,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
+     * Gets the userType property value. A string value that can be used to classify user types in your directory. The possible values are Member and Guest. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
      * @return string|null
     */
     public function getUserType(): ?string {
@@ -2923,7 +2923,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the sponsors property value. The sponsors property
+     * Sets the sponsors property value. The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @param array<DirectoryObject>|null $value Value to set for the sponsors property.
     */
     public function setSponsors(?array $value): void {
@@ -2995,7 +2995,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
+     * Sets the userType property value. A string value that can be used to classify user types in your directory. The possible values are Member and Guest. Returned only on $select. Supports $filter (eq, ne, not, in, and eq on null values). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Microsoft Entra ID?
      * @param string|null $value Value to set for the userType property.
     */
     public function setUserType(?string $value): void {

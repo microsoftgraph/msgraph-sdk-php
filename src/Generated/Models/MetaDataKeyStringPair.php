@@ -69,7 +69,7 @@ class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. Key of the meta data.
      * @return string|null
     */
     public function getKey(): ?string {
@@ -93,7 +93,7 @@ class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value of the meta data.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -132,7 +132,7 @@ class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. Key of the meta data.
      * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
@@ -148,7 +148,7 @@ class MetaDataKeyStringPair implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value of the meta data.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

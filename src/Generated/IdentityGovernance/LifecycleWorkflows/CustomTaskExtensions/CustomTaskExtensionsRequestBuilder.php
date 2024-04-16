@@ -111,7 +111,7 @@ class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(CustomTaskExtension $body, ?CustomTaskExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

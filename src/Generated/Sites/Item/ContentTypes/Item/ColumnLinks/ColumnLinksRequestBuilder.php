@@ -109,7 +109,7 @@ class ColumnLinksRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ColumnLink $body, ?ColumnLinksRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/contentTypes/{contentType%2Did}/columnLinks';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

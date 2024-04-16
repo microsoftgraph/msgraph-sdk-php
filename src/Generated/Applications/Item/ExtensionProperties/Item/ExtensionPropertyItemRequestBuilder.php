@@ -82,7 +82,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ExtensionPropertyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications/{application%2Did}/extensionProperties/{extensionProperty%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -122,7 +122,7 @@ class ExtensionPropertyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ExtensionProperty $body, ?ExtensionPropertyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications/{application%2Did}/extensionProperties/{extensionProperty%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {
