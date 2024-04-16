@@ -8,7 +8,7 @@ defaults:
     shell: bash
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
   create-tag:
