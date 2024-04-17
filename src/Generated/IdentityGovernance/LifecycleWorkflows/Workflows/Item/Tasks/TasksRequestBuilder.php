@@ -109,7 +109,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Task $body, ?TasksRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/tasks';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

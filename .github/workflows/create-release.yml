@@ -2,13 +2,16 @@ name: "create release"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 defaults:
   run:
     shell: bash
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
   create-tag:

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLa
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get verticalSection from sites
+ * Vertical section on the SharePoint page.
 */
 class VerticalSectionRequestBuilderGetQueryParameters 
 {

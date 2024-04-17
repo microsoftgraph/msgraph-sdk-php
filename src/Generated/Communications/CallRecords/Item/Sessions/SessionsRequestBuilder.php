@@ -110,7 +110,7 @@ class SessionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Session $body, ?SessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/communications/callRecords/{callRecord%2Did}/sessions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

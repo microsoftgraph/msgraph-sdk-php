@@ -107,7 +107,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -147,7 +147,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(AdministrativeUnit $body, ?AdministrativeUnitItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

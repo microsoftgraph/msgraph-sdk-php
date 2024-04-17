@@ -110,7 +110,7 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/domains/{domain%2Did}/serviceConfigurationRecords';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -110,7 +110,7 @@ class IssuesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ServiceHealthIssue $body, ?IssuesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/serviceAnnouncement/issues';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

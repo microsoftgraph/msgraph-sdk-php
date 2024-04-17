@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSiteP
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get columns from groups
+ * The set of vertical columns in this section.
 */
 class ColumnsRequestBuilderGetQueryParameters 
 {

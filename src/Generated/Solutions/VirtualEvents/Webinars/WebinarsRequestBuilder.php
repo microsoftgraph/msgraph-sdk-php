@@ -131,7 +131,7 @@ class WebinarsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(VirtualEventWebinar $body, ?WebinarsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/solutions/virtualEvents/webinars';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

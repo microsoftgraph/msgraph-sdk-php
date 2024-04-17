@@ -53,7 +53,7 @@ class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      * @param HorizontalSectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HorizontalSection|null>
      * @throws Exception
@@ -88,7 +88,7 @@ class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?HorizontalSectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -100,7 +100,7 @@ class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get horizontalSections from groups
+     * Collection of horizontal sections on the SharePoint page.
      * @param HorizontalSectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +128,7 @@ class HorizontalSectionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(HorizontalSection $body, ?HorizontalSectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

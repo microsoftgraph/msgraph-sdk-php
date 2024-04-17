@@ -72,7 +72,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the htmlStrings property value. The htmlStrings property
+     * Gets the htmlStrings property value. A key-value map where keys are string identifiers and values are rich text with HTML format. SharePoint servers treat the values as HTML content and run services like safety checks, search index and link fixup on them.
      * @return array<MetaDataKeyStringPair>|null
     */
     public function getHtmlStrings(): ?array {
@@ -86,7 +86,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the imageSources property value. The imageSources property
+     * Gets the imageSources property value. A key-value map where keys are string identifiers and values are image sources. SharePoint servers treat the values as image sources and run services like search index and link fixup on them.
      * @return array<MetaDataKeyStringPair>|null
     */
     public function getImageSources(): ?array {
@@ -100,7 +100,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the links property value. The links property
+     * Gets the links property value. A key-value map where keys are string identifiers and values are links. SharePoint servers treat the values as links and run services like link fixup on them.
      * @return array<MetaDataKeyStringPair>|null
     */
     public function getLinks(): ?array {
@@ -126,7 +126,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the searchablePlainTexts property value. The searchablePlainTexts property
+     * Gets the searchablePlainTexts property value. A key-value map where keys are string identifiers and values are strings that should be search indexed.
      * @return array<MetaDataKeyStringPair>|null
     */
     public function getSearchablePlainTexts(): ?array {
@@ -169,7 +169,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the htmlStrings property value. The htmlStrings property
+     * Sets the htmlStrings property value. A key-value map where keys are string identifiers and values are rich text with HTML format. SharePoint servers treat the values as HTML content and run services like safety checks, search index and link fixup on them.
      * @param array<MetaDataKeyStringPair>|null $value Value to set for the htmlStrings property.
     */
     public function setHtmlStrings(?array $value): void {
@@ -177,7 +177,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the imageSources property value. The imageSources property
+     * Sets the imageSources property value. A key-value map where keys are string identifiers and values are image sources. SharePoint servers treat the values as image sources and run services like search index and link fixup on them.
      * @param array<MetaDataKeyStringPair>|null $value Value to set for the imageSources property.
     */
     public function setImageSources(?array $value): void {
@@ -185,7 +185,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the links property value. The links property
+     * Sets the links property value. A key-value map where keys are string identifiers and values are links. SharePoint servers treat the values as links and run services like link fixup on them.
      * @param array<MetaDataKeyStringPair>|null $value Value to set for the links property.
     */
     public function setLinks(?array $value): void {
@@ -201,7 +201,7 @@ class ServerProcessedContent implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the searchablePlainTexts property value. The searchablePlainTexts property
+     * Sets the searchablePlainTexts property value. A key-value map where keys are string identifiers and values are strings that should be search indexed.
      * @param array<MetaDataKeyStringPair>|null $value Value to set for the searchablePlainTexts property.
     */
     public function setSearchablePlainTexts(?array $value): void {

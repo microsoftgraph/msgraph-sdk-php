@@ -104,7 +104,7 @@ class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ServiceAnnouncementRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/serviceAnnouncement';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -144,7 +144,7 @@ class ServiceAnnouncementRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ServiceAnnouncement $body, ?ServiceAnnouncementRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/admin/serviceAnnouncement';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -110,7 +110,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ExternalGroup $body, ?GroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/external/connections/{externalConnection%2Did}/groups';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

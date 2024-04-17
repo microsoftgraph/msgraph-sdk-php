@@ -109,7 +109,7 @@ class DocumentsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PrintDocument $body, ?DocumentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}/jobs/{printJob%2Did}/documents';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

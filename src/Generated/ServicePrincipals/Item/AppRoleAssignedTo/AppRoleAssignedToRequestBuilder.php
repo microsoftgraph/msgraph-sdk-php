@@ -111,7 +111,7 @@ class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AppRoleAssignment $body, ?AppRoleAssignedToRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/appRoleAssignedTo';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Applications\Item\CheckMemberObjects\CheckMemberOb
 use Microsoft\Graph\Generated\Applications\Item\CreatedOnBehalfOf\CreatedOnBehalfOfRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\ExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentials\FederatedIdentityCredentialsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentialsWithName\FederatedIdentityCredentialsWithNameRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -214,6 +215,15 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
+     * @param string $name Alternate key of federatedIdentityCredential
+     * @return FederatedIdentityCredentialsWithNameRequestBuilder
+    */
+    public function federatedIdentityCredentialsWithName(string $name): FederatedIdentityCredentialsWithNameRequestBuilder {
+        return new FederatedIdentityCredentialsWithNameRequestBuilder($this->pathParameters, $this->requestAdapter, $name);
+    }
+
+    /**
      * Get the properties and relationships of an application object.
      * @param ApplicationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Application|null>
@@ -229,12 +239,12 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an application object.
+     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
      * @param Application $body The request body
      * @param ApplicationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Application|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/application-upsert?view=graph-rest-1.0 Find more info here
     */
     public function patch(Application $body, ?ApplicationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -251,7 +261,7 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ApplicationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications/{application%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -284,14 +294,14 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an application object.
+     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
      * @param Application $body The request body
      * @param ApplicationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(Application $body, ?ApplicationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications/{application%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

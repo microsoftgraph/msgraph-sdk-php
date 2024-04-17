@@ -110,7 +110,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityProtection/servicePrincipalRiskDetections';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

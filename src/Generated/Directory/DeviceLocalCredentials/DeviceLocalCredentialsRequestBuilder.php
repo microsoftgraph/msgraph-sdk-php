@@ -110,7 +110,7 @@ class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DeviceLocalCredentialInfo $body, ?DeviceLocalCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory/deviceLocalCredentials';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

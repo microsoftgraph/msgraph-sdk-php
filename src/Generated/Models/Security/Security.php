@@ -95,6 +95,7 @@ class Security extends Entity implements Parsable
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
+            'labels' => fn(ParseNode $n) => $o->setLabels($n->getObjectValue([LabelsRoot::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
             'subjectRightsRequests' => fn(ParseNode $n) => $o->setSubjectRightsRequests($n->getCollectionOfObjectValues([SubjectRightsRequest::class, 'createFromDiscriminatorValue'])),
@@ -116,6 +117,18 @@ class Security extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'incidents'");
+    }
+
+    /**
+     * Gets the labels property value. The labels property
+     * @return LabelsRoot|null
+    */
+    public function getLabels(): ?LabelsRoot {
+        $val = $this->getBackingStore()->get('labels');
+        if (is_null($val) || $val instanceof LabelsRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'labels'");
     }
 
     /**
@@ -207,6 +220,7 @@ class Security extends Entity implements Parsable
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
+        $writer->writeObjectValue('labels', $this->getLabels());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
         $writer->writeCollectionOfObjectValues('subjectRightsRequests', $this->getSubjectRightsRequests());
@@ -253,6 +267,14 @@ class Security extends Entity implements Parsable
     */
     public function setIncidents(?array $value): void {
         $this->getBackingStore()->set('incidents', $value);
+    }
+
+    /**
+     * Sets the labels property value. The labels property
+     * @param LabelsRoot|null $value Value to set for the labels property.
+    */
+    public function setLabels(?LabelsRoot $value): void {
+        $this->getBackingStore()->set('labels', $value);
     }
 
     /**

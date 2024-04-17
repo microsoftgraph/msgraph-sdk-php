@@ -232,7 +232,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the resolvingComment property value. The resolvingComment property
+     * Gets the resolvingComment property value. User input that explains the resolution of the incident and the classification choice. This property contains free editable text.
      * @return string|null
     */
     public function getResolvingComment(): ?string {
@@ -424,7 +424,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the resolvingComment property value. The resolvingComment property
+     * Sets the resolvingComment property value. User input that explains the resolution of the incident and the classification choice. This property contains free editable text.
      * @param string|null $value Value to set for the resolvingComment property.
     */
     public function setResolvingComment(?string $value): void {

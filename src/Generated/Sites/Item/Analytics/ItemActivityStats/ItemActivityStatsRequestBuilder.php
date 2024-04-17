@@ -109,7 +109,7 @@ class ItemActivityStatsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ItemActivityStat $body, ?ItemActivityStatsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/analytics/itemActivityStats';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -38,7 +38,7 @@ class CanvasLayout extends Entity implements Parsable
     }
 
     /**
-     * Gets the horizontalSections property value. The horizontalSections property
+     * Gets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
      * @return array<HorizontalSection>|null
     */
     public function getHorizontalSections(): ?array {
@@ -52,7 +52,7 @@ class CanvasLayout extends Entity implements Parsable
     }
 
     /**
-     * Gets the verticalSection property value. The verticalSection property
+     * Gets the verticalSection property value. Vertical section on the SharePoint page.
      * @return VerticalSection|null
     */
     public function getVerticalSection(): ?VerticalSection {
@@ -74,7 +74,7 @@ class CanvasLayout extends Entity implements Parsable
     }
 
     /**
-     * Sets the horizontalSections property value. The horizontalSections property
+     * Sets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
      * @param array<HorizontalSection>|null $value Value to set for the horizontalSections property.
     */
     public function setHorizontalSections(?array $value): void {
@@ -82,7 +82,7 @@ class CanvasLayout extends Entity implements Parsable
     }
 
     /**
-     * Sets the verticalSection property value. The verticalSection property
+     * Sets the verticalSection property value. Vertical section on the SharePoint page.
      * @param VerticalSection|null $value Value to set for the verticalSection property.
     */
     public function setVerticalSection(?VerticalSection $value): void {

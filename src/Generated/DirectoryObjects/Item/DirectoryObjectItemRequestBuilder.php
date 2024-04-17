@@ -122,7 +122,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DirectoryObjectItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directoryObjects/{directoryObject%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -162,7 +162,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(DirectoryObject $body, ?DirectoryObjectItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directoryObjects/{directoryObject%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

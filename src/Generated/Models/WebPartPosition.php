@@ -56,7 +56,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the columnId property value. The columnId property
+     * Gets the columnId property value. Indicates the identifier of the column where the web part is located.
      * @return float|null
     */
     public function getColumnId(): ?float {
@@ -83,7 +83,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the horizontalSectionId property value. The horizontalSectionId property
+     * Gets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
      * @return float|null
     */
     public function getHorizontalSectionId(): ?float {
@@ -95,7 +95,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isInVerticalSection property value. The isInVerticalSection property
+     * Gets the isInVerticalSection property value. Indicates whether the web part is located in the vertical section.
      * @return bool|null
     */
     public function getIsInVerticalSection(): ?bool {
@@ -119,7 +119,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the webPartIndex property value. The webPartIndex property
+     * Gets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
      * @return float|null
     */
     public function getWebPartIndex(): ?float {
@@ -160,7 +160,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the columnId property value. The columnId property
+     * Sets the columnId property value. Indicates the identifier of the column where the web part is located.
      * @param float|null $value Value to set for the columnId property.
     */
     public function setColumnId(?float $value): void {
@@ -168,7 +168,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the horizontalSectionId property value. The horizontalSectionId property
+     * Sets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
      * @param float|null $value Value to set for the horizontalSectionId property.
     */
     public function setHorizontalSectionId(?float $value): void {
@@ -176,7 +176,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isInVerticalSection property value. The isInVerticalSection property
+     * Sets the isInVerticalSection property value. Indicates whether the web part is located in the vertical section.
      * @param bool|null $value Value to set for the isInVerticalSection property.
     */
     public function setIsInVerticalSection(?bool $value): void {
@@ -192,7 +192,7 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the webPartIndex property value. The webPartIndex property
+     * Sets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
      * @param float|null $value Value to set for the webPartIndex property.
     */
     public function setWebPartIndex(?float $value): void {

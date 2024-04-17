@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSiteP
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get verticalSection from groups
+ * Vertical section on the SharePoint page.
 */
 class VerticalSectionRequestBuilderGetQueryParameters 
 {

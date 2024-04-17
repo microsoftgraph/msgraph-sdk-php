@@ -120,7 +120,7 @@ class AppConsentRequestsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AppConsentRequest $body, ?AppConsentRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/appConsent/appConsentRequests';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -111,7 +111,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DocumentSetVersion $body, ?DocumentSetVersionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/list/items/{listItem%2Did}/documentSetVersions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

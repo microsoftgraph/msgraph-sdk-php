@@ -110,7 +110,7 @@ class SslCertificatesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SslCertificate $body, ?SslCertificatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/sslCertificates';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -127,7 +127,7 @@ class UserAttributeAssignmentsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(IdentityUserFlowAttributeAssignment $body, ?UserAttributeAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

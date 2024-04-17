@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\WebParts
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get webParts from sites
+ * Collection of webparts on the SharePoint page.
 */
 class WebPartItemRequestBuilderGetQueryParameters 
 {

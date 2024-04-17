@@ -91,7 +91,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identity/apiConnectors/{identityApiConnector%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -131,7 +131,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(IdentityApiConnector $body, ?IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identity/apiConnectors/{identityApiConnector%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

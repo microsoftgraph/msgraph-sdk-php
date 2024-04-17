@@ -91,7 +91,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(EscapedList $body, ?ListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/getByPath(path=\'{path}\')/getByPath(path=\'{path1}\')/lists';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

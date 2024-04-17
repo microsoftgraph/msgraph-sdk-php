@@ -939,7 +939,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the uniqueName property value. The uniqueName property
+     * Gets the uniqueName property value. The unique identifier that can be assigned to a group and used as an alternate key. Immutable. Read-only.
      * @return string|null
     */
     public function getUniqueName(): ?string {
@@ -1562,7 +1562,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the uniqueName property value. The uniqueName property
+     * Sets the uniqueName property value. The unique identifier that can be assigned to a group and used as an alternate key. Immutable. Read-only.
      * @param string|null $value Value to set for the uniqueName property.
     */
     public function setUniqueName(?string $value): void {

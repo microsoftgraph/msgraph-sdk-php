@@ -81,7 +81,7 @@ class DataPolicyOperationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/dataPolicyOperations/{dataPolicyOperation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -121,7 +121,7 @@ class DataPolicyOperationItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(DataPolicyOperation $body, ?DataPolicyOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/dataPolicyOperations/{dataPolicyOperation%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

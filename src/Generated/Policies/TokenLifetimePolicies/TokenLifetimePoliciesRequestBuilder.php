@@ -111,7 +111,7 @@ class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TokenLifetimePolicy $body, ?TokenLifetimePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/tokenLifetimePolicies';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

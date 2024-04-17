@@ -111,7 +111,7 @@ class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TelecomExpenseManagementPartner $body, ?TelecomExpenseManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/telecomExpenseManagementPartners';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

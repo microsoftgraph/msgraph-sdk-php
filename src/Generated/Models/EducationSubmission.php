@@ -152,7 +152,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Gets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reassigned.
      * @return EducationSubmissionStatus|null
     */
     public function getStatus(): ?EducationSubmissionStatus {
@@ -314,7 +314,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
+     * Sets the status property value. Read-only. Possible values are: working, submitted, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reassigned.
      * @param EducationSubmissionStatus|null $value Value to set for the status property.
     */
     public function setStatus(?EducationSubmissionStatus $value): void {

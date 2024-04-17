@@ -52,7 +52,7 @@ class WebpartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webparts from groups
+     * The set of web parts in this section.
      * @param WebpartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebPartCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class WebpartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webparts from groups
+     * The set of web parts in this section.
      * @param WebpartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,7 +109,7 @@ class WebpartsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WebPart $body, ?WebpartsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/verticalSection/webparts';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

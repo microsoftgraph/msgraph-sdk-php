@@ -26,7 +26,7 @@ class HorizontalSection extends Entity implements Parsable
     }
 
     /**
-     * Gets the columns property value. The columns property
+     * Gets the columns property value. The set of vertical columns in this section.
      * @return array<HorizontalSectionColumn>|null
     */
     public function getColumns(): ?array {
@@ -40,7 +40,7 @@ class HorizontalSection extends Entity implements Parsable
     }
 
     /**
-     * Gets the emphasis property value. The emphasis property
+     * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @return SectionEmphasisType|null
     */
     public function getEmphasis(): ?SectionEmphasisType {
@@ -65,7 +65,7 @@ class HorizontalSection extends Entity implements Parsable
     }
 
     /**
-     * Gets the layout property value. The layout property
+     * Gets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
      * @return HorizontalSectionLayoutType|null
     */
     public function getLayout(): ?HorizontalSectionLayoutType {
@@ -88,7 +88,7 @@ class HorizontalSection extends Entity implements Parsable
     }
 
     /**
-     * Sets the columns property value. The columns property
+     * Sets the columns property value. The set of vertical columns in this section.
      * @param array<HorizontalSectionColumn>|null $value Value to set for the columns property.
     */
     public function setColumns(?array $value): void {
@@ -96,7 +96,7 @@ class HorizontalSection extends Entity implements Parsable
     }
 
     /**
-     * Sets the emphasis property value. The emphasis property
+     * Sets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
      * @param SectionEmphasisType|null $value Value to set for the emphasis property.
     */
     public function setEmphasis(?SectionEmphasisType $value): void {
@@ -104,7 +104,7 @@ class HorizontalSection extends Entity implements Parsable
     }
 
     /**
-     * Sets the layout property value. The layout property
+     * Sets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
      * @param HorizontalSectionLayoutType|null $value Value to set for the layout property.
     */
     public function setLayout(?HorizontalSectionLayoutType $value): void {

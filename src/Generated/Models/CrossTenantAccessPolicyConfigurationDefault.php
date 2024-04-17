@@ -25,7 +25,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     }
 
     /**
-     * Gets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
+     * Gets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
      * @return InboundOutboundPolicyConfiguration|null
     */
     public function getAutomaticUserConsentSettings(): ?InboundOutboundPolicyConfiguration {
@@ -97,6 +97,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
             'b2bDirectConnectInbound' => fn(ParseNode $n) => $o->setB2bDirectConnectInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bDirectConnectOutbound' => fn(ParseNode $n) => $o->setB2bDirectConnectOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
+            'invitationRedemptionIdentityProviderConfiguration' => fn(ParseNode $n) => $o->setInvitationRedemptionIdentityProviderConfiguration($n->getObjectValue([DefaultInvitationRedemptionIdentityProviderConfiguration::class, 'createFromDiscriminatorValue'])),
             'isServiceDefault' => fn(ParseNode $n) => $o->setIsServiceDefault($n->getBooleanValue()),
         ]);
     }
@@ -114,7 +115,19 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     }
 
     /**
-     * Gets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
+     * Gets the invitationRedemptionIdentityProviderConfiguration property value. Defines the priority order based on which an identity provider is selected during invitation redemption for a guest user.
+     * @return DefaultInvitationRedemptionIdentityProviderConfiguration|null
+    */
+    public function getInvitationRedemptionIdentityProviderConfiguration(): ?DefaultInvitationRedemptionIdentityProviderConfiguration {
+        $val = $this->getBackingStore()->get('invitationRedemptionIdentityProviderConfiguration');
+        if (is_null($val) || $val instanceof DefaultInvitationRedemptionIdentityProviderConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitationRedemptionIdentityProviderConfiguration'");
+    }
+
+    /**
+     * Gets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings are customized.
      * @return bool|null
     */
     public function getIsServiceDefault(): ?bool {
@@ -137,11 +150,12 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
         $writer->writeObjectValue('b2bDirectConnectInbound', $this->getB2bDirectConnectInbound());
         $writer->writeObjectValue('b2bDirectConnectOutbound', $this->getB2bDirectConnectOutbound());
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
+        $writer->writeObjectValue('invitationRedemptionIdentityProviderConfiguration', $this->getInvitationRedemptionIdentityProviderConfiguration());
         $writer->writeBooleanValue('isServiceDefault', $this->getIsServiceDefault());
     }
 
     /**
-     * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
+     * Sets the automaticUserConsentSettings property value. Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
      * @param InboundOutboundPolicyConfiguration|null $value Value to set for the automaticUserConsentSettings property.
     */
     public function setAutomaticUserConsentSettings(?InboundOutboundPolicyConfiguration $value): void {
@@ -189,7 +203,15 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     }
 
     /**
-     * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
+     * Sets the invitationRedemptionIdentityProviderConfiguration property value. Defines the priority order based on which an identity provider is selected during invitation redemption for a guest user.
+     * @param DefaultInvitationRedemptionIdentityProviderConfiguration|null $value Value to set for the invitationRedemptionIdentityProviderConfiguration property.
+    */
+    public function setInvitationRedemptionIdentityProviderConfiguration(?DefaultInvitationRedemptionIdentityProviderConfiguration $value): void {
+        $this->getBackingStore()->set('invitationRedemptionIdentityProviderConfiguration', $value);
+    }
+
+    /**
+     * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings are customized.
      * @param bool|null $value Value to set for the isServiceDefault property.
     */
     public function setIsServiceDefault(?bool $value): void {

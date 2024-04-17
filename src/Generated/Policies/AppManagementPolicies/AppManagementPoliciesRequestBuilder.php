@@ -111,7 +111,7 @@ class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AppManagementPolicy $body, ?AppManagementPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/appManagementPolicies';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

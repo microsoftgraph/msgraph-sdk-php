@@ -120,7 +120,7 @@ class RoleAssignmentSchedulesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(UnifiedRoleAssignmentSchedule $body, ?RoleAssignmentSchedulesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/roleManagement/entitlementManagement/roleAssignmentSchedules';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

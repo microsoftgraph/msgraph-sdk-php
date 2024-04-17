@@ -4,7 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Activate\ActivateRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Deactivate\DeactivateRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\GradingCategory\GradingCategoryRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
@@ -25,10 +27,24 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
+     * Provides operations to call the activate method.
+    */
+    public function activate(): ActivateRequestBuilder {
+        return new ActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity.
     */
     public function categories(): CategoriesRequestBuilder {
         return new CategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the deactivate method.
+    */
+    public function deactivate(): DeactivateRequestBuilder {
+        return new DeactivateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -144,7 +160,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?EducationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -184,7 +200,7 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(EducationAssignment $body, ?EducationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {
