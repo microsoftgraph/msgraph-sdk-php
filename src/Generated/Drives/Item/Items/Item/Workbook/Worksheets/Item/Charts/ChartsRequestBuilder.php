@@ -62,11 +62,10 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chart objects.
+     * Returns collection of charts that are part of the worksheet. Read-only.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChartsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,12 +94,11 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Chart.
+     * Create new navigation property to charts for drives
      * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChart|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0 Find more info here
     */
     public function post(WorkbookChart $body, ?ChartsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -111,7 +109,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chart objects.
+     * Returns collection of charts that are part of the worksheet. Read-only.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +130,7 @@ class ChartsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Chart.
+     * Create new navigation property to charts for drives
      * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

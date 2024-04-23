@@ -45,11 +45,10 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      * @param AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationFlowsPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authenticationflowspolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified.
+     * Update the navigation property authenticationFlowsPolicy in policies
      * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationFlowsPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authenticationflowspolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationFlowsPolicy $body, ?AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an authenticationFlowsPolicy object.
+     * The policy configuration of the self-service sign-up experience of external users.
      * @param AuthenticationFlowsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class AuthenticationFlowsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the selfServiceSignUp property of an authenticationFlowsPolicy object. The properties id, type, and description cannot be modified.
+     * Update the navigation property authenticationFlowsPolicy in policies
      * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

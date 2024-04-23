@@ -33,10 +33,11 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function filterByCurrentUser
+     * In Microsoft Entra entitlement management, return a collection of access package assignment approvals. The objects returned are those that are in scope for approval by the calling user. In PIM for groups, return a collection of assignment approvals. The objects returned are those that are in scope for approval by the calling user.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/approval-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
     public function get(?FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function filterByCurrentUser
+     * In Microsoft Entra entitlement management, return a collection of access package assignment approvals. The objects returned are those that are in scope for approval by the calling user. In PIM for groups, return a collection of assignment approvals. The objects returned are those that are in scope for approval by the calling user.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

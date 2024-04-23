@@ -52,11 +52,10 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the attributeSet objects and their properties.
+     * Group of related custom security attribute definitions.
      * @param AttributeSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttributeSetCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/directory-list-attributesets?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttributeSetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new attributeSet object.
+     * Create new navigation property to attributeSets for directory
      * @param AttributeSet $body The request body
      * @param AttributeSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttributeSet|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/directory-post-attributesets?view=graph-rest-1.0 Find more info here
     */
     public function post(AttributeSet $body, ?AttributeSetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the attributeSet objects and their properties.
+     * Group of related custom security attribute definitions.
      * @param AttributeSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class AttributeSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new attributeSet object.
+     * Create new navigation property to attributeSets for directory
      * @param AttributeSet $body The request body
      * @param AttributeSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

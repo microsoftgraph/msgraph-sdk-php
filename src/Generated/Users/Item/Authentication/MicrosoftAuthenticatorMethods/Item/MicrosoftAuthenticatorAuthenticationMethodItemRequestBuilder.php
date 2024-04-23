@@ -39,11 +39,10 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete navigation property microsoftAuthenticatorMethods for users
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MicrosoftAuthenticatorAuthenticationMethod|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,7 +67,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete navigation property microsoftAuthenticatorMethods for users
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +85,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Read the properties and relationships of a microsoftAuthenticatorAuthenticationMethod object.
+     * The details of the Microsoft Authenticator app registered to a user for authentication.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

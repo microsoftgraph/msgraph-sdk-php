@@ -31,11 +31,10 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an internalDomainFederation object.
+     * Delete navigation property federationConfiguration for domains
      * @param InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
+     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @param InternalDomainFederationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?InternalDomainFederationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an internalDomainFederation object.
+     * Update the navigation property federationConfiguration in domains
      * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(InternalDomainFederation $body, ?InternalDomainFederationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an internalDomainFederation object.
+     * Delete navigation property federationConfiguration for domains
      * @param InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an internalDomainFederation object.
+     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @param InternalDomainFederationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an internalDomainFederation object.
+     * Update the navigation property federationConfiguration in domains
      * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

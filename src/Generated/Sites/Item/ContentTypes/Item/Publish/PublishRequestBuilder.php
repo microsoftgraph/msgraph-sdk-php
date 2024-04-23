@@ -30,7 +30,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Publishes a [contentType][] present in the content type hub site.
+     * Publishes a contentType present in the content type hub site.
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Publishes a [contentType][] present in the content type hub site.
+     * Publishes a contentType present in the content type hub site.
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

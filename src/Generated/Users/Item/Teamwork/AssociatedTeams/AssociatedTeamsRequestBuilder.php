@@ -52,11 +52,10 @@ class AssociatedTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways:
+     * The list of associatedTeamInfo objects that a user is associated with.
      * @param AssociatedTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AssociatedTeamInfoCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/associatedteaminfo-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssociatedTeamsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class AssociatedTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of teams in Microsoft Teams that a user is associated with.Currently, a user can be associated with a team in two different ways:
+     * The list of associatedTeamInfo objects that a user is associated with.
      * @param AssociatedTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

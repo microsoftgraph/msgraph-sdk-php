@@ -45,11 +45,10 @@ class CommsOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the status of an operation that adds the large gallery view to a call.
+     * Get operations from communications
      * @param CommsOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CommsOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/addlargegalleryviewoperation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CommsOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +92,7 @@ class CommsOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the status of an operation that adds the large gallery view to a call.
+     * Get operations from communications
      * @param CommsOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

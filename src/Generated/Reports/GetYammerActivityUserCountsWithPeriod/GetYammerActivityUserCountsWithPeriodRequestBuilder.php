@@ -34,10 +34,11 @@ class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getYammerActivityUserCounts
+     * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
      * @param GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getyammeractivityusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getYammerActivityUserCounts
+     * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
      * @param GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

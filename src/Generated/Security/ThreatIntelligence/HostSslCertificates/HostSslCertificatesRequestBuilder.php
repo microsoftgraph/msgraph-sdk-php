@@ -52,7 +52,7 @@ class HostSslCertificatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @param HostSslCertificatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostSslCertificateCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class HostSslCertificatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      * @param HostSslCertificatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

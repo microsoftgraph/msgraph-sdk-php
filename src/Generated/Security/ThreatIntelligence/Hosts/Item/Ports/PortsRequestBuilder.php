@@ -51,11 +51,10 @@ class PortsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPort resources associated with a host.
+     * The hostPorts associated with a host.
      * @param PortsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPortCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-host-list-ports?view=graph-rest-1.0 Find more info here
     */
     public function get(?PortsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class PortsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPort resources associated with a host.
+     * The hostPorts associated with a host.
      * @param PortsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

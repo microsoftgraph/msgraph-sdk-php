@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
+ * Represents the template and scheduling for an access review.
 */
 class AccessReviewScheduleDefinitionItemRequestBuilderGetQueryParameters 
 {

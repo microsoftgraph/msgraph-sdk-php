@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the remoteAssistancePartner object.
+ * The remote assist partners.
 */
 class RemoteAssistancePartnerItemRequestBuilderGetQueryParameters 
 {

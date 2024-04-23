@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\SharedWithMe;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function sharedWithMe
+ * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
 */
 class SharedWithMeRequestBuilderGetQueryParameters 
 {

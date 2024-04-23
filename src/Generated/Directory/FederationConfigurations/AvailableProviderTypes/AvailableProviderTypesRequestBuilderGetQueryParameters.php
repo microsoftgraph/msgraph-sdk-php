@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\Available
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function availableProviderTypes
+ * Get all identity providers supported in a directory.
 */
 class AvailableProviderTypesRequestBuilderGetQueryParameters 
 {

@@ -52,11 +52,10 @@ class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects.
+     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
      * @param OnPremisesConnectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcOnPremisesConnectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/virtualendpoint-list-onpremisesconnections?view=graph-rest-1.0 Find more info here
     */
     public function get(?OnPremisesConnectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
+     * Create new navigation property to onPremisesConnections for deviceManagement
      * @param CloudPcOnPremisesConnection $body The request body
      * @param OnPremisesConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcOnPremisesConnection|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/virtualendpoint-post-onpremisesconnections?view=graph-rest-1.0 Find more info here
     */
     public function post(CloudPcOnPremisesConnection $body, ?OnPremisesConnectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the cloudPcOnPremisesConnection objects.
+     * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
      * @param OnPremisesConnectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class OnPremisesConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new cloudPcOnPremisesConnection object for provisioning Cloud PCs.
+     * Create new navigation property to onPremisesConnections for deviceManagement
      * @param CloudPcOnPremisesConnection $body The request body
      * @param OnPremisesConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

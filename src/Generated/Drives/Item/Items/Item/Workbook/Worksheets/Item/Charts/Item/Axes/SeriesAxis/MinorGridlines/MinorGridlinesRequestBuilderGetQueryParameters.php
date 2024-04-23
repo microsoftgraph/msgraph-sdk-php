@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of chartgridlines object.
+ * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
 */
 class MinorGridlinesRequestBuilderGetQueryParameters 
 {

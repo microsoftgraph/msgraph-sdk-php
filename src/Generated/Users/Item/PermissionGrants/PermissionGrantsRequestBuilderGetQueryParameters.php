@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\PermissionGrants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all resource-specific permission grants of a user. This list specifies the Microsoft Entra apps that have access to the user, along with the corresponding resource-specific access that each app has.
+ * List all resource-specific permission grants of a user.
 */
 class PermissionGrantsRequestBuilderGetQueryParameters 
 {

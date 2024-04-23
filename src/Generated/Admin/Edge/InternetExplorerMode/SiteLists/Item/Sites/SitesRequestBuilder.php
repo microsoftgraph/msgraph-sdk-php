@@ -52,11 +52,10 @@ class SitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      * @param SitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSiteCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersitelist-list-sites?view=graph-rest-1.0 Find more info here
     */
     public function get(?SitesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class SitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new browserSite object in a browserSiteList.
+     * Create new navigation property to sites for admin
      * @param BrowserSite $body The request body
      * @param SitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSite|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersitelist-post-sites?view=graph-rest-1.0 Find more info here
     */
     public function post(BrowserSite $body, ?SitesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class SitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the browserSite objects and their properties.
+     * A collection of sites defined for the site list.
      * @param SitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class SitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new browserSite object in a browserSiteList.
+     * Create new navigation property to sites for admin
      * @param BrowserSite $body The request body
      * @param SitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

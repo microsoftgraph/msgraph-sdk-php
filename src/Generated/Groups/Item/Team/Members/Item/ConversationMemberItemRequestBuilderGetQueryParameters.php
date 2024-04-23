@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Members\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a conversationMember from a team.
+ * Members and owners of the team.
 */
 class ConversationMemberItemRequestBuilderGetQueryParameters 
 {

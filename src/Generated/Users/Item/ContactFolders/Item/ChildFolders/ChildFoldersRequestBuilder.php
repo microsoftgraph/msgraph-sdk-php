@@ -60,11 +60,10 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a collection of child folders under the specified contact folder.
+     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContactFolderCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contactfolder-list-childfolders?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChildFoldersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
+     * Create new navigation property to childFolders for users
      * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContactFolder|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0 Find more info here
     */
     public function post(ContactFolder $body, ?ChildFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a collection of child folders under the specified contact folder.
+     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +110,7 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
+     * Create new navigation property to childFolders for users
      * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

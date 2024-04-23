@@ -33,10 +33,11 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function filterByCurrentUser
+     * Retrieve a collection of userConsentRequest objects for accessing a specified app, for which the current user is the reviewer.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userconsentrequest-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
     public function get(?FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function filterByCurrentUser
+     * Retrieve a collection of userConsentRequest objects for accessing a specified app, for which the current user is the reviewer.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

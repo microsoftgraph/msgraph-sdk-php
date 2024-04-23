@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a unifiedRoleDefinition object. The following role-based access control (RBAC) providers are currently supported:
+ * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
 */
 class UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters 
 {

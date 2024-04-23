@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\GetAllMessages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getAllMessages
+ * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
 */
 class GetAllMessagesRequestBuilderGetQueryParameters 
 {

@@ -52,11 +52,10 @@ class ConversationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      * @param ConversationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ConversationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create new navigation property to conversations for groups
      * @param Conversation $body The request body
      * @param ConversationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Conversation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0 Find more info here
     */
     public function post(Conversation $body, ?ConversationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ConversationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of conversations in this group.
+     * The group's conversations.
      * @param ConversationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ConversationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use reply thread or reply post to further post to that conversation.
+     * Create new navigation property to conversations for groups
      * @param Conversation $body The request body
      * @param ConversationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

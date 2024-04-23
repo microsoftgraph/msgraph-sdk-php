@@ -61,11 +61,10 @@ class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object.
+     * Collection of PivotTables that are part of the worksheet.
      * @param WorkbookPivotTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookPivotTable|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workbookpivottable-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookPivotTableItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -109,7 +108,7 @@ class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of workbookPivotTable object.
+     * Collection of PivotTables that are part of the worksheet.
      * @param WorkbookPivotTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Contacts\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get newly created, updated, or deleted organizational contacts without having to perform a full read of the entire collection. See change tracking for details.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

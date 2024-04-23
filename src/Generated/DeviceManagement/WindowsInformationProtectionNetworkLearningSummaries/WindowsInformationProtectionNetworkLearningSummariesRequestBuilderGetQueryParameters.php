@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectio
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+ * The windows information protection network learning summaries.
 */
 class WindowsInformationProtectionNetworkLearningSummariesRequestBuilderGetQueryParameters 
 {

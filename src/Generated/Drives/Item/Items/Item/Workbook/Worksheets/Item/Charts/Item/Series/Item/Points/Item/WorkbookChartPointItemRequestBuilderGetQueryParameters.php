@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of chartpoint object.
+ * Represents a collection of all points in the series. Read-only.
 */
 class WorkbookChartPointItemRequestBuilderGetQueryParameters 
 {

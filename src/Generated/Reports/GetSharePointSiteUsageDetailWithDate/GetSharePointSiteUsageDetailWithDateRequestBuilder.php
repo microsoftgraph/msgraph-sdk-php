@@ -35,10 +35,11 @@ class GetSharePointSiteUsageDetailWithDateRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getSharePointSiteUsageDetail
+     * Get details about SharePoint site usage.
      * @param GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagedetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetSharePointSiteUsageDetailWithDateRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getSharePointSiteUsageDetail
+     * Get details about SharePoint site usage.
      * @param GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

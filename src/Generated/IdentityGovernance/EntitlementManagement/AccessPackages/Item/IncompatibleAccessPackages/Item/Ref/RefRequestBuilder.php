@@ -30,11 +30,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,7 +44,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  
+     * Delete ref of navigation property incompatibleAccessPackages for identityGovernance
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

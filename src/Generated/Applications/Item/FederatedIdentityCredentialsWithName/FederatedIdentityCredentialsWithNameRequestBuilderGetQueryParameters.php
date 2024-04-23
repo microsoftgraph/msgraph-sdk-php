@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentia
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a federatedIdentityCredential object.
+ * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
 */
 class FederatedIdentityCredentialsWithNameRequestBuilderGetQueryParameters 
 {

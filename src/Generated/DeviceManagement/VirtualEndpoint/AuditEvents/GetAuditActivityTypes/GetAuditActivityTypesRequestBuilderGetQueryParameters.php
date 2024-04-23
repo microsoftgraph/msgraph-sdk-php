@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\AuditEvents
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getAuditActivityTypes
+ * Get audit activity types by tenant ID.
 */
 class GetAuditActivityTypesRequestBuilderGetQueryParameters 
 {

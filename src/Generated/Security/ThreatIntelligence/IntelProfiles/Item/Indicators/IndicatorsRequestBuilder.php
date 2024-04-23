@@ -51,11 +51,10 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
+     * Includes an assemblage of high-fidelity network indicators of compromise.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IntelligenceProfileIndicatorCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-intelligenceprofile-list-indicators?view=graph-rest-1.0 Find more info here
     */
     public function get(?IndicatorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the intelligenceProfileIndicator resources from the indicators navigation property of an intelligenceProfile.
+     * Includes an assemblage of high-fidelity network indicators of compromise.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

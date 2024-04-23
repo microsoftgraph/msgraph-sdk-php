@@ -27,7 +27,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Gets the bundles property value. Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @return array<DriveItem>|null
     */
     public function getBundles(): ?array {
@@ -207,7 +207,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+     * Sets the bundles property value. Collection of bundles (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param array<DriveItem>|null $value Value to set for the bundles property.
     */
     public function setBundles(?array $value): void {

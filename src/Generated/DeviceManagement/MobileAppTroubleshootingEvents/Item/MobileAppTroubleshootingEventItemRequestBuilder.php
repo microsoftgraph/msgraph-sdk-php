@@ -39,11 +39,10 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a mobileAppTroubleshootingEvent.
+     * Delete navigation property mobileAppTroubleshootingEvents for deviceManagement
      * @param MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the mobileAppTroubleshootingEvent object.
+     * The collection property of MobileAppTroubleshootingEvent.
      * @param MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppTroubleshootingEvent|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a mobileAppTroubleshootingEvent object.
+     * Update the navigation property mobileAppTroubleshootingEvents in deviceManagement
      * @param MobileAppTroubleshootingEvent $body The request body
      * @param MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppTroubleshootingEvent|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-mobileapptroubleshootingevent-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a mobileAppTroubleshootingEvent.
+     * Delete navigation property mobileAppTroubleshootingEvents for deviceManagement
      * @param MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the mobileAppTroubleshootingEvent object.
+     * The collection property of MobileAppTroubleshootingEvent.
      * @param MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a mobileAppTroubleshootingEvent object.
+     * Update the navigation property mobileAppTroubleshootingEvents in deviceManagement
      * @param MobileAppTroubleshootingEvent $body The request body
      * @param MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

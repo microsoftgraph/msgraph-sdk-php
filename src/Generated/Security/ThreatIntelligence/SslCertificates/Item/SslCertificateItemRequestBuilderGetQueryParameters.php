@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\SslCertificates\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of an sslCertificate object.
+ * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
 */
 class SslCertificateItemRequestBuilderGetQueryParameters 
 {

@@ -31,11 +31,10 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified bookingCustomer object.
+     * Delete navigation property customers for solutions
      * @param BookingCustomerBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/bookingcustomer-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingCustomerBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingCustomer object.
+     * All the customers of this business. Read-only. Nullable.
      * @param BookingCustomerBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCustomerBase|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/bookingcustomer-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingCustomerBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingCustomer object.
+     * Update the navigation property customers in solutions
      * @param BookingCustomerBase $body The request body
      * @param BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCustomerBase|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/bookingcustomer-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingCustomerBase $body, ?BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified bookingCustomer object.
+     * Delete navigation property customers for solutions
      * @param BookingCustomerBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a bookingCustomer object.
+     * All the customers of this business. Read-only. Nullable.
      * @param BookingCustomerBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class BookingCustomerBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a bookingCustomer object.
+     * Update the navigation property customers in solutions
      * @param BookingCustomerBase $body The request body
      * @param BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -52,11 +52,10 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
+     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/domain-list-federationconfiguration?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederationConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new internalDomainFederation object.
+     * Create new navigation property to federationConfiguration for domains
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0 Find more info here
     */
     public function post(InternalDomainFederation $body, ?FederationConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of the internalDomainFederation objects for the domain. This API returns only one object in the collection.
+     * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new internalDomainFederation object.
+     * Create new navigation property to federationConfiguration for domains
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

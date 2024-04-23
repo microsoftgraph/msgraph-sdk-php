@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Oauth2PermissionGrants\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

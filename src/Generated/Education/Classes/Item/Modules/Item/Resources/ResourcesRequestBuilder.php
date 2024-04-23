@@ -52,11 +52,10 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param ResourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModuleResourceCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationmodule-list-resources?view=graph-rest-1.0 Find more info here
     */
     public function get(?ResourcesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create new navigation property to resources for education
      * @param EducationModuleResource $body The request body
      * @param ResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModuleResource|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationmodule-post-resources?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationModuleResource $body, ?ResourcesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param ResourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created.
+     * Create new navigation property to resources for education
      * @param EducationModuleResource $body The request body
      * @param ResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -52,11 +52,10 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEvent objects and their properties.
+     * Get retentionEvents from security
      * @param RetentionEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionEventCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-retentionevent-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RetentionEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEvent object.
+     * Create new navigation property to retentionEvents for security
      * @param RetentionEvent $body The request body
      * @param RetentionEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionEvent|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-retentionevent-post?view=graph-rest-1.0 Find more info here
     */
     public function post(RetentionEvent $body, ?RetentionEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the retentionEvent objects and their properties.
+     * Get retentionEvents from security
      * @param RetentionEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class RetentionEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new retentionEvent object.
+     * Create new navigation property to retentionEvents for security
      * @param RetentionEvent $body The request body
      * @param RetentionEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

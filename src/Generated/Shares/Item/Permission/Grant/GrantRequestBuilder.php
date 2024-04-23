@@ -30,7 +30,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GrantPostResponse|null>
@@ -46,7 +46,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant users access to a link represented by a [permission][].
+     * Grant users access to a link represented by a permission.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

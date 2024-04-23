@@ -79,11 +79,10 @@ class AccessPackageAssignmentRequestItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete navigation property assignmentRequests for identityGovernance
      * @param AccessPackageAssignmentRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageAssignmentRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -94,11 +93,10 @@ class AccessPackageAssignmentRequestItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param AccessPackageAssignmentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageAssignmentRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackageAssignmentRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -124,7 +122,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete navigation property assignmentRequests for identityGovernance
      * @param AccessPackageAssignmentRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -142,7 +140,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
+     * Access package assignment requests created by or on behalf of a subject.
      * @param AccessPackageAssignmentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

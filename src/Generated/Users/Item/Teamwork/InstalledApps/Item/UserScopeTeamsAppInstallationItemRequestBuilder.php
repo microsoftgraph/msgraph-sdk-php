@@ -55,11 +55,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Uninstall an app from the personal scope of the specified user.
+     * Delete navigation property installedApps for users
      * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +69,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserScopeTeamsAppInstallation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +98,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Uninstall an app from the personal scope of the specified user.
+     * Delete navigation property installedApps for users
      * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -118,7 +116,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the app installed in the personal scope of the specified user.
+     * The apps installed in the personal scope of this user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

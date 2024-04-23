@@ -35,10 +35,11 @@ class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Invoke function getSharePointActivityUserDetail
+     * Get details about SharePoint activity by user.
      * @param GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointactivityuserdetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Invoke function getSharePointActivityUserDetail
+     * Get details about SharePoint activity by user.
      * @param GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

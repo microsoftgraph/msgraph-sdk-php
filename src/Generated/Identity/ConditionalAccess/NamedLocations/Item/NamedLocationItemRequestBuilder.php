@@ -31,11 +31,10 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a countryNamedLocation object.
+     * Delete navigation property namedLocations for identity
      * @param NamedLocationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/countrynamedlocation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?NamedLocationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an ipNamedLocation object.
+     * Read-only. Nullable. Returns a collection of the specified named locations.
      * @param NamedLocationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NamedLocation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/ipnamedlocation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamedLocationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ipNamedLocation object.
+     * Update the navigation property namedLocations in identity
      * @param NamedLocation $body The request body
      * @param NamedLocationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NamedLocation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/ipnamedlocation-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(NamedLocation $body, ?NamedLocationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a countryNamedLocation object.
+     * Delete navigation property namedLocations for identity
      * @param NamedLocationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an ipNamedLocation object.
+     * Read-only. Nullable. Returns a collection of the specified named locations.
      * @param NamedLocationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class NamedLocationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ipNamedLocation object.
+     * Update the navigation property namedLocations in identity
      * @param NamedLocation $body The request body
      * @param NamedLocationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

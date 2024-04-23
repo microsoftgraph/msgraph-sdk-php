@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Manifests\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a manifest object.
+ * Represents metadata for the exported data.
 */
 class ManifestItemRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEli
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function filterByCurrentUser
+ * Get the instances of eligible roles for the calling principal.
 */
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {

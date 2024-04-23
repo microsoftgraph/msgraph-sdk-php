@@ -45,11 +45,10 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      * @param AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerAssignedToTaskBoardTaskFormat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +64,6 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
      * @param AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerAssignedToTaskBoardTaskFormat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannerassignedtotaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerAssignedToTaskBoardTaskFormat $body, ?AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerAssignedToTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      * @param AssignedToTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

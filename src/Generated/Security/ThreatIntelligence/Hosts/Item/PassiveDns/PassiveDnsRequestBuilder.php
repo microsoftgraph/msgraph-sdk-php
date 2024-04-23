@@ -51,11 +51,10 @@ class PassiveDnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Passive DNS retrieval about this host.
      * @param PassiveDnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PassiveDnsRecordCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-host-list-passivedns?view=graph-rest-1.0 Find more info here
     */
     public function get(?PassiveDnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class PassiveDnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of passiveDnsRecord resources associated with a host. This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+     * Passive DNS retrieval about this host.
      * @param PassiveDnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -111,7 +111,6 @@ class MembersRequestBuilder extends BaseRequestBuilder
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/directoryrole-list-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

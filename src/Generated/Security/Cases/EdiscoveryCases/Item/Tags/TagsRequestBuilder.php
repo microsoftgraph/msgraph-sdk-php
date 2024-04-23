@@ -60,11 +60,10 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of eDiscoveryReviewTag objects and their properties.
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewTagCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-list-tags?view=graph-rest-1.0 Find more info here
     */
     public function get(?TagsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryReviewTag object.
+     * Create new navigation property to tags for security
      * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewTag|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0 Find more info here
     */
     public function post(EdiscoveryReviewTag $body, ?TagsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of eDiscoveryReviewTag objects and their properties.
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +110,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new ediscoveryReviewTag object.
+     * Create new navigation property to tags for security
      * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

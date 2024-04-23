@@ -33,10 +33,11 @@ class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getByUserRole
+     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
      * @param GetByUserRoleWithRoleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetByUserRoleWithRoleGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualeventwebinar-getbyuserrole?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetByUserRoleWithRoleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getByUserRole
+     * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
      * @param GetByUserRoleWithRoleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

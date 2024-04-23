@@ -31,11 +31,10 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing category. Only teachers can perform this operation.
+     * Delete navigation property assignmentCategories for education
      * @param EducationCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationcategory-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
+     * All categories associated with this class. Nullable.
      * @param EducationCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationCategory|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationcategory-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +74,7 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing category. Only teachers can perform this operation.
+     * Delete navigation property assignmentCategories for education
      * @param EducationCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -94,7 +92,7 @@ class EducationCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve an educationCategory object. Only teachers, students, and applications with application permissions can perform this operation.
+     * All categories associated with this class. Nullable.
      * @param EducationCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

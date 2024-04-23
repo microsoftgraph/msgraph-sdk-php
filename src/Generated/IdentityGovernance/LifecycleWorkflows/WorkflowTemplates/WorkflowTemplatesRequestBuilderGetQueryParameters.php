@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the workflowTemplate objects and their properties.
+ * The workflow templates in the lifecycle workflow instance.
 */
 class WorkflowTemplatesRequestBuilderGetQueryParameters 
 {

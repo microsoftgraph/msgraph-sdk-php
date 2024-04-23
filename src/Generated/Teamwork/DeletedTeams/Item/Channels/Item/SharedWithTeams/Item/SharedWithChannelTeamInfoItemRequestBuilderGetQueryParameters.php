@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Sha
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared.
+ * A collection of teams with which a channel is shared.
 */
 class SharedWithChannelTeamInfoItemRequestBuilderGetQueryParameters 
 {

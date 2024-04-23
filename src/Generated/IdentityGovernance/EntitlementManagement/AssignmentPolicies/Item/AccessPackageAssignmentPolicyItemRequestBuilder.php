@@ -63,11 +63,10 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
+     * Delete navigation property assignmentPolicies for identityGovernance
      * @param AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -78,11 +77,10 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageAssignmentPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +106,7 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
+     * Delete navigation property assignmentPolicies for identityGovernance
      * @param AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -126,7 +124,7 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
+     * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @param AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -45,11 +45,10 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object.
+     * Read-only. Nullable. More details about the task.
      * @param DetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTaskDetails|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannertaskdetails-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +64,6 @@ class DetailsRequestBuilder extends BaseRequestBuilder
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTaskDetails|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannertaskdetails-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerTaskDetails $body, ?DetailsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a plannerTaskDetails object.
+     * Read-only. Nullable. More details about the task.
      * @param DetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

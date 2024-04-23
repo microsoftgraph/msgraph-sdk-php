@@ -52,11 +52,10 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param AgreementsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0 Find more info here
     */
     public function get(?AgreementsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new agreement object.
+     * Create new navigation property to agreements for identityGovernance
      * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Agreement|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0 Find more info here
     */
     public function post(Agreement $body, ?AgreementsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of agreement objects.
+     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
      * @param AgreementsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class AgreementsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new agreement object.
+     * Create new navigation property to agreements for identityGovernance
      * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

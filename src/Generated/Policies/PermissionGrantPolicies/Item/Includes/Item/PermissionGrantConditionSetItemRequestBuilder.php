@@ -31,11 +31,10 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy.
+     * Delete navigation property includes for policies
      * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete-includes?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,7 +45,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Condition sets that are included in this permission grant policy. Automatically expanded on GET.
      * @param PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionGrantConditionSet|null>
      * @throws Exception
@@ -75,7 +74,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a permissionGrantConditionSet from the includes collection of a permissionGrantPolicy.
+     * Delete navigation property includes for policies
      * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -93,7 +92,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Condition sets that are included in this permission grant policy. Automatically expanded on GET.
      * @param PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

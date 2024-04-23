@@ -30,10 +30,11 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function delta
+     * Get newly created, updated, or deleted groups, including group membership changes, without having to perform a full read of the entire group collection. See Using Delta Query for details.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeltaGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/group-delta?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeltaRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function delta
+     * Get newly created, updated, or deleted groups, including group membership changes, without having to perform a full read of the entire group collection. See Using Delta Query for details.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

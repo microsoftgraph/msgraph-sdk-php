@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceManagementExportJob objects.
+ * Entity representing a job to export a report
 */
 class ExportJobsRequestBuilderGetQueryParameters 
 {

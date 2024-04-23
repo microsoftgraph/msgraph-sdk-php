@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the default channel, General, of a team.
+ * The general channel for the team.
 */
 class PrimaryChannelRequestBuilderGetQueryParameters 
 {

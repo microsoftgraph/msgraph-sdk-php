@@ -30,10 +30,11 @@ class RecentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function recent
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
      * @param RecentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RecentGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/drive-recent?view=graph-rest-1.0 Find more info here
     */
     public function get(?RecentRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class RecentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function recent
+     * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
      * @param RecentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

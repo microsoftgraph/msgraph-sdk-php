@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\Applies
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove an appliesTo on a featureRolloutPolicy object to remove the directoryObject from feature rollout.
+ * Delete ref of navigation property appliesTo for policies
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

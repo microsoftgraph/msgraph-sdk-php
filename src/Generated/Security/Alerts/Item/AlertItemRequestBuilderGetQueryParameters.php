@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Alerts\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of an alert object.
+ * Get alerts from security
 */
 class AlertItemRequestBuilderGetQueryParameters 
 {

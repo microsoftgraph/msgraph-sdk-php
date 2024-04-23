@@ -45,11 +45,10 @@ class ManifestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a manifest object.
+     * Represents metadata for the exported data.
      * @param ManifestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Manifest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/partners-billing-manifest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManifestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +92,7 @@ class ManifestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a manifest object.
+     * Represents metadata for the exported data.
      * @param ManifestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

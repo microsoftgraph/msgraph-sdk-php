@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus object.
+ * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
 */
 class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetQueryParameters 
 {

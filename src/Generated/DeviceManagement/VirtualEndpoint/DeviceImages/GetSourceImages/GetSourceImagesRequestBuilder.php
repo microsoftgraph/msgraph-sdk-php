@@ -30,10 +30,11 @@ class GetSourceImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getSourceImages
+     * Get cloudPcSourceDeviceImage objects that can be uploaded and used on Cloud PCs. View a list of all the managed image resources from your Microsoft Entra subscriptions.
      * @param GetSourceImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetSourceImagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/cloudpcdeviceimage-getsourceimages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSourceImagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetSourceImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getSourceImages
+     * Get cloudPcSourceDeviceImage objects that can be uploaded and used on Cloud PCs. View a list of all the managed image resources from your Microsoft Entra subscriptions.
      * @param GetSourceImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

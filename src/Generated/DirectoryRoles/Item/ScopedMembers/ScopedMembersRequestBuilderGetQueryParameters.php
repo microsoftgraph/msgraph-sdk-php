@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of scopedRoleMembership objects for a directory role.
+ * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
 */
 class ScopedMembersRequestBuilderGetQueryParameters 
 {

@@ -31,11 +31,10 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a samlOrWsFedExternalDomainFederation object.
+     * Delete navigation property federationConfigurations for directory
      * @param IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/samlorwsfedexternaldomainfederation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -75,7 +74,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a samlOrWsFedExternalDomainFederation object.
+     * Delete navigation property federationConfigurations for directory
      * @param IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

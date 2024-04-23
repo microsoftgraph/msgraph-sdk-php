@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\IntelProfiles\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a intelligenceProfile object.
+ * A list of intelligenceProfile objects.
 */
 class IntelligenceProfileItemRequestBuilderGetQueryParameters 
 {

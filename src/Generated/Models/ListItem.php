@@ -65,7 +65,7 @@ class ListItem extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * Gets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
@@ -171,7 +171,7 @@ class ListItem extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a driveItem
      * @param DriveItem|null $value Value to set for the driveItem property.
     */
     public function setDriveItem(?DriveItem $value): void {

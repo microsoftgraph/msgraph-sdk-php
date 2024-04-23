@@ -52,11 +52,10 @@ class RegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      * @param RegistrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistrationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/virtualeventwebinar-list-registrations?view=graph-rest-1.0 Find more info here
     */
     public function get(?RegistrationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class RegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all registration records of a webinar.
+     * Registration records of the webinar.
      * @param RegistrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

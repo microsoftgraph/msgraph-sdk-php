@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of audioRoutingGroup objects.
+ * Get audioRoutingGroups from communications
 */
 class AudioRoutingGroupsRequestBuilderGetQueryParameters 
 {

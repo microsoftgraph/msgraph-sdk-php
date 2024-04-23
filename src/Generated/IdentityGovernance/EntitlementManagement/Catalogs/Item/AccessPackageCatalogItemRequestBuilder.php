@@ -71,11 +71,10 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackageCatalog.
+     * Delete navigation property catalogs for identityGovernance
      * @param AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,11 +85,10 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container for access packages.
      * @param AccessPackageCatalogItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCatalog|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackageCatalogItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,12 +99,11 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property catalogs in identityGovernance
      * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCatalog|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AccessPackageCatalog $body, ?AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -117,7 +114,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an accessPackageCatalog.
+     * Delete navigation property catalogs for identityGovernance
      * @param AccessPackageCatalogItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +132,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an accessPackageCatalog object.
+     * A container for access packages.
      * @param AccessPackageCatalogItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -156,7 +153,7 @@ class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property catalogs in identityGovernance
      * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

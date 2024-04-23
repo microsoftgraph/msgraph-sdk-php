@@ -60,11 +60,10 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSchoolCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationschool-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchoolsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationSchool object.
+     * Create new navigation property to schools for education
      * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSchool|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationschool-post?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationSchool $body, ?SchoolsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the educationSchool objects and their properties.
+     * Get schools from education
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +110,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationSchool object.
+     * Create new navigation property to schools for education
      * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

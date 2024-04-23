@@ -39,11 +39,10 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a homeRealmDiscoveryPolicy object.
+     * Delete navigation property homeRealmDiscoveryPolicies for policies
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
+     * The policy to control Microsoft Entra authentication behavior for federated users.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HomeRealmDiscoveryPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object.
+     * Update the navigation property homeRealmDiscoveryPolicies in policies
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HomeRealmDiscoveryPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a homeRealmDiscoveryPolicy object.
+     * Delete navigation property homeRealmDiscoveryPolicies for policies
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
+     * The policy to control Microsoft Entra authentication behavior for federated users.
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a homeRealmDiscoveryPolicy object.
+     * Update the navigation property homeRealmDiscoveryPolicies in policies
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

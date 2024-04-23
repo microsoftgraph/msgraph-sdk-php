@@ -52,11 +52,10 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of activityBasedTimeoutPolicy objects.
+     * The policy that controls the idle time out for web sessions for applications.
      * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new activityBasedTimeoutPolicy object.
+     * Create new navigation property to activityBasedTimeoutPolicies for policies
      * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of activityBasedTimeoutPolicy objects.
+     * The policy that controls the idle time out for web sessions for applications.
      * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new activityBasedTimeoutPolicy object.
+     * Create new navigation property to activityBasedTimeoutPolicies for policies
      * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

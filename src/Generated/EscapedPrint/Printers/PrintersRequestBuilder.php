@@ -60,11 +60,10 @@ class PrintersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      * @param PrintersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/print-list-printers?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +89,7 @@ class PrintersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of printers that are registered in the tenant.
+     * The list of printers registered in the tenant.
      * @param PrintersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

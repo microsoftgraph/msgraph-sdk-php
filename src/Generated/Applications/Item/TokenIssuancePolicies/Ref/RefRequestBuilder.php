@@ -32,11 +32,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a tokenIssuancePolicy from an application.
+     * Delete ref of navigation property tokenIssuancePolicies for applications
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-delete-tokenissuancepolicies?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -47,11 +46,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get ref of tokenIssuancePolicies from applications
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -62,12 +60,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a tokenIssuancePolicy to an application.
+     * Create new navigation property ref to tokenIssuancePolicies for applications
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-post-tokenissuancepolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -78,7 +75,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a tokenIssuancePolicy from an application.
+     * Delete ref of navigation property tokenIssuancePolicies for applications
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -99,7 +96,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the tokenIssuancePolicy objects that are assigned to an application.
+     * Get ref of tokenIssuancePolicies from applications
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +117,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a tokenIssuancePolicy to an application.
+     * Create new navigation property ref to tokenIssuancePolicies for applications
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

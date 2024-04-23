@@ -53,11 +53,10 @@ class HostTrackerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a hostTracker object.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param HostTrackerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostTracker|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-hosttracker-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HostTrackerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,7 +100,7 @@ class HostTrackerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a hostTracker object.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param HostTrackerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

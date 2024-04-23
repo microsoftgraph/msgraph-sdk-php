@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the allowedValue objects and their properties.
+ * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
 */
 class AllowedValuesRequestBuilderGetQueryParameters 
 {

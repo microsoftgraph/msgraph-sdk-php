@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\Pages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of page objects.
+ * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
 */
 class PagesRequestBuilderGetQueryParameters 
 {

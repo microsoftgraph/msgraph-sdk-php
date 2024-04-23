@@ -31,10 +31,11 @@ class UsersRegisteredByFeatureRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function usersRegisteredByFeature
+     * Get the number of users capable of multi-factor authentication, self-service password reset, and passwordless authentication.
      * @param UsersRegisteredByFeatureRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserRegistrationFeatureSummary|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authenticationmethodsroot-usersregisteredbyfeature?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsersRegisteredByFeatureRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class UsersRegisteredByFeatureRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function usersRegisteredByFeature
+     * Get the number of users capable of multi-factor authentication, self-service password reset, and passwordless authentication.
      * @param UsersRegisteredByFeatureRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

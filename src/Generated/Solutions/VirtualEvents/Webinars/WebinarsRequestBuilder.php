@@ -54,11 +54,10 @@ class WebinarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      * @param WebinarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventWebinarCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/virtualeventsroot-list-webinars?view=graph-rest-1.0 Find more info here
     */
     public function get(?WebinarsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -103,7 +102,7 @@ class WebinarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of all virtualEventWebinar objects created in the tenant.
+     * Get webinars from solutions
      * @param WebinarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

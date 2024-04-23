@@ -31,11 +31,10 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete navigation property learningCourseActivities for employeeExperience
      * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the navigation property learningCourseActivities in employeeExperience
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningCourseActivity|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -76,7 +74,7 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
+     * Delete navigation property learningCourseActivities for employeeExperience
      * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a learningCourseActivity object. 
+     * Update the navigation property learningCourseActivities in employeeExperience
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

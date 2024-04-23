@@ -52,11 +52,10 @@ class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      * @param IosUpdateStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosUpdateDeviceStatusCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?IosUpdateStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosUpdateDeviceStatus object.
+     * Create new navigation property to iosUpdateStatuses for deviceManagement
      * @param IosUpdateDeviceStatus $body The request body
      * @param IosUpdateStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosUpdateDeviceStatus|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-create?view=graph-rest-1.0 Find more info here
     */
     public function post(IosUpdateDeviceStatus $body, ?IosUpdateStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosUpdateDeviceStatus objects.
+     * The IOS software update installation statuses for this account.
      * @param IosUpdateStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class IosUpdateStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosUpdateDeviceStatus object.
+     * Create new navigation property to iosUpdateStatuses for deviceManagement
      * @param IosUpdateDeviceStatus $body The request body
      * @param IosUpdateStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

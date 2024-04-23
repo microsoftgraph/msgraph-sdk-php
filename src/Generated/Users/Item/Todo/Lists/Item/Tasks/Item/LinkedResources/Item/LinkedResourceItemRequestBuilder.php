@@ -31,11 +31,10 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a linkedResource object.
+     * Delete navigation property linkedResources for users
      * @param LinkedResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LinkedResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a linkedResource object.
+     * A collection of resources linked to the task.
      * @param LinkedResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LinkedResource|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/linkedresource-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LinkedResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a linkedResource object.
+     * Update the navigation property linkedResources in users
      * @param LinkedResource $body The request body
      * @param LinkedResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LinkedResource|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/linkedresource-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LinkedResource $body, ?LinkedResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a linkedResource object.
+     * Delete navigation property linkedResources for users
      * @param LinkedResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a linkedResource object.
+     * A collection of resources linked to the task.
      * @param LinkedResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class LinkedResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a linkedResource object.
+     * Update the navigation property linkedResources in users
      * @param LinkedResource $body The request body
      * @param LinkedResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

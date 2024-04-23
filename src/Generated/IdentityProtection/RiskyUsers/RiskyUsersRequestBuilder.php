@@ -68,11 +68,10 @@ class RiskyUsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param RiskyUsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RiskyUserCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/riskyuser-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RiskyUsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,7 +97,7 @@ class RiskyUsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the riskyUser objects and their properties.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param RiskyUsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

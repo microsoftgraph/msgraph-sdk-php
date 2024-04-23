@@ -52,11 +52,10 @@ class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
+     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param ServiceManagementDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminServiceManagementDetailCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/delegatedadmincustomer-list-servicemanagementdetails?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServiceManagementDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class ServiceManagementDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
+     * Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param ServiceManagementDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

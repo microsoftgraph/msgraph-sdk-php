@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
+ * Navigation property to deployment summary of the configuration.
 */
 class DeploymentSummaryRequestBuilderGetQueryParameters 
 {

@@ -60,11 +60,10 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For a Microsoft Entra tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
+     * Get identityProviders from identity
      * @param IdentityProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityProviderBaseCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identitycontainer-list-identityproviders?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityProvidersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+     * Create new navigation property to identityProviders for identity
      * @param IdentityProviderBase $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityProviderBase|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identitycontainer-post-identityproviders?view=graph-rest-1.0 Find more info here
     */
     public function post(IdentityProviderBase $body, ?IdentityProvidersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a collection of identity provider resources that are configured for a tenant, and that are derived from identityProviderBase. For a Microsoft Entra tenant, the providers can be socialIdentityProviders or builtinIdentityProviders objects. For an Azure AD B2C, the providers can be socialIdentityProvider, or appleManagedIdentityProvider objects.
+     * Get identityProviders from identity
      * @param IdentityProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +110,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+     * Create new navigation property to identityProviders for identity
      * @param IdentityProviderBase $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

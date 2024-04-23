@@ -52,11 +52,10 @@ class RiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param RiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RiskDetectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RiskDetectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class RiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the riskDetection objects and their properties.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param RiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

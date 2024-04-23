@@ -53,11 +53,10 @@ class DefaultRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
+     * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      * @param DefaultRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CrossTenantAccessPolicyConfigurationDefault|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefaultRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class DefaultRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the navigation property default in policies
      * @param CrossTenantAccessPolicyConfigurationDefault $body The request body
      * @param DefaultRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CrossTenantAccessPolicyConfigurationDefault|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CrossTenantAccessPolicyConfigurationDefault $body, ?DefaultRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -102,7 +100,7 @@ class DefaultRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
+     * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      * @param DefaultRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +121,7 @@ class DefaultRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the default configuration of a cross-tenant access policy.
+     * Update the navigation property default in policies
      * @param CrossTenantAccessPolicyConfigurationDefault $body The request body
      * @param DefaultRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

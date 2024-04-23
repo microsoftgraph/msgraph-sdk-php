@@ -55,11 +55,10 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a term object.
+     * Delete navigation property terms for groups
      * @param TermItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-term-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TermItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +69,10 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @param TermItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Term|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TermItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +83,11 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a term object.
+     * Update the navigation property terms in groups
      * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Term|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-term-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Term $body, ?TermItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -101,7 +98,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a term object.
+     * Delete navigation property terms for groups
      * @param TermItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +116,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @param TermItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -140,7 +137,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a term object.
+     * Update the navigation property terms in groups
      * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

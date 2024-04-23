@@ -52,11 +52,10 @@ class ModulesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of module objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can see all module objects for the class. Students can only see published modules.
+     * All modules in the class. Nullable.
      * @param ModulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModuleCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationclass-list-modules?view=graph-rest-1.0 Find more info here
     */
     public function get(?ModulesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ModulesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can't see the modules until publication.
+     * Create new navigation property to modules for education
      * @param EducationModule $body The request body
      * @param ModulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModule|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationclass-post-module?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationModule $body, ?ModulesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ModulesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of module objects. Only teachers, students, and applications with application permissions can perform this operation. A teacher or an application with application permissions can see all module objects for the class. Students can only see published modules.
+     * All modules in the class. Nullable.
      * @param ModulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ModulesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new module in a class. Only teachers in a class can create a module. Modules start in the draft state, which means that students can't see the modules until publication.
+     * Create new navigation property to modules for education
      * @param EducationModule $body The request body
      * @param ModulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

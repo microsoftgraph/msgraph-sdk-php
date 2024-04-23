@@ -39,11 +39,10 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenIssuancePolicy object.
+     * Delete navigation property tokenIssuancePolicies for policies
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenIssuancePolicy object.
+     * Update the navigation property tokenIssuancePolicies in policies
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenIssuancePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TokenIssuancePolicy $body, ?TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -84,7 +82,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenIssuancePolicy object.
+     * Delete navigation property tokenIssuancePolicies for policies
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +121,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenIssuancePolicy object.
+     * Update the navigation property tokenIssuancePolicies in policies
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

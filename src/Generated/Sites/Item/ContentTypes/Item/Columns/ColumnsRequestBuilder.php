@@ -52,11 +52,10 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinitionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contenttype-list-columns?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for sites
      * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contenttype-post-columns?view=graph-rest-1.0 Find more info here
     */
     public function post(ColumnDefinition $body, ?ColumnsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+     * The collection of column definitions for this content type.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a column to a [content type][contentType] in a site, or a list with a request that specifies a [columnDefinition][columnDefinition].
+     * Create new navigation property to columns for sites
      * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

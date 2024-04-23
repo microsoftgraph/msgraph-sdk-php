@@ -35,10 +35,11 @@ class GetOneDriveActivityUserDetailWithDateRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getOneDriveActivityUserDetail
+     * Get details about OneDrive activity by user.
      * @param GetOneDriveActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveactivityuserdetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOneDriveActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetOneDriveActivityUserDetailWithDateRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getOneDriveActivityUserDetail
+     * Get details about OneDrive activity by user.
      * @param GetOneDriveActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

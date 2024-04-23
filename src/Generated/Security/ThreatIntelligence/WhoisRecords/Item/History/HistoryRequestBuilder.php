@@ -51,11 +51,10 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WhoisHistoryRecordCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-whoisrecord-list-history?view=graph-rest-1.0 Find more info here
     */
     public function get(?HistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the history for a whoisRecord, as represented by a collection of whoisHistoryRecord resources.
+     * The collection of historical records associated to this WHOIS object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

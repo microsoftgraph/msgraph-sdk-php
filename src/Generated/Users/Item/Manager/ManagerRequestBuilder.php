@@ -39,11 +39,10 @@ class ManagerRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * The user or contact that is this user's manager. Read-only. Supports $expand.
      * @param ManagerRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObject|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagerRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -54,7 +53,7 @@ class ManagerRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * The user or contact that is this user's manager. Read-only. Supports $expand.
      * @param ManagerRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

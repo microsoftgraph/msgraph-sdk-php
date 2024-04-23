@@ -52,11 +52,10 @@ class ProvisioningRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      * @param ProvisioningRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProvisioningObjectSummaryCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/provisioningobjectsummary-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ProvisioningRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class ProvisioningRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+     * Get provisioning from auditLogs
      * @param ProvisioningRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

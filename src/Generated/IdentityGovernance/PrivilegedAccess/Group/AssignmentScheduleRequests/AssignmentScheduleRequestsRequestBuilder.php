@@ -62,11 +62,10 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @param AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleRequestCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,12 +76,11 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
+     * Create new navigation property to assignmentScheduleRequests for identityGovernance
      * @param PrivilegedAccessGroupAssignmentScheduleRequest $body The request body
      * @param AssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-assignmentschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function post(PrivilegedAccessGroupAssignmentScheduleRequest $body, ?AssignmentScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -93,7 +91,7 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleRequest objects and their properties.
+     * The schedule requests for operations to create, update, delete, extend, and renew an assignment.
      * @param AssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,7 +112,7 @@ class AssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new privilegedAccessGroupAssignmentScheduleRequest object.
+     * Create new navigation property to assignmentScheduleRequests for identityGovernance
      * @param PrivilegedAccessGroupAssignmentScheduleRequest $body The request body
      * @param AssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

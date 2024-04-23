@@ -45,11 +45,10 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object.
+     * The open shift requests in the schedule.
      * @param OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShiftChangeRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +92,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object.
+     * The open shift requests in the schedule.
      * @param OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

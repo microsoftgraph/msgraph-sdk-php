@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEli
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the instance of a role eligibility.
+ * Instances for role eligibility requests.
 */
 class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetQueryParameters 
 {

@@ -43,11 +43,10 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @param PhotosRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfilePhotoCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-list-photos?view=graph-rest-1.0 Find more info here
     */
     public function get(?PhotosRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -58,7 +57,7 @@ class PhotosRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of profilePhoto objects.
+     * The profile photos owned by the group. Read-only. Nullable.
      * @param PhotosRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

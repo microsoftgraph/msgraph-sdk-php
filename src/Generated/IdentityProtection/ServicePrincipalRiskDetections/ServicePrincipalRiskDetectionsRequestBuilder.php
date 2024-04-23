@@ -52,11 +52,10 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
+     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalRiskDetectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
+     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

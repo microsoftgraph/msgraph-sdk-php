@@ -34,10 +34,11 @@ class GetSharePointSiteUsagePagesWithPeriodRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getSharePointSiteUsagePages
+     * Get the number of pages viewed across all sites.
      * @param GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagepages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetSharePointSiteUsagePagesWithPeriodRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getSharePointSiteUsagePages
+     * Get the number of pages viewed across all sites.
      * @param GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

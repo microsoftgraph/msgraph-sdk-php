@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\Events\Item\Attach
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of attachment objects attached to an event.
+ * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
 */
 class AttachmentsRequestBuilderGetQueryParameters 
 {

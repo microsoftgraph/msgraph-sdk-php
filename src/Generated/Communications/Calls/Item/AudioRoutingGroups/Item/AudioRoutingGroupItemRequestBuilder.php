@@ -31,11 +31,10 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified audioRoutingGroup.
+     * Delete navigation property audioRoutingGroups for communications
      * @param AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/audioroutinggroup-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object.
+     * Get audioRoutingGroups from communications
      * @param AudioRoutingGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AudioRoutingGroup|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/audioroutinggroup-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AudioRoutingGroupItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Modify sources and receivers of an audioRoutingGroup.
+     * Update the navigation property audioRoutingGroups in communications
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AudioRoutingGroup|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/audioroutinggroup-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AudioRoutingGroup $body, ?AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified audioRoutingGroup.
+     * Delete navigation property audioRoutingGroups for communications
      * @param AudioRoutingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an audioRoutingGroup object.
+     * Get audioRoutingGroups from communications
      * @param AudioRoutingGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class AudioRoutingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Modify sources and receivers of an audioRoutingGroup.
+     * Update the navigation property audioRoutingGroups in communications
      * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

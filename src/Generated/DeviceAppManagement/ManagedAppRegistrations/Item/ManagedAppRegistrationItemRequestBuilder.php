@@ -69,11 +69,10 @@ class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosManagedAppRegistration object.
+     * The managed app registrations.
      * @param ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppRegistration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappregistration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -117,7 +116,7 @@ class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosManagedAppRegistration object.
+     * The managed app registrations.
      * @param ManagedAppRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
