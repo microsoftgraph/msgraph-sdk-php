@@ -39,11 +39,10 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the row from the table.
+     * Delete navigation property rows for drives
      * @param WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tablerow-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of tablerow object.
+     * Represents a collection of all the rows in the table. Read-only.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableRow|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tablerow-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookTableRowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of tablerow object.
+     * Update the navigation property rows in drives
      * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableRow|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tablerow-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookTableRow $body, ?WorkbookTableRowItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the row from the table.
+     * Delete navigation property rows for drives
      * @param WorkbookTableRowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of tablerow object.
+     * Represents a collection of all the rows in the table. Read-only.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of tablerow object.
+     * Update the navigation property rows in drives
      * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

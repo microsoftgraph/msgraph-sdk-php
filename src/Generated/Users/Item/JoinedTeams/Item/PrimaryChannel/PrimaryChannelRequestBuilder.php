@@ -117,11 +117,10 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the default channel, General, of a team.
+     * The general channel for the team.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Channel|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/team-get-primarychannel?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrimaryChannelRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -165,7 +164,7 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the default channel, General, of a team.
+     * The general channel for the team.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -45,11 +45,10 @@ class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceComplianceDeviceOverview object.
+     * Device compliance devices status overview
      * @param DeviceStatusOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceDeviceOverview|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatusOverviewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceComplianceDeviceOverview object.
+     * Update the navigation property deviceStatusOverview in deviceManagement
      * @param DeviceComplianceDeviceOverview $body The request body
      * @param DeviceStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceDeviceOverview|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedeviceoverview-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceComplianceDeviceOverview $body, ?DeviceStatusOverviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceComplianceDeviceOverview object.
+     * Device compliance devices status overview
      * @param DeviceStatusOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceComplianceDeviceOverview object.
+     * Update the navigation property deviceStatusOverview in deviceManagement
      * @param DeviceComplianceDeviceOverview $body The request body
      * @param DeviceStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -30,10 +30,11 @@ class SharedWithMeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function sharedWithMe
+     * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
      * @param SharedWithMeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharedWithMeGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/drive-sharedwithme?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharedWithMeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class SharedWithMeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function sharedWithMe
+     * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
      * @param SharedWithMeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

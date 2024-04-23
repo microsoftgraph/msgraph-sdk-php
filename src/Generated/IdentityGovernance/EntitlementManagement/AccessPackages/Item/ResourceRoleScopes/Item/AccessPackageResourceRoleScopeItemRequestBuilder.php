@@ -47,11 +47,10 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Delete navigation property resourceRoleScopes for identityGovernance
      * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -91,7 +90,7 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Remove a accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
+     * Delete navigation property resourceRoleScopes for identityGovernance
      * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

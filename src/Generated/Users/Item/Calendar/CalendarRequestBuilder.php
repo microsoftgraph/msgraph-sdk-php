@@ -73,26 +73,10 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a calendar other than the default calendar.
-     * @param CalendarRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<void|null>
-     * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendar-delete?view=graph-rest-1.0 Find more info here
-    */
-    public function delete(?CalendarRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-    }
-
-    /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @param CalendarRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Calendar|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendar-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -103,12 +87,11 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Calendar|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Calendar $body, ?CalendarRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -119,25 +102,7 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a calendar other than the default calendar.
-     * @param CalendarRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toDeleteRequestInformation(?CalendarRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Get the properties and relationships of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group. There are two scenarios where an app can get another user's calendar:
+     * The user's primary calendar. Read-only.
      * @param CalendarRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -158,7 +123,7 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a calendar object. The calendar can be one for a user,or the default calendar of a Microsoft 365 group.
+     * Update the navigation property calendar in users
      * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

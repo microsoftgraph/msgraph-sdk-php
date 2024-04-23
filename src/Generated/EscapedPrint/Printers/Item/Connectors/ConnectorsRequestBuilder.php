@@ -51,11 +51,10 @@ class ConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      * @param ConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintConnectorCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/printer-list-connectors?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class ConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of printConnectors associated with the printer.
+     * The connectors that are associated with the printer.
      * @param ConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

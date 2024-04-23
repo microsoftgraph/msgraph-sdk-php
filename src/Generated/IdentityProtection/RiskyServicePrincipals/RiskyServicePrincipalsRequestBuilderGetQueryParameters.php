@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of riskyServicePrincipal objects.
+ * Microsoft Entra service principals that are at risk.
 */
 class RiskyServicePrincipalsRequestBuilderGetQueryParameters 
 {

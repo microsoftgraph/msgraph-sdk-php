@@ -52,7 +52,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a set object.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SetCollectionResponse|null>
      * @throws Exception
@@ -66,12 +66,11 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new set object.
+     * Create new navigation property to sets for groups
      * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Set|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-set-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Set $body, ?SetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -82,7 +81,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a set object.
+     * Collection of all sets available in the term store. This relationship can only be used to load a specific term set.
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +102,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new set object.
+     * Create new navigation property to sets for groups
      * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

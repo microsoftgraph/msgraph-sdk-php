@@ -35,10 +35,11 @@ class GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke function getSkypeForBusinessActivityUserDetail
+     * Get details about Skype for Business activity by user.
      * @param GetSkypeForBusinessActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessactivityuserdetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSkypeForBusinessActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke function getSkypeForBusinessActivityUserDetail
+     * Get details about Skype for Business activity by user.
      * @param GetSkypeForBusinessActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

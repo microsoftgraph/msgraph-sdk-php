@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\External\Connections\Item\Groups\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get an externalGroup object.
+ * Get groups from external
 */
 class ExternalGroupItemRequestBuilderGetQueryParameters 
 {

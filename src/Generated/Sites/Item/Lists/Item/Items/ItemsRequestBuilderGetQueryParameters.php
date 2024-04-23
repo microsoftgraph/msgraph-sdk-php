@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the collection of [items][item] in a [list][].
+ * All items contained in the list.
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

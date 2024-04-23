@@ -31,11 +31,10 @@ class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeoff reason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Delete navigation property timeOffReasons for teams
      * @param TimeOffReasonItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoffreason-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TimeOffReasonItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      * @param TimeOffReasonItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOffReason|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoffreason-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TimeOffReasonItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timeOffReasons in teams
      * @param TimeOffReason $body The request body
      * @param TimeOffReasonItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOffReason|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoffreason-put?view=graph-rest-1.0 Find more info here
     */
     public function patch(TimeOffReason $body, ?TimeOffReasonItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a timeOffReason as inactive by setting the isActive property. Every team must include at least one timeoff reason. This method doesn't remove the specified timeOffReason instance. timeOffItem instances that have been assigned this reason remain assigned to this reason.
+     * Delete navigation property timeOffReasons for teams
      * @param TimeOffReasonItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeOffReason object by ID.
+     * The set of reasons for a time off in the schedule.
      * @param TimeOffReasonItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class TimeOffReasonItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Replace an existing timeOffReason. If the specified timeOffReason doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timeOffReasons in teams
      * @param TimeOffReason $body The request body
      * @param TimeOffReasonItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

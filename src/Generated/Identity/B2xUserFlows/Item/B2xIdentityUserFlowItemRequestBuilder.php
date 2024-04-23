@@ -71,11 +71,10 @@ class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a b2xIdentityUserFlow object.
+     * Delete navigation property b2xUserFlows for identity
      * @param B2xIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/b2xidentityuserflow-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?B2xIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,11 +85,10 @@ class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param B2xIdentityUserFlowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<B2xIdentityUserFlow|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/b2xidentityuserflow-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?B2xIdentityUserFlowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -116,7 +114,7 @@ class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a b2xIdentityUserFlow object.
+     * Delete navigation property b2xUserFlows for identity
      * @param B2xIdentityUserFlowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -134,7 +132,7 @@ class B2xIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      * @param B2xIdentityUserFlowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

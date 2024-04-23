@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of all virtualEventWebinar objects created in the tenant.
+ * Get webinars from solutions
 */
 class WebinarsRequestBuilderGetQueryParameters 
 {

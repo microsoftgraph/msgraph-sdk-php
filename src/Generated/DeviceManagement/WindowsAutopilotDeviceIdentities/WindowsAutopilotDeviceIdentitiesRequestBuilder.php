@@ -52,11 +52,10 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+     * The Windows autopilot device identities contained collection.
      * @param WindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsAutopilotDeviceIdentityCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windowsAutopilotDeviceIdentity object.
+     * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param WindowsAutopilotDeviceIdentity $body The request body
      * @param WindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsAutopilotDeviceIdentity|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-create?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsAutopilotDeviceIdentity $body, ?WindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+     * The Windows autopilot device identities contained collection.
      * @param WindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windowsAutopilotDeviceIdentity object.
+     * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param WindowsAutopilotDeviceIdentity $body The request body
      * @param WindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

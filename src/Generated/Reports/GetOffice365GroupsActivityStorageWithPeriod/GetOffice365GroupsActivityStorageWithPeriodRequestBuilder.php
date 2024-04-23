@@ -34,10 +34,11 @@ class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends BaseRequ
     }
 
     /**
-     * Invoke function getOffice365GroupsActivityStorage
+     * Get the total storage used across all group mailboxes and group sites.
      * @param GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivitystorage?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends BaseRequ
     }
 
     /**
-     * Invoke function getOffice365GroupsActivityStorage
+     * Get the total storage used across all group mailboxes and group sites.
      * @param GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

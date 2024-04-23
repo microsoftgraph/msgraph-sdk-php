@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a participant object.
+ * Get participants from communications
 */
 class ParticipantItemRequestBuilderGetQueryParameters 
 {

@@ -31,11 +31,10 @@ class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a departmentTemplate object.
+     * Delete navigation property departments for security
      * @param DepartmentTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-labelsroot-delete-departments?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DepartmentTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @param DepartmentTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DepartmentTemplate|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-departmenttemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DepartmentTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +74,7 @@ class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a departmentTemplate object.
+     * Delete navigation property departments for security
      * @param DepartmentTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -94,7 +92,7 @@ class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a departmentTemplate object.
+     * Specifies the department or business unit of an organization to which a label belongs.
      * @param DepartmentTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

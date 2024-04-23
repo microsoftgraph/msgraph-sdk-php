@@ -59,11 +59,10 @@ class AllowedUsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @param AllowedUsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0 Find more info here
     */
     public function get(?AllowedUsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +73,7 @@ class AllowedUsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * The users who have access to print using the printer.
      * @param AllowedUsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

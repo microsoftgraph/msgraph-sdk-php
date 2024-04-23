@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\AuditLogs\Provisioning;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get all provisioning events that occurred in your tenant, such as the deletion of a group in a target application or the creation of a user when provisioning user accounts from your HR system. 
+ * Get provisioning from auditLogs
 */
 class ProvisioningRequestBuilderGetQueryParameters 
 {

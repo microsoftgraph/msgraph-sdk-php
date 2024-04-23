@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of activityBasedTimeoutPolicy objects.
+ * The policy that controls the idle time out for web sessions for applications.
 */
 class ActivityBasedTimeoutPoliciesRequestBuilderGetQueryParameters 
 {

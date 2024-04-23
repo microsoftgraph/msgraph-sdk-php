@@ -30,10 +30,11 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function delta
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeltaGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/oauth2permissiongrant-delta?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeltaRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function delta
+     * Get newly created, updated, or deleted oauth2permissiongrant objects without performing a full read of the entire resource collection. For details, see Using delta query.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Schools\Item\Classes\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Delete a class from a school.
+ * Delete ref of navigation property classes for education
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

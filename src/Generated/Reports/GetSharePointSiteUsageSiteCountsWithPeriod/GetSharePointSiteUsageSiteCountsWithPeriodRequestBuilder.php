@@ -34,10 +34,11 @@ class GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder extends BaseReque
     }
 
     /**
-     * Invoke function getSharePointSiteUsageSiteCounts
+     * Get the trend of total and active site count during the reporting period.
      * @param GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagesitecounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder extends BaseReque
     }
 
     /**
-     * Invoke function getSharePointSiteUsageSiteCounts
+     * Get the trend of total and active site count during the reporting period.
      * @param GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

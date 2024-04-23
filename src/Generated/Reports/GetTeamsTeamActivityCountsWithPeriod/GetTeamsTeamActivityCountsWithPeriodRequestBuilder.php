@@ -34,10 +34,11 @@ class GetTeamsTeamActivityCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getTeamsTeamActivityCounts
+     * Get the number of team activities across Microsoft Teams. The activity types are related to meetings and messages.
      * @param GetTeamsTeamActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getteamsteamactivitycounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetTeamsTeamActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetTeamsTeamActivityCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getTeamsTeamActivityCounts
+     * Get the number of team activities across Microsoft Teams. The activity types are related to meetings and messages.
      * @param GetTeamsTeamActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

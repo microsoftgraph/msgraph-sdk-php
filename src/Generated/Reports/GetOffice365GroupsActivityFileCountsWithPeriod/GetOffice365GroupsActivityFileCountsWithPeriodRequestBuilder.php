@@ -34,10 +34,11 @@ class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extends BaseR
     }
 
     /**
-     * Invoke function getOffice365GroupsActivityFileCounts
+     * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
      * @param GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivityfilecounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extends BaseR
     }
 
     /**
-     * Invoke function getOffice365GroupsActivityFileCounts
+     * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
      * @param GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -107,7 +107,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
+     * Gets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in ISO 8601 format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @return DateInterval|null
     */
     public function getRoundTripTime(): ?DateInterval {
@@ -171,7 +171,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
+     * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in ISO 8601 format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
      * @param DateInterval|null $value Value to set for the roundTripTime property.
     */
     public function setRoundTripTime(?DateInterval $value): void {

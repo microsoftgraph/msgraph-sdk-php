@@ -31,11 +31,10 @@ class QnaItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a qna object.
+     * Delete navigation property qnas for search
      * @param QnaItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-qna-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?QnaItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class QnaItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a qna object.
+     * Administrative answer in Microsoft Search results that provide answers for specific search keywords in an organization.
      * @param QnaItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Qna|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-qna-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?QnaItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class QnaItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a qna object.
+     * Update the navigation property qnas in search
      * @param Qna $body The request body
      * @param QnaItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Qna|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-qna-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Qna $body, ?QnaItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class QnaItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a qna object.
+     * Delete navigation property qnas for search
      * @param QnaItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class QnaItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a qna object.
+     * Administrative answer in Microsoft Search results that provide answers for specific search keywords in an organization.
      * @param QnaItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class QnaItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a qna object.
+     * Update the navigation property qnas in search
      * @param Qna $body The request body
      * @param QnaItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

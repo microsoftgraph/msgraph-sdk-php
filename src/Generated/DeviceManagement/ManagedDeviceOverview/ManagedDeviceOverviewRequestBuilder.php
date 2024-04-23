@@ -31,11 +31,10 @@ class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      * @param ManagedDeviceOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceOverview|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddeviceoverview-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedDeviceOverviewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -46,7 +45,7 @@ class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedDeviceOverview object.
+     * Device overview
      * @param ManagedDeviceOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

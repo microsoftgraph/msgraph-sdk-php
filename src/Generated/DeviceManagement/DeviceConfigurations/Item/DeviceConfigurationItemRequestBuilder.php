@@ -88,11 +88,10 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a editionUpgradeConfiguration.
+     * Delete navigation property deviceConfigurations for deviceManagement
      * @param DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-editionupgradeconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -103,11 +102,10 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsDefenderAdvancedThreatProtectionConfiguration object.
+     * The device configurations.
      * @param DeviceConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsdefenderadvancedthreatprotectionconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -127,12 +125,11 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windowsPhone81CustomConfiguration object.
+     * Update the navigation property deviceConfigurations in deviceManagement
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81customconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfiguration $body, ?DeviceConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -143,7 +140,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a editionUpgradeConfiguration.
+     * Delete navigation property deviceConfigurations for deviceManagement
      * @param DeviceConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -161,7 +158,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsDefenderAdvancedThreatProtectionConfiguration object.
+     * The device configurations.
      * @param DeviceConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -182,7 +179,7 @@ class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windowsPhone81CustomConfiguration object.
+     * Update the navigation property deviceConfigurations in deviceManagement
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

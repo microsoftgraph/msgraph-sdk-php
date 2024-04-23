@@ -34,10 +34,11 @@ class GetM365AppUserCountsWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getM365AppUserCounts
+     * Get a report that provides the trend in the number of active users for each app (Outlook, Word, Excel, PowerPoint, OneNote, and Teams) in your organization.
      * @param GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getm365appusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetM365AppUserCountsWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getM365AppUserCounts
+     * Get a report that provides the trend in the number of active users for each app (Outlook, Word, Excel, PowerPoint, OneNote, and Teams) in your organization.
      * @param GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

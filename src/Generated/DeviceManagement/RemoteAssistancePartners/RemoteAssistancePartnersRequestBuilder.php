@@ -52,11 +52,10 @@ class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the remoteAssistancePartner objects.
+     * The remote assist partners.
      * @param RemoteAssistancePartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RemoteAssistancePartnerCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RemoteAssistancePartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new remoteAssistancePartner object.
+     * Create new navigation property to remoteAssistancePartners for deviceManagement
      * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RemoteAssistancePartner|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-create?view=graph-rest-1.0 Find more info here
     */
     public function post(RemoteAssistancePartner $body, ?RemoteAssistancePartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the remoteAssistancePartner objects.
+     * The remote assist partners.
      * @param RemoteAssistancePartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new remoteAssistancePartner object.
+     * Create new navigation property to remoteAssistancePartners for deviceManagement
      * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -61,11 +61,10 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of notebook objects.
+     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      * @param NotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NotebookCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0 Find more info here
     */
     public function get(?NotebooksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +84,11 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new OneNote notebook.
+     * Create new navigation property to notebooks for users
      * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Notebook|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0 Find more info here
     */
     public function post(Notebook $body, ?NotebooksRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -101,7 +99,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of notebook objects.
+     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      * @param NotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +120,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new OneNote notebook.
+     * Create new navigation property to notebooks for users
      * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

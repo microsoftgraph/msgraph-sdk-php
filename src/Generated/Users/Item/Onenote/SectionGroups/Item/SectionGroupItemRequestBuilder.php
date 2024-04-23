@@ -77,11 +77,10 @@ class SectionGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a sectionGroup object.
+     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param SectionGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SectionGroup|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/sectiongroup-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionGroupItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -125,7 +124,7 @@ class SectionGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a sectionGroup object.
+     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param SectionGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

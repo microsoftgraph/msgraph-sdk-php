@@ -31,7 +31,7 @@ class AddCopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type from a site to a list.
      * @param AddCopyPostRequestBody $body The request body
      * @param AddCopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentType|null>
@@ -47,7 +47,7 @@ class AddCopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * Add a copy of a content type from a site to a list.
      * @param AddCopyPostRequestBody $body The request body
      * @param AddCopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

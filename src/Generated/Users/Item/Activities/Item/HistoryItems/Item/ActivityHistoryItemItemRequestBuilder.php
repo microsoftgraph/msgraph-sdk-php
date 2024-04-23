@@ -67,12 +67,11 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Update the navigation property historyItems in users
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityHistoryItem|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/projectrome-put-historyitem?view=graph-rest-1.0 Find more info here
     */
     public function patch(ActivityHistoryItem $body, ?ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -122,7 +121,7 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new or replace an existing history item for an existing user activity.
+     * Update the navigation property historyItems in users
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

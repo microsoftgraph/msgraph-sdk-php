@@ -71,11 +71,10 @@ class EducationModuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing module in a class. Only teachers within a class can delete modules.
+     * Delete navigation property modules for education
      * @param EducationModuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationmodule-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationModuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -86,11 +85,10 @@ class EducationModuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a module. Only teachers, students, and applications with application permissions can perform this operation. Students can only see published modules; teachers and applications with application permissions can see all modules in a class.
+     * All modules in the class. Nullable.
      * @param EducationModuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModule|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationmodule-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationModuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,12 +99,11 @@ class EducationModuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
+     * Update the navigation property modules in education
      * @param EducationModule $body The request body
      * @param EducationModuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModule|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationmodule-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationModule $body, ?EducationModuleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -117,7 +114,7 @@ class EducationModuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an existing module in a class. Only teachers within a class can delete modules.
+     * Delete navigation property modules for education
      * @param EducationModuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -135,7 +132,7 @@ class EducationModuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a module. Only teachers, students, and applications with application permissions can perform this operation. Students can only see published modules; teachers and applications with application permissions can see all modules in a class.
+     * All modules in the class. Nullable.
      * @param EducationModuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -156,7 +153,7 @@ class EducationModuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an educationModule object in a class. Only teachers in the class can perform this operation. You can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
+     * Update the navigation property modules in education
      * @param EducationModule $body The request body
      * @param EducationModuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

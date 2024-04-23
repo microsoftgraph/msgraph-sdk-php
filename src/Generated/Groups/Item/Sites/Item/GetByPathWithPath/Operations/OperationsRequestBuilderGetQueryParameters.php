@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Ope
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of rich long-running operations associated with a site.
+ * The collection of long-running operations on the site.
 */
 class OperationsRequestBuilderGetQueryParameters 
 {

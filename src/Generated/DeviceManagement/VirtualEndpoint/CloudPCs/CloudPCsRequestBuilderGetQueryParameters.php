@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List the cloudPC devices in a tenant.
+ * A collection of cloud-managed virtual desktops.
 */
 class CloudPCsRequestBuilderGetQueryParameters 
 {

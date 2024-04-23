@@ -87,11 +87,10 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Delete navigation property jobs for servicePrincipals
      * @param SynchronizationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SynchronizationJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -102,11 +101,10 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param SynchronizationJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationJob|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SynchronizationJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -132,7 +130,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Delete navigation property jobs for servicePrincipals
      * @param SynchronizationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -150,7 +148,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param SynchronizationJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

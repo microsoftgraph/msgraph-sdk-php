@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+ * A collection of stages in the approval decision.
 */
 class ApprovalStageItemRequestBuilderGetQueryParameters 
 {

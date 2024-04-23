@@ -31,11 +31,10 @@ class ChatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      * @param ChatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Chat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/userscopeteamsappinstallation-get-chat?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChatRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -46,7 +45,7 @@ class ChatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the chat of the specified user and Teams app.
+     * The chat between the user and Teams app.
      * @param ChatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequ
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a collection of userConsentRequest objects and their properties.
+ * A list of pending user consent requests. Supports $filter (eq).
 */
 class UserConsentRequestsRequestBuilderGetQueryParameters 
 {

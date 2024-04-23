@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPa
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the collection of [contentType][contentType] resources in a [site][].
+ * The collection of content types defined for this site.
 */
 class ContentTypesRequestBuilderGetQueryParameters 
 {

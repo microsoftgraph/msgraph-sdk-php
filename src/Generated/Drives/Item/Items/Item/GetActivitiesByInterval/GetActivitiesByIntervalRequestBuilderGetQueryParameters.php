@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByInterv
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getActivitiesByInterval
+ * Get a collection of itemActivityStats resources for the activities that took place on this resource within the specified time interval. Analytics aggregates might not be available for all action types.
 */
 class GetActivitiesByIntervalRequestBuilderGetQueryParameters 
 {

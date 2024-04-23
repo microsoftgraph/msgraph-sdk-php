@@ -30,7 +30,7 @@ class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type present in a content type hub with a list of hub sites.
      * @param AssociateWithHubSitesPostRequestBody $body The request body
      * @param AssociateWithHubSitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -46,7 +46,7 @@ class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
+     * Associate a published content type present in a content type hub with a list of hub sites.
      * @param AssociateWithHubSitesPostRequestBody $body The request body
      * @param AssociateWithHubSitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

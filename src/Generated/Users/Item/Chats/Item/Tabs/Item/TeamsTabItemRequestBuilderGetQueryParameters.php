@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of the specified tab in a chat. 
+ * A collection of all the tabs in the chat. Nullable.
 */
 class TeamsTabItemRequestBuilderGetQueryParameters 
 {

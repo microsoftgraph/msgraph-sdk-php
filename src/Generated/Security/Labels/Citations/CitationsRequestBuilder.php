@@ -52,11 +52,10 @@ class CitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the citationTemplate objects and their properties.
+     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
      * @param CitationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CitationTemplateCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-labelsroot-list-citations?view=graph-rest-1.0 Find more info here
     */
     public function get(?CitationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class CitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new citationTemplate object.
+     * Create new navigation property to citations for security
      * @param CitationTemplate $body The request body
      * @param CitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CitationTemplate|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-labelsroot-post-citations?view=graph-rest-1.0 Find more info here
     */
     public function post(CitationTemplate $body, ?CitationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class CitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the citationTemplate objects and their properties.
+     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
      * @param CitationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class CitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new citationTemplate object.
+     * Create new navigation property to citations for security
      * @param CitationTemplate $body The request body
      * @param CitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

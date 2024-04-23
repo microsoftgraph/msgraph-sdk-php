@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostPairs\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a hostPair object.
+ * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
 */
 class HostPairItemRequestBuilderGetQueryParameters 
 {

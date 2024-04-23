@@ -67,11 +67,10 @@ class FollowedSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the sites that have been followed by the signed in user.
+     * Get followedSites from users
      * @param FollowedSitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/sites-list-followed?view=graph-rest-1.0 Find more info here
     */
     public function get(?FollowedSitesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class FollowedSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the sites that have been followed by the signed in user.
+     * Get followedSites from users
      * @param FollowedSitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

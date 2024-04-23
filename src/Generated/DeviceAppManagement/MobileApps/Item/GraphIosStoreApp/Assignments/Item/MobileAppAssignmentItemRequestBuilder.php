@@ -31,11 +31,10 @@ class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a mobileAppAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param MobileAppAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-mobileappassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MobileAppAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the mobileAppAssignment object.
+     * The list of group assignments for this mobile app.
      * @param MobileAppAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-mobileappassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a mobileAppAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param MobileAppAssignment $body The request body
      * @param MobileAppAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-mobileappassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileAppAssignment $body, ?MobileAppAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a mobileAppAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param MobileAppAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the mobileAppAssignment object.
+     * The list of group assignments for this mobile app.
      * @param MobileAppAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a mobileAppAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param MobileAppAssignment $body The request body
      * @param MobileAppAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

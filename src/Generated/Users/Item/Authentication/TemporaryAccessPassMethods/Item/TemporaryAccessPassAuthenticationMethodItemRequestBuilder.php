@@ -31,11 +31,10 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object.
+     * Delete navigation property temporaryAccessPassMethods for users
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TemporaryAccessPassAuthenticationMethod|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,7 +59,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete a users's temporaryAccessPassAuthenticationMethod object.
+     * Delete navigation property temporaryAccessPassMethods for users
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -79,7 +77,7 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
+     * Represents a Temporary Access Pass registered to a user for authentication through time-limited passcodes.
      * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

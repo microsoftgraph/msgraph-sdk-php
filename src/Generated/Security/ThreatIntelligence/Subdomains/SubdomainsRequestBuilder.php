@@ -52,7 +52,7 @@ class SubdomainsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      * @param SubdomainsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SubdomainCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class SubdomainsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      * @param SubdomainsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

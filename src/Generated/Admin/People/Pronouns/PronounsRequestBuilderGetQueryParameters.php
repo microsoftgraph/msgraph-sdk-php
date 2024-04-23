@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\People\Pronouns;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties of the pronounsSettings resource for an organization.  For more information on settings to manage pronouns support, see Manage pronouns settings for an organization using the Microsoft Graph API.
+ * Represents administrator settings that manage the support of pronouns in an organization.
 */
 class PronounsRequestBuilderGetQueryParameters 
 {

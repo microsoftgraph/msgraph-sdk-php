@@ -52,11 +52,10 @@ class SecureScoresRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      * @param SecureScoresRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecureScoreCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-list-securescores?view=graph-rest-1.0 Find more info here
     */
     public function get(?SecureScoresRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class SecureScoresRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of secureScore objects.
+     * Get secureScores from security
      * @param SecureScoresRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

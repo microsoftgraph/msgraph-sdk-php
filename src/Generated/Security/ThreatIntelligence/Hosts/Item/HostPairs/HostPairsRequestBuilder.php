@@ -51,11 +51,10 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPairCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0 Find more info here
     */
     public function get(?HostPairsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

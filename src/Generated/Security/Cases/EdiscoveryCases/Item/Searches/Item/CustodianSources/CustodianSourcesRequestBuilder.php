@@ -51,11 +51,10 @@ class CustodianSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      * @param CustodianSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DataSourceCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-custodiansources?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustodianSourcesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class CustodianSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of custodial data sources associated with an eDiscovery search.
+     * Custodian sources that are included in the eDiscovery search.
      * @param CustodianSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

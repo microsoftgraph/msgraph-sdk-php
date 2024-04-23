@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEve
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the mobileAppTroubleshootingEvent object.
+ * The collection property of MobileAppTroubleshootingEvent.
 */
 class MobileAppTroubleshootingEventItemRequestBuilderGetQueryParameters 
 {

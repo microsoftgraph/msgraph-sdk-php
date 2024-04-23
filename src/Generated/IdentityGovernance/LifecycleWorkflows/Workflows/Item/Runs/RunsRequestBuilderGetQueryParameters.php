@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the run objects and their properties for a lifecycle workflow.
+ * Workflow runs.
 */
 class RunsRequestBuilderGetQueryParameters 
 {

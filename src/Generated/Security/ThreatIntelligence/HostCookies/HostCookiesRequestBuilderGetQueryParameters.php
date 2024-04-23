@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostCookies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a hostCookie object.
+ * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
 */
 class HostCookiesRequestBuilderGetQueryParameters 
 {

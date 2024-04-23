@@ -45,11 +45,10 @@ class InstallationOptionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      * @param InstallationOptionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<M365AppsInstallationOptions|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/m365appsinstallationoptions-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?InstallationOptionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class InstallationOptionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an m365AppsInstallationOptions object.
+     * Update the navigation property installationOptions in admin
      * @param M365AppsInstallationOptions $body The request body
      * @param InstallationOptionsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<M365AppsInstallationOptions|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/m365appsinstallationoptions-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(M365AppsInstallationOptions $body, ?InstallationOptionsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class InstallationOptionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an m365AppsInstallationOptions object.
+     * A container for tenant-level settings for Microsoft 365 applications.
      * @param InstallationOptionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class InstallationOptionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an m365AppsInstallationOptions object.
+     * Update the navigation property installationOptions in admin
      * @param M365AppsInstallationOptions $body The request body
      * @param InstallationOptionsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

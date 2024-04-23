@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a call object.
+ * Get calls from communications
 */
 class CallsRequestBuilderGetQueryParameters 
 {

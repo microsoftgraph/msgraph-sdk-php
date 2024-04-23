@@ -61,11 +61,10 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
+     * Get settings from users
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserSettings|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,12 +75,11 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
+     * Update the navigation property settings in users
      * @param UserSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserSettings|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(UserSettings $body, ?SettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -110,7 +108,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
+     * Get settings from users
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +129,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of the userSettings object. Users in the same organization can have different settings based on their preference or on the organization policies. To get the user current settings, see current user settings. 
+     * Update the navigation property settings in users
      * @param UserSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

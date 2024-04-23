@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the schedules for active role assignment operations.
+ * Schedules for active role assignment operations.
 */
 class RoleAssignmentSchedulesRequestBuilderGetQueryParameters 
 {

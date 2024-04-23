@@ -52,11 +52,10 @@ class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
+     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
      * @param DeviceLocalCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceLocalCredentialInfoCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/directory-list-devicelocalcredentials?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceLocalCredentialsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
+     * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
      * @param DeviceLocalCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

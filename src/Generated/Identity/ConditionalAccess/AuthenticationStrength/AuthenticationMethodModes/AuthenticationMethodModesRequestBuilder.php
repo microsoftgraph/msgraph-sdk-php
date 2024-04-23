@@ -52,11 +52,10 @@ class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
+     * Names and descriptions of all valid authentication method modes in the system.
      * @param AuthenticationMethodModesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodModeDetailCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-authenticationmethodmodes?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationMethodModesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class AuthenticationMethodModesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all supported authentication methods, or all supported authentication method combinations as a list of authenticationMethodModes objects and their properties.
+     * Names and descriptions of all valid authentication method modes in the system.
      * @param AuthenticationMethodModesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

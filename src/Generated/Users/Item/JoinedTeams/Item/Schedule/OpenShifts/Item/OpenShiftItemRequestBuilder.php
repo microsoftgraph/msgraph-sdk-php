@@ -31,11 +31,10 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an openShift object.
+     * Delete navigation property openShifts for users
      * @param OpenShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshift-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?OpenShiftItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openshift object.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShift|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshift-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an openShift object.
+     * Update the navigation property openShifts in users
      * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShift|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshift-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OpenShift $body, ?OpenShiftItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an openShift object.
+     * Delete navigation property openShifts for users
      * @param OpenShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openshift object.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class OpenShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an openShift object.
+     * Update the navigation property openShifts in users
      * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

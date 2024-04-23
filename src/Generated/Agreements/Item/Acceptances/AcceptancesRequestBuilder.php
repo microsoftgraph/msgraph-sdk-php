@@ -52,11 +52,10 @@ class AcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      * @param AcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementAcceptanceCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0 Find more info here
     */
     public function get(?AcceptancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class AcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details about the acceptance records for a specific agreement.
+     * Read-only. Information about acceptances of this agreement.
      * @param AcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

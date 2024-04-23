@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get newly created, updated, or deleted service principals without having to perform a full read of the entire resource collection.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

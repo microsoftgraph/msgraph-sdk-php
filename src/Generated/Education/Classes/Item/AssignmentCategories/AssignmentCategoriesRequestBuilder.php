@@ -60,11 +60,10 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationCategoryCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationclass-list-categories?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create new navigation property to assignmentCategories for education
      * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationCategory|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationCategory $body, ?AssignmentCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of educationCategory objects. Only teachers can perform this operation.
+     * All categories associated with this class. Nullable.
      * @param AssignmentCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +110,7 @@ class AssignmentCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * Create new navigation property to assignmentCategories for education
      * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

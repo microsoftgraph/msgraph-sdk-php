@@ -45,11 +45,10 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @param FontRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartFont|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartfont-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FontRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartfont object.
+     * Update the navigation property font in drives
      * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartFont|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartfont-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartFont $body, ?FontRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartfont object.
+     * Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
      * @param FontRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class FontRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartfont object.
+     * Update the navigation property font in drives
      * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

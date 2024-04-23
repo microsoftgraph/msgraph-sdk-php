@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
+ * The policy to control Microsoft Entra authentication behavior for federated users.
 */
 class HomeRealmDiscoveryPolicyItemRequestBuilderGetQueryParameters 
 {

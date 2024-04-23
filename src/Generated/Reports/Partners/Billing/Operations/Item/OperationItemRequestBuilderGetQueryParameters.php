@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Operations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an operation object.
+ * Represents an operation to export the billing data of a partner.
 */
 class OperationItemRequestBuilderGetQueryParameters 
 {

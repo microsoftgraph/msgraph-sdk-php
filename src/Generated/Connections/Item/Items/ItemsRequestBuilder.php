@@ -52,7 +52,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalItemCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an externalItem object.
+     * Get items from connections
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

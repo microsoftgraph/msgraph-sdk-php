@@ -35,10 +35,11 @@ class GetYammerActivityUserDetailWithDateRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Invoke function getYammerActivityUserDetail
+     * Get details about Yammer activity by user.
      * @param GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getyammeractivityuserdetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetYammerActivityUserDetailWithDateRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Invoke function getYammerActivityUserDetail
+     * Get details about Yammer activity by user.
      * @param GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

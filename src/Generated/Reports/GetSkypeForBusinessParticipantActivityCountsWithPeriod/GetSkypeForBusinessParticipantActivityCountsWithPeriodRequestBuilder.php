@@ -34,10 +34,11 @@ class GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder exten
     }
 
     /**
-     * Invoke function getSkypeForBusinessParticipantActivityCounts
+     * Get usage trends on the number and type of conference sessions that users from your organization participated in. Types of conference sessions include IM, audio/video, application sharing, web, and dial-in/out - third party.
      * @param GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessparticipantactivitycounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder exten
     }
 
     /**
-     * Invoke function getSkypeForBusinessParticipantActivityCounts
+     * Get usage trends on the number and type of conference sessions that users from your organization participated in. Types of conference sessions include IM, audio/video, application sharing, web, and dial-in/out - third party.
      * @param GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

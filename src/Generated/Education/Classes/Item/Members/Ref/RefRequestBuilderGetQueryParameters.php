@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Members\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieves the educationUser members of an educationClass.
+ * All users in the class. Nullable.
 */
 class RefRequestBuilderGetQueryParameters 
 {

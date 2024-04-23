@@ -52,11 +52,10 @@ class InstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of windowsSettingInstance objects and their properties for the signed-in user.
+     * A collection of setting values for a given windowsSetting.
      * @param InstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsSettingInstanceCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/windowssetting-list-instances?view=graph-rest-1.0 Find more info here
     */
     public function get(?InstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class InstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of windowsSettingInstance objects and their properties for the signed-in user.
+     * A collection of setting values for a given windowsSetting.
      * @param InstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

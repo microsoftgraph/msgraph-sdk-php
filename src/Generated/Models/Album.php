@@ -56,7 +56,7 @@ class Album implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the coverImageItemId property value. Unique identifier of the [driveItem][] that is the cover of the album.
+     * Gets the coverImageItemId property value. Unique identifier of the driveItem that is the cover of the album.
      * @return string|null
     */
     public function getCoverImageItemId(): ?string {
@@ -118,7 +118,7 @@ class Album implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the coverImageItemId property value. Unique identifier of the [driveItem][] that is the cover of the album.
+     * Sets the coverImageItemId property value. Unique identifier of the driveItem that is the cover of the album.
      * @param string|null $value Value to set for the coverImageItemId property.
     */
     public function setCoverImageItemId(?string $value): void {

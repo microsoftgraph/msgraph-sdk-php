@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function filterByCurrentUser
+ * In Microsoft Entra Entitlement Management, retrieve a list of accessPackage objects filtered on the signed-in user.
 */
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {

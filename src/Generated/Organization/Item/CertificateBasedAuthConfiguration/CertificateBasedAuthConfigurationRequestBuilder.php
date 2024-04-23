@@ -52,11 +52,10 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthConfigurationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create new navigation property to certificateBasedAuthConfiguration for organization
      * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/certificatebasedauthconfiguration-post-certificatebasedauthconfiguration?view=graph-rest-1.0 Find more info here
     */
     public function post(CertificateBasedAuthConfiguration $body, ?CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of certificateBasedAuthConfiguration objects.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param CertificateBasedAuthConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new certificateBasedAuthConfiguration object.
+     * Create new navigation property to certificateBasedAuthConfiguration for organization
      * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

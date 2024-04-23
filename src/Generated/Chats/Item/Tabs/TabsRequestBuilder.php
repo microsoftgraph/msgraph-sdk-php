@@ -52,11 +52,10 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of tabs in the specified chat.
+     * A collection of all the tabs in the chat. Nullable.
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTabCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chat-list-tabs?view=graph-rest-1.0 Find more info here
     */
     public function get(?TabsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
+     * Create new navigation property to tabs for chats
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTab|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsTab $body, ?TabsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of tabs in the specified chat.
+     * A collection of all the tabs in the chat. Nullable.
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
+     * Create new navigation property to tabs for chats
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

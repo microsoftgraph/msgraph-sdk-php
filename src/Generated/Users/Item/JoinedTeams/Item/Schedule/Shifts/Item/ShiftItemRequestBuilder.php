@@ -31,11 +31,10 @@ class ShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a shift from the schedule.
+     * Delete navigation property shifts for users
      * @param ShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/shift-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ShiftItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class ShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a shift object by ID.
+     * The shifts in the schedule.
      * @param ShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Shift|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/shift-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ShiftItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class ShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
+     * Update the navigation property shifts in users
      * @param Shift $body The request body
      * @param ShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Shift|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/shift-put?view=graph-rest-1.0 Find more info here
     */
     public function patch(Shift $body, ?ShiftItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class ShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a shift from the schedule.
+     * Delete navigation property shifts for users
      * @param ShiftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class ShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a shift object by ID.
+     * The shifts in the schedule.
      * @param ShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class ShiftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Replace an existing shift. If the specified shift doesn't exist, this method returns 404 Not found. The duration of a shift can't be less than 1 minute or longer than 24 hours.
+     * Update the navigation property shifts in users
      * @param Shift $body The request body
      * @param ShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

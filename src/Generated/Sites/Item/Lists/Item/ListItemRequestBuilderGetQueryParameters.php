@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns the metadata for a [list][].
+ * The collection of lists under this site.
 */
 class ListItemRequestBuilderGetQueryParameters 
 {

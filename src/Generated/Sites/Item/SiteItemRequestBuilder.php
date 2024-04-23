@@ -178,7 +178,7 @@ class SiteItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @param SiteItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Site|null>
      * @throws Exception
@@ -237,7 +237,7 @@ class SiteItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @param SiteItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

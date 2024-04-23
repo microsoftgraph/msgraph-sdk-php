@@ -34,10 +34,11 @@ class GetOneDriveUsageFileCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getOneDriveUsageFileCounts
+     * Get the total number of files across all sites and how many are active files. A file is considered active if it has been saved, synced, modified, or shared within the specified time period.
      * @param GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveusagefilecounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetOneDriveUsageFileCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getOneDriveUsageFileCounts
+     * Get the total number of files across all sites and how many are active files. A file is considered active if it has been saved, synced, modified, or shared within the specified time period.
      * @param GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

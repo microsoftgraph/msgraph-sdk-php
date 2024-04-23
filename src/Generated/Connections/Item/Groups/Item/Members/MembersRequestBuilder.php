@@ -66,12 +66,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for connections
      * @param Identity $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Identity|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0 Find more info here
     */
     public function post(Identity $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -103,7 +102,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an identity resource for a new member in an externalGroup.
+     * Create new navigation property to members for connections
      * @param Identity $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

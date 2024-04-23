@@ -30,10 +30,11 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilder extends BaseReques
     }
 
     /**
-     * Invoke function getAttackSimulationSimulationUserCoverage
+     * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAttackSimulationSimulationUserCoverageGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationsimulationusercoverage?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilder extends BaseReques
     }
 
     /**
-     * Invoke function getAttackSimulationSimulationUserCoverage
+     * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

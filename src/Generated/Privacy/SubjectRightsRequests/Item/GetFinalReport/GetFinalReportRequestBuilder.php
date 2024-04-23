@@ -31,10 +31,11 @@ class GetFinalReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getFinalReport
+     * Get the final report for a subject rights request. The report is a text file that contains information about the files that were included by the privacy administrator.
      * @param GetFinalReportRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-getfinalreport?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetFinalReportRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class GetFinalReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getFinalReport
+     * Get the final report for a subject rights request. The report is a text file that contains information about the files that were included by the privacy administrator.
      * @param GetFinalReportRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

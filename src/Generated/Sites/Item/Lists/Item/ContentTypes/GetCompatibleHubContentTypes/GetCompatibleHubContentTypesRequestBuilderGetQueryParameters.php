@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\GetCompat
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getCompatibleHubContentTypes
+ * Get a list of compatible content types from the content type hub that can be added to a target site or a list. This method is part of the content type publishing changes to optimize the syncing of published content types to sites and lists, effectively switching from a 'push everywhere' to 'pull as needed' approach. The method allows users to pull content types directly from the content type hub to a site or list. For more information, see contentType: addCopyFromContentTypeHub and the blog post Syntex Product Updates – August 2021.
 */
 class GetCompatibleHubContentTypesRequestBuilderGetQueryParameters 
 {

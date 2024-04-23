@@ -52,11 +52,10 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
+     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      * @param ThreadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThreadCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversation-list-threads?view=graph-rest-1.0 Find more info here
     */
     public function get(?ThreadsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
+     * Create new navigation property to threads for groups
      * @param ConversationThread $body The request body
      * @param ThreadsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThread|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversation-post-threads?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationThread $body, ?ThreadsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
+     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      * @param ThreadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new thread in the specified conversation.  A thread and post are created as specified. Use reply thread to further post to that thread. Or, if you get the post ID, you can also reply to that post in that thread. Note: You can also start a new conversation by first creating a thread.
+     * Create new navigation property to threads for groups
      * @param ConversationThread $body The request body
      * @param ThreadsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

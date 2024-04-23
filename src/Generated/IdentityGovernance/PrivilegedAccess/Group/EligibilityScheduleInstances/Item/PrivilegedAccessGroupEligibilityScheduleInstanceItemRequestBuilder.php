@@ -61,11 +61,10 @@ class PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder extends
     }
 
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleInstance object.
+     * The instances of eligibility schedules to activate a just-in-time access.
      * @param PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleInstance|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityscheduleinstance-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -109,7 +108,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder extends
     }
 
     /**
-     * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleInstance object.
+     * The instances of eligibility schedules to activate a just-in-time access.
      * @param PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

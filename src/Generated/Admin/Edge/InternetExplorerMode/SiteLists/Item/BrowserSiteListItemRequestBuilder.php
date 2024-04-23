@@ -55,11 +55,10 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSiteList object.
+     * Delete navigation property siteLists for admin
      * @param BrowserSiteListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/internetexplorermode-delete-sitelists?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BrowserSiteListItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +69,10 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSiteList|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersitelist-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BrowserSiteListItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +83,11 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSiteList object.
+     * Update the navigation property siteLists in admin
      * @param BrowserSiteList $body The request body
      * @param BrowserSiteListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSiteList|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersitelist-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BrowserSiteList $body, ?BrowserSiteListItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -101,7 +98,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSiteList object.
+     * Delete navigation property siteLists for admin
      * @param BrowserSiteListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +116,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a browserSiteList that contains browserSite and browserSharedCookie resources.
+     * A collection of site lists to support Internet Explorer mode.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -140,7 +137,7 @@ class BrowserSiteListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSiteList object.
+     * Update the navigation property siteLists in admin
      * @param BrowserSiteList $body The request body
      * @param BrowserSiteListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

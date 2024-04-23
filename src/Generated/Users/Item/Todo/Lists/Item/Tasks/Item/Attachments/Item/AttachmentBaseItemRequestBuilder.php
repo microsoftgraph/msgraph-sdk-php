@@ -39,11 +39,10 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete navigation property attachments for users
      * @param AttachmentBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AttachmentBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      * @param AttachmentBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttachmentBase|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,7 +67,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a taskFileAttachment object from a todoTask resource.
+     * Delete navigation property attachments for users
      * @param AttachmentBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +85,7 @@ class AttachmentBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a taskFileAttachment object.
+     * A collection of file attachments for the task.
      * @param AttachmentBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

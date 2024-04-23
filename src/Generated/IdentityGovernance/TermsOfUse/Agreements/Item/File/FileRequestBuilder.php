@@ -53,11 +53,10 @@ class FileRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the details of an agreement file, including the language and version information. The default file can have multiple versions, each with its own language, that can be retrieved by specifying the Accept-Language header.
+     * Default PDF linked to this agreement.
      * @param FileRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementFile|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/agreementfile-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FileRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,7 +100,7 @@ class FileRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the details of an agreement file, including the language and version information. The default file can have multiple versions, each with its own language, that can be retrieved by specifying the Accept-Language header.
+     * Default PDF linked to this agreement.
      * @param FileRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

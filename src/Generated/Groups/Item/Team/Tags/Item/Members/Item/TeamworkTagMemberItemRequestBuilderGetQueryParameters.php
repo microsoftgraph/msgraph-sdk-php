@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Tags\Item\Members\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of a member of a standard tag in a team.
+ * Users assigned to the tag.
 */
 class TeamworkTagMemberItemRequestBuilderGetQueryParameters 
 {

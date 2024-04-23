@@ -47,11 +47,10 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an ediscoveryReviewSetQuery object.
+     * Delete navigation property queries for security
      * @param EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,11 +61,10 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      * @param EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewSetQuery|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,12 +75,11 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryReviewSetQuery object.
+     * Update the navigation property queries in security
      * @param EdiscoveryReviewSetQuery $body The request body
      * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewSetQuery|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EdiscoveryReviewSetQuery $body, ?EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -93,7 +90,7 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an ediscoveryReviewSetQuery object.
+     * Delete navigation property queries for security
      * @param EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +108,7 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewSetQuery object.
+     * Represents queries within the review set.
      * @param EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +129,7 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryReviewSetQuery object.
+     * Update the navigation property queries in security
      * @param EdiscoveryReviewSetQuery $body The request body
      * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -35,10 +35,11 @@ class GetYammerDeviceUsageUserDetailWithDateRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getYammerDeviceUsageUserDetail
+     * Get details about Yammer device usage by user.
      * @param GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getyammerdeviceusageuserdetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetYammerDeviceUsageUserDetailWithDateRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getYammerDeviceUsageUserDetail
+     * Get details about Yammer device usage by user.
      * @param GetYammerDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

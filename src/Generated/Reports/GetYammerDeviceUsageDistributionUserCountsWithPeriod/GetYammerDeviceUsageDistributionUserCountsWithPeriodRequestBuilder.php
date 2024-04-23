@@ -34,10 +34,11 @@ class GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder extends
     }
 
     /**
-     * Invoke function getYammerDeviceUsageDistributionUserCounts
+     * Get the number of users by device type.
      * @param GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getyammerdeviceusagedistributionusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder extends
     }
 
     /**
-     * Invoke function getYammerDeviceUsageDistributionUserCounts
+     * Get the number of users by device type.
      * @param GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

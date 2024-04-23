@@ -55,11 +55,10 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an administrativeUnit.
+     * Delete navigation property administrativeUnits for directory
      * @param AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/administrativeunit-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +69,10 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object.
+     * Conceptual container for user and group directory objects.
      * @param AdministrativeUnitItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AdministrativeUnit|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AdministrativeUnitItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +83,11 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an administrativeUnit object.
+     * Update the navigation property administrativeUnits in directory
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AdministrativeUnit|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AdministrativeUnit $body, ?AdministrativeUnitItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -101,7 +98,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an administrativeUnit.
+     * Delete navigation property administrativeUnits for directory
      * @param AdministrativeUnitItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +116,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an administrativeUnit object.
+     * Conceptual container for user and group directory objects.
      * @param AdministrativeUnitItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -140,7 +137,7 @@ class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an administrativeUnit object.
+     * Update the navigation property administrativeUnits in directory
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

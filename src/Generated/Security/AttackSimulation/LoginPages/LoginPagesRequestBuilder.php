@@ -52,11 +52,10 @@ class LoginPagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      * @param LoginPagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LoginPageCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0 Find more info here
     */
     public function get(?LoginPagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class LoginPagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the loginPage objects and their properties.
+     * Represents an attack simulation training login page.
      * @param LoginPagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

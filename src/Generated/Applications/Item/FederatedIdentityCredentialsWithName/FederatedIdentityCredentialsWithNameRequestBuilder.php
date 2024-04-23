@@ -34,11 +34,10 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete navigation property federatedIdentityCredentials for applications
      * @param FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -49,11 +48,10 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -64,12 +62,11 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the navigation property federatedIdentityCredentials in applications
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -80,7 +77,7 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Delete a federatedIdentityCredential object from an application.
+     * Delete navigation property federatedIdentityCredentials for applications
      * @param FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -98,7 +95,7 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
      * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +116,7 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Update the properties of a federatedIdentityCredential object.
+     * Update the navigation property federatedIdentityCredentials in applications
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

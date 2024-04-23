@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Settings\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
+ * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
 */
 class GroupSettingItemRequestBuilderGetQueryParameters 
 {
