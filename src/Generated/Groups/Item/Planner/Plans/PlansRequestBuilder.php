@@ -52,11 +52,10 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object.
+     * Read-only. Nullable. Returns the plannerPlans owned by the group.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerPlanCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannergroup-list-plans?view=graph-rest-1.0 Find more info here
     */
     public function get(?PlansRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannerPlan objects owned by a group object.
+     * Read-only. Nullable. Returns the plannerPlans owned by the group.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

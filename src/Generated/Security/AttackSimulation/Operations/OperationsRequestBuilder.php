@@ -52,7 +52,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
+     * Represents an attack simulation training operation.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttackSimulationOperationCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
+     * Represents an attack simulation training operation.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

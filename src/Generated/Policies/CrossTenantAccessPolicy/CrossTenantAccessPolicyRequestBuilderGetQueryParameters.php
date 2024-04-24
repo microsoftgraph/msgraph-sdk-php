@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a crossTenantAccessPolicy object.
+ * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
 */
 class CrossTenantAccessPolicyRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivities;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
+ * Get learningCourseActivities from employeeExperience
 */
 class LearningCourseActivitiesRequestBuilderGetQueryParameters 
 {

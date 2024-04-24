@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationRepeatOf
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getAttackSimulationRepeatOffenders
+ * List the tenant users who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
 */
 class GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters 
 {

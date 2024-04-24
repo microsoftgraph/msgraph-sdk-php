@@ -34,11 +34,10 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete navigation property learningContents for employeeExperience
      * @param LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -49,11 +48,10 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Learning catalog items for the provider.
      * @param LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningContent|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,7 +77,7 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete navigation property learningContents for employeeExperience
      * @param LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -97,7 +95,7 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Learning catalog items for the provider.
      * @param LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

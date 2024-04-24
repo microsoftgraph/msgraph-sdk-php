@@ -39,11 +39,10 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete conversation.
+     * Delete navigation property conversations for groups
      * @param ConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConversationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of conversation object.
+     * The group's conversations.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Conversation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,7 +67,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete conversation.
+     * Delete navigation property conversations for groups
      * @param ConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -87,7 +85,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of conversation object.
+     * The group's conversations.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

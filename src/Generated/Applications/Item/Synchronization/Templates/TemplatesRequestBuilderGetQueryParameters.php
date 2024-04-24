@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List the synchronization templates associated with a given application or service principal.
+ * Preconfigured synchronization settings for a particular application.
 */
 class TemplatesRequestBuilderGetQueryParameters 
 {

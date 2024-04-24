@@ -27,7 +27,7 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     * Gets the excludes property value. Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
      * @return array<PermissionGrantConditionSet>|null
     */
     public function getExcludes(): ?array {
@@ -53,7 +53,7 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Gets the includes property value. Condition sets that are included in this permission grant policy. Automatically expanded on GET.
      * @return array<PermissionGrantConditionSet>|null
     */
     public function getIncludes(): ?array {
@@ -77,7 +77,7 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     * Sets the excludes property value. Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
      * @param array<PermissionGrantConditionSet>|null $value Value to set for the excludes property.
     */
     public function setExcludes(?array $value): void {
@@ -85,7 +85,7 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
+     * Sets the includes property value. Condition sets that are included in this permission grant policy. Automatically expanded on GET.
      * @param array<PermissionGrantConditionSet>|null $value Value to set for the includes property.
     */
     public function setIncludes(?array $value): void {

@@ -45,11 +45,10 @@ class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @param BucketTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerBucketTaskBoardTaskFormat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BucketTaskBoardFormatRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +64,6 @@ class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerBucketTaskBoardTaskFormat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerBucketTaskBoardTaskFormat $body, ?BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of plannerBucketTaskBoardTaskFormat object.
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @param BucketTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

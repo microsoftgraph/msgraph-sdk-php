@@ -31,11 +31,10 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSharedCookie from a browserSiteList.
+     * Delete navigation property sharedCookies for admin
      * @param BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersitelist-delete-sharedcookies?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
+     * A collection of shared cookies defined for the site list.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSharedCookie|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersharedcookie-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BrowserSharedCookieItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSharedCookie object.
+     * Update the navigation property sharedCookies in admin
      * @param BrowserSharedCookie $body The request body
      * @param BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowserSharedCookie|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/browsersharedcookie-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BrowserSharedCookie $body, ?BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a browserSharedCookie from a browserSiteList.
+     * Delete navigation property sharedCookies for admin
      * @param BrowserSharedCookieItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a session cookie that can be shared between a Microsoft Edge process and an Internet Explorer process, while using Internet Explorer mode.
+     * A collection of shared cookies defined for the site list.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class BrowserSharedCookieItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a browserSharedCookie object.
+     * Update the navigation property sharedCookies in admin
      * @param BrowserSharedCookie $body The request body
      * @param BrowserSharedCookieItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

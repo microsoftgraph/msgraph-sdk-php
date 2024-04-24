@@ -31,11 +31,10 @@ class WhoisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified whoisRecord resource.  Specify the desired whoisRecord in one of the following two ways:- Identify a host and get its current whoisRecord. - Specify an id value to get the corresponding whoisRecord.
+     * The most recent whoisRecord for this host.
      * @param WhoisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WhoisRecord|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-whoisrecord-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WhoisRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -46,7 +45,7 @@ class WhoisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified whoisRecord resource.  Specify the desired whoisRecord in one of the following two ways:- Identify a host and get its current whoisRecord. - Specify an id value to get the corresponding whoisRecord.
+     * The most recent whoisRecord for this host.
      * @param WhoisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

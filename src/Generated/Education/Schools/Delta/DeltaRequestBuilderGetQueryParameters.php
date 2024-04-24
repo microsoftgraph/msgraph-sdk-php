@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Schools\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get newly created or updated schools without having to perform a full read of the entire school collection. See Use delta query for details.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

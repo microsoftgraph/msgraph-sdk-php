@@ -52,11 +52,10 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConnectedOrganizationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConnectedOrganizationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new connectedOrganization object.
+     * Create new navigation property to connectedOrganizations for identityGovernance
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConnectedOrganization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0 Find more info here
     */
     public function post(ConnectedOrganization $body, ?ConnectedOrganizationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of connectedOrganization objects.
+     * References to a directory or domain of another organization whose users can request access.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new connectedOrganization object.
+     * Create new navigation property to connectedOrganizations for identityGovernance
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

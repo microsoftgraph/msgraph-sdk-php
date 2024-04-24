@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+ * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
 */
 class SiteItemRequestBuilderGetQueryParameters 
 {

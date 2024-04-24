@@ -51,11 +51,10 @@ class SubdomainsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of subdomain resources associated with a host.
+     * The subdomains that are associated with this host.
      * @param SubdomainsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SubdomainCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-host-list-subdomains?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubdomainsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class SubdomainsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of subdomain resources associated with a host.
+     * The subdomains that are associated with this host.
      * @param SubdomainsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

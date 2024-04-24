@@ -85,11 +85,10 @@ class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a onenoteSection object.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param OnenoteSectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenoteSection|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/section-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OnenoteSectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -133,7 +132,7 @@ class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a onenoteSection object.
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param OnenoteSectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

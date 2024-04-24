@@ -66,12 +66,11 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create new navigation property to learningCourseActivities for employeeExperience
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningCourseActivity|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/employeeexperienceuser-post-learningcourseactivities?view=graph-rest-1.0 Find more info here
     */
     public function post(LearningCourseActivity $body, ?LearningCourseActivitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -103,7 +102,7 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new learningCourseActivity object. A learning course activity can be one of two types: - Assignment- Self-initiated Use this method to create either type of activity.
+     * Create new navigation property to learningCourseActivities for employeeExperience
      * @param LearningCourseActivity $body The request body
      * @param LearningCourseActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

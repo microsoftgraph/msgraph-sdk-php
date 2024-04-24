@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplate
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the notificationMessageTemplate objects.
+ * The Notification Message Templates.
 */
 class NotificationMessageTemplatesRequestBuilderGetQueryParameters 
 {

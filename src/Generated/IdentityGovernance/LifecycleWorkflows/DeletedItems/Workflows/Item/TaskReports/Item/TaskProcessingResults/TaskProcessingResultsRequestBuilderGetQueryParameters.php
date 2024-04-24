@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the task processing result resources from the taskReport.
+ * The related lifecycle workflow taskProcessingResults.
 */
 class TaskProcessingResultsRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function functions
+ * List all the functions currently supported in the attributeMappingSource.
 */
 class FunctionsRequestBuilderGetQueryParameters 
 {

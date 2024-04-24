@@ -67,12 +67,11 @@ class AssignmentSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the navigation property assignmentSettings in education
      * @param EducationAssignmentSettings $body The request body
      * @param AssignmentSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignmentSettings|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationAssignmentSettings $body, ?AssignmentSettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -122,7 +121,7 @@ class AssignmentSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an educationAssignmentSettings object. Only teachers can update these settings.
+     * Update the navigation property assignmentSettings in education
      * @param EducationAssignmentSettings $body The request body
      * @param AssignmentSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

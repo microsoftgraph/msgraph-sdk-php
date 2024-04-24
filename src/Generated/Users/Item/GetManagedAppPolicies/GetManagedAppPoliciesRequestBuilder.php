@@ -34,6 +34,7 @@ class GetManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
      * @param GetManagedAppPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetManagedAppPoliciesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedapppolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetManagedAppPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

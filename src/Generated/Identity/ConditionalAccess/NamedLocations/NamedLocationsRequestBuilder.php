@@ -52,11 +52,10 @@ class NamedLocationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of namedLocation objects.
+     * Read-only. Nullable. Returns a collection of the specified named locations.
      * @param NamedLocationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NamedLocationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-namedlocations?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamedLocationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class NamedLocationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
+     * Create new navigation property to namedLocations for identity
      * @param NamedLocation $body The request body
      * @param NamedLocationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NamedLocation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0 Find more info here
     */
     public function post(NamedLocation $body, ?NamedLocationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class NamedLocationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of namedLocation objects.
+     * Read-only. Nullable. Returns a collection of the specified named locations.
      * @param NamedLocationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class NamedLocationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
+     * Create new navigation property to namedLocations for identity
      * @param NamedLocation $body The request body
      * @param NamedLocationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

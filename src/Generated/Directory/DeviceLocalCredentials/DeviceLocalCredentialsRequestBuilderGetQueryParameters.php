@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\DeviceLocalCredentials;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the deviceLocalCredentialInfo objects and their properties, excluding the credentials property. 
+ * The credentials of the device's local administrator account backed up to Microsoft Entra ID.
 */
 class DeviceLocalCredentialsRequestBuilderGetQueryParameters 
 {

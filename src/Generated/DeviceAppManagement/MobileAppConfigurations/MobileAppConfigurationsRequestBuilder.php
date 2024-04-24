@@ -52,11 +52,10 @@ class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
+     * The Managed Device Mobile Application Configurations.
      * @param MobileAppConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosMobileAppConfiguration object.
+     * Create new navigation property to mobileAppConfigurations for deviceAppManagement
      * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param MobileAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-iosmobileappconfiguration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedDeviceMobileAppConfiguration $body, ?MobileAppConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfiguration objects.
+     * The Managed Device Mobile Application Configurations.
      * @param MobileAppConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosMobileAppConfiguration object.
+     * Create new navigation property to mobileAppConfigurations for deviceAppManagement
      * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param MobileAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

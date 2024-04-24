@@ -34,10 +34,11 @@ class GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuild
     }
 
     /**
-     * Invoke function getSkypeForBusinessDeviceUsageDistributionUserCounts
+     * Get the number of users using unique devices in your organization. The report will show you the number of users per device including Windows, Windows phone, Android phone, iPhone, and iPad.
      * @param GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessdeviceusagedistributionusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuild
     }
 
     /**
-     * Invoke function getSkypeForBusinessDeviceUsageDistributionUserCounts
+     * Get the number of users using unique devices in your organization. The report will show you the number of users per device including Windows, Windows phone, Android phone, iPhone, and iPad.
      * @param GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

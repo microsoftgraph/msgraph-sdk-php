@@ -50,10 +50,11 @@ class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function itemAt
+     * Retrieves a series based on its position in the collection
      * @param ItemAtWithIndexRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeries|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/chartseriescollection-itemat?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemAtWithIndexRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -64,7 +65,7 @@ class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function itemAt
+     * Retrieves a series based on its position in the collection
      * @param ItemAtWithIndexRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

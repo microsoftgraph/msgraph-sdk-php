@@ -52,7 +52,7 @@ class PresencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a user's presence information.
+     * Get presences from communications
      * @param PresencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PresenceCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class PresencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a user's presence information.
+     * Get presences from communications
      * @param PresencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

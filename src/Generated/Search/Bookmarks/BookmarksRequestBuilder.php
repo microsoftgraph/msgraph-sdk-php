@@ -52,11 +52,10 @@ class BookmarksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookmark objects and their properties.
+     * Administrative answer in Microsoft Search results for common search queries in an organization.
      * @param BookmarksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookmarkCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-searchentity-list-bookmarks?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookmarksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class BookmarksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookmark object.
+     * Create new navigation property to bookmarks for search
      * @param Bookmark $body The request body
      * @param BookmarksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Bookmark|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-searchentity-post-bookmarks?view=graph-rest-1.0 Find more info here
     */
     public function post(Bookmark $body, ?BookmarksRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class BookmarksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of bookmark objects and their properties.
+     * Administrative answer in Microsoft Search results for common search queries in an organization.
      * @param BookmarksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class BookmarksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new bookmark object.
+     * Create new navigation property to bookmarks for search
      * @param Bookmark $body The request body
      * @param BookmarksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

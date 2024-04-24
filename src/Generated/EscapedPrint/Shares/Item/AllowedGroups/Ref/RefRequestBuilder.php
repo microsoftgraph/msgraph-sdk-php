@@ -32,11 +32,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Revoke the specified group's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedGroups for print
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/printershare-delete-allowedgroup?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -47,11 +46,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * The groups whose users have access to print using the printer.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -62,12 +60,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant the specified group access to submit print jobs to the associated printerShare.
+     * Create new navigation property ref to allowedGroups for print
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/printershare-post-allowedgroups?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -78,7 +75,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Revoke the specified group's access to submit print jobs to the associated printerShare.
+     * Delete ref of navigation property allowedGroups for print
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -99,7 +96,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+     * The groups whose users have access to print using the printer.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +117,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Grant the specified group access to submit print jobs to the associated printerShare.
+     * Create new navigation property ref to allowedGroups for print
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

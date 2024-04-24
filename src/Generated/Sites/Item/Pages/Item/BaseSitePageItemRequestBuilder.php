@@ -55,11 +55,10 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a [baseSitePage][] from the site pages [list][] in a [site][].
+     * Delete navigation property pages for sites
      * @param BaseSitePageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/basesitepage-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BaseSitePageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +69,10 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
+     * The collection of pages in the baseSitePages list in this site.
      * @param BaseSitePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BaseSitePage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BaseSitePageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +98,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a [baseSitePage][] from the site pages [list][] in a [site][].
+     * Delete navigation property pages for sites
      * @param BaseSitePageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -118,7 +116,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
+     * The collection of pages in the baseSitePages list in this site.
      * @param BaseSitePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

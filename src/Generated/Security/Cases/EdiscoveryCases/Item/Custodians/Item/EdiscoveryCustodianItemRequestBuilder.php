@@ -117,11 +117,10 @@ class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryCustodian|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -165,7 +164,7 @@ class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryCustodian object.
+     * Returns a list of case ediscoveryCustodian objects for this case.
      * @param EdiscoveryCustodianItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

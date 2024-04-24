@@ -45,11 +45,10 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApprovalStage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApprovalStageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approve or deny an approvalStage object in an approval.
+     * Update the navigation property stages in identityGovernance
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApprovalStage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ApprovalStage $body, ?ApprovalStageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.
+     * A collection of stages in the approval decision.
      * @param ApprovalStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class ApprovalStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approve or deny an approvalStage object in an approval.
+     * Update the navigation property stages in identityGovernance
      * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

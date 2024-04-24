@@ -52,11 +52,10 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param OpenShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShiftCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshift-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for teams
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShift|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0 Find more info here
     */
     public function post(OpenShift $body, ?OpenShiftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List openShift objects in a team.
+     * The set of open shifts in a scheduling group in the schedule.
      * @param OpenShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class OpenShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of an openShift object.
+     * Create new navigation property to openShifts for teams
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

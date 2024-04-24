@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPar
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the telecomExpenseManagementPartner object.
+ * The telecom expense management partners.
 */
 class TelecomExpenseManagementPartnerItemRequestBuilderGetQueryParameters 
 {

@@ -52,11 +52,10 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the threads of a group.
+     * The group's conversation threads. Nullable.
      * @param ThreadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThreadCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-list-threads?view=graph-rest-1.0 Find more info here
     */
     public function get(?ThreadsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
+     * Create new navigation property to threads for groups
      * @param ConversationThread $body The request body
      * @param ThreadsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThread|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-post-threads?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationThread $body, ?ThreadsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the threads of a group.
+     * The group's conversation threads. Nullable.
      * @param ThreadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ThreadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Start a new group conversation by first creating a thread. A new conversation, conversation thread, and post are created in the group.Use reply thread or reply post to further post to that thread. Note: You can also start a new thread in an existing conversation.
+     * Create new navigation property to threads for groups
      * @param ConversationThread $body The request body
      * @param ThreadsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

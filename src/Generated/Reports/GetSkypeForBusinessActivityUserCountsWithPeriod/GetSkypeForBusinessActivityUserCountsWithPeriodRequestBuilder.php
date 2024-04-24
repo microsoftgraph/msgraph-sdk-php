@@ -34,10 +34,11 @@ class GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder extends Base
     }
 
     /**
-     * Invoke function getSkypeForBusinessActivityUserCounts
+     * Get the trends on how many unique users organized and participated in conference sessions held in your organization through Skype for Business. The report also includes the number of peer-to-peer sessions.
      * @param GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessactivityusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder extends Base
     }
 
     /**
-     * Invoke function getSkypeForBusinessActivityUserCounts
+     * Get the trends on how many unique users organized and participated in conference sessions held in your organization through Skype for Business. The report also includes the number of peer-to-peer sessions.
      * @param GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

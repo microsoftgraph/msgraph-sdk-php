@@ -52,7 +52,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a connectionOperation object.
+     * Get operations from external
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConnectionOperationCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a connectionOperation object.
+     * Get operations from external
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

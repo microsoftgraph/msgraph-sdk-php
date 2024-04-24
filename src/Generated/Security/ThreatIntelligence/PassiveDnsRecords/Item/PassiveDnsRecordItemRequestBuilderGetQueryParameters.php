@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\PassiveDnsRecord
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a passiveDnsRecord object.
+ * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
 */
 class PassiveDnsRecordItemRequestBuilderGetQueryParameters 
 {

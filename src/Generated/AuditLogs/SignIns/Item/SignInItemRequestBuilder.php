@@ -45,11 +45,10 @@ class SignInItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a specific Microsoft Entra user sign-in event for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.
+     * Get signIns from auditLogs
      * @param SignInItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SignIn|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/signin-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SignInItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +92,7 @@ class SignInItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a specific Microsoft Entra user sign-in event for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.
+     * Get signIns from auditLogs
      * @param SignInItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

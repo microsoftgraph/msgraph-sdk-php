@@ -53,11 +53,10 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object.
+     * Schema of a custom security attributes (key-value pairs).
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomSecurityAttributeDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the properties of a customSecurityAttributeDefinition object.
+     * Update the navigation property customSecurityAttributeDefinitions in directory
      * @param CustomSecurityAttributeDefinition $body The request body
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomSecurityAttributeDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CustomSecurityAttributeDefinition $body, ?CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -102,7 +100,7 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Read the properties and relationships of a customSecurityAttributeDefinition object.
+     * Schema of a custom security attributes (key-value pairs).
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +121,7 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the properties of a customSecurityAttributeDefinition object.
+     * Update the navigation property customSecurityAttributeDefinitions in directory
      * @param CustomSecurityAttributeDefinition $body The request body
      * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

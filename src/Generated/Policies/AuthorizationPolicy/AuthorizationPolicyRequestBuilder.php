@@ -45,11 +45,10 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an authorizationPolicy object.
+     * The policy that controls Microsoft Entra authorization settings.
      * @param AuthorizationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthorizationPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthorizationPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authorizationPolicy object.
+     * Update the navigation property authorizationPolicy in policies
      * @param AuthorizationPolicy $body The request body
      * @param AuthorizationPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthorizationPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthorizationPolicy $body, ?AuthorizationPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an authorizationPolicy object.
+     * The policy that controls Microsoft Entra authorization settings.
      * @param AuthorizationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an authorizationPolicy object.
+     * Update the navigation property authorizationPolicy in policies
      * @param AuthorizationPolicy $body The request body
      * @param AuthorizationPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

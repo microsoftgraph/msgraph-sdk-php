@@ -93,7 +93,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table in the Supported property data types section for more details.
+     * Gets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer, or String. For more information, see Supported property data types.
      * @return string|null
     */
     public function getType(): ?string {
@@ -148,7 +148,7 @@ class ExtensionSchemaProperty implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String. See the table in the Supported property data types section for more details.
+     * Sets the type property value. The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer, or String. For more information, see Supported property data types.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

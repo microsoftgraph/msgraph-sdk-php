@@ -31,11 +31,10 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an instance of a workforceIntegration.
+     * Delete navigation property workforceIntegrations for teamwork
      * @param WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workforceintegration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object.
+     * Get workforceIntegrations from teamwork
      * @param WorkforceIntegrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkforceIntegration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workforceintegration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkforceIntegrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a workforceIntegration object.
+     * Update the navigation property workforceIntegrations in teamwork
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkforceIntegration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workforceintegration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkforceIntegration $body, ?WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an instance of a workforceIntegration.
+     * Delete navigation property workforceIntegrations for teamwork
      * @param WorkforceIntegrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a workforceIntegration object.
+     * Get workforceIntegrations from teamwork
      * @param WorkforceIntegrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class WorkforceIntegrationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a workforceIntegration object.
+     * Update the navigation property workforceIntegrations in teamwork
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

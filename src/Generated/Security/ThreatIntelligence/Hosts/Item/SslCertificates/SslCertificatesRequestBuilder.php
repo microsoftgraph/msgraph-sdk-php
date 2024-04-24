@@ -51,11 +51,10 @@ class SslCertificatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
+     * The hostSslCertificates that are associated with this host.
      * @param SslCertificatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostSslCertificateCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-host-list-sslcertificates?view=graph-rest-1.0 Find more info here
     */
     public function get(?SslCertificatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class SslCertificatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
+     * The hostSslCertificates that are associated with this host.
      * @param SslCertificatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

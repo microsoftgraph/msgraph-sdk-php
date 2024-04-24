@@ -47,11 +47,10 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a connectedOrganization object.
+     * Delete navigation property connectedOrganizations for identityGovernance
      * @param ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,11 +61,10 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object.
+     * References to a directory or domain of another organization whose users can request access.
      * @param ConnectedOrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConnectedOrganization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConnectedOrganizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,12 +75,11 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a connectedOrganization object to change one or more of its properties.
+     * Update the navigation property connectedOrganizations in identityGovernance
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConnectedOrganization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ConnectedOrganization $body, ?ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -93,7 +90,7 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a connectedOrganization object.
+     * Delete navigation property connectedOrganizations for identityGovernance
      * @param ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +108,7 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a connectedOrganization object.
+     * References to a directory or domain of another organization whose users can request access.
      * @param ConnectedOrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +129,7 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a connectedOrganization object to change one or more of its properties.
+     * Update the navigation property connectedOrganizations in identityGovernance
      * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

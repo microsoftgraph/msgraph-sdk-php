@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Labels\FilePlanReferences\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a filePlanReferenceTemplate object.
+ * Specifies a unique alpha-numeric identifier for an organization’s retention schedule.
 */
 class FilePlanReferenceTemplateItemRequestBuilderGetQueryParameters 
 {

@@ -45,11 +45,10 @@ class CaseOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a caseOperation object.
+     * Returns a list of case caseOperation objects for this case.
      * @param CaseOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CaseOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-caseoperation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CaseOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +92,7 @@ class CaseOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a caseOperation object.
+     * Returns a list of case caseOperation objects for this case.
      * @param CaseOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

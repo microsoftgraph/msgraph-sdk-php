@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get newly created or updated classes, including membership changes, without having to perform a full read of the entire class collection. See Use delta query for details.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

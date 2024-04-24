@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceManagementPartner objects.
+ * The list of Device Management Partners configured by the tenant.
 */
 class DeviceManagementPartnersRequestBuilderGetQueryParameters 
 {

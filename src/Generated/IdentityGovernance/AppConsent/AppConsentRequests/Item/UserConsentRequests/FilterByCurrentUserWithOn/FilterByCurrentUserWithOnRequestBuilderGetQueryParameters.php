@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequ
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function filterByCurrentUser
+ * Retrieve a collection of userConsentRequest objects for accessing a specified app, for which the current user is the reviewer.
 */
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {

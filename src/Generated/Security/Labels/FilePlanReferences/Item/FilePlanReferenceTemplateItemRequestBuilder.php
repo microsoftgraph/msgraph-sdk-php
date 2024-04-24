@@ -31,11 +31,10 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a filePlanReferenceTemplate object.
+     * Delete navigation property filePlanReferences for security
      * @param FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-labelsroot-delete-fileplanreferences?view=graph-rest-1.0 Find more info here
     */
     public function delete(?FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object.
+     * Specifies a unique alpha-numeric identifier for an organization’s retention schedule.
      * @param FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilePlanReferenceTemplate|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +74,7 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a filePlanReferenceTemplate object.
+     * Delete navigation property filePlanReferences for security
      * @param FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -94,7 +92,7 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a filePlanReferenceTemplate object.
+     * Specifies a unique alpha-numeric identifier for an organization’s retention schedule.
      * @param FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,11 +53,10 @@ class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartpoint object.
+     * Represents a collection of all points in the series. Read-only.
      * @param WorkbookChartPointItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPoint|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartpoint-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookChartPointItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,7 +100,7 @@ class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartpoint object.
+     * Represents a collection of all points in the series. Read-only.
      * @param WorkbookChartPointItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

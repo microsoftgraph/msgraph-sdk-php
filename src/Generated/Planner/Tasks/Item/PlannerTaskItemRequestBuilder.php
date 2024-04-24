@@ -63,11 +63,10 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a plannerTask object.
+     * Delete navigation property tasks for planner
      * @param PlannerTaskItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannertask-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PlannerTaskItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -78,11 +77,10 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param PlannerTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTask|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannertask-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PlannerTaskItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,7 +96,6 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
      * @param PlannerTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTask|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/plannertask-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerTask $body, ?PlannerTaskItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -109,7 +106,7 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a plannerTask object.
+     * Delete navigation property tasks for planner
      * @param PlannerTaskItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -127,7 +124,7 @@ class PlannerTaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of plannerTask object.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param PlannerTaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

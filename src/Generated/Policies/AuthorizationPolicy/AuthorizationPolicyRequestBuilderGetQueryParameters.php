@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthorizationPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of an authorizationPolicy object.
+ * The policy that controls Microsoft Entra authorization settings.
 */
 class AuthorizationPolicyRequestBuilderGetQueryParameters 
 {

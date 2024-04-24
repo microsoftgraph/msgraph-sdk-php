@@ -52,11 +52,10 @@ class HealthOverviewsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant.
+     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param HealthOverviewsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceHealthCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/serviceannouncement-list-healthoverviews?view=graph-rest-1.0 Find more info here
     */
     public function get(?HealthOverviewsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class HealthOverviewsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the serviceHealth resources from the healthOverviews navigation property. This operation provides the health report of all subscribed services for a tenant.
+     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
      * @param HealthOverviewsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

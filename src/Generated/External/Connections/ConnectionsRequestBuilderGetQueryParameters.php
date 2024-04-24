@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\External\Connections;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the externalConnection objects and their properties.
+ * Get connections from external
 */
 class ConnectionsRequestBuilderGetQueryParameters 
 {

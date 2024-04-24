@@ -62,11 +62,10 @@ class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
+     * The instances of assignment schedules to activate a just-in-time access.
      * @param AssignmentScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentscheduleinstances?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +91,7 @@ class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
+     * The instances of assignment schedules to activate a just-in-time access.
      * @param AssignmentScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

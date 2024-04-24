@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\Chat;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the chat of the specified user and Teams app.
+ * The chat between the user and Teams app.
 */
 class ChatRequestBuilderGetQueryParameters 
 {

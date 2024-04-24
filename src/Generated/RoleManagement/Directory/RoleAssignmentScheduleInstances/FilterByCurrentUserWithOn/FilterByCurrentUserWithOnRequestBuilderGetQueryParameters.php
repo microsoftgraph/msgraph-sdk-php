@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function filterByCurrentUser
+ * Get the instances of active role assignments for the calling principal.
 */
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {

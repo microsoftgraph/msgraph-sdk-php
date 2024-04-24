@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of additional sources associated with an eDiscovery search.
+ * Adds an additional source to the eDiscovery search.
 */
 class AdditionalSourcesRequestBuilderGetQueryParameters 
 {

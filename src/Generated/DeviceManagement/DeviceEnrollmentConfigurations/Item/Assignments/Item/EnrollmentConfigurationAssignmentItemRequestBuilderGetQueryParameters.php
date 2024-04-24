@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the enrollmentConfigurationAssignment object.
+ * The list of group assignments for the device configuration profile
 */
 class EnrollmentConfigurationAssignmentItemRequestBuilderGetQueryParameters 
 {

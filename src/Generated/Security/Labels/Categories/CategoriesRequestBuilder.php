@@ -52,11 +52,10 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the categoryTemplate objects and their properties.
+     * Specifies a group of similar types of content in a particular department.
      * @param CategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CategoryTemplateCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-labelsroot-list-categories?view=graph-rest-1.0 Find more info here
     */
     public function get(?CategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new categoryTemplate object.
+     * Create new navigation property to categories for security
      * @param CategoryTemplate $body The request body
      * @param CategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CategoryTemplate|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-labelsroot-post-categories?view=graph-rest-1.0 Find more info here
     */
     public function post(CategoryTemplate $body, ?CategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the categoryTemplate objects and their properties.
+     * Specifies a group of similar types of content in a particular department.
      * @param CategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new categoryTemplate object.
+     * Create new navigation property to categories for security
      * @param CategoryTemplate $body The request body
      * @param CategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

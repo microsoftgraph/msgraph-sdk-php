@@ -52,11 +52,10 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     }
 
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
+     * The windows information protection app learning summaries.
      * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLearningSummaryCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     }
 
     /**
-     * Create a new windowsInformationProtectionAppLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param WindowsInformationProtectionAppLearningSummary $body The request body
      * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLearningSummary|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-wip-windowsinformationprotectionapplearningsummary-create?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     }
 
     /**
-     * List properties and relationships of the windowsInformationProtectionAppLearningSummary objects.
+     * The windows information protection app learning summaries.
      * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     }
 
     /**
-     * Create a new windowsInformationProtectionAppLearningSummary object.
+     * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param WindowsInformationProtectionAppLearningSummary $body The request body
      * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

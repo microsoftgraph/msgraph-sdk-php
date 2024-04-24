@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
+ * A container for Microsoft Teams features available for the user. Read-only. Nullable.
 */
 class TeamworkRequestBuilderGetQueryParameters 
 {

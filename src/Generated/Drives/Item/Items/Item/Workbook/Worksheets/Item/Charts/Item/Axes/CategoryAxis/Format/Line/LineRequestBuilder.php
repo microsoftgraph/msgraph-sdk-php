@@ -53,11 +53,10 @@ class LineRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
+     * Represents chart line formatting. Read-only.
      * @param LineRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLineFormat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartlineformat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LineRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class LineRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartlineformat object.
+     * Update the navigation property line in drives
      * @param WorkbookChartLineFormat $body The request body
      * @param LineRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLineFormat|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartlineformat-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartLineFormat $body, ?LineRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -102,7 +100,7 @@ class LineRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartlineformat object.
+     * Represents chart line formatting. Read-only.
      * @param LineRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +121,7 @@ class LineRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartlineformat object.
+     * Update the navigation property line in drives
      * @param WorkbookChartLineFormat $body The request body
      * @param LineRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

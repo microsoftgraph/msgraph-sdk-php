@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Labels\Citations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a citationTemplate object.
+ * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
 */
 class CitationTemplateItemRequestBuilderGetQueryParameters 
 {

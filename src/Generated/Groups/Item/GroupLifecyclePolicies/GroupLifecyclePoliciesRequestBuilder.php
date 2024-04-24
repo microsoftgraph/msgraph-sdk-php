@@ -52,11 +52,10 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @param GroupLifecyclePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupLifecyclePolicyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-list-grouplifecyclepolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupLifecyclePoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieves a list of groupLifecyclePolicy objects to which a group belongs.
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      * @param GroupLifecyclePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

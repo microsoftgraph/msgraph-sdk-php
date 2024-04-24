@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Microsoft365Apps\InstallationOptions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an m365AppsInstallationOptions object.
+ * A container for tenant-level settings for Microsoft 365 applications.
 */
 class InstallationOptionsRequestBuilderGetQueryParameters 
 {

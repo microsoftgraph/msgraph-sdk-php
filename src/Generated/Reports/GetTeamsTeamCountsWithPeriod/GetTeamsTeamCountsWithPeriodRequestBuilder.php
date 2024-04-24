@@ -34,10 +34,11 @@ class GetTeamsTeamCountsWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getTeamsTeamCounts
+     * Get the number of teams of a particular type in an instance of Microsoft Teams.
      * @param GetTeamsTeamCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getteamsteamcounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetTeamsTeamCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetTeamsTeamCountsWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getTeamsTeamCounts
+     * Get the number of teams of a particular type in an instance of Microsoft Teams.
      * @param GetTeamsTeamCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

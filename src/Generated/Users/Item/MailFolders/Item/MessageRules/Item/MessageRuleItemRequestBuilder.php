@@ -31,11 +31,10 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified messageRule object.
+     * Delete navigation property messageRules for users
      * @param MessageRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/messagerule-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MessageRuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a messageRule object.
+     * The collection of rules that apply to the user's Inbox folder.
      * @param MessageRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MessageRule|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/messagerule-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessageRuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Change writable properties on a messageRule object and save the changes.
+     * Update the navigation property messageRules in users
      * @param MessageRule $body The request body
      * @param MessageRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MessageRule|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/messagerule-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MessageRule $body, ?MessageRuleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete the specified messageRule object.
+     * Delete navigation property messageRules for users
      * @param MessageRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of a messageRule object.
+     * The collection of rules that apply to the user's Inbox folder.
      * @param MessageRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class MessageRuleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Change writable properties on a messageRule object and save the changes.
+     * Update the navigation property messageRules in users
      * @param MessageRule $body The request body
      * @param MessageRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

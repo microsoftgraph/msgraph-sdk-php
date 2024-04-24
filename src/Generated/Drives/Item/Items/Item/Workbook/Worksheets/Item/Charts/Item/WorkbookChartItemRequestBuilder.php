@@ -114,11 +114,10 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the chart object.
+     * Delete navigation property charts for drives
      * @param WorkbookChartItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookChartItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -129,11 +128,10 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chart object.
+     * Returns collection of charts that are part of the worksheet. Read-only.
      * @param WorkbookChartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChart|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookChartItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -174,12 +172,11 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chart object.
+     * Update the navigation property charts in drives
      * @param WorkbookChart $body The request body
      * @param WorkbookChartItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChart|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChart $body, ?WorkbookChartItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -190,7 +187,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the chart object.
+     * Delete navigation property charts for drives
      * @param WorkbookChartItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -208,7 +205,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chart object.
+     * Returns collection of charts that are part of the worksheet. Read-only.
      * @param WorkbookChartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -229,7 +226,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chart object.
+     * Update the navigation property charts in drives
      * @param WorkbookChart $body The request body
      * @param WorkbookChartItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

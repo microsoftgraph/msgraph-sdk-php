@@ -52,11 +52,10 @@ class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementExchangeConnector objects.
+     * The list of Exchange Connectors configured by the tenant.
      * @param ExchangeConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExchangeConnectorCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExchangeConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementExchangeConnector object.
+     * Create new navigation property to exchangeConnectors for deviceManagement
      * @param DeviceManagementExchangeConnector $body The request body
      * @param ExchangeConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExchangeConnector|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceManagementExchangeConnector $body, ?ExchangeConnectorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementExchangeConnector objects.
+     * The list of Exchange Connectors configured by the tenant.
      * @param ExchangeConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementExchangeConnector object.
+     * Create new navigation property to exchangeConnectors for deviceManagement
      * @param DeviceManagementExchangeConnector $body The request body
      * @param ExchangeConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -47,11 +47,10 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user processing result of a user processing result of a run.
+     * The associated individual user execution.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserProcessingResult|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identitygovernance-userprocessingresult-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserProcessingResultItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -62,7 +61,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user processing result of a user processing result of a run.
+     * The associated individual user execution.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

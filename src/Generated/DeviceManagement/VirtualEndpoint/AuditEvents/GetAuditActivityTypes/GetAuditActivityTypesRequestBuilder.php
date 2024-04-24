@@ -30,10 +30,11 @@ class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAuditActivityTypes
+     * Get audit activity types by tenant ID.
      * @param GetAuditActivityTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAuditActivityTypesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/cloudpcauditevent-getauditactivitytypes?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAuditActivityTypesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAuditActivityTypes
+     * Get audit activity types by tenant ID.
      * @param GetAuditActivityTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

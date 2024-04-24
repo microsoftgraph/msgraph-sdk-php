@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Tags;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the tag objects and their properties.
+ * The tags associated with the team.
 */
 class TagsRequestBuilderGetQueryParameters 
 {

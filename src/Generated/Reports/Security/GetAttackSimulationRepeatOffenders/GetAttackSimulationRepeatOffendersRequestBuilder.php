@@ -30,10 +30,11 @@ class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the tenant users who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAttackSimulationRepeatOffendersGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationrepeatoffenders?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Invoke function getAttackSimulationRepeatOffenders
+     * List the tenant users who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

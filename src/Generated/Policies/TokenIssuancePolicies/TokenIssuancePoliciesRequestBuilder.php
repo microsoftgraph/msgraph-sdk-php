@@ -52,11 +52,10 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of tokenIssuancePolicy objects.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenIssuancePolicyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TokenIssuancePoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new tokenIssuancePolicy object.
+     * Create new navigation property to tokenIssuancePolicies for policies
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenIssuancePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0 Find more info here
     */
     public function post(TokenIssuancePolicy $body, ?TokenIssuancePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of tokenIssuancePolicy objects.
+     * The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new tokenIssuancePolicy object.
+     * Create new navigation property to tokenIssuancePolicies for policies
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

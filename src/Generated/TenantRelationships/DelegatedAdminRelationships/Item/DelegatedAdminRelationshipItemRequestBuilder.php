@@ -55,11 +55,10 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
+     * Delete navigation property delegatedAdminRelationships for tenantRelationships
      * @param DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +69,10 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationship object.
+     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @param DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationship|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +83,11 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status.
+     * Update the navigation property delegatedAdminRelationships in tenantRelationships
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationship|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationship-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -101,7 +98,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a delegatedAdminRelationship object. A relationship can only be deleted if it's in the 'created' status. 
+     * Delete navigation property delegatedAdminRelationships for tenantRelationships
      * @param DelegatedAdminRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +116,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of a delegatedAdminRelationship object.
+     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @param DelegatedAdminRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -140,7 +137,7 @@ class DelegatedAdminRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a delegatedAdminRelationship object. You can only update a relationship when it's in the created status. However, you can update the autoExtendDuration property when the relationship is in either the created or active status.
+     * Update the navigation property delegatedAdminRelationships in tenantRelationships
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

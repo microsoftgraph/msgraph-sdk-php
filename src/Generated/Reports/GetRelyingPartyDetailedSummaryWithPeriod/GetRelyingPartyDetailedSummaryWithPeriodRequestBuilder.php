@@ -33,10 +33,11 @@ class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends BaseRequest
     }
 
     /**
-     * Invoke function getRelyingPartyDetailedSummary
+     * Get a summary of AD FS relying parties information.
      * @param GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetRelyingPartyDetailedSummaryWithPeriodGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getrelyingpartydetailedsummary?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends BaseRequest
     }
 
     /**
-     * Invoke function getRelyingPartyDetailedSummary
+     * Get a summary of AD FS relying parties information.
      * @param GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

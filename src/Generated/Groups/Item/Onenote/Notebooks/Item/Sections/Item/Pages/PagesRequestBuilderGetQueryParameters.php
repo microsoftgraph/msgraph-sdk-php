@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Notebooks\Item\Sections\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of page objects from the specified section.
+ * The collection of pages in the section.  Read-only. Nullable.
 */
 class PagesRequestBuilderGetQueryParameters 
 {

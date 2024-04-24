@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of workflow resources that are associated with lifecycle workflows.
+ * The workflows in the lifecycle workflows instance.
 */
 class WorkflowsRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuest
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a bookingCustomQuestion object.
+ * All the custom questions of this business. Read-only. Nullable.
 */
 class BookingCustomQuestionItemRequestBuilderGetQueryParameters 
 {

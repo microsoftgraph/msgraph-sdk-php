@@ -39,11 +39,10 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenLifetimePolicy object.
+     * Delete navigation property tokenLifetimePolicies for policies
      * @param TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenlifetimepolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
+     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @param TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenLifetimePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenlifetimepolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenLifetimePolicy object.
+     * Update the navigation property tokenLifetimePolicies in policies
      * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenLifetimePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tokenlifetimepolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TokenLifetimePolicy $body, ?TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a tokenLifetimePolicy object.
+     * Delete navigation property tokenLifetimePolicies for policies
      * @param TokenLifetimePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a tokenLifetimePolicy object.
+     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @param TokenLifetimePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class TokenLifetimePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tokenLifetimePolicy object.
+     * Update the navigation property tokenLifetimePolicies in policies
      * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

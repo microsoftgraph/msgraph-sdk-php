@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the authenticationCombinationConfiguration objects for an authentication strength policy. authenticationCombinationConfiguration represents requirements placed on specific authentication method combinations that require specified variants of those authentication methods to be used when authenticating. Currently, only fido2combinationConfigurations objects are supported. authenticationCombinationConfiguration objects are supported only for custom authentication strengths.
+ * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
 */
 class CombinationConfigurationsRequestBuilderGetQueryParameters 
 {

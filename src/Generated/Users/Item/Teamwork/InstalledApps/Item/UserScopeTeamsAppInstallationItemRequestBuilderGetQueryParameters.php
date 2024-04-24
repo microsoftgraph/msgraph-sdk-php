@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the app installed in the personal scope of the specified user.
+ * The apps installed in the personal scope of this user.
 */
 class UserScopeTeamsAppInstallationItemRequestBuilderGetQueryParameters 
 {

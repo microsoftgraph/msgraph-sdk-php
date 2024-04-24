@@ -52,11 +52,10 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param ExtensionPropertiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExtensionPropertyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-list-extensionproperty?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExtensionPropertiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param ExtensionProperty $body The request body
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExtensionProperty|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0 Find more info here
     */
     public function post(ExtensionProperty $body, ?ExtensionPropertiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of directory extension definitions, represented by extensionProperty objects on an application.
+     * Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
      * @param ExtensionPropertiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new directory extension definition, represented by an extensionProperty object.
+     * Create new navigation property to extensionProperties for applications
      * @param ExtensionProperty $body The request body
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

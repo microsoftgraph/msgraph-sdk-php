@@ -51,11 +51,10 @@ class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,7 +65,7 @@ class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+     * The access packages that are incompatible with this package. Read-only.
      * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

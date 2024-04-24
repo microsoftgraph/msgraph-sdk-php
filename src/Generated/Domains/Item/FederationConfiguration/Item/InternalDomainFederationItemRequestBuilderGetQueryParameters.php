@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an internalDomainFederation object.
+ * Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
 */
 class InternalDomainFederationItemRequestBuilderGetQueryParameters 
 {

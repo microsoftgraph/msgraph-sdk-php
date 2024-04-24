@@ -53,11 +53,10 @@ class ApplicationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
+     * Get application from drives
      * @param ApplicationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookApplication|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workbookapplication-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApplicationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,7 +100,7 @@ class ApplicationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a workbookApplication object.
+     * Get application from drives
      * @param ApplicationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

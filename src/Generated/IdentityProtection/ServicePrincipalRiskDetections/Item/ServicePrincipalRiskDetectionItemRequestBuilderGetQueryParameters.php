@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\ServicePrincipalRiskDetec
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a servicePrincipalRiskDetection object.
+ * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
 */
 class ServicePrincipalRiskDetectionItemRequestBuilderGetQueryParameters 
 {

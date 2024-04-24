@@ -39,11 +39,10 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an externalGroup object.
+     * Delete navigation property groups for external
      * @param ExternalGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ExternalGroupItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an externalGroup object.
+     * Get groups from external
      * @param ExternalGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalGroup|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExternalGroupItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an externalGroup object.
+     * Update the navigation property groups in external
      * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalGroup|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalgroup-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ExternalGroup $body, ?ExternalGroupItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an externalGroup object.
+     * Delete navigation property groups for external
      * @param ExternalGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get an externalGroup object.
+     * Get groups from external
      * @param ExternalGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class ExternalGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an externalGroup object.
+     * Update the navigation property groups in external
      * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the collection of [contentType][contentType] resources in a [list][].
+ * The collection of content types present in this list.
 */
 class ContentTypesRequestBuilderGetQueryParameters 
 {

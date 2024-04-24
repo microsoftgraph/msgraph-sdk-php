@@ -52,11 +52,10 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      * @param UnifiedGroupSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedGroupSourceCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-unifiedgroupsources?view=graph-rest-1.0 Find more info here
     */
     public function get(?UnifiedGroupSourcesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
+     * Create new navigation property to unifiedGroupSources for security
      * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedGroupSource|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0 Find more info here
     */
     public function post(UnifiedGroupSource $body, ?UnifiedGroupSourcesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
+     * Data source entity for groups associated with the custodian.
      * @param UnifiedGroupSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
+     * Create new navigation property to unifiedGroupSources for security
      * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

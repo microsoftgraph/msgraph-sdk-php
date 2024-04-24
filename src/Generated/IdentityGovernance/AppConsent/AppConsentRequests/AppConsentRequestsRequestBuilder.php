@@ -62,11 +62,10 @@ class AppConsentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param AppConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppConsentRequestCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppConsentRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +91,7 @@ class AppConsentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve appConsentRequest objects and their properties.
+     * A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param AppConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

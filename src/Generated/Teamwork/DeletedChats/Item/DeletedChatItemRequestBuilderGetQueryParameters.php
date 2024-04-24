@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\DeletedChats\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a deletedChat object.
+ * A collection of deleted chats.
 */
 class DeletedChatItemRequestBuilderGetQueryParameters 
 {

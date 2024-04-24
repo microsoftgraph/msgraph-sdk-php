@@ -52,7 +52,7 @@ class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
+     * A container for on-premises directory synchronization functionalities that are available for the organization.
      * @param OnPremisesSynchronizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronizationCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
+     * A container for on-premises directory synchronization functionalities that are available for the organization.
      * @param OnPremisesSynchronizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

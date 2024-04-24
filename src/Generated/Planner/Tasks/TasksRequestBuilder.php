@@ -52,11 +52,10 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTaskCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/planner-list-tasks?view=graph-rest-1.0 Find more info here
     */
     public function get(?TasksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new plannerTask.
+     * Create new navigation property to tasks for planner
      * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTask|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0 Find more info here
     */
     public function post(PlannerTask $body, ?TasksRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of plannertask objects.
+     * Read-only. Nullable. Returns a collection of the specified tasks
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new plannerTask.
+     * Create new navigation property to tasks for planner
      * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

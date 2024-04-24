@@ -31,11 +31,10 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a timeOff instance from a schedule.
+     * Delete navigation property timesOff for teams
      * @param TimeOffItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoff-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TimeOffItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeOff object by ID.
+     * The instances of times off in the schedule.
      * @param TimeOffItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOff|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoff-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TimeOffItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timesOff in teams
      * @param TimeOff $body The request body
      * @param TimeOffItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOff|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoff-put?view=graph-rest-1.0 Find more info here
     */
     public function patch(TimeOff $body, ?TimeOffItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a timeOff instance from a schedule.
+     * Delete navigation property timesOff for teams
      * @param TimeOffItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a timeOff object by ID.
+     * The instances of times off in the schedule.
      * @param TimeOffItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class TimeOffItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Replace an existing timeOff object. If the specified timeOff object doesn't exist, this method returns 404 Not found.
+     * Update the navigation property timesOff in teams
      * @param TimeOff $body The request body
      * @param TimeOffItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\Events;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, orget the instances of an event.
+ * The events in the calendar. Navigation property. Read-only.
 */
 class EventsRequestBuilderGetQueryParameters 
 {

@@ -61,11 +61,10 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartseries object.
+     * Represents either a single series or collection of series in the chart. Read-only.
      * @param WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeries|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartseries-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,12 +75,11 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartSeries object.
+     * Update the navigation property series in drives
      * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeries|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartseries-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartSeries $body, ?WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -110,7 +108,7 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartseries object.
+     * Represents either a single series or collection of series in the chart. Read-only.
      * @param WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +129,7 @@ class WorkbookChartSeriesItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartSeries object.
+     * Update the navigation property series in drives
      * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

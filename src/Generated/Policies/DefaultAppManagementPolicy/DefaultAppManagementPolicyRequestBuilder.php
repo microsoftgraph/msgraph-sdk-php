@@ -45,11 +45,10 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
+     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @param DefaultAppManagementPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantAppManagementPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefaultAppManagementPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tenantAppManagementPolicy object.
+     * Update the navigation property defaultAppManagementPolicy in policies
      * @param TenantAppManagementPolicy $body The request body
      * @param DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantAppManagementPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TenantAppManagementPolicy $body, ?DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of a tenantAppManagementPolicy object.
+     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @param DefaultAppManagementPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a tenantAppManagementPolicy object.
+     * Update the navigation property defaultAppManagementPolicy in policies
      * @param TenantAppManagementPolicy $body The request body
      * @param DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

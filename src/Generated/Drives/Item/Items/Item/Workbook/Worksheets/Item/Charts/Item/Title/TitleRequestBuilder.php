@@ -53,11 +53,10 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartTitle|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/charttitle-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TitleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of charttitle object.
+     * Update the navigation property title in drives
      * @param WorkbookChartTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartTitle|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/charttitle-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartTitle $body, ?TitleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -102,7 +100,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of charttitle object.
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +121,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of charttitle object.
+     * Update the navigation property title in drives
      * @param WorkbookChartTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

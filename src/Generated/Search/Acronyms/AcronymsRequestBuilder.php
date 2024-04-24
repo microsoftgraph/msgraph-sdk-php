@@ -52,11 +52,10 @@ class AcronymsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @param AcronymsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AcronymCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-1.0 Find more info here
     */
     public function get(?AcronymsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class AcronymsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new acronym object.
+     * Create new navigation property to acronyms for search
      * @param Acronym $body The request body
      * @param AcronymsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Acronym|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-1.0 Find more info here
     */
     public function post(Acronym $body, ?AcronymsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class AcronymsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the acronym objects and their properties.
+     * Administrative answer in Microsoft Search results to define common acronyms in an organization.
      * @param AcronymsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class AcronymsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new acronym object.
+     * Create new navigation property to acronyms for search
      * @param Acronym $body The request body
      * @param AcronymsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -52,7 +52,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a hostPair object.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPairCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class HostPairsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a hostPair object.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      * @param HostPairsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

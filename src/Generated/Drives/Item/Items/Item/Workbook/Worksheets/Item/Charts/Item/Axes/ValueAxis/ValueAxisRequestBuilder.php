@@ -77,11 +77,10 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartaxis object.
+     * Represents the value axis in an axis. Read-only.
      * @param ValueAxisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartAxis|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartaxis-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ValueAxisRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,12 +91,11 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartaxis object.
+     * Update the navigation property valueAxis in drives
      * @param WorkbookChartAxis $body The request body
      * @param ValueAxisRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartAxis|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartaxis-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartAxis $body, ?ValueAxisRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -126,7 +124,7 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartaxis object.
+     * Represents the value axis in an axis. Read-only.
      * @param ValueAxisRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,7 +145,7 @@ class ValueAxisRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartaxis object.
+     * Update the navigation property valueAxis in drives
      * @param WorkbookChartAxis $body The request body
      * @param ValueAxisRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

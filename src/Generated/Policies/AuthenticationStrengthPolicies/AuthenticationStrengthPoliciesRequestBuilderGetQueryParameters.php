@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+ * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
 */
 class AuthenticationStrengthPoliciesRequestBuilderGetQueryParameters 
 {

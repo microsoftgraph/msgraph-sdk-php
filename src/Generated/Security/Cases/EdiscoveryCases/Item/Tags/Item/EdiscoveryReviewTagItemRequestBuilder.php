@@ -47,11 +47,10 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an ediscoveryReviewTag object.
+     * Delete navigation property tags for security
      * @param EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-tags?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,11 +61,10 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object.
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewTag|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,12 +75,11 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryReviewTag object.
+     * Update the navigation property tags in security
      * @param EdiscoveryReviewTag $body The request body
      * @param EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewTag|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EdiscoveryReviewTag $body, ?EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -93,7 +90,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove an ediscoveryReviewTag object.
+     * Delete navigation property tags for security
      * @param EdiscoveryReviewTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +108,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of an ediscoveryReviewTag object.
+     * Returns a list of ediscoveryReviewTag objects associated to this case.
      * @param EdiscoveryReviewTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,7 +129,7 @@ class EdiscoveryReviewTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of an ediscoveryReviewTag object.
+     * Update the navigation property tags in security
      * @param EdiscoveryReviewTag $body The request body
      * @param EdiscoveryReviewTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

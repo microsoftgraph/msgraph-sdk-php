@@ -32,11 +32,10 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
+     * The collection of lists under this site.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/list-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ListsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,12 +46,11 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new [list][] in a [site][].
+     * Create new navigation property to lists for sites
      * @param EscapedList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EscapedList|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/list-create?view=graph-rest-1.0 Find more info here
     */
     public function post(EscapedList $body, ?ListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -63,7 +61,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
+     * The collection of lists under this site.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -84,7 +82,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new [list][] in a [site][].
+     * Create new navigation property to lists for sites
      * @param EscapedList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

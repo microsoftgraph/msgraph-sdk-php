@@ -295,7 +295,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
+     * Gets the name property value. The API-facing name of the column as it appears in the fields on a listItem. For the user-facing name, see displayName.
      * @return string|null
     */
     public function getName(): ?string {
@@ -643,7 +643,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. The API-facing name of the column as it appears in the [fields][] on a [listItem][]. For the user-facing name, see displayName.
+     * Sets the name property value. The API-facing name of the column as it appears in the fields on a listItem. For the user-facing name, see displayName.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

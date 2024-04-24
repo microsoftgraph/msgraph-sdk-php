@@ -52,11 +52,10 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthPolicyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create new navigation property to authenticationStrengthPolicies for policies
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0 Find more info here
     */
     public function post(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create new navigation property to authenticationStrengthPolicies for policies
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

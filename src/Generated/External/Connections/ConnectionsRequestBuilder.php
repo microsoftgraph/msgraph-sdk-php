@@ -52,11 +52,10 @@ class ConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      * @param ConnectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalConnectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConnectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new externalConnection object.
+     * Create new navigation property to connections for external
      * @param ExternalConnection $body The request body
      * @param ConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalConnection|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0 Find more info here
     */
     public function post(ExternalConnection $body, ?ConnectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the externalConnection objects and their properties.
+     * Get connections from external
      * @param ConnectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ConnectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new externalConnection object.
+     * Create new navigation property to connections for external
      * @param ExternalConnection $body The request body
      * @param ConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

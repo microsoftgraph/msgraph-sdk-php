@@ -52,11 +52,10 @@ class SimulationAutomationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      * @param SimulationAutomationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SimulationAutomationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/attacksimulationroot-list-simulationautomations?view=graph-rest-1.0 Find more info here
     */
     public function get(?SimulationAutomationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class SimulationAutomationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of attack simulation automations for a tenant.
+     * Represents simulation automation created to run on a tenant.
      * @param SimulationAutomationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

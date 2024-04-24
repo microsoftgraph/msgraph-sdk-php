@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of chartdatalabels object.
+ * Represents the datalabels on the chart. Read-only.
 */
 class DataLabelsRequestBuilderGetQueryParameters 
 {

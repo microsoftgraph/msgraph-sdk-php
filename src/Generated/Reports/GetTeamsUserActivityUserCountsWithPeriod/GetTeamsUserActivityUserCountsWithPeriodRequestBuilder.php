@@ -34,10 +34,11 @@ class GetTeamsUserActivityUserCountsWithPeriodRequestBuilder extends BaseRequest
     }
 
     /**
-     * Invoke function getTeamsUserActivityUserCounts
+     * Get the number of Microsoft Teams users by activity type. The activity types are number of teams chat messages, private chat messages, calls, or meetings.
      * @param GetTeamsUserActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getteamsuseractivityusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetTeamsUserActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetTeamsUserActivityUserCountsWithPeriodRequestBuilder extends BaseRequest
     }
 
     /**
-     * Invoke function getTeamsUserActivityUserCounts
+     * Get the number of Microsoft Teams users by activity type. The activity types are number of teams chat messages, private chat messages, calls, or meetings.
      * @param GetTeamsUserActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

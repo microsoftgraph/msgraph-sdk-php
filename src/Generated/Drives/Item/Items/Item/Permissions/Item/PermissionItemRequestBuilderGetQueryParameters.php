@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Return the effective sharing permission for a particular permission resource. Effective permissions of an item can come from two sources: permissions set directly on the item itself or permissions that are inherited from the item's ancestors. Callers can differentiate if the permission is inherited or not by checking the inheritedFrom property.This property is an ItemReference resource referencing the ancestor that the permission is inherited from.
+ * The set of permissions for the item. Read-only. Nullable.
 */
 class PermissionItemRequestBuilderGetQueryParameters 
 {

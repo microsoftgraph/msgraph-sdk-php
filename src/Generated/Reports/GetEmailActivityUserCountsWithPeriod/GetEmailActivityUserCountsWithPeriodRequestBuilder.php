@@ -34,10 +34,11 @@ class GetEmailActivityUserCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getEmailActivityUserCounts
+     * Enables you to understand trends on the number of unique users who are performing email activities like send, read, and receive.
      * @param GetEmailActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getemailactivityusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetEmailActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetEmailActivityUserCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getEmailActivityUserCounts
+     * Enables you to understand trends on the number of unique users who are performing email activities like send, read, and receive.
      * @param GetEmailActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

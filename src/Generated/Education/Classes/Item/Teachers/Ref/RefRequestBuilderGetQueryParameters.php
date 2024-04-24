@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of teachers for a class. Delegated tokens must be members of the class to get the teacher list.
+ * All teachers in the class. Nullable.
 */
 class RefRequestBuilderGetQueryParameters 
 {

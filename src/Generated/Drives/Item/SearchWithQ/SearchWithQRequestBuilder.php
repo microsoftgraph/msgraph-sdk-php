@@ -33,10 +33,11 @@ class SearchWithQRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function search
+     * Search the hierarchy of items for items matching a query.You can search within a folder hierarchy, a whole drive, or files shared with the current user.
      * @param SearchWithQRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SearchWithQGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/driveitem-search?view=graph-rest-1.0 Find more info here
     */
     public function get(?SearchWithQRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class SearchWithQRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function search
+     * Search the hierarchy of items for items matching a query.You can search within a folder hierarchy, a whole drive, or files shared with the current user.
      * @param SearchWithQRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

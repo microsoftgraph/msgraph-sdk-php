@@ -52,11 +52,10 @@ class ApiConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @param ApiConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityApiConnectorCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identityapiconnector-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApiConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ApiConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param IdentityApiConnector $body The request body
      * @param ApiConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityApiConnector|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identityapiconnector-create?view=graph-rest-1.0 Find more info here
     */
     public function post(IdentityApiConnector $body, ?ApiConnectorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ApiConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties of an identityApiConnector object.
+     * Represents entry point for API connectors.
      * @param ApiConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ApiConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new identityApiConnector object.
+     * Create new navigation property to apiConnectors for identity
      * @param IdentityApiConnector $body The request body
      * @param ApiConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

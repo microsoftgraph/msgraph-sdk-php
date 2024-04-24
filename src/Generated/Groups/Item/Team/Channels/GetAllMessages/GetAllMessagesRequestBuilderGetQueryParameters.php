@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\GetAllMessages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getAllMessages
+ * Retrieve messages across all channels in a team, including text, audio, and video conversations. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
 */
 class GetAllMessagesRequestBuilderGetQueryParameters 
 {
