@@ -5,8 +5,10 @@ namespace Microsoft\Graph\Generated\Identity;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
+use Microsoft\Graph\Generated\Identity\AuthenticationEventListeners\AuthenticationEventListenersRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
+use Microsoft\Graph\Generated\Identity\CustomAuthenticationExtensions\CustomAuthenticationExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
 use Microsoft\Graph\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityContainer;
@@ -29,6 +31,13 @@ class IdentityRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the authenticationEventListeners property of the microsoft.graph.identityContainer entity.
+    */
+    public function authenticationEventListeners(): AuthenticationEventListenersRequestBuilder {
+        return new AuthenticationEventListenersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
     */
     public function b2xUserFlows(): B2xUserFlowsRequestBuilder {
@@ -40,6 +49,13 @@ class IdentityRequestBuilder extends BaseRequestBuilder
     */
     public function conditionalAccess(): ConditionalAccessRequestBuilder {
         return new ConditionalAccessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the customAuthenticationExtensions property of the microsoft.graph.identityContainer entity.
+    */
+    public function customAuthenticationExtensions(): CustomAuthenticationExtensionsRequestBuilder {
+        return new CustomAuthenticationExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

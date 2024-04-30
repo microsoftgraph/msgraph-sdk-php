@@ -76,6 +76,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'isEmailNotificationEnabled' => fn(ParseNode $n) => $o->setIsEmailNotificationEnabled($n->getBooleanValue()),
+            'membershipStatus' => fn(ParseNode $n) => $o->setMembershipStatus($n->getEnumValue(BookingStaffMembershipStatus::class)),
             'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(BookingStaffRole::class)),
             'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
             'useBusinessHours' => fn(ParseNode $n) => $o->setUseBusinessHours($n->getBooleanValue()),
@@ -93,6 +94,18 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isEmailNotificationEnabled'");
+    }
+
+    /**
+     * Gets the membershipStatus property value. The membershipStatus property
+     * @return BookingStaffMembershipStatus|null
+    */
+    public function getMembershipStatus(): ?BookingStaffMembershipStatus {
+        $val = $this->getBackingStore()->get('membershipStatus');
+        if (is_null($val) || $val instanceof BookingStaffMembershipStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipStatus'");
     }
 
     /**
@@ -155,6 +168,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeBooleanValue('isEmailNotificationEnabled', $this->getIsEmailNotificationEnabled());
+        $writer->writeEnumValue('membershipStatus', $this->getMembershipStatus());
         $writer->writeEnumValue('role', $this->getRole());
         $writer->writeStringValue('timeZone', $this->getTimeZone());
         $writer->writeBooleanValue('useBusinessHours', $this->getUseBusinessHours());
@@ -191,6 +205,14 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     */
     public function setIsEmailNotificationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEmailNotificationEnabled', $value);
+    }
+
+    /**
+     * Sets the membershipStatus property value. The membershipStatus property
+     * @param BookingStaffMembershipStatus|null $value Value to set for the membershipStatus property.
+    */
+    public function setMembershipStatus(?BookingStaffMembershipStatus $value): void {
+        $this->getBackingStore()->set('membershipStatus', $value);
     }
 
     /**

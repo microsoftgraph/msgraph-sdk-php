@@ -129,6 +129,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             'b2bDirectConnectOutbound' => fn(ParseNode $n) => $o->setB2bDirectConnectOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'identitySynchronization' => fn(ParseNode $n) => $o->setIdentitySynchronization($n->getObjectValue([CrossTenantIdentitySyncPolicyPartner::class, 'createFromDiscriminatorValue'])),
             'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
+            'isInMultiTenantOrganization' => fn(ParseNode $n) => $o->setIsInMultiTenantOrganization($n->getBooleanValue()),
             'isServiceProvider' => fn(ParseNode $n) => $o->setIsServiceProvider($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
@@ -157,6 +158,18 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'inboundTrust'");
+    }
+
+    /**
+     * Gets the isInMultiTenantOrganization property value. Identifies whether a tenant is a member of a multitenant organization.
+     * @return bool|null
+    */
+    public function getIsInMultiTenantOrganization(): ?bool {
+        $val = $this->getBackingStore()->get('isInMultiTenantOrganization');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isInMultiTenantOrganization'");
     }
 
     /**
@@ -207,6 +220,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
         $writer->writeObjectValue('b2bDirectConnectOutbound', $this->getB2bDirectConnectOutbound());
         $writer->writeObjectValue('identitySynchronization', $this->getIdentitySynchronization());
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
+        $writer->writeBooleanValue('isInMultiTenantOrganization', $this->getIsInMultiTenantOrganization());
         $writer->writeBooleanValue('isServiceProvider', $this->getIsServiceProvider());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('tenantId', $this->getTenantId());
@@ -283,6 +297,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setInboundTrust(?CrossTenantAccessPolicyInboundTrust $value): void {
         $this->getBackingStore()->set('inboundTrust', $value);
+    }
+
+    /**
+     * Sets the isInMultiTenantOrganization property value. Identifies whether a tenant is a member of a multitenant organization.
+     * @param bool|null $value Value to set for the isInMultiTenantOrganization property.
+    */
+    public function setIsInMultiTenantOrganization(?bool $value): void {
+        $this->getBackingStore()->set('isInMultiTenantOrganization', $value);
     }
 
     /**

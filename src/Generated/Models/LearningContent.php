@@ -238,7 +238,7 @@ class LearningContent extends Entity implements Parsable
     }
 
     /**
-     * Gets the level property value. The level property
+     * Gets the level property value. The difficulty level of the learning content. Possible values are: Beginner, Intermediate, Advanced, unknownFutureValue. Optional.
      * @return Level|null
     */
     public function getLevel(): ?Level {
@@ -443,7 +443,7 @@ class LearningContent extends Entity implements Parsable
     }
 
     /**
-     * Sets the level property value. The level property
+     * Sets the level property value. The difficulty level of the learning content. Possible values are: Beginner, Intermediate, Advanced, unknownFutureValue. Optional.
      * @param Level|null $value Value to set for the level property.
     */
     public function setLevel(?Level $value): void {

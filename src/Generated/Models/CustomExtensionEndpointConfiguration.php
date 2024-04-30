@@ -35,6 +35,7 @@ class CustomExtensionEndpointConfiguration implements AdditionalDataHolder, Back
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.httpRequestEndpoint': return new HttpRequestEndpoint();
                 case '#microsoft.graph.logicAppTriggerEndpointConfiguration': return new LogicAppTriggerEndpointConfiguration();
             }
         }
