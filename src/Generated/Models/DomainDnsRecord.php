@@ -51,7 +51,7 @@ class DomainDnsRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
+     * Gets the isOptional property value. If false, the customer must configure this record at the DNS host for Microsoft Online Services to operate correctly with the domain.
      * @return bool|null
     */
     public function getIsOptional(): ?bool {
@@ -124,7 +124,7 @@ class DomainDnsRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the isOptional property value. If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
+     * Sets the isOptional property value. If false, the customer must configure this record at the DNS host for Microsoft Online Services to operate correctly with the domain.
      * @param bool|null $value Value to set for the isOptional property.
     */
     public function setIsOptional(?bool $value): void {

@@ -28,7 +28,9 @@ class CustomCalloutExtension extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.accessPackageAssignmentRequestWorkflowExtension': return new AccessPackageAssignmentRequestWorkflowExtension();
                 case '#microsoft.graph.accessPackageAssignmentWorkflowExtension': return new AccessPackageAssignmentWorkflowExtension();
+                case '#microsoft.graph.customAuthenticationExtension': return new CustomAuthenticationExtension();
                 case '#microsoft.graph.identityGovernance.customTaskExtension': return new CustomTaskExtension();
+                case '#microsoft.graph.onTokenIssuanceStartCustomExtension': return new OnTokenIssuanceStartCustomExtension();
             }
         }
         return new CustomCalloutExtension();

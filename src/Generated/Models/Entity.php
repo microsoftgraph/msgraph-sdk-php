@@ -227,6 +227,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.authentication': return new Authentication();
                 case '#microsoft.graph.authenticationCombinationConfiguration': return new AuthenticationCombinationConfiguration();
                 case '#microsoft.graph.authenticationContextClassReference': return new AuthenticationContextClassReference();
+                case '#microsoft.graph.authenticationEventListener': return new AuthenticationEventListener();
                 case '#microsoft.graph.authenticationFlowsPolicy': return new AuthenticationFlowsPolicy();
                 case '#microsoft.graph.authenticationMethod': return new AuthenticationMethod();
                 case '#microsoft.graph.authenticationMethodConfiguration': return new AuthenticationMethodConfiguration();
@@ -294,6 +295,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.columnDefinition': return new ColumnDefinition();
                 case '#microsoft.graph.columnLink': return new ColumnLink();
                 case '#microsoft.graph.commsOperation': return new CommsOperation();
+                case '#microsoft.graph.companySubscription': return new CompanySubscription();
                 case '#microsoft.graph.complianceManagementPartner': return new ComplianceManagementPartner();
                 case '#microsoft.graph.conditionalAccessPolicy': return new ConditionalAccessPolicy();
                 case '#microsoft.graph.conditionalAccessRoot': return new ConditionalAccessRoot();
@@ -310,6 +312,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.countryNamedLocation': return new CountryNamedLocation();
                 case '#microsoft.graph.crossTenantAccessPolicy': return new CrossTenantAccessPolicy();
                 case '#microsoft.graph.crossTenantAccessPolicyConfigurationDefault': return new CrossTenantAccessPolicyConfigurationDefault();
+                case '#microsoft.graph.customAuthenticationExtension': return new CustomAuthenticationExtension();
                 case '#microsoft.graph.customCalloutExtension': return new CustomCalloutExtension();
                 case '#microsoft.graph.customExtensionStageSetting': return new CustomExtensionStageSetting();
                 case '#microsoft.graph.customSecurityAttributeDefinition': return new CustomSecurityAttributeDefinition();
@@ -576,6 +579,11 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.mobileContainedApp': return new MobileContainedApp();
                 case '#microsoft.graph.mobileLobApp': return new MobileLobApp();
                 case '#microsoft.graph.mobileThreatDefenseConnector': return new MobileThreatDefenseConnector();
+                case '#microsoft.graph.multiTenantOrganization': return new MultiTenantOrganization();
+                case '#microsoft.graph.multiTenantOrganizationIdentitySyncPolicyTemplate': return new MultiTenantOrganizationIdentitySyncPolicyTemplate();
+                case '#microsoft.graph.multiTenantOrganizationJoinRequestRecord': return new MultiTenantOrganizationJoinRequestRecord();
+                case '#microsoft.graph.multiTenantOrganizationMember': return new MultiTenantOrganizationMember();
+                case '#microsoft.graph.multiTenantOrganizationPartnerConfigurationTemplate': return new MultiTenantOrganizationPartnerConfigurationTemplate();
                 case '#microsoft.graph.multiValueLegacyExtendedProperty': return new MultiValueLegacyExtendedProperty();
                 case '#microsoft.graph.muteParticipantOperation': return new MuteParticipantOperation();
                 case '#microsoft.graph.namedLocation': return new NamedLocation();
@@ -596,6 +604,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.onlineMeetingBase': return new OnlineMeetingBase();
                 case '#microsoft.graph.onPremisesConditionalAccessSettings': return new OnPremisesConditionalAccessSettings();
                 case '#microsoft.graph.onPremisesDirectorySynchronization': return new OnPremisesDirectorySynchronization();
+                case '#microsoft.graph.onTokenIssuanceStartCustomExtension': return new OnTokenIssuanceStartCustomExtension();
+                case '#microsoft.graph.onTokenIssuanceStartListener': return new OnTokenIssuanceStartListener();
                 case '#microsoft.graph.openShift': return new OpenShift();
                 case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
                 case '#microsoft.graph.openTypeExtension': return new OpenTypeExtension();
@@ -647,6 +657,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.playPromptOperation': return new PlayPromptOperation();
                 case '#microsoft.graph.policyBase': return new PolicyBase();
                 case '#microsoft.graph.policyRoot': return new PolicyRoot();
+                case '#microsoft.graph.policyTemplate': return new PolicyTemplate();
                 case '#microsoft.graph.post': return new Post();
                 case '#microsoft.graph.presence': return new Presence();
                 case '#microsoft.graph.printConnector': return new PrintConnector();

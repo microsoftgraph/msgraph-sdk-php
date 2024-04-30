@@ -69,6 +69,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
             },
             'default' => fn(ParseNode $n) => $o->setEscapedDefault($n->getObjectValue([CrossTenantAccessPolicyConfigurationDefault::class, 'createFromDiscriminatorValue'])),
             'partners' => fn(ParseNode $n) => $o->setPartners($n->getCollectionOfObjectValues([CrossTenantAccessPolicyConfigurationPartner::class, 'createFromDiscriminatorValue'])),
+            'templates' => fn(ParseNode $n) => $o->setTemplates($n->getObjectValue([PolicyTemplate::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -87,6 +88,18 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     }
 
     /**
+     * Gets the templates property value. Represents the base policy in the directory for multitenant organization settings.
+     * @return PolicyTemplate|null
+    */
+    public function getTemplates(): ?PolicyTemplate {
+        $val = $this->getBackingStore()->get('templates');
+        if (is_null($val) || $val instanceof PolicyTemplate) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templates'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -95,6 +108,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
         $writer->writeCollectionOfPrimitiveValues('allowedCloudEndpoints', $this->getAllowedCloudEndpoints());
         $writer->writeObjectValue('default', $this->getEscapedDefault());
         $writer->writeCollectionOfObjectValues('partners', $this->getPartners());
+        $writer->writeObjectValue('templates', $this->getTemplates());
     }
 
     /**
@@ -119,6 +133,14 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     */
     public function setPartners(?array $value): void {
         $this->getBackingStore()->set('partners', $value);
+    }
+
+    /**
+     * Sets the templates property value. Represents the base policy in the directory for multitenant organization settings.
+     * @param PolicyTemplate|null $value Value to set for the templates property.
+    */
+    public function setTemplates(?PolicyTemplate $value): void {
+        $this->getBackingStore()->set('templates', $value);
     }
 
 }

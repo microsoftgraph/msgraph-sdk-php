@@ -123,6 +123,7 @@ class Directory extends Entity implements Parsable
             'deviceLocalCredentials' => fn(ParseNode $n) => $o->setDeviceLocalCredentials($n->getCollectionOfObjectValues([DeviceLocalCredentialInfo::class, 'createFromDiscriminatorValue'])),
             'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
+            'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([CompanySubscription::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -141,6 +142,20 @@ class Directory extends Entity implements Parsable
     }
 
     /**
+     * Gets the subscriptions property value. The subscriptions property
+     * @return array<CompanySubscription>|null
+    */
+    public function getSubscriptions(): ?array {
+        $val = $this->getBackingStore()->get('subscriptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CompanySubscription::class);
+            /** @var array<CompanySubscription>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subscriptions'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -153,6 +168,7 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('deviceLocalCredentials', $this->getDeviceLocalCredentials());
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
+        $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());
     }
 
     /**
@@ -209,6 +225,14 @@ class Directory extends Entity implements Parsable
     */
     public function setOnPremisesSynchronization(?array $value): void {
         $this->getBackingStore()->set('onPremisesSynchronization', $value);
+    }
+
+    /**
+     * Sets the subscriptions property value. The subscriptions property
+     * @param array<CompanySubscription>|null $value Value to set for the subscriptions property.
+    */
+    public function setSubscriptions(?array $value): void {
+        $this->getBackingStore()->set('subscriptions', $value);
     }
 
 }
