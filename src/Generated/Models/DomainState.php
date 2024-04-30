@@ -95,7 +95,7 @@ class DomainState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification
+     * Gets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification.
      * @return string|null
     */
     public function getOperation(): ?string {
@@ -107,7 +107,7 @@ class DomainState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the status property value. Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+     * Gets the status property value. Current status of the operation.  Scheduled - Operation is scheduled but hasn't started.  InProgress - Task is in progress.  Failed - The operation failed.
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -163,7 +163,7 @@ class DomainState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification
+     * Sets the operation property value. Type of asynchronous operation. The values can be ForceDelete or Verification.
      * @param string|null $value Value to set for the operation property.
     */
     public function setOperation(?string $value): void {
@@ -171,7 +171,7 @@ class DomainState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the status property value. Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+     * Sets the status property value. Current status of the operation.  Scheduled - Operation is scheduled but hasn't started.  InProgress - Task is in progress.  Failed - The operation failed.
      * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
