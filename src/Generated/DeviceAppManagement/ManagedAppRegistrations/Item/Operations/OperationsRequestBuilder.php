@@ -52,10 +52,11 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Zero or more long running operations triggered on the app registration.
+     * List properties and relationships of the managedAppOperation objects.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppOperationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OperationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to operations for deviceAppManagement
+     * Create a new managedAppOperation object.
      * @param ManagedAppOperation $body The request body
      * @param OperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedAppOperation $body, ?OperationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Zero or more long running operations triggered on the app registration.
+     * List properties and relationships of the managedAppOperation objects.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to operations for deviceAppManagement
+     * Create a new managedAppOperation object.
      * @param ManagedAppOperation $body The request body
      * @param OperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -67,10 +67,11 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/orgcontact-list-transitivememberof?view=graph-rest-1.0 Find more info here
     */
     public function get(?TransitiveMemberOfRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
+     * Get groups that this organizational contact is a member of. The API request is transitive, and returns all groups the organizational contact is a nested member of.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

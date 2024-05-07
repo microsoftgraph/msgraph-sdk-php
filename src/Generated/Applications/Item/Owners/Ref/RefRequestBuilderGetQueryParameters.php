@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Owners\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
+ * Retrieve a list of owners for an application that are directoryObject objects.
 */
 class RefRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Contacts\Item\Manager;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
+ * Get this organizational contact's manager.
 */
 class ManagerRequestBuilderGetQueryParameters 
 {

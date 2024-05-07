@@ -63,10 +63,11 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property shares for print
+     * Delete a printer share (unshare the associated printer). This action can't be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer needs to discover and reinstall it.
      * @param PrinterShareItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printershare-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PrinterShareItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -77,10 +78,11 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve the properties and relationships of a printer share.
      * @param PrinterShareItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShare|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printershare-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrinterShareItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,11 +93,12 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property shares in print
+     * Update the properties of a printer share. This method can be used to swap printers. For example, if a physical printer device breaks, an administrator can register a new printer device and update this printerShare to point to the new printer without requiring users to take any action.
      * @param PrinterShare $body The request body
      * @param PrinterShareItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShare|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printershare-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PrinterShare $body, ?PrinterShareItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -106,7 +109,7 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property shares for print
+     * Delete a printer share (unshare the associated printer). This action can't be undone. If the printer is shared again in the future, any Windows users who had previously installed the printer needs to discover and reinstall it.
      * @param PrinterShareItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +127,7 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve the properties and relationships of a printer share.
      * @param PrinterShareItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -145,7 +148,7 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property shares in print
+     * Update the properties of a printer share. This method can be used to swap printers. For example, if a physical printer device breaks, an administrator can register a new printer device and update this printerShare to point to the new printer without requiring users to take any action.
      * @param PrinterShare $body The request body
      * @param PrinterShareItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

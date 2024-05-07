@@ -60,10 +60,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of membership records associated with the channel.
+     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMemberCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,11 +75,12 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for teams
+     * Add a conversationMember to a channel.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMember|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationMember $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +91,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of membership records associated with the channel.
+     * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +112,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for teams
+     * Add a conversationMember to a channel.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

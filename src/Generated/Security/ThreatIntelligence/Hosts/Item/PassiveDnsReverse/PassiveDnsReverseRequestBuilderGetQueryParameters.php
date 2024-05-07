@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Passi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Reverse passive DNS retrieval about this host.
+ * Get a collection of passiveDnsRecord resources from a reverse passive DNS retrieval.  A reverse DNS lookup queries the hostname of a host using an IP address.
 */
 class PassiveDnsReverseRequestBuilderGetQueryParameters 
 {

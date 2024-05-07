@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\TokenLifetimePolicies\Item\AppliesT
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get appliesTo from policies
+ * Get a list of directoryObject objects that a tokenLifetimePolicy object has been applied to. The tokenLifetimePolicy can only be applied to application.
 */
 class AppliesToRequestBuilderGetQueryParameters 
 {

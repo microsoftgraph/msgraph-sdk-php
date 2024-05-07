@@ -31,10 +31,11 @@ class BookmarkItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property bookmarks for search
+     * Delete a bookmark object.
      * @param BookmarkItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/search-bookmark-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookmarkItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class BookmarkItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      * @param BookmarkItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Bookmark|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/search-bookmark-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookmarkItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class BookmarkItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property bookmarks in search
+     * Update the properties of a bookmark object.
      * @param Bookmark $body The request body
      * @param BookmarkItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Bookmark|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/search-bookmark-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Bookmark $body, ?BookmarkItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class BookmarkItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property bookmarks for search
+     * Delete a bookmark object.
      * @param BookmarkItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class BookmarkItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Administrative answer in Microsoft Search results for common search queries in an organization.
+     * Read the properties and relationships of a bookmark object.
      * @param BookmarkItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class BookmarkItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property bookmarks in search
+     * Update the properties of a bookmark object.
      * @param Bookmark $body The request body
      * @param BookmarkItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

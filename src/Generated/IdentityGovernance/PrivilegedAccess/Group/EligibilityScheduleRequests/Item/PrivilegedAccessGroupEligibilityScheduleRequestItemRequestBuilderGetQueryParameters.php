@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\El
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
+ * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleRequest object.
 */
 class PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilderGetQueryParameters 
 {

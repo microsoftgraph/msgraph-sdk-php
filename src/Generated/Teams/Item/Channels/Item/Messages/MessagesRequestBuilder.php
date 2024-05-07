@@ -60,10 +60,11 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessageCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-list-messages?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,11 +75,12 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to messages for teams
+     * Send a new chatMessage in the specified channel.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessage|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?MessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +91,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +112,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to messages for teams
+     * Send a new chatMessage in the specified channel.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -76,10 +76,11 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentTypeCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-list-contenttypes?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContentTypesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,11 +91,12 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new contentType in a site.
      * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentType|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0 Find more info here
     */
     public function post(ContentType $body, ?ContentTypesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -105,7 +107,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of content types defined for this site.
+     * Get the collection of contentType resources in a site.
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -126,7 +128,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to contentTypes for sites
+     * Create a new contentType in a site.
      * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

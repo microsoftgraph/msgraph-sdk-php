@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Compo
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The hostComponents that are associated with this host.
+ * Get a list of hostComponent resources.
 */
 class ComponentsRequestBuilderGetQueryParameters 
 {

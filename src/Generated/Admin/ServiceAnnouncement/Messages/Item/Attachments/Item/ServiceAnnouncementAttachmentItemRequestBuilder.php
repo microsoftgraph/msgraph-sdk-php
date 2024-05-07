@@ -53,10 +53,11 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of serviceAnnouncementAttachments.
+     * Read the properties and relationships of a serviceAnnouncementAttachment object.
      * @param ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceAnnouncementAttachment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of serviceAnnouncementAttachments.
+     * Read the properties and relationships of a serviceAnnouncementAttachment object.
      * @param ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

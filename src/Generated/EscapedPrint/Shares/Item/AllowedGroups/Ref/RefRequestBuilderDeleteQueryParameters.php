@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Delete ref of navigation property allowedGroups for print
+ * Revoke the specified group's access to submit print jobs to the associated printerShare.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

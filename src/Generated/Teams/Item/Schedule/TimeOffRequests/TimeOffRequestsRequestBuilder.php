@@ -52,10 +52,11 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @param TimeOffRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOffRequestCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TimeOffRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The time off requests in the schedule.
+     * Retrieve a list of timeOffRequest objects in the team.
      * @param TimeOffRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

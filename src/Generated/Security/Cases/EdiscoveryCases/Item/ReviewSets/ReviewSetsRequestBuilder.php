@@ -52,10 +52,11 @@ class ReviewSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param ReviewSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewSetCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-list-reviewsets?view=graph-rest-1.0 Find more info here
     */
     public function get(?ReviewSetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class ReviewSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to reviewSets for security
+     * Create a new ediscoveryReviewSet object.
      * @param EdiscoveryReviewSet $body The request body
      * @param ReviewSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewSet|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-post-reviewsets?view=graph-rest-1.0 Find more info here
     */
     public function post(EdiscoveryReviewSet $body, ?ReviewSetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class ReviewSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Get a list of ediscoveryReviewSet objects associated with an eDiscovery case.
      * @param ReviewSetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class ReviewSetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to reviewSets for security
+     * Create a new ediscoveryReviewSet object.
      * @param EdiscoveryReviewSet $body The request body
      * @param ReviewSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

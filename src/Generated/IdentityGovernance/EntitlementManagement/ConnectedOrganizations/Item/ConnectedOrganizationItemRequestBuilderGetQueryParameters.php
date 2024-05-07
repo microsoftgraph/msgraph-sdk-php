@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * References to a directory or domain of another organization whose users can request access.
+ * Retrieve the properties and relationships of a connectedOrganization object.
 */
 class ConnectedOrganizationItemRequestBuilderGetQueryParameters 
 {

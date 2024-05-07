@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\Operations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents an attack simulation training operation.
+ * Get an attack simulation operation to track a long-running operation request for a tenant.
 */
 class AttackSimulationOperationItemRequestBuilderGetQueryParameters 
 {

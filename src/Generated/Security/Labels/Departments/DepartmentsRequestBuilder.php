@@ -52,10 +52,11 @@ class DepartmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the department or business unit of an organization to which a label belongs.
+     * Get a list of the departmentTemplate objects and their properties.
      * @param DepartmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DepartmentTemplateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-list-departments?view=graph-rest-1.0 Find more info here
     */
     public function get(?DepartmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class DepartmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to departments for security
+     * Create a new departmentTemplate object.
      * @param DepartmentTemplate $body The request body
      * @param DepartmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DepartmentTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-post-departments?view=graph-rest-1.0 Find more info here
     */
     public function post(DepartmentTemplate $body, ?DepartmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class DepartmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the department or business unit of an organization to which a label belongs.
+     * Get a list of the departmentTemplate objects and their properties.
      * @param DepartmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class DepartmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to departments for security
+     * Create a new departmentTemplate object.
      * @param DepartmentTemplate $body The request body
      * @param DepartmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

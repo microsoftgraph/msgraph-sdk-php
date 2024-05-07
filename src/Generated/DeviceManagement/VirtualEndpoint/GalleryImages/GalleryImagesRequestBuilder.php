@@ -52,10 +52,11 @@ class GalleryImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of gallery image resources on Cloud PC.
+     * List the properties and relationships of cloudPcGalleryImage objects.
      * @param GalleryImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcGalleryImageCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GalleryImagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class GalleryImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of gallery image resources on Cloud PC.
+     * List the properties and relationships of cloudPcGalleryImage objects.
      * @param GalleryImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

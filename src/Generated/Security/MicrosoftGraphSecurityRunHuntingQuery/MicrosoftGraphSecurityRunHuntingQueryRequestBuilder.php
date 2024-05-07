@@ -31,7 +31,7 @@ class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke action runHuntingQuery
+     * Queries a specified set of event, activity, or entity data supported by Microsoft 365 Defender to proactively look for specific threats in your environment. This is the method for advanced hunting in Microsoft 365 Defender. This method includes a query in Kusto Query Language (KQL). It specifies a data table in the advanced hunting schema and a piped sequence of operators to filter or search that data, and format the query output in specific ways.  Find out more about hunting for threats across devices, emails, apps, and identities. Learn about KQL. For information on using advanced hunting in the Microsoft 365 Defender portal, see Proactively hunt for threats with advanced hunting in Microsoft 365 Defender.
      * @param RunHuntingQueryPostRequestBody $body The request body
      * @param MicrosoftGraphSecurityRunHuntingQueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HuntingQueryResults|null>
@@ -46,7 +46,7 @@ class MicrosoftGraphSecurityRunHuntingQueryRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke action runHuntingQuery
+     * Queries a specified set of event, activity, or entity data supported by Microsoft 365 Defender to proactively look for specific threats in your environment. This is the method for advanced hunting in Microsoft 365 Defender. This method includes a query in Kusto Query Language (KQL). It specifies a data table in the advanced hunting schema and a piped sequence of operators to filter or search that data, and format the query output in specific ways.  Find out more about hunting for threats across devices, emails, apps, and identities. Learn about KQL. For information on using advanced hunting in the Microsoft 365 Defender portal, see Proactively hunt for threats with advanced hunting in Microsoft 365 Defender.
      * @param RunHuntingQueryPostRequestBody $body The request body
      * @param MicrosoftGraphSecurityRunHuntingQueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

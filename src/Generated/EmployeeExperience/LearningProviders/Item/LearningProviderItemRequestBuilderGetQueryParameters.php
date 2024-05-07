@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of learning providers.
+ * Read the properties and relationships of a learningProvider object.
 */
 class LearningProviderItemRequestBuilderGetQueryParameters 
 {

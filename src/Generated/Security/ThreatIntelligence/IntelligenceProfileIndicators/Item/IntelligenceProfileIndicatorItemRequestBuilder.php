@@ -53,10 +53,11 @@ class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IntelligenceProfileIndicator|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-intelligenceprofileindicator-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get intelligenceProfileIndicators from security
+     * Read the properties and relationships of a intelligenceProfileIndicator object.
      * @param IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

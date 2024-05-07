@@ -45,10 +45,11 @@ class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @param ManagedAppStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappstatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The managed app statuses.
+     * Read properties and relationships of the managedAppStatus object.
      * @param ManagedAppStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

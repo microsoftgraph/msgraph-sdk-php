@@ -45,10 +45,11 @@ class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of Cloud PC audit events.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      * @param CloudPcAuditEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcAuditEvent|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/cloudpcauditevent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CloudPcAuditEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class CloudPcAuditEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of Cloud PC audit events.
+     * Read the properties and relationships of a cloudPcAuditEvent object.
      * @param CloudPcAuditEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

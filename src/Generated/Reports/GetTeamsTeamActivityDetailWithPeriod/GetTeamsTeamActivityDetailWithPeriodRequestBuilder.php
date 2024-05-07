@@ -34,7 +34,7 @@ class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getTeamsTeamActivityDetail
+     * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
      * @param GetTeamsTeamActivityDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class GetTeamsTeamActivityDetailWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getTeamsTeamActivityDetail
+     * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
      * @param GetTeamsTeamActivityDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -39,10 +39,11 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property activityBasedTimeoutPolicies for policies
+     * Delete an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property activityBasedTimeoutPolicies in policies
+     * Update the properties of an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property activityBasedTimeoutPolicies for policies
+     * Delete an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that controls the idle time out for web sessions for applications.
+     * Get the properties of an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property activityBasedTimeoutPolicies in policies
+     * Update the properties of an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -31,10 +31,11 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property iosUpdateStatuses for deviceManagement
+     * Deletes a iosUpdateDeviceStatus.
      * @param IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      * @param IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosUpdateDeviceStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property iosUpdateStatuses in deviceManagement
+     * Update the properties of a iosUpdateDeviceStatus object.
      * @param IosUpdateDeviceStatus $body The request body
      * @param IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosUpdateDeviceStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-iosupdatedevicestatus-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IosUpdateDeviceStatus $body, ?IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property iosUpdateStatuses for deviceManagement
+     * Deletes a iosUpdateDeviceStatus.
      * @param IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The IOS software update installation statuses for this account.
+     * Read properties and relationships of the iosUpdateDeviceStatus object.
      * @param IosUpdateDeviceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property iosUpdateStatuses in deviceManagement
+     * Update the properties of a iosUpdateDeviceStatus object.
      * @param IosUpdateDeviceStatus $body The request body
      * @param IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

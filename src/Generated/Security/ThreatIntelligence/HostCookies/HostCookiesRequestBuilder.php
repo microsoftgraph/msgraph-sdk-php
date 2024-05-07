@@ -52,7 +52,7 @@ class HostCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      * @param HostCookiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostCookieCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class HostCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostCookie object.
      * @param HostCookiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

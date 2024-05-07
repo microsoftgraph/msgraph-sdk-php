@@ -36,7 +36,7 @@ class FilePlanAppliedCategory extends FilePlanDescriptorBase implements Parsable
     }
 
     /**
-     * Gets the subcategory property value. The subcategory property
+     * Gets the subcategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
      * @return FilePlanSubcategory|null
     */
     public function getSubcategory(): ?FilePlanSubcategory {
@@ -57,7 +57,7 @@ class FilePlanAppliedCategory extends FilePlanDescriptorBase implements Parsable
     }
 
     /**
-     * Sets the subcategory property value. The subcategory property
+     * Sets the subcategory property value. Represents the file plan descriptor for a subcategory under a specific category, which has been assigned to a particular retention label.
      * @param FilePlanSubcategory|null $value Value to set for the subcategory property.
     */
     public function setSubcategory(?FilePlanSubcategory $value): void {

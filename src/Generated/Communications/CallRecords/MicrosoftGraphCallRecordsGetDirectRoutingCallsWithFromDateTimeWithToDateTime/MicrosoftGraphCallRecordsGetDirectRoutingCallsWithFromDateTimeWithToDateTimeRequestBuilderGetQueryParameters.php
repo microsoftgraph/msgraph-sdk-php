@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCal
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getDirectRoutingCalls
+ * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
 */
 class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Users that are flagged as at-risk by Microsoft Entra ID Protection.
+ * Read the properties and relationships of a riskyUser object.
 */
 class RiskyUserItemRequestBuilderGetQueryParameters 
 {

@@ -52,10 +52,11 @@ class PayloadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign payload in a tenant.
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
      * @param PayloadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PayloadCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/attacksimulationroot-list-payloads?view=graph-rest-1.0 Find more info here
     */
     public function get(?PayloadsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class PayloadsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign payload in a tenant.
+     * Get a list of payloads for attack simulation campaigns. This operation expects the mandatory parameter source to filter and query the respective data source.
      * @param PayloadsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

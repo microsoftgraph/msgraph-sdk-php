@@ -26,7 +26,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Gets the appliesTo property value. Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @return array<DirectoryObject>|null
     */
     public function getAppliesTo(): ?array {
@@ -130,7 +130,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the appliesTo property value. Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Sets the appliesTo property value. Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?array $value): void {

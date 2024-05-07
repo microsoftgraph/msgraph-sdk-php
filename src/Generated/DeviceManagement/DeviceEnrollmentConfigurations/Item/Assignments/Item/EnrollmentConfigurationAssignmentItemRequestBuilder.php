@@ -31,10 +31,11 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a enrollmentConfigurationAssignment.
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EnrollmentConfigurationAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a enrollmentConfigurationAssignment object.
      * @param EnrollmentConfigurationAssignment $body The request body
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EnrollmentConfigurationAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EnrollmentConfigurationAssignment $body, ?EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a enrollmentConfigurationAssignment.
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * The list of group assignments for the device configuration profile
+     * Read properties and relationships of the enrollmentConfigurationAssignment object.
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a enrollmentConfigurationAssignment object.
      * @param EnrollmentConfigurationAssignment $body The request body
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -31,10 +31,11 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @param BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @param BookingCustomQuestionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCustomQuestion|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/bookingcustomquestion-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingCustomQuestionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param BookingCustomQuestion $body The request body
      * @param BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCustomQuestion|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/bookingcustomquestion-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingCustomQuestion $body, ?BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property customQuestions for solutions
+     * Delete a bookingCustomQuestion object.
      * @param BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the custom questions of this business. Read-only. Nullable.
+     * Read the properties and relationships of a bookingCustomQuestion object.
      * @param BookingCustomQuestionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property customQuestions in solutions
+     * Update the properties of a bookingCustomQuestion object.
      * @param BookingCustomQuestion $body The request body
      * @param BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefa
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
+ * Read the default configuration of a cross-tenant access policy. This default configuration may be the service default assigned by Microsoft Entra ID (isServiceDefault is true) or may be customized in your tenant (isServiceDefault is false).
 */
 class DefaultRequestBuilderGetQueryParameters 
 {

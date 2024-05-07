@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Members\GraphUser;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the items of type microsoft.graph.user in the microsoft.graph.directoryObject collection
+ * Get a list of the group's direct members. A group can have users, organizational contacts, devices, service principals and other groups as members. This operation is not transitive.
 */
 class GraphUserRequestBuilderGetQueryParameters 
 {

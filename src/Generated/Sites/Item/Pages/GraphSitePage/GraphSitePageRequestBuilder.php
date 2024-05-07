@@ -39,10 +39,11 @@ class GraphSitePageRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      * @param GraphSitePageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SitePageCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sitepage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GraphSitePageRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -53,7 +54,7 @@ class GraphSitePageRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the items of type microsoft.graph.sitePage in the microsoft.graph.baseSitePage collection
+     * Returns the metadata for a sitePage in the site pages list in a site.
      * @param GraphSitePageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

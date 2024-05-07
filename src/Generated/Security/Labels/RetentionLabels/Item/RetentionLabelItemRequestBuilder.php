@@ -55,10 +55,11 @@ class RetentionLabelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property retentionLabels for security
+     * Delete a retentionLabel object.
      * @param RetentionLabelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-retentionlabel-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RetentionLabelItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -83,11 +84,12 @@ class RetentionLabelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property retentionLabels in security
+     * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param RetentionLabel $body The request body
      * @param RetentionLabelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionLabel|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-retentionlabel-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(RetentionLabel $body, ?RetentionLabelItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class RetentionLabelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property retentionLabels for security
+     * Delete a retentionLabel object.
      * @param RetentionLabelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +139,7 @@ class RetentionLabelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property retentionLabels in security
+     * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param RetentionLabel $body The request body
      * @param RetentionLabelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

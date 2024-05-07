@@ -52,10 +52,11 @@ class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      * @param ContentSharingSessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentSharingSessionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/call-list-contentsharingsessions?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContentSharingSessionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class ContentSharingSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get contentSharingSessions from communications
+     * Retrieve a list of contentSharingSession objects in a call.
      * @param ContentSharingSessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The feature rollout policy associated with a directory object.
+ * Retrieve a list of featureRolloutPolicy objects.
 */
 class FeatureRolloutPoliciesRequestBuilderGetQueryParameters 
 {

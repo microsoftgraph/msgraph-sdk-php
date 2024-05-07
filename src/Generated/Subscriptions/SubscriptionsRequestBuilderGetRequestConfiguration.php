@@ -28,12 +28,16 @@ class SubscriptionsRequestBuilderGetRequestConfiguration extends BaseRequestConf
 
     /**
      * Instantiates a new SubscriptionsRequestBuilderGetQueryParameters.
+     * @param bool|null $count Include count of items
+     * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
+     * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
      * @return SubscriptionsRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?string $search = null, ?array $select = null): SubscriptionsRequestBuilderGetQueryParameters {
-        return new SubscriptionsRequestBuilderGetQueryParameters($search, $select);
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): SubscriptionsRequestBuilderGetQueryParameters {
+        return new SubscriptionsRequestBuilderGetQueryParameters($count, $filter, $search, $select, $skip, $top);
     }
 
 }

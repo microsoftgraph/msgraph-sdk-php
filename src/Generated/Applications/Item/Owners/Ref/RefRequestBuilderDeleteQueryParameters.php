@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Owners\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Delete ref of navigation property owners for applications
+ * Remove an owner from an application. As a recommended best practice, apps should have at least two owners.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

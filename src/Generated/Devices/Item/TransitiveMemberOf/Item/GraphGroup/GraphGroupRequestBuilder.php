@@ -31,10 +31,11 @@ class GraphGroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      * @param GraphGroupRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Group|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/device-list-transitivememberof?view=graph-rest-1.0 Find more info here
     */
     public function get(?GraphGroupRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class GraphGroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+     * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
      * @param GraphGroupRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

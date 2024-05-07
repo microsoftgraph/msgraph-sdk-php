@@ -53,10 +53,11 @@ class ArticleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of article objects.
+     * Read the properties and relationships of an article object.
      * @param ArticleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Article|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-article-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ArticleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class ArticleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of article objects.
+     * Read the properties and relationships of an article object.
      * @param ArticleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The Role Definitions.
+ * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
 */
 class RoleDefinitionsRequestBuilderGetQueryParameters 
 {

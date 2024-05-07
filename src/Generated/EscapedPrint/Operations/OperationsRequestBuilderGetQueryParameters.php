@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Operations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of print long running operations.
+ * Retrieve the properties and relationships of a printOperation object.
 */
 class OperationsRequestBuilderGetQueryParameters 
 {

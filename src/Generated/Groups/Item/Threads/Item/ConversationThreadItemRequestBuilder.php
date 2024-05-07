@@ -47,10 +47,11 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property threads for groups
+     * Delete conversationThread.
      * @param ConversationThreadItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConversationThreadItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -61,10 +62,11 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The group's conversation threads. Nullable.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param ConversationThreadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThread|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationThreadItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,11 +77,12 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property threads in groups
+     * Update conversation thread
      * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationThread|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0 Find more info here
     */
     public function patch(ConversationThread $body, ?ConversationThreadItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +93,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property threads for groups
+     * Delete conversationThread.
      * @param ConversationThreadItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -108,7 +111,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The group's conversation threads. Nullable.
+     * Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, you can specify the thread without referencing the parent conversation. 
      * @param ConversationThreadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,7 +132,7 @@ class ConversationThreadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property threads in groups
+     * Update conversation thread
      * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

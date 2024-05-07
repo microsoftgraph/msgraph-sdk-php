@@ -52,10 +52,11 @@ class TermsAndConditionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      * @param TermsAndConditionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermsAndConditionsCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TermsAndConditionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class TermsAndConditionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to termsAndConditions for deviceManagement
+     * Create a new termsAndConditions object.
      * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermsAndConditions|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditions-create?view=graph-rest-1.0 Find more info here
     */
     public function post(TermsAndConditions $body, ?TermsAndConditionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class TermsAndConditionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The terms and conditions associated with device management of the company.
+     * List properties and relationships of the termsAndConditions objects.
      * @param TermsAndConditionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class TermsAndConditionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to termsAndConditions for deviceManagement
+     * Create a new termsAndConditions object.
      * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

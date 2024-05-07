@@ -52,10 +52,11 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointmentCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/bookingbusiness-list-appointments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppointmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0 Find more info here
     */
     public function post(BookingAppointment $body, ?AppointmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the appointments of this business. Read-only. Nullable.
+     * Get a list of bookingAppointment objects for the specified bookingBusiness.
      * @param AppointmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class AppointmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appointments for solutions
+     * Create a new bookingAppointment for the specified bookingBusiness.
      * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

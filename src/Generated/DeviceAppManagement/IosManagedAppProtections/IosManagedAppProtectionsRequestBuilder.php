@@ -52,10 +52,11 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @param IosManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtectionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?IosManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtection|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0 Find more info here
     */
     public function post(IosManagedAppProtection $body, ?IosManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * iOS managed app policies.
+     * List properties and relationships of the iosManagedAppProtection objects.
      * @param IosManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
+     * Create a new iosManagedAppProtection object.
      * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

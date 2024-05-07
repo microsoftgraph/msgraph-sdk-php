@@ -62,10 +62,11 @@ class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Schedules for role eligibility operations.
+     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      * @param RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +92,7 @@ class RoleEligibilitySchedulesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Schedules for role eligibility operations.
+     * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      * @param RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -39,10 +39,11 @@ class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property featureRolloutPolicies for policies
+     * Delete a featureRolloutPolicy object.
      * @param FeatureRolloutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/featurerolloutpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?FeatureRolloutPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @param FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FeatureRolloutPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/featurerolloutpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property featureRolloutPolicies in policies
+     * Update the properties of featureRolloutPolicy object.
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FeatureRolloutPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/featurerolloutpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(FeatureRolloutPolicy $body, ?FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property featureRolloutPolicies for policies
+     * Delete a featureRolloutPolicy object.
      * @param FeatureRolloutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve the properties and relationships of a featureRolloutPolicy object.
      * @param FeatureRolloutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class FeatureRolloutPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property featureRolloutPolicies in policies
+     * Update the properties of featureRolloutPolicy object.
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

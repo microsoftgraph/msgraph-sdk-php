@@ -60,10 +60,11 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomAuthenticationExtensionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,11 +75,12 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customAuthenticationExtensions for identity
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param CustomAuthenticationExtension $body The request body
      * @param CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomAuthenticationExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0 Find more info here
     */
     public function post(CustomAuthenticationExtension $body, ?CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +91,7 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
      * @param CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +112,7 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customAuthenticationExtensions for identity
+     * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param CustomAuthenticationExtension $body The request body
      * @param CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

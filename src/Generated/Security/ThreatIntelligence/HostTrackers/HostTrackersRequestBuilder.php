@@ -52,7 +52,7 @@ class HostTrackersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      * @param HostTrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostTrackerCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class HostTrackersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostTracker object.
      * @param HostTrackersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

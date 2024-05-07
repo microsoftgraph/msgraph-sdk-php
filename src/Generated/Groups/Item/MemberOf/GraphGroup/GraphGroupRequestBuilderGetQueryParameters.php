@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\MemberOf\GraphGroup;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+ * Get groups that the group is a direct member of. This operation is not transitive. Unlike getting a user's Microsoft 365 groups, this returns all types of groups, not just Microsoft 365 groups.
 */
 class GraphGroupRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of users or groups not allowed to create posts or calendar events in this group. Nullable
+ * Users in the rejected senders list can't post to conversations of the group (identified in the GET request URL). Make sure you don't specify the same user or group in the rejected senders and accepted senders lists, otherwise you get an error.
 */
 class RefRequestBuilderGetQueryParameters 
 {

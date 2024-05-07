@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\GraphRoom;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the items of type microsoft.graph.room in the microsoft.graph.place collection
+ * Get a collection of the specified type of place objects defined in the tenant. For example, you can get all the rooms, all the room lists, or the rooms in a specific room list in the tenant. A place object can be one of the following types: Both room and roomList are derived from the place object. By default, this operation returns 100 places per page. Compared with the findRooms and findRoomLists functions, this operation returns a richer payload for rooms and room lists. See details for how they compare.
 */
 class GraphRoomRequestBuilderGetQueryParameters 
 {

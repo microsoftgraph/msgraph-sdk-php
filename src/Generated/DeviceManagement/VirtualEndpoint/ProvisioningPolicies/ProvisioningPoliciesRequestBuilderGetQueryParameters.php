@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\Provisionin
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of Cloud PC provisioning policies.
+ * List properties and relationships of the cloudPcProvisioningPolicy objects.
 */
 class ProvisioningPoliciesRequestBuilderGetQueryParameters 
 {

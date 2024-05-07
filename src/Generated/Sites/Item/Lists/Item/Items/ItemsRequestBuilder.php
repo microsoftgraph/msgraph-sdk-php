@@ -44,7 +44,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items{?%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -62,10 +62,11 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All items contained in the list.
+     * Get the collection of items in a list.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListItemCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,11 +77,12 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to items for sites
+     * Create a new listItem in a list.
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListItem|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +93,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All items contained in the list.
+     * Get the collection of items in a list.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +114,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to items for sites
+     * Create a new listItem in a list.
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

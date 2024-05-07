@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Cooki
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The hostCookies that are associated with this host.
+ * Get a list of hostCookie resources.
 */
 class CookiesRequestBuilderGetQueryParameters 
 {

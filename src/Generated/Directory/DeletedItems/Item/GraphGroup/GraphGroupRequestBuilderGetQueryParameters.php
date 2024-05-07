@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphGroup;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+ * Retrieve a list of recently deleted directory objects. Currently, deleted items functionality is only supported for the application, servicePrincipal, group, administrative unit, and user resources.
 */
 class GraphGroupRequestBuilderGetQueryParameters 
 {

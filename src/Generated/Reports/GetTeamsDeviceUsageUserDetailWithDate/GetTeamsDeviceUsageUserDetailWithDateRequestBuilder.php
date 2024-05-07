@@ -35,7 +35,7 @@ class GetTeamsDeviceUsageUserDetailWithDateRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getTeamsDeviceUsageUserDetail
+     * Get details about Microsoft Teams device usage by user.
      * @param GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -51,7 +51,7 @@ class GetTeamsDeviceUsageUserDetailWithDateRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getTeamsDeviceUsageUserDetail
+     * Get details about Microsoft Teams device usage by user.
      * @param GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

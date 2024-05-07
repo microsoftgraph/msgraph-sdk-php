@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns a list of ediscoveryReviewTag objects associated to this case.
+ * Get a list of eDiscoveryReviewTag objects and their properties.
 */
 class TagsRequestBuilderGetQueryParameters 
 {

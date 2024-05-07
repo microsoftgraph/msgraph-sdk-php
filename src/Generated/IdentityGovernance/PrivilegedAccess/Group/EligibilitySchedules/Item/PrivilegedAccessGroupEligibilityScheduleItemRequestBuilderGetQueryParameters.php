@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\El
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The eligibility schedules to activate a just-in-time access.
+ * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
 */
 class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetQueryParameters 
 {

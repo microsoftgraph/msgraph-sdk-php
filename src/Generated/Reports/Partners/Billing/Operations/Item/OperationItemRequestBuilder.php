@@ -45,10 +45,11 @@ class OperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an operation to export the billing data of a partner.
+     * Read the properties and relationships of an operation object.
      * @param OperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Operation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/partners-billing-operation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class OperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an operation to export the billing data of a partner.
+     * Read the properties and relationships of an operation object.
      * @param OperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSess
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get contentSharingSessions from communications
+ * Retrieve the properties of a contentSharingSession object in a call.
 */
 class ContentSharingSessionItemRequestBuilderGetQueryParameters 
 {

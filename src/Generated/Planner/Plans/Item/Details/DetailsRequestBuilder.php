@@ -45,10 +45,11 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Extra details about the plan.
+     * Retrieve the properties and relationships of a plannerPlanDetails object.
      * @param DetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerPlanDetails|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/plannerplandetails-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property details in planner
+     * Update the properties of plannerplandetails object.
      * @param PlannerPlanDetails $body The request body
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerPlanDetails|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/plannerplandetails-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerPlanDetails $body, ?DetailsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Extra details about the plan.
+     * Retrieve the properties and relationships of a plannerPlanDetails object.
      * @param DetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property details in planner
+     * Update the properties of plannerplandetails object.
      * @param PlannerPlanDetails $body The request body
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

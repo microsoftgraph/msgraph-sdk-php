@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Connectors\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of available print connectors.
+ * Retrieve the properties and relationships of a printConnector object.
 */
 class PrintConnectorItemRequestBuilderGetQueryParameters 
 {

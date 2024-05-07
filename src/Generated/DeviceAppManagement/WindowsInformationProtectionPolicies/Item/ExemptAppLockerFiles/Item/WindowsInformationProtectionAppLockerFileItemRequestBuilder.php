@@ -31,10 +31,11 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     }
 
     /**
-     * Delete navigation property exemptAppLockerFiles for deviceAppManagement
+     * Deletes a windowsInformationProtectionAppLockerFile.
      * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     }
 
     /**
-     * Another way to input exempt apps through xml files
+     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
      * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLockerFile|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     }
 
     /**
-     * Update the navigation property exemptAppLockerFiles in deviceAppManagement
+     * Update the properties of a windowsInformationProtectionAppLockerFile object.
      * @param WindowsInformationProtectionAppLockerFile $body The request body
      * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLockerFile|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WindowsInformationProtectionAppLockerFile $body, ?WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     }
 
     /**
-     * Delete navigation property exemptAppLockerFiles for deviceAppManagement
+     * Deletes a windowsInformationProtectionAppLockerFile.
      * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     }
 
     /**
-     * Another way to input exempt apps through xml files
+     * Read properties and relationships of the windowsInformationProtectionAppLockerFile object.
      * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     }
 
     /**
-     * Update the navigation property exemptAppLockerFiles in deviceAppManagement
+     * Update the properties of a windowsInformationProtectionAppLockerFile object.
      * @param WindowsInformationProtectionAppLockerFile $body The request body
      * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

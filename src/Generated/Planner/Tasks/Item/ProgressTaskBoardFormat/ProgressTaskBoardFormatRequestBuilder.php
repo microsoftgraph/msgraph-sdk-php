@@ -45,10 +45,11 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
      * @param ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerProgressTaskBoardTaskFormat|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of plannerProgressTaskBoardTaskFormat object.
      * @param PlannerProgressTaskBoardTaskFormat $body The request body
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerProgressTaskBoardTaskFormat|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerProgressTaskBoardTaskFormat $body, ?ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
+     * Retrieve the properties and relationships of plannerProgressTaskBoardTaskFormat object.
      * @param ProgressTaskBoardFormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class ProgressTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property progressTaskBoardFormat in planner
+     * Update the properties of plannerProgressTaskBoardTaskFormat object.
      * @param PlannerProgressTaskBoardTaskFormat $body The request body
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

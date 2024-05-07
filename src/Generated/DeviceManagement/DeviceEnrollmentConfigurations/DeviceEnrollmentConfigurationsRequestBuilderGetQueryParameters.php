@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of device enrollment configurations
+ * List properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration objects.
 */
 class DeviceEnrollmentConfigurationsRequestBuilderGetQueryParameters 
 {

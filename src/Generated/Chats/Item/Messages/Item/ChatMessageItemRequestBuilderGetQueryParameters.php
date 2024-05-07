@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of all the messages in the chat. Nullable.
+ * Retrieve a single message or a message reply in a channel or a chat.
 */
 class ChatMessageItemRequestBuilderGetQueryParameters 
 {

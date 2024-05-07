@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get webinars from solutions
+ * Read the properties and relationships of a virtualEventWebinar object.
 */
 class VirtualEventWebinarItemRequestBuilderGetQueryParameters 
 {

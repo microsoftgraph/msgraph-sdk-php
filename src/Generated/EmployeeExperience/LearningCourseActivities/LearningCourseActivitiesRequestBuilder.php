@@ -52,7 +52,7 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get learningCourseActivities from employeeExperience
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param LearningCourseActivitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningCourseActivityCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class LearningCourseActivitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get learningCourseActivities from employeeExperience
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param LearningCourseActivitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

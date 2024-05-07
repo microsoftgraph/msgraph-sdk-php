@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Planner\Plans;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only. Nullable. Returns the plannerPlans owned by the group.
+ * Retrieve a list of plannerPlan objects owned by a group object.
 */
 class PlansRequestBuilderGetQueryParameters 
 {

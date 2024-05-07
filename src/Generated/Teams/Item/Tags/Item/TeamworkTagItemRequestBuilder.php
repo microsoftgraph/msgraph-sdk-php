@@ -39,10 +39,11 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tags for teams
+     * Delete a tag object permanently.
      * @param TeamworkTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktag-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TeamworkTagItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The tags associated with the team.
+     * Read the properties and relationships of a tag object.
      * @param TeamworkTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTag|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktag-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamworkTagItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tags in teams
+     * Update the properties of a tag object.
      * @param TeamworkTag $body The request body
      * @param TeamworkTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTag|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktag-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TeamworkTag $body, ?TeamworkTagItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tags for teams
+     * Delete a tag object permanently.
      * @param TeamworkTagItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The tags associated with the team.
+     * Read the properties and relationships of a tag object.
      * @param TeamworkTagItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class TeamworkTagItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tags in teams
+     * Update the properties of a tag object.
      * @param TeamworkTag $body The request body
      * @param TeamworkTagItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

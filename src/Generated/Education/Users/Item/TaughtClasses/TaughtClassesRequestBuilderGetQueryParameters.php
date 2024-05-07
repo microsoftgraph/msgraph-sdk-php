@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\TaughtClasses;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Classes for which the user is a teacher.
+ * Get the educationClass resources owned by an educationUser.
 */
 class TaughtClassesRequestBuilderGetQueryParameters 
 {

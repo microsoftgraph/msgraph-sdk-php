@@ -52,10 +52,11 @@ class LearningProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of learning providers.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @param LearningProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningProviderCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/employeeexperience-list-learningproviders?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningProvidersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class LearningProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to learningProviders for employeeExperience
+     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param LearningProvider $body The request body
      * @param LearningProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningProvider|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/employeeexperience-post-learningproviders?view=graph-rest-1.0 Find more info here
     */
     public function post(LearningProvider $body, ?LearningProvidersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class LearningProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of learning providers.
+     * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
      * @param LearningProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class LearningProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to learningProviders for employeeExperience
+     * Create a new learningProvider object and register it with Viva Learning using the specified display name and logos for different themes.
      * @param LearningProvider $body The request body
      * @param LearningProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

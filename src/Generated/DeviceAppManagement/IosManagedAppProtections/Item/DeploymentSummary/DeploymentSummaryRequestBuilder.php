@@ -45,10 +45,11 @@ class DeploymentSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @param DeploymentSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppPolicyDeploymentSummary|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeploymentSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class DeploymentSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deploymentSummary in deviceAppManagement
+     * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param ManagedAppPolicyDeploymentSummary $body The request body
      * @param DeploymentSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppPolicyDeploymentSummary|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-managedapppolicydeploymentsummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedAppPolicyDeploymentSummary $body, ?DeploymentSummaryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class DeploymentSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Navigation property to deployment summary of the configuration.
+     * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
      * @param DeploymentSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class DeploymentSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deploymentSummary in deviceAppManagement
+     * Update the properties of a managedAppPolicyDeploymentSummary object.
      * @param ManagedAppPolicyDeploymentSummary $body The request body
      * @param DeploymentSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

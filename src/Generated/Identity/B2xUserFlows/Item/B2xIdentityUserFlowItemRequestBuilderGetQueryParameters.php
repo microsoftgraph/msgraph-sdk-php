@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents entry point for B2X/self-service sign-up identity userflows.
+ * Retrieve the properties and relationships of a b2xIdentityUserFlow object.
 */
 class B2xIdentityUserFlowItemRequestBuilderGetQueryParameters 
 {

@@ -52,10 +52,11 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of all groups available in the term store.
+     * Get a list of group objects in a term store.
      * @param GroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/termstore-list-groups?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to groups for sites
+     * Create a new group object in a term store.
      * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Group|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/termstore-group-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Group $body, ?GroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of all groups available in the term store.
+     * Get a list of group objects in a term store.
      * @param GroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to groups for sites
+     * Create a new group object in a term store.
      * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

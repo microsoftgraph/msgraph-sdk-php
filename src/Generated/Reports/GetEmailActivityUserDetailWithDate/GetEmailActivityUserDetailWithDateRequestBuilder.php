@@ -35,7 +35,7 @@ class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Invoke function getEmailActivityUserDetail
+     * Get details about email activity users have performed.
      * @param GetEmailActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -51,7 +51,7 @@ class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Invoke function getEmailActivityUserDetail
+     * Get details about email activity users have performed.
      * @param GetEmailActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

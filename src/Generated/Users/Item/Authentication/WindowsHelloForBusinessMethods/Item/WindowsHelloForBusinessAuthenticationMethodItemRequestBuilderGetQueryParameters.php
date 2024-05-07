@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBus
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+ * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
 */
 class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetQueryParameters 
 {

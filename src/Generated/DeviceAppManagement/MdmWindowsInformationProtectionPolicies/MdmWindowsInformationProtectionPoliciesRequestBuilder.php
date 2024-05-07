@@ -52,10 +52,11 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
      * @param MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MdmWindowsInformationProtectionPolicyCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Create a new mdmWindowsInformationProtectionPolicy object.
      * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MdmWindowsInformationProtectionPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-mdmwindowsinformationprotectionpolicy-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * List properties and relationships of the mdmWindowsInformationProtectionPolicy objects.
      * @param MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
+     * Create a new mdmWindowsInformationProtectionPolicy object.
      * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

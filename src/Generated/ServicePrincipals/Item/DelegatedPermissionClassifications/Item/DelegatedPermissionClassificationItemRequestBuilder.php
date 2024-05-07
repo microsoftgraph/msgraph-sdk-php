@@ -31,10 +31,11 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -74,7 +75,7 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property delegatedPermissionClassifications for servicePrincipals
+     * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
      * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

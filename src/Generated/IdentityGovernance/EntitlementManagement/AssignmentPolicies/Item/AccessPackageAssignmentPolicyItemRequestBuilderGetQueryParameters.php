@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+ * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
 */
 class AccessPackageAssignmentPolicyItemRequestBuilderGetQueryParameters 
 {

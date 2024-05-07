@@ -59,10 +59,11 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get tokenIssuancePolicies from applications
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TokenIssuancePolicyCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/application-list-tokenissuancepolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?TokenIssuancePoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +74,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get tokenIssuancePolicies from applications
+     * List the tokenIssuancePolicy objects that are assigned to an application.
      * @param TokenIssuancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

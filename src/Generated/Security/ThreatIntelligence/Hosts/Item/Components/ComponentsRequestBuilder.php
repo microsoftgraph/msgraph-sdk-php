@@ -51,10 +51,11 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      * @param ComponentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostComponentCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-host-list-components?view=graph-rest-1.0 Find more info here
     */
     public function get(?ComponentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +66,7 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The hostComponents that are associated with this host.
+     * Get a list of hostComponent resources.
      * @param ComponentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

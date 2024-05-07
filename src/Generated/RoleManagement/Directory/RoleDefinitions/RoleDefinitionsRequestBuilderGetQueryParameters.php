@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+ * Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:- directory (Microsoft Entra ID)- entitlement management (Microsoft Entra Entitlement Management)
 */
 class RoleDefinitionsRequestBuilderGetQueryParameters 
 {

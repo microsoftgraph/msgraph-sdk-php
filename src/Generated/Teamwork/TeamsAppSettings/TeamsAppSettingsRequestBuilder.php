@@ -45,10 +45,11 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param TeamsAppSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAppSettings|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamsappsettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamsAppSettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param TeamsAppSettings $body The request body
      * @param TeamsAppSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAppSettings|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamsappsettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TeamsAppSettings $body, ?TeamsAppSettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents tenant-wide settings for all Teams apps in the tenant.
+     * Get the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param TeamsAppSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class TeamsAppSettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property teamsAppSettings in teamwork
+     * Update the tenant-wide teamsAppSettings for all Teams apps in the tenant.
      * @param TeamsAppSettings $body The request body
      * @param TeamsAppSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

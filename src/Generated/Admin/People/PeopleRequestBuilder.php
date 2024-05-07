@@ -47,10 +47,11 @@ class PeopleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param PeopleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PeopleAdminSettings|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/peopleadminsettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PeopleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,7 +62,7 @@ class PeopleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a setting to control people-related admin settings in the tenant.
+     * Retrieve the properties and relationships of a peopleAdminSettings object.
      * @param PeopleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

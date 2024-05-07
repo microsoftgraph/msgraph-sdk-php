@@ -31,10 +31,11 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property fido2Methods for users
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -59,7 +60,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property fido2Methods for users
+     * Deletes a user's FIDO2 Security Key Authentication Method object.
      * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

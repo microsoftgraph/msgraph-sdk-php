@@ -31,10 +31,11 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property complianceManagementPartners for deviceManagement
+     * Deletes a complianceManagementPartner.
      * @param ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      * @param ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartner|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property complianceManagementPartners in deviceManagement
+     * Update the properties of a complianceManagementPartner object.
      * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartner|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ComplianceManagementPartner $body, ?ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property complianceManagementPartners for deviceManagement
+     * Deletes a complianceManagementPartner.
      * @param ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of Compliance Management Partners configured by the tenant.
+     * Read properties and relationships of the complianceManagementPartner object.
      * @param ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property complianceManagementPartners in deviceManagement
+     * Update the properties of a complianceManagementPartner object.
      * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

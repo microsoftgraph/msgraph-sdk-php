@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Zero or more long running operations triggered on the app registration.
+ * List properties and relationships of the managedAppOperation objects.
 */
 class OperationsRequestBuilderGetQueryParameters 
 {

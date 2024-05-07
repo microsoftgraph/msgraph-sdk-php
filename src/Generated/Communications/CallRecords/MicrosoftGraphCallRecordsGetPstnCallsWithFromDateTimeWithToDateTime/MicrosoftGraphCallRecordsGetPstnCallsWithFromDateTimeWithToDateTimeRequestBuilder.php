@@ -36,7 +36,7 @@ class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequest
     }
 
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      * @param MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequest
     }
 
     /**
-     * Invoke function getPstnCalls
+     * Get log of PSTN calls as a collection of pstnCallLogRow entries.
      * @param MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

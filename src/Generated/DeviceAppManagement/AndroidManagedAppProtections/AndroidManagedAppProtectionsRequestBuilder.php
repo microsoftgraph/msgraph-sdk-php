@@ -52,10 +52,11 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Android managed app policies.
+     * List properties and relationships of the androidManagedAppProtection objects.
      * @param AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AndroidManagedAppProtectionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to androidManagedAppProtections for deviceAppManagement
+     * Create a new androidManagedAppProtection object.
      * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AndroidManagedAppProtection|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-androidmanagedappprotection-create?view=graph-rest-1.0 Find more info here
     */
     public function post(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Android managed app policies.
+     * List properties and relationships of the androidManagedAppProtection objects.
      * @param AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to androidManagedAppProtections for deviceAppManagement
+     * Create a new androidManagedAppProtection object.
      * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
