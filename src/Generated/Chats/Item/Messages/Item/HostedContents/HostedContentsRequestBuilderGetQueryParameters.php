@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\HostedContents;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+ * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content.
 */
 class HostedContentsRequestBuilderGetQueryParameters 
 {

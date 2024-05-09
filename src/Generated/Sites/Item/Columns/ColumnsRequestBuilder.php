@@ -52,10 +52,11 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of column definitions reusable across lists under this site.
+     * Get the collection of columns represented as columnDefinition resources in a site.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinitionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-list-columns?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to columns for sites
+     * Create a column for a site with a request that specifies a columnDefinition.
      * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0 Find more info here
     */
     public function post(ColumnDefinition $body, ?ColumnsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of column definitions reusable across lists under this site.
+     * Get the collection of columns represented as columnDefinition resources in a site.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to columns for sites
+     * Create a column for a site with a request that specifies a columnDefinition.
      * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

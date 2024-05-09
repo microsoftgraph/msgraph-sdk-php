@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents an attack simulation training login page.
+ * Get a list of the loginPage objects and their properties.
 */
 class LoginPagesRequestBuilderGetQueryParameters 
 {

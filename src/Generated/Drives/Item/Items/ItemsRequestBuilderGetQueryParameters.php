@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * All items contained in the drive. Read-only. Nullable.
+ * Get a list of driveItem objects shared with the owner of a drive. The driveItems returned from the sharedWithMe method always include the remoteItem facet that indicates they are items from a different drive.
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

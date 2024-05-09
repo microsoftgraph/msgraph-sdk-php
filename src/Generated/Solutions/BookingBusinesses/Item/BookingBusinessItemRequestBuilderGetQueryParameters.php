@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get bookingBusinesses from solutions
+ * Get the properties and relationships of a bookingBusiness object.
 */
 class BookingBusinessItemRequestBuilderGetQueryParameters 
 {

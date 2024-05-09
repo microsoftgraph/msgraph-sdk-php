@@ -39,11 +39,12 @@ class CommentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Sets a new value for the collection of alertComment.
+     * Create a comment for an existing alert based on the specified alert id property.
      * @param array<AlertComment> $body The request body
      * @param CommentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<array<AlertComment>|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-alert-post-comments?view=graph-rest-1.0 Find more info here
     */
     public function post(array $body, ?CommentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -54,7 +55,7 @@ class CommentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Sets a new value for the collection of alertComment.
+     * Create a comment for an existing alert based on the specified alert id property.
      * @param array<AlertComment> $body The request body
      * @param CommentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

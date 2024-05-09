@@ -52,10 +52,11 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified plans
+     * Get a list of plannerPlan objects.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerPlanCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0 Find more info here
     */
     public function get(?PlansRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to plans for planner
+     * Create a new plannerPlan object.
      * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerPlan|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0 Find more info here
     */
     public function post(PlannerPlan $body, ?PlansRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified plans
+     * Get a list of plannerPlan objects.
      * @param PlansRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to plans for planner
+     * Create a new plannerPlan object.
      * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

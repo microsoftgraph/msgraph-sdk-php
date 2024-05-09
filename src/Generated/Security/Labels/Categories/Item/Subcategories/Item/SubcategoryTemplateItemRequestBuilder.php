@@ -45,10 +45,11 @@ class SubcategoryTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subcategories from security
+     * Read the properties and relationships of a subcategoryTemplate object.
      * @param SubcategoryTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SubcategoryTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-subcategorytemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubcategoryTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class SubcategoryTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subcategories from security
+     * Read the properties and relationships of a subcategoryTemplate object.
      * @param SubcategoryTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

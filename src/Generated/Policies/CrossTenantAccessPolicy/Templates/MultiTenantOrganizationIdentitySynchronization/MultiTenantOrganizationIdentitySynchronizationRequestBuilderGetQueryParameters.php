@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Templates\M
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines an optional cross-tenant access policy template with user synchronization settings for a multitenant organization.
+ * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
 */
 class MultiTenantOrganizationIdentitySynchronizationRequestBuilderGetQueryParameters 
 {

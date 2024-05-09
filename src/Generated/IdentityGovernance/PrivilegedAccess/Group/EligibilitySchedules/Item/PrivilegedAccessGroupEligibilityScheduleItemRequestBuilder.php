@@ -61,10 +61,11 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
     }
 
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilitySchedule|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
     }
 
     /**
-     * The eligibility schedules to activate a just-in-time access.
+     * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
      * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

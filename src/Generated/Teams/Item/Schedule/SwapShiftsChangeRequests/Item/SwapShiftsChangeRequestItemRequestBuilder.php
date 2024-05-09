@@ -45,10 +45,11 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param SwapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SwapShiftsChangeRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/swapshiftschangerequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SwapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The swap requests for shifts in the schedule.
+     * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
      * @param SwapShiftsChangeRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,10 +53,11 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a 404 Not Found error is returned.
      * @param AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewHistoryDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accessreviewhistorydefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of access review history data and the scopes used to collect that data.
+     * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a 404 Not Found error is returned.
      * @param AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

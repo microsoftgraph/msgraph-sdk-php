@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents entry point for API connectors.
+ * Read the properties of an identityApiConnector object.
 */
 class IdentityApiConnectorItemRequestBuilderGetQueryParameters 
 {

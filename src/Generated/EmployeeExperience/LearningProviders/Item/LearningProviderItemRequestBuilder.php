@@ -49,10 +49,11 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property learningProviders for employeeExperience
+     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @param LearningProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/employeeexperience-delete-learningproviders?view=graph-rest-1.0 Find more info here
     */
     public function delete(?LearningProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -63,10 +64,11 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      * @param LearningProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningProvider|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/learningprovider-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningProviderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,11 +97,12 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property learningProviders in employeeExperience
+     * Update the properties of a learningProvider object.
      * @param LearningProvider $body The request body
      * @param LearningProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningProvider|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/learningprovider-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LearningProvider $body, ?LearningProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -110,7 +113,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property learningProviders for employeeExperience
+     * Delete a learningProvider resource and remove its registration in Viva Learning for a tenant.
      * @param LearningProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +131,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of learning providers.
+     * Read the properties and relationships of a learningProvider object.
      * @param LearningProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,7 +152,7 @@ class LearningProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property learningProviders in employeeExperience
+     * Update the properties of a learningProvider object.
      * @param LearningProvider $body The request body
      * @param LearningProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

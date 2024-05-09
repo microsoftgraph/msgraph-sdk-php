@@ -52,10 +52,11 @@ class IntelProfilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of intelligenceProfile objects.
+     * Get a list of the intelligenceProfile objects and their properties.
      * @param IntelProfilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IntelligenceProfileCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-threatintelligence-list-intelprofiles?view=graph-rest-1.0 Find more info here
     */
     public function get(?IntelProfilesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class IntelProfilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of intelligenceProfile objects.
+     * Get a list of the intelligenceProfile objects and their properties.
      * @param IntelProfilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

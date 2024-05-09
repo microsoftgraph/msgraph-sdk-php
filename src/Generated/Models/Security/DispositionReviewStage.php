@@ -73,7 +73,7 @@ class DispositionReviewStage extends Entity implements Parsable
     }
 
     /**
-     * Gets the stageNumber property value. The sequence number for each stage of the disposition review.
+     * Gets the stageNumber property value. The unique sequence number for each stage of the disposition review.
      * @return string|null
     */
     public function getStageNumber(): ?string {
@@ -112,7 +112,7 @@ class DispositionReviewStage extends Entity implements Parsable
     }
 
     /**
-     * Sets the stageNumber property value. The sequence number for each stage of the disposition review.
+     * Sets the stageNumber property value. The unique sequence number for each stage of the disposition review.
      * @param string|null $value Value to set for the stageNumber property.
     */
     public function setStageNumber(?string $value): void {

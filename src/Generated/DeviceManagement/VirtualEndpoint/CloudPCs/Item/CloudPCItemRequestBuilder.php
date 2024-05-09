@@ -85,10 +85,11 @@ class CloudPCItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      * @param CloudPCItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPC|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CloudPCItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -132,7 +133,7 @@ class CloudPCItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of cloud-managed virtual desktops.
+     * Read the properties and relationships of a specific cloudPC object.
      * @param CloudPCItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

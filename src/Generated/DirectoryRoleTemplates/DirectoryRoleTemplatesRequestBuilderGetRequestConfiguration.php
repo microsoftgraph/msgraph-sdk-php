@@ -35,10 +35,11 @@ class DirectoryRoleTemplatesRequestBuilderGetRequestConfiguration extends BaseRe
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
      * @return DirectoryRoleTemplatesRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null): DirectoryRoleTemplatesRequestBuilderGetQueryParameters {
-        return new DirectoryRoleTemplatesRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DirectoryRoleTemplatesRequestBuilderGetQueryParameters {
+        return new DirectoryRoleTemplatesRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

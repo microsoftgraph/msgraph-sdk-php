@@ -52,10 +52,11 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions associated with the site. Nullable.
+     * Get the permission resources from the permissions navigation property on a site.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-list-permissions?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to permissions for sites
+     * Create a new permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Permission|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0 Find more info here
     */
     public function post(Permission $body, ?PermissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions associated with the site. Nullable.
+     * Get the permission resources from the permissions navigation property on a site.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to permissions for sites
+     * Create a new permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

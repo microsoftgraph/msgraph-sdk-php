@@ -53,10 +53,11 @@ class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @param ArticleIndicatorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ArticleIndicator|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-articleindicator-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ArticleIndicatorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class ArticleIndicatorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @param ArticleIndicatorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

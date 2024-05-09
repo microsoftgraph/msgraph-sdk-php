@@ -52,10 +52,11 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The tags associated with the team.
+     * Get a list of the tag objects and their properties.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTagCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktag-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TagsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to tags for teams
+     * Create a standard tag for members in a team.
      * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTag|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamworkTag $body, ?TagsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The tags associated with the team.
+     * Get a list of the tag objects and their properties.
      * @param TagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class TagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to tags for teams
+     * Create a standard tag for members in a team.
      * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The Audit Events
+ * List properties and relationships of the auditEvent objects.
 */
 class AuditEventsRequestBuilderGetQueryParameters 
 {

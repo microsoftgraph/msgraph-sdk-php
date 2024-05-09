@@ -31,10 +31,11 @@ class CitationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property citations for security
+     * Delete a citationTemplate object.
      * @param CitationTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CitationTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class CitationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      * @param CitationTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CitationTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CitationTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class CitationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property citations for security
+     * Delete a citationTemplate object.
      * @param CitationTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class CitationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
+     * Read the properties and relationships of a citationTemplate object.
      * @param CitationTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

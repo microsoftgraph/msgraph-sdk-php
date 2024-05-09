@@ -47,10 +47,11 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property sharedWithTeams for teams
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a membershipType value of shared.
      * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -61,10 +62,11 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharedWithChannelTeamInfo|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +92,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property sharedWithTeams for teams
+     * Unshare a channel with a team by deleting the corresponding sharedWithChannelTeamInfo resource. This operation is allowed only for channels with a membershipType value of shared.
      * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -108,7 +110,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of teams with which a channel is shared.
+     * Get a team that has been shared with a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

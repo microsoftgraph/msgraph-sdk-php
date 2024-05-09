@@ -52,7 +52,7 @@ class ManifestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      * @param ManifestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManifestCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class ManifestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents metadata for the exported data.
+     * Read the properties and relationships of a manifest object.
      * @param ManifestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

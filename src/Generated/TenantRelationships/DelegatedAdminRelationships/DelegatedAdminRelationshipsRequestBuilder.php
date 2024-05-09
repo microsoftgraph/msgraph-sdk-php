@@ -52,10 +52,11 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantrelationship-list-delegatedadminrelationships?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationship|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0 Find more info here
     */
     public function post(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
+     * Get a list of the delegatedAdminRelationship objects and their properties.
      * @param DelegatedAdminRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to delegatedAdminRelationships for tenantRelationships
+     * Create a new delegatedAdminRelationship object.
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

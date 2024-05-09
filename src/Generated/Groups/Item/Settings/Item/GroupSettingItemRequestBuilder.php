@@ -45,10 +45,11 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param GroupSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupSetting|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/groupsetting-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupSettingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in groups
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupSetting|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(GroupSetting $body, ?GroupSettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Retrieve the properties of a specific group setting object. The setting can be a tenant-level or group-specific setting.
      * @param GroupSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class GroupSettingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in groups
+     * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
      * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

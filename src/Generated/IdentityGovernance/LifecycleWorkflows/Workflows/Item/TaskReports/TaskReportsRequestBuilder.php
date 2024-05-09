@@ -53,10 +53,11 @@ class TaskReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the aggregation of task execution data for tasks within a workflow object.
+     * Get a list of the taskReport objects and their properties.
      * @param TaskReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TaskReportCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-list-taskreports?view=graph-rest-1.0 Find more info here
     */
     public function get(?TaskReportsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,7 +78,7 @@ class TaskReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the aggregation of task execution data for tasks within a workflow object.
+     * Get a list of the taskReport objects and their properties.
      * @param TaskReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

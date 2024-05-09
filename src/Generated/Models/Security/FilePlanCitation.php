@@ -25,7 +25,7 @@ class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
     }
 
     /**
-     * Gets the citationJurisdiction property value. The citationJurisdiction property
+     * Gets the citationJurisdiction property value. Represents the jurisdiction or agency that published the filePlanCitation.
      * @return string|null
     */
     public function getCitationJurisdiction(): ?string {
@@ -37,7 +37,7 @@ class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
     }
 
     /**
-     * Gets the citationUrl property value. The citationUrl property
+     * Gets the citationUrl property value. Represents the URL to the published filePlanCitation.
      * @return string|null
     */
     public function getCitationUrl(): ?string {
@@ -71,7 +71,7 @@ class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
     }
 
     /**
-     * Sets the citationJurisdiction property value. The citationJurisdiction property
+     * Sets the citationJurisdiction property value. Represents the jurisdiction or agency that published the filePlanCitation.
      * @param string|null $value Value to set for the citationJurisdiction property.
     */
     public function setCitationJurisdiction(?string $value): void {
@@ -79,7 +79,7 @@ class FilePlanCitation extends FilePlanDescriptorBase implements Parsable
     }
 
     /**
-     * Sets the citationUrl property value. The citationUrl property
+     * Sets the citationUrl property value. Represents the URL to the published filePlanCitation.
      * @param string|null $value Value to set for the citationUrl property.
     */
     public function setCitationUrl(?string $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
+ * Get all the threads in a group conversation. Note: You can also get all the threads of a group.
 */
 class ThreadsRequestBuilderGetQueryParameters 
 {
@@ -34,6 +34,12 @@ class ThreadsRequestBuilderGetQueryParameters
     public ?array $orderby = null;
     
     /**
+     * @QueryParameter("%24search")
+     * @var string|null $search Search items by search phrases
+    */
+    public ?string $search = null;
+    
+    /**
      * @QueryParameter("%24select")
      * @var array<string>|null $select Select properties to be returned
     */
@@ -57,15 +63,17 @@ class ThreadsRequestBuilderGetQueryParameters
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
+     * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
         $this->expand = $expand;
         $this->filter = $filter;
         $this->orderby = $orderby;
+        $this->search = $search;
         $this->select = $select;
         $this->skip = $skip;
         $this->top = $top;

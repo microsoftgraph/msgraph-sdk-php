@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthentic
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The details of the Microsoft Authenticator app registered to a user for authentication.
+ * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
 */
 class MicrosoftAuthenticatorMethodsRequestBuilderGetQueryParameters 
 {

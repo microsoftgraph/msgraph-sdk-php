@@ -35,10 +35,11 @@ class DirectoryRolesRequestBuilderGetRequestConfiguration extends BaseRequestCon
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
      * @return DirectoryRolesRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null): DirectoryRolesRequestBuilderGetQueryParameters {
-        return new DirectoryRolesRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DirectoryRolesRequestBuilderGetQueryParameters {
+        return new DirectoryRolesRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

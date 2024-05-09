@@ -52,10 +52,11 @@ class AuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Get a list of the authorityTemplate objects and their properties.
      * @param AuthoritiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthorityTemplateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-list-authorities?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthoritiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class AuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to authorities for security
+     * Create a new authorityTemplate object.
      * @param AuthorityTemplate $body The request body
      * @param AuthoritiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthorityTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-post-authorities?view=graph-rest-1.0 Find more info here
     */
     public function post(AuthorityTemplate $body, ?AuthoritiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class AuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+     * Get a list of the authorityTemplate objects and their properties.
      * @param AuthoritiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class AuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to authorities for security
+     * Create a new authorityTemplate object.
      * @param AuthorityTemplate $body The request body
      * @param AuthoritiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

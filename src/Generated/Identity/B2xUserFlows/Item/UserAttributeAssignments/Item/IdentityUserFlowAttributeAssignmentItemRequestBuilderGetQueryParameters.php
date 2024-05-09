@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The user attribute assignments included in the user flow.
+ * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
 */
 class IdentityUserFlowAttributeAssignmentItemRequestBuilderGetQueryParameters 
 {

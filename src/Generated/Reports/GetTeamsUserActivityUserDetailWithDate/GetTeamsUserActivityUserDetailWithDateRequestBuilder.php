@@ -35,7 +35,7 @@ class GetTeamsUserActivityUserDetailWithDateRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getTeamsUserActivityUserDetail
+     * Get details about Microsoft Teams user activity by user.
      * @param GetTeamsUserActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -51,7 +51,7 @@ class GetTeamsUserActivityUserDetailWithDateRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getTeamsUserActivityUserDetail
+     * Get details about Microsoft Teams user activity by user.
      * @param GetTeamsUserActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

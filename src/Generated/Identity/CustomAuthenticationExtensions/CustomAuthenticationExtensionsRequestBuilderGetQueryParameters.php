@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\CustomAuthenticationExtensions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+ * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
 */
 class CustomAuthenticationExtensionsRequestBuilderGetQueryParameters 
 {

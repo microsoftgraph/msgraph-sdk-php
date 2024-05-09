@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines an organization with more than one instance of Microsoft Entra ID.
+ * Get properties of the multitenant organization.
 */
 class MultiTenantOrganizationRequestBuilderGetQueryParameters 
 {

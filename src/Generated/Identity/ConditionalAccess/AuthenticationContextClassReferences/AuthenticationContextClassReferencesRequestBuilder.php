@@ -52,10 +52,11 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve a list of authenticationContextClassReference objects.
      * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReferenceCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-authenticationcontextclassreferences?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve a list of authenticationContextClassReference objects.
      * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

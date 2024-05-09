@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Labels\Departments\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Specifies the department or business unit of an organization to which a label belongs.
+ * Read the properties and relationships of a departmentTemplate object.
 */
 class DepartmentTemplateItemRequestBuilderGetQueryParameters 
 {

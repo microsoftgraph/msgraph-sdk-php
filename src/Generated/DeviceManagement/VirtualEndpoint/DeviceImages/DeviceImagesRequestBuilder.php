@@ -60,10 +60,11 @@ class DeviceImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of device image resources on Cloud PC.
+     * List the properties and relationships of cloudPcDeviceImage objects (operating system images) uploaded to Cloud PC.
      * @param DeviceImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcDeviceImageCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceImagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,11 +75,12 @@ class DeviceImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param CloudPcDeviceImage $body The request body
      * @param DeviceImagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcDeviceImage|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0 Find more info here
     */
     public function post(CloudPcDeviceImage $body, ?DeviceImagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +91,7 @@ class DeviceImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of device image resources on Cloud PC.
+     * List the properties and relationships of cloudPcDeviceImage objects (operating system images) uploaded to Cloud PC.
      * @param DeviceImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +112,7 @@ class DeviceImagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceImages for deviceManagement
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param CloudPcDeviceImage $body The request body
      * @param DeviceImagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

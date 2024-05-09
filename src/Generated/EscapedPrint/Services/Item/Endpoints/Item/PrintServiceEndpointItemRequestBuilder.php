@@ -45,10 +45,11 @@ class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      * @param PrintServiceEndpointItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintServiceEndpoint|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printserviceendpoint-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintServiceEndpointItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class PrintServiceEndpointItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Endpoints that can be used to access the service. Read-only. Nullable.
+     * Retrieve the properties and relationships of a print service endpoint.
      * @param PrintServiceEndpointItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

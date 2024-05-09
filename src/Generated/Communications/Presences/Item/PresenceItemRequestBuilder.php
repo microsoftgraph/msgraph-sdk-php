@@ -85,10 +85,11 @@ class PresenceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      * @param PresenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Presence|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PresenceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -132,7 +133,7 @@ class PresenceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get presences from communications
+     * Get a user's presence information.
      * @param PresenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

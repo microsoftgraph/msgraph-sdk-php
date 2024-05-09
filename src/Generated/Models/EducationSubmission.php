@@ -27,12 +27,38 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
+     * Gets the excusedBy property value. The excusedBy property
+     * @return IdentitySet|null
+    */
+    public function getExcusedBy(): ?IdentitySet {
+        $val = $this->getBackingStore()->get('excusedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excusedBy'");
+    }
+
+    /**
+     * Gets the excusedDateTime property value. The excusedDateTime property
+     * @return DateTime|null
+    */
+    public function getExcusedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('excusedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excusedDateTime'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'excusedBy' => fn(ParseNode $n) => $o->setExcusedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'excusedDateTime' => fn(ParseNode $n) => $o->setExcusedDateTime($n->getDateTimeValue()),
             'outcomes' => fn(ParseNode $n) => $o->setOutcomes($n->getCollectionOfObjectValues([EducationOutcome::class, 'createFromDiscriminatorValue'])),
             'reassignedBy' => fn(ParseNode $n) => $o->setReassignedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'reassignedDateTime' => fn(ParseNode $n) => $o->setReassignedDateTime($n->getDateTimeValue()),
@@ -247,6 +273,22 @@ class EducationSubmission extends Entity implements Parsable
         $writer->writeObjectValue('recipient', $this->getRecipient());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeCollectionOfObjectValues('submittedResources', $this->getSubmittedResources());
+    }
+
+    /**
+     * Sets the excusedBy property value. The excusedBy property
+     * @param IdentitySet|null $value Value to set for the excusedBy property.
+    */
+    public function setExcusedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('excusedBy', $value);
+    }
+
+    /**
+     * Sets the excusedDateTime property value. The excusedDateTime property
+     * @param DateTime|null $value Value to set for the excusedDateTime property.
+    */
+    public function setExcusedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('excusedDateTime', $value);
     }
 
     /**

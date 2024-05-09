@@ -45,10 +45,11 @@ class AllowedValueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
+     * Read the properties and relationships of an allowedValue object.
      * @param AllowedValueItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AllowedValue|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/allowedvalue-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AllowedValueItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class AllowedValueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property allowedValues in directory
+     * Update the properties of an allowedValue object.
      * @param AllowedValue $body The request body
      * @param AllowedValueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AllowedValue|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/allowedvalue-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AllowedValue $body, ?AllowedValueItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class AllowedValueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
+     * Read the properties and relationships of an allowedValue object.
      * @param AllowedValueItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class AllowedValueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property allowedValues in directory
+     * Update the properties of an allowedValue object.
      * @param AllowedValue $body The request body
      * @param AllowedValueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

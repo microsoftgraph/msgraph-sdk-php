@@ -61,10 +61,11 @@ class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a passiveDnsRecord object.
      * @param PassiveDnsRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PassiveDnsRecord|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-passivednsrecord-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PassiveDnsRecordItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a passiveDnsRecord object.
      * @param PassiveDnsRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

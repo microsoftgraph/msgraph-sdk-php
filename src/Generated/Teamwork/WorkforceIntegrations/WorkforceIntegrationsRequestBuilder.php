@@ -52,10 +52,11 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve a list of workforceIntegration objects.
      * @param WorkforceIntegrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkforceIntegrationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/workforceintegration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkforceIntegrationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to workforceIntegrations for teamwork
+     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkforceIntegration|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0 Find more info here
     */
     public function post(WorkforceIntegration $body, ?WorkforceIntegrationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get workforceIntegrations from teamwork
+     * Retrieve a list of workforceIntegration objects.
      * @param WorkforceIntegrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to workforceIntegrations for teamwork
+     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

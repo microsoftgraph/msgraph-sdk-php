@@ -31,10 +31,11 @@ class JoinRequestRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      * @param JoinRequestRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganizationJoinRequestRecord|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?JoinRequestRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,11 +46,12 @@ class JoinRequestRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property joinRequest in tenantRelationships
+     * Join a multitenant organization, after the owner of the multitenant organization has added your tenant to the multitenant organization as pending. Before a tenant added to a multitenant organization can participate in the multitenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait up to 2 hours before joining a multitenant organization is completed.
      * @param MultiTenantOrganizationJoinRequestRecord $body The request body
      * @param JoinRequestRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganizationJoinRequestRecord|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MultiTenantOrganizationJoinRequestRecord $body, ?JoinRequestRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -60,7 +62,7 @@ class JoinRequestRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Defines the status of a tenant joining a multitenant organization.
+     * Get the status of a tenant joining a multitenant organization.
      * @param JoinRequestRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -81,7 +83,7 @@ class JoinRequestRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property joinRequest in tenantRelationships
+     * Join a multitenant organization, after the owner of the multitenant organization has added your tenant to the multitenant organization as pending. Before a tenant added to a multitenant organization can participate in the multitenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait up to 2 hours before joining a multitenant organization is completed.
      * @param MultiTenantOrganizationJoinRequestRecord $body The request body
      * @param JoinRequestRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

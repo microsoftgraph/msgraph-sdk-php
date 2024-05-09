@@ -52,10 +52,11 @@ class ResourceOperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Resource Operations.
+     * List properties and relationships of the resourceOperation objects.
      * @param ResourceOperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceOperationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ResourceOperationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class ResourceOperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to resourceOperations for deviceManagement
+     * Create a new resourceOperation object.
      * @param ResourceOperation $body The request body
      * @param ResourceOperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-resourceoperation-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ResourceOperation $body, ?ResourceOperationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class ResourceOperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Resource Operations.
+     * List properties and relationships of the resourceOperation objects.
      * @param ResourceOperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class ResourceOperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to resourceOperations for deviceManagement
+     * Create a new resourceOperation object.
      * @param ResourceOperation $body The request body
      * @param ResourceOperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

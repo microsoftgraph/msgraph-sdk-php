@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The policy that specifies the conditions under which consent can be granted.
+ * Retrieve the list of permissionGrantPolicy objects.
 */
 class PermissionGrantPoliciesRequestBuilderGetQueryParameters 
 {

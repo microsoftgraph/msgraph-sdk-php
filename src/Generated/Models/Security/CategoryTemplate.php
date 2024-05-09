@@ -37,7 +37,7 @@ class CategoryTemplate extends FilePlanDescriptorTemplate implements Parsable
     }
 
     /**
-     * Gets the subcategories property value. The subcategories property
+     * Gets the subcategories property value. Represents all subcategories under a particular category.
      * @return array<SubcategoryTemplate>|null
     */
     public function getSubcategories(): ?array {
@@ -60,7 +60,7 @@ class CategoryTemplate extends FilePlanDescriptorTemplate implements Parsable
     }
 
     /**
-     * Sets the subcategories property value. The subcategories property
+     * Sets the subcategories property value. Represents all subcategories under a particular category.
      * @param array<SubcategoryTemplate>|null $value Value to set for the subcategories property.
     */
     public function setSubcategories(?array $value): void {

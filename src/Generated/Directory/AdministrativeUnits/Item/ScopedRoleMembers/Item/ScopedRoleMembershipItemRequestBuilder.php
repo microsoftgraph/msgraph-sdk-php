@@ -31,10 +31,11 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ScopedRoleMembership|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove a Microsoft Entra role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Scoped-role members of this administrative unit.
+     * Get a Microsoft Entra role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -55,10 +55,11 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property simulations for security
+     * Delete an attack simulation campaign for a tenant.
      * @param SimulationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/simulation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SimulationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -69,10 +70,11 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Simulation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SimulationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,11 +85,12 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property simulations in security
+     * Update an attack simulation campaign for a tenant.
      * @param Simulation $body The request body
      * @param SimulationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Simulation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/simulation-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Simulation $body, ?SimulationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -98,7 +101,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property simulations for security
+     * Delete an attack simulation campaign for a tenant.
      * @param SimulationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +119,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +140,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property simulations in security
+     * Update an attack simulation campaign for a tenant.
      * @param Simulation $body The request body
      * @param SimulationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

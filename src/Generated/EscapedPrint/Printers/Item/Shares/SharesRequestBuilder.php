@@ -51,10 +51,11 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
+     * Retrieve a list of printer shares associated with the printer.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShareCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printer-list-shares?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +66,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
+     * Retrieve a list of printer shares associated with the printer.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

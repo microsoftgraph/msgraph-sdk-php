@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Templates\M
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines an optional cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
+ * Get the cross-tenant access policy template with inbound and outbound partner configuration settings for a multitenant organization.
 */
 class MultiTenantOrganizationPartnerConfigurationRequestBuilderGetQueryParameters 
 {

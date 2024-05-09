@@ -52,10 +52,11 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      * @param EdiscoveryCasesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryCaseCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-casesroot-list-ediscoverycases?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryCasesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to ediscoveryCases for security
+     * Create a new ediscoveryCase object.
      * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryCase|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0 Find more info here
     */
     public function post(EdiscoveryCase $body, ?EdiscoveryCasesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get ediscoveryCases from security
+     * Get a list of the ediscoveryCase objects and their properties.
      * @param EdiscoveryCasesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class EdiscoveryCasesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to ediscoveryCases for security
+     * Create a new ediscoveryCase object.
      * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -45,10 +45,11 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+     * Read the properties and relationships of a userRegistrationDetails object.
      * @param UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserRegistrationDetails|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userregistrationdetails-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+     * Read the properties and relationships of a userRegistrationDetails object.
      * @param UserRegistrationDetailsItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

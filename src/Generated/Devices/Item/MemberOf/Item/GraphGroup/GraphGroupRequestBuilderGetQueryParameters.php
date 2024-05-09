@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Item\MemberOf\Item\GraphGroup;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+ * Get groups and administrative units that this device is a direct member of. This operation is not transitive.
 */
 class GraphGroupRequestBuilderGetQueryParameters 
 {

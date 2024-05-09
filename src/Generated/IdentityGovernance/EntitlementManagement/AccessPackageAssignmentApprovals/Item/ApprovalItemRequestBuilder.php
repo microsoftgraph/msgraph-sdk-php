@@ -53,10 +53,11 @@ class ApprovalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request.
      * @param ApprovalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Approval|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/approval-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApprovalItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class ApprovalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for groups, providing the identifier of the assignment schedule request.
      * @param ApprovalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

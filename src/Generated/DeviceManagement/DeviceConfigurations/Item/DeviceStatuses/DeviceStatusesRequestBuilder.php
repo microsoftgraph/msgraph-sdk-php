@@ -52,10 +52,11 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationDeviceStatusCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceStatuses for deviceManagement
+     * Create a new deviceConfigurationDeviceStatus object.
      * @param DeviceConfigurationDeviceStatus $body The request body
      * @param DeviceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationDeviceStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceConfigurationDeviceStatus $body, ?DeviceStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Device configuration installation status by device.
+     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceStatuses for deviceManagement
+     * Create a new deviceConfigurationDeviceStatus object.
      * @param DeviceConfigurationDeviceStatus $body The request body
      * @param DeviceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

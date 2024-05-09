@@ -31,10 +31,11 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     }
 
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationAssignment.
      * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     }
 
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     }
 
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param ManagedDeviceMobileAppConfigurationAssignment $body The request body
      * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedDeviceMobileAppConfigurationAssignment $body, ?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     }
 
     /**
-     * Delete navigation property assignments for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationAssignment.
      * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     }
 
     /**
-     * The list of group assignemenets for app configration.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
      * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     }
 
     /**
-     * Update the navigation property assignments in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationAssignment object.
      * @param ManagedDeviceMobileAppConfigurationAssignment $body The request body
      * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

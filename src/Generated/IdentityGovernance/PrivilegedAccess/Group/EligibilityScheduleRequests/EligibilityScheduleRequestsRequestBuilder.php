@@ -62,10 +62,11 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param EligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?EligibilityScheduleRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,11 +77,12 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to eligibilityScheduleRequests for identityGovernance
+     * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param PrivilegedAccessGroupEligibilityScheduleRequest $body The request body
      * @param EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function post(PrivilegedAccessGroupEligibilityScheduleRequest $body, ?EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +93,7 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param EligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +114,7 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to eligibilityScheduleRequests for identityGovernance
+     * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param PrivilegedAccessGroupEligibilityScheduleRequest $body The request body
      * @param EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

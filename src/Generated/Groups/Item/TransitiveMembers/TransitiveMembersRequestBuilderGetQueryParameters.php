@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\TransitiveMembers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The direct and transitive members of a group. Nullable.
+ * Get a list of the group's members. A group can have different object types as members. For more information about supported member types for different groups, see Group membership. This operation is transitive and returns a flat list of all nested members. An attempt to filter by an OData cast that represents an unsupported member type returns a 400 Bad Request error with the Request_UnsupportedQuery code.
 */
 class TransitiveMembersRequestBuilderGetQueryParameters 
 {

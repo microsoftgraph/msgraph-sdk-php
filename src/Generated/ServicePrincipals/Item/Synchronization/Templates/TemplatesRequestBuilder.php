@@ -52,10 +52,11 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Preconfigured synchronization settings for a particular application.
+     * List the synchronization templates associated with a given application or service principal.
      * @param TemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationTemplateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/synchronization-synchronization-list-templates?view=graph-rest-1.0 Find more info here
     */
     public function get(?TemplatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Preconfigured synchronization settings for a particular application.
+     * List the synchronization templates associated with a given application or service principal.
      * @param TemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -39,10 +39,11 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tabs for teams
+     * Removes (unpins) a tab from the specified channel within a team. 
      * @param TeamsTabItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TeamsTabItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      * @param TeamsTabItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTab|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamsTabItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tabs in teams
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTab|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0 Find more info here
     */
     public function patch(TeamsTab $body, ?TeamsTabItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tabs for teams
+     * Removes (unpins) a tab from the specified channel within a team. 
      * @param TeamsTabItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the properties and relationships of the specified tab in a channel within a team. 
      * @param TeamsTabItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class TeamsTabItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tabs in teams
+     * Update the properties of the specified tab.This API can be used to configure the content of the tab.
      * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

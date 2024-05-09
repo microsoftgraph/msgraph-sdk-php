@@ -52,10 +52,11 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of notes associated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      * @param NotesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthoredNoteCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-list-notes?view=graph-rest-1.0 Find more info here
     */
     public function get(?NotesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to notes for privacy
+     * Create a new authoredNote object.
      * @param AuthoredNote $body The request body
      * @param NotesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthoredNote|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0 Find more info here
     */
     public function post(AuthoredNote $body, ?NotesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of notes associated with the request.
+     * Get the list of authored notes assoicated with a subject rights request. 
      * @param NotesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class NotesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to notes for privacy
+     * Create a new authoredNote object.
      * @param AuthoredNote $body The request body
      * @param NotesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

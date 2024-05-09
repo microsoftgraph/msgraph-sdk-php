@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtec
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Another way to input exempt apps through xml files
+ * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
 */
 class ExemptAppLockerFilesRequestBuilderGetQueryParameters 
 {

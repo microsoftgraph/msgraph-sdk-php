@@ -52,10 +52,11 @@ class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The customTaskExtension instance.
+     * Get a list of the customTaskExtension objects and their properties.
      * @param CustomTaskExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomTaskExtensionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-list-customtaskextensions?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomTaskExtensionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customTaskExtensions for identityGovernance
+     * Create a new customTaskExtension object.
      * @param CustomTaskExtension $body The request body
      * @param CustomTaskExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomTaskExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-lifecycleworkflowscontainer-post-customtaskextensions?view=graph-rest-1.0 Find more info here
     */
     public function post(CustomTaskExtension $body, ?CustomTaskExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The customTaskExtension instance.
+     * Get a list of the customTaskExtension objects and their properties.
      * @param CustomTaskExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class CustomTaskExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customTaskExtensions for identityGovernance
+     * Create a new customTaskExtension object.
      * @param CustomTaskExtension $body The request body
      * @param CustomTaskExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

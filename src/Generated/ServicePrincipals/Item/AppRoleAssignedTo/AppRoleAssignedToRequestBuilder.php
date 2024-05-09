@@ -52,10 +52,11 @@ class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * Read the properties and relationships of an appRoleAssignment object.
      * @param AppRoleAssignedToRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignmentCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-list-approleassignedto?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppRoleAssignedToRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appRoleAssignedTo for servicePrincipals
+     * Assign an app role for a resource service principal, to a user, group, or client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment, you need three identifiers:
      * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignedToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-post-approleassignedto?view=graph-rest-1.0 Find more info here
     */
     public function post(AppRoleAssignment $body, ?AppRoleAssignedToRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * Read the properties and relationships of an appRoleAssignment object.
      * @param AppRoleAssignedToRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class AppRoleAssignedToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appRoleAssignedTo for servicePrincipals
+     * Assign an app role for a resource service principal, to a user, group, or client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment, you need three identifiers:
      * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignedToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

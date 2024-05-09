@@ -103,10 +103,11 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property channels for teams
+     * Delete the channel.
      * @param ChannelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ChannelItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -117,10 +118,11 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @param ChannelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Channel|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChannelItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -131,11 +133,12 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property channels in teams
+     * Update the properties of the specified channel.
      * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Channel|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-patch?view=graph-rest-1.0 Find more info here
     */
     public function patch(Channel $body, ?ChannelItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -146,7 +149,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property channels for teams
+     * Delete the channel.
      * @param ChannelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -164,7 +167,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of channels and messages associated with the team.
+     * Retrieve the properties and relationships of a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve channel information.
      * @param ChannelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -185,7 +188,7 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property channels in teams
+     * Update the properties of the specified channel.
      * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

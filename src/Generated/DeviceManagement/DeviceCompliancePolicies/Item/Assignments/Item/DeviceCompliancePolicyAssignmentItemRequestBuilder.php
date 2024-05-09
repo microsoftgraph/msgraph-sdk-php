@@ -31,10 +31,11 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a deviceCompliancePolicyAssignment.
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a deviceCompliancePolicyAssignment object.
      * @param DeviceCompliancePolicyAssignment $body The request body
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecompliancepolicyassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCompliancePolicyAssignment $body, ?DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a deviceCompliancePolicyAssignment.
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * The collection of assignments for this compliance policy.
+     * Read properties and relationships of the deviceCompliancePolicyAssignment object.
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a deviceCompliancePolicyAssignment object.
      * @param DeviceCompliancePolicyAssignment $body The request body
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

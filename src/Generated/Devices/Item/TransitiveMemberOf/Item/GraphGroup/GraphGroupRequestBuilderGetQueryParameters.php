@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Item\GraphGr
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the item of type microsoft.graph.directoryObject as microsoft.graph.group
+ * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
 */
 class GraphGroupRequestBuilderGetQueryParameters 
 {

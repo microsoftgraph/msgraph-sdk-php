@@ -31,10 +31,11 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property profileCardProperties for admin
+     * Delete the profileCardProperty object specified by its directoryPropertyName from the organization's profile card, and remove any localized customizations for that property.
      * @param ProfileCardPropertyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/profilecardproperty-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ProfileCardPropertyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      * @param ProfileCardPropertyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfileCardProperty|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/profilecardproperty-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ProfileCardPropertyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property profileCardProperties in admin
+     * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param ProfileCardProperty $body The request body
      * @param ProfileCardPropertyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfileCardProperty|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/profilecardproperty-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ProfileCardProperty $body, ?ProfileCardPropertyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property profileCardProperties for admin
+     * Delete the profileCardProperty object specified by its directoryPropertyName from the organization's profile card, and remove any localized customizations for that property.
      * @param ProfileCardPropertyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card.
+     * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      * @param ProfileCardPropertyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property profileCardProperties in admin
+     * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param ProfileCardProperty $body The request body
      * @param ProfileCardPropertyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

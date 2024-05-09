@@ -45,10 +45,11 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * The requests associated with the delegated admin relationship.
+     * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
      * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

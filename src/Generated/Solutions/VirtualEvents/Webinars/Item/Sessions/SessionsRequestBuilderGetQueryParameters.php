@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Sessio
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Sessions for the virtual event.
+ * Read the properties and relationships of a virtualEventSession object.
 */
 class SessionsRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines the status of a tenant joining a multitenant organization.
+ * Get the status of a tenant joining a multitenant organization.
 */
 class JoinRequestRequestBuilderGetQueryParameters 
 {

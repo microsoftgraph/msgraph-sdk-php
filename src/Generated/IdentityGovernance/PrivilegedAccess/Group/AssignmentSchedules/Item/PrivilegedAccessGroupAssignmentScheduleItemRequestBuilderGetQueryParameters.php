@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The assignment schedules to activate a just-in-time access.
+ * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object.
 */
 class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilderGetQueryParameters 
 {

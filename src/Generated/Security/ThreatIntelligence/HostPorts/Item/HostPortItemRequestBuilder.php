@@ -61,10 +61,11 @@ class HostPortItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPort object.
      * @param HostPortItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPort|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-hostport-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HostPortItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class HostPortItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPort object.
      * @param HostPortItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

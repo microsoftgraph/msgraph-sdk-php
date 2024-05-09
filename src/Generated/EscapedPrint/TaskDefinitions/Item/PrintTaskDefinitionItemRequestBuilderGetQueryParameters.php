@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+ * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
 */
 class PrintTaskDefinitionItemRequestBuilderGetQueryParameters 
 {

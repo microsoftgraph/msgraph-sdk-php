@@ -39,10 +39,11 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property permissions for sites
+     * Delete a permission object on a site.
      * @param PermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-delete-permission?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PermissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @param PermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Permission|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-get-permission?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property permissions in sites
+     * Update an application permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Permission|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-update-permission?view=graph-rest-1.0 Find more info here
     */
     public function patch(Permission $body, ?PermissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property permissions for sites
+     * Delete a permission object on a site.
      * @param PermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions associated with the site. Nullable.
+     * Retrieve the properties and relationships of a permission object on a site.
      * @param PermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property permissions in sites
+     * Update an application permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

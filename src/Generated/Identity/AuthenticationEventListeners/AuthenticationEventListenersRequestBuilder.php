@@ -52,10 +52,11 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @param AuthenticationEventListenersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventListenerCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationEventListenersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to authenticationEventListeners for identity
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param AuthenticationEventListener $body The request body
      * @param AuthenticationEventListenersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventListener|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0 Find more info here
     */
     public function post(AuthenticationEventListener $body, ?AuthenticationEventListenersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
      * @param AuthenticationEventListenersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to authenticationEventListeners for identity
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param AuthenticationEventListener $body The request body
      * @param AuthenticationEventListenersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of Exchange Connectors configured by the tenant.
+ * List properties and relationships of the deviceManagementExchangeConnector objects.
 */
 class ExchangeConnectorsRequestBuilderGetQueryParameters 
 {

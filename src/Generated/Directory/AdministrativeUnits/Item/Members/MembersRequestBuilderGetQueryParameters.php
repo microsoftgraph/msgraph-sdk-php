@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Users and groups that are members of this administrative unit. Supports $expand.
+ * Use this API to get the members list (users, groups, or devices) in an administrative unit.
 */
 class MembersRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+ * Read the properties and relationships of a userRegistrationDetails object.
 */
 class UserRegistrationDetailsItemRequestBuilderGetQueryParameters 
 {

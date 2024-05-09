@@ -51,10 +51,11 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ArticleIndicatorCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-article-list-indicators?view=graph-rest-1.0 Find more info here
     */
     public function get(?IndicatorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +66,7 @@ class IndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Indicators related to this article.
+     * Get a list of articleIndicator objects that represent indicators of threat or compromise related to the contents of an article.
      * @param IndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

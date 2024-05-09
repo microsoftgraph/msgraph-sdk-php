@@ -52,10 +52,11 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param TaskTriggersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintTaskTriggerCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printer-list-tasktriggers?view=graph-rest-1.0 Find more info here
     */
     public function get(?TaskTriggersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to taskTriggers for print
+     * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param PrintTaskTrigger $body The request body
      * @param TaskTriggersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintTaskTrigger|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0 Find more info here
     */
     public function post(PrintTaskTrigger $body, ?TaskTriggersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of task triggers that are associated with the printer.
+     * Retrieve a list of task triggers associated with the printer. The list of task triggers defines which tasks will be triggered as a result of events that occur during printing. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param TaskTriggersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class TaskTriggersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to taskTriggers for print
+     * Create a new task trigger on the specified printer. Currently, only one task trigger can be specified per printer, but this limit might be removed in the future. 
      * @param PrintTaskTrigger $body The request body
      * @param TaskTriggersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

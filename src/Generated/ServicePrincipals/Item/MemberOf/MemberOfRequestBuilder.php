@@ -75,10 +75,11 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation is not transitive.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-1.0 Find more info here
     */
     public function get(?MemberOfRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +90,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation is not transitive.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

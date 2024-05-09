@@ -52,10 +52,11 @@ class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Notification Message Templates.
+     * List properties and relationships of the notificationMessageTemplate objects.
      * @param NotificationMessageTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NotificationMessageTemplateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?NotificationMessageTemplatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to notificationMessageTemplates for deviceManagement
+     * Create a new notificationMessageTemplate object.
      * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NotificationMessageTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-notification-notificationmessagetemplate-create?view=graph-rest-1.0 Find more info here
     */
     public function post(NotificationMessageTemplate $body, ?NotificationMessageTemplatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Notification Message Templates.
+     * List properties and relationships of the notificationMessageTemplate objects.
      * @param NotificationMessageTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to notificationMessageTemplates for deviceManagement
+     * Create a new notificationMessageTemplate object.
      * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

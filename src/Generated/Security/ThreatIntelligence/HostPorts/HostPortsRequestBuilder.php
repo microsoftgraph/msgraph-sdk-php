@@ -52,7 +52,7 @@ class HostPortsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPort object.
      * @param HostPortsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPortCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class HostPortsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPort object.
      * @param HostPortsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -61,10 +61,11 @@ class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
+     * Get the properties and relationships of a hostSslCertificate object.
      * @param HostSslCertificateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostSslCertificate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-hostsslcertificate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HostSslCertificateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
+     * Get the properties and relationships of a hostSslCertificate object.
      * @param HostSslCertificateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

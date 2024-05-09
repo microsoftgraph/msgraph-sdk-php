@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.
+ * Get the user synchronization policy of a partner-specific configuration.
 */
 class IdentitySynchronizationRequestBuilderGetQueryParameters 
 {
