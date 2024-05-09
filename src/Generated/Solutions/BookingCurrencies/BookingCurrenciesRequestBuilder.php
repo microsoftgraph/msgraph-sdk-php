@@ -52,10 +52,11 @@ class BookingCurrenciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get bookingCurrencies from solutions
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param BookingCurrenciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingCurrencyCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/bookingcurrency-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingCurrenciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class BookingCurrenciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get bookingCurrencies from solutions
+     * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
      * @param BookingCurrenciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

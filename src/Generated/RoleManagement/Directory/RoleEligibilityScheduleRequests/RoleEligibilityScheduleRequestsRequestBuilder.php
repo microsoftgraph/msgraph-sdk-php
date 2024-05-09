@@ -62,10 +62,11 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @param RoleEligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleRequestCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleEligibilityScheduleRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,11 +77,12 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param RoleEligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0 Find more info here
     */
     public function post(UnifiedRoleEligibilityScheduleRequest $body, ?RoleEligibilityScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +93,7 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Requests for role eligibilities for principals through PIM.
+     * In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.
      * @param RoleEligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +114,7 @@ class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+     * In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param RoleEligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

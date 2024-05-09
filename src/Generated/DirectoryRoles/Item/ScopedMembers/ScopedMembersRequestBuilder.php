@@ -52,10 +52,11 @@ class ScopedMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @param ScopedMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ScopedRoleMembershipCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/directoryrole-list-scopedmembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScopedMembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class ScopedMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Members of this directory role that are scoped to administrative units. Read-only. Nullable.
+     * Retrieve a list of scopedRoleMembership objects for a directory role.
      * @param ScopedMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

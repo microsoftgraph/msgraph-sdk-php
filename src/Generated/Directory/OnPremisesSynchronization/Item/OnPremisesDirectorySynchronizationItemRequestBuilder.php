@@ -45,10 +45,11 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronization|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the navigation property onPremisesSynchronization in directory
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronization|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * A container for on-premises directory synchronization functionalities that are available for the organization.
+     * Read the properties and relationships of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the navigation property onPremisesSynchronization in directory
+     * Update the properties of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronization $body The request body
      * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

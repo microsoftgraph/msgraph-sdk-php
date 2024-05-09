@@ -66,11 +66,12 @@ class EmailMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to emailMethods for users
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmailAuthenticationMethod|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authentication-post-emailmethods?view=graph-rest-1.0 Find more info here
     */
     public function post(EmailAuthenticationMethod $body, ?EmailMethodsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -102,7 +103,7 @@ class EmailMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to emailMethods for users
+     * Set a user's emailAuthenticationMethod object. Email authentication is a self-service password reset method. A user may only have one email authentication method.
      * @param EmailAuthenticationMethod $body The request body
      * @param EmailMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

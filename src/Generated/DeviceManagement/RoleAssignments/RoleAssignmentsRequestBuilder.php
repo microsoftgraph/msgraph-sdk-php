@@ -52,10 +52,11 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @param RoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementRoleAssignmentCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to roleAssignments for deviceManagement
+     * Create a new deviceAndAppManagementRoleAssignment object.
      * @param DeviceAndAppManagementRoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementRoleAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceAndAppManagementRoleAssignment $body, ?RoleAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The Role Assignments.
+     * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
      * @param RoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to roleAssignments for deviceManagement
+     * Create a new deviceAndAppManagementRoleAssignment object.
      * @param DeviceAndAppManagementRoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

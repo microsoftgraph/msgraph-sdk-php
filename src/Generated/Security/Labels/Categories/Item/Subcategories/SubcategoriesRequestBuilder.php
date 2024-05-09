@@ -52,10 +52,11 @@ class SubcategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subcategories from security
+     * Get a list of subcategories subcategoryTemplate associated with a category template.
      * @param SubcategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SubcategoryTemplateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-categorytemplate-list-subcategories?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubcategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class SubcategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to subcategories for security
+     * Create a new subcategoryTemplate object.
      * @param SubcategoryTemplate $body The request body
      * @param SubcategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SubcategoryTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-categorytemplate-post-subcategories?view=graph-rest-1.0 Find more info here
     */
     public function post(SubcategoryTemplate $body, ?SubcategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class SubcategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subcategories from security
+     * Get a list of subcategories subcategoryTemplate associated with a category template.
      * @param SubcategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class SubcategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to subcategories for security
+     * Create a new subcategoryTemplate object.
      * @param SubcategoryTemplate $body The request body
      * @param SubcategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

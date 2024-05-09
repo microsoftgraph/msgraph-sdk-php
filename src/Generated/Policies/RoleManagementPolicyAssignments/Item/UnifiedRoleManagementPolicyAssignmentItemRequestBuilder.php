@@ -53,10 +53,11 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
     }
 
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
      * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
     }
 
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
      * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

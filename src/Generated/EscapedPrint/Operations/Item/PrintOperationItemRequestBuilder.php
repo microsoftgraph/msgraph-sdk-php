@@ -45,10 +45,11 @@ class PrintOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      * @param PrintOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printoperation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class PrintOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of print long running operations.
+     * Retrieve the properties and relationships of a printOperation object.
      * @param PrintOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

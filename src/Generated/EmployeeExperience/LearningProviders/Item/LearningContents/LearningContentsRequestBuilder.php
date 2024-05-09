@@ -52,10 +52,11 @@ class LearningContentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @param LearningContentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningContentCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/learningprovider-list-learningcontents?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningContentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class LearningContentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Learning catalog items for the provider.
+     * Get a list of the learningContent resources and their properties. This list represents the metadata of the specified provider's content in Viva Learning.
      * @param LearningContentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

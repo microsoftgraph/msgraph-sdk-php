@@ -31,10 +31,11 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property federatedIdentityCredentials for applications
+     * Delete a federatedIdentityCredential object from an application.
      * @param FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      * @param FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property federatedIdentityCredentials in applications
+     * Create a new federatedIdentityCredential object for an application if it does exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-upsert?view=graph-rest-1.0 Find more info here
     */
     public function patch(FederatedIdentityCredential $body, ?FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property federatedIdentityCredentials for applications
+     * Delete a federatedIdentityCredential object from an application.
      * @param FederatedIdentityCredentialItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Read the properties and relationships of a federatedIdentityCredential object.
      * @param FederatedIdentityCredentialItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property federatedIdentityCredentials in applications
+     * Create a new federatedIdentityCredential object for an application if it does exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

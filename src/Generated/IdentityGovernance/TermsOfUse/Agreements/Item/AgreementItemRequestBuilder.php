@@ -55,10 +55,11 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property agreements for identityGovernance
+     * Delete an agreement object.
      * @param AgreementItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AgreementItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -69,10 +70,11 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
+     * Retrieve the properties and relationships of an agreement object.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Agreement|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AgreementItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,11 +85,12 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property agreements in identityGovernance
+     * Update the properties of an agreement object.
      * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Agreement|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Agreement $body, ?AgreementItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -98,7 +101,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property agreements for identityGovernance
+     * Delete an agreement object.
      * @param AgreementItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +119,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a tenant's customizable terms of use agreement that's created and managed with Microsoft Entra ID Governance.
+     * Retrieve the properties and relationships of an agreement object.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +140,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property agreements in identityGovernance
+     * Update the properties of an agreement object.
      * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -45,10 +45,11 @@ class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extends BaseR
     }
 
     /**
-     * Defines an optional cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
      * @param MultiTenantOrganizationIdentitySynchronizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganizationIdentitySyncPolicyTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganizationidentitysyncpolicytemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MultiTenantOrganizationIdentitySynchronizationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extends BaseR
     }
 
     /**
-     * Update the navigation property multiTenantOrganizationIdentitySynchronization in policies
+     * Update the cross-tenant access policy template with user synchronization settings for a multitenant organization.
      * @param MultiTenantOrganizationIdentitySyncPolicyTemplate $body The request body
      * @param MultiTenantOrganizationIdentitySynchronizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganizationIdentitySyncPolicyTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganizationidentitysyncpolicytemplate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MultiTenantOrganizationIdentitySyncPolicyTemplate $body, ?MultiTenantOrganizationIdentitySynchronizationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extends BaseR
     }
 
     /**
-     * Defines an optional cross-tenant access policy template with user synchronization settings for a multitenant organization.
+     * Get the cross-tenant access policy template with user synchronization settings for a multitenant organization.
      * @param MultiTenantOrganizationIdentitySynchronizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extends BaseR
     }
 
     /**
-     * Update the navigation property multiTenantOrganizationIdentitySynchronization in policies
+     * Update the cross-tenant access policy template with user synchronization settings for a multitenant organization.
      * @param MultiTenantOrganizationIdentitySyncPolicyTemplate $body The request body
      * @param MultiTenantOrganizationIdentitySynchronizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

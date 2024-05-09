@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Schedule\OfferShiftRequests;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The offer requests for shifts in the schedule.
+ * Retrieve the properties and relationships of all offerShiftRequest objects in a team.
 */
 class OfferShiftRequestsRequestBuilderGetQueryParameters 
 {

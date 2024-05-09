@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Labels\Categories\Item\Subcategorie
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get subcategories from security
+ * Get a list of subcategories subcategoryTemplate associated with a category template.
 */
 class SubcategoriesRequestBuilderGetQueryParameters 
 {

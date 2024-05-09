@@ -69,10 +69,11 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CrossTenantAccessPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,11 +84,12 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property crossTenantAccessPolicy in policies
+     * Update the properties of a cross-tenant access policy.
      * @param CrossTenantAccessPolicy $body The request body
      * @param CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CrossTenantAccessPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CrossTenantAccessPolicy $body, ?CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -116,7 +118,7 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * Read the properties and relationships of a crossTenantAccessPolicy object.
      * @param CrossTenantAccessPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +139,7 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property crossTenantAccessPolicy in policies
+     * Update the properties of a cross-tenant access policy.
      * @param CrossTenantAccessPolicy $body The request body
      * @param CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -52,10 +52,11 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SchedulingGroupCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/schedule-list-schedulinggroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchedulingGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to schedulingGroups for teams
+     * Create a new schedulingGroup.
      * @param SchedulingGroup $body The request body
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SchedulingGroup|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/schedule-post-schedulinggroups?view=graph-rest-1.0 Find more info here
     */
     public function post(SchedulingGroup $body, ?SchedulingGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The logical grouping of users in the schedule (usually by role).
+     * Get the list of schedulingGroups in this schedule.
      * @param SchedulingGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class SchedulingGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to schedulingGroups for teams
+     * Create a new schedulingGroup.
      * @param SchedulingGroup $body The request body
      * @param SchedulingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

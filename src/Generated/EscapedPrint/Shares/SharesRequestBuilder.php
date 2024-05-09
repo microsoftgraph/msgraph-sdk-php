@@ -52,10 +52,11 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of printerShares.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShareCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/print-list-shares?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to shares for print
+     * Create a new printerShare for the specified printer.
      * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrinterShare|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/print-post-shares?view=graph-rest-1.0 Find more info here
     */
     public function post(PrinterShare $body, ?SharesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of printer shares registered in the tenant.
+     * Retrieve a list of printerShares.
      * @param SharesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class SharesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to shares for print
+     * Create a new printerShare for the specified printer.
      * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

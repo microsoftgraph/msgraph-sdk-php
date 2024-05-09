@@ -59,10 +59,11 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ClaimsMappingPolicyCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +74,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param ClaimsMappingPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

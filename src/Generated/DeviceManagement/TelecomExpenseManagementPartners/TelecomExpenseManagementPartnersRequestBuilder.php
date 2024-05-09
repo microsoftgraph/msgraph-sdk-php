@@ -52,10 +52,11 @@ class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The telecom expense management partners.
+     * List properties and relationships of the telecomExpenseManagementPartner objects.
      * @param TelecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TelecomExpenseManagementPartnerCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TelecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to telecomExpenseManagementPartners for deviceManagement
+     * Create a new telecomExpenseManagementPartner object.
      * @param TelecomExpenseManagementPartner $body The request body
      * @param TelecomExpenseManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TelecomExpenseManagementPartner|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-tem-telecomexpensemanagementpartner-create?view=graph-rest-1.0 Find more info here
     */
     public function post(TelecomExpenseManagementPartner $body, ?TelecomExpenseManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The telecom expense management partners.
+     * List properties and relationships of the telecomExpenseManagementPartner objects.
      * @param TelecomExpenseManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class TelecomExpenseManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to telecomExpenseManagementPartners for deviceManagement
+     * Create a new telecomExpenseManagementPartner object.
      * @param TelecomExpenseManagementPartner $body The request body
      * @param TelecomExpenseManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

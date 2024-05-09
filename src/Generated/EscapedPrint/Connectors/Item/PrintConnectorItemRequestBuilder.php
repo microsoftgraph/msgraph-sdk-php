@@ -31,10 +31,11 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property connectors for print
+     * Delete (unregister) a printConnector.
      * @param PrintConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PrintConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of available print connectors.
+     * Retrieve the properties and relationships of a printConnector object.
      * @param PrintConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintConnector|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printconnector-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintConnectorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property connectors in print
+     * Update the properties of a printConnector object.
      * @param PrintConnector $body The request body
      * @param PrintConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintConnector|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printconnector-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PrintConnector $body, ?PrintConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property connectors for print
+     * Delete (unregister) a printConnector.
      * @param PrintConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of available print connectors.
+     * Retrieve the properties and relationships of a printConnector object.
      * @param PrintConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property connectors in print
+     * Update the properties of a printConnector object.
      * @param PrintConnector $body The request body
      * @param PrintConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

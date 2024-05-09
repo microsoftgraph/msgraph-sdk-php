@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
+ * Get the groups and administrative units that the device is a member of. This API request is transitive, and will also return all groups and administrative units the device is a nested member of.
 */
 class TransitiveMemberOfRequestBuilderGetQueryParameters 
 {

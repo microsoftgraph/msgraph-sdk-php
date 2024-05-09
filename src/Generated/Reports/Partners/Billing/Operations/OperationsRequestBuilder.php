@@ -52,7 +52,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an operation to export the billing data of a partner.
+     * Read the properties and relationships of an operation object.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OperationCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an operation to export the billing data of a partner.
+     * Read the properties and relationships of an operation object.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The managed app registrations.
+ * Read properties and relationships of the iosManagedAppRegistration object.
 */
 class ManagedAppRegistrationItemRequestBuilderGetQueryParameters 
 {

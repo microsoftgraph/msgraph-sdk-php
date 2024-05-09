@@ -31,10 +31,11 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property appRoleAssignedTo for servicePrincipals
+     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal.
      * @param AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-delete-approleassignedto?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * Read the properties and relationships of an appRoleAssignment object.
      * @param AppRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/approleassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppRoleAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property appRoleAssignedTo for servicePrincipals
+     * Deletes an appRoleAssignment that a user, group, or client service principal has been granted for a resource service principal.
      * @param AppRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+     * Read the properties and relationships of an appRoleAssignment object.
      * @param AppRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

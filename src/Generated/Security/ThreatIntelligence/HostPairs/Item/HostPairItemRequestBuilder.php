@@ -61,10 +61,11 @@ class HostPairItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      * @param HostPairItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HostPair|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-hostpair-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HostPairItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class HostPairItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a hostPair object.
      * @param HostPairItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

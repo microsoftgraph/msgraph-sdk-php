@@ -62,10 +62,11 @@ class AccessPackagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param AccessPackagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessPackagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,11 +77,12 @@ class AccessPackagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackage|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0 Find more info here
     */
     public function post(AccessPackage $body, ?AccessPackagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +93,7 @@ class AccessPackagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+     * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param AccessPackagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +114,7 @@ class AccessPackagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to accessPackages for identityGovernance
+     * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
      * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

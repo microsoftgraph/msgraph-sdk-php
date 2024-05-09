@@ -52,10 +52,11 @@ class SharedWithTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @param SharedWithTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharedWithChannelTeamInfoCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharedWithTeamsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class SharedWithTeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of teams with which a channel is shared.
+     * Get the list of teams that has been shared a specified channel. This operation is allowed only for channels with a membershipType value of shared.
      * @param SharedWithTeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

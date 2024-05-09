@@ -31,10 +31,11 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The settings of the lifecycle workflows instance.
+     * Read the properties and relationships of a lifecycleManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LifecycleManagementSettings|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,11 +46,12 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update the properties of a lifecycleManagementSettings object.
      * @param LifecycleManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LifecycleManagementSettings|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-lifecyclemanagementsettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(LifecycleManagementSettings $body, ?SettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -60,7 +62,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The settings of the lifecycle workflows instance.
+     * Read the properties and relationships of a lifecycleManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -81,7 +83,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update the properties of a lifecycleManagementSettings object.
      * @param LifecycleManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

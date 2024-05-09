@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get subjectRightsRequests from privacy
+ * Read the properties and relationships of a subjectRightsRequest object.
 */
 class SubjectRightsRequestItemRequestBuilderGetQueryParameters 
 {

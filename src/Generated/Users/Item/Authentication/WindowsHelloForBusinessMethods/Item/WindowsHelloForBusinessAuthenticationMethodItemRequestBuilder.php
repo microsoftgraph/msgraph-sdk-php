@@ -39,10 +39,11 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
     }
 
     /**
-     * Delete navigation property windowsHelloForBusinessMethods for users
+     * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
     }
 
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsHelloForBusinessAuthenticationMethod|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,7 +69,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
     }
 
     /**
-     * Delete navigation property windowsHelloForBusinessMethods for users
+     * Deletes a windowsHelloForBusinessAuthenticationMethod object.
      * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -85,7 +87,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
     }
 
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
      * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

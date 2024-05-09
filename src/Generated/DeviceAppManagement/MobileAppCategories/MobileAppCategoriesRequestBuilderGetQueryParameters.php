@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The mobile app categories.
+ * List properties and relationships of the mobileAppCategory objects.
 */
 class MobileAppCategoriesRequestBuilderGetQueryParameters 
 {

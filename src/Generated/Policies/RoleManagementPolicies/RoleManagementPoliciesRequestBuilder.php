@@ -52,10 +52,11 @@ class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Get the details of the policies in PIM that can be applied to Microsoft Entra roles or group membership or ownership. To retrieve policies that apply to Azure RBAC, use the Azure REST PIM API for role management policies.
      * @param RoleManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleManagementPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Get the details of the policies in PIM that can be applied to Microsoft Entra roles or group membership or ownership. To retrieve policies that apply to Azure RBAC, use the Azure REST PIM API for role management policies.
      * @param RoleManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

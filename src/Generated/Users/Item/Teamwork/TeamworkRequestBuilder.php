@@ -69,10 +69,11 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
+     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
      * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserTeamwork|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userteamwork-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamworkRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -116,7 +117,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
+     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
      * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -52,10 +52,11 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get delegatedPermissionClassifications from servicePrincipals
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassificationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Create new navigation property to delegatedPermissionClassifications for servicePrincipals
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassification|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
     */
     public function post(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get delegatedPermissionClassifications from servicePrincipals
+     * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
      * @param DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Create new navigation property to delegatedPermissionClassifications for servicePrincipals
+     * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

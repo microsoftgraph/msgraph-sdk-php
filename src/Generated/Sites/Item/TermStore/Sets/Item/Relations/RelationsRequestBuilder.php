@@ -52,10 +52,11 @@ class RelationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param RelationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RelationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/termstore-term-list-relations?view=graph-rest-1.0 Find more info here
     */
     public function get(?RelationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class RelationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Indicates which terms have been pinned or reused directly under the set.
+     * Get the different relation of a [term] or [set] from the relations navigation property.
      * @param RelationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

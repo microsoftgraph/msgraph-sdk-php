@@ -52,10 +52,11 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of installation states for this eBook.
+     * List properties and relationships of the deviceInstallState objects.
      * @param DeviceStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceInstallStateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceStates for deviceAppManagement
+     * Create a new deviceInstallState object.
      * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceInstallState|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceInstallState $body, ?DeviceStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of installation states for this eBook.
+     * List properties and relationships of the deviceInstallState objects.
      * @param DeviceStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceStates for deviceAppManagement
+     * Create a new deviceInstallState object.
      * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

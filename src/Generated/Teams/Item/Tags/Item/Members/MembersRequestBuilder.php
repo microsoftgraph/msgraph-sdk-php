@@ -52,10 +52,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTagMemberCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktagmember-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for teams
+     * Create a new teamworkTagMember object in a team.
      * @param TeamworkTagMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTagMember|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamworkTagMember $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Users assigned to the tag.
+     * Get a list of the members of a standard tag in a team and their properties.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for teams
+     * Create a new teamworkTagMember object in a team.
      * @param TeamworkTagMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

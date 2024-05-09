@@ -31,10 +31,11 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property customWorkflowExtensions for identityGovernance
+     * Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
      * @param CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customWorkflowExtensions from identityGovernance
+     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
      * @param CustomCalloutExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomCalloutExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomCalloutExtensionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property customWorkflowExtensions in identityGovernance
+     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
      * @param CustomCalloutExtension $body The request body
      * @param CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomCalloutExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CustomCalloutExtension $body, ?CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property customWorkflowExtensions for identityGovernance
+     * Delete an accessPackageAssignmentRequestWorkflowExtension object. The custom workflow extension must first be removed from any associated policies before it can be deleted. Follow these steps to remove the custom workflow extension from any associated policies:
      * @param CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customWorkflowExtensions from identityGovernance
+     * Read the properties and relationships of an accessPackageAssignmentRequestWorkflowExtension object.
      * @param CustomCalloutExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property customWorkflowExtensions in identityGovernance
+     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
      * @param CustomCalloutExtension $body The request body
      * @param CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

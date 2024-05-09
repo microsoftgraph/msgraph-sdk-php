@@ -36,7 +36,7 @@ class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTi
     }
 
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @param MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTi
     }
 
     /**
-     * Invoke function getDirectRoutingCalls
+     * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @param MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

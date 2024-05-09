@@ -31,10 +31,11 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property identityProviders for identity
+     * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identityproviderbase-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get identityProviders from identity
+     * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently get a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityProviderBase|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identityproviderbase-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityProviderBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property identityProviders in identity
+     * Update the properties of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently update a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently update a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBase $body The request body
      * @param IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityProviderBase|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identityproviderbase-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentityProviderBase $body, ?IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property identityProviders for identity
+     * Delete an identity provider resource that is of the type specified by the id in the request. Among the types of providers derived from identityProviderBase, you can currently delete a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently delete a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get identityProviders from identity
+     * Get the properties and relationships of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently get a socialIdentityProvider or a builtinIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently get a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class IdentityProviderBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property identityProviders in identity
+     * Update the properties of the specified identity provider configured in the tenant. Among the types of providers derived from identityProviderBase, you can currently update a socialIdentityProvider resource in Microsoft Entra ID. In Azure AD B2C, this operation can currently update a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBase $body The request body
      * @param IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

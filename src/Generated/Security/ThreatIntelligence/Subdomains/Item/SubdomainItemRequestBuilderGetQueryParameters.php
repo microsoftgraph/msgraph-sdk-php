@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Subdomains\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
+ * Read the properties and relationships of a subdomain object.
 */
 class SubdomainItemRequestBuilderGetQueryParameters 
 {

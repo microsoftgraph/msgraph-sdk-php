@@ -53,10 +53,11 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      * @param ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessageHostedContent|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/chatmessagehostedcontent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+     * Retrieve the properties and relationships of chatMessageHostedContent object.
      * @param ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

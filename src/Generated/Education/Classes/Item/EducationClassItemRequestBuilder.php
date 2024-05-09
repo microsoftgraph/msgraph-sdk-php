@@ -103,10 +103,11 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property classes for education
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param EducationClassItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationclass-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationClassItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -117,10 +118,11 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param EducationClassItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClass|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationClassItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -131,11 +133,12 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property classes in education
+     * Update the properties of an educationClass object.
      * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationClass|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationClass $body, ?EducationClassItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -146,7 +149,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property classes for education
+     * Delete an educationClass. Because a class is also a universal group, deleting a class deletes the group.
      * @param EducationClassItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -164,7 +167,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get classes from education
+     * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param EducationClassItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -185,7 +188,7 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property classes in education
+     * Update the properties of an educationClass object.
      * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

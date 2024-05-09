@@ -52,7 +52,7 @@ class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a passiveDnsRecord object.
      * @param PassiveDnsRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PassiveDnsRecordCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a passiveDnsRecord object.
      * @param PassiveDnsRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

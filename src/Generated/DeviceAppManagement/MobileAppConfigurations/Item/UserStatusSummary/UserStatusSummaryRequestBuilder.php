@@ -45,10 +45,11 @@ class UserStatusSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      * @param UserStatusSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationUserSummary|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserStatusSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class UserStatusSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property userStatusSummary in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
      * @param ManagedDeviceMobileAppConfigurationUserSummary $body The request body
      * @param UserStatusSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationUserSummary|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationusersummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedDeviceMobileAppConfigurationUserSummary $body, ?UserStatusSummaryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class UserStatusSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * App configuration user status summary.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
      * @param UserStatusSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class UserStatusSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property userStatusSummary in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationUserSummary object.
      * @param ManagedDeviceMobileAppConfigurationUserSummary $body The request body
      * @param UserStatusSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

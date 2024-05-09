@@ -52,7 +52,7 @@ class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @param ArticleIndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ArticleIndicatorCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class ArticleIndicatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of an articleIndicator object.
      * @param ArticleIndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

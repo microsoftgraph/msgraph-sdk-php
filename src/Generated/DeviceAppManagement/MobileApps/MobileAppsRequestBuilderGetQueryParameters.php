@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The mobile apps.
+ * List properties and relationships of the androidStoreApp objects.
 */
 class MobileAppsRequestBuilderGetQueryParameters 
 {

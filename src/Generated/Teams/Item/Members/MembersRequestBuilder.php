@@ -60,10 +60,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Members and owners of the team.
+     * Get the conversationMember collection of a team. The membership IDs returned by the server must be treated as opaque strings. The client shouldn't try to parse or make assumptions about these resource IDs. In the future, membership results can include users from various tenants, as indicated in the response. Clients should avoid assuming that all members exclusively belong to the current tenant.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMemberCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,11 +75,12 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for teams
+     * Add a new conversationMember to a team.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMember|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/team-post-members?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationMember $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +91,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Members and owners of the team.
+     * Get the conversationMember collection of a team. The membership IDs returned by the server must be treated as opaque strings. The client shouldn't try to parse or make assumptions about these resource IDs. In the future, membership results can include users from various tenants, as indicated in the response. Clients should avoid assuming that all members exclusively belong to the current tenant.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +112,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for teams
+     * Add a new conversationMember to a team.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

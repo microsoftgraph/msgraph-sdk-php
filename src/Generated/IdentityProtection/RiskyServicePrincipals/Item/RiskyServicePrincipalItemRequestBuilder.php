@@ -53,10 +53,11 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Microsoft Entra service principals that are at risk.
+     * Read the properties and relationships of a riskyServicePrincipal object.
      * @param RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RiskyServicePrincipal|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/riskyserviceprincipal-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Microsoft Entra service principals that are at risk.
+     * Read the properties and relationships of a riskyServicePrincipal object.
      * @param RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -39,10 +39,11 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ClaimsMappingPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ClaimsMappingPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ClaimsMappingPolicy $body, ?ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

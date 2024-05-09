@@ -39,10 +39,11 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a deviceAndAppManagementRoleAssignment.
      * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementRoleAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleAssignment object.
      * @param DeviceAndAppManagementRoleAssignment $body The request body
      * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementRoleAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroleassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceAndAppManagementRoleAssignment $body, ?DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Delete navigation property roleAssignments for deviceManagement
+     * Deletes a deviceAndAppManagementRoleAssignment.
      * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * The Role Assignments.
+     * Read properties and relationships of the deviceAndAppManagementRoleAssignment object.
      * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Update the navigation property roleAssignments in deviceManagement
+     * Update the properties of a deviceAndAppManagementRoleAssignment object.
      * @param DeviceAndAppManagementRoleAssignment $body The request body
      * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

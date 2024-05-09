@@ -34,7 +34,7 @@ class GetM365AppUserDetailWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getM365AppUserDetail
+     * Get a report that provides the details about which apps and platforms users have used.
      * @param GetM365AppUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class GetM365AppUserDetailWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getM365AppUserDetail
+     * Get a report that provides the details about which apps and platforms users have used.
      * @param GetM365AppUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
+ * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation is not transitive.
 */
 class MemberOfRequestBuilderGetQueryParameters 
 {

@@ -39,10 +39,11 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property taskDefinitions for print
+     * Delete a taskDefinition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/print-delete-taskdefinition?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintTaskDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printtaskdefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property taskDefinitions in print
+     * Update a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintTaskDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/print-update-taskdefinition?view=graph-rest-1.0 Find more info here
     */
     public function patch(PrintTaskDefinition $body, ?PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property taskDefinitions for print
+     * Delete a taskDefinition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Get details about a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class PrintTaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property taskDefinitions in print
+     * Update a task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

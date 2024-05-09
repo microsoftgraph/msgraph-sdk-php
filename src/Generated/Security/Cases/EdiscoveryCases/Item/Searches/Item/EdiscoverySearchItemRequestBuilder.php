@@ -87,10 +87,11 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -101,10 +102,11 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoverySearch|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoverySearchItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -115,11 +117,12 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoverySearch|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EdiscoverySearch $body, ?EdiscoverySearchItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -130,7 +133,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -148,7 +151,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -169,7 +172,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

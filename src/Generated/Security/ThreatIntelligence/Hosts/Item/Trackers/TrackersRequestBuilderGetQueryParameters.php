@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Track
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The hostTrackers that are associated with this host.
+ * Get a list of hostTracker resources.
 */
 class TrackersRequestBuilderGetQueryParameters 
 {

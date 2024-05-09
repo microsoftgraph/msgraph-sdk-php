@@ -52,10 +52,11 @@ class RetentionLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      * @param RetentionLabelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionLabelCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0 Find more info here
     */
     public function get(?RetentionLabelsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class RetentionLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to retentionLabels for security
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param RetentionLabel $body The request body
      * @param RetentionLabelsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionLabel|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0 Find more info here
     */
     public function post(RetentionLabel $body, ?RetentionLabelsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class RetentionLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Get a list of the retentionLabel objects and their properties.
      * @param RetentionLabelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class RetentionLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to retentionLabels for security
+     * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param RetentionLabel $body The request body
      * @param RetentionLabelsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

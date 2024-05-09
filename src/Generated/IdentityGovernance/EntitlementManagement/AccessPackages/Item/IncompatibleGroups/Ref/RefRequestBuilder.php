@@ -32,10 +32,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackage-delete-incompatiblegroup?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,10 +47,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups whose members are ineligible to be assigned this access package.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,11 +62,12 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property ref to incompatibleGroups for identityGovernance
+     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.  
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackage-post-incompatiblegroup?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -75,7 +78,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property incompatibleGroups for identityGovernance
+     * Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -96,7 +99,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups whose members are ineligible to be assigned this access package.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,7 +120,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property ref to incompatibleGroups for identityGovernance
+     * Add a group to the list of groups that have been marked as incompatible on an accessPackage.  
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

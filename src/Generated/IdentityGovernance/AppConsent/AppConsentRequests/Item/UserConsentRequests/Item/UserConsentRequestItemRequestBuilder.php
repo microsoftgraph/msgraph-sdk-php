@@ -53,10 +53,11 @@ class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      * @param UserConsentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserConsentRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userconsentrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserConsentRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class UserConsentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A list of pending user consent requests. Supports $filter (eq).
+     * Read the properties and relationships of a userConsentRequest object.
      * @param UserConsentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

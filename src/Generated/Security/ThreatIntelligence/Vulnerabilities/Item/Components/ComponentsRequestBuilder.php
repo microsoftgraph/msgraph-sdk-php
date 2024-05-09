@@ -52,10 +52,11 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @param ComponentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VulnerabilityComponentCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-vulnerability-list-components?view=graph-rest-1.0 Find more info here
     */
     public function get(?ComponentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class ComponentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Components related to this vulnerability article.
+     * Get a list of vulnerabilityComponent objects related to a known vulnerability.
      * @param ComponentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

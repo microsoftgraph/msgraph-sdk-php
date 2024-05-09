@@ -52,6 +52,12 @@ class DirectoryRoleTemplatesRequestBuilderGetQueryParameters
     public ?int $skip = null;
     
     /**
+     * @QueryParameter("%24top")
+     * @var int|null $top Show only the first n items
+    */
+    public ?int $top = null;
+    
+    /**
      * Instantiates a new DirectoryRoleTemplatesRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
@@ -60,8 +66,9 @@ class DirectoryRoleTemplatesRequestBuilderGetQueryParameters
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null) {
+    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
         $this->expand = $expand;
         $this->filter = $filter;
@@ -69,6 +76,7 @@ class DirectoryRoleTemplatesRequestBuilderGetQueryParameters
         $this->search = $search;
         $this->select = $select;
         $this->skip = $skip;
+        $this->top = $top;
     }
 
 }

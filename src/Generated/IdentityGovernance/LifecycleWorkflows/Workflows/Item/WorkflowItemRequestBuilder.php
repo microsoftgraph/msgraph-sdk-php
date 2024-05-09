@@ -119,10 +119,11 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property workflows for identityGovernance
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkflowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -133,10 +134,11 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Workflow|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkflowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -147,11 +149,12 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property workflows in identityGovernance
+     * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param Workflow $body The request body
      * @param WorkflowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Workflow|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Workflow $body, ?WorkflowItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -162,7 +165,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property workflows for identityGovernance
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -180,7 +183,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The workflows in the lifecycle workflows instance.
+     * Read the properties and relationships of a workflow object.
      * @param WorkflowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -201,7 +204,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property workflows in identityGovernance
+     * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param Workflow $body The request body
      * @param WorkflowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

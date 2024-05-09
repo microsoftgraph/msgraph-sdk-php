@@ -34,10 +34,11 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     }
 
     /**
-     * Get learningCourseActivities from users
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningCourseActivity|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/learningcourseactivity-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -48,7 +49,7 @@ class LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder extends
     }
 
     /**
-     * Get learningCourseActivities from users
+     * Get the specified learningCourseActivity object using either an ID or an externalCourseActivityId of the learning provider, or a courseActivityId of a user.
      * @param LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

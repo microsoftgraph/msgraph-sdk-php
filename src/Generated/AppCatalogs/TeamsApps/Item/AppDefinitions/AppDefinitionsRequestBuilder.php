@@ -66,11 +66,12 @@ class AppDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appDefinitions for appCatalogs
+     * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param TeamsAppDefinition $body The request body
      * @param AppDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAppDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamsapp-update?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsAppDefinition $body, ?AppDefinitionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -102,7 +103,7 @@ class AppDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appDefinitions for appCatalogs
+     * Update an app previously published to the Microsoft Teams app catalog. To update an app, the distributionMethod property for the app must be set to organization. This API specifically updates an app published to your organization's app catalog (the tenant app catalog).
      * @param TeamsAppDefinition $body The request body
      * @param AppDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

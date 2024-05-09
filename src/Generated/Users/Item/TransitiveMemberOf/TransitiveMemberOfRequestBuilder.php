@@ -75,10 +75,11 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
+     * Get groups, directory roles, and administrative units that the user is a member of through either direct or transitive membership.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0 Find more info here
     */
     public function get(?TransitiveMemberOfRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +90,7 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
+     * Get groups, directory roles, and administrative units that the user is a member of through either direct or transitive membership.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

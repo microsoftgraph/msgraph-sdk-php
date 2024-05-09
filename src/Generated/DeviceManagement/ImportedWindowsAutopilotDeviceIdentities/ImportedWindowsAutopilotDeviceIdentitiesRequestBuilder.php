@@ -60,10 +60,11 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentityCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,11 +75,12 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentity|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +91,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * Collection of imported Windows autopilot devices.
+     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +112,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+     * Create a new importedWindowsAutopilotDeviceIdentity object.
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

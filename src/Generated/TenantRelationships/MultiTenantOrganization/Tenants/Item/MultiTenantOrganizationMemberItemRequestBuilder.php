@@ -31,10 +31,11 @@ class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios:
      * @param MultiTenantOrganizationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganization-delete-tenants?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MultiTenantOrganizationMemberItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      * @param MultiTenantOrganizationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganizationMember|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MultiTenantOrganizationMemberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tenants for tenantRelationships
+     * Remove a tenant from a multitenant organization. A tenant can be removed in the following scenarios:
      * @param MultiTenantOrganizationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Defines tenants added to a multitenant organization.
+     * Get a tenant and its properties in the multitenant organization.
      * @param MultiTenantOrganizationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

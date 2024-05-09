@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskDetections\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
+ * Read the properties and relationships of a riskDetection object.
 */
 class RiskDetectionItemRequestBuilderGetQueryParameters 
 {

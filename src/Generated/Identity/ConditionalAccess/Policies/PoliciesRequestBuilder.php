@@ -52,10 +52,11 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve a list of conditionalAccessPolicy objects.
      * @param PoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConditionalAccessPolicyCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0 Find more info here
     */
     public function get(?PoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to policies for identity
+     * Create a new conditionalAccessPolicy.
      * @param ConditionalAccessPolicy $body The request body
      * @param PoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConditionalAccessPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0 Find more info here
     */
     public function post(ConditionalAccessPolicy $body, ?PoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
+     * Retrieve a list of conditionalAccessPolicy objects.
      * @param PoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to policies for identity
+     * Create a new conditionalAccessPolicy.
      * @param ConditionalAccessPolicy $body The request body
      * @param PoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

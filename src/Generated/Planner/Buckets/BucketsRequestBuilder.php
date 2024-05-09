@@ -52,10 +52,11 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of plannerbucket objects.
      * @param BucketsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerBucketCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/planner-list-buckets?view=graph-rest-1.0 Find more info here
     */
     public function get(?BucketsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new plannerBucket object.
      * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerBucket|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0 Find more info here
     */
     public function post(PlannerBucket $body, ?BucketsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve a list of plannerbucket objects.
      * @param BucketsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class BucketsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to buckets for planner
+     * Create a new plannerBucket object.
      * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

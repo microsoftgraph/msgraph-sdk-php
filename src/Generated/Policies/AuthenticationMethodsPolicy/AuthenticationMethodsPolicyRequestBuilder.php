@@ -53,10 +53,11 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodsPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authenticationmethodspolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +68,12 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property authenticationMethodsPolicy in policies
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodsPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -100,7 +102,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * Read the properties and relationships of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +123,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property authenticationMethodsPolicy in policies
+     * Update the properties of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

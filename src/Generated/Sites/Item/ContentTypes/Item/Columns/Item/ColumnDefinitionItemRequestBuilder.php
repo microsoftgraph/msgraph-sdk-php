@@ -39,10 +39,11 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property columns for sites
+     * Remove a column from a site, a list, or a content type.
      * @param ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of column definitions for this content type.
+     * Retrieve the metadata for a site, a list, or a contentType column.
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property columns in sites
+     * Update a site, a list, or a content type column.
      * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/columndefinition-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ColumnDefinition $body, ?ColumnDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property columns for sites
+     * Remove a column from a site, a list, or a content type.
      * @param ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of column definitions for this content type.
+     * Retrieve the metadata for a site, a list, or a contentType column.
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property columns in sites
+     * Update a site, a list, or a content type column.
      * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

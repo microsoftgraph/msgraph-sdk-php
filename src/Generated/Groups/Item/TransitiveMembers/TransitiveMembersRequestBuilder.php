@@ -99,10 +99,11 @@ class TransitiveMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The direct and transitive members of a group. Nullable.
+     * Get a list of the group's members. A group can have different object types as members. For more information about supported member types for different groups, see Group membership. This operation is transitive and returns a flat list of all nested members. An attempt to filter by an OData cast that represents an unsupported member type returns a 400 Bad Request error with the Request_UnsupportedQuery code.
      * @param TransitiveMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/group-list-transitivemembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?TransitiveMembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -113,7 +114,7 @@ class TransitiveMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The direct and transitive members of a group. Nullable.
+     * Get a list of the group's members. A group can have different object types as members. For more information about supported member types for different groups, see Group membership. This operation is transitive and returns a flat list of all nested members. An attempt to filter by an OData cast that represents an unsupported member type returns a 400 Bad Request error with the Request_UnsupportedQuery code.
      * @param TransitiveMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

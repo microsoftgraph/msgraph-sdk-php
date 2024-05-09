@@ -67,10 +67,11 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups that a group is a member of, either directly or through nested membership. Nullable.
+     * Get groups that the group is a member of. This operation is transitive and will also include all groups that this group is a nested member of. Unlike getting a user's Microsoft 365 groups, this returns all types of groups, not just Microsoft 365 groups.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/group-list-transitivememberof?view=graph-rest-1.0 Find more info here
     */
     public function get(?TransitiveMemberOfRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups that a group is a member of, either directly or through nested membership. Nullable.
+     * Get groups that the group is a member of. This operation is transitive and will also include all groups that this group is a nested member of. Unlike getting a user's Microsoft 365 groups, this returns all types of groups, not just Microsoft 365 groups.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

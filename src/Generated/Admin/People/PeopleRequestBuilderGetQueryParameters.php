@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\People;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents a setting to control people-related admin settings in the tenant.
+ * Retrieve the properties and relationships of a peopleAdminSettings object.
 */
 class PeopleRequestBuilderGetQueryParameters 
 {

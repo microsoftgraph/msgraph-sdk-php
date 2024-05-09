@@ -39,10 +39,11 @@ class TeamsAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property teamsApps for appCatalogs
+     * Delete an app from an organization's app catalog (the tenant app catalog). To delete an app, the distributionMethod property for the app must be set to organization. You can also use this API to remove a submitted app from the review process.
      * @param TeamsAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamsapp-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TeamsAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -82,7 +83,7 @@ class TeamsAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property teamsApps for appCatalogs
+     * Delete an app from an organization's app catalog (the tenant app catalog). To delete an app, the distributionMethod property for the app must be set to organization. You can also use this API to remove a submitted app from the review process.
      * @param TeamsAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

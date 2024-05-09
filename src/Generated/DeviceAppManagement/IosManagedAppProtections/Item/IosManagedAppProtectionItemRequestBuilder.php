@@ -55,10 +55,11 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property iosManagedAppProtections for deviceAppManagement
+     * Deletes a iosManagedAppProtection.
      * @param IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -69,10 +70,11 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      * @param IosManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtection|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IosManagedAppProtectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,11 +85,12 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * Update the properties of a iosManagedAppProtection object.
      * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtection|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IosManagedAppProtection $body, ?IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -98,7 +101,7 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property iosManagedAppProtections for deviceAppManagement
+     * Deletes a iosManagedAppProtection.
      * @param IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +119,7 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * iOS managed app policies.
+     * Read properties and relationships of the iosManagedAppProtection object.
      * @param IosManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +140,7 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * Update the properties of a iosManagedAppProtection object.
      * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

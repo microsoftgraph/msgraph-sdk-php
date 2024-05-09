@@ -52,10 +52,11 @@ class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      * @param ScopedRoleMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ScopedRoleMembershipCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-list-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScopedRoleMembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to scopedRoleMembers for directory
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope.
      * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ScopedRoleMembership|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/administrativeunit-post-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function post(ScopedRoleMembership $body, ?ScopedRoleMembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Scoped-role members of this administrative unit.
+     * List Microsoft Entra role assignments with administrative unit scope.
      * @param ScopedRoleMembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class ScopedRoleMembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to scopedRoleMembers for directory
+     * Assign a Microsoft Entra role with administrative unit scope. For a list of roles that can be assigned with administrative unit scope, see Assign Microsoft Entra roles with administrative unit scope.
      * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

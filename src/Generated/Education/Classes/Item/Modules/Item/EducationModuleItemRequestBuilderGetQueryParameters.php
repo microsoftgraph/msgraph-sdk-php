@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Modules\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * All modules in the class. Nullable.
+ * Get the properties and relationships of a module. Only teachers, students, and applications with application permissions can perform this operation. Students can only see published modules; teachers and applications with application permissions can see all modules in a class.
 */
 class EducationModuleItemRequestBuilderGetQueryParameters 
 {

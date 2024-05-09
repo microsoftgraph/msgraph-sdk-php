@@ -52,10 +52,11 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the list of tabs in the specified channel within a team. 
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTabCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-list-tabs?view=graph-rest-1.0 Find more info here
     */
     public function get(?TabsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to tabs for teams
+     * Add (pin) a tab to the specified channel within a team. The app must be preinstalled in the team and have the configurableTabs property defined in the app manifest.
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsTab|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsTab $body, ?TabsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * Retrieve the list of tabs in the specified channel within a team. 
      * @param TabsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to tabs for teams
+     * Add (pin) a tab to the specified channel within a team. The app must be preinstalled in the team and have the configurableTabs property defined in the app manifest.
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

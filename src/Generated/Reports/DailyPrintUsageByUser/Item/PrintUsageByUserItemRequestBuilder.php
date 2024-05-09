@@ -45,10 +45,11 @@ class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      * @param PrintUsageByUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintUsageByUser|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printusagebyuser-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrintUsageByUserItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class PrintUsageByUserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of daily print usage summaries, grouped by user.
+     * Retrieve a user's usage summary for a particular time period. For descriptions of each endpoint, see printUsageByUser.
      * @param PrintUsageByUserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

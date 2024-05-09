@@ -31,10 +31,11 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Delete navigation property softwareOathMethods for users
+     * Delete a user's Software OATH token authentication method object.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -59,7 +60,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Delete navigation property softwareOathMethods for users
+     * Delete a user's Software OATH token authentication method object.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

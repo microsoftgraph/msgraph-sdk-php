@@ -103,10 +103,11 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windows10CompliancePolicy.
      * @param DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -117,10 +118,11 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the windowsPhone81CompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windowsphone81compliancepolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -131,11 +133,12 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a windows10CompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCompliancePolicy $body, ?DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -146,7 +149,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deviceCompliancePolicies for deviceManagement
+     * Deletes a windows10CompliancePolicy.
      * @param DeviceCompliancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -164,7 +167,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The device compliance policies.
+     * Read properties and relationships of the windowsPhone81CompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -185,7 +188,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * Update the properties of a windows10CompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -39,10 +39,11 @@ class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property customAuthenticationExtensions for identity
+     * Delete a customAuthenticationExtension object.
      * @param CustomAuthenticationExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CustomAuthenticationExtensionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,10 +54,11 @@ class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      * @param CustomAuthenticationExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomAuthenticationExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomAuthenticationExtensionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +69,12 @@ class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object.
      * @param CustomAuthenticationExtension $body The request body
      * @param CustomAuthenticationExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomAuthenticationExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/customauthenticationextension-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CustomAuthenticationExtension $body, ?CustomAuthenticationExtensionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +85,7 @@ class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property customAuthenticationExtensions for identity
+     * Delete a customAuthenticationExtension object.
      * @param CustomAuthenticationExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -100,7 +103,7 @@ class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * Read the properties and relationships of a customAuthenticationExtension object.
      * @param CustomAuthenticationExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +124,7 @@ class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object.
      * @param CustomAuthenticationExtension $body The request body
      * @param CustomAuthenticationExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

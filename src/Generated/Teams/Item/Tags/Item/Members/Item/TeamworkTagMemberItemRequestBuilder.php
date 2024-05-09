@@ -31,10 +31,11 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property members for teams
+     * Delete a member from a standard tag in a team.
      * @param TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktagmember-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      * @param TeamworkTagMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamworkTagMember|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/teamworktagmember-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamworkTagMemberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property members for teams
+     * Delete a member from a standard tag in a team.
      * @param TeamworkTagMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class TeamworkTagMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Users assigned to the tag.
+     * Get the properties and relationships of a member of a standard tag in a team.
      * @param TeamworkTagMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

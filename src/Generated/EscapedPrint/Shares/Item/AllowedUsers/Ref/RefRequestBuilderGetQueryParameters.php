@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The users who have access to print using the printer.
+ * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
 */
 class RefRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesC
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.
+ * Read the properties and relationships of the cloudPcOnPremisesConnection object.
 */
 class CloudPcOnPremisesConnectionItemRequestBuilderGetQueryParameters 
 {

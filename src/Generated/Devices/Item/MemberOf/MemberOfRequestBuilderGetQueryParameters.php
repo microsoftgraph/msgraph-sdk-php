@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Item\MemberOf;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
+ * Get groups and administrative units that this device is a direct member of. This operation is not transitive.
 */
 class MemberOfRequestBuilderGetQueryParameters 
 {

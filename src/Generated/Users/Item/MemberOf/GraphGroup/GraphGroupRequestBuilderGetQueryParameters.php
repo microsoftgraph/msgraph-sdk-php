@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\MemberOf\GraphGroup;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the items of type microsoft.graph.group in the microsoft.graph.directoryObject collection
+ * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
 */
 class GraphGroupRequestBuilderGetQueryParameters 
 {

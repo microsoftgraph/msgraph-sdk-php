@@ -28,11 +28,14 @@ class CountRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
 
     /**
      * Instantiates a new CountRequestBuilderGetQueryParameters.
+     * @param string|null $endDateTime The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
      * @param string|null $filter Filter items by property values
+     * @param string|null $search Search items by search phrases
+     * @param string|null $startDateTime The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
      * @return CountRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?string $filter = null): CountRequestBuilderGetQueryParameters {
-        return new CountRequestBuilderGetQueryParameters($filter);
+    public static function createQueryParameters(?string $endDateTime = null, ?string $filter = null, ?string $search = null, ?string $startDateTime = null): CountRequestBuilderGetQueryParameters {
+        return new CountRequestBuilderGetQueryParameters($endDateTime, $filter, $search, $startDateTime);
     }
 
 }

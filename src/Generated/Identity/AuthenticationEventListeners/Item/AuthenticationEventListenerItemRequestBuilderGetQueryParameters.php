@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\AuthenticationEventListeners\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+ * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object.
 */
 class AuthenticationEventListenerItemRequestBuilderGetQueryParameters 
 {

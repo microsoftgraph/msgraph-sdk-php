@@ -31,10 +31,11 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property userStatuses for deviceManagement
+     * Deletes a deviceComplianceUserStatus.
      * @param DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of DeviceComplianceUserStatus.
+     * Read properties and relationships of the deviceComplianceUserStatus object.
      * @param DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceUserStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property userStatuses in deviceManagement
+     * Update the properties of a deviceComplianceUserStatus object.
      * @param DeviceComplianceUserStatus $body The request body
      * @param DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceUserStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuserstatus-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceComplianceUserStatus $body, ?DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property userStatuses for deviceManagement
+     * Deletes a deviceComplianceUserStatus.
      * @param DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of DeviceComplianceUserStatus.
+     * Read properties and relationships of the deviceComplianceUserStatus object.
      * @param DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property userStatuses in deviceManagement
+     * Update the properties of a deviceComplianceUserStatus object.
      * @param DeviceComplianceUserStatus $body The request body
      * @param DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

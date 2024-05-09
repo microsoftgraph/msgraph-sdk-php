@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Search\Qnas\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Administrative answer in Microsoft Search results that provide answers for specific search keywords in an organization.
+ * Read the properties and relationships of a qna object.
 */
 class QnaItemRequestBuilderGetQueryParameters 
 {

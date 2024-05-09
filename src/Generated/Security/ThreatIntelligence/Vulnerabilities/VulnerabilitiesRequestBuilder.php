@@ -52,7 +52,7 @@ class VulnerabilitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a vulnerability object.
      * @param VulnerabilitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VulnerabilityCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class VulnerabilitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
+     * Read the properties and relationships of a vulnerability object.
      * @param VulnerabilitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,10 +47,11 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param UserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationuser-get-user?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,7 +62,7 @@ class UserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The directory user that corresponds to this user.
+     * Retrieve the simple directory user that corresponds to this educationUser.
      * @param UserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

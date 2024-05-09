@@ -60,7 +60,7 @@ class AppliesToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @param AppliesToRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
@@ -74,11 +74,12 @@ class AppliesToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appliesTo for policies
+     * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param DirectoryObject $body The request body
      * @param AppliesToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObject|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0 Find more info here
     */
     public function post(DirectoryObject $body, ?AppliesToRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -89,7 +90,7 @@ class AppliesToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * Nullable. Specifies a list of directoryObject resources that feature is enabled for.
      * @param AppliesToRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +111,7 @@ class AppliesToRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to appliesTo for policies
+     * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param DirectoryObject $body The request body
      * @param AppliesToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

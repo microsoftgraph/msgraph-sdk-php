@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Defines partner-specific configurations for external Microsoft Entra organizations.
+ * Read the properties and relationships of a partner-specific configuration.
 */
 class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetQueryParameters 
 {

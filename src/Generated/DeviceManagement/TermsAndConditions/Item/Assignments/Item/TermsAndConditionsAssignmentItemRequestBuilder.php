@@ -31,10 +31,11 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @param TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermsAndConditionsAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param TermsAndConditionsAssignment $body The request body
      * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermsAndConditionsAssignment|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-companyterms-termsandconditionsassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TermsAndConditionsAssignment $body, ?TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property assignments for deviceManagement
+     * Deletes a termsAndConditionsAssignment.
      * @param TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of assignments for this T&C policy.
+     * Read properties and relationships of the termsAndConditionsAssignment object.
      * @param TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property assignments in deviceManagement
+     * Update the properties of a termsAndConditionsAssignment object.
      * @param TermsAndConditionsAssignment $body The request body
      * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

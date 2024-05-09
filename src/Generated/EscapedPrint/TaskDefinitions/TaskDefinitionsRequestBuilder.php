@@ -52,10 +52,11 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param TaskDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintTaskDefinitionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/print-list-taskdefinitions?view=graph-rest-1.0 Find more info here
     */
     public function get(?TaskDefinitionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to taskDefinitions for print
+     * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinition $body The request body
      * @param TaskDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintTaskDefinition|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/print-post-taskdefinitions?view=graph-rest-1.0 Find more info here
     */
     public function post(PrintTaskDefinition $body, ?TaskDefinitionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of abstract definition for a task that can be triggered when various events occur within Universal Print.
+     * Retrieve a list of task definitions that the requesting app defined in the tenant. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param TaskDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to taskDefinitions for print
+     * Create a new task definition. For details about how to use this API to add pull printing support to Universal Print, see Extending Universal Print to support pull printing.
      * @param PrintTaskDefinition $body The request body
      * @param TaskDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

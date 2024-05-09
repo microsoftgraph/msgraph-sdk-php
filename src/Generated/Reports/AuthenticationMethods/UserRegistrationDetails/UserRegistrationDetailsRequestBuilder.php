@@ -52,10 +52,11 @@ class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @param UserRegistrationDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserRegistrationDetailsCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserRegistrationDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the state of a user's authentication methods, including which methods are registered and which features the user is registered and capable of (such as multifactor authentication, self-service password reset, and passwordless authentication).
+     * Get a list of the authentication methods registered for a user as defined in the userRegistrationDetails object.
      * @param UserRegistrationDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

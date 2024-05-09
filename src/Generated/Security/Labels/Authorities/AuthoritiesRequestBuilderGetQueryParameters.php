@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Labels\Authorities;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Specifies the underlying authority that describes the type of content to be retained and its retention schedule.
+ * Get a list of the authorityTemplate objects and their properties.
 */
 class AuthoritiesRequestBuilderGetQueryParameters 
 {

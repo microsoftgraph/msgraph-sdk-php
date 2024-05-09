@@ -62,10 +62,11 @@ class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The instances of eligibility schedules to activate a just-in-time access.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
      * @param EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityscheduleinstances?view=graph-rest-1.0 Find more info here
     */
     public function get(?EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -91,7 +92,7 @@ class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The instances of eligibility schedules to activate a just-in-time access.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
      * @param EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

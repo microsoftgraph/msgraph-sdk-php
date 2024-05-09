@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents the aggregation of task execution data for tasks within a workflow object.
+ * Get a list of the taskReport objects and their properties.
 */
 class TaskReportsRequestBuilderGetQueryParameters 
 {

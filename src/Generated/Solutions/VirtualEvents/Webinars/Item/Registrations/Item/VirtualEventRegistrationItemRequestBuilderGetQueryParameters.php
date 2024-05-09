@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Regist
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Registration records of the webinar.
+ * Get the properties and relationships of a virtualEventRegistration object.
 */
 class VirtualEventRegistrationItemRequestBuilderGetQueryParameters 
 {

@@ -31,10 +31,11 @@ class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property retentionEventTypes for security
+     * Delete a retentionEventType object.
      * @param RetentionEventTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-retentioneventtype-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RetentionEventTypeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get retentionEventTypes from security
+     * Read the properties and relationships of a retentionEventType object.
      * @param RetentionEventTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionEventType|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-retentioneventtype-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RetentionEventTypeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property retentionEventTypes for security
+     * Delete a retentionEventType object.
      * @param RetentionEventTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class RetentionEventTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get retentionEventTypes from security
+     * Read the properties and relationships of a retentionEventType object.
      * @param RetentionEventTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

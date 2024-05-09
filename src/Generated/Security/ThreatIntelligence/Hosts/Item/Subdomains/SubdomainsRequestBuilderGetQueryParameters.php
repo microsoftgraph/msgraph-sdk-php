@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Subdo
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The subdomains that are associated with this host.
+ * Get the list of subdomain resources associated with a host.
 */
 class SubdomainsRequestBuilderGetQueryParameters 
 {
