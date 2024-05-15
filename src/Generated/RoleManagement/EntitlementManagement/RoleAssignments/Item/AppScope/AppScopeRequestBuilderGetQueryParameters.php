@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+ * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
 */
 class AppScopeRequestBuilderGetQueryParameters 
 {

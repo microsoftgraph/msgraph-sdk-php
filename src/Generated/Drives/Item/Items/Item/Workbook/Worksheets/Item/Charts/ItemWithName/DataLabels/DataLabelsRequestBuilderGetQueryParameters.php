@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents the datalabels on the chart. Read-only.
+ * Represents the data labels on the chart. Read-only.
 */
 class DataLabelsRequestBuilderGetQueryParameters 
 {

@@ -38,7 +38,7 @@ class WorkbookChart extends Entity implements Parsable
     }
 
     /**
-     * Gets the dataLabels property value. Represents the datalabels on the chart. Read-only.
+     * Gets the dataLabels property value. Represents the data labels on the chart. Read-only.
      * @return WorkbookChartDataLabels|null
     */
     public function getDataLabels(): ?WorkbookChartDataLabels {
@@ -146,7 +146,7 @@ class WorkbookChart extends Entity implements Parsable
     }
 
     /**
-     * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Gets the title property value. Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @return WorkbookChartTitle|null
     */
     public function getTitle(): ?WorkbookChartTitle {
@@ -222,7 +222,7 @@ class WorkbookChart extends Entity implements Parsable
     }
 
     /**
-     * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
+     * Sets the dataLabels property value. Represents the data labels on the chart. Read-only.
      * @param WorkbookChartDataLabels|null $value Value to set for the dataLabels property.
     */
     public function setDataLabels(?WorkbookChartDataLabels $value): void {
@@ -278,7 +278,7 @@ class WorkbookChart extends Entity implements Parsable
     }
 
     /**
-     * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @param WorkbookChartTitle|null $value Value to set for the title property.
     */
     public function setTitle(?WorkbookChartTitle $value): void {

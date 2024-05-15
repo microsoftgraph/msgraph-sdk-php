@@ -45,7 +45,7 @@ class AppScopeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @param AppScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppScope|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class AppScopeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand.
+     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @param AppScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

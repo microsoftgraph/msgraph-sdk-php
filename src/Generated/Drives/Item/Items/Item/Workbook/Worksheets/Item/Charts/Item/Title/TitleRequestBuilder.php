@@ -53,7 +53,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartTitle|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
+     * Represents the title of the specified chart, including the text, visibility, position and formatting of the title. Read-only.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
