@@ -62,12 +62,12 @@ class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
+     * Update the properties of a multitenant organization.
      * @param MultiTenantOrganization $body The request body
      * @param MultiTenantOrganizationRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/multitenantorganization-update?view=graph-rest-1.0 Find more info here
     */
     public function put(MultiTenantOrganization $body, ?MultiTenantOrganizationRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
@@ -99,7 +99,7 @@ class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
+     * Update the properties of a multitenant organization.
      * @param MultiTenantOrganization $body The request body
      * @param MultiTenantOrganizationRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
