@@ -64,6 +64,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'priority' => fn(ParseNode $n) => $o->setPriority($n->getIntegerValue()),
+            'trustAffinityLevel' => fn(ParseNode $n) => $o->setTrustAffinityLevel($n->getEnumValue(X509CertificateAffinityLevel::class)),
             'userProperty' => fn(ParseNode $n) => $o->setUserProperty($n->getStringValue()),
             'x509CertificateField' => fn(ParseNode $n) => $o->setX509CertificateField($n->getStringValue()),
         ];
@@ -91,6 +92,18 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'priority'");
+    }
+
+    /**
+     * Gets the trustAffinityLevel property value. The trustAffinityLevel property
+     * @return X509CertificateAffinityLevel|null
+    */
+    public function getTrustAffinityLevel(): ?X509CertificateAffinityLevel {
+        $val = $this->getBackingStore()->get('trustAffinityLevel');
+        if (is_null($val) || $val instanceof X509CertificateAffinityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trustAffinityLevel'");
     }
 
     /**
@@ -124,6 +137,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('priority', $this->getPriority());
+        $writer->writeEnumValue('trustAffinityLevel', $this->getTrustAffinityLevel());
         $writer->writeStringValue('userProperty', $this->getUserProperty());
         $writer->writeStringValue('x509CertificateField', $this->getX509CertificateField());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -159,6 +173,14 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
     */
     public function setPriority(?int $value): void {
         $this->getBackingStore()->set('priority', $value);
+    }
+
+    /**
+     * Sets the trustAffinityLevel property value. The trustAffinityLevel property
+     * @param X509CertificateAffinityLevel|null $value Value to set for the trustAffinityLevel property.
+    */
+    public function setTrustAffinityLevel(?X509CertificateAffinityLevel $value): void {
+        $this->getBackingStore()->set('trustAffinityLevel', $value);
     }
 
     /**

@@ -38,7 +38,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportFileMetadata property value. The exportFileMetadata property
+     * Gets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @return array<ExportFileMetadata>|null
     */
     public function getExportFileMetadata(): ?array {
@@ -152,7 +152,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportFileMetadata property value. The exportFileMetadata property
+     * Sets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @param array<ExportFileMetadata>|null $value Value to set for the exportFileMetadata property.
     */
     public function setExportFileMetadata(?array $value): void {

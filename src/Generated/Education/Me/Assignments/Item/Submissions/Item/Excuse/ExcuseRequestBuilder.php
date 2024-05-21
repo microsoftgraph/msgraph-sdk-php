@@ -31,10 +31,11 @@ class ExcuseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action excuse
+     * Excuse a submission. Excused submissions aren't included in average grade calculations. Grading rubrics and feedback are deleted. Only teachers can perform this action.  If the Prefer: include-unknown-enum-members request header is provided, the excused submission shows the excused status. Otherwise, the submission status retains the returned status. For more information about how to use this header, see the Examples section.
      * @param ExcuseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSubmission|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationsubmission-excuse?view=graph-rest-1.0 Find more info here
     */
     public function post(?ExcuseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class ExcuseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action excuse
+     * Excuse a submission. Excused submissions aren't included in average grade calculations. Grading rubrics and feedback are deleted. Only teachers can perform this action.  If the Prefer: include-unknown-enum-members request header is provided, the excused submission shows the excused status. Otherwise, the submission status retains the returned status. For more information about how to use this header, see the Examples section.
      * @param ExcuseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

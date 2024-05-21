@@ -64,7 +64,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the alertWebUrl property value. The alertWebUrl property
+     * Gets the alertWebUrl property value. URL for the Microsoft 365 Defender portal alert page.
      * @return string|null
     */
     public function getAlertWebUrl(): ?string {
@@ -330,7 +330,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the productName property value. The productName property
+     * Gets the productName property value. The name of the product which published this alert.
      * @return string|null
     */
     public function getProductName(): ?string {
@@ -540,7 +540,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the alertWebUrl property value. The alertWebUrl property
+     * Sets the alertWebUrl property value. URL for the Microsoft 365 Defender portal alert page.
      * @param string|null $value Value to set for the alertWebUrl property.
     */
     public function setAlertWebUrl(?string $value): void {
@@ -676,7 +676,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the productName property value. The productName property
+     * Sets the productName property value. The name of the product which published this alert.
      * @param string|null $value Value to set for the productName property.
     */
     public function setProductName(?string $value): void {
