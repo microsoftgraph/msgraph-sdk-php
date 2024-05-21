@@ -56,7 +56,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the color property value. The color property
+     * Gets the color property value. The color applied to the cell.
      * @return string|null
     */
     public function getColor(): ?string {
@@ -68,7 +68,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the criterion1 property value. The criterion1 property
+     * Gets the criterion1 property value. A custom criterion.
      * @return string|null
     */
     public function getCriterion1(): ?string {
@@ -80,7 +80,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the criterion2 property value. The criterion2 property
+     * Gets the criterion2 property value. A custom criterion.
      * @return string|null
     */
     public function getCriterion2(): ?string {
@@ -92,7 +92,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the dynamicCriteria property value. The dynamicCriteria property
+     * Gets the dynamicCriteria property value. A dynamic formula specified in a custom filter.
      * @return string|null
     */
     public function getDynamicCriteria(): ?string {
@@ -123,7 +123,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the filterOn property value. The filterOn property
+     * Gets the filterOn property value. Indicates whether a filter is applied to a column.
      * @return string|null
     */
     public function getFilterOn(): ?string {
@@ -135,7 +135,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the icon property value. The icon property
+     * Gets the icon property value. An icon applied to a cell via conditional formatting.
      * @return WorkbookIcon|null
     */
     public function getIcon(): ?WorkbookIcon {
@@ -159,7 +159,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the operator property value. The operator property
+     * Gets the operator property value. An operator in a cell; for example, =, >, <, <=, or <>.
      * @return string|null
     */
     public function getOperator(): ?string {
@@ -171,7 +171,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. The values that appear in the cell.
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -216,7 +216,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the color property value. The color property
+     * Sets the color property value. The color applied to the cell.
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
@@ -224,7 +224,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the criterion1 property value. The criterion1 property
+     * Sets the criterion1 property value. A custom criterion.
      * @param string|null $value Value to set for the criterion1 property.
     */
     public function setCriterion1(?string $value): void {
@@ -232,7 +232,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the criterion2 property value. The criterion2 property
+     * Sets the criterion2 property value. A custom criterion.
      * @param string|null $value Value to set for the criterion2 property.
     */
     public function setCriterion2(?string $value): void {
@@ -240,7 +240,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the dynamicCriteria property value. The dynamicCriteria property
+     * Sets the dynamicCriteria property value. A dynamic formula specified in a custom filter.
      * @param string|null $value Value to set for the dynamicCriteria property.
     */
     public function setDynamicCriteria(?string $value): void {
@@ -248,7 +248,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the filterOn property value. The filterOn property
+     * Sets the filterOn property value. Indicates whether a filter is applied to a column.
      * @param string|null $value Value to set for the filterOn property.
     */
     public function setFilterOn(?string $value): void {
@@ -256,7 +256,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the icon property value. The icon property
+     * Sets the icon property value. An icon applied to a cell via conditional formatting.
      * @param WorkbookIcon|null $value Value to set for the icon property.
     */
     public function setIcon(?WorkbookIcon $value): void {
@@ -272,7 +272,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the operator property value. The operator property
+     * Sets the operator property value. An operator in a cell; for example, =, >, <, <=, or <>.
      * @param string|null $value Value to set for the operator property.
     */
     public function setOperator(?string $value): void {
@@ -280,7 +280,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. The values that appear in the cell.
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

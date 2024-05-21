@@ -32,7 +32,7 @@ class AuthenticationEventListener extends Entity implements Parsable
     }
 
     /**
-     * Gets the authenticationEventsFlowId property value. The authenticationEventsFlowId property
+     * Gets the authenticationEventsFlowId property value. Indicates the authenticationEventListener is associated with an authenticationEventsFlow. Read-only.
      * @return string|null
     */
     public function getAuthenticationEventsFlowId(): ?string {
@@ -78,7 +78,7 @@ class AuthenticationEventListener extends Entity implements Parsable
     }
 
     /**
-     * Sets the authenticationEventsFlowId property value. The authenticationEventsFlowId property
+     * Sets the authenticationEventsFlowId property value. Indicates the authenticationEventListener is associated with an authenticationEventsFlow. Read-only.
      * @param string|null $value Value to set for the authenticationEventsFlowId property.
     */
     public function setAuthenticationEventsFlowId(?string $value): void {

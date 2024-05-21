@@ -29,7 +29,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the attendeeReport property value. The attendeeReport property
+     * Gets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @return StreamInterface|null
     */
     public function getAttendeeReport(): ?StreamInterface {
@@ -41,7 +41,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the broadcastSettings property value. The broadcastSettings property
+     * Gets the broadcastSettings property value. Settings related to a live event.
      * @return BroadcastMeetingSettings|null
     */
     public function getBroadcastSettings(): ?BroadcastMeetingSettings {
@@ -109,7 +109,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the isBroadcast property value. The isBroadcast property
+     * Gets the isBroadcast property value. Indicates if this is a Teams live event.
      * @return bool|null
     */
     public function getIsBroadcast(): ?bool {
@@ -191,7 +191,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the attendeeReport property value. The attendeeReport property
+     * Sets the attendeeReport property value. The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param StreamInterface|null $value Value to set for the attendeeReport property.
     */
     public function setAttendeeReport(?StreamInterface $value): void {
@@ -199,7 +199,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the broadcastSettings property value. The broadcastSettings property
+     * Sets the broadcastSettings property value. Settings related to a live event.
      * @param BroadcastMeetingSettings|null $value Value to set for the broadcastSettings property.
     */
     public function setBroadcastSettings(?BroadcastMeetingSettings $value): void {
@@ -231,7 +231,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the isBroadcast property value. The isBroadcast property
+     * Sets the isBroadcast property value. Indicates if this is a Teams live event.
      * @param bool|null $value Value to set for the isBroadcast property.
     */
     public function setIsBroadcast(?bool $value): void {

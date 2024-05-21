@@ -109,7 +109,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sharingReference property value. The sharingReference property
+     * Gets the sharingReference property value. Reference properties of the document, such as the URL and type of the document. Read-only
      * @return ResourceReference|null
     */
     public function getSharingReference(): ?ResourceReference {
@@ -133,7 +133,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     * Gets the sharingType property value. Determines the way the document was shared. Can be by a 1Link1, 1Attachment1, 1Group1, 1Site1.
      * @return string|null
     */
     public function getSharingType(): ?string {
@@ -198,7 +198,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sharingReference property value. The sharingReference property
+     * Sets the sharingReference property value. Reference properties of the document, such as the URL and type of the document. Read-only
      * @param ResourceReference|null $value Value to set for the sharingReference property.
     */
     public function setSharingReference(?ResourceReference $value): void {
@@ -214,7 +214,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     * Sets the sharingType property value. Determines the way the document was shared. Can be by a 1Link1, 1Attachment1, 1Group1, 1Site1.
      * @param string|null $value Value to set for the sharingType property.
     */
     public function setSharingType(?string $value): void {

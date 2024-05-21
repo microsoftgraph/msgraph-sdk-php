@@ -124,7 +124,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tollFreeNumber property value. The tollFreeNumber property
+     * Gets the tollFreeNumber property value. The toll-free number that connects to the Audio Conference Provider.
      * @return string|null
     */
     public function getTollFreeNumber(): ?string {
@@ -150,7 +150,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tollNumber property value. The tollNumber property
+     * Gets the tollNumber property value. The toll number that connects to the Audio Conference Provider.
      * @return string|null
     */
     public function getTollNumber(): ?string {
@@ -231,7 +231,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tollFreeNumber property value. The tollFreeNumber property
+     * Sets the tollFreeNumber property value. The toll-free number that connects to the Audio Conference Provider.
      * @param string|null $value Value to set for the tollFreeNumber property.
     */
     public function setTollFreeNumber(?string $value): void {
@@ -247,7 +247,7 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tollNumber property value. The tollNumber property
+     * Sets the tollNumber property value. The toll number that connects to the Audio Conference Provider.
      * @param string|null $value Value to set for the tollNumber property.
     */
     public function setTollNumber(?string $value): void {

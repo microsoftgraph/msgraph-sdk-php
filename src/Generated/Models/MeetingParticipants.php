@@ -49,7 +49,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the attendees property value. The attendees property
+     * Gets the attendees property value. Information about the meeting attendees.
      * @return array<MeetingParticipantInfo>|null
     */
     public function getAttendees(): ?array {
@@ -96,7 +96,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the organizer property value. The organizer property
+     * Gets the organizer property value. Information about the meeting organizer.
      * @return MeetingParticipantInfo|null
     */
     public function getOrganizer(): ?MeetingParticipantInfo {
@@ -127,7 +127,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the attendees property value. The attendees property
+     * Sets the attendees property value. Information about the meeting attendees.
      * @param array<MeetingParticipantInfo>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value): void {
@@ -151,7 +151,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the organizer property value. The organizer property
+     * Sets the organizer property value. Information about the meeting organizer.
      * @param MeetingParticipantInfo|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?MeetingParticipantInfo $value): void {

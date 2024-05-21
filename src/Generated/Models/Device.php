@@ -28,7 +28,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers with at least the Cloud Device Administrator role can set this property.
      * @return bool|null
     */
     public function getAccountEnabled(): ?bool {
@@ -552,7 +552,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers with at least the Cloud Device Administrator role can set this property.
      * @param bool|null $value Value to set for the accountEnabled property.
     */
     public function setAccountEnabled(?bool $value): void {

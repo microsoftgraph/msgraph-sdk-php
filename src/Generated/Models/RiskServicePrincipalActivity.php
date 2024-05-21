@@ -101,7 +101,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the riskEventTypes property value. The riskEventTypes property
+     * Gets the riskEventTypes property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
      * @return array<string>|null
     */
     public function getRiskEventTypes(): ?array {
@@ -158,7 +158,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the riskEventTypes property value. The riskEventTypes property
+     * Sets the riskEventTypes property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
      * @param array<string>|null $value Value to set for the riskEventTypes property.
     */
     public function setRiskEventTypes(?array $value): void {
