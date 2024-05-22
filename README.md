@@ -7,7 +7,7 @@
 
 ## Install the SDK
 You can install the PHP SDK with Composer by editing your `composer.json` file:
-```json5
+```json
 {
     "require": {
         // x-release-please-start-version
