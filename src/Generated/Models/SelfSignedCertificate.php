@@ -58,7 +58,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the customKeyIdentifier property value. The customKeyIdentifier property
+     * Gets the customKeyIdentifier property value. Custom key identifier.
      * @return StreamInterface|null
     */
     public function getCustomKeyIdentifier(): ?StreamInterface {
@@ -70,7 +70,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The friendly name for the key.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -82,7 +82,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. The date and time at which the credential expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -114,7 +114,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. The value for the key credential. Should be a Base-64 encoded value.
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -126,7 +126,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the keyId property value. The keyId property
+     * Gets the keyId property value. The unique identifier (GUID) for the key.
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -150,7 +150,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The date and time at which the credential becomes valid. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -162,7 +162,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the thumbprint property value. The thumbprint property
+     * Gets the thumbprint property value. The thumbprint value for the key.
      * @return string|null
     */
     public function getThumbprint(): ?string {
@@ -174,7 +174,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of key credential. AsymmetricX509Cert.
      * @return string|null
     */
     public function getType(): ?string {
@@ -186,7 +186,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the usage property value. The usage property
+     * Gets the usage property value. A string that describes the purpose for which the key can be used. The possible value is Verify.
      * @return string|null
     */
     public function getUsage(): ?string {
@@ -232,7 +232,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the customKeyIdentifier property value. The customKeyIdentifier property
+     * Sets the customKeyIdentifier property value. Custom key identifier.
      * @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
     */
     public function setCustomKeyIdentifier(?StreamInterface $value): void {
@@ -240,7 +240,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The friendly name for the key.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -248,7 +248,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. The date and time at which the credential expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -256,7 +256,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. The value for the key credential. Should be a Base-64 encoded value.
      * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {
@@ -264,7 +264,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the keyId property value. The keyId property
+     * Sets the keyId property value. The unique identifier (GUID) for the key.
      * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {
@@ -280,7 +280,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The date and time at which the credential becomes valid. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -288,7 +288,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the thumbprint property value. The thumbprint property
+     * Sets the thumbprint property value. The thumbprint value for the key.
      * @param string|null $value Value to set for the thumbprint property.
     */
     public function setThumbprint(?string $value): void {
@@ -296,7 +296,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of key credential. AsymmetricX509Cert.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
@@ -304,7 +304,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the usage property value. The usage property
+     * Sets the usage property value. A string that describes the purpose for which the key can be used. The possible value is Verify.
      * @param string|null $value Value to set for the usage property.
     */
     public function setUsage(?string $value): void {

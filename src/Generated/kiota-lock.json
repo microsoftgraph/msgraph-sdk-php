@@ -1,5 +1,5 @@
 {
-  "descriptionHash": "EAE74593D4BFB666C53D9ED29D1BF17C2642A547B5D1FF2819F620EEE2F8D958AF29232D5F1FA190BEB63694D2888A8EB7DE7D0565961335865F4C565B5AB4CB",
+  "descriptionHash": "2BE07407CFC7E51B2F7C4F00D533B957E4C24DABE6B08C1CD1EC7F89AE142F46477CFC82D26CDE5F523AA19B8216A6070305B7E90500D57F238CAD73ED8C7524",
   "descriptionLocation": "../../msgraph-metadata/clean_v10_openapi/openapi.yaml",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.15.0",
@@ -9,6 +9,7 @@
   "usesBackingStore": true,
   "excludeBackwardCompatible": false,
   "includeAdditionalData": true,
+  "disableSSLValidation": false,
   "serializers": [
     "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
     "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",

@@ -54,11 +54,11 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Conversation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -87,7 +87,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

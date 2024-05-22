@@ -94,6 +94,7 @@ class Security extends Entity implements Parsable
             'alerts_v2' => fn(ParseNode $n) => $o->setAlertsV2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
+            'identities' => fn(ParseNode $n) => $o->setIdentities($n->getObjectValue([IdentityContainer::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'labels' => fn(ParseNode $n) => $o->setLabels($n->getObjectValue([LabelsRoot::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
@@ -103,6 +104,18 @@ class Security extends Entity implements Parsable
             'triggers' => fn(ParseNode $n) => $o->setTriggers($n->getObjectValue([TriggersRoot::class, 'createFromDiscriminatorValue'])),
             'triggerTypes' => fn(ParseNode $n) => $o->setTriggerTypes($n->getObjectValue([TriggerTypesRoot::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the identities property value. The identities property
+     * @return IdentityContainer|null
+    */
+    public function getIdentities(): ?IdentityContainer {
+        $val = $this->getBackingStore()->get('identities');
+        if (is_null($val) || $val instanceof IdentityContainer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identities'");
     }
 
     /**
@@ -219,6 +232,7 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlertsV2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
+        $writer->writeObjectValue('identities', $this->getIdentities());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeObjectValue('labels', $this->getLabels());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
@@ -259,6 +273,14 @@ class Security extends Entity implements Parsable
     */
     public function setCases(?CasesRoot $value): void {
         $this->getBackingStore()->set('cases', $value);
+    }
+
+    /**
+     * Sets the identities property value. The identities property
+     * @param IdentityContainer|null $value Value to set for the identities property.
+    */
+    public function setIdentities(?IdentityContainer $value): void {
+        $this->getBackingStore()->set('identities', $value);
     }
 
     /**

@@ -45,7 +45,7 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the datalabels on the chart. Read-only.
+     * Represents the data labels on the chart. Read-only.
      * @param DataLabelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartDataLabels|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the datalabels on the chart. Read-only.
+     * Represents the data labels on the chart. Read-only.
      * @param DataLabelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

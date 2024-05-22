@@ -95,7 +95,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the defaultValue property value. The defaultValue property
+     * Gets the defaultValue property value. The default value of the attribute.
      * @return string|null
     */
     public function getDefaultValue(): ?string {
@@ -303,7 +303,7 @@ class AttributeDefinition implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the defaultValue property value. The defaultValue property
+     * Sets the defaultValue property value. The default value of the attribute.
      * @param string|null $value Value to set for the defaultValue property.
     */
     public function setDefaultValue(?string $value): void {

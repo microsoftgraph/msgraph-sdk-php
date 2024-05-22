@@ -72,7 +72,7 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the maxLifetime property value. The maxLifetime property
+     * Gets the maxLifetime property value. Value that can be used as the maximum duration in days, hours, minutes, or seconds from the date of key creation, for which the key is valid.  Defined in ISO 8601 format for Durations. For example, P4DT12H30M5S represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
      * @return DateInterval|null
     */
     public function getMaxLifetime(): ?DateInterval {
@@ -148,7 +148,7 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the maxLifetime property value. The maxLifetime property
+     * Sets the maxLifetime property value. Value that can be used as the maximum duration in days, hours, minutes, or seconds from the date of key creation, for which the key is valid.  Defined in ISO 8601 format for Durations. For example, P4DT12H30M5S represents a duration of four days, twelve hours, thirty minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
      * @param DateInterval|null $value Value to set for the maxLifetime property.
     */
     public function setMaxLifetime(?DateInterval $value): void {
