@@ -105,10 +105,10 @@ how your application can retrieve access tokens from the SDK and pass already ac
 The SDK provides a mechanism to expose the access token and refresh token that it acquires to your application for use in future requests. This would prevent the SDK from making a new
 token request with each `GraphServiceClient` your application instantiates. It also allows your application to prevent its users from signing in with each request within a session.
 
-By default, a `GraphServiceClient` instance caches access tokens in a built-in [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/InMemoryAccessTokenCache.php). The cache will be populated with a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object which carries both the `access_token`, its expiry and a `refresh_token` if available. When the `GraphServiceClient` instance is re-used for a request with the same user/application, the in-memory cache is checked for a valid token otherwise a new token request is made.
+By default, a `GraphServiceClient` instance caches access tokens in a built-in [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/main/src/Cache/InMemoryAccessTokenCache.php). The cache will be populated with a PHPLeague [`AccessToken`](https://github.com/thephpleague/oauth2-client/blob/master/src/Token/AccessToken.php) object which carries both the `access_token`, its expiry and a `refresh_token` if available. When the `GraphServiceClient` instance is re-used for a request with the same user/application, the in-memory cache is checked for a valid token otherwise a new token request is made.
 
 However, to get the cached token that the SDK requests for a user/application you
-can initialise an `InMemoryAccessTokenCache` or pass a custom implementation of the [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface and pass it as a parameter when initialising the `GraphServiceClient`. The two approaches are outlined below:
+can initialise an `InMemoryAccessTokenCache` or pass a custom implementation of the [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/main/src/Cache/AccessTokenCache.php) interface and pass it as a parameter when initialising the `GraphServiceClient`. The two approaches are outlined below:
 
 ### Using an InMemoryAccessTokenCache instance
 
@@ -146,7 +146,7 @@ $accessToken = $inMemoryCache->getTokenWithContext($tokenRequestContext);
 
 ### Using a custom AccessTokenCache implementation
 
-A custom [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface implementation can also be provided. After the request, the SDK persists the token in the
+A custom [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/main/src/Cache/AccessTokenCache.php) interface implementation can also be provided. After the request, the SDK persists the token in the
 custom cache via the `persistAccessToken()` method.
 
 By default, the SDK adds a unique cache key/identifier to a `TokenRequestContext` that uniquely identifies the tenant, client and user (if applicable).
@@ -166,9 +166,9 @@ $accessToken = $customCache->getAccessToken($tokenRequestContext->getCacheKey())
 ### Initializing a GraphServiceClient with an access token
 
 For applications that already have built-in mechanisms to fetch and refresh access tokens, the SDK supports passing these tokens to a `GraphServiceClient` by initializing
-a client using an [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/AccessTokenCache.php) interface implementation.
+a client using an [`AccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/main/src/Cache/AccessTokenCache.php) interface implementation.
 
-The SDK provides a built-in implementation of this interface via an [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/dev/src/Cache/InMemoryAccessTokenCache.php).
+The SDK provides a built-in implementation of this interface via an [`InMemoryAccessTokenCache`](https://github.com/microsoft/kiota-authentication-phpleague-php/blob/main/src/Cache/InMemoryAccessTokenCache.php).
 
 This is also useful when re-using a previously retrieved access token for a signed-in user during a previous request.
 
@@ -381,7 +381,7 @@ while ($pageIterator->hasNext()) {
 
 
 ## Use a Custom Response Handler / Get the raw HTTP response
-Define a response handler that implements the [Response Handler interface](https://github.com/microsoft/kiota-abstractions-php/blob/dev/src/ResponseHandler.php) and pass it into the request using the request options.
+Define a response handler that implements the [Response Handler interface](https://github.com/microsoft/kiota-abstractions-php/blob/main/src/ResponseHandler.php) and pass it into the request using the request options.
 
 The SDK provides a default asynchronous response handler which returns a promise that resolves to a raw HTTP response.
 

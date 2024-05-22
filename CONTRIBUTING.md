@@ -40,9 +40,9 @@ The recommended commit types used are:
 Adding a footer with the prefix **BREAKING CHANGE:** will cause an increment of the _major_ version.
 
 ## Pull requests
-If you are making documentation changes, feel free to submit a pull request against the **main** branch. All other pull requests should be submitted against the **dev** branch or a specific feature branch. The master branch is intended to represent the code released in the most-recent composer package.
+If you are making documentation changes, feel free to submit a pull request against the **main** branch. All other pull requests should be submitted against the **main** branch or a specific feature branch. The master branch is intended to represent the code released in the most-recent composer package.
 
-When a new package is about to be released, changes in dev will be merged into master. The package will be generated from master.
+When a new package is about to be released, changes in main. The package will be generated from main.
 
 Some things to note about this project:
 
