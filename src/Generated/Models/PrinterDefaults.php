@@ -171,7 +171,7 @@ class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the inputBin property value. The inputBin property
+     * Gets the inputBin property value. The default input bin that serves as the paper source.
      * @return string|null
     */
     public function getInputBin(): ?string {
@@ -401,7 +401,7 @@ class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the inputBin property value. The inputBin property
+     * Sets the inputBin property value. The default input bin that serves as the paper source.
      * @param string|null $value Value to set for the inputBin property.
     */
     public function setInputBin(?string $value): void {

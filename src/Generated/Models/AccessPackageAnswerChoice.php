@@ -109,7 +109,7 @@ class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. The string to display for this answer; if an Accept-Language header is provided, and there is a matching localization in localizations, this string will be the matching localized string; otherwise, this string remains as the default non-localized string. Required.
      * @return string|null
     */
     public function getText(): ?string {
@@ -173,7 +173,7 @@ class AccessPackageAnswerChoice implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. The string to display for this answer; if an Accept-Language header is provided, and there is a matching localization in localizations, this string will be the matching localized string; otherwise, this string remains as the default non-localized string. Required.
      * @param string|null $value Value to set for the text property.
     */
     public function setText(?string $value): void {

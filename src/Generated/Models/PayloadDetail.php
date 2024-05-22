@@ -64,7 +64,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the coachmarks property value. Payload coachmark details.
+     * Gets the coachmarks property value. The coachmarks property
      * @return array<PayloadCoachmark>|null
     */
     public function getCoachmarks(): ?array {
@@ -156,7 +156,7 @@ class PayloadDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the coachmarks property value. Payload coachmark details.
+     * Sets the coachmarks property value. The coachmarks property
      * @param array<PayloadCoachmark>|null $value Value to set for the coachmarks property.
     */
     public function setCoachmarks(?array $value): void {

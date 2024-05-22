@@ -163,7 +163,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Gets the subscriptionIds property value. The subscriptionIds property
+     * Gets the subscriptionIds property value. A list of all subscription IDs associated with this SKU.
      * @return array<string>|null
     */
     public function getSubscriptionIds(): ?array {
@@ -267,7 +267,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Sets the subscriptionIds property value. The subscriptionIds property
+     * Sets the subscriptionIds property value. A list of all subscription IDs associated with this SKU.
      * @param array<string>|null $value Value to set for the subscriptionIds property.
     */
     public function setSubscriptionIds(?array $value): void {

@@ -296,7 +296,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the officeLocation property value. The officeLocation property
+     * Gets the officeLocation property value. The office location for the user.
      * @return string|null
     */
     public function getOfficeLocation(): ?string {
@@ -382,7 +382,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
+     * Gets the refreshTokensValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application needs to acquire a new refresh token by requesting the authorized endpoint. Returned only on $select. Read-only.
      * @return DateTime|null
     */
     public function getRefreshTokensValidFromDateTime(): ?DateTime {
@@ -740,7 +740,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the officeLocation property value. The officeLocation property
+     * Sets the officeLocation property value. The office location for the user.
      * @param string|null $value Value to set for the officeLocation property.
     */
     public function setOfficeLocation(?string $value): void {
@@ -796,7 +796,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
+     * Sets the refreshTokensValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application needs to acquire a new refresh token by requesting the authorized endpoint. Returned only on $select. Read-only.
      * @param DateTime|null $value Value to set for the refreshTokensValidFromDateTime property.
     */
     public function setRefreshTokensValidFromDateTime(?DateTime $value): void {

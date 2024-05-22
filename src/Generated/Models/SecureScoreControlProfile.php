@@ -235,7 +235,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
+     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, elevationOfPrivilege, maliciousInsider, passwordCracking, phishingOrWhaling, spoofing).
      * @return array<string>|null
     */
     public function getThreats(): ?array {
@@ -249,7 +249,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the tier property value. The tier property
+     * Gets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
      * @return string|null
     */
     public function getTier(): ?string {
@@ -261,7 +261,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the control.
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -273,7 +273,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the userImpact property value. The userImpact property
+     * Gets the userImpact property value. User impact of implementing control (low, moderate, high).
      * @return string|null
     */
     public function getUserImpact(): ?string {
@@ -285,7 +285,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the vendorInformation property value. The vendorInformation property
+     * Gets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @return SecurityVendorInformation|null
     */
     public function getVendorInformation(): ?SecurityVendorInformation {
@@ -436,7 +436,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
+     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage, elevationOfPrivilege, maliciousInsider, passwordCracking, phishingOrWhaling, spoofing).
      * @param array<string>|null $value Value to set for the threats property.
     */
     public function setThreats(?array $value): void {
@@ -444,7 +444,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the tier property value. The tier property
+     * Sets the tier property value. Control tier (Core, Defense in Depth, Advanced.)
      * @param string|null $value Value to set for the tier property.
     */
     public function setTier(?string $value): void {
@@ -452,7 +452,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the control.
      * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
@@ -460,7 +460,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the userImpact property value. The userImpact property
+     * Sets the userImpact property value. User impact of implementing control (low, moderate, high).
      * @param string|null $value Value to set for the userImpact property.
     */
     public function setUserImpact(?string $value): void {
@@ -468,7 +468,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the vendorInformation property value. The vendorInformation property
+     * Sets the vendorInformation property value. Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      * @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
     */
     public function setVendorInformation(?SecurityVendorInformation $value): void {

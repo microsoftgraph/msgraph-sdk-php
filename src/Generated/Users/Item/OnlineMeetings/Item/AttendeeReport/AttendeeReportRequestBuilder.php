@@ -31,7 +31,7 @@ class AttendeeReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete attendeeReport for the navigation property onlineMeetings in users
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param AttendeeReportRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class AttendeeReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get attendeeReport for the navigation property onlineMeetings from users
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param AttendeeReportRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -61,7 +61,7 @@ class AttendeeReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update attendeeReport for the navigation property onlineMeetings in users
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param StreamInterface $body Binary request body
      * @param AttendeeReportRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
@@ -78,7 +78,7 @@ class AttendeeReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete attendeeReport for the navigation property onlineMeetings in users
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param AttendeeReportRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -96,7 +96,7 @@ class AttendeeReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get attendeeReport for the navigation property onlineMeetings from users
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param AttendeeReportRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,7 +114,7 @@ class AttendeeReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update attendeeReport for the navigation property onlineMeetings in users
+     * The content stream of the attendee report of a Microsoft Teams live event. Read-only.
      * @param StreamInterface $body Binary request body
      * @param AttendeeReportRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
