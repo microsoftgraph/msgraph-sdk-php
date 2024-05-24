@@ -7,10 +7,12 @@
 
 ## Install the SDK
 You can install the PHP SDK with Composer by editing your `composer.json` file:
-```
+```jsonc
 {
     "require": {
+        // x-release-please-start-version
         "microsoft/microsoft-graph": "^2.10.0"
+        // x-release-please-end
     }
 }
 ```
