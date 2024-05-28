@@ -45,7 +45,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
+     * Gets the description property value. The description of the user flow attribute that's shown to the user at the time of sign up.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -115,7 +115,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
+     * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign up.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {

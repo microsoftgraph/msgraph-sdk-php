@@ -48,6 +48,18 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the archivalDetails property value. The archivalDetails property
+     * @return SiteArchivalDetails|null
+    */
+    public function getArchivalDetails(): ?SiteArchivalDetails {
+        $val = $this->getBackingStore()->get('archivalDetails');
+        if (is_null($val) || $val instanceof SiteArchivalDetails) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'archivalDetails'");
+    }
+
+    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -74,6 +86,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'archivalDetails' => fn(ParseNode $n) => $o->setArchivalDetails($n->getObjectValue([SiteArchivalDetails::class, 'createFromDiscriminatorValue'])),
             'dataLocationCode' => fn(ParseNode $n) => $o->setDataLocationCode($n->getStringValue()),
             'hostname' => fn(ParseNode $n) => $o->setHostname($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -122,6 +135,7 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('archivalDetails', $this->getArchivalDetails());
         $writer->writeStringValue('dataLocationCode', $this->getDataLocationCode());
         $writer->writeStringValue('hostname', $this->getHostname());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -135,6 +149,14 @@ class SiteCollection implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the archivalDetails property value. The archivalDetails property
+     * @param SiteArchivalDetails|null $value Value to set for the archivalDetails property.
+    */
+    public function setArchivalDetails(?SiteArchivalDetails $value): void {
+        $this->getBackingStore()->set('archivalDetails', $value);
     }
 
     /**

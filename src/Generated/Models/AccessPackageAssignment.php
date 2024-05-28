@@ -119,7 +119,7 @@ class AccessPackageAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
+     * Gets the status property value. More information about the assignment lifecycle. Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered. Read-only.
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -207,7 +207,7 @@ class AccessPackageAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
+     * Sets the status property value. More information about the assignment lifecycle. Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered. Read-only.
      * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {

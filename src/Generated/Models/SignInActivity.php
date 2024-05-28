@@ -67,12 +67,14 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
             'lastNonInteractiveSignInRequestId' => fn(ParseNode $n) => $o->setLastNonInteractiveSignInRequestId($n->getStringValue()),
             'lastSignInDateTime' => fn(ParseNode $n) => $o->setLastSignInDateTime($n->getDateTimeValue()),
             'lastSignInRequestId' => fn(ParseNode $n) => $o->setLastSignInRequestId($n->getStringValue()),
+            'lastSuccessfulSignInDateTime' => fn(ParseNode $n) => $o->setLastSuccessfulSignInDateTime($n->getDateTimeValue()),
+            'lastSuccessfulSignInRequestId' => fn(ParseNode $n) => $o->setLastSuccessfulSignInRequestId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
-     * Gets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted (either successfully or unsuccessfully) to sign in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
+     * Gets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted (either successfully or unsuccessfully) to sign in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Microsoft Entra ID maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
      * @return DateTime|null
     */
     public function getLastNonInteractiveSignInDateTime(): ?DateTime {
@@ -96,7 +98,7 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted (either successfully or unsuccessfully) to sign in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
+     * Gets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted (either successfully or unsuccessfully) to sign in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
      * @return DateTime|null
     */
     public function getLastSignInDateTime(): ?DateTime {
@@ -120,6 +122,30 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the lastSuccessfulSignInDateTime property value. The date and time of the user's most recent successful sign-in activity. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getLastSuccessfulSignInDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastSuccessfulSignInDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSuccessfulSignInDateTime'");
+    }
+
+    /**
+     * Gets the lastSuccessfulSignInRequestId property value. The request ID of the last successful sign-in.
+     * @return string|null
+    */
+    public function getLastSuccessfulSignInRequestId(): ?string {
+        $val = $this->getBackingStore()->get('lastSuccessfulSignInRequestId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSuccessfulSignInRequestId'");
+    }
+
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
@@ -140,6 +166,8 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('lastNonInteractiveSignInRequestId', $this->getLastNonInteractiveSignInRequestId());
         $writer->writeDateTimeValue('lastSignInDateTime', $this->getLastSignInDateTime());
         $writer->writeStringValue('lastSignInRequestId', $this->getLastSignInRequestId());
+        $writer->writeDateTimeValue('lastSuccessfulSignInDateTime', $this->getLastSuccessfulSignInDateTime());
+        $writer->writeStringValue('lastSuccessfulSignInRequestId', $this->getLastSuccessfulSignInRequestId());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -161,7 +189,7 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted (either successfully or unsuccessfully) to sign in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
+     * Sets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted (either successfully or unsuccessfully) to sign in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Microsoft Entra ID maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
      * @param DateTime|null $value Value to set for the lastNonInteractiveSignInDateTime property.
     */
     public function setLastNonInteractiveSignInDateTime(?DateTime $value): void {
@@ -177,7 +205,7 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted (either successfully or unsuccessfully) to sign in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
+     * Sets the lastSignInDateTime property value. The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted (either successfully or unsuccessfully) to sign in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Microsoft Entra ID maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Microsoft Entra ID.
      * @param DateTime|null $value Value to set for the lastSignInDateTime property.
     */
     public function setLastSignInDateTime(?DateTime $value): void {
@@ -190,6 +218,22 @@ class SignInActivity implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setLastSignInRequestId(?string $value): void {
         $this->getBackingStore()->set('lastSignInRequestId', $value);
+    }
+
+    /**
+     * Sets the lastSuccessfulSignInDateTime property value. The date and time of the user's most recent successful sign-in activity. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the lastSuccessfulSignInDateTime property.
+    */
+    public function setLastSuccessfulSignInDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastSuccessfulSignInDateTime', $value);
+    }
+
+    /**
+     * Sets the lastSuccessfulSignInRequestId property value. The request ID of the last successful sign-in.
+     * @param string|null $value Value to set for the lastSuccessfulSignInRequestId property.
+    */
+    public function setLastSuccessfulSignInRequestId(?string $value): void {
+        $this->getBackingStore()->set('lastSuccessfulSignInRequestId', $value);
     }
 
     /**

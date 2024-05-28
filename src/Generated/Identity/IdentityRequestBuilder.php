@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\AuthenticationEventListeners\AuthenticationEventListenersRequestBuilder;
+use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\AuthenticationEventsFlowsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
 use Microsoft\Graph\Generated\Identity\CustomAuthenticationExtensions\CustomAuthenticationExtensionsRequestBuilder;
@@ -35,6 +36,13 @@ class IdentityRequestBuilder extends BaseRequestBuilder
     */
     public function authenticationEventListeners(): AuthenticationEventListenersRequestBuilder {
         return new AuthenticationEventListenersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the authenticationEventsFlows property of the microsoft.graph.identityContainer entity.
+    */
+    public function authenticationEventsFlows(): AuthenticationEventsFlowsRequestBuilder {
+        return new AuthenticationEventsFlowsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

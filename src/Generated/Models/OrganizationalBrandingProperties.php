@@ -47,7 +47,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
-     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.
      * @return StreamInterface|null
     */
     public function getBackgroundImage(): ?StreamInterface {
@@ -109,7 +109,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentCustomization property value. The contentCustomization property
+     * Gets the contentCustomization property value. Represents the content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra External ID in external tenants only.
      * @return ContentCustomization|null
     */
     public function getContentCustomization(): ?ContentCustomization {
@@ -504,7 +504,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
-     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.
      * @param StreamInterface|null $value Value to set for the backgroundImage property.
     */
     public function setBackgroundImage(?StreamInterface $value): void {
@@ -544,7 +544,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentCustomization property value. The contentCustomization property
+     * Sets the contentCustomization property value. Represents the content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra External ID in external tenants only.
      * @param ContentCustomization|null $value Value to set for the contentCustomization property.
     */
     public function setContentCustomization(?ContentCustomization $value): void {

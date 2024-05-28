@@ -110,7 +110,7 @@ class ContentCustomization implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the registrationCampaign property value. The registrationCampaign property
+     * Gets the registrationCampaign property value. Represents content options to customize during MFA proofup interruptions.
      * @return array<KeyValue>|null
     */
     public function getRegistrationCampaign(): ?array {
@@ -124,7 +124,7 @@ class ContentCustomization implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the registrationCampaignRelativeUrl property value. The registrationCampaignRelativeUrl property
+     * Gets the registrationCampaignRelativeUrl property value. The relative URL of the content options to customize during MFA proofup interruptions.
      * @return string|null
     */
     public function getRegistrationCampaignRelativeUrl(): ?string {
@@ -189,7 +189,7 @@ class ContentCustomization implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the registrationCampaign property value. The registrationCampaign property
+     * Sets the registrationCampaign property value. Represents content options to customize during MFA proofup interruptions.
      * @param array<KeyValue>|null $value Value to set for the registrationCampaign property.
     */
     public function setRegistrationCampaign(?array $value): void {
@@ -197,7 +197,7 @@ class ContentCustomization implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the registrationCampaignRelativeUrl property value. The registrationCampaignRelativeUrl property
+     * Sets the registrationCampaignRelativeUrl property value. The relative URL of the content options to customize during MFA proofup interruptions.
      * @param string|null $value Value to set for the registrationCampaignRelativeUrl property.
     */
     public function setRegistrationCampaignRelativeUrl(?string $value): void {

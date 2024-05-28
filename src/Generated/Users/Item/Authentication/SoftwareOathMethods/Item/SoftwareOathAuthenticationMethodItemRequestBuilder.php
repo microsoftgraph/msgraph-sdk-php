@@ -46,7 +46,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SoftwareOathAuthenticationMethod|null>
      * @throws Exception
@@ -78,7 +78,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * The software OATH TOTP applications registered to a user for authentication.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

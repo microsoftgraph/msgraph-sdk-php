@@ -121,7 +121,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Gets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * Gets the originId property value. The unique identifier of the resource in the origin system. For a Microsoft Entra group, this is the identifier of the group.
      * @return string|null
     */
     public function getOriginId(): ?string {
@@ -239,7 +239,7 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
-     * Sets the originId property value. The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
+     * Sets the originId property value. The unique identifier of the resource in the origin system. For a Microsoft Entra group, this is the identifier of the group.
      * @param string|null $value Value to set for the originId property.
     */
     public function setOriginId(?string $value): void {
