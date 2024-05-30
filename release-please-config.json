@@ -1,5 +1,5 @@
 {
-	"bootstrap-sha": "272035ede24db5978797f441cd0bc1b1c58af836",
+	"bootstrap-sha": "66656259cea9373d96101ba2f81e0e0b80d7554b",
 	"exclude-paths": [
 		".git",
 		".idea",
@@ -11,7 +11,6 @@
 	"release-type": "simple",
 	"include-component-in-tag": false,
 	"include-v-in-tag": true,
-	"changelog-type": "github",
 	"packages": {
 		".": {
 			"package-name": "microsoft/microsoft-graph",
