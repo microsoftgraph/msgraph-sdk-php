@@ -116,7 +116,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Gets the passwordMethods property value. Represents the password registered to a user for authentication. For security, the password itself is never returned in the object, but action can be taken to reset a password.
      * @return array<PasswordAuthenticationMethod>|null
     */
     public function getPasswordMethods(): ?array {
@@ -144,7 +144,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
+     * Gets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return array<SoftwareOathAuthenticationMethod>|null
     */
     public function getSoftwareOathMethods(): ?array {
@@ -244,7 +244,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the passwordMethods property value. Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+     * Sets the passwordMethods property value. Represents the password registered to a user for authentication. For security, the password itself is never returned in the object, but action can be taken to reset a password.
      * @param array<PasswordAuthenticationMethod>|null $value Value to set for the passwordMethods property.
     */
     public function setPasswordMethods(?array $value): void {
@@ -260,7 +260,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the softwareOathMethods property value. The software OATH TOTP applications registered to a user for authentication.
+     * Sets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param array<SoftwareOathAuthenticationMethod>|null $value Value to set for the softwareOathMethods property.
     */
     public function setSoftwareOathMethods(?array $value): void {

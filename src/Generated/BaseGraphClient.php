@@ -68,6 +68,7 @@ use Microsoft\Graph\Generated\ServicePrincipalsWithAppId\ServicePrincipalsWithAp
 use Microsoft\Graph\Generated\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\SolutionsRequestBuilder;
+use Microsoft\Graph\Generated\Storage\StorageRequestBuilder;
 use Microsoft\Graph\Generated\SubscribedSkus\SubscribedSkusRequestBuilder;
 use Microsoft\Graph\Generated\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\TeamsRequestBuilder;
@@ -511,6 +512,13 @@ class BaseGraphClient extends BaseRequestBuilder
     */
     public function solutions(): SolutionsRequestBuilder {
         return new SolutionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the storage singleton.
+    */
+    public function storage(): StorageRequestBuilder {
+        return new StorageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
