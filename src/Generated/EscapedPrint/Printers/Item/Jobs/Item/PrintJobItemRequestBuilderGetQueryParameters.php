@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of jobs that are queued for printing by the printer/printerShare.
+ * Retrieve the properties and relationships of a print job.
 */
 class PrintJobItemRequestBuilderGetQueryParameters 
 {

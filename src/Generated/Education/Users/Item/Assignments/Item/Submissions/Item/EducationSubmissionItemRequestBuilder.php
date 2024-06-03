@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submis
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\EscapedReturn\ReturnRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Excuse\ExcuseRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Reassign\ReassignRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
@@ -29,6 +30,13 @@ class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder
     */
     public function escapedReturn(): ReturnRequestBuilder {
         return new ReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the excuse method.
+    */
+    public function excuse(): ExcuseRequestBuilder {
+        return new ExcuseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -109,11 +117,10 @@ class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent this work. Only the assignedTo student can see and modify the submission. A teacher or application with application permissions has full access to all submissions. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the assignment has been released.
+     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
      * @param EducationSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSubmission|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationsubmission-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationSubmissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -145,7 +152,7 @@ class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?EducationSubmissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -157,7 +164,7 @@ class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a particular submission. Only teachers, students, and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent this work. Only the assignedTo student can see and modify the submission. A teacher or application with application permissions has full access to all submissions. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students will not see the grade or feedback until the assignment has been released.
+     * Once published, there's a submission object for each student representing their work and grade. Read-only. Nullable.
      * @param EducationSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -185,7 +192,7 @@ class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(EducationSubmission $body, ?EducationSubmissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/users/{educationUser%2Did}/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -30,10 +30,11 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function delta
+     * Get a list of newly created or updated educationCategory objects without having to perform a full read of the collection.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeltaGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationcategory-delta?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeltaRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function delta
+     * Get a list of newly created or updated educationCategory objects without having to perform a full read of the collection.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

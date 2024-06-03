@@ -52,10 +52,11 @@ class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      * @param ExemptAppLockerFilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLockerFileCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExemptAppLockerFilesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
+     * Create a new windowsInformationProtectionAppLockerFile object.
      * @param WindowsInformationProtectionAppLockerFile $body The request body
      * @param ExemptAppLockerFilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLockerFile|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionapplockerfile-create?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsInformationProtectionAppLockerFile $body, ?ExemptAppLockerFilesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Another way to input exempt apps through xml files
+     * List properties and relationships of the windowsInformationProtectionAppLockerFile objects.
      * @param ExemptAppLockerFilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,14 +104,14 @@ class ExemptAppLockerFilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to exemptAppLockerFiles for deviceAppManagement
+     * Create a new windowsInformationProtectionAppLockerFile object.
      * @param WindowsInformationProtectionAppLockerFile $body The request body
      * @param ExemptAppLockerFilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(WindowsInformationProtectionAppLockerFile $body, ?ExemptAppLockerFilesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}/exemptAppLockerFiles';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

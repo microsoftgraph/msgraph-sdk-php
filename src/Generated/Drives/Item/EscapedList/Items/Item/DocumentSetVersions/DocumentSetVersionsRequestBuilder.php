@@ -52,11 +52,10 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DocumentSetVersionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/listitem-list-documentsetversions?view=graph-rest-1.0 Find more info here
     */
     public function get(?DocumentSetVersionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new version of a document set item in a list.
+     * Create new navigation property to documentSetVersions for drives
      * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DocumentSetVersion|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0 Find more info here
     */
     public function post(DocumentSetVersion $body, ?DocumentSetVersionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the versions of a document set item in a list.
+     * Version information for a document set version created by a user.
      * @param DocumentSetVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class DocumentSetVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new version of a document set item in a list.
+     * Create new navigation property to documentSetVersions for drives
      * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(DocumentSetVersion $body, ?DocumentSetVersionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/list/items/{listItem%2Did}/documentSetVersions';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

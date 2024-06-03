@@ -75,7 +75,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
@@ -90,7 +90,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
+     * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

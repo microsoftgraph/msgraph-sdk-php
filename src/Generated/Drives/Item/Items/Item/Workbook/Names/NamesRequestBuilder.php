@@ -68,11 +68,10 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of nameditem objects.
+     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookNamedItemCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,7 +97,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of nameditem objects.
+     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -126,7 +125,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WorkbookNamedItem $body, ?NamesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/names';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

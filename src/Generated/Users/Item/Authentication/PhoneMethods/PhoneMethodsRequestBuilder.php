@@ -52,11 +52,10 @@ class PhoneMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users.
+     * The phone numbers registered to a user for authentication.
      * @param PhoneMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PhoneAuthenticationMethodCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authentication-list-phonemethods?view=graph-rest-1.0 Find more info here
     */
     public function get(?PhoneMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,7 +82,7 @@ class PhoneMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of phone authentication method objects for a user. This will return up to three objects, as a user can have up to three phones usable for authentication. This method is available only for standard Microsoft Entra ID and B2B users, but not B2C users.
+     * The phone numbers registered to a user for authentication.
      * @param PhoneMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +110,7 @@ class PhoneMethodsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PhoneAuthenticationMethod $body, ?PhoneMethodsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/phoneMethods';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

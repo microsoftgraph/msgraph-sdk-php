@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOff
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a timeOffReason object by ID.
+ * The set of reasons for a time off in the schedule.
 */
 class TimeOffReasonItemRequestBuilderGetQueryParameters 
 {

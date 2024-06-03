@@ -89,7 +89,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the category property value. Category of the alert (for example, credentialTheft, ransomware, etc.).
+     * Gets the category property value. Category of the alert (for example, credentialTheft, ransomware).
      * @return string|null
     */
     public function getCategory(): ?string {
@@ -191,7 +191,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the eventDateTime property value. Time at which the event(s) that served as the trigger(s) to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * Gets the eventDateTime property value. Time at which the event or events that served as the trigger to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
@@ -203,7 +203,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. (supports update)
+     * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
@@ -510,7 +510,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search, etc.
+     * Gets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search.
      * @return array<string>|null
     */
     public function getSourceMaterials(): ?array {
@@ -536,7 +536,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW', etc.) (supports update).
+     * Gets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW') (supports update).
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -717,7 +717,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the category property value. Category of the alert (for example, credentialTheft, ransomware, etc.).
+     * Sets the category property value. Category of the alert (for example, credentialTheft, ransomware).
      * @param string|null $value Value to set for the category property.
     */
     public function setCategory(?string $value): void {
@@ -781,7 +781,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the eventDateTime property value. Time at which the event(s) that served as the trigger(s) to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * Sets the eventDateTime property value. Time at which the event or events that served as the trigger to generate the alert occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
      * @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value): void {
@@ -789,7 +789,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. (supports update)
+     * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @param AlertFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?AlertFeedback $value): void {
@@ -917,7 +917,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search, etc.
+     * Sets the sourceMaterials property value. Hyperlinks (URIs) to the source material related to the alert, for example, provider's user interface for alerts or log search.
      * @param array<string>|null $value Value to set for the sourceMaterials property.
     */
     public function setSourceMaterials(?array $value): void {
@@ -933,7 +933,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW', etc.) (supports update).
+     * Sets the tags property value. User-definable labels that can be applied to an alert and can serve as filter conditions (for example 'HVA', 'SAW') (supports update).
      * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {

@@ -32,11 +32,10 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoint objects.
+     * Represents a collection of all points in the series. Read-only.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPointCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PointsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,12 +46,11 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param WorkbookChartPoint $body The request body
      * @param PointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPoint|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0 Find more info here
     */
     public function post(WorkbookChartPoint $body, ?PointsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -63,7 +61,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoint objects.
+     * Represents a collection of all points in the series. Read-only.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -84,14 +82,14 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartPoints.
+     * Create new navigation property to points for drives
      * @param WorkbookChartPoint $body The request body
      * @param PointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(WorkbookChartPoint $body, ?PointsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/itemAt(index={index})/points';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

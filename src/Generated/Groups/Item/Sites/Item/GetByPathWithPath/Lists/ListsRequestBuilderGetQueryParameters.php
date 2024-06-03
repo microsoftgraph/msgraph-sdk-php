@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Lis
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
+ * The collection of lists under this site.
 */
 class ListsRequestBuilderGetQueryParameters 
 {

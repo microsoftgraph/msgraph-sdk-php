@@ -76,7 +76,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * Get the collection of contentType resources in a list.
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentTypeCollectionResponse|null>
      * @throws Exception
@@ -106,7 +106,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [contentType][contentType] resources in a [list][].
+     * Get the collection of contentType resources in a list.
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -134,7 +134,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ContentType $body, ?ContentTypesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

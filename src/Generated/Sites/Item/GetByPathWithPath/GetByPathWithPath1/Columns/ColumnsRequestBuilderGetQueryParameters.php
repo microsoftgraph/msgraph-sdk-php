@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPa
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
+ * The collection of column definitions reusable across lists under this site.
 */
 class ColumnsRequestBuilderGetQueryParameters 
 {

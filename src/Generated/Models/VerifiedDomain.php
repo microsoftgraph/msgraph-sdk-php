@@ -108,7 +108,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The domain name; for example, contoso.com`.
+     * Gets the name property value. The domain name; for example, contoso.com.
      * @return string|null
     */
     public function getName(): ?string {
@@ -198,7 +198,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The domain name; for example, contoso.com`.
+     * Sets the name property value. The domain name; for example, contoso.com.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

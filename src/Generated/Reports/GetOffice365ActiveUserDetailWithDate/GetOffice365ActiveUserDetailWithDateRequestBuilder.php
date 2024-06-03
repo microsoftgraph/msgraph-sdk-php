@@ -35,10 +35,11 @@ class GetOffice365ActiveUserDetailWithDateRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getOffice365ActiveUserDetail
+     * Get details about Microsoft 365 active users.
      * @param GetOffice365ActiveUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365activeuserdetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOffice365ActiveUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetOffice365ActiveUserDetailWithDateRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getOffice365ActiveUserDetail
+     * Get details about Microsoft 365 active users.
      * @param GetOffice365ActiveUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -48,6 +48,8 @@ class UserTeamwork extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'associatedTeams' => fn(ParseNode $n) => $o->setAssociatedTeams($n->getCollectionOfObjectValues([AssociatedTeamInfo::class, 'createFromDiscriminatorValue'])),
             'installedApps' => fn(ParseNode $n) => $o->setInstalledApps($n->getCollectionOfObjectValues([UserScopeTeamsAppInstallation::class, 'createFromDiscriminatorValue'])),
+            'locale' => fn(ParseNode $n) => $o->setLocale($n->getStringValue()),
+            'region' => fn(ParseNode $n) => $o->setRegion($n->getStringValue()),
         ]);
     }
 
@@ -66,6 +68,30 @@ class UserTeamwork extends Entity implements Parsable
     }
 
     /**
+     * Gets the locale property value. The chosen locale of a user in Microsoft Teams.
+     * @return string|null
+    */
+    public function getLocale(): ?string {
+        $val = $this->getBackingStore()->get('locale');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'locale'");
+    }
+
+    /**
+     * Gets the region property value. The region of the user in Microsoft Teams.
+     * @return string|null
+    */
+    public function getRegion(): ?string {
+        $val = $this->getBackingStore()->get('region');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'region'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -73,6 +99,8 @@ class UserTeamwork extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('associatedTeams', $this->getAssociatedTeams());
         $writer->writeCollectionOfObjectValues('installedApps', $this->getInstalledApps());
+        $writer->writeStringValue('locale', $this->getLocale());
+        $writer->writeStringValue('region', $this->getRegion());
     }
 
     /**
@@ -89,6 +117,22 @@ class UserTeamwork extends Entity implements Parsable
     */
     public function setInstalledApps(?array $value): void {
         $this->getBackingStore()->set('installedApps', $value);
+    }
+
+    /**
+     * Sets the locale property value. The chosen locale of a user in Microsoft Teams.
+     * @param string|null $value Value to set for the locale property.
+    */
+    public function setLocale(?string $value): void {
+        $this->getBackingStore()->set('locale', $value);
+    }
+
+    /**
+     * Sets the region property value. The region of the user in Microsoft Teams.
+     * @param string|null $value Value to set for the region property.
+    */
+    public function setRegion(?string $value): void {
+        $this->getBackingStore()->set('region', $value);
     }
 
 }

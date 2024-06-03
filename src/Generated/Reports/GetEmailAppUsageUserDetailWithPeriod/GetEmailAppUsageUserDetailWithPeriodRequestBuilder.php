@@ -34,7 +34,7 @@ class GetEmailAppUsageUserDetailWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getEmailAppUsageUserDetail
+     * Get details about which activities users performed on the various email apps.
      * @param GetEmailAppUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class GetEmailAppUsageUserDetailWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getEmailAppUsageUserDetail
+     * Get details about which activities users performed on the various email apps.
      * @param GetEmailAppUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

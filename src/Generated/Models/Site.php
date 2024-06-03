@@ -229,7 +229,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the pages property value. The pages property
+     * Gets the pages property value. The collection of pages in the baseSitePages list in this site.
      * @return array<BaseSitePage>|null
     */
     public function getPages(): ?array {
@@ -466,7 +466,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the pages property value. The pages property
+     * Sets the pages property value. The collection of pages in the baseSitePages list in this site.
      * @param array<BaseSitePage>|null $value Value to set for the pages property.
     */
     public function setPages(?array $value): void {

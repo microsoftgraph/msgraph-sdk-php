@@ -86,7 +86,7 @@ class FederatedIdentityCredential extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. The unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. The string is immutable after it's created. Required. Not nullable. Supports $filter (eq).
+     * Gets the name property value. The unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. The string is immutable after it's created. Alternate key. Required. Not nullable. Supports $filter (eq).
      * @return string|null
     */
     public function getName(): ?string {
@@ -147,7 +147,7 @@ class FederatedIdentityCredential extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. The unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. The string is immutable after it's created. Required. Not nullable. Supports $filter (eq).
+     * Sets the name property value. The unique identifier for the federated identity credential, which has a limit of 120 characters and must be URL friendly. The string is immutable after it's created. Alternate key. Required. Not nullable. Supports $filter (eq).
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

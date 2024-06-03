@@ -117,11 +117,10 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the default channel, General, of a team.
+     * The general channel for the team.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Channel|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/team-get-primarychannel?view=graph-rest-1.0 Find more info here
     */
     public function get(?PrimaryChannelRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -153,7 +152,7 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?PrimaryChannelRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/primaryChannel';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -165,7 +164,7 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the default channel, General, of a team.
+     * The general channel for the team.
      * @param PrimaryChannelRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -193,7 +192,7 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Channel $body, ?PrimaryChannelRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/primaryChannel';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

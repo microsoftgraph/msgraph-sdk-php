@@ -53,11 +53,10 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsProtectionState object.
+     * The device protection status. This property is read-only.
      * @param WindowsProtectionStateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsProtectionState|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsProtectionStateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windowsProtectionState object.
+     * Update the navigation property windowsProtectionState in deviceManagement
      * @param WindowsProtectionState $body The request body
      * @param WindowsProtectionStateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsProtectionState|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-windowsprotectionstate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WindowsProtectionState $body, ?WindowsProtectionStateRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +88,7 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?WindowsProtectionStateRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/windowsProtectionState';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -102,7 +100,7 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsProtectionState object.
+     * The device protection status. This property is read-only.
      * @param WindowsProtectionStateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,14 +121,14 @@ class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windowsProtectionState object.
+     * Update the navigation property windowsProtectionState in deviceManagement
      * @param WindowsProtectionState $body The request body
      * @param WindowsProtectionStateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(WindowsProtectionState $body, ?WindowsProtectionStateRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/windowsProtectionState';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

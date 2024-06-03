@@ -93,8 +93,21 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'delegatedAdminCustomers' => fn(ParseNode $n) => $o->setDelegatedAdminCustomers($n->getCollectionOfObjectValues([DelegatedAdminCustomer::class, 'createFromDiscriminatorValue'])),
             'delegatedAdminRelationships' => fn(ParseNode $n) => $o->setDelegatedAdminRelationships($n->getCollectionOfObjectValues([DelegatedAdminRelationship::class, 'createFromDiscriminatorValue'])),
+            'multiTenantOrganization' => fn(ParseNode $n) => $o->setMultiTenantOrganization($n->getObjectValue([MultiTenantOrganization::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
+    }
+
+    /**
+     * Gets the multiTenantOrganization property value. Defines an organization with more than one instance of Microsoft Entra ID.
+     * @return MultiTenantOrganization|null
+    */
+    public function getMultiTenantOrganization(): ?MultiTenantOrganization {
+        $val = $this->getBackingStore()->get('multiTenantOrganization');
+        if (is_null($val) || $val instanceof MultiTenantOrganization) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multiTenantOrganization'");
     }
 
     /**
@@ -116,6 +129,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('delegatedAdminCustomers', $this->getDelegatedAdminCustomers());
         $writer->writeCollectionOfObjectValues('delegatedAdminRelationships', $this->getDelegatedAdminRelationships());
+        $writer->writeObjectValue('multiTenantOrganization', $this->getMultiTenantOrganization());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -150,6 +164,14 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setDelegatedAdminRelationships(?array $value): void {
         $this->getBackingStore()->set('delegatedAdminRelationships', $value);
+    }
+
+    /**
+     * Sets the multiTenantOrganization property value. Defines an organization with more than one instance of Microsoft Entra ID.
+     * @param MultiTenantOrganization|null $value Value to set for the multiTenantOrganization property.
+    */
+    public function setMultiTenantOrganization(?MultiTenantOrganization $value): void {
+        $this->getBackingStore()->set('multiTenantOrganization', $value);
     }
 
     /**

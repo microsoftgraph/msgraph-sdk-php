@@ -68,6 +68,7 @@ use Microsoft\Graph\Generated\ServicePrincipalsWithAppId\ServicePrincipalsWithAp
 use Microsoft\Graph\Generated\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\SolutionsRequestBuilder;
+use Microsoft\Graph\Generated\Storage\StorageRequestBuilder;
 use Microsoft\Graph\Generated\SubscribedSkus\SubscribedSkusRequestBuilder;
 use Microsoft\Graph\Generated\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\TeamsRequestBuilder;
@@ -80,8 +81,11 @@ use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactory;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Serialization\Form\FormParseNodeFactory;
+use Microsoft\Kiota\Serialization\Form\FormSerializationWriterFactory;
 use Microsoft\Kiota\Serialization\Json\JsonParseNodeFactory;
 use Microsoft\Kiota\Serialization\Json\JsonSerializationWriterFactory;
+use Microsoft\Kiota\Serialization\Multipart\MultipartSerializationWriterFactory;
 use Microsoft\Kiota\Serialization\Text\TextParseNodeFactory;
 use Microsoft\Kiota\Serialization\Text\TextSerializationWriterFactory;
 
@@ -511,6 +515,13 @@ class BaseGraphClient extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the storage singleton.
+    */
+    public function storage(): StorageRequestBuilder {
+        return new StorageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the collection of subscribedSku entities.
     */
     public function subscribedSkus(): SubscribedSkusRequestBuilder {
@@ -586,8 +597,11 @@ class BaseGraphClient extends BaseRequestBuilder
         parent::__construct($requestAdapter, [], '{+baseurl}');
         ApiClientBuilder::registerDefaultSerializer(JsonSerializationWriterFactory::class);
         ApiClientBuilder::registerDefaultSerializer(TextSerializationWriterFactory::class);
+        ApiClientBuilder::registerDefaultSerializer(FormSerializationWriterFactory::class);
+        ApiClientBuilder::registerDefaultSerializer(MultipartSerializationWriterFactory::class);
         ApiClientBuilder::registerDefaultDeserializer(JsonParseNodeFactory::class);
         ApiClientBuilder::registerDefaultDeserializer(TextParseNodeFactory::class);
+        ApiClientBuilder::registerDefaultDeserializer(FormParseNodeFactory::class);
         if (empty($this->requestAdapter->getBaseUrl())) {
             $this->requestAdapter->setBaseUrl('https://graph.microsoft.com/v1.0');
         }

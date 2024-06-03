@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SwapShi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a swapShiftsChangeRequest object.
+ * The swap requests for shifts in the schedule.
 */
 class SwapShiftsChangeRequestItemRequestBuilderGetQueryParameters 
 {

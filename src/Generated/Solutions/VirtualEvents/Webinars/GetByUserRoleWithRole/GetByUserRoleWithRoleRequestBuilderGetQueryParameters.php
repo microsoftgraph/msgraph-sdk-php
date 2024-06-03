@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\GetByUserRo
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getByUserRole
+ * Get a virtualEventWebinar collection where the signed-in user is either the organizer or a coorganizer.
 */
 class GetByUserRoleWithRoleRequestBuilderGetQueryParameters 
 {

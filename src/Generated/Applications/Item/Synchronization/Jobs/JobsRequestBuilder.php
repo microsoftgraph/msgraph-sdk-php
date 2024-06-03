@@ -60,11 +60,10 @@ class JobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List existing jobs for a given application instance (service principal).
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param JobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationJobCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-1.0 Find more info here
     */
     public function get(?JobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class JobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
+     * Create new navigation property to jobs for applications
      * @param SynchronizationJob $body The request body
      * @param JobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationJob|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-1.0 Find more info here
     */
     public function post(SynchronizationJob $body, ?JobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class JobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List existing jobs for a given application instance (service principal).
+     * Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
      * @param JobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,14 +110,14 @@ class JobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new synchronization job with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
+     * Create new navigation property to jobs for applications
      * @param SynchronizationJob $body The request body
      * @param JobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(SynchronizationJob $body, ?JobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/applications/{application%2Did}/synchronization/jobs';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

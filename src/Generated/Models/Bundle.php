@@ -48,7 +48,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the album property value. If the bundle is an [album][], then the album property is included
+     * Gets the album property value. If the bundle is an album, then the album property is included
      * @return Album|null
     */
     public function getAlbum(): ?Album {
@@ -124,7 +124,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the album property value. If the bundle is an [album][], then the album property is included
+     * Sets the album property value. If the bundle is an album, then the album property is included
      * @param Album|null $value Value to set for the album property.
     */
     public function setAlbum(?Album $value): void {

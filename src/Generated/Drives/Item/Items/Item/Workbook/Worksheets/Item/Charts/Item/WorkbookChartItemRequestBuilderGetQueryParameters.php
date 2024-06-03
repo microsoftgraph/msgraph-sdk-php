@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of chart object.
+ * Returns collection of charts that are part of the worksheet. Read-only.
 */
 class WorkbookChartItemRequestBuilderGetQueryParameters 
 {

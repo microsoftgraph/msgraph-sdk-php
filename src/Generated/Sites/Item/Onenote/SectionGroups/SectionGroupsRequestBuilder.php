@@ -52,11 +52,10 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of sectionGroup objects.
+     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SectionGroupCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/onenote-list-sectiongroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of sectionGroup objects.
+     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +109,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SectionGroup $body, ?SectionGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/onenote/sectionGroups';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

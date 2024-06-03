@@ -52,11 +52,10 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the first level children of a [set] or [term] resource using the children navigation property.
+     * Children terms of set in term [store].
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-term-list-children?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChildrenRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new term object.
+     * Create new navigation property to children for groups
      * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Term|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Term $body, ?ChildrenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the first level children of a [set] or [term] resource using the children navigation property.
+     * Children terms of set in term [store].
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new term object.
+     * Create new navigation property to children for groups
      * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(Term $body, ?ChildrenRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStores/{store%2Did}/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/children';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

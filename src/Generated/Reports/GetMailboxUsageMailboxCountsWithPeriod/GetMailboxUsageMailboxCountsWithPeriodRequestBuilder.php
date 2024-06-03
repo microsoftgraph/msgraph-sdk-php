@@ -34,10 +34,11 @@ class GetMailboxUsageMailboxCountsWithPeriodRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getMailboxUsageMailboxCounts
+     * Get the total number of user mailboxes in your organization and how many are active each day of the reporting period. A mailbox is considered active if the user sent or read any email.
      * @param GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getmailboxusagemailboxcounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetMailboxUsageMailboxCountsWithPeriodRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getMailboxUsageMailboxCounts
+     * Get the total number of user mailboxes in your organization and how many are active each day of the reporting period. A mailbox is considered active if the user sent or read any email.
      * @param GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

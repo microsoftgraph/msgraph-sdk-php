@@ -31,10 +31,11 @@ class GetFinalAttachmentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getFinalAttachment
+     * Get the final attachment for a subject rights request. The attachment is a zip file that contains all the files that were included by the privacy administrator.
      * @param GetFinalAttachmentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/subjectrightsrequest-getfinalattachment?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetFinalAttachmentRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class GetFinalAttachmentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getFinalAttachment
+     * Get the final attachment for a subject rights request. The attachment is a zip file that contains all the files that were included by the privacy administrator.
      * @param GetFinalAttachmentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

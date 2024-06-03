@@ -149,6 +149,7 @@ class LearningContent extends Entity implements Parsable
             'isSearchable' => fn(ParseNode $n) => $o->setIsSearchable($n->getBooleanValue()),
             'languageTag' => fn(ParseNode $n) => $o->setLanguageTag($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'level' => fn(ParseNode $n) => $o->setLevel($n->getEnumValue(Level::class)),
             'numberOfPages' => fn(ParseNode $n) => $o->setNumberOfPages($n->getIntegerValue()),
             'skillTags' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -237,6 +238,18 @@ class LearningContent extends Entity implements Parsable
     }
 
     /**
+     * Gets the level property value. The difficulty level of the learning content. Possible values are: Beginner, Intermediate, Advanced, unknownFutureValue. Optional.
+     * @return Level|null
+    */
+    public function getLevel(): ?Level {
+        $val = $this->getBackingStore()->get('level');
+        if (is_null($val) || $val instanceof Level) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'level'");
+    }
+
+    /**
      * Gets the numberOfPages property value. The number of pages of the learning content, for example, 9. Optional.
      * @return int|null
     */
@@ -317,6 +330,7 @@ class LearningContent extends Entity implements Parsable
         $writer->writeBooleanValue('isSearchable', $this->getIsSearchable());
         $writer->writeStringValue('languageTag', $this->getLanguageTag());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeEnumValue('level', $this->getLevel());
         $writer->writeIntegerValue('numberOfPages', $this->getNumberOfPages());
         $writer->writeCollectionOfPrimitiveValues('skillTags', $this->getSkillTags());
         $writer->writeStringValue('sourceName', $this->getSourceName());
@@ -426,6 +440,14 @@ class LearningContent extends Entity implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the level property value. The difficulty level of the learning content. Possible values are: Beginner, Intermediate, Advanced, unknownFutureValue. Optional.
+     * @param Level|null $value Value to set for the level property.
+    */
+    public function setLevel(?Level $value): void {
+        $this->getBackingStore()->set('level', $value);
     }
 
     /**

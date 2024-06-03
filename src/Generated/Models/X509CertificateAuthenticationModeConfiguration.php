@@ -66,6 +66,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'rules' => fn(ParseNode $n) => $o->setRules($n->getCollectionOfObjectValues([X509CertificateRule::class, 'createFromDiscriminatorValue'])),
             'x509CertificateAuthenticationDefaultMode' => fn(ParseNode $n) => $o->setX509CertificateAuthenticationDefaultMode($n->getEnumValue(X509CertificateAuthenticationMode::class)),
+            'x509CertificateDefaultRequiredAffinityLevel' => fn(ParseNode $n) => $o->setX509CertificateDefaultRequiredAffinityLevel($n->getEnumValue(X509CertificateAffinityLevel::class)),
         ];
     }
 
@@ -108,6 +109,18 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     }
 
     /**
+     * Gets the x509CertificateDefaultRequiredAffinityLevel property value. The x509CertificateDefaultRequiredAffinityLevel property
+     * @return X509CertificateAffinityLevel|null
+    */
+    public function getX509CertificateDefaultRequiredAffinityLevel(): ?X509CertificateAffinityLevel {
+        $val = $this->getBackingStore()->get('x509CertificateDefaultRequiredAffinityLevel');
+        if (is_null($val) || $val instanceof X509CertificateAffinityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateDefaultRequiredAffinityLevel'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -115,6 +128,7 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('rules', $this->getRules());
         $writer->writeEnumValue('x509CertificateAuthenticationDefaultMode', $this->getX509CertificateAuthenticationDefaultMode());
+        $writer->writeEnumValue('x509CertificateDefaultRequiredAffinityLevel', $this->getX509CertificateDefaultRequiredAffinityLevel());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -156,6 +170,14 @@ class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHo
     */
     public function setX509CertificateAuthenticationDefaultMode(?X509CertificateAuthenticationMode $value): void {
         $this->getBackingStore()->set('x509CertificateAuthenticationDefaultMode', $value);
+    }
+
+    /**
+     * Sets the x509CertificateDefaultRequiredAffinityLevel property value. The x509CertificateDefaultRequiredAffinityLevel property
+     * @param X509CertificateAffinityLevel|null $value Value to set for the x509CertificateDefaultRequiredAffinityLevel property.
+    */
+    public function setX509CertificateDefaultRequiredAffinityLevel(?X509CertificateAffinityLevel $value): void {
+        $this->getBackingStore()->set('x509CertificateDefaultRequiredAffinityLevel', $value);
     }
 
 }

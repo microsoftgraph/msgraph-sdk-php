@@ -52,7 +52,7 @@ class CalendarViewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The set of appointments of this business in a specified date range. Read-only. Nullable.
+     * Get the collection of bookingAppointment objects for a bookingBusiness that occurs in the specified date range.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingAppointmentCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class CalendarViewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The set of appointments of this business in a specified date range. Read-only. Nullable.
+     * Get the collection of bookingAppointment objects for a bookingBusiness that occurs in the specified date range.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -84,7 +84,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -124,7 +124,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\')';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

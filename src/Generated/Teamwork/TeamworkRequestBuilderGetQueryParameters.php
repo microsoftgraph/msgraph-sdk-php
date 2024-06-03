@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get teamwork
+ * Get the properties and relationships of a teamwork object, such as the region of the organization and whether Microsoft Teams is enabled.
 */
 class TeamworkRequestBuilderGetQueryParameters 
 {

@@ -45,11 +45,10 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceCategory object.
+     * Device category
      * @param DeviceCategoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCategory|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-devicecategory-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCategoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceCategory object.
+     * Update the navigation property deviceCategory in deviceManagement
      * @param DeviceCategory $body The request body
      * @param DeviceCategoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCategory|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-devicecategory-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCategory $body, ?DeviceCategoryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +80,7 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DeviceCategoryRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCategory';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -94,7 +92,7 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceCategory object.
+     * Device category
      * @param DeviceCategoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,14 +113,14 @@ class DeviceCategoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceCategory object.
+     * Update the navigation property deviceCategory in deviceManagement
      * @param DeviceCategory $body The request body
      * @param DeviceCategoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(DeviceCategory $body, ?DeviceCategoryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCategory';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

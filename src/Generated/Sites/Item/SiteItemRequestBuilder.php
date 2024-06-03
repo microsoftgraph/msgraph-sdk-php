@@ -178,7 +178,7 @@ class SiteItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @param SiteItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Site|null>
      * @throws Exception
@@ -237,7 +237,7 @@ class SiteItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
+     * Retrieve properties and relationships for a site resource.A site resource represents a team site in SharePoint.
      * @param SiteItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -265,7 +265,7 @@ class SiteItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Site $body, ?SiteItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

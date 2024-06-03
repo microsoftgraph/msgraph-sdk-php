@@ -69,10 +69,11 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
+     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
      * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserTeamwork|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userteamwork-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamworkRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?TeamworkRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/teamwork';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -116,7 +117,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
+     * Get the userTeamwork settings for a specified user, which includes the Microsoft Teams region and the locale chosen by the user.
      * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +145,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(UserTeamwork $body, ?TeamworkRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/teamwork';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

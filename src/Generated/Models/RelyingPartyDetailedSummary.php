@@ -26,7 +26,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the failedSignInCount property value. The failedSignInCount property
+     * Gets the failedSignInCount property value. Number of failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @return int|null
     */
     public function getFailedSignInCount(): ?int {
@@ -78,7 +78,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the migrationValidationDetails property value. The migrationValidationDetails property
+     * Gets the migrationValidationDetails property value. Specifies all the validations checks done on applications config details.
      * @return array<KeyValuePair>|null
     */
     public function getMigrationValidationDetails(): ?array {
@@ -92,7 +92,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the relyingPartyId property value. The relyingPartyId property
+     * Gets the relyingPartyId property value. Identifies the relying party to this federation service. It's used when issuing claims to the relying party. Supports $orderby, $filter (eq).
      * @return string|null
     */
     public function getRelyingPartyId(): ?string {
@@ -104,7 +104,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the relyingPartyName property value. The relyingPartyName property
+     * Gets the relyingPartyName property value. Name of the relying party's website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
      * @return string|null
     */
     public function getRelyingPartyName(): ?string {
@@ -116,7 +116,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the replyUrls property value. The replyUrls property
+     * Gets the replyUrls property value. Specifies where the relying party expects to receive the token.
      * @return array<string>|null
     */
     public function getReplyUrls(): ?array {
@@ -130,7 +130,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceId property value. The serviceId property
+     * Gets the serviceId property value. Uniquely identifies the Active Directory forest. Supports $orderby, $filter (eq).
      * @return string|null
     */
     public function getServiceId(): ?string {
@@ -142,7 +142,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the signInSuccessRate property value. The signInSuccessRate property
+     * Gets the signInSuccessRate property value. Calculated as Number of successful / (Number of successful + Number of failed sign ins) or successfulSignInCount / totalSignInCount on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @return float|null
     */
     public function getSignInSuccessRate(): ?float {
@@ -154,7 +154,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the successfulSignInCount property value. The successfulSignInCount property
+     * Gets the successfulSignInCount property value. Number of successful sign ins on AD FS. Supports $orderby, $filter (eq).
      * @return int|null
     */
     public function getSuccessfulSignInCount(): ?int {
@@ -166,7 +166,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the totalSignInCount property value. The totalSignInCount property
+     * Gets the totalSignInCount property value. Number of successful + failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @return int|null
     */
     public function getTotalSignInCount(): ?int {
@@ -178,7 +178,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the uniqueUserCount property value. The uniqueUserCount property
+     * Gets the uniqueUserCount property value. Number of unique users that signed into the application. Supports $orderby, $filter (eq).
      * @return int|null
     */
     public function getUniqueUserCount(): ?int {
@@ -209,7 +209,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the failedSignInCount property value. The failedSignInCount property
+     * Sets the failedSignInCount property value. Number of failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @param int|null $value Value to set for the failedSignInCount property.
     */
     public function setFailedSignInCount(?int $value): void {
@@ -225,7 +225,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the migrationValidationDetails property value. The migrationValidationDetails property
+     * Sets the migrationValidationDetails property value. Specifies all the validations checks done on applications config details.
      * @param array<KeyValuePair>|null $value Value to set for the migrationValidationDetails property.
     */
     public function setMigrationValidationDetails(?array $value): void {
@@ -233,7 +233,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the relyingPartyId property value. The relyingPartyId property
+     * Sets the relyingPartyId property value. Identifies the relying party to this federation service. It's used when issuing claims to the relying party. Supports $orderby, $filter (eq).
      * @param string|null $value Value to set for the relyingPartyId property.
     */
     public function setRelyingPartyId(?string $value): void {
@@ -241,7 +241,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the relyingPartyName property value. The relyingPartyName property
+     * Sets the relyingPartyName property value. Name of the relying party's website or other entity on the Internet that uses an identity provider to authenticate a user who wants to log in. Supports $orderby, $filter (eq).
      * @param string|null $value Value to set for the relyingPartyName property.
     */
     public function setRelyingPartyName(?string $value): void {
@@ -249,7 +249,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the replyUrls property value. The replyUrls property
+     * Sets the replyUrls property value. Specifies where the relying party expects to receive the token.
      * @param array<string>|null $value Value to set for the replyUrls property.
     */
     public function setReplyUrls(?array $value): void {
@@ -257,7 +257,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceId property value. The serviceId property
+     * Sets the serviceId property value. Uniquely identifies the Active Directory forest. Supports $orderby, $filter (eq).
      * @param string|null $value Value to set for the serviceId property.
     */
     public function setServiceId(?string $value): void {
@@ -265,7 +265,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the signInSuccessRate property value. The signInSuccessRate property
+     * Sets the signInSuccessRate property value. Calculated as Number of successful / (Number of successful + Number of failed sign ins) or successfulSignInCount / totalSignInCount on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @param float|null $value Value to set for the signInSuccessRate property.
     */
     public function setSignInSuccessRate(?float $value): void {
@@ -273,7 +273,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the successfulSignInCount property value. The successfulSignInCount property
+     * Sets the successfulSignInCount property value. Number of successful sign ins on AD FS. Supports $orderby, $filter (eq).
      * @param int|null $value Value to set for the successfulSignInCount property.
     */
     public function setSuccessfulSignInCount(?int $value): void {
@@ -281,7 +281,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the totalSignInCount property value. The totalSignInCount property
+     * Sets the totalSignInCount property value. Number of successful + failed sign ins on AD FS in the period specified. Supports $orderby, $filter (eq).
      * @param int|null $value Value to set for the totalSignInCount property.
     */
     public function setTotalSignInCount(?int $value): void {
@@ -289,7 +289,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the uniqueUserCount property value. The uniqueUserCount property
+     * Sets the uniqueUserCount property value. Number of unique users that signed into the application. Supports $orderby, $filter (eq).
      * @param int|null $value Value to set for the uniqueUserCount property.
     */
     public function setUniqueUserCount(?int $value): void {

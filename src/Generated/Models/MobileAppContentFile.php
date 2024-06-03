@@ -76,6 +76,7 @@ class MobileAppContentFile extends Entity implements Parsable
             'azureStorageUriExpirationDateTime' => fn(ParseNode $n) => $o->setAzureStorageUriExpirationDateTime($n->getDateTimeValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'isCommitted' => fn(ParseNode $n) => $o->setIsCommitted($n->getBooleanValue()),
+            'isDependency' => fn(ParseNode $n) => $o->setIsDependency($n->getBooleanValue()),
             'manifest' => fn(ParseNode $n) => $o->setManifest($n->getBinaryContent()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
@@ -94,6 +95,18 @@ class MobileAppContentFile extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isCommitted'");
+    }
+
+    /**
+     * Gets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
+     * @return bool|null
+    */
+    public function getIsDependency(): ?bool {
+        $val = $this->getBackingStore()->get('isDependency');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDependency'");
     }
 
     /**
@@ -162,6 +175,7 @@ class MobileAppContentFile extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeBooleanValue('isDependency', $this->getIsDependency());
         $writer->writeBinaryContent('manifest', $this->getManifest());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeIntegerValue('size', $this->getSize());
@@ -199,6 +213,14 @@ class MobileAppContentFile extends Entity implements Parsable
     */
     public function setIsCommitted(?bool $value): void {
         $this->getBackingStore()->set('isCommitted', $value);
+    }
+
+    /**
+     * Sets the isDependency property value. Indicates whether this content file is a dependency for the main content file. TRUE means that the content file is a dependency, FALSE means that the content file is not a dependency and is the main content file. Defaults to FALSE.
+     * @param bool|null $value Value to set for the isDependency property.
+    */
+    public function setIsDependency(?bool $value): void {
+        $this->getBackingStore()->set('isDependency', $value);
     }
 
     /**

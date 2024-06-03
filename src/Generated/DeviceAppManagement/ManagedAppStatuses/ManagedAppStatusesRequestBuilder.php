@@ -110,7 +110,7 @@ class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(ManagedAppStatus $body, ?ManagedAppStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/managedAppStatuses';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

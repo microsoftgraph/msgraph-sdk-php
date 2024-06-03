@@ -119,7 +119,7 @@ class AssignmentApprovalsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Approval $body, ?AssignmentApprovalsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/privilegedAccess/group/assignmentApprovals';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

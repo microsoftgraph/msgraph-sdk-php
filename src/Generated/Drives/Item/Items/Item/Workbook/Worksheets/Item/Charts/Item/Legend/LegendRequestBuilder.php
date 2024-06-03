@@ -53,11 +53,10 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLegend|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LegendRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartlegend object.
+     * Update the navigation property legend in drives
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartLegend|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartLegend $body, ?LegendRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +88,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?LegendRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/legend';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -102,7 +100,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartlegend object.
+     * Represents the legend for the chart. Read-only.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,14 +121,14 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartlegend object.
+     * Update the navigation property legend in drives
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(WorkbookChartLegend $body, ?LegendRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/legend';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -34,10 +34,11 @@ class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getOneDriveUsageStorage
+     * Get the trend on the amount of storage you're using in OneDrive for Business.
      * @param GetOneDriveUsageStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveusagestorage?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOneDriveUsageStorageWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetOneDriveUsageStorageWithPeriodRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getOneDriveUsageStorage
+     * Get the trend on the amount of storage you're using in OneDrive for Business.
      * @param GetOneDriveUsageStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

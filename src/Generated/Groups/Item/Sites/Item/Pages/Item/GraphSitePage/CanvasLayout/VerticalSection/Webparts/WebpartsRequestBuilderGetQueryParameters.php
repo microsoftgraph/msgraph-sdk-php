@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSiteP
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get webparts from groups
+ * The set of web parts in this section.
 */
 class WebpartsRequestBuilderGetQueryParameters 
 {

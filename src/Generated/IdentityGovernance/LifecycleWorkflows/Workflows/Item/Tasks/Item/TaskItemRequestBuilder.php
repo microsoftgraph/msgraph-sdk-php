@@ -53,10 +53,11 @@ class TaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The tasks in the workflow.
+     * Get a specific task from a workflow or workflowVersion.
      * @param TaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Task|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identitygovernance-task-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TaskItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -88,7 +89,7 @@ class TaskItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?TaskItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/tasks/{task%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -100,7 +101,7 @@ class TaskItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The tasks in the workflow.
+     * Get a specific task from a workflow or workflowVersion.
      * @param TaskItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +129,7 @@ class TaskItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Task $body, ?TaskItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/tasks/{task%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

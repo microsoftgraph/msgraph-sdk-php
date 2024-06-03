@@ -62,9 +62,22 @@ class CustomExtensionClientConfiguration implements AdditionalDataHolder, Backed
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'maximumRetries' => fn(ParseNode $n) => $o->setMaximumRetries($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'timeoutInMilliseconds' => fn(ParseNode $n) => $o->setTimeoutInMilliseconds($n->getIntegerValue()),
         ];
+    }
+
+    /**
+     * Gets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+     * @return int|null
+    */
+    public function getMaximumRetries(): ?int {
+        $val = $this->getBackingStore()->get('maximumRetries');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumRetries'");
     }
 
     /**
@@ -96,6 +109,7 @@ class CustomExtensionClientConfiguration implements AdditionalDataHolder, Backed
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeIntegerValue('maximumRetries', $this->getMaximumRetries());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('timeoutInMilliseconds', $this->getTimeoutInMilliseconds());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -115,6 +129,14 @@ class CustomExtensionClientConfiguration implements AdditionalDataHolder, Backed
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the maximumRetries property value. The max number of retries that Microsoft Entra ID makes to the external API. Values of 0 or 1 are supported. If null, the default for the service applies.
+     * @param int|null $value Value to set for the maximumRetries property.
+    */
+    public function setMaximumRetries(?int $value): void {
+        $this->getBackingStore()->set('maximumRetries', $value);
     }
 
     /**

@@ -60,7 +60,7 @@ class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property bucketTaskBoardFormat in planner
+     * Update the properties of a plannerBucketTaskBoardTaskFormat object.
      * @param PlannerBucketTaskBoardTaskFormat $body The request body
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerBucketTaskBoardTaskFormat|null>
@@ -82,7 +82,7 @@ class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?BucketTaskBoardFormatRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/bucketTaskBoardFormat';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -115,14 +115,14 @@ class BucketTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property bucketTaskBoardFormat in planner
+     * Update the properties of a plannerBucketTaskBoardTaskFormat object.
      * @param PlannerBucketTaskBoardTaskFormat $body The request body
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(PlannerBucketTaskBoardTaskFormat $body, ?BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/bucketTaskBoardFormat';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

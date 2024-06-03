@@ -87,7 +87,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a domain from a tenant.
+     * Delete a domain from a tenant.
      * @param DomainItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -117,7 +117,7 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of domain object.
+     * Update the properties of domain object. Only verified domains can be updated.
      * @param Domain $body The request body
      * @param DomainItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Domain|null>
@@ -133,13 +133,13 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a domain from a tenant.
+     * Delete a domain from a tenant.
      * @param DomainItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?DomainItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/domains/{domain%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -172,14 +172,14 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of domain object.
+     * Update the properties of domain object. Only verified domains can be updated.
      * @param Domain $body The request body
      * @param DomainItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(Domain $body, ?DomainItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/domains/{domain%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -60,11 +60,10 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTaskCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0 Find more info here
     */
     public function get(?TasksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new task object in a specified todoTaskList.
+     * Create new navigation property to tasks for users
      * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTask|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0 Find more info here
     */
     public function post(TodoTask $body, ?TasksRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the todoTask resources from the tasks navigation property of a specified todoTaskList.
+     * The tasks in this task list. Read-only. Nullable.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,14 +110,14 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new task object in a specified todoTaskList.
+     * Create new navigation property to tasks for users
      * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(TodoTask $body, ?TasksRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

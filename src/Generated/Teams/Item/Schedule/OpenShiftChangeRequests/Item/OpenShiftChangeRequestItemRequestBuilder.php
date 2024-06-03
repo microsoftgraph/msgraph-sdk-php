@@ -81,7 +81,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?OpenShiftChangeRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -121,7 +121,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

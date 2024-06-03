@@ -63,8 +63,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'identifier' => fn(ParseNode $n) => $o->setIdentifier($n->getStringValue()),
+            'issuerSubjectIdentifier' => fn(ParseNode $n) => $o->setIssuerSubjectIdentifier($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'policyOidIdentifier' => fn(ParseNode $n) => $o->setPolicyOidIdentifier($n->getStringValue()),
             'x509CertificateAuthenticationMode' => fn(ParseNode $n) => $o->setX509CertificateAuthenticationMode($n->getEnumValue(X509CertificateAuthenticationMode::class)),
+            'x509CertificateRequiredAffinityLevel' => fn(ParseNode $n) => $o->setX509CertificateRequiredAffinityLevel($n->getEnumValue(X509CertificateAffinityLevel::class)),
             'x509CertificateRuleType' => fn(ParseNode $n) => $o->setX509CertificateRuleType($n->getEnumValue(X509CertificateRuleType::class)),
         ];
     }
@@ -82,6 +85,18 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the issuerSubjectIdentifier property value. The issuerSubjectIdentifier property
+     * @return string|null
+    */
+    public function getIssuerSubjectIdentifier(): ?string {
+        $val = $this->getBackingStore()->get('issuerSubjectIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerSubjectIdentifier'");
+    }
+
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
@@ -94,6 +109,18 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the policyOidIdentifier property value. The policyOidIdentifier property
+     * @return string|null
+    */
+    public function getPolicyOidIdentifier(): ?string {
+        $val = $this->getBackingStore()->get('policyOidIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyOidIdentifier'");
+    }
+
+    /**
      * Gets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @return X509CertificateAuthenticationMode|null
     */
@@ -103,6 +130,18 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateAuthenticationMode'");
+    }
+
+    /**
+     * Gets the x509CertificateRequiredAffinityLevel property value. The x509CertificateRequiredAffinityLevel property
+     * @return X509CertificateAffinityLevel|null
+    */
+    public function getX509CertificateRequiredAffinityLevel(): ?X509CertificateAffinityLevel {
+        $val = $this->getBackingStore()->get('x509CertificateRequiredAffinityLevel');
+        if (is_null($val) || $val instanceof X509CertificateAffinityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateRequiredAffinityLevel'");
     }
 
     /**
@@ -123,8 +162,11 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('identifier', $this->getIdentifier());
+        $writer->writeStringValue('issuerSubjectIdentifier', $this->getIssuerSubjectIdentifier());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('policyOidIdentifier', $this->getPolicyOidIdentifier());
         $writer->writeEnumValue('x509CertificateAuthenticationMode', $this->getX509CertificateAuthenticationMode());
+        $writer->writeEnumValue('x509CertificateRequiredAffinityLevel', $this->getX509CertificateRequiredAffinityLevel());
         $writer->writeEnumValue('x509CertificateRuleType', $this->getX509CertificateRuleType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -154,6 +196,14 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Sets the issuerSubjectIdentifier property value. The issuerSubjectIdentifier property
+     * @param string|null $value Value to set for the issuerSubjectIdentifier property.
+    */
+    public function setIssuerSubjectIdentifier(?string $value): void {
+        $this->getBackingStore()->set('issuerSubjectIdentifier', $value);
+    }
+
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the @odata.type property.
     */
@@ -162,11 +212,27 @@ class X509CertificateRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Sets the policyOidIdentifier property value. The policyOidIdentifier property
+     * @param string|null $value Value to set for the policyOidIdentifier property.
+    */
+    public function setPolicyOidIdentifier(?string $value): void {
+        $this->getBackingStore()->set('policyOidIdentifier', $value);
+    }
+
+    /**
      * Sets the x509CertificateAuthenticationMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. Required.
      * @param X509CertificateAuthenticationMode|null $value Value to set for the x509CertificateAuthenticationMode property.
     */
     public function setX509CertificateAuthenticationMode(?X509CertificateAuthenticationMode $value): void {
         $this->getBackingStore()->set('x509CertificateAuthenticationMode', $value);
+    }
+
+    /**
+     * Sets the x509CertificateRequiredAffinityLevel property value. The x509CertificateRequiredAffinityLevel property
+     * @param X509CertificateAffinityLevel|null $value Value to set for the x509CertificateRequiredAffinityLevel property.
+    */
+    public function setX509CertificateRequiredAffinityLevel(?X509CertificateAffinityLevel $value): void {
+        $this->getBackingStore()->set('x509CertificateRequiredAffinityLevel', $value);
     }
 
     /**

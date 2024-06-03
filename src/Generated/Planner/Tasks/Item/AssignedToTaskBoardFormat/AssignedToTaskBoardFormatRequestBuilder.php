@@ -60,7 +60,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property assignedToTaskBoardFormat in planner
+     * Update the properties of plannerAssignedToTaskBoardTaskFormat object.
      * @param PlannerAssignedToTaskBoardTaskFormat $body The request body
      * @param AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerAssignedToTaskBoardTaskFormat|null>
@@ -82,7 +82,7 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?AssignedToTaskBoardFormatRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/assignedToTaskBoardFormat';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -115,14 +115,14 @@ class AssignedToTaskBoardFormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property assignedToTaskBoardFormat in planner
+     * Update the properties of plannerAssignedToTaskBoardTaskFormat object.
      * @param PlannerAssignedToTaskBoardTaskFormat $body The request body
      * @param AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(PlannerAssignedToTaskBoardTaskFormat $body, ?AssignedToTaskBoardFormatRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/assignedToTaskBoardFormat';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

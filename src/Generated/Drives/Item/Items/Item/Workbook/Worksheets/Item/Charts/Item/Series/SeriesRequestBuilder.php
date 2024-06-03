@@ -53,11 +53,10 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartseries objects.
+     * Represents either a single series or collection of series in the chart. Read-only.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeriesCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0 Find more info here
     */
     public function get(?SeriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,12 +76,11 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartSeries.
+     * Create new navigation property to series for drives
      * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeries|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0 Find more info here
     */
     public function post(WorkbookChartSeries $body, ?SeriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -93,7 +91,7 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartseries objects.
+     * Represents either a single series or collection of series in the chart. Read-only.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -114,14 +112,14 @@ class SeriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new ChartSeries.
+     * Create new navigation property to series for drives
      * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(WorkbookChartSeries $body, ?SeriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

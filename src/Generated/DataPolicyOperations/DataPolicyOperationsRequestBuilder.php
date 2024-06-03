@@ -109,7 +109,7 @@ class DataPolicyOperationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(DataPolicyOperation $body, ?DataPolicyOperationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/dataPolicyOperations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

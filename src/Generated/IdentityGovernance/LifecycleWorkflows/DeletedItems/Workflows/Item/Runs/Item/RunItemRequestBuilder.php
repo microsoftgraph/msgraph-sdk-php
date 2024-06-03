@@ -47,11 +47,10 @@ class RunItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a run object.
+     * Workflow runs.
      * @param RunItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Run|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identitygovernance-run-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RunItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -62,7 +61,7 @@ class RunItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a run object.
+     * Workflow runs.
      * @param RunItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

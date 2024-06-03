@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item\AppliesT
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get appliesTo from policies
+ * Get a list of directoryObject objects that a tokenIssuancePolicy object has been applied to. The tokenIssuancePolicy can only be applied to application.
 */
 class AppliesToRequestBuilderGetQueryParameters 
 {

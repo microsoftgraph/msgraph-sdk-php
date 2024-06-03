@@ -59,12 +59,11 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
+     * Update the navigation property gradingCategories in education
      * @param EducationGradingCategory $body The request body
      * @param EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationGradingCategory|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationgradingcategory-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationGradingCategory $body, ?EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -81,7 +80,7 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?EducationGradingCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories/{educationGradingCategory%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -114,14 +113,14 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
+     * Update the navigation property gradingCategories in education
      * @param EducationGradingCategory $body The request body
      * @param EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(EducationGradingCategory $body, ?EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/gradingCategories/{educationGradingCategory%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -34,10 +34,11 @@ class FindTenantInformationByDomainNameWithDomainNameRequestBuilder extends Base
     }
 
     /**
-     * Invoke function findTenantInformationByDomainName
+     * Given a domain name, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant access settings between you and the tenant.
      * @param FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantInformation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantrelationship-findtenantinformationbydomainname?view=graph-rest-1.0 Find more info here
     */
     public function get(?FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -48,7 +49,7 @@ class FindTenantInformationByDomainNameWithDomainNameRequestBuilder extends Base
     }
 
     /**
-     * Invoke function findTenantInformationByDomainName
+     * Given a domain name, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant access settings between you and the tenant.
      * @param FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -19,6 +19,7 @@ use Microsoft\Graph\Generated\ServicePrincipals\Item\CreatedObjects\CreatedObjec
 use Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\DelegatedPermissionClassificationsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\EndpointsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCredentials\FederatedIdentityCredentialsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCredentialsWithName\FederatedIdentityCredentialsWithNameRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -270,6 +271,15 @@ class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
+     * @param string $name Alternate key of federatedIdentityCredential
+     * @return FederatedIdentityCredentialsWithNameRequestBuilder
+    */
+    public function federatedIdentityCredentialsWithName(string $name): FederatedIdentityCredentialsWithNameRequestBuilder {
+        return new FederatedIdentityCredentialsWithNameRequestBuilder($this->pathParameters, $this->requestAdapter, $name);
+    }
+
+    /**
      * Retrieve the properties and relationships of a servicePrincipal object.
      * @param ServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
@@ -285,11 +295,12 @@ class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update entity in servicePrincipals
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0 Find more info here
     */
     public function patch(ServicePrincipal $body, ?ServicePrincipalItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -306,7 +317,7 @@ class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?ServicePrincipalItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -339,14 +350,14 @@ class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update entity in servicePrincipals
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(ServicePrincipal $body, ?ServicePrincipalItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

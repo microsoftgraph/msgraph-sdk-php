@@ -60,11 +60,10 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTaskListCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0 Find more info here
     */
     public function get(?ListsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new lists object.
+     * Create new navigation property to lists for users
      * @param TodoTaskList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TodoTaskList|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0 Find more info here
     */
     public function post(TodoTaskList $body, ?ListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the todoTaskList objects and their properties.
+     * The task lists in the users mailbox.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,14 +110,14 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new lists object.
+     * Create new navigation property to lists for users
      * @param TodoTaskList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(TodoTaskList $body, ?ListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/todo/lists';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

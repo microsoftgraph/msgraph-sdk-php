@@ -52,11 +52,10 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      * @param LocalizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementFileLocalizationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/agreementfile-list-localizations?view=graph-rest-1.0 Find more info here
     */
     public function get(?LocalizationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the default and localized agreement files.
+     * The localized version of the terms of use agreement files attached to the agreement.
      * @param LocalizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +109,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AgreementFileLocalization $body, ?LocalizationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/file/localizations';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

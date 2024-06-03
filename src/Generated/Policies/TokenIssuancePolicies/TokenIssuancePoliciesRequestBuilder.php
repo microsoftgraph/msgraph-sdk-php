@@ -111,7 +111,7 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TokenIssuancePolicy $body, ?TokenIssuancePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/tokenIssuancePolicies';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

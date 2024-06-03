@@ -66,12 +66,11 @@ class FilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localized agreement file.
+     * Create new navigation property to files for agreements
      * @param AgreementFileLocalization $body The request body
      * @param FilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementFileLocalization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0 Find more info here
     */
     public function post(AgreementFileLocalization $body, ?FilesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -103,14 +102,14 @@ class FilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localized agreement file.
+     * Create new navigation property to files for agreements
      * @param AgreementFileLocalization $body The request body
      * @param FilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(AgreementFileLocalization $body, ?FilesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/agreements/{agreement%2Did}/files';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

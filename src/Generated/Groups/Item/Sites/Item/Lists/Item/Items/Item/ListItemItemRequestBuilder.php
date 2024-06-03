@@ -104,11 +104,10 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Removes an item from a [list][].
+     * Delete navigation property items for groups
      * @param ListItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/listitem-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ListItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -119,11 +118,10 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      * @param ListItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListItem|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/listitem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ListItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -160,13 +158,13 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Removes an item from a [list][].
+     * Delete navigation property items for groups
      * @param ListItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?ListItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -178,7 +176,7 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the metadata for an [item][] in a [list][].
+     * All items contained in the list.
      * @param ListItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -206,7 +204,7 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ListItem $body, ?ListItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

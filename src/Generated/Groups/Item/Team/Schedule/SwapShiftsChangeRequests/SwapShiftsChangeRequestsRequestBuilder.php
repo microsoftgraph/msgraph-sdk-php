@@ -52,11 +52,10 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * The swap requests for shifts in the schedule.
      * @param SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SwapShiftsChangeRequestCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/swapshiftschangerequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of a swapShiftsChangeRequest object.
+     * Create new navigation property to swapShiftsChangeRequests for groups
      * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SwapShiftsChangeRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(SwapShiftsChangeRequest $body, ?SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of swapShiftsChangeRequest objects in the team.
+     * The swap requests for shifts in the schedule.
      * @param SwapShiftsChangeRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class SwapShiftsChangeRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an instance of a swapShiftsChangeRequest object.
+     * Create new navigation property to swapShiftsChangeRequests for groups
      * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(SwapShiftsChangeRequest $body, ?SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/swapShiftsChangeRequests';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

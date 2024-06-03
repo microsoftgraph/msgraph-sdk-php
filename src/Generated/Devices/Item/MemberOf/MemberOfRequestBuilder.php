@@ -67,7 +67,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
+     * Get groups and administrative units that this device is a direct member of. This operation is not transitive.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
+     * Get groups and administrative units that this device is a direct member of. This operation is not transitive.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

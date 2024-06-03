@@ -52,11 +52,10 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @param ShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ShiftCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/schedule-list-shifts?view=graph-rest-1.0 Find more info here
     */
     public function get(?ShiftsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Create new navigation property to shifts for users
      * @param Shift $body The request body
      * @param ShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Shift|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/schedule-post-shifts?view=graph-rest-1.0 Find more info here
     */
     public function post(Shift $body, ?ShiftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the list of shift instances in a schedule.
+     * The shifts in the schedule.
      * @param ShiftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class ShiftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
+     * Create new navigation property to shifts for users
      * @param Shift $body The request body
      * @param ShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(Shift $body, ?ShiftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/shifts';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

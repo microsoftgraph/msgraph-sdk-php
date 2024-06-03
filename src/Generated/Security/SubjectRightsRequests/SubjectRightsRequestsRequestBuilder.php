@@ -109,7 +109,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(SubjectRightsRequest $body, ?SubjectRightsRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/subjectRightsRequests';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

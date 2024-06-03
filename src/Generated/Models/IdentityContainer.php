@@ -40,6 +40,34 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
+     * Gets the authenticationEventListeners property value. Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+     * @return array<AuthenticationEventListener>|null
+    */
+    public function getAuthenticationEventListeners(): ?array {
+        $val = $this->getBackingStore()->get('authenticationEventListeners');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationEventListener::class);
+            /** @var array<AuthenticationEventListener>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationEventListeners'");
+    }
+
+    /**
+     * Gets the authenticationEventsFlows property value. Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.
+     * @return array<AuthenticationEventsFlow>|null
+    */
+    public function getAuthenticationEventsFlows(): ?array {
+        $val = $this->getBackingStore()->get('authenticationEventsFlows');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationEventsFlow::class);
+            /** @var array<AuthenticationEventsFlow>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationEventsFlows'");
+    }
+
+    /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X/self-service sign-up identity userflows.
      * @return array<B2xIdentityUserFlow>|null
     */
@@ -66,6 +94,20 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
+     * Gets the customAuthenticationExtensions property value. Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * @return array<CustomAuthenticationExtension>|null
+    */
+    public function getCustomAuthenticationExtensions(): ?array {
+        $val = $this->getBackingStore()->get('customAuthenticationExtensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomAuthenticationExtension::class);
+            /** @var array<CustomAuthenticationExtension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customAuthenticationExtensions'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -73,8 +115,11 @@ class IdentityContainer extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'apiConnectors' => fn(ParseNode $n) => $o->setApiConnectors($n->getCollectionOfObjectValues([IdentityApiConnector::class, 'createFromDiscriminatorValue'])),
+            'authenticationEventListeners' => fn(ParseNode $n) => $o->setAuthenticationEventListeners($n->getCollectionOfObjectValues([AuthenticationEventListener::class, 'createFromDiscriminatorValue'])),
+            'authenticationEventsFlows' => fn(ParseNode $n) => $o->setAuthenticationEventsFlows($n->getCollectionOfObjectValues([AuthenticationEventsFlow::class, 'createFromDiscriminatorValue'])),
             'b2xUserFlows' => fn(ParseNode $n) => $o->setB2xUserFlows($n->getCollectionOfObjectValues([B2xIdentityUserFlow::class, 'createFromDiscriminatorValue'])),
             'conditionalAccess' => fn(ParseNode $n) => $o->setConditionalAccess($n->getObjectValue([ConditionalAccessRoot::class, 'createFromDiscriminatorValue'])),
+            'customAuthenticationExtensions' => fn(ParseNode $n) => $o->setCustomAuthenticationExtensions($n->getCollectionOfObjectValues([CustomAuthenticationExtension::class, 'createFromDiscriminatorValue'])),
             'identityProviders' => fn(ParseNode $n) => $o->setIdentityProviders($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'userFlowAttributes' => fn(ParseNode $n) => $o->setUserFlowAttributes($n->getCollectionOfObjectValues([IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -115,8 +160,11 @@ class IdentityContainer extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('apiConnectors', $this->getApiConnectors());
+        $writer->writeCollectionOfObjectValues('authenticationEventListeners', $this->getAuthenticationEventListeners());
+        $writer->writeCollectionOfObjectValues('authenticationEventsFlows', $this->getAuthenticationEventsFlows());
         $writer->writeCollectionOfObjectValues('b2xUserFlows', $this->getB2xUserFlows());
         $writer->writeObjectValue('conditionalAccess', $this->getConditionalAccess());
+        $writer->writeCollectionOfObjectValues('customAuthenticationExtensions', $this->getCustomAuthenticationExtensions());
         $writer->writeCollectionOfObjectValues('identityProviders', $this->getIdentityProviders());
         $writer->writeCollectionOfObjectValues('userFlowAttributes', $this->getUserFlowAttributes());
     }
@@ -127,6 +175,22 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setApiConnectors(?array $value): void {
         $this->getBackingStore()->set('apiConnectors', $value);
+    }
+
+    /**
+     * Sets the authenticationEventListeners property value. Represents listeners for custom authentication extension events in Azure AD for workforce and customers.
+     * @param array<AuthenticationEventListener>|null $value Value to set for the authenticationEventListeners property.
+    */
+    public function setAuthenticationEventListeners(?array $value): void {
+        $this->getBackingStore()->set('authenticationEventListeners', $value);
+    }
+
+    /**
+     * Sets the authenticationEventsFlows property value. Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.
+     * @param array<AuthenticationEventsFlow>|null $value Value to set for the authenticationEventsFlows property.
+    */
+    public function setAuthenticationEventsFlows(?array $value): void {
+        $this->getBackingStore()->set('authenticationEventsFlows', $value);
     }
 
     /**
@@ -143,6 +207,14 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setConditionalAccess(?ConditionalAccessRoot $value): void {
         $this->getBackingStore()->set('conditionalAccess', $value);
+    }
+
+    /**
+     * Sets the customAuthenticationExtensions property value. Represents custom extensions to authentication flows in Azure AD for workforce and customers.
+     * @param array<CustomAuthenticationExtension>|null $value Value to set for the customAuthenticationExtensions property.
+    */
+    public function setCustomAuthenticationExtensions(?array $value): void {
+        $this->getBackingStore()->set('customAuthenticationExtensions', $value);
     }
 
     /**

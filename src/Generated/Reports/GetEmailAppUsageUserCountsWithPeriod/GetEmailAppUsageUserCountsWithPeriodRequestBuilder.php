@@ -34,10 +34,11 @@ class GetEmailAppUsageUserCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getEmailAppUsageUserCounts
+     * Get the count of unique users that connected to Exchange Online using any email app.
      * @param GetEmailAppUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getemailappusageusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetEmailAppUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetEmailAppUsageUserCountsWithPeriodRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke function getEmailAppUsageUserCounts
+     * Get the count of unique users that connected to Exchange Online using any email app.
      * @param GetEmailAppUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

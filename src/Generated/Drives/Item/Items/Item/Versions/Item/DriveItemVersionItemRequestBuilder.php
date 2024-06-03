@@ -61,11 +61,10 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
+     * The list of previous versions of the item. For more info, see getting previous versions. Read-only. Nullable.
      * @param DriveItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveItemVersion|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/driveitemversion-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveItemVersionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -97,7 +96,7 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DriveItemVersionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/versions/{driveItemVersion%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -109,7 +108,7 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the metadata for a specific version of a DriveItem.
+     * The list of previous versions of the item. For more info, see getting previous versions. Read-only. Nullable.
      * @param DriveItemVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -137,7 +136,7 @@ class DriveItemVersionItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(DriveItemVersion $body, ?DriveItemVersionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/versions/{driveItemVersion%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

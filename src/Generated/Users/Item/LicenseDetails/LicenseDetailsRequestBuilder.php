@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\LicenseDetails;
 use Microsoft\Graph\Generated\Models\LicenseDetailsCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\LicenseDetails\GetTeamsLicensingDetails\GetTeamsLicensingDetailsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getTeamsLicensingDetails method.
+    */
+    public function getTeamsLicensingDetails(): GetTeamsLicensingDetailsRequestBuilder {
+        return new GetTeamsLicensingDetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,11 +60,10 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
+     * A collection of this user's license details. Read-only.
      * @param LicenseDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LicenseDetailsCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0 Find more info here
     */
     public function get(?LicenseDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +89,7 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
+     * A collection of this user's license details. Read-only.
      * @param LicenseDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +117,7 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(LicenseDetails $body, ?LicenseDetailsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/licenseDetails';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

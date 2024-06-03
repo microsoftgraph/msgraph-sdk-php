@@ -52,11 +52,10 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group.
+     * The sections in the section group. Read-only. Nullable.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenoteSectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/sectiongroup-list-sections?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new onenoteSection in the specified section group.
+     * Create new navigation property to sections for groups
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenoteSection|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/sectiongroup-post-sections?view=graph-rest-1.0 Find more info here
     */
     public function post(OnenoteSection $body, ?SectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of onenoteSection objects from the specified section group.
+     * The sections in the section group. Read-only. Nullable.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new onenoteSection in the specified section group.
+     * Create new navigation property to sections for groups
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(OnenoteSection $body, ?SectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups/{sectionGroup%2Did}/sections';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -109,7 +109,7 @@ class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WhoisHistoryRecord $body, ?WhoisHistoryRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/whoisHistoryRecords';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -31,10 +31,11 @@ class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getOffice365ActivationsUserCounts
+     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
      * @param GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365activationsusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -47,7 +48,7 @@ class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getOffice365ActivationsUserCounts
+     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
      * @param GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

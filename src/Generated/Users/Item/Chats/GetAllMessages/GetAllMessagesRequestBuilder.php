@@ -30,10 +30,11 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllMessages
+     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllMessagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/chats-getallmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllMessages
+     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

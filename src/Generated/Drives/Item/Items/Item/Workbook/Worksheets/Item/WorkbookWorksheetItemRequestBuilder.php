@@ -100,11 +100,10 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the worksheet from the workbook.
+     * Delete navigation property worksheets for drives
      * @param WorkbookWorksheetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/worksheet-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookWorksheetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -115,11 +114,10 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param WorkbookWorksheetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookWorksheet|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/worksheet-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookWorksheetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -130,12 +128,11 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of worksheet object.
+     * Update the navigation property worksheets in drives
      * @param WorkbookWorksheet $body The request body
      * @param WorkbookWorksheetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookWorksheet|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/worksheet-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookWorksheet $body, ?WorkbookWorksheetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -155,13 +152,13 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes the worksheet from the workbook.
+     * Delete navigation property worksheets for drives
      * @param WorkbookWorksheetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?WorkbookWorksheetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -173,7 +170,7 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of worksheet object.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param WorkbookWorksheetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -194,14 +191,14 @@ class WorkbookWorksheetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of worksheet object.
+     * Update the navigation property worksheets in drives
      * @param WorkbookWorksheet $body The request body
      * @param WorkbookWorksheetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(WorkbookWorksheet $body, ?WorkbookWorksheetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

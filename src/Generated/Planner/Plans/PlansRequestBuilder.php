@@ -67,7 +67,7 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new plannerPlan.
+     * Create a new plannerPlan object.
      * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerPlan|null>
@@ -104,14 +104,14 @@ class PlansRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new plannerPlan.
+     * Create a new plannerPlan object.
      * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(PlannerPlan $body, ?PlansRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/plans';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

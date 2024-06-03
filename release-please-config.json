@@ -1,0 +1,25 @@
+{
+	"bootstrap-sha": "66656259cea9373d96101ba2f81e0e0b80d7554b",
+	"exclude-paths": [
+		".git",
+		".idea",
+		".github",
+		".vscode",
+		"tests",
+		"scripts"
+	],
+	"release-type": "simple",
+	"include-component-in-tag": false,
+	"include-v-in-tag": true,
+	"packages": {
+		".": {
+			"package-name": "microsoft/microsoft-graph",
+			"changelog-path": "CHANGELOG.md",
+			"extra-files": [
+				"src/GraphConstants.php",
+				"README.md"
+			]
+		}
+	},
+	"$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}

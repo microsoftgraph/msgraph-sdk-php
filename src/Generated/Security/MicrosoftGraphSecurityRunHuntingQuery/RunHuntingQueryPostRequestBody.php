@@ -63,6 +63,7 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
         $o = $this;
         return  [
             'query' => fn(ParseNode $n) => $o->setQuery($n->getStringValue()),
+            'timespan' => fn(ParseNode $n) => $o->setTimespan($n->getStringValue()),
         ];
     }
 
@@ -79,11 +80,24 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
+     * Gets the timespan property value. The timespan property
+     * @return string|null
+    */
+    public function getTimespan(): ?string {
+        $val = $this->getBackingStore()->get('timespan');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timespan'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('query', $this->getQuery());
+        $writer->writeStringValue('timespan', $this->getTimespan());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -109,6 +123,14 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     */
     public function setQuery(?string $value): void {
         $this->getBackingStore()->set('query', $value);
+    }
+
+    /**
+     * Sets the timespan property value. The timespan property
+     * @param string|null $value Value to set for the timespan property.
+    */
+    public function setTimespan(?string $value): void {
+        $this->getBackingStore()->set('timespan', $value);
     }
 
 }

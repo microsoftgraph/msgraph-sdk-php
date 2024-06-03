@@ -34,10 +34,11 @@ class GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder extends 
     }
 
     /**
-     * Invoke function getTeamsDeviceUsageDistributionUserCounts
+     * Get the number of Microsoft Teams unique users by device type over the selected time period.
      * @param GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getteamsdeviceusagedistributionusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder extends 
     }
 
     /**
-     * Invoke function getTeamsDeviceUsageDistributionUserCounts
+     * Get the number of Microsoft Teams unique users by device type over the selected time period.
      * @param GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

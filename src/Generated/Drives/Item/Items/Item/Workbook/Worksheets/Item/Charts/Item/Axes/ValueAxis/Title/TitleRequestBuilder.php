@@ -53,11 +53,10 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartAxisTitle|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartaxistitle-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TitleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartaxistitle object.
+     * Update the navigation property title in drives
      * @param WorkbookChartAxisTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartAxisTitle|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartaxistitle-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartAxisTitle $body, ?TitleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +88,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?TitleRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/axes/valueAxis/title';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -102,7 +100,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartaxistitle object.
+     * Represents the axis title. Read-only.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,14 +121,14 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartaxistitle object.
+     * Update the navigation property title in drives
      * @param WorkbookChartAxisTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(WorkbookChartAxisTitle $body, ?TitleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/axes/valueAxis/title';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

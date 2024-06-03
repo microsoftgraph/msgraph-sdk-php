@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Delega
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\DelegatedAdminRelationshipsRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\FindTenantInformationByDomainNameWithDomainName\FindTenantInformationByDomainNameWithDomainNameRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\FindTenantInformationByTenantIdWithTenantId\FindTenantInformationByTenantIdWithTenantIdRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\MultiTenantOrganizationRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -32,6 +33,13 @@ class TenantRelationshipsRequestBuilder extends BaseRequestBuilder
     */
     public function delegatedAdminRelationships(): DelegatedAdminRelationshipsRequestBuilder {
         return new DelegatedAdminRelationshipsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the multiTenantOrganization property of the microsoft.graph.tenantRelationship entity.
+    */
+    public function multiTenantOrganization(): MultiTenantOrganizationRequestBuilder {
+        return new MultiTenantOrganizationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -124,7 +132,7 @@ class TenantRelationshipsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(TenantRelationship $body, ?TenantRelationshipsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/tenantRelationships';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

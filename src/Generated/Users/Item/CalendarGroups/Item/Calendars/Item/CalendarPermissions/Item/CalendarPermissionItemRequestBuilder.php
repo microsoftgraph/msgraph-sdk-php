@@ -31,11 +31,10 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete calendarPermission.
+     * Delete navigation property calendarPermissions for users
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CalendarPermissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared.
+     * The permissions of the users with whom the calendar is shared.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CalendarPermission|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarPermissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the permissions assigned to an existing share recipient or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
+     * Update the navigation property calendarPermissions in users
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CalendarPermission|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CalendarPermission $body, ?CalendarPermissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,13 +74,13 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete calendarPermission.
+     * Delete navigation property calendarPermissions for users
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?CalendarPermissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarPermissions/{calendarPermission%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -95,7 +92,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the specified permissions object of a user or group calendar that has been shared.
+     * The permissions of the users with whom the calendar is shared.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,14 +113,14 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the permissions assigned to an existing share recipient or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
+     * Update the navigation property calendarPermissions in users
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(CalendarPermission $body, ?CalendarPermissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}/calendarPermissions/{calendarPermission%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -33,11 +33,12 @@ class DeviceLocalCredentialsRequestBuilderGetRequestConfiguration extends BaseRe
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
+     * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
      * @return DeviceLocalCredentialsRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $top = null): DeviceLocalCredentialsRequestBuilderGetQueryParameters {
-        return new DeviceLocalCredentialsRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $top);
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DeviceLocalCredentialsRequestBuilderGetQueryParameters {
+        return new DeviceLocalCredentialsRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

@@ -30,10 +30,11 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllMessages
+     * Retrieve messages across all channels in a team, including text, audio, and video conversations. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllMessagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-getallmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllMessages
+     * Retrieve messages across all channels in a team, including text, audio, and video conversations. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

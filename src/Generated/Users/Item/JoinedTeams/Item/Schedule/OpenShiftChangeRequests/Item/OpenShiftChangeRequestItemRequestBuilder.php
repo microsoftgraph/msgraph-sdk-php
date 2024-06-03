@@ -45,11 +45,10 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object.
+     * The open shift requests in the schedule.
      * @param OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShiftChangeRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/openshiftchangerequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +80,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?OpenShiftChangeRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -93,7 +92,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an openShiftChangeRequest object.
+     * The open shift requests in the schedule.
      * @param OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +120,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -52,11 +52,10 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SetCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0 Find more info here
     */
     public function get(?SetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the set objects and their properties.
+     * All sets under the group in a term [store].
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +109,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Set $body, ?SetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/termStores/{store%2Did}/groups/{group%2Did}/sets';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

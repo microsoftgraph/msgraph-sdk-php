@@ -46,7 +46,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
      * @param PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionGrantConditionSet|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/excludes/{permissionGrantConditionSet%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -93,7 +93,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
+     * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
      * @param PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +121,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(PermissionGrantConditionSet $body, ?PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/excludes/{permissionGrantConditionSet%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

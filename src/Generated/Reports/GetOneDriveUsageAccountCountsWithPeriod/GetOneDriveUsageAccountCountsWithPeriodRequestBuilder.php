@@ -34,10 +34,11 @@ class GetOneDriveUsageAccountCountsWithPeriodRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Invoke function getOneDriveUsageAccountCounts
+     * Get the trend in the number of active OneDrive for Business sites. Any site on which users viewed, modified, uploaded, downloaded, shared, or synced files is considered an active site.
      * @param GetOneDriveUsageAccountCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveusageaccountcounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOneDriveUsageAccountCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetOneDriveUsageAccountCountsWithPeriodRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Invoke function getOneDriveUsageAccountCounts
+     * Get the trend in the number of active OneDrive for Business sites. Any site on which users viewed, modified, uploaded, downloaded, shared, or synced files is considered an active site.
      * @param GetOneDriveUsageAccountCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

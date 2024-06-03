@@ -52,11 +52,10 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SectionGroupCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/notebook-list-sectiongroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for users
      * @param SectionGroup $body The request body
      * @param SectionGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SectionGroup|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/notebook-post-sectiongroups?view=graph-rest-1.0 Find more info here
     */
     public function post(SectionGroup $body, ?SectionGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of section groups from the specified notebook.
+     * The section groups in the notebook. Read-only. Nullable.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new section group in the specified notebook.
+     * Create new navigation property to sectionGroups for users
      * @param SectionGroup $body The request body
      * @param SectionGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(SectionGroup $body, ?SectionGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

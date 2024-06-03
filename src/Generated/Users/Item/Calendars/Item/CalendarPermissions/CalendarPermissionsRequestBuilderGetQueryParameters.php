@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\CalendarPermission
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.
+ * The permissions of the users with whom the calendar is shared.
 */
 class CalendarPermissionsRequestBuilderGetQueryParameters 
 {
@@ -26,6 +26,12 @@ class CalendarPermissionsRequestBuilderGetQueryParameters
      * @var array<string>|null $orderby Order items by property values
     */
     public ?array $orderby = null;
+    
+    /**
+     * @QueryParameter("%24search")
+     * @var string|null $search Search items by search phrases
+    */
+    public ?string $search = null;
     
     /**
      * @QueryParameter("%24select")
@@ -50,14 +56,16 @@ class CalendarPermissionsRequestBuilderGetQueryParameters
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
+     * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+    public function __construct(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
         $this->filter = $filter;
         $this->orderby = $orderby;
+        $this->search = $search;
         $this->select = $select;
         $this->skip = $skip;
         $this->top = $top;

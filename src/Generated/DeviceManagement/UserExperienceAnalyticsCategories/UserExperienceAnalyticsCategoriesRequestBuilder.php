@@ -109,7 +109,7 @@ class UserExperienceAnalyticsCategoriesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(UserExperienceAnalyticsCategory $body, ?UserExperienceAnalyticsCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/userExperienceAnalyticsCategories';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

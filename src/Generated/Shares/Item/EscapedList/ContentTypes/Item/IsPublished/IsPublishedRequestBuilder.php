@@ -30,10 +30,11 @@ class IsPublishedRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function isPublished
+     * Check the publishing status of a contentType in a content type hub site.
      * @param IsPublishedRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IsPublishedGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0 Find more info here
     */
     public function get(?IsPublishedRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class IsPublishedRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function isPublished
+     * Check the publishing status of a contentType in a content type hub site.
      * @param IsPublishedRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

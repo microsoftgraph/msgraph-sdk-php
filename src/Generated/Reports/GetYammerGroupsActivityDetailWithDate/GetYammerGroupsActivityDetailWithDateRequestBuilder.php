@@ -35,10 +35,11 @@ class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getYammerGroupsActivityDetail
+     * Get details about Yammer groups activity by group.
      * @param GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getyammergroupsactivitydetail?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,7 +52,7 @@ class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Invoke function getYammerGroupsActivityDetail
+     * Get details about Yammer groups activity by group.
      * @param GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

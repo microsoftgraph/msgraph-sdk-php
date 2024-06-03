@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Invitation extends Entity implements Parsable 
 {
@@ -35,6 +36,7 @@ class Invitation extends Entity implements Parsable
             'invitedUserDisplayName' => fn(ParseNode $n) => $o->setInvitedUserDisplayName($n->getStringValue()),
             'invitedUserEmailAddress' => fn(ParseNode $n) => $o->setInvitedUserEmailAddress($n->getStringValue()),
             'invitedUserMessageInfo' => fn(ParseNode $n) => $o->setInvitedUserMessageInfo($n->getObjectValue([InvitedUserMessageInfo::class, 'createFromDiscriminatorValue'])),
+            'invitedUserSponsors' => fn(ParseNode $n) => $o->setInvitedUserSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'invitedUserType' => fn(ParseNode $n) => $o->setInvitedUserType($n->getStringValue()),
             'inviteRedeemUrl' => fn(ParseNode $n) => $o->setInviteRedeemUrl($n->getStringValue()),
             'inviteRedirectUrl' => fn(ParseNode $n) => $o->setInviteRedirectUrl($n->getStringValue()),
@@ -69,7 +71,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
      * @return string|null
     */
     public function getInvitedUserEmailAddress(): ?string {
@@ -81,7 +83,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
+     * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
      * @return InvitedUserMessageInfo|null
     */
     public function getInvitedUserMessageInfo(): ?InvitedUserMessageInfo {
@@ -90,6 +92,20 @@ class Invitation extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserMessageInfo'");
+    }
+
+    /**
+     * Gets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @return array<DirectoryObject>|null
+    */
+    public function getInvitedUserSponsors(): ?array {
+        $val = $this->getBackingStore()->get('invitedUserSponsors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserSponsors'");
     }
 
     /**
@@ -174,6 +190,7 @@ class Invitation extends Entity implements Parsable
         $writer->writeStringValue('invitedUserDisplayName', $this->getInvitedUserDisplayName());
         $writer->writeStringValue('invitedUserEmailAddress', $this->getInvitedUserEmailAddress());
         $writer->writeObjectValue('invitedUserMessageInfo', $this->getInvitedUserMessageInfo());
+        $writer->writeCollectionOfObjectValues('invitedUserSponsors', $this->getInvitedUserSponsors());
         $writer->writeStringValue('invitedUserType', $this->getInvitedUserType());
         $writer->writeStringValue('inviteRedeemUrl', $this->getInviteRedeemUrl());
         $writer->writeStringValue('inviteRedirectUrl', $this->getInviteRedirectUrl());
@@ -199,7 +216,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters aren't permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
      * @param string|null $value Value to set for the invitedUserEmailAddress property.
     */
     public function setInvitedUserEmailAddress(?string $value): void {
@@ -207,11 +224,19 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
+     * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
      * @param InvitedUserMessageInfo|null $value Value to set for the invitedUserMessageInfo property.
     */
     public function setInvitedUserMessageInfo(?InvitedUserMessageInfo $value): void {
         $this->getBackingStore()->set('invitedUserMessageInfo', $value);
+    }
+
+    /**
+     * Sets the invitedUserSponsors property value. The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * @param array<DirectoryObject>|null $value Value to set for the invitedUserSponsors property.
+    */
+    public function setInvitedUserSponsors(?array $value): void {
+        $this->getBackingStore()->set('invitedUserSponsors', $value);
     }
 
     /**

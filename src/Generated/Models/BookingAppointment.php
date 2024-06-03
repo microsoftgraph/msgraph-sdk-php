@@ -54,6 +54,54 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
+     * Gets the customerEmailAddress property value. The customerEmailAddress property
+     * @return string|null
+    */
+    public function getCustomerEmailAddress(): ?string {
+        $val = $this->getBackingStore()->get('customerEmailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customerEmailAddress'");
+    }
+
+    /**
+     * Gets the customerName property value. The customerName property
+     * @return string|null
+    */
+    public function getCustomerName(): ?string {
+        $val = $this->getBackingStore()->get('customerName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customerName'");
+    }
+
+    /**
+     * Gets the customerNotes property value. Notes from the customer associated with this appointment.
+     * @return string|null
+    */
+    public function getCustomerNotes(): ?string {
+        $val = $this->getBackingStore()->get('customerNotes');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customerNotes'");
+    }
+
+    /**
+     * Gets the customerPhone property value. The customerPhone property
+     * @return string|null
+    */
+    public function getCustomerPhone(): ?string {
+        $val = $this->getBackingStore()->get('customerPhone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customerPhone'");
+    }
+
+    /**
      * Gets the customers property value. A collection of customer properties for an appointment. An appointment contains a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
      * @return array<BookingCustomerInformationBase>|null
     */
@@ -112,6 +160,10 @@ class BookingAppointment extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'additionalInformation' => fn(ParseNode $n) => $o->setAdditionalInformation($n->getStringValue()),
             'anonymousJoinWebUrl' => fn(ParseNode $n) => $o->setAnonymousJoinWebUrl($n->getStringValue()),
+            'customerEmailAddress' => fn(ParseNode $n) => $o->setCustomerEmailAddress($n->getStringValue()),
+            'customerName' => fn(ParseNode $n) => $o->setCustomerName($n->getStringValue()),
+            'customerNotes' => fn(ParseNode $n) => $o->setCustomerNotes($n->getStringValue()),
+            'customerPhone' => fn(ParseNode $n) => $o->setCustomerPhone($n->getStringValue()),
             'customers' => fn(ParseNode $n) => $o->setCustomers($n->getCollectionOfObjectValues([BookingCustomerInformationBase::class, 'createFromDiscriminatorValue'])),
             'customerTimeZone' => fn(ParseNode $n) => $o->setCustomerTimeZone($n->getStringValue()),
             'duration' => fn(ParseNode $n) => $o->setDuration($n->getDateIntervalValue()),
@@ -372,6 +424,10 @@ class BookingAppointment extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('additionalInformation', $this->getAdditionalInformation());
         $writer->writeStringValue('anonymousJoinWebUrl', $this->getAnonymousJoinWebUrl());
+        $writer->writeStringValue('customerEmailAddress', $this->getCustomerEmailAddress());
+        $writer->writeStringValue('customerName', $this->getCustomerName());
+        $writer->writeStringValue('customerNotes', $this->getCustomerNotes());
+        $writer->writeStringValue('customerPhone', $this->getCustomerPhone());
         $writer->writeCollectionOfObjectValues('customers', $this->getCustomers());
         $writer->writeStringValue('customerTimeZone', $this->getCustomerTimeZone());
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
@@ -408,6 +464,38 @@ class BookingAppointment extends Entity implements Parsable
     */
     public function setAnonymousJoinWebUrl(?string $value): void {
         $this->getBackingStore()->set('anonymousJoinWebUrl', $value);
+    }
+
+    /**
+     * Sets the customerEmailAddress property value. The customerEmailAddress property
+     * @param string|null $value Value to set for the customerEmailAddress property.
+    */
+    public function setCustomerEmailAddress(?string $value): void {
+        $this->getBackingStore()->set('customerEmailAddress', $value);
+    }
+
+    /**
+     * Sets the customerName property value. The customerName property
+     * @param string|null $value Value to set for the customerName property.
+    */
+    public function setCustomerName(?string $value): void {
+        $this->getBackingStore()->set('customerName', $value);
+    }
+
+    /**
+     * Sets the customerNotes property value. Notes from the customer associated with this appointment.
+     * @param string|null $value Value to set for the customerNotes property.
+    */
+    public function setCustomerNotes(?string $value): void {
+        $this->getBackingStore()->set('customerNotes', $value);
+    }
+
+    /**
+     * Sets the customerPhone property value. The customerPhone property
+     * @param string|null $value Value to set for the customerPhone property.
+    */
+    public function setCustomerPhone(?string $value): void {
+        $this->getBackingStore()->set('customerPhone', $value);
     }
 
     /**

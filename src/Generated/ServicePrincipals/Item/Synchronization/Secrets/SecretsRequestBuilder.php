@@ -38,11 +38,12 @@ class SecretsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update property secrets value.
+     * Provide credentials for establishing connectivity with the target system.
      * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecretsPutResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-1.0 Find more info here
     */
     public function put(SecretsPutRequestBody $body, ?SecretsRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
@@ -53,7 +54,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update property secrets value.
+     * Provide credentials for establishing connectivity with the target system.
      * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

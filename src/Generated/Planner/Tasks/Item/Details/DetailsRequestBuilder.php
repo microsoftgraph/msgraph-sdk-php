@@ -60,7 +60,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property details in planner
+     * Update the properties of plannerTaskDetails object.
      * @param PlannerTaskDetails $body The request body
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlannerTaskDetails|null>
@@ -82,7 +82,7 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DetailsRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/details';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -115,14 +115,14 @@ class DetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property details in planner
+     * Update the properties of plannerTaskDetails object.
      * @param PlannerTaskDetails $body The request body
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(PlannerTaskDetails $body, ?DetailsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/planner/tasks/{plannerTask%2Did}/details';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

@@ -60,11 +60,10 @@ class WorksheetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param WorksheetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookWorksheetCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorksheetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +89,7 @@ class WorksheetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of worksheet objects.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      * @param WorksheetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -118,7 +117,7 @@ class WorksheetsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WorkbookWorksheet $body, ?WorksheetsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

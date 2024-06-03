@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignedTo\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.
+ * Read the properties and relationships of an appRoleAssignment object.
 */
 class AppRoleAssignmentItemRequestBuilderGetQueryParameters 
 {

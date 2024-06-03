@@ -67,7 +67,7 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new workflow object. You can create up to 50 workflows in a tenant.
+     * Create a new workflow object. You can create up to 100 workflows in a tenant.
      * @param Workflow $body The request body
      * @param WorkflowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Workflow|null>
@@ -104,14 +104,14 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new workflow object. You can create up to 50 workflows in a tenant.
+     * Create a new workflow object. You can create up to 100 workflows in a tenant.
      * @param Workflow $body The request body
      * @param WorkflowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(Workflow $body, ?WorkflowsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/lifecycleWorkflows/workflows';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

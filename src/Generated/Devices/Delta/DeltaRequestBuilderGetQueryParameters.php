@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Devices\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get newly created, updated, or deleted devices without performing a full read of the entire resource collection. For more information, see Using delta query.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

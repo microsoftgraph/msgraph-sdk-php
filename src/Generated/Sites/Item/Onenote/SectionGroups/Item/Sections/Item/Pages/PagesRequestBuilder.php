@@ -52,11 +52,10 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenotePageCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/section-list-pages?view=graph-rest-1.0 Find more info here
     */
     public function get(?PagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new page in the specified section.
+     * Create new navigation property to pages for sites
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnenotePage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/section-post-pages?view=graph-rest-1.0 Find more info here
     */
     public function post(OnenotePage $body, ?PagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of page objects from the specified section.
+     * The collection of pages in the section.  Read-only. Nullable.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new page in the specified section.
+     * Create new navigation property to pages for sites
      * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(OnenotePage $body, ?PagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/onenote/sectionGroups/{sectionGroup%2Did}/sections/{onenoteSection%2Did}/pages';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

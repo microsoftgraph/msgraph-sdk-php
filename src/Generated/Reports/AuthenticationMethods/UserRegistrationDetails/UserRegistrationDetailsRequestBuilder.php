@@ -110,7 +110,7 @@ class UserRegistrationDetailsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(UserRegistrationDetails $body, ?UserRegistrationDetailsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/reports/authenticationMethods/userRegistrationDetails';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

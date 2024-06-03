@@ -31,10 +31,11 @@ class GetOrderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getOrder
+     * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @param GetOrderRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AssignmentOrder|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/identityuserflowattributeassignment-getorder?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOrderRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class GetOrderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getOrder
+     * Get the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @param GetOrderRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

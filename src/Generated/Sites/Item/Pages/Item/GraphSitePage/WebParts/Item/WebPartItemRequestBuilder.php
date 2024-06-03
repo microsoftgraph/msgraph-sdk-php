@@ -39,10 +39,11 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property webParts for sites
+     * Delete a webPart object.
      * @param WebPartItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/webpart-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WebPartItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -53,7 +54,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webParts from sites
+     * Collection of webparts on the SharePoint page.
      * @param WebPartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebPart|null>
      * @throws Exception
@@ -82,13 +83,13 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property webParts for sites
+     * Delete a webPart object.
      * @param WebPartItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?WebPartItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/webParts/{webPart%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -100,7 +101,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webParts from sites
+     * Collection of webparts on the SharePoint page.
      * @param WebPartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +129,7 @@ class WebPartItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(WebPart $body, ?WebPartItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/webParts/{webPart%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

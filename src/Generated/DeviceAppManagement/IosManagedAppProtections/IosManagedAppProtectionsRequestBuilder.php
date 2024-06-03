@@ -111,7 +111,7 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(IosManagedAppProtection $body, ?IosManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/iosManagedAppProtections';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

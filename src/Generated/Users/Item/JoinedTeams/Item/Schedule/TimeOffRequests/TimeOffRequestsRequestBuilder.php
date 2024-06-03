@@ -52,11 +52,10 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of timeOffRequest objects in the team.
+     * The time off requests in the schedule.
      * @param TimeOffRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOffRequestCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/timeoffrequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TimeOffRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of timeOffRequest objects in the team.
+     * The time off requests in the schedule.
      * @param TimeOffRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +109,7 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(TimeOffRequest $body, ?TimeOffRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/timeOffRequests';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

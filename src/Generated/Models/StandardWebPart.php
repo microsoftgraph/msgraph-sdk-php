@@ -26,7 +26,7 @@ class StandardWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Gets the containerTextWebPartId property value. The containerTextWebPartId property
+     * Gets the containerTextWebPartId property value. The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
      * @return string|null
     */
     public function getContainerTextWebPartId(): ?string {
@@ -38,7 +38,7 @@ class StandardWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. Data of the webPart.
      * @return WebPartData|null
     */
     public function getData(): ?WebPartData {
@@ -63,7 +63,7 @@ class StandardWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Gets the webPartType property value. The webPartType property
+     * Gets the webPartType property value. A Guid that indicates the webPart type.
      * @return string|null
     */
     public function getWebPartType(): ?string {
@@ -86,7 +86,7 @@ class StandardWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Sets the containerTextWebPartId property value. The containerTextWebPartId property
+     * Sets the containerTextWebPartId property value. The instance identifier of the container text webPart. It only works for inline standard webPart in rich text webParts.
      * @param string|null $value Value to set for the containerTextWebPartId property.
     */
     public function setContainerTextWebPartId(?string $value): void {
@@ -94,7 +94,7 @@ class StandardWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. Data of the webPart.
      * @param WebPartData|null $value Value to set for the data property.
     */
     public function setData(?WebPartData $value): void {
@@ -102,7 +102,7 @@ class StandardWebPart extends WebPart implements Parsable
     }
 
     /**
-     * Sets the webPartType property value. The webPartType property
+     * Sets the webPartType property value. A Guid that indicates the webPart type.
      * @param string|null $value Value to set for the webPartType property.
     */
     public function setWebPartType(?string $value): void {

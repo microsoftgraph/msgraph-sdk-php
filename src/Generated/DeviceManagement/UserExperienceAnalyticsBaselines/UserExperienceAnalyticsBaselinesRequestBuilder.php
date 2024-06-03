@@ -109,7 +109,7 @@ class UserExperienceAnalyticsBaselinesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(UserExperienceAnalyticsBaseline $body, ?UserExperienceAnalyticsBaselinesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/userExperienceAnalyticsBaselines';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

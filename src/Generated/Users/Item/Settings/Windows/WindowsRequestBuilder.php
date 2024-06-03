@@ -52,11 +52,10 @@ class WindowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of windowsSetting objects and their properties for the signed in user.
+     * Get windows from users
      * @param WindowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsSettingCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/usersettings-list-windows?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class WindowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of windowsSetting objects and their properties for the signed in user.
+     * Get windows from users
      * @param WindowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -110,7 +109,7 @@ class WindowsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(WindowsSetting $body, ?WindowsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/settings/windows';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

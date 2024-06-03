@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSiteP
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get horizontalSections from groups
+ * Collection of horizontal sections on the SharePoint page.
 */
 class HorizontalSectionsRequestBuilderGetQueryParameters 
 {

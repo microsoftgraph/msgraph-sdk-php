@@ -67,7 +67,7 @@ class DirectReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
+     * Get the direct reports for this organizational contact.
      * @param DirectReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class DirectReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
+     * Get the direct reports for this organizational contact.
      * @param DirectReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

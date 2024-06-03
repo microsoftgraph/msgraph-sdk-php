@@ -109,7 +109,7 @@ class PassiveDnsRecordsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(PassiveDnsRecord $body, ?PassiveDnsRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/passiveDnsRecords';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

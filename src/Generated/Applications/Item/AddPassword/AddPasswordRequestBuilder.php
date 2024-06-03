@@ -31,7 +31,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds a strong password or secret to an application.
+     * Adds a strong password or secret to an application. You can also add passwords while creating the application.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PasswordCredential|null>
@@ -47,7 +47,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds a strong password or secret to an application.
+     * Adds a strong password or secret to an application. You can also add passwords while creating the application.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

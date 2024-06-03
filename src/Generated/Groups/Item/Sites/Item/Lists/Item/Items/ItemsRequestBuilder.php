@@ -4,6 +4,8 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\DeltaWithToken\DeltaWithTokenRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\ListItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ListItemCollectionResponse;
@@ -18,6 +20,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param string $listItemId The unique identifier of listItem
@@ -44,11 +53,19 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [items][item] in a [list][].
+     * Provides operations to call the delta method.
+     * @param string $token Usage: token='{token}'
+     * @return DeltaWithTokenRequestBuilder
+    */
+    public function deltaWithToken(string $token): DeltaWithTokenRequestBuilder {
+        return new DeltaWithTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $token);
+    }
+
+    /**
+     * All items contained in the list.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListItemCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,12 +76,11 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for groups
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListItem|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -75,7 +91,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [items][item] in a [list][].
+     * All items contained in the list.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -96,14 +112,14 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new [listItem][] in a [list][].
+     * Create new navigation property to items for groups
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/items';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

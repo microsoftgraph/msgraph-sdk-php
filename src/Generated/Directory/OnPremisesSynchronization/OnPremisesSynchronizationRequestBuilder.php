@@ -109,7 +109,7 @@ class OnPremisesSynchronizationRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(OnPremisesDirectorySynchronization $body, ?OnPremisesSynchronizationRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory/onPremisesSynchronization';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

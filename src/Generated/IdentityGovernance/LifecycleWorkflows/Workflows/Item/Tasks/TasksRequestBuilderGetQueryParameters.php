@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The tasks in the workflow.
+ * Retrieve the details of the built-in tasks in Lifecycle Workflows.
 */
 class TasksRequestBuilderGetQueryParameters 
 {

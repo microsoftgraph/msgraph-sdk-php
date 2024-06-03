@@ -46,11 +46,10 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SoftwareOathAuthenticationMethod|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,7 +66,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     */
     public function toDeleteRequestInformation(?SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/softwareOathMethods/{softwareOathAuthenticationMethod%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -79,7 +78,7 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Retrieve a user's single Software OATH token authentication method object and its properties.
+     * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

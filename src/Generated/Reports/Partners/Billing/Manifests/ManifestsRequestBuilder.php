@@ -109,7 +109,7 @@ class ManifestsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Manifest $body, ?ManifestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/reports/partners/billing/manifests';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

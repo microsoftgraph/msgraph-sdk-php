@@ -34,10 +34,11 @@ class GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder 
     }
 
     /**
-     * Invoke function getSkypeForBusinessPeerToPeerActivityMinuteCounts
+     * Get usage trends on the length in minutes and type of peer-to-peer sessions held in your organization. Types of sessions include audio and video.
      * @param GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinesspeertopeeractivityminutecounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder 
     }
 
     /**
-     * Invoke function getSkypeForBusinessPeerToPeerActivityMinuteCounts
+     * Get usage trends on the length in minutes and type of peer-to-peer sessions held in your organization. Types of sessions include audio and video.
      * @param GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

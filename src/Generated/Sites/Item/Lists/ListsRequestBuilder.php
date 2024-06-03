@@ -52,7 +52,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
+     * Get the collection of lists for a site. Lists with the system facet are hidden by default.To list them, include system in your $select statement.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ListCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new [list][] in a [site][].
+     * Create a new list in a site.
      * @param EscapedList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EscapedList|null>
@@ -83,7 +83,7 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the collection of [lists][] for a [site][]. Lists with the [system][] facet are hidden by default.To list them, include system in your $select statement.
+     * Get the collection of lists for a site. Lists with the system facet are hidden by default.To list them, include system in your $select statement.
      * @param ListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +104,14 @@ class ListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new [list][] in a [site][].
+     * Create a new list in a site.
      * @param EscapedList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(EscapedList $body, ?ListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/lists';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -43,7 +43,7 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24count,%24filter,%24orderby,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/outlook/masterCategories{?%24count,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -52,11 +52,10 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      * @param MasterCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OutlookCategoryCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0 Find more info here
     */
     public function get(?MasterCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param OutlookCategory $body The request body
      * @param MasterCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OutlookCategory|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0 Find more info here
     */
     public function post(OutlookCategory $body, ?MasterCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the categories that have been defined for the user.
+     * A list of categories defined for the user.
      * @param MasterCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,14 +102,14 @@ class MasterCategoriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create an outlookCategory object in the user's master list of categories.
+     * Create new navigation property to masterCategories for users
      * @param OutlookCategory $body The request body
      * @param MasterCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(OutlookCategory $body, ?MasterCategoriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/outlook/masterCategories';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

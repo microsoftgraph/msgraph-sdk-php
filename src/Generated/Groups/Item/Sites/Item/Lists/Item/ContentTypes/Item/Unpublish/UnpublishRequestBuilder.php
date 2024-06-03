@@ -30,7 +30,7 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType from a content type hub site.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Unpublish a [contentType][] from a content type hub site.
+     * Unpublish a contentType from a content type hub site.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

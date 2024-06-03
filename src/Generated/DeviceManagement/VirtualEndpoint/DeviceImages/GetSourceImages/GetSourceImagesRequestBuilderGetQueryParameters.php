@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\DeviceImage
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getSourceImages
+ * Get cloudPcSourceDeviceImage objects that can be uploaded and used on Cloud PCs. View a list of all the managed image resources from your Microsoft Entra subscriptions.
 */
 class GetSourceImagesRequestBuilderGetQueryParameters 
 {

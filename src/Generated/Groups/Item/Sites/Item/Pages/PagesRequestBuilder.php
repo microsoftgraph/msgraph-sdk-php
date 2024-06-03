@@ -60,7 +60,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from groups
+     * The collection of pages in the baseSitePages list in this site.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BaseSitePageCollectionResponse|null>
      * @throws Exception
@@ -89,7 +89,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from groups
+     * The collection of pages in the baseSitePages list in this site.
      * @param PagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,7 +117,7 @@ class PagesRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(BaseSitePage $body, ?PagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

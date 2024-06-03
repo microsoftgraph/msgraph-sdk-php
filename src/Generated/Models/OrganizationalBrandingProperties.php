@@ -47,7 +47,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
-     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.
      * @return StreamInterface|null
     */
     public function getBackgroundImage(): ?StreamInterface {
@@ -106,6 +106,18 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'cdnList'");
+    }
+
+    /**
+     * Gets the contentCustomization property value. Represents the content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra External ID in external tenants only.
+     * @return ContentCustomization|null
+    */
+    public function getContentCustomization(): ?ContentCustomization {
+        $val = $this->getBackingStore()->get('contentCustomization');
+        if (is_null($val) || $val instanceof ContentCustomization) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentCustomization'");
     }
 
     /**
@@ -284,6 +296,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setCdnList($val);
             },
+            'contentCustomization' => fn(ParseNode $n) => $o->setContentCustomization($n->getObjectValue([ContentCustomization::class, 'createFromDiscriminatorValue'])),
             'customAccountResetCredentialsUrl' => fn(ParseNode $n) => $o->setCustomAccountResetCredentialsUrl($n->getStringValue()),
             'customCannotAccessYourAccountText' => fn(ParseNode $n) => $o->setCustomCannotAccessYourAccountText($n->getStringValue()),
             'customCannotAccessYourAccountUrl' => fn(ParseNode $n) => $o->setCustomCannotAccessYourAccountUrl($n->getStringValue()),
@@ -455,6 +468,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
         $writer->writeBinaryContent('bannerLogo', $this->getBannerLogo());
         $writer->writeStringValue('bannerLogoRelativeUrl', $this->getBannerLogoRelativeUrl());
         $writer->writeCollectionOfPrimitiveValues('cdnList', $this->getCdnList());
+        $writer->writeObjectValue('contentCustomization', $this->getContentCustomization());
         $writer->writeStringValue('customAccountResetCredentialsUrl', $this->getCustomAccountResetCredentialsUrl());
         $writer->writeStringValue('customCannotAccessYourAccountText', $this->getCustomCannotAccessYourAccountText());
         $writer->writeStringValue('customCannotAccessYourAccountUrl', $this->getCustomCannotAccessYourAccountUrl());
@@ -490,7 +504,7 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
-     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image reduces bandwidth requirements and make the page load faster.
      * @param StreamInterface|null $value Value to set for the backgroundImage property.
     */
     public function setBackgroundImage(?StreamInterface $value): void {
@@ -527,6 +541,14 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     */
     public function setCdnList(?array $value): void {
         $this->getBackingStore()->set('cdnList', $value);
+    }
+
+    /**
+     * Sets the contentCustomization property value. Represents the content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra External ID in external tenants only.
+     * @param ContentCustomization|null $value Value to set for the contentCustomization property.
+    */
+    public function setContentCustomization(?ContentCustomization $value): void {
+        $this->getBackingStore()->set('contentCustomization', $value);
     }
 
     /**

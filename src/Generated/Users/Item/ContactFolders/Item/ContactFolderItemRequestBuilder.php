@@ -47,11 +47,10 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete navigation property contactFolders for users
      * @param ContactFolderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contactfolder-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ContactFolderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -62,11 +61,10 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      * @param ContactFolderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContactFolder|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contactfolder-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContactFolderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,12 +75,11 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of contactfolder object.
+     * Update the navigation property contactFolders in users
      * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContactFolder|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contactfolder-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ContactFolder $body, ?ContactFolderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -93,13 +90,13 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete contactFolder other than the default contactFolder.
+     * Delete navigation property contactFolders for users
      * @param ContactFolderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toDeleteRequestInformation(?ContactFolderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -111,7 +108,7 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a contact folder by using the contact folder ID. There are two scenarios where an app can get another user's contact folder:
+     * The user's contacts folders. Read-only. Nullable.
      * @param ContactFolderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -132,14 +129,14 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of contactfolder object.
+     * Update the navigation property contactFolders in users
      * @param ContactFolder $body The request body
      * @param ContactFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(ContactFolder $body, ?ContactFolderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

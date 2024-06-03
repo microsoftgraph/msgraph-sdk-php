@@ -61,10 +61,11 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webinars from solutions
+     * Read the properties and relationships of a virtualEventWebinar object.
      * @param VirtualEventWebinarItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventWebinar|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualeventwebinar-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?VirtualEventWebinarItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -96,7 +97,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?VirtualEventWebinarItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -108,7 +109,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get webinars from solutions
+     * Read the properties and relationships of a virtualEventWebinar object.
      * @param VirtualEventWebinarItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +137,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(VirtualEventWebinar $body, ?VirtualEventWebinarItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

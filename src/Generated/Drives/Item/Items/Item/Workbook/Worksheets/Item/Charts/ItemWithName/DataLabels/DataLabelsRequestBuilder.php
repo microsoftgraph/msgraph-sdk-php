@@ -45,11 +45,10 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the data labels on the chart. Read-only.
      * @param DataLabelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartDataLabels|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartdatalabels-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DataLabelsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartdatalabels object.
+     * Update the navigation property dataLabels in drives
      * @param WorkbookChartDataLabels $body The request body
      * @param DataLabelsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartDataLabels|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chartdatalabels-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartDataLabels $body, ?DataLabelsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -82,7 +80,7 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?DataLabelsRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/item(name=\'{name}\')/dataLabels';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -94,7 +92,7 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of chartdatalabels object.
+     * Represents the data labels on the chart. Read-only.
      * @param DataLabelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,14 +113,14 @@ class DataLabelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of chartdatalabels object.
+     * Update the navigation property dataLabels in drives
      * @param WorkbookChartDataLabels $body The request body
      * @param DataLabelsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPatchRequestInformation(WorkbookChartDataLabels $body, ?DataLabelsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/item(name=\'{name}\')/dataLabels';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

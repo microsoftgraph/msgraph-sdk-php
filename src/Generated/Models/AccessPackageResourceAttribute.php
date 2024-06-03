@@ -75,10 +75,36 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
         $o = $this;
         return  [
             'destination' => fn(ParseNode $n) => $o->setDestination($n->getObjectValue([AccessPackageResourceAttributeDestination::class, 'createFromDiscriminatorValue'])),
+            'isEditable' => fn(ParseNode $n) => $o->setIsEditable($n->getBooleanValue()),
+            'isPersistedOnAssignmentRemoval' => fn(ParseNode $n) => $o->setIsPersistedOnAssignmentRemoval($n->getBooleanValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'source' => fn(ParseNode $n) => $o->setSource($n->getObjectValue([AccessPackageResourceAttributeSource::class, 'createFromDiscriminatorValue'])),
         ];
+    }
+
+    /**
+     * Gets the isEditable property value. The isEditable property
+     * @return bool|null
+    */
+    public function getIsEditable(): ?bool {
+        $val = $this->getBackingStore()->get('isEditable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEditable'");
+    }
+
+    /**
+     * Gets the isPersistedOnAssignmentRemoval property value. The isPersistedOnAssignmentRemoval property
+     * @return bool|null
+    */
+    public function getIsPersistedOnAssignmentRemoval(): ?bool {
+        $val = $this->getBackingStore()->get('isPersistedOnAssignmentRemoval');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPersistedOnAssignmentRemoval'");
     }
 
     /**
@@ -123,6 +149,8 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('destination', $this->getDestination());
+        $writer->writeBooleanValue('isEditable', $this->getIsEditable());
+        $writer->writeBooleanValue('isPersistedOnAssignmentRemoval', $this->getIsPersistedOnAssignmentRemoval());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('source', $this->getSource());
@@ -151,6 +179,22 @@ class AccessPackageResourceAttribute implements AdditionalDataHolder, BackedMode
     */
     public function setDestination(?AccessPackageResourceAttributeDestination $value): void {
         $this->getBackingStore()->set('destination', $value);
+    }
+
+    /**
+     * Sets the isEditable property value. The isEditable property
+     * @param bool|null $value Value to set for the isEditable property.
+    */
+    public function setIsEditable(?bool $value): void {
+        $this->getBackingStore()->set('isEditable', $value);
+    }
+
+    /**
+     * Sets the isPersistedOnAssignmentRemoval property value. The isPersistedOnAssignmentRemoval property
+     * @param bool|null $value Value to set for the isPersistedOnAssignmentRemoval property.
+    */
+    public function setIsPersistedOnAssignmentRemoval(?bool $value): void {
+        $this->getBackingStore()->set('isPersistedOnAssignmentRemoval', $value);
     }
 
     /**

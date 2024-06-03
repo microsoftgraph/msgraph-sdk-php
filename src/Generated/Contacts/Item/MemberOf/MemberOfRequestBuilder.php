@@ -67,7 +67,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
+     * List the groups that this organizational contact is a member of.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class MemberOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
+     * List the groups that this organizational contact is a member of.
      * @param MemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

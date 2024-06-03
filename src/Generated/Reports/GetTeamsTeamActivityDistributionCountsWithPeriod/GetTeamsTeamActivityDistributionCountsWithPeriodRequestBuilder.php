@@ -34,10 +34,11 @@ class GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder extends Bas
     }
 
     /**
-     * Invoke function getTeamsTeamActivityDistributionCounts
+     * Get the number of team activities across Microsoft Teams over a selected period.
      * @param GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getteamsteamactivitydistributioncounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder extends Bas
     }
 
     /**
-     * Invoke function getTeamsTeamActivityDistributionCounts
+     * Get the number of team activities across Microsoft Teams over a selected period.
      * @param GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

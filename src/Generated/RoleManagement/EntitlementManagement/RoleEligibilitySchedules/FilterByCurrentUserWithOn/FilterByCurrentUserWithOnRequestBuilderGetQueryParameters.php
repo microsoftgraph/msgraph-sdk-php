@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEli
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function filterByCurrentUser
+ * Retrieve the schedules for role eligibilities for which the signed-in user is the principal.
 */
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {

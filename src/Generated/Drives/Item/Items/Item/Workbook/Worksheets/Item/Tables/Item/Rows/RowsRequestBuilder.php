@@ -61,11 +61,10 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of tablerow objects.
+     * Represents a collection of all the rows in the table. Read-only.
      * @param RowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableRowCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0 Find more info here
     */
     public function get(?RowsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +84,11 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request.
+     * Create new navigation property to rows for drives
      * @param WorkbookTableRow $body The request body
      * @param RowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableRow|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/table-post-rows?view=graph-rest-1.0 Find more info here
     */
     public function post(WorkbookTableRow $body, ?RowsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -101,7 +99,7 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of tablerow objects.
+     * Represents a collection of all the rows in the table. Read-only.
      * @param RowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,14 +120,14 @@ class RowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds rows to the end of a table.  Note that this API can accept multiple rows of data. Adding one row at a time can affect performance. The recommended approach is to batch the rows together in a single call rather than inserting single rows. For best results, collect the rows to be inserted on the application side and perform a single row add operation. Experiment with the number of rows to determine the ideal number of rows to use in a single API call.  This request might occasionally result in a 504 HTTP error. The appropriate response to this error is to repeat the request.
+     * Create new navigation property to rows for drives
      * @param WorkbookTableRow $body The request body
      * @param RowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
     public function toPostRequestInformation(WorkbookTableRow $body, ?RowsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/rows';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

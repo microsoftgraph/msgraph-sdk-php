@@ -11,6 +11,8 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeviceLocalCredentials\DeviceLocalCredentialsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -73,6 +75,13 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.
+    */
+    public function subscriptions(): SubscriptionsRequestBuilder {
+        return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Instantiates a new DirectoryRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -116,6 +125,15 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.directory entity.
+     * @param string $commerceSubscriptionId Alternate key of companySubscription
+     * @return SubscriptionsWithCommerceSubscriptionIdRequestBuilder
+    */
+    public function subscriptionsWithCommerceSubscriptionId(string $commerceSubscriptionId): SubscriptionsWithCommerceSubscriptionIdRequestBuilder {
+        return new SubscriptionsWithCommerceSubscriptionIdRequestBuilder($this->pathParameters, $this->requestAdapter, $commerceSubscriptionId);
+    }
+
+    /**
      * Get directory
      * @param DirectoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -144,7 +162,7 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(Directory $body, ?DirectoryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/directory';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

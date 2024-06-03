@@ -28,7 +28,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers with at least the Cloud Device Administrator role can set this property.
      * @return bool|null
     */
     public function getAccountEnabled(): ?bool {
@@ -162,7 +162,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the enrollmentType property value. The enrollmentType property
+     * Gets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      * @return string|null
     */
     public function getEnrollmentType(): ?string {
@@ -270,7 +270,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isRooted property value. The isRooted property
+     * Gets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
      * @return bool|null
     */
     public function getIsRooted(): ?bool {
@@ -282,7 +282,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the managementType property value. The managementType property
+     * Gets the managementType property value. The management channel of the device. This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      * @return string|null
     */
     public function getManagementType(): ?string {
@@ -552,7 +552,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
+     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers with at least the Cloud Device Administrator role can set this property.
      * @param bool|null $value Value to set for the accountEnabled property.
     */
     public function setAccountEnabled(?bool $value): void {
@@ -640,7 +640,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the enrollmentType property value. The enrollmentType property
+     * Sets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      * @param string|null $value Value to set for the enrollmentType property.
     */
     public function setEnrollmentType(?string $value): void {
@@ -672,7 +672,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isRooted property value. The isRooted property
+     * Sets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
      * @param bool|null $value Value to set for the isRooted property.
     */
     public function setIsRooted(?bool $value): void {
@@ -680,7 +680,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the managementType property value. The managementType property
+     * Sets the managementType property value. The management channel of the device. This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      * @param string|null $value Value to set for the managementType property.
     */
     public function setManagementType(?string $value): void {

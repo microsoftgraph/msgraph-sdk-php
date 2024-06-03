@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Pag
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get pages from groups
+ * The collection of pages in the baseSitePages list in this site.
 */
 class PagesRequestBuilderGetQueryParameters 
 {

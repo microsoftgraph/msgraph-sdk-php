@@ -34,10 +34,11 @@ class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getM365AppPlatformUserCounts
+     * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
      * @param GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getm365appplatformusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Invoke function getM365AppPlatformUserCounts
+     * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
      * @param GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

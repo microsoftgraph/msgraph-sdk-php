@@ -245,7 +245,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
+     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
      * @return MeetingChatHistoryDefaultMode|null
     */
     public function getShareMeetingChatHistoryDefault(): ?MeetingChatHistoryDefaultMode {
@@ -440,7 +440,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the shareMeetingChatHistoryDefault property value. The shareMeetingChatHistoryDefault property
+     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
      * @param MeetingChatHistoryDefaultMode|null $value Value to set for the shareMeetingChatHistoryDefault property.
     */
     public function setShareMeetingChatHistoryDefault(?MeetingChatHistoryDefaultMode $value): void {

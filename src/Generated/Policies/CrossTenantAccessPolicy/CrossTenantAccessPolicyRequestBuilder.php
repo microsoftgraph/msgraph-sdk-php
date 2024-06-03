@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\CrossTenantAccessPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefault\DefaultRequestBuilder;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\PartnersRequestBuilder;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Templates\TemplatesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,6 +31,13 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     */
     public function partners(): PartnersRequestBuilder {
         return new PartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the templates property of the microsoft.graph.crossTenantAccessPolicy entity.
+    */
+    public function templates(): TemplatesRequestBuilder {
+        return new TemplatesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -98,7 +106,7 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?CrossTenantAccessPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/crossTenantAccessPolicy';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -138,7 +146,7 @@ class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(CrossTenantAccessPolicy $body, ?CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/policies/crossTenantAccessPolicy';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

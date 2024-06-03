@@ -110,7 +110,7 @@ class EndUserNotificationsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(EndUserNotification $body, ?EndUserNotificationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/endUserNotifications';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

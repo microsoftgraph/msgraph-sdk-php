@@ -45,11 +45,10 @@ class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an offerShiftRequest object.
+     * The offer requests for shifts in the schedule.
      * @param OfferShiftRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OfferShiftRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/offershiftrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OfferShiftRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +80,7 @@ class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?OfferShiftRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/offerShiftRequests/{offerShiftRequest%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -93,7 +92,7 @@ class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of an offerShiftRequest object.
+     * The offer requests for shifts in the schedule.
      * @param OfferShiftRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +120,7 @@ class OfferShiftRequestItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(OfferShiftRequest $body, ?OfferShiftRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/offerShiftRequests/{offerShiftRequest%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

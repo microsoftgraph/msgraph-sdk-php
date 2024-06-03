@@ -52,7 +52,7 @@ class TermsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @param TermsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class TermsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a term object.
+     * All the terms under the set.
      * @param TermsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -109,7 +109,7 @@ class TermsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Term $body, ?TermsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/parentGroup/sets/{set%2Did1}/terms';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

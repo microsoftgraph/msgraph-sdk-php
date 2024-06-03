@@ -83,6 +83,8 @@ class DeviceEvidence extends AlertEvidence implements Parsable
                 /** @var array<string>|null $val */
                 $this->setIpInterfaces($val);
             },
+            'lastExternalIpAddress' => fn(ParseNode $n) => $o->setLastExternalIpAddress($n->getStringValue()),
+            'lastIpAddress' => fn(ParseNode $n) => $o->setLastIpAddress($n->getStringValue()),
             'loggedOnUsers' => fn(ParseNode $n) => $o->setLoggedOnUsers($n->getCollectionOfObjectValues([LoggedOnUser::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
             'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(OnboardingStatus::class)),
@@ -132,6 +134,30 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'ipInterfaces'");
+    }
+
+    /**
+     * Gets the lastExternalIpAddress property value. The lastExternalIpAddress property
+     * @return string|null
+    */
+    public function getLastExternalIpAddress(): ?string {
+        $val = $this->getBackingStore()->get('lastExternalIpAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastExternalIpAddress'");
+    }
+
+    /**
+     * Gets the lastIpAddress property value. The lastIpAddress property
+     * @return string|null
+    */
+    public function getLastIpAddress(): ?string {
+        $val = $this->getBackingStore()->get('lastIpAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastIpAddress'");
     }
 
     /**
@@ -268,6 +294,8 @@ class DeviceEvidence extends AlertEvidence implements Parsable
         $writer->writeDateTimeValue('firstSeenDateTime', $this->getFirstSeenDateTime());
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
         $writer->writeCollectionOfPrimitiveValues('ipInterfaces', $this->getIpInterfaces());
+        $writer->writeStringValue('lastExternalIpAddress', $this->getLastExternalIpAddress());
+        $writer->writeStringValue('lastIpAddress', $this->getLastIpAddress());
         $writer->writeCollectionOfObjectValues('loggedOnUsers', $this->getLoggedOnUsers());
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
         $writer->writeEnumValue('onboardingStatus', $this->getOnboardingStatus());
@@ -326,6 +354,22 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     */
     public function setIpInterfaces(?array $value): void {
         $this->getBackingStore()->set('ipInterfaces', $value);
+    }
+
+    /**
+     * Sets the lastExternalIpAddress property value. The lastExternalIpAddress property
+     * @param string|null $value Value to set for the lastExternalIpAddress property.
+    */
+    public function setLastExternalIpAddress(?string $value): void {
+        $this->getBackingStore()->set('lastExternalIpAddress', $value);
+    }
+
+    /**
+     * Sets the lastIpAddress property value. The lastIpAddress property
+     * @param string|null $value Value to set for the lastIpAddress property.
+    */
+    public function setLastIpAddress(?string $value): void {
+        $this->getBackingStore()->set('lastIpAddress', $value);
     }
 
     /**

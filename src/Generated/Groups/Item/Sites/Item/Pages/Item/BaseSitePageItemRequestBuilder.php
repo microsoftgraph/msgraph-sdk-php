@@ -69,7 +69,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from groups
+     * The collection of pages in the baseSitePages list in this site.
      * @param BaseSitePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BaseSitePage|null>
      * @throws Exception
@@ -104,7 +104,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?BaseSitePageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -116,7 +116,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get pages from groups
+     * The collection of pages in the baseSitePages list in this site.
      * @param BaseSitePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +144,7 @@ class BaseSitePageItemRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(BaseSitePage $body, ?BaseSitePageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

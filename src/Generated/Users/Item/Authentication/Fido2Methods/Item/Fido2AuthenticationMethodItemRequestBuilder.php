@@ -46,11 +46,10 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Fido2AuthenticationMethod|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/fido2authenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,7 +66,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     */
     public function toDeleteRequestInformation(?Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}';
+        $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -79,7 +78,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
+     * Represents the FIDO2 security keys registered to a user for authentication.
      * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
