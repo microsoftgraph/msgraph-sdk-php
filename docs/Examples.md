@@ -443,7 +443,7 @@ try {
     $recipientEmail = new EmailAddress();
     $recipientEmail->setAddress('jane.doe@outlook.com');
     $recipientEmail->setName('Jane Doe');
-    $recipient = new Recipient();
+    $toRecipient = new Recipient();
     $toRecipient->setEmailAddress($recipientEmail);
     $recipients[] = $toRecipient;
 
