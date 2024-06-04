@@ -118,7 +118,6 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
             'icon' => fn(ParseNode $n) => $o->setIcon($n->getObjectValue([WorkbookIcon::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'operator' => fn(ParseNode $n) => $o->setOperator($n->getStringValue()),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -171,18 +170,6 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the values property value. The values that appear in the cell.
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -195,7 +182,6 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
         $writer->writeObjectValue('icon', $this->getIcon());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('operator', $this->getOperator());
-        $writer->writeObjectValue('values', $this->getValues());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -277,14 +263,6 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setOperator(?string $value): void {
         $this->getBackingStore()->set('operator', $value);
-    }
-
-    /**
-     * Sets the values property value. The values that appear in the cell.
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
     }
 
 }

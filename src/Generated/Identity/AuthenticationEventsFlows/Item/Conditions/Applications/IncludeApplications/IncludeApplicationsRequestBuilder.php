@@ -52,10 +52,11 @@ class IncludeApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get includeApplications from identity
+     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
      * @param IncludeApplicationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationConditionApplicationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authenticationconditionsapplications-list-includeapplications?view=graph-rest-1.0 Find more info here
     */
     public function get(?IncludeApplicationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class IncludeApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to includeApplications for identity
+     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow.
      * @param AuthenticationConditionApplication $body The request body
      * @param IncludeApplicationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationConditionApplication|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/authenticationconditionsapplications-post-includeapplications?view=graph-rest-1.0 Find more info here
     */
     public function post(AuthenticationConditionApplication $body, ?IncludeApplicationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class IncludeApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get includeApplications from identity
+     * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
      * @param IncludeApplicationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class IncludeApplicationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to includeApplications for identity
+     * Add or link an application to a user flow, or authenticationEventsFlow. This enables the authentication experience defined by the user flow to be enabled for the application. An application can only be linked to one user flow.
      * @param AuthenticationConditionApplication $body The request body
      * @param IncludeApplicationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

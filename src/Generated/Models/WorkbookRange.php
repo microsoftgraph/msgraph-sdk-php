@@ -110,18 +110,11 @@ class WorkbookRange extends Entity implements Parsable
             'columnHidden' => fn(ParseNode $n) => $o->setColumnHidden($n->getBooleanValue()),
             'columnIndex' => fn(ParseNode $n) => $o->setColumnIndex($n->getIntegerValue()),
             'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookRangeFormat::class, 'createFromDiscriminatorValue'])),
-            'formulas' => fn(ParseNode $n) => $o->setFormulas($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'formulasLocal' => fn(ParseNode $n) => $o->setFormulasLocal($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'formulasR1C1' => fn(ParseNode $n) => $o->setFormulasR1C1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'hidden' => fn(ParseNode $n) => $o->setHidden($n->getBooleanValue()),
-            'numberFormat' => fn(ParseNode $n) => $o->setNumberFormat($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'rowCount' => fn(ParseNode $n) => $o->setRowCount($n->getIntegerValue()),
             'rowHidden' => fn(ParseNode $n) => $o->setRowHidden($n->getBooleanValue()),
             'rowIndex' => fn(ParseNode $n) => $o->setRowIndex($n->getIntegerValue()),
             'sort' => fn(ParseNode $n) => $o->setSort($n->getObjectValue([WorkbookRangeSort::class, 'createFromDiscriminatorValue'])),
-            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'valueTypes' => fn(ParseNode $n) => $o->setValueTypes($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'worksheet' => fn(ParseNode $n) => $o->setWorksheet($n->getObjectValue([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -139,42 +132,6 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Gets the formulas property value. Represents the formula in A1-style notation.
-     * @return Json|null
-    */
-    public function getFormulas(): ?Json {
-        $val = $this->getBackingStore()->get('formulas');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulas'");
-    }
-
-    /**
-     * Gets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-     * @return Json|null
-    */
-    public function getFormulasLocal(): ?Json {
-        $val = $this->getBackingStore()->get('formulasLocal');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulasLocal'");
-    }
-
-    /**
-     * Gets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
-     * @return Json|null
-    */
-    public function getFormulasR1C1(): ?Json {
-        $val = $this->getBackingStore()->get('formulasR1C1');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulasR1C1'");
-    }
-
-    /**
      * Gets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
      * @return bool|null
     */
@@ -184,18 +141,6 @@ class WorkbookRange extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'hidden'");
-    }
-
-    /**
-     * Gets the numberFormat property value. Represents Excel's number format code for the given cell.
-     * @return Json|null
-    */
-    public function getNumberFormat(): ?Json {
-        $val = $this->getBackingStore()->get('numberFormat');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberFormat'");
     }
 
     /**
@@ -247,42 +192,6 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Gets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
-     * @return Json|null
-    */
-    public function getText(): ?Json {
-        $val = $this->getBackingStore()->get('text');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
-    }
-
-    /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
-    }
-
-    /**
-     * Gets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
-     * @return Json|null
-    */
-    public function getValueTypes(): ?Json {
-        $val = $this->getBackingStore()->get('valueTypes');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueTypes'");
-    }
-
-    /**
      * Gets the worksheet property value. The worksheet containing the current range. Read-only.
      * @return WorkbookWorksheet|null
     */
@@ -307,18 +216,11 @@ class WorkbookRange extends Entity implements Parsable
         $writer->writeBooleanValue('columnHidden', $this->getColumnHidden());
         $writer->writeIntegerValue('columnIndex', $this->getColumnIndex());
         $writer->writeObjectValue('format', $this->getFormat());
-        $writer->writeObjectValue('formulas', $this->getFormulas());
-        $writer->writeObjectValue('formulasLocal', $this->getFormulasLocal());
-        $writer->writeObjectValue('formulasR1C1', $this->getFormulasR1C1());
         $writer->writeBooleanValue('hidden', $this->getHidden());
-        $writer->writeObjectValue('numberFormat', $this->getNumberFormat());
         $writer->writeIntegerValue('rowCount', $this->getRowCount());
         $writer->writeBooleanValue('rowHidden', $this->getRowHidden());
         $writer->writeIntegerValue('rowIndex', $this->getRowIndex());
         $writer->writeObjectValue('sort', $this->getSort());
-        $writer->writeObjectValue('text', $this->getText());
-        $writer->writeObjectValue('values', $this->getValues());
-        $writer->writeObjectValue('valueTypes', $this->getValueTypes());
         $writer->writeObjectValue('worksheet', $this->getWorksheet());
     }
 
@@ -379,43 +281,11 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Sets the formulas property value. Represents the formula in A1-style notation.
-     * @param Json|null $value Value to set for the formulas property.
-    */
-    public function setFormulas(?Json $value): void {
-        $this->getBackingStore()->set('formulas', $value);
-    }
-
-    /**
-     * Sets the formulasLocal property value. Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
-     * @param Json|null $value Value to set for the formulasLocal property.
-    */
-    public function setFormulasLocal(?Json $value): void {
-        $this->getBackingStore()->set('formulasLocal', $value);
-    }
-
-    /**
-     * Sets the formulasR1C1 property value. Represents the formula in R1C1-style notation.
-     * @param Json|null $value Value to set for the formulasR1C1 property.
-    */
-    public function setFormulasR1C1(?Json $value): void {
-        $this->getBackingStore()->set('formulasR1C1', $value);
-    }
-
-    /**
      * Sets the hidden property value. Represents if all cells of the current range are hidden. Read-only.
      * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
         $this->getBackingStore()->set('hidden', $value);
-    }
-
-    /**
-     * Sets the numberFormat property value. Represents Excel's number format code for the given cell.
-     * @param Json|null $value Value to set for the numberFormat property.
-    */
-    public function setNumberFormat(?Json $value): void {
-        $this->getBackingStore()->set('numberFormat', $value);
     }
 
     /**
@@ -448,30 +318,6 @@ class WorkbookRange extends Entity implements Parsable
     */
     public function setSort(?WorkbookRangeSort $value): void {
         $this->getBackingStore()->set('sort', $value);
-    }
-
-    /**
-     * Sets the text property value. Text values of the specified range. The Text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
-     * @param Json|null $value Value to set for the text property.
-    */
-    public function setText(?Json $value): void {
-        $this->getBackingStore()->set('text', $value);
-    }
-
-    /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
-    }
-
-    /**
-     * Sets the valueTypes property value. Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
-     * @param Json|null $value Value to set for the valueTypes property.
-    */
-    public function setValueTypes(?Json $value): void {
-        $this->getBackingStore()->set('valueTypes', $value);
     }
 
     /**

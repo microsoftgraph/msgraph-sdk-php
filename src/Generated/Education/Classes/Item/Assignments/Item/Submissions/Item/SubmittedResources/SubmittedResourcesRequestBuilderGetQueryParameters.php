@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Subm
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get submittedResources from education
+ * List the educationSubmissionResource objects that were officially submitted for grading. Only teachers, students, and applications with application permissions can perform this operation. The student who owns the submission can't change the submitted list without resubmitting the assignment. This resource is a wrapper around the real resource and can contain a pointer back to the actual assignment resource if this resource was copied from the assignment.
 */
 class SubmittedResourcesRequestBuilderGetQueryParameters 
 {

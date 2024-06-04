@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\WeekNum;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class WeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'returnType' => fn(ParseNode $n) => $o->setReturnType($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'serialNumber' => fn(ParseNode $n) => $o->setSerialNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the returnType property value. The returnType property
-     * @return Json|null
-    */
-    public function getReturnType(): ?Json {
-        $val = $this->getBackingStore()->get('returnType');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'returnType'");
-    }
-
-    /**
-     * Gets the serialNumber property value. The serialNumber property
-     * @return Json|null
-    */
-    public function getSerialNumber(): ?Json {
-        $val = $this->getBackingStore()->get('serialNumber');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'serialNumber'");
     }
 
     /**
@@ -97,8 +70,6 @@ class WeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('returnType', $this->getReturnType());
-        $writer->writeObjectValue('serialNumber', $this->getSerialNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class WeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the returnType property value. The returnType property
-     * @param Json|null $value Value to set for the returnType property.
-    */
-    public function setReturnType(?Json $value): void {
-        $this->getBackingStore()->set('returnType', $value);
-    }
-
-    /**
-     * Sets the serialNumber property value. The serialNumber property
-     * @param Json|null $value Value to set for the serialNumber property.
-    */
-    public function setSerialNumber(?Json $value): void {
-        $this->getBackingStore()->set('serialNumber', $value);
     }
 
 }

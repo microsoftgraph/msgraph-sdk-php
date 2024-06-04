@@ -45,10 +45,11 @@ class MetadataContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The time-aligned metadata of the utterances in the transcript. Read-only.
+     * Retrieve a callTranscript object associated with a scheduled onlineMeeting. This API doesn't support getting call transcripts from channel meetings. Retrieving the transcript returns the metadata of the single transcript associated with the online meeting. Retrieving the content of the transcript returns the stream of text associated with the transcript.
      * @param MetadataContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/calltranscript-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MetadataContentRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -96,7 +97,7 @@ class MetadataContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The time-aligned metadata of the utterances in the transcript. Read-only.
+     * Retrieve a callTranscript object associated with a scheduled onlineMeeting. This API doesn't support getting call transcripts from channel meetings. Retrieving the transcript returns the metadata of the single transcript associated with the online meeting. Retrieving the content of the transcript returns the stream of text associated with the transcript.
      * @param MetadataContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

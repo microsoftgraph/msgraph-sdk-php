@@ -52,10 +52,11 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @param UserSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserSourceCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-list-usersources?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserSourcesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to userSources for security
+     * Create a new userSource object associated with an eDiscovery custodian.
      * @param UserSource $body The request body
      * @param UserSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserSource|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0 Find more info here
     */
     public function post(UserSource $body, ?UserSourcesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian.
      * @param UserSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to userSources for security
+     * Create a new userSource object associated with an eDiscovery custodian.
      * @param UserSource $body The request body
      * @param UserSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\TrimMean;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the array property value. The array property
-     * @return Json|null
-    */
-    public function getArray(): ?Json {
-        $val = $this->getBackingStore()->get('array');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'array'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,21 +62,7 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'array' => fn(ParseNode $n) => $o->setArray($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'percent' => fn(ParseNode $n) => $o->setPercent($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the percent property value. The percent property
-     * @return Json|null
-    */
-    public function getPercent(): ?Json {
-        $val = $this->getBackingStore()->get('percent');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'percent'");
     }
 
     /**
@@ -97,8 +70,6 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('array', $this->getArray());
-        $writer->writeObjectValue('percent', $this->getPercent());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -111,27 +82,11 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the array property value. The array property
-     * @param Json|null $value Value to set for the array property.
-    */
-    public function setArray(?Json $value): void {
-        $this->getBackingStore()->set('array', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the percent property value. The percent property
-     * @param Json|null $value Value to set for the percent property.
-    */
-    public function setPercent(?Json $value): void {
-        $this->getBackingStore()->set('percent', $value);
     }
 
 }

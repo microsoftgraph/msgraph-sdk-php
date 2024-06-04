@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Poisson_Dist;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,52 +56,13 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the cumulative property value. The cumulative property
-     * @return Json|null
-    */
-    public function getCumulative(): ?Json {
-        $val = $this->getBackingStore()->get('cumulative');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'cumulative'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cumulative' => fn(ParseNode $n) => $o->setCumulative($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'mean' => fn(ParseNode $n) => $o->setMean($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the mean property value. The mean property
-     * @return Json|null
-    */
-    public function getMean(): ?Json {
-        $val = $this->getBackingStore()->get('mean');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'mean'");
-    }
-
-    /**
-     * Gets the x property value. The x property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -110,9 +70,6 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('cumulative', $this->getCumulative());
-        $writer->writeObjectValue('mean', $this->getMean());
-        $writer->writeObjectValue('x', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the cumulative property value. The cumulative property
-     * @param Json|null $value Value to set for the cumulative property.
-    */
-    public function setCumulative(?Json $value): void {
-        $this->getBackingStore()->set('cumulative', $value);
-    }
-
-    /**
-     * Sets the mean property value. The mean property
-     * @param Json|null $value Value to set for the mean property.
-    */
-    public function setMean(?Json $value): void {
-        $this->getBackingStore()->set('mean', $value);
-    }
-
-    /**
-     * Sets the x property value. The x property
-     * @param Json|null $value Value to set for the x property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

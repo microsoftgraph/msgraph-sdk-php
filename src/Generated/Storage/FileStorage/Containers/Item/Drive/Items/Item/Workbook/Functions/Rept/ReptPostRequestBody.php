@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Rept;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'numberTimes' => fn(ParseNode $n) => $o->setNumberTimes($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the numberTimes property value. The numberTimes property
-     * @return Json|null
-    */
-    public function getNumberTimes(): ?Json {
-        $val = $this->getBackingStore()->get('numberTimes');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberTimes'");
-    }
-
-    /**
-     * Gets the text property value. The text property
-     * @return Json|null
-    */
-    public function getText(): ?Json {
-        $val = $this->getBackingStore()->get('text');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**
@@ -97,8 +70,6 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('numberTimes', $this->getNumberTimes());
-        $writer->writeObjectValue('text', $this->getText());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the numberTimes property value. The numberTimes property
-     * @param Json|null $value Value to set for the numberTimes property.
-    */
-    public function setNumberTimes(?Json $value): void {
-        $this->getBackingStore()->set('numberTimes', $value);
-    }
-
-    /**
-     * Sets the text property value. The text property
-     * @param Json|null $value Value to set for the text property.
-    */
-    public function setText(?Json $value): void {
-        $this->getBackingStore()->set('text', $value);
     }
 
 }

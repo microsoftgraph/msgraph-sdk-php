@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Add;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -65,7 +64,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -94,25 +92,12 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. The values property
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('index', $this->getIndex());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeObjectValue('values', $this->getValues());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -146,14 +131,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
-    }
-
-    /**
-     * Sets the values property value. The values property
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
     }
 
 }

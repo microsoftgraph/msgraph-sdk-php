@@ -38,7 +38,7 @@ class UserIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
+     * Gets the ipAddress property value. Indicates the client IP address associated with the user performing the activity (audit log only).
      * @return string|null
     */
     public function getIpAddress(): ?string {
@@ -72,7 +72,7 @@ class UserIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
+     * Sets the ipAddress property value. Indicates the client IP address associated with the user performing the activity (audit log only).
      * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Lookup;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'lookupValue' => fn(ParseNode $n) => $o->setLookupValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'lookupVector' => fn(ParseNode $n) => $o->setLookupVector($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'resultVector' => fn(ParseNode $n) => $o->setResultVector($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the lookupValue property value. The lookupValue property
-     * @return Json|null
-    */
-    public function getLookupValue(): ?Json {
-        $val = $this->getBackingStore()->get('lookupValue');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupValue'");
-    }
-
-    /**
-     * Gets the lookupVector property value. The lookupVector property
-     * @return Json|null
-    */
-    public function getLookupVector(): ?Json {
-        $val = $this->getBackingStore()->get('lookupVector');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupVector'");
-    }
-
-    /**
-     * Gets the resultVector property value. The resultVector property
-     * @return Json|null
-    */
-    public function getResultVector(): ?Json {
-        $val = $this->getBackingStore()->get('resultVector');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'resultVector'");
     }
 
     /**
@@ -110,9 +70,6 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('lookupValue', $this->getLookupValue());
-        $writer->writeObjectValue('lookupVector', $this->getLookupVector());
-        $writer->writeObjectValue('resultVector', $this->getResultVector());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the lookupValue property value. The lookupValue property
-     * @param Json|null $value Value to set for the lookupValue property.
-    */
-    public function setLookupValue(?Json $value): void {
-        $this->getBackingStore()->set('lookupValue', $value);
-    }
-
-    /**
-     * Sets the lookupVector property value. The lookupVector property
-     * @param Json|null $value Value to set for the lookupVector property.
-    */
-    public function setLookupVector(?Json $value): void {
-        $this->getBackingStore()->set('lookupVector', $value);
-    }
-
-    /**
-     * Sets the resultVector property value. The resultVector property
-     * @param Json|null $value Value to set for the resultVector property.
-    */
-    public function setResultVector(?Json $value): void {
-        $this->getBackingStore()->set('resultVector', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Xnpv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,52 +56,13 @@ class XnpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dates property value. The dates property
-     * @return Json|null
-    */
-    public function getDates(): ?Json {
-        $val = $this->getBackingStore()->get('dates');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'dates'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dates' => fn(ParseNode $n) => $o->setDates($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'rate' => fn(ParseNode $n) => $o->setRate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the rate property value. The rate property
-     * @return Json|null
-    */
-    public function getRate(): ?Json {
-        $val = $this->getBackingStore()->get('rate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
-    }
-
-    /**
-     * Gets the values property value. The values property
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**
@@ -110,9 +70,6 @@ class XnpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('dates', $this->getDates());
-        $writer->writeObjectValue('rate', $this->getRate());
-        $writer->writeObjectValue('values', $this->getValues());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class XnpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the dates property value. The dates property
-     * @param Json|null $value Value to set for the dates property.
-    */
-    public function setDates(?Json $value): void {
-        $this->getBackingStore()->set('dates', $value);
-    }
-
-    /**
-     * Sets the rate property value. The rate property
-     * @param Json|null $value Value to set for the rate property.
-    */
-    public function setRate(?Json $value): void {
-        $this->getBackingStore()->set('rate', $value);
-    }
-
-    /**
-     * Sets the values property value. The values property
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
     }
 
 }

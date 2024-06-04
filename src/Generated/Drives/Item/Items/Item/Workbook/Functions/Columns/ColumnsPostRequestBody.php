@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Columns;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class ColumnsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the array property value. The array property
-     * @return Json|null
-    */
-    public function getArray(): ?Json {
-        $val = $this->getBackingStore()->get('array');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'array'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,7 +62,6 @@ class ColumnsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'array' => fn(ParseNode $n) => $o->setArray($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -84,7 +70,6 @@ class ColumnsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('array', $this->getArray());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -94,14 +79,6 @@ class ColumnsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
-    }
-
-    /**
-     * Sets the array property value. The array property
-     * @param Json|null $value Value to set for the array property.
-    */
-    public function setArray(?Json $value): void {
-        $this->getBackingStore()->set('array', $value);
     }
 
     /**

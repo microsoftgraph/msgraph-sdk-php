@@ -4,6 +4,8 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\Item;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Communications\CallRecords\Item\Organizer_v2\Organizer_v2RequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\Item\Participants_v2\Participants_v2RequestBuilder;
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\SessionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -17,6 +19,20 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class CallRecordItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the organizer_v2 property of the microsoft.graph.callRecords.callRecord entity.
+    */
+    public function organizer_v2(): Organizer_v2RequestBuilder {
+        return new Organizer_v2RequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the participants_v2 property of the microsoft.graph.callRecords.callRecord entity.
+    */
+    public function participants_v2(): Participants_v2RequestBuilder {
+        return new Participants_v2RequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.callRecords.callRecord entity.
     */
@@ -53,7 +69,7 @@ class CallRecordItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Retrieve the properties and relationships of a callRecord object. You can get the id of a callRecord in two ways:* Subscribe to change notifications to the /communications/callRecords endpoint.* Use the callChainId property of a call. The call record is available only after the associated call is completed.
      * @param CallRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CallRecord|null>
      * @throws Exception
@@ -101,7 +117,7 @@ class CallRecordItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Retrieve the properties and relationships of a callRecord object. You can get the id of a callRecord in two ways:* Subscribe to change notifications to the /communications/callRecords endpoint.* Use the callChainId property of a call. The call record is available only after the associated call is completed.
      * @param CallRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

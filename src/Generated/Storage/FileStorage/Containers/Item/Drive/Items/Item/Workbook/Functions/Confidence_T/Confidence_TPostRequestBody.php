@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Confidence_T;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the alpha property value. The alpha property
-     * @return Json|null
-    */
-    public function getAlpha(): ?Json {
-        $val = $this->getBackingStore()->get('alpha');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'alpha'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,34 +62,7 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'alpha' => fn(ParseNode $n) => $o->setAlpha($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'size' => fn(ParseNode $n) => $o->setSize($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'standardDev' => fn(ParseNode $n) => $o->setStandardDev($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the size property value. The size property
-     * @return Json|null
-    */
-    public function getSize(): ?Json {
-        $val = $this->getBackingStore()->get('size');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
-    }
-
-    /**
-     * Gets the standardDev property value. The standardDev property
-     * @return Json|null
-    */
-    public function getStandardDev(): ?Json {
-        $val = $this->getBackingStore()->get('standardDev');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'standardDev'");
     }
 
     /**
@@ -110,9 +70,6 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('alpha', $this->getAlpha());
-        $writer->writeObjectValue('size', $this->getSize());
-        $writer->writeObjectValue('standardDev', $this->getStandardDev());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -125,35 +82,11 @@ class Confidence_TPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the alpha property value. The alpha property
-     * @param Json|null $value Value to set for the alpha property.
-    */
-    public function setAlpha(?Json $value): void {
-        $this->getBackingStore()->set('alpha', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the size property value. The size property
-     * @param Json|null $value Value to set for the size property.
-    */
-    public function setSize(?Json $value): void {
-        $this->getBackingStore()->set('size', $value);
-    }
-
-    /**
-     * Sets the standardDev property value. The standardDev property
-     * @param Json|null $value Value to set for the standardDev property.
-    */
-    public function setStandardDev(?Json $value): void {
-        $this->getBackingStore()->set('standardDev', $value);
     }
 
 }

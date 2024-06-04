@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models\CallRecords;
 
+use Microsoft\Graph\Generated\Models\Identity;
 use Microsoft\Graph\Generated\Models\IdentitySet;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -24,6 +25,18 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ParticipantEndpoint {
         return new ParticipantEndpoint();
+    }
+
+    /**
+     * Gets the associatedIdentity property value. Identity associated with the endpoint.
+     * @return Identity|null
+    */
+    public function getAssociatedIdentity(): ?Identity {
+        $val = $this->getBackingStore()->get('associatedIdentity');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'associatedIdentity'");
     }
 
     /**
@@ -81,6 +94,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'associatedIdentity' => fn(ParseNode $n) => $o->setAssociatedIdentity($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'cpuCoresCount' => fn(ParseNode $n) => $o->setCpuCoresCount($n->getIntegerValue()),
             'cpuName' => fn(ParseNode $n) => $o->setCpuName($n->getStringValue()),
             'cpuProcessorSpeedInMhz' => fn(ParseNode $n) => $o->setCpuProcessorSpeedInMhz($n->getIntegerValue()),
@@ -91,7 +105,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     }
 
     /**
-     * Gets the identity property value. Identity associated with the endpoint.
+     * Gets the identity property value. Identity associated with the endpoint. The identity property is deprecated and will stop returning data on June 30, 2026. Going forward, use the associatedIdentity property.
      * @return IdentitySet|null
     */
     public function getIdentity(): ?IdentitySet {
@@ -120,12 +134,21 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('associatedIdentity', $this->getAssociatedIdentity());
         $writer->writeIntegerValue('cpuCoresCount', $this->getCpuCoresCount());
         $writer->writeStringValue('cpuName', $this->getCpuName());
         $writer->writeIntegerValue('cpuProcessorSpeedInMhz', $this->getCpuProcessorSpeedInMhz());
         $writer->writeObjectValue('feedback', $this->getFeedback());
         $writer->writeObjectValue('identity', $this->getIdentity());
         $writer->writeStringValue('name', $this->getName());
+    }
+
+    /**
+     * Sets the associatedIdentity property value. Identity associated with the endpoint.
+     * @param Identity|null $value Value to set for the associatedIdentity property.
+    */
+    public function setAssociatedIdentity(?Identity $value): void {
+        $this->getBackingStore()->set('associatedIdentity', $value);
     }
 
     /**
@@ -161,7 +184,7 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     }
 
     /**
-     * Sets the identity property value. Identity associated with the endpoint.
+     * Sets the identity property value. Identity associated with the endpoint. The identity property is deprecated and will stop returning data on June 30, 2026. Going forward, use the associatedIdentity property.
      * @param IdentitySet|null $value Value to set for the identity property.
     */
     public function setIdentity(?IdentitySet $value): void {

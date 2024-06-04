@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Match;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'lookupArray' => fn(ParseNode $n) => $o->setLookupArray($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'lookupValue' => fn(ParseNode $n) => $o->setLookupValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'matchType' => fn(ParseNode $n) => $o->setMatchType($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the lookupArray property value. The lookupArray property
-     * @return Json|null
-    */
-    public function getLookupArray(): ?Json {
-        $val = $this->getBackingStore()->get('lookupArray');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupArray'");
-    }
-
-    /**
-     * Gets the lookupValue property value. The lookupValue property
-     * @return Json|null
-    */
-    public function getLookupValue(): ?Json {
-        $val = $this->getBackingStore()->get('lookupValue');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupValue'");
-    }
-
-    /**
-     * Gets the matchType property value. The matchType property
-     * @return Json|null
-    */
-    public function getMatchType(): ?Json {
-        $val = $this->getBackingStore()->get('matchType');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'matchType'");
     }
 
     /**
@@ -110,9 +70,6 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('lookupArray', $this->getLookupArray());
-        $writer->writeObjectValue('lookupValue', $this->getLookupValue());
-        $writer->writeObjectValue('matchType', $this->getMatchType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the lookupArray property value. The lookupArray property
-     * @param Json|null $value Value to set for the lookupArray property.
-    */
-    public function setLookupArray(?Json $value): void {
-        $this->getBackingStore()->set('lookupArray', $value);
-    }
-
-    /**
-     * Sets the lookupValue property value. The lookupValue property
-     * @param Json|null $value Value to set for the lookupValue property.
-    */
-    public function setLookupValue(?Json $value): void {
-        $this->getBackingStore()->set('lookupValue', $value);
-    }
-
-    /**
-     * Sets the matchType property value. The matchType property
-     * @param Json|null $value Value to set for the matchType property.
-    */
-    public function setMatchType(?Json $value): void {
-        $this->getBackingStore()->set('matchType', $value);
     }
 
 }

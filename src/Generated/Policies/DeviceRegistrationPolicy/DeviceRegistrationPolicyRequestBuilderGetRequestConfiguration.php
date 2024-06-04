@@ -28,11 +28,12 @@ class DeviceRegistrationPolicyRequestBuilderGetRequestConfiguration extends Base
 
     /**
      * Instantiates a new DeviceRegistrationPolicyRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return DeviceRegistrationPolicyRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): DeviceRegistrationPolicyRequestBuilderGetQueryParameters {
-        return new DeviceRegistrationPolicyRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): DeviceRegistrationPolicyRequestBuilderGetQueryParameters {
+        return new DeviceRegistrationPolicyRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

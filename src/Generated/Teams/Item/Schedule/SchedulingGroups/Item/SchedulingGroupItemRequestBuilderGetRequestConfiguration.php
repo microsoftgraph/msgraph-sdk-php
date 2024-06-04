@@ -28,11 +28,12 @@ class SchedulingGroupItemRequestBuilderGetRequestConfiguration extends BaseReque
 
     /**
      * Instantiates a new SchedulingGroupItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return SchedulingGroupItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): SchedulingGroupItemRequestBuilderGetQueryParameters {
-        return new SchedulingGroupItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): SchedulingGroupItemRequestBuilderGetQueryParameters {
+        return new SchedulingGroupItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

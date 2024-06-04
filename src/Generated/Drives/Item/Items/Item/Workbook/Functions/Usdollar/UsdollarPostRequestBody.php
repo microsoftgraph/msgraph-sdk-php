@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Usdollar;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class UsdollarPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the decimals property value. The decimals property
-     * @return Json|null
-    */
-    public function getDecimals(): ?Json {
-        $val = $this->getBackingStore()->get('decimals');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'decimals'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'decimals' => fn(ParseNode $n) => $o->setDecimals($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
     }
 
     /**
@@ -97,8 +70,6 @@ class UsdollarPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('decimals', $this->getDecimals());
-        $writer->writeObjectValue('number', $this->getNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class UsdollarPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the decimals property value. The decimals property
-     * @param Json|null $value Value to set for the decimals property.
-    */
-    public function setDecimals(?Json $value): void {
-        $this->getBackingStore()->set('decimals', $value);
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
     }
 
 }

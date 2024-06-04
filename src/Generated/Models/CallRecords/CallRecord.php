@@ -52,7 +52,9 @@ class CallRecord extends Entity implements Parsable
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'modalities' => fn(ParseNode $n) => $o->setModalities($n->getCollectionOfEnumValues(Modality::class)),
             'organizer' => fn(ParseNode $n) => $o->setOrganizer($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'organizer_v2' => fn(ParseNode $n) => $o->setOrganizerV2($n->getObjectValue([Organizer::class, 'createFromDiscriminatorValue'])),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getCollectionOfObjectValues([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'participants_v2' => fn(ParseNode $n) => $o->setParticipantsV2($n->getCollectionOfObjectValues([Participant::class, 'createFromDiscriminatorValue'])),
             'sessions' => fn(ParseNode $n) => $o->setSessions($n->getCollectionOfObjectValues([Session::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(CallType::class)),
@@ -99,7 +101,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the organizer property value. The organizing party's identity.
+     * Gets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @return IdentitySet|null
     */
     public function getOrganizer(): ?IdentitySet {
@@ -111,7 +113,19 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the participants property value. List of distinct identities involved in the call.
+     * Gets the organizer_v2 property value. Identity of the organizer of the call. This relationship is expanded by default in callRecord methods.
+     * @return Organizer|null
+    */
+    public function getOrganizerV2(): ?Organizer {
+        $val = $this->getBackingStore()->get('organizer_v2');
+        if (is_null($val) || $val instanceof Organizer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'organizer_v2'");
+    }
+
+    /**
+     * Gets the participants property value. List of distinct identities involved in the call. Limited to 130 entries. The participants property is deprecated and will stop returning data on June 30, 2026. Going forward, use the participants_v2 relationship.
      * @return array<IdentitySet>|null
     */
     public function getParticipants(): ?array {
@@ -122,6 +136,20 @@ class CallRecord extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'participants'");
+    }
+
+    /**
+     * Gets the participants_v2 property value. List of distinct participants in the call.
+     * @return array<Participant>|null
+    */
+    public function getParticipantsV2(): ?array {
+        $val = $this->getBackingStore()->get('participants_v2');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Participant::class);
+            /** @var array<Participant>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participants_v2'");
     }
 
     /**
@@ -185,7 +213,9 @@ class CallRecord extends Entity implements Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeCollectionOfEnumValues('modalities', $this->getModalities());
         $writer->writeObjectValue('organizer', $this->getOrganizer());
+        $writer->writeObjectValue('organizer_v2', $this->getOrganizerV2());
         $writer->writeCollectionOfObjectValues('participants', $this->getParticipants());
+        $writer->writeCollectionOfObjectValues('participants_v2', $this->getParticipantsV2());
         $writer->writeCollectionOfObjectValues('sessions', $this->getSessions());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('type', $this->getType());
@@ -225,7 +255,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the organizer property value. The organizing party's identity.
+     * Sets the organizer property value. The organizing party's identity. The organizer property is deprecated and will stop returning data on June 30, 2026. Going forward, use the organizer_v2 relationship.
      * @param IdentitySet|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?IdentitySet $value): void {
@@ -233,11 +263,27 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the participants property value. List of distinct identities involved in the call.
+     * Sets the organizer_v2 property value. Identity of the organizer of the call. This relationship is expanded by default in callRecord methods.
+     * @param Organizer|null $value Value to set for the organizer_v2 property.
+    */
+    public function setOrganizerV2(?Organizer $value): void {
+        $this->getBackingStore()->set('organizer_v2', $value);
+    }
+
+    /**
+     * Sets the participants property value. List of distinct identities involved in the call. Limited to 130 entries. The participants property is deprecated and will stop returning data on June 30, 2026. Going forward, use the participants_v2 relationship.
      * @param array<IdentitySet>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {
         $this->getBackingStore()->set('participants', $value);
+    }
+
+    /**
+     * Sets the participants_v2 property value. List of distinct participants in the call.
+     * @param array<Participant>|null $value Value to set for the participants_v2 property.
+    */
+    public function setParticipantsV2(?array $value): void {
+        $this->getBackingStore()->set('participants_v2', $value);
     }
 
     /**

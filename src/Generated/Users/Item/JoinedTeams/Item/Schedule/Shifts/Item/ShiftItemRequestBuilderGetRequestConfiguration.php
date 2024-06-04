@@ -28,11 +28,12 @@ class ShiftItemRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
 
     /**
      * Instantiates a new ShiftItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ShiftItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): ShiftItemRequestBuilderGetQueryParameters {
-        return new ShiftItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ShiftItemRequestBuilderGetQueryParameters {
+        return new ShiftItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

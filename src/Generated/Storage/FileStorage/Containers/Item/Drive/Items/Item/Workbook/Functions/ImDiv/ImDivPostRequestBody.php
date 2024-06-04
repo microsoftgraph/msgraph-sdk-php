@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\ImDiv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'inumber1' => fn(ParseNode $n) => $o->setInumber1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'inumber2' => fn(ParseNode $n) => $o->setInumber2($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the inumber1 property value. The inumber1 property
-     * @return Json|null
-    */
-    public function getInumber1(): ?Json {
-        $val = $this->getBackingStore()->get('inumber1');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'inumber1'");
-    }
-
-    /**
-     * Gets the inumber2 property value. The inumber2 property
-     * @return Json|null
-    */
-    public function getInumber2(): ?Json {
-        $val = $this->getBackingStore()->get('inumber2');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'inumber2'");
     }
 
     /**
@@ -97,8 +70,6 @@ class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('inumber1', $this->getInumber1());
-        $writer->writeObjectValue('inumber2', $this->getInumber2());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class ImDivPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the inumber1 property value. The inumber1 property
-     * @param Json|null $value Value to set for the inumber1 property.
-    */
-    public function setInumber1(?Json $value): void {
-        $this->getBackingStore()->set('inumber1', $value);
-    }
-
-    /**
-     * Sets the inumber2 property value. The inumber2 property
-     * @param Json|null $value Value to set for the inumber2 property.
-    */
-    public function setInumber2(?Json $value): void {
-        $this->getBackingStore()->set('inumber2', $value);
     }
 
 }

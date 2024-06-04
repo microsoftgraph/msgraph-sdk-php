@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Quotient;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the denominator property value. The denominator property
-     * @return Json|null
-    */
-    public function getDenominator(): ?Json {
-        $val = $this->getBackingStore()->get('denominator');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'denominator'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'denominator' => fn(ParseNode $n) => $o->setDenominator($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'numerator' => fn(ParseNode $n) => $o->setNumerator($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the numerator property value. The numerator property
-     * @return Json|null
-    */
-    public function getNumerator(): ?Json {
-        $val = $this->getBackingStore()->get('numerator');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'numerator'");
     }
 
     /**
@@ -97,8 +70,6 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('denominator', $this->getDenominator());
-        $writer->writeObjectValue('numerator', $this->getNumerator());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the denominator property value. The denominator property
-     * @param Json|null $value Value to set for the denominator property.
-    */
-    public function setDenominator(?Json $value): void {
-        $this->getBackingStore()->set('denominator', $value);
-    }
-
-    /**
-     * Sets the numerator property value. The numerator property
-     * @param Json|null $value Value to set for the numerator property.
-    */
-    public function setNumerator(?Json $value): void {
-        $this->getBackingStore()->set('numerator', $value);
     }
 
 }

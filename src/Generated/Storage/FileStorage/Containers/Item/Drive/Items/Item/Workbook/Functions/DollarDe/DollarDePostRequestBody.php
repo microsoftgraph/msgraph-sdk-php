@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\DollarDe;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'fraction' => fn(ParseNode $n) => $o->setFraction($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'fractionalDollar' => fn(ParseNode $n) => $o->setFractionalDollar($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the fraction property value. The fraction property
-     * @return Json|null
-    */
-    public function getFraction(): ?Json {
-        $val = $this->getBackingStore()->get('fraction');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'fraction'");
-    }
-
-    /**
-     * Gets the fractionalDollar property value. The fractionalDollar property
-     * @return Json|null
-    */
-    public function getFractionalDollar(): ?Json {
-        $val = $this->getBackingStore()->get('fractionalDollar');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'fractionalDollar'");
     }
 
     /**
@@ -97,8 +70,6 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('fraction', $this->getFraction());
-        $writer->writeObjectValue('fractionalDollar', $this->getFractionalDollar());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the fraction property value. The fraction property
-     * @param Json|null $value Value to set for the fraction property.
-    */
-    public function setFraction(?Json $value): void {
-        $this->getBackingStore()->set('fraction', $value);
-    }
-
-    /**
-     * Sets the fractionalDollar property value. The fractionalDollar property
-     * @param Json|null $value Value to set for the fractionalDollar property.
-    */
-    public function setFractionalDollar(?Json $value): void {
-        $this->getBackingStore()->set('fractionalDollar', $value);
     }
 
 }

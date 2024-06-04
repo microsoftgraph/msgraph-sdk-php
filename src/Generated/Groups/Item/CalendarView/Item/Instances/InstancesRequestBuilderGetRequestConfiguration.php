@@ -30,6 +30,7 @@ class InstancesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
      * Instantiates a new InstancesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $endDateTime The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -39,8 +40,8 @@ class InstancesRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
      * @param int|null $top Show only the first n items
      * @return InstancesRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $endDateTime = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?string $startDateTime = null, ?int $top = null): InstancesRequestBuilderGetQueryParameters {
-        return new InstancesRequestBuilderGetQueryParameters($count, $endDateTime, $filter, $orderby, $search, $select, $skip, $startDateTime, $top);
+    public static function createQueryParameters(?bool $count = null, ?string $endDateTime = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?string $startDateTime = null, ?int $top = null): InstancesRequestBuilderGetQueryParameters {
+        return new InstancesRequestBuilderGetQueryParameters($count, $endDateTime, $expand, $filter, $orderby, $search, $select, $skip, $startDateTime, $top);
     }
 
 }

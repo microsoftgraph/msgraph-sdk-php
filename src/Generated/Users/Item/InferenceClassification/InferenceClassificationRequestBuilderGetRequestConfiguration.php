@@ -28,11 +28,12 @@ class InferenceClassificationRequestBuilderGetRequestConfiguration extends BaseR
 
     /**
      * Instantiates a new InferenceClassificationRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InferenceClassificationRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): InferenceClassificationRequestBuilderGetQueryParameters {
-        return new InferenceClassificationRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): InferenceClassificationRequestBuilderGetQueryParameters {
+        return new InferenceClassificationRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Log;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the base property value. The base property
-     * @return Json|null
-    */
-    public function getBase(): ?Json {
-        $val = $this->getBackingStore()->get('base');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'base'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'base' => fn(ParseNode $n) => $o->setBase($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
     }
 
     /**
@@ -97,8 +70,6 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('base', $this->getBase());
-        $writer->writeObjectValue('number', $this->getNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the base property value. The base property
-     * @param Json|null $value Value to set for the base property.
-    */
-    public function setBase(?Json $value): void {
-        $this->getBackingStore()->set('base', $value);
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
     }
 
 }

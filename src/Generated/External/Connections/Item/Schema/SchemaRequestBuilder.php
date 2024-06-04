@@ -46,7 +46,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new schema object.
+     * Create a new or update an existing schema for a Microsoft Search connection.
      * @param Schema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Schema|null>
@@ -83,7 +83,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new schema object.
+     * Create a new or update an existing schema for a Microsoft Search connection.
      * @param Schema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

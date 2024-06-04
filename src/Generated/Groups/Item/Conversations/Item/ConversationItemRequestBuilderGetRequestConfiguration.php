@@ -28,11 +28,12 @@ class ConversationItemRequestBuilderGetRequestConfiguration extends BaseRequestC
 
     /**
      * Instantiates a new ConversationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ConversationItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): ConversationItemRequestBuilderGetQueryParameters {
-        return new ConversationItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ConversationItemRequestBuilderGetQueryParameters {
+        return new ConversationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

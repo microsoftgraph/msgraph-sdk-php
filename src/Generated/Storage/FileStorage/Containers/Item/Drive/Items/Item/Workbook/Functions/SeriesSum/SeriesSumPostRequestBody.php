@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\SeriesSum;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,65 +56,13 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the coefficients property value. The coefficients property
-     * @return Json|null
-    */
-    public function getCoefficients(): ?Json {
-        $val = $this->getBackingStore()->get('coefficients');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'coefficients'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'coefficients' => fn(ParseNode $n) => $o->setCoefficients($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'm' => fn(ParseNode $n) => $o->setM($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'n' => fn(ParseNode $n) => $o->setN($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the m property value. The m property
-     * @return Json|null
-    */
-    public function getM(): ?Json {
-        $val = $this->getBackingStore()->get('m');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'm'");
-    }
-
-    /**
-     * Gets the n property value. The n property
-     * @return Json|null
-    */
-    public function getN(): ?Json {
-        $val = $this->getBackingStore()->get('n');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'n'");
-    }
-
-    /**
-     * Gets the x property value. The x property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -123,10 +70,6 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('coefficients', $this->getCoefficients());
-        $writer->writeObjectValue('m', $this->getM());
-        $writer->writeObjectValue('n', $this->getN());
-        $writer->writeObjectValue('x', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -144,38 +87,6 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the coefficients property value. The coefficients property
-     * @param Json|null $value Value to set for the coefficients property.
-    */
-    public function setCoefficients(?Json $value): void {
-        $this->getBackingStore()->set('coefficients', $value);
-    }
-
-    /**
-     * Sets the m property value. The m property
-     * @param Json|null $value Value to set for the m property.
-    */
-    public function setM(?Json $value): void {
-        $this->getBackingStore()->set('m', $value);
-    }
-
-    /**
-     * Sets the n property value. The n property
-     * @param Json|null $value Value to set for the n property.
-    */
-    public function setN(?Json $value): void {
-        $this->getBackingStore()->set('n', $value);
-    }
-
-    /**
-     * Sets the x property value. The x property
-     * @param Json|null $value Value to set for the x property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

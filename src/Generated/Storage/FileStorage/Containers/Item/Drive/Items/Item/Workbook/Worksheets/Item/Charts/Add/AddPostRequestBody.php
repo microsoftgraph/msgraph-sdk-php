@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Worksheets\Item\Charts\Add;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -64,7 +63,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'seriesBy' => fn(ParseNode $n) => $o->setSeriesBy($n->getStringValue()),
-            'sourceData' => fn(ParseNode $n) => $o->setSourceData($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ];
     }
@@ -79,18 +77,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'seriesBy'");
-    }
-
-    /**
-     * Gets the sourceData property value. The sourceData property
-     * @return Json|null
-    */
-    public function getSourceData(): ?Json {
-        $val = $this->getBackingStore()->get('sourceData');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceData'");
     }
 
     /**
@@ -111,7 +97,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('seriesBy', $this->getSeriesBy());
-        $writer->writeObjectValue('sourceData', $this->getSourceData());
         $writer->writeStringValue('type', $this->getType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -138,14 +123,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setSeriesBy(?string $value): void {
         $this->getBackingStore()->set('seriesBy', $value);
-    }
-
-    /**
-     * Sets the sourceData property value. The sourceData property
-     * @param Json|null $value Value to set for the sourceData property.
-    */
-    public function setSourceData(?Json $value): void {
-        $this->getBackingStore()->set('sourceData', $value);
     }
 
     /**

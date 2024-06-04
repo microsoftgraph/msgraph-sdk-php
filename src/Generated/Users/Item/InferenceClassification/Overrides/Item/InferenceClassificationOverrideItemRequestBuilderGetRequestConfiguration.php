@@ -28,11 +28,12 @@ class InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration e
 
     /**
      * Instantiates a new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return InferenceClassificationOverrideItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): InferenceClassificationOverrideItemRequestBuilderGetQueryParameters {
-        return new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): InferenceClassificationOverrideItemRequestBuilderGetQueryParameters {
+        return new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -34,7 +34,6 @@ class WorkbookTableColumn extends Entity implements Parsable
             'filter' => fn(ParseNode $n) => $o->setFilter($n->getObjectValue([WorkbookFilter::class, 'createFromDiscriminatorValue'])),
             'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -75,18 +74,6 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -95,7 +82,6 @@ class WorkbookTableColumn extends Entity implements Parsable
         $writer->writeObjectValue('filter', $this->getFilter());
         $writer->writeIntegerValue('index', $this->getIndex());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeObjectValue('values', $this->getValues());
     }
 
     /**
@@ -120,14 +106,6 @@ class WorkbookTableColumn extends Entity implements Parsable
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
-    }
-
-    /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
     }
 
 }

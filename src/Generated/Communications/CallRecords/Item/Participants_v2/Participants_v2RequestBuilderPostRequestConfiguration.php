@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization;
+namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Participants_v2;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;
@@ -8,10 +8,10 @@ use Microsoft\Kiota\Abstractions\RequestOption;
 /**
  * Configuration for the request such as headers, query parameters, and middleware options.
 */
-class MultiTenantOrganizationRequestBuilderPutRequestConfiguration extends BaseRequestConfiguration 
+class Participants_v2RequestBuilderPostRequestConfiguration extends BaseRequestConfiguration 
 {
     /**
-     * Instantiates a new MultiTenantOrganizationRequestBuilderPutRequestConfiguration and sets the default values.
+     * Instantiates a new Participants_v2RequestBuilderPostRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */

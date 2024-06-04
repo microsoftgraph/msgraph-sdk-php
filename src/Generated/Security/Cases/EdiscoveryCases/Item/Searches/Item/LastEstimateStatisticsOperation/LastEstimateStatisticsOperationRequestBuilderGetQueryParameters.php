@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The last estimate operation associated with the eDiscovery search.
+ * Get the last  ediscoveryEstimateOperation objects and their properties.
 */
 class LastEstimateStatisticsOperationRequestBuilderGetQueryParameters 
 {

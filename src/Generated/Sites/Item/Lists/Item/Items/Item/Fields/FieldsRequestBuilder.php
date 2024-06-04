@@ -59,11 +59,12 @@ class FieldsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property fields in sites
+     * Update the properties on a listItem.
      * @param FieldValueSet $body The request body
      * @param FieldsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FieldValueSet|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(FieldValueSet $body, ?FieldsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -113,7 +114,7 @@ class FieldsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property fields in sites
+     * Update the properties on a listItem.
      * @param FieldValueSet $body The request body
      * @param FieldsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

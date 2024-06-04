@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Complex;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'iNum' => fn(ParseNode $n) => $o->setINum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'realNum' => fn(ParseNode $n) => $o->setRealNum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'suffix' => fn(ParseNode $n) => $o->setSuffix($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the iNum property value. The iNum property
-     * @return Json|null
-    */
-    public function getINum(): ?Json {
-        $val = $this->getBackingStore()->get('iNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'iNum'");
-    }
-
-    /**
-     * Gets the realNum property value. The realNum property
-     * @return Json|null
-    */
-    public function getRealNum(): ?Json {
-        $val = $this->getBackingStore()->get('realNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'realNum'");
-    }
-
-    /**
-     * Gets the suffix property value. The suffix property
-     * @return Json|null
-    */
-    public function getSuffix(): ?Json {
-        $val = $this->getBackingStore()->get('suffix');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'suffix'");
     }
 
     /**
@@ -110,9 +70,6 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('iNum', $this->getINum());
-        $writer->writeObjectValue('realNum', $this->getRealNum());
-        $writer->writeObjectValue('suffix', $this->getSuffix());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the iNum property value. The iNum property
-     * @param Json|null $value Value to set for the iNum property.
-    */
-    public function setINum(?Json $value): void {
-        $this->getBackingStore()->set('iNum', $value);
-    }
-
-    /**
-     * Sets the realNum property value. The realNum property
-     * @param Json|null $value Value to set for the realNum property.
-    */
-    public function setRealNum(?Json $value): void {
-        $this->getBackingStore()->set('realNum', $value);
-    }
-
-    /**
-     * Sets the suffix property value. The suffix property
-     * @param Json|null $value Value to set for the suffix property.
-    */
-    public function setSuffix(?Json $value): void {
-        $this->getBackingStore()->set('suffix', $value);
     }
 
 }

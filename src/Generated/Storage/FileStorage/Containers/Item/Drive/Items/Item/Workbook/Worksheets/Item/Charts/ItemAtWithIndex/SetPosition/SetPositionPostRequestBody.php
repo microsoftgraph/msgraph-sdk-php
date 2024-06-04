@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Worksheets\Item\Charts\ItemAtWithIndex\SetPosition;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the endCell property value. The endCell property
-     * @return Json|null
-    */
-    public function getEndCell(): ?Json {
-        $val = $this->getBackingStore()->get('endCell');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'endCell'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'endCell' => fn(ParseNode $n) => $o->setEndCell($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'startCell' => fn(ParseNode $n) => $o->setStartCell($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the startCell property value. The startCell property
-     * @return Json|null
-    */
-    public function getStartCell(): ?Json {
-        $val = $this->getBackingStore()->get('startCell');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'startCell'");
     }
 
     /**
@@ -97,8 +70,6 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('endCell', $this->getEndCell());
-        $writer->writeObjectValue('startCell', $this->getStartCell());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the endCell property value. The endCell property
-     * @param Json|null $value Value to set for the endCell property.
-    */
-    public function setEndCell(?Json $value): void {
-        $this->getBackingStore()->set('endCell', $value);
-    }
-
-    /**
-     * Sets the startCell property value. The startCell property
-     * @param Json|null $value Value to set for the startCell property.
-    */
-    public function setStartCell(?Json $value): void {
-        $this->getBackingStore()->set('startCell', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\RandBetween;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the bottom property value. The bottom property
-     * @return Json|null
-    */
-    public function getBottom(): ?Json {
-        $val = $this->getBackingStore()->get('bottom');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'bottom'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'bottom' => fn(ParseNode $n) => $o->setBottom($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'top' => fn(ParseNode $n) => $o->setTop($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the top property value. The top property
-     * @return Json|null
-    */
-    public function getTop(): ?Json {
-        $val = $this->getBackingStore()->get('top');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'top'");
     }
 
     /**
@@ -97,8 +70,6 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('bottom', $this->getBottom());
-        $writer->writeObjectValue('top', $this->getTop());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the bottom property value. The bottom property
-     * @param Json|null $value Value to set for the bottom property.
-    */
-    public function setBottom(?Json $value): void {
-        $this->getBackingStore()->set('bottom', $value);
-    }
-
-    /**
-     * Sets the top property value. The top property
-     * @param Json|null $value Value to set for the top property.
-    */
-    public function setTop(?Json $value): void {
-        $this->getBackingStore()->set('top', $value);
     }
 
 }

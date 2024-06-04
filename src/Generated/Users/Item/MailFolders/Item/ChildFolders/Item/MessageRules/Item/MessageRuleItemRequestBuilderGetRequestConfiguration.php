@@ -28,11 +28,12 @@ class MessageRuleItemRequestBuilderGetRequestConfiguration extends BaseRequestCo
 
     /**
      * Instantiates a new MessageRuleItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return MessageRuleItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): MessageRuleItemRequestBuilderGetQueryParameters {
-        return new MessageRuleItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): MessageRuleItemRequestBuilderGetQueryParameters {
+        return new MessageRuleItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

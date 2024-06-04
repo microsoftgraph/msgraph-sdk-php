@@ -28,11 +28,12 @@ class ProfilePhotoItemRequestBuilderGetRequestConfiguration extends BaseRequestC
 
     /**
      * Instantiates a new ProfilePhotoItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ProfilePhotoItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): ProfilePhotoItemRequestBuilderGetQueryParameters {
-        return new ProfilePhotoItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ProfilePhotoItemRequestBuilderGetQueryParameters {
+        return new ProfilePhotoItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

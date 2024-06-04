@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Exact;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'text1' => fn(ParseNode $n) => $o->setText1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'text2' => fn(ParseNode $n) => $o->setText2($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the text1 property value. The text1 property
-     * @return Json|null
-    */
-    public function getText1(): ?Json {
-        $val = $this->getBackingStore()->get('text1');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text1'");
-    }
-
-    /**
-     * Gets the text2 property value. The text2 property
-     * @return Json|null
-    */
-    public function getText2(): ?Json {
-        $val = $this->getBackingStore()->get('text2');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text2'");
     }
 
     /**
@@ -97,8 +70,6 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('text1', $this->getText1());
-        $writer->writeObjectValue('text2', $this->getText2());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the text1 property value. The text1 property
-     * @param Json|null $value Value to set for the text1 property.
-    */
-    public function setText1(?Json $value): void {
-        $this->getBackingStore()->set('text1', $value);
-    }
-
-    /**
-     * Sets the text2 property value. The text2 property
-     * @param Json|null $value Value to set for the text2 property.
-    */
-    public function setText2(?Json $value): void {
-        $this->getBackingStore()->set('text2', $value);
     }
 
 }

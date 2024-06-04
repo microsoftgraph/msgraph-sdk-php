@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\SetData;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -64,7 +63,6 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
         $o = $this;
         return  [
             'seriesBy' => fn(ParseNode $n) => $o->setSeriesBy($n->getStringValue()),
-            'sourceData' => fn(ParseNode $n) => $o->setSourceData($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -81,24 +79,11 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the sourceData property value. The sourceData property
-     * @return Json|null
-    */
-    public function getSourceData(): ?Json {
-        $val = $this->getBackingStore()->get('sourceData');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceData'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('seriesBy', $this->getSeriesBy());
-        $writer->writeObjectValue('sourceData', $this->getSourceData());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -124,14 +109,6 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setSeriesBy(?string $value): void {
         $this->getBackingStore()->set('seriesBy', $value);
-    }
-
-    /**
-     * Sets the sourceData property value. The sourceData property
-     * @param Json|null $value Value to set for the sourceData property.
-    */
-    public function setSourceData(?Json $value): void {
-        $this->getBackingStore()->set('sourceData', $value);
     }
 
 }

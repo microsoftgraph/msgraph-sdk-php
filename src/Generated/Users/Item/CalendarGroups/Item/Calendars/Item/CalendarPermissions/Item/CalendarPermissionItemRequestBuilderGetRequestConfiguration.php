@@ -28,11 +28,12 @@ class CalendarPermissionItemRequestBuilderGetRequestConfiguration extends BaseRe
 
     /**
      * Instantiates a new CalendarPermissionItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CalendarPermissionItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): CalendarPermissionItemRequestBuilderGetQueryParameters {
-        return new CalendarPermissionItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): CalendarPermissionItemRequestBuilderGetQueryParameters {
+        return new CalendarPermissionItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -80,18 +80,6 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     * @return Json|null
-    */
-    public function getContent(): ?Json {
-        $val = $this->getBackingStore()->get('content');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
-    }
-
-    /**
      * Gets the description property value. Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
      * @return string|null
     */
@@ -124,7 +112,6 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'attribution' => fn(ParseNode $n) => $o->setAttribution($n->getObjectValue([ImageInfo::class, 'createFromDiscriminatorValue'])),
             'backgroundColor' => fn(ParseNode $n) => $o->setBackgroundColor($n->getStringValue()),
-            'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayText' => fn(ParseNode $n) => $o->setDisplayText($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -150,7 +137,6 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('attribution', $this->getAttribution());
         $writer->writeStringValue('backgroundColor', $this->getBackgroundColor());
-        $writer->writeObjectValue('content', $this->getContent());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayText', $this->getDisplayText());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -187,14 +173,6 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the content property value. Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     * @param Json|null $value Value to set for the content property.
-    */
-    public function setContent(?Json $value): void {
-        $this->getBackingStore()->set('content', $value);
     }
 
     /**

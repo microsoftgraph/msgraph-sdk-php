@@ -28,11 +28,12 @@ class CalendarRequestBuilderGetRequestConfiguration extends BaseRequestConfigura
 
     /**
      * Instantiates a new CalendarRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CalendarRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): CalendarRequestBuilderGetQueryParameters {
-        return new CalendarRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): CalendarRequestBuilderGetQueryParameters {
+        return new CalendarRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

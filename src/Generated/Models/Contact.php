@@ -255,7 +255,7 @@ class Contact extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the generation property value. The contact's generation.
+     * Gets the generation property value. The contact's suffix.
      * @return string|null
     */
     public function getGeneration(): ?string {
@@ -704,7 +704,7 @@ class Contact extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the generation property value. The contact's generation.
+     * Sets the generation property value. The contact's suffix.
      * @param string|null $value Value to set for the generation property.
     */
     public function setGeneration(?string $value): void {

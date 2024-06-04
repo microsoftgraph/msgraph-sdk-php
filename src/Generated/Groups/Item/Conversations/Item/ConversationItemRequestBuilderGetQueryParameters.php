@@ -5,10 +5,16 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The group's conversations.
+ * Retrieve the properties and relationships of conversation object.
 */
 class ConversationItemRequestBuilderGetQueryParameters 
 {
+    /**
+     * @QueryParameter("%24expand")
+     * @var array<string>|null $expand Expand related entities
+    */
+    public ?array $expand = null;
+    
     /**
      * @QueryParameter("%24select")
      * @var array<string>|null $select Select properties to be returned
@@ -17,9 +23,11 @@ class ConversationItemRequestBuilderGetQueryParameters
     
     /**
      * Instantiates a new ConversationItemRequestBuilderGetQueryParameters and sets the default values.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */
-    public function __construct(?array $select = null) {
+    public function __construct(?array $expand = null, ?array $select = null) {
+        $this->expand = $expand;
         $this->select = $select;
     }
 

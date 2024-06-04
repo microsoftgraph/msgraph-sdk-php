@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Convert;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'fromUnit' => fn(ParseNode $n) => $o->setFromUnit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'toUnit' => fn(ParseNode $n) => $o->setToUnit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the fromUnit property value. The fromUnit property
-     * @return Json|null
-    */
-    public function getFromUnit(): ?Json {
-        $val = $this->getBackingStore()->get('fromUnit');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'fromUnit'");
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
-    }
-
-    /**
-     * Gets the toUnit property value. The toUnit property
-     * @return Json|null
-    */
-    public function getToUnit(): ?Json {
-        $val = $this->getBackingStore()->get('toUnit');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'toUnit'");
     }
 
     /**
@@ -110,9 +70,6 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('fromUnit', $this->getFromUnit());
-        $writer->writeObjectValue('number', $this->getNumber());
-        $writer->writeObjectValue('toUnit', $this->getToUnit());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the fromUnit property value. The fromUnit property
-     * @param Json|null $value Value to set for the fromUnit property.
-    */
-    public function setFromUnit(?Json $value): void {
-        $this->getBackingStore()->set('fromUnit', $value);
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
-    }
-
-    /**
-     * Sets the toUnit property value. The toUnit property
-     * @param Json|null $value Value to set for the toUnit property.
-    */
-    public function setToUnit(?Json $value): void {
-        $this->getBackingStore()->set('toUnit', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Hlookup;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,59 +62,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'lookupValue' => fn(ParseNode $n) => $o->setLookupValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'rangeLookup' => fn(ParseNode $n) => $o->setRangeLookup($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'rowIndexNum' => fn(ParseNode $n) => $o->setRowIndexNum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'tableArray' => fn(ParseNode $n) => $o->setTableArray($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the lookupValue property value. The lookupValue property
-     * @return Json|null
-    */
-    public function getLookupValue(): ?Json {
-        $val = $this->getBackingStore()->get('lookupValue');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupValue'");
-    }
-
-    /**
-     * Gets the rangeLookup property value. The rangeLookup property
-     * @return Json|null
-    */
-    public function getRangeLookup(): ?Json {
-        $val = $this->getBackingStore()->get('rangeLookup');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'rangeLookup'");
-    }
-
-    /**
-     * Gets the rowIndexNum property value. The rowIndexNum property
-     * @return Json|null
-    */
-    public function getRowIndexNum(): ?Json {
-        $val = $this->getBackingStore()->get('rowIndexNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'rowIndexNum'");
-    }
-
-    /**
-     * Gets the tableArray property value. The tableArray property
-     * @return Json|null
-    */
-    public function getTableArray(): ?Json {
-        $val = $this->getBackingStore()->get('tableArray');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'tableArray'");
     }
 
     /**
@@ -123,10 +70,6 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('lookupValue', $this->getLookupValue());
-        $writer->writeObjectValue('rangeLookup', $this->getRangeLookup());
-        $writer->writeObjectValue('rowIndexNum', $this->getRowIndexNum());
-        $writer->writeObjectValue('tableArray', $this->getTableArray());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -144,38 +87,6 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the lookupValue property value. The lookupValue property
-     * @param Json|null $value Value to set for the lookupValue property.
-    */
-    public function setLookupValue(?Json $value): void {
-        $this->getBackingStore()->set('lookupValue', $value);
-    }
-
-    /**
-     * Sets the rangeLookup property value. The rangeLookup property
-     * @param Json|null $value Value to set for the rangeLookup property.
-    */
-    public function setRangeLookup(?Json $value): void {
-        $this->getBackingStore()->set('rangeLookup', $value);
-    }
-
-    /**
-     * Sets the rowIndexNum property value. The rowIndexNum property
-     * @param Json|null $value Value to set for the rowIndexNum property.
-    */
-    public function setRowIndexNum(?Json $value): void {
-        $this->getBackingStore()->set('rowIndexNum', $value);
-    }
-
-    /**
-     * Sets the tableArray property value. The tableArray property
-     * @param Json|null $value Value to set for the tableArray property.
-    */
-    public function setTableArray(?Json $value): void {
-        $this->getBackingStore()->set('tableArray', $value);
     }
 
 }

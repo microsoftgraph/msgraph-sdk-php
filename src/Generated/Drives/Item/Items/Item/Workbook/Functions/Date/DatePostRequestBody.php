@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Date;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,52 +56,13 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the day property value. The day property
-     * @return Json|null
-    */
-    public function getDay(): ?Json {
-        $val = $this->getBackingStore()->get('day');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'day'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'day' => fn(ParseNode $n) => $o->setDay($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'month' => fn(ParseNode $n) => $o->setMonth($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'year' => fn(ParseNode $n) => $o->setYear($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the month property value. The month property
-     * @return Json|null
-    */
-    public function getMonth(): ?Json {
-        $val = $this->getBackingStore()->get('month');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'month'");
-    }
-
-    /**
-     * Gets the year property value. The year property
-     * @return Json|null
-    */
-    public function getYear(): ?Json {
-        $val = $this->getBackingStore()->get('year');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'year'");
     }
 
     /**
@@ -110,9 +70,6 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('day', $this->getDay());
-        $writer->writeObjectValue('month', $this->getMonth());
-        $writer->writeObjectValue('year', $this->getYear());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the day property value. The day property
-     * @param Json|null $value Value to set for the day property.
-    */
-    public function setDay(?Json $value): void {
-        $this->getBackingStore()->set('day', $value);
-    }
-
-    /**
-     * Sets the month property value. The month property
-     * @param Json|null $value Value to set for the month property.
-    */
-    public function setMonth(?Json $value): void {
-        $this->getBackingStore()->set('month', $value);
-    }
-
-    /**
-     * Sets the year property value. The year property
-     * @param Json|null $value Value to set for the year property.
-    */
-    public function setYear(?Json $value): void {
-        $this->getBackingStore()->set('year', $value);
     }
 
 }

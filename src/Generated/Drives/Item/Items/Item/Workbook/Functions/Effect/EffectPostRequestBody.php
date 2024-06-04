@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Effect;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'nominalRate' => fn(ParseNode $n) => $o->setNominalRate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'npery' => fn(ParseNode $n) => $o->setNpery($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the nominalRate property value. The nominalRate property
-     * @return Json|null
-    */
-    public function getNominalRate(): ?Json {
-        $val = $this->getBackingStore()->get('nominalRate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'nominalRate'");
-    }
-
-    /**
-     * Gets the npery property value. The npery property
-     * @return Json|null
-    */
-    public function getNpery(): ?Json {
-        $val = $this->getBackingStore()->get('npery');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'npery'");
     }
 
     /**
@@ -97,8 +70,6 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('nominalRate', $this->getNominalRate());
-        $writer->writeObjectValue('npery', $this->getNpery());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the nominalRate property value. The nominalRate property
-     * @param Json|null $value Value to set for the nominalRate property.
-    */
-    public function setNominalRate(?Json $value): void {
-        $this->getBackingStore()->set('nominalRate', $value);
-    }
-
-    /**
-     * Sets the npery property value. The npery property
-     * @param Json|null $value Value to set for the npery property.
-    */
-    public function setNpery(?Json $value): void {
-        $this->getBackingStore()->set('npery', $value);
     }
 
 }

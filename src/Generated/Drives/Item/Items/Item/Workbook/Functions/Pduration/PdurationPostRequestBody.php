@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Pduration;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'fv' => fn(ParseNode $n) => $o->setFv($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'pv' => fn(ParseNode $n) => $o->setPv($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'rate' => fn(ParseNode $n) => $o->setRate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the fv property value. The fv property
-     * @return Json|null
-    */
-    public function getFv(): ?Json {
-        $val = $this->getBackingStore()->get('fv');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'fv'");
-    }
-
-    /**
-     * Gets the pv property value. The pv property
-     * @return Json|null
-    */
-    public function getPv(): ?Json {
-        $val = $this->getBackingStore()->get('pv');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'pv'");
-    }
-
-    /**
-     * Gets the rate property value. The rate property
-     * @return Json|null
-    */
-    public function getRate(): ?Json {
-        $val = $this->getBackingStore()->get('rate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
     }
 
     /**
@@ -110,9 +70,6 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('fv', $this->getFv());
-        $writer->writeObjectValue('pv', $this->getPv());
-        $writer->writeObjectValue('rate', $this->getRate());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the fv property value. The fv property
-     * @param Json|null $value Value to set for the fv property.
-    */
-    public function setFv(?Json $value): void {
-        $this->getBackingStore()->set('fv', $value);
-    }
-
-    /**
-     * Sets the pv property value. The pv property
-     * @param Json|null $value Value to set for the pv property.
-    */
-    public function setPv(?Json $value): void {
-        $this->getBackingStore()->set('pv', $value);
-    }
-
-    /**
-     * Sets the rate property value. The rate property
-     * @param Json|null $value Value to set for the rate property.
-    */
-    public function setRate(?Json $value): void {
-        $this->getBackingStore()->set('rate', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\YearFrac;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,52 +56,13 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the basis property value. The basis property
-     * @return Json|null
-    */
-    public function getBasis(): ?Json {
-        $val = $this->getBackingStore()->get('basis');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'basis'");
-    }
-
-    /**
-     * Gets the endDate property value. The endDate property
-     * @return Json|null
-    */
-    public function getEndDate(): ?Json {
-        $val = $this->getBackingStore()->get('endDate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDate'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'basis' => fn(ParseNode $n) => $o->setBasis($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'endDate' => fn(ParseNode $n) => $o->setEndDate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'startDate' => fn(ParseNode $n) => $o->setStartDate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the startDate property value. The startDate property
-     * @return Json|null
-    */
-    public function getStartDate(): ?Json {
-        $val = $this->getBackingStore()->get('startDate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDate'");
     }
 
     /**
@@ -110,9 +70,6 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('basis', $this->getBasis());
-        $writer->writeObjectValue('endDate', $this->getEndDate());
-        $writer->writeObjectValue('startDate', $this->getStartDate());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the basis property value. The basis property
-     * @param Json|null $value Value to set for the basis property.
-    */
-    public function setBasis(?Json $value): void {
-        $this->getBackingStore()->set('basis', $value);
-    }
-
-    /**
-     * Sets the endDate property value. The endDate property
-     * @param Json|null $value Value to set for the endDate property.
-    */
-    public function setEndDate(?Json $value): void {
-        $this->getBackingStore()->set('endDate', $value);
-    }
-
-    /**
-     * Sets the startDate property value. The startDate property
-     * @param Json|null $value Value to set for the startDate property.
-    */
-    public function setStartDate(?Json $value): void {
-        $this->getBackingStore()->set('startDate', $value);
     }
 
 }

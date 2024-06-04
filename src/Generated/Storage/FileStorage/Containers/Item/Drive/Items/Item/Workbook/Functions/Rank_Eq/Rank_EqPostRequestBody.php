@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Rank_Eq;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class Rank_EqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'order' => fn(ParseNode $n) => $o->setOrder($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'ref' => fn(ParseNode $n) => $o->setRef($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
-    }
-
-    /**
-     * Gets the order property value. The order property
-     * @return Json|null
-    */
-    public function getOrder(): ?Json {
-        $val = $this->getBackingStore()->get('order');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'order'");
-    }
-
-    /**
-     * Gets the ref property value. The ref property
-     * @return Json|null
-    */
-    public function getRef(): ?Json {
-        $val = $this->getBackingStore()->get('ref');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'ref'");
     }
 
     /**
@@ -110,9 +70,6 @@ class Rank_EqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('number', $this->getNumber());
-        $writer->writeObjectValue('order', $this->getOrder());
-        $writer->writeObjectValue('ref', $this->getRef());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class Rank_EqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
-    }
-
-    /**
-     * Sets the order property value. The order property
-     * @param Json|null $value Value to set for the order property.
-    */
-    public function setOrder(?Json $value): void {
-        $this->getBackingStore()->set('order', $value);
-    }
-
-    /**
-     * Sets the ref property value. The ref property
-     * @param Json|null $value Value to set for the ref property.
-    */
-    public function setRef(?Json $value): void {
-        $this->getBackingStore()->set('ref', $value);
     }
 
 }

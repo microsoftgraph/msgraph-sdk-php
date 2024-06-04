@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\PercentRank_Exc;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class PercentRank_ExcPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the array property value. The array property
-     * @return Json|null
-    */
-    public function getArray(): ?Json {
-        $val = $this->getBackingStore()->get('array');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'array'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,34 +62,7 @@ class PercentRank_ExcPostRequestBody implements AdditionalDataHolder, BackedMode
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'array' => fn(ParseNode $n) => $o->setArray($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'significance' => fn(ParseNode $n) => $o->setSignificance($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the significance property value. The significance property
-     * @return Json|null
-    */
-    public function getSignificance(): ?Json {
-        $val = $this->getBackingStore()->get('significance');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'significance'");
-    }
-
-    /**
-     * Gets the x property value. The x property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -110,9 +70,6 @@ class PercentRank_ExcPostRequestBody implements AdditionalDataHolder, BackedMode
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('array', $this->getArray());
-        $writer->writeObjectValue('significance', $this->getSignificance());
-        $writer->writeObjectValue('x', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -125,35 +82,11 @@ class PercentRank_ExcPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the array property value. The array property
-     * @param Json|null $value Value to set for the array property.
-    */
-    public function setArray(?Json $value): void {
-        $this->getBackingStore()->set('array', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the significance property value. The significance property
-     * @param Json|null $value Value to set for the significance property.
-    */
-    public function setSignificance(?Json $value): void {
-        $this->getBackingStore()->set('significance', $value);
-    }
-
-    /**
-     * Sets the x property value. The x property
-     * @param Json|null $value Value to set for the x property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

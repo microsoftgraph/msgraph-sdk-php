@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Syd;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,65 +56,13 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the cost property value. The cost property
-     * @return Json|null
-    */
-    public function getCost(): ?Json {
-        $val = $this->getBackingStore()->get('cost');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'cost'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cost' => fn(ParseNode $n) => $o->setCost($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'life' => fn(ParseNode $n) => $o->setLife($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'per' => fn(ParseNode $n) => $o->setPer($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'salvage' => fn(ParseNode $n) => $o->setSalvage($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the life property value. The life property
-     * @return Json|null
-    */
-    public function getLife(): ?Json {
-        $val = $this->getBackingStore()->get('life');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'life'");
-    }
-
-    /**
-     * Gets the per property value. The per property
-     * @return Json|null
-    */
-    public function getPer(): ?Json {
-        $val = $this->getBackingStore()->get('per');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'per'");
-    }
-
-    /**
-     * Gets the salvage property value. The salvage property
-     * @return Json|null
-    */
-    public function getSalvage(): ?Json {
-        $val = $this->getBackingStore()->get('salvage');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'salvage'");
     }
 
     /**
@@ -123,10 +70,6 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('cost', $this->getCost());
-        $writer->writeObjectValue('life', $this->getLife());
-        $writer->writeObjectValue('per', $this->getPer());
-        $writer->writeObjectValue('salvage', $this->getSalvage());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -144,38 +87,6 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the cost property value. The cost property
-     * @param Json|null $value Value to set for the cost property.
-    */
-    public function setCost(?Json $value): void {
-        $this->getBackingStore()->set('cost', $value);
-    }
-
-    /**
-     * Sets the life property value. The life property
-     * @param Json|null $value Value to set for the life property.
-    */
-    public function setLife(?Json $value): void {
-        $this->getBackingStore()->set('life', $value);
-    }
-
-    /**
-     * Sets the per property value. The per property
-     * @param Json|null $value Value to set for the per property.
-    */
-    public function setPer(?Json $value): void {
-        $this->getBackingStore()->set('per', $value);
-    }
-
-    /**
-     * Sets the salvage property value. The salvage property
-     * @param Json|null $value Value to set for the salvage property.
-    */
-    public function setSalvage(?Json $value): void {
-        $this->getBackingStore()->set('salvage', $value);
     }
 
 }

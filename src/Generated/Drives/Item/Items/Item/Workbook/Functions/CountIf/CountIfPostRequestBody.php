@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\CountIf;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the criteria property value. The criteria property
-     * @return Json|null
-    */
-    public function getCriteria(): ?Json {
-        $val = $this->getBackingStore()->get('criteria');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'criteria' => fn(ParseNode $n) => $o->setCriteria($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'range' => fn(ParseNode $n) => $o->setRange($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the range property value. The range property
-     * @return Json|null
-    */
-    public function getRange(): ?Json {
-        $val = $this->getBackingStore()->get('range');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'range'");
     }
 
     /**
@@ -97,8 +70,6 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('criteria', $this->getCriteria());
-        $writer->writeObjectValue('range', $this->getRange());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the criteria property value. The criteria property
-     * @param Json|null $value Value to set for the criteria property.
-    */
-    public function setCriteria(?Json $value): void {
-        $this->getBackingStore()->set('criteria', $value);
-    }
-
-    /**
-     * Sets the range property value. The range property
-     * @param Json|null $value Value to set for the range property.
-    */
-    public function setRange(?Json $value): void {
-        $this->getBackingStore()->set('range', $value);
     }
 
 }

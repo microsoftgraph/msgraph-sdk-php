@@ -31,10 +31,11 @@ class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property outcomes for education
+     * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @param EducationOutcomeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationfeedbackresourceoutcome-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationOutcomeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property outcomes in education
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
      * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationOutcome|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationoutcome-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationOutcome $body, ?EducationOutcomeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +76,7 @@ class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property outcomes for education
+     * Delete a feedback resource from a submission. This can only be done by a teacher.
      * @param EducationOutcomeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class EducationOutcomeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property outcomes in education
+     * Update the properties of an educationOutcome object. Only teachers can perform this operation.
      * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
