@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Cond
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get includeApplications from identity
+ * List the applications linked to an authenticationEventsFlow. These are the applications for which the authentication experience defined by the user flow is enabled.
 */
 class IncludeApplicationsRequestBuilderGetQueryParameters 
 {

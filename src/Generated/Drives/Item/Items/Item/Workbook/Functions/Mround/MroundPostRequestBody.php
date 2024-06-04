@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Mround;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'multiple' => fn(ParseNode $n) => $o->setMultiple($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the multiple property value. The multiple property
-     * @return Json|null
-    */
-    public function getMultiple(): ?Json {
-        $val = $this->getBackingStore()->get('multiple');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'multiple'");
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
     }
 
     /**
@@ -97,8 +70,6 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('multiple', $this->getMultiple());
-        $writer->writeObjectValue('number', $this->getNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the multiple property value. The multiple property
-     * @param Json|null $value Value to set for the multiple property.
-    */
-    public function setMultiple(?Json $value): void {
-        $this->getBackingStore()->set('multiple', $value);
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
     }
 
 }

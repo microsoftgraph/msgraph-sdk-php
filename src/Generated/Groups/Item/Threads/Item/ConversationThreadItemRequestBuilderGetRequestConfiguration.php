@@ -28,11 +28,12 @@ class ConversationThreadItemRequestBuilderGetRequestConfiguration extends BaseRe
 
     /**
      * Instantiates a new ConversationThreadItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ConversationThreadItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): ConversationThreadItemRequestBuilderGetQueryParameters {
-        return new ConversationThreadItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ConversationThreadItemRequestBuilderGetQueryParameters {
+        return new ConversationThreadItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

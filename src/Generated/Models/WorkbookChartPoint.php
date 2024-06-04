@@ -32,7 +32,6 @@ class WorkbookChartPoint extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartPointFormat::class, 'createFromDiscriminatorValue'])),
-            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -49,25 +48,12 @@ class WorkbookChartPoint extends Entity implements Parsable
     }
 
     /**
-     * Gets the value property value. Returns the value of a chart point. Read-only.
-     * @return Json|null
-    */
-    public function getValue(): ?Json {
-        $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('format', $this->getFormat());
-        $writer->writeObjectValue('value', $this->getValue());
     }
 
     /**
@@ -76,14 +62,6 @@ class WorkbookChartPoint extends Entity implements Parsable
     */
     public function setFormat(?WorkbookChartPointFormat $value): void {
         $this->getBackingStore()->set('format', $value);
-    }
-
-    /**
-     * Sets the value property value. Returns the value of a chart point. Read-only.
-     * @param Json|null $value Value to set for the value property.
-    */
-    public function setValue(?Json $value): void {
-        $this->getBackingStore()->set('value', $value);
     }
 
 }

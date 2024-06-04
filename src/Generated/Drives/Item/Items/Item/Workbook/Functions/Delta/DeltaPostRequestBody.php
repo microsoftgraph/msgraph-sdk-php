@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Delta;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class DeltaPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'number1' => fn(ParseNode $n) => $o->setNumber1($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'number2' => fn(ParseNode $n) => $o->setNumber2($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the number1 property value. The number1 property
-     * @return Json|null
-    */
-    public function getNumber1(): ?Json {
-        $val = $this->getBackingStore()->get('number1');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number1'");
-    }
-
-    /**
-     * Gets the number2 property value. The number2 property
-     * @return Json|null
-    */
-    public function getNumber2(): ?Json {
-        $val = $this->getBackingStore()->get('number2');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number2'");
     }
 
     /**
@@ -97,8 +70,6 @@ class DeltaPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('number1', $this->getNumber1());
-        $writer->writeObjectValue('number2', $this->getNumber2());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class DeltaPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the number1 property value. The number1 property
-     * @param Json|null $value Value to set for the number1 property.
-    */
-    public function setNumber1(?Json $value): void {
-        $this->getBackingStore()->set('number1', $value);
-    }
-
-    /**
-     * Sets the number2 property value. The number2 property
-     * @param Json|null $value Value to set for the number2 property.
-    */
-    public function setNumber2(?Json $value): void {
-        $this->getBackingStore()->set('number2', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Binom_Dist;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,65 +56,13 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the cumulative property value. The cumulative property
-     * @return Json|null
-    */
-    public function getCumulative(): ?Json {
-        $val = $this->getBackingStore()->get('cumulative');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'cumulative'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cumulative' => fn(ParseNode $n) => $o->setCumulative($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'numberS' => fn(ParseNode $n) => $o->setNumberS($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'probabilityS' => fn(ParseNode $n) => $o->setProbabilityS($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'trials' => fn(ParseNode $n) => $o->setTrials($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the numberS property value. The numberS property
-     * @return Json|null
-    */
-    public function getNumberS(): ?Json {
-        $val = $this->getBackingStore()->get('numberS');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberS'");
-    }
-
-    /**
-     * Gets the probabilityS property value. The probabilityS property
-     * @return Json|null
-    */
-    public function getProbabilityS(): ?Json {
-        $val = $this->getBackingStore()->get('probabilityS');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'probabilityS'");
-    }
-
-    /**
-     * Gets the trials property value. The trials property
-     * @return Json|null
-    */
-    public function getTrials(): ?Json {
-        $val = $this->getBackingStore()->get('trials');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'trials'");
     }
 
     /**
@@ -123,10 +70,6 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('cumulative', $this->getCumulative());
-        $writer->writeObjectValue('numberS', $this->getNumberS());
-        $writer->writeObjectValue('probabilityS', $this->getProbabilityS());
-        $writer->writeObjectValue('trials', $this->getTrials());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -144,38 +87,6 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the cumulative property value. The cumulative property
-     * @param Json|null $value Value to set for the cumulative property.
-    */
-    public function setCumulative(?Json $value): void {
-        $this->getBackingStore()->set('cumulative', $value);
-    }
-
-    /**
-     * Sets the numberS property value. The numberS property
-     * @param Json|null $value Value to set for the numberS property.
-    */
-    public function setNumberS(?Json $value): void {
-        $this->getBackingStore()->set('numberS', $value);
-    }
-
-    /**
-     * Sets the probabilityS property value. The probabilityS property
-     * @param Json|null $value Value to set for the probabilityS property.
-    */
-    public function setProbabilityS(?Json $value): void {
-        $this->getBackingStore()->set('probabilityS', $value);
-    }
-
-    /**
-     * Sets the trials property value. The trials property
-     * @param Json|null $value Value to set for the trials property.
-    */
-    public function setTrials(?Json $value): void {
-        $this->getBackingStore()->set('trials', $value);
     }
 
 }

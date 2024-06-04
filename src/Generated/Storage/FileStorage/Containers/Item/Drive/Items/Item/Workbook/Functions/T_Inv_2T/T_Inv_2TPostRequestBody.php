@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\T_Inv_2T;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,39 +56,13 @@ class T_Inv_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the degFreedom property value. The degFreedom property
-     * @return Json|null
-    */
-    public function getDegFreedom(): ?Json {
-        $val = $this->getBackingStore()->get('degFreedom');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'degFreedom'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'degFreedom' => fn(ParseNode $n) => $o->setDegFreedom($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'probability' => fn(ParseNode $n) => $o->setProbability($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the probability property value. The probability property
-     * @return Json|null
-    */
-    public function getProbability(): ?Json {
-        $val = $this->getBackingStore()->get('probability');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'probability'");
     }
 
     /**
@@ -97,8 +70,6 @@ class T_Inv_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('degFreedom', $this->getDegFreedom());
-        $writer->writeObjectValue('probability', $this->getProbability());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class T_Inv_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the degFreedom property value. The degFreedom property
-     * @param Json|null $value Value to set for the degFreedom property.
-    */
-    public function setDegFreedom(?Json $value): void {
-        $this->getBackingStore()->set('degFreedom', $value);
-    }
-
-    /**
-     * Sets the probability property value. The probability property
-     * @param Json|null $value Value to set for the probability property.
-    */
-    public function setProbability(?Json $value): void {
-        $this->getBackingStore()->set('probability', $value);
     }
 
 }

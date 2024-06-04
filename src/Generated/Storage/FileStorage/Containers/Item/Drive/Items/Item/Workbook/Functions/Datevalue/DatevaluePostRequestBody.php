@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Datevalue;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,25 +56,12 @@ class DatevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the dateText property value. The dateText property
-     * @return Json|null
-    */
-    public function getDateText(): ?Json {
-        $val = $this->getBackingStore()->get('dateText');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'dateText'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'dateText' => fn(ParseNode $n) => $o->setDateText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -84,7 +70,6 @@ class DatevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('dateText', $this->getDateText());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class DatevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the dateText property value. The dateText property
-     * @param Json|null $value Value to set for the dateText property.
-    */
-    public function setDateText(?Json $value): void {
-        $this->getBackingStore()->set('dateText', $value);
     }
 
 }

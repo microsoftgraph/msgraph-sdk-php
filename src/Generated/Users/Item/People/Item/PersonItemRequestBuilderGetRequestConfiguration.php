@@ -28,11 +28,12 @@ class PersonItemRequestBuilderGetRequestConfiguration extends BaseRequestConfigu
 
     /**
      * Instantiates a new PersonItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PersonItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): PersonItemRequestBuilderGetQueryParameters {
-        return new PersonItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): PersonItemRequestBuilderGetQueryParameters {
+        return new PersonItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -75,18 +75,6 @@ class UserActivity extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
-     * @return Json|null
-    */
-    public function getContentInfo(): ?Json {
-        $val = $this->getBackingStore()->get('contentInfo');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentInfo'");
-    }
-
-    /**
      * Gets the contentUrl property value. Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
      * @return string|null
     */
@@ -145,7 +133,6 @@ class UserActivity extends Entity implements Parsable
             'activitySourceHost' => fn(ParseNode $n) => $o->setActivitySourceHost($n->getStringValue()),
             'appActivityId' => fn(ParseNode $n) => $o->setAppActivityId($n->getStringValue()),
             'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
-            'contentInfo' => fn(ParseNode $n) => $o->setContentInfo($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'contentUrl' => fn(ParseNode $n) => $o->setContentUrl($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'expirationDateTime' => fn(ParseNode $n) => $o->setExpirationDateTime($n->getDateTimeValue()),
@@ -230,7 +217,6 @@ class UserActivity extends Entity implements Parsable
         $writer->writeStringValue('activitySourceHost', $this->getActivitySourceHost());
         $writer->writeStringValue('appActivityId', $this->getAppActivityId());
         $writer->writeStringValue('appDisplayName', $this->getAppDisplayName());
-        $writer->writeObjectValue('contentInfo', $this->getContentInfo());
         $writer->writeStringValue('contentUrl', $this->getContentUrl());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeDateTimeValue('expirationDateTime', $this->getExpirationDateTime());
@@ -272,14 +258,6 @@ class UserActivity extends Entity implements Parsable
     */
     public function setAppDisplayName(?string $value): void {
         $this->getBackingStore()->set('appDisplayName', $value);
-    }
-
-    /**
-     * Sets the contentInfo property value. Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
-     * @param Json|null $value Value to set for the contentInfo property.
-    */
-    public function setContentInfo(?Json $value): void {
-        $this->getBackingStore()->set('contentInfo', $value);
     }
 
     /**

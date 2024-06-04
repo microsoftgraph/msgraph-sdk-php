@@ -30,7 +30,7 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AsHierarchyGetResponse|null>
      * @throws Exception
@@ -44,7 +44,7 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function asHierarchy
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,13 +64,13 @@ class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param MultiTenantOrganization $body The request body
-     * @param MultiTenantOrganizationRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MultiTenantOrganizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganization|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/tenantrelationship-put-multitenantorganization?view=graph-rest-1.0 Find more info here
     */
-    public function put(MultiTenantOrganization $body, ?MultiTenantOrganizationRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
+    public function patch(MultiTenantOrganization $body, ?MultiTenantOrganizationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
@@ -101,14 +101,14 @@ class MultiTenantOrganizationRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new multitenant organization. By default, the creator tenant becomes an owner tenant upon successful creation. Only owner tenants can manage a multitenant organization.
      * @param MultiTenantOrganization $body The request body
-     * @param MultiTenantOrganizationRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MultiTenantOrganizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPutRequestInformation(MultiTenantOrganization $body, ?MultiTenantOrganizationRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MultiTenantOrganization $body, ?MultiTenantOrganizationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PUT;
+        $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);

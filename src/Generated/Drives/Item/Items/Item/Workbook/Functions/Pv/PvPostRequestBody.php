@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Pv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,72 +62,7 @@ class PvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'fv' => fn(ParseNode $n) => $o->setFv($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'nper' => fn(ParseNode $n) => $o->setNper($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'pmt' => fn(ParseNode $n) => $o->setPmt($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'rate' => fn(ParseNode $n) => $o->setRate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'type' => fn(ParseNode $n) => $o->setType($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the fv property value. The fv property
-     * @return Json|null
-    */
-    public function getFv(): ?Json {
-        $val = $this->getBackingStore()->get('fv');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'fv'");
-    }
-
-    /**
-     * Gets the nper property value. The nper property
-     * @return Json|null
-    */
-    public function getNper(): ?Json {
-        $val = $this->getBackingStore()->get('nper');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'nper'");
-    }
-
-    /**
-     * Gets the pmt property value. The pmt property
-     * @return Json|null
-    */
-    public function getPmt(): ?Json {
-        $val = $this->getBackingStore()->get('pmt');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'pmt'");
-    }
-
-    /**
-     * Gets the rate property value. The rate property
-     * @return Json|null
-    */
-    public function getRate(): ?Json {
-        $val = $this->getBackingStore()->get('rate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
-    }
-
-    /**
-     * Gets the type property value. The type property
-     * @return Json|null
-    */
-    public function getType(): ?Json {
-        $val = $this->getBackingStore()->get('type');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -136,11 +70,6 @@ class PvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('fv', $this->getFv());
-        $writer->writeObjectValue('nper', $this->getNper());
-        $writer->writeObjectValue('pmt', $this->getPmt());
-        $writer->writeObjectValue('rate', $this->getRate());
-        $writer->writeObjectValue('type', $this->getType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -158,46 +87,6 @@ class PvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the fv property value. The fv property
-     * @param Json|null $value Value to set for the fv property.
-    */
-    public function setFv(?Json $value): void {
-        $this->getBackingStore()->set('fv', $value);
-    }
-
-    /**
-     * Sets the nper property value. The nper property
-     * @param Json|null $value Value to set for the nper property.
-    */
-    public function setNper(?Json $value): void {
-        $this->getBackingStore()->set('nper', $value);
-    }
-
-    /**
-     * Sets the pmt property value. The pmt property
-     * @param Json|null $value Value to set for the pmt property.
-    */
-    public function setPmt(?Json $value): void {
-        $this->getBackingStore()->set('pmt', $value);
-    }
-
-    /**
-     * Sets the rate property value. The rate property
-     * @param Json|null $value Value to set for the rate property.
-    */
-    public function setRate(?Json $value): void {
-        $this->getBackingStore()->set('rate', $value);
-    }
-
-    /**
-     * Sets the type property value. The type property
-     * @param Json|null $value Value to set for the type property.
-    */
-    public function setType(?Json $value): void {
-        $this->getBackingStore()->set('type', $value);
     }
 
 }

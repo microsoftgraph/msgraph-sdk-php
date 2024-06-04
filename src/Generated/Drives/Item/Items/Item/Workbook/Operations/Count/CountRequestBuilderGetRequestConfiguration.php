@@ -28,11 +28,12 @@ class CountRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
 
     /**
      * Instantiates a new CountRequestBuilderGetQueryParameters.
+     * @param string|null $filter Filter items by property values
      * @param string|null $search Search items by search phrases
      * @return CountRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?string $search = null): CountRequestBuilderGetQueryParameters {
-        return new CountRequestBuilderGetQueryParameters($search);
+    public static function createQueryParameters(?string $filter = null, ?string $search = null): CountRequestBuilderGetQueryParameters {
+        return new CountRequestBuilderGetQueryParameters($filter, $search);
     }
 
 }

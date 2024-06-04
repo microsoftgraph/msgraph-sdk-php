@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Names\Add;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -77,7 +76,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'comment' => fn(ParseNode $n) => $o->setComment($n->getStringValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'reference' => fn(ParseNode $n) => $o->setReference($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -94,25 +92,12 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the reference property value. The reference property
-     * @return Json|null
-    */
-    public function getReference(): ?Json {
-        $val = $this->getBackingStore()->get('reference');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'reference'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('comment', $this->getComment());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeObjectValue('reference', $this->getReference());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -146,14 +131,6 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
-    }
-
-    /**
-     * Sets the reference property value. The reference property
-     * @param Json|null $value Value to set for the reference property.
-    */
-    public function setReference(?Json $value): void {
-        $this->getBackingStore()->set('reference', $value);
     }
 
 }

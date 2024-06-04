@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Beta_Inv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -36,18 +35,6 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the A property value. The A property
-     * @return Json|null
-    */
-    public function getA(): ?Json {
-        $val = $this->getBackingStore()->get('a');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'a'");
-    }
-
-    /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
@@ -61,47 +48,11 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the alpha property value. The alpha property
-     * @return Json|null
-    */
-    public function getAlpha(): ?Json {
-        $val = $this->getBackingStore()->get('alpha');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'alpha'");
-    }
-
-    /**
-     * Gets the B property value. The B property
-     * @return Json|null
-    */
-    public function getB(): ?Json {
-        $val = $this->getBackingStore()->get('b');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'b'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
         return $this->backingStore;
-    }
-
-    /**
-     * Gets the beta property value. The beta property
-     * @return Json|null
-    */
-    public function getBeta(): ?Json {
-        $val = $this->getBackingStore()->get('beta');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'beta'");
     }
 
     /**
@@ -111,24 +62,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'A' => fn(ParseNode $n) => $o->setA($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'alpha' => fn(ParseNode $n) => $o->setAlpha($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'B' => fn(ParseNode $n) => $o->setB($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'beta' => fn(ParseNode $n) => $o->setBeta($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'probability' => fn(ParseNode $n) => $o->setProbability($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the probability property value. The probability property
-     * @return Json|null
-    */
-    public function getProbability(): ?Json {
-        $val = $this->getBackingStore()->get('probability');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'probability'");
     }
 
     /**
@@ -136,20 +70,7 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('A', $this->getA());
-        $writer->writeObjectValue('alpha', $this->getAlpha());
-        $writer->writeObjectValue('B', $this->getB());
-        $writer->writeObjectValue('beta', $this->getBeta());
-        $writer->writeObjectValue('probability', $this->getProbability());
         $writer->writeAdditionalData($this->getAdditionalData());
-    }
-
-    /**
-     * Sets the A property value. The A property
-     * @param Json|null $value Value to set for the A property.
-    */
-    public function setA(?Json $value): void {
-        $this->getBackingStore()->set('a', $value);
     }
 
     /**
@@ -161,43 +82,11 @@ class Beta_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the alpha property value. The alpha property
-     * @param Json|null $value Value to set for the alpha property.
-    */
-    public function setAlpha(?Json $value): void {
-        $this->getBackingStore()->set('alpha', $value);
-    }
-
-    /**
-     * Sets the B property value. The B property
-     * @param Json|null $value Value to set for the B property.
-    */
-    public function setB(?Json $value): void {
-        $this->getBackingStore()->set('b', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the beta property value. The beta property
-     * @param Json|null $value Value to set for the beta property.
-    */
-    public function setBeta(?Json $value): void {
-        $this->getBackingStore()->set('beta', $value);
-    }
-
-    /**
-     * Sets the probability property value. The probability property
-     * @param Json|null $value Value to set for the probability property.
-    */
-    public function setProbability(?Json $value): void {
-        $this->getBackingStore()->set('probability', $value);
     }
 
 }

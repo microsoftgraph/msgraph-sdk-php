@@ -29,6 +29,7 @@ class CalendarGroupsRequestBuilderGetRequestConfiguration extends BaseRequestCon
     /**
      * Instantiates a new CalendarGroupsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
@@ -37,8 +38,8 @@ class CalendarGroupsRequestBuilderGetRequestConfiguration extends BaseRequestCon
      * @param int|null $top Show only the first n items
      * @return CalendarGroupsRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): CalendarGroupsRequestBuilderGetQueryParameters {
-        return new CalendarGroupsRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): CalendarGroupsRequestBuilderGetQueryParameters {
+        return new CalendarGroupsRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

@@ -45,10 +45,11 @@ class ContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier for an entity. Read-only.
+     * Download the binary file associated with a printDocument. Calling this method yields a redirect response with a preauthenticated URL that can be used to download the payload.
      * @param ContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printdocument-get-file?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContentRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -96,7 +97,7 @@ class ContentRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier for an entity. Read-only.
+     * Download the binary file associated with a printDocument. Calling this method yields a redirect response with a preauthenticated URL that can be used to download the payload.
      * @param ContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

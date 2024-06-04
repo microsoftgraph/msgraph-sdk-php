@@ -32,7 +32,6 @@ class WorkbookTableRow extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'index' => fn(ParseNode $n) => $o->setIndex($n->getIntegerValue()),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -49,25 +48,12 @@ class WorkbookTableRow extends Entity implements Parsable
     }
 
     /**
-     * Gets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeIntegerValue('index', $this->getIndex());
-        $writer->writeObjectValue('values', $this->getValues());
     }
 
     /**
@@ -76,14 +62,6 @@ class WorkbookTableRow extends Entity implements Parsable
     */
     public function setIndex(?int $value): void {
         $this->getBackingStore()->set('index', $value);
-    }
-
-    /**
-     * Sets the values property value. Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
     }
 
 }

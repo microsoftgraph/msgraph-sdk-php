@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\EscapedIf;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'logicalTest' => fn(ParseNode $n) => $o->setLogicalTest($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'valueIfFalse' => fn(ParseNode $n) => $o->setValueIfFalse($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'valueIfTrue' => fn(ParseNode $n) => $o->setValueIfTrue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the logicalTest property value. The logicalTest property
-     * @return Json|null
-    */
-    public function getLogicalTest(): ?Json {
-        $val = $this->getBackingStore()->get('logicalTest');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'logicalTest'");
-    }
-
-    /**
-     * Gets the valueIfFalse property value. The valueIfFalse property
-     * @return Json|null
-    */
-    public function getValueIfFalse(): ?Json {
-        $val = $this->getBackingStore()->get('valueIfFalse');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueIfFalse'");
-    }
-
-    /**
-     * Gets the valueIfTrue property value. The valueIfTrue property
-     * @return Json|null
-    */
-    public function getValueIfTrue(): ?Json {
-        $val = $this->getBackingStore()->get('valueIfTrue');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueIfTrue'");
     }
 
     /**
@@ -110,9 +70,6 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('logicalTest', $this->getLogicalTest());
-        $writer->writeObjectValue('valueIfFalse', $this->getValueIfFalse());
-        $writer->writeObjectValue('valueIfTrue', $this->getValueIfTrue());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the logicalTest property value. The logicalTest property
-     * @param Json|null $value Value to set for the logicalTest property.
-    */
-    public function setLogicalTest(?Json $value): void {
-        $this->getBackingStore()->set('logicalTest', $value);
-    }
-
-    /**
-     * Sets the valueIfFalse property value. The valueIfFalse property
-     * @param Json|null $value Value to set for the valueIfFalse property.
-    */
-    public function setValueIfFalse(?Json $value): void {
-        $this->getBackingStore()->set('valueIfFalse', $value);
-    }
-
-    /**
-     * Sets the valueIfTrue property value. The valueIfTrue property
-     * @param Json|null $value Value to set for the valueIfTrue property.
-    */
-    public function setValueIfTrue(?Json $value): void {
-        $this->getBackingStore()->set('valueIfTrue', $value);
     }
 
 }

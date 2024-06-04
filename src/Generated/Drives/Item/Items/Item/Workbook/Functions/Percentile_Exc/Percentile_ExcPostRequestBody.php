@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Percentile_Exc;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class Percentile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the array property value. The array property
-     * @return Json|null
-    */
-    public function getArray(): ?Json {
-        $val = $this->getBackingStore()->get('array');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'array'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,21 +62,7 @@ class Percentile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'array' => fn(ParseNode $n) => $o->setArray($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'k' => fn(ParseNode $n) => $o->setK($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the k property value. The k property
-     * @return Json|null
-    */
-    public function getK(): ?Json {
-        $val = $this->getBackingStore()->get('k');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'k'");
     }
 
     /**
@@ -97,8 +70,6 @@ class Percentile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('array', $this->getArray());
-        $writer->writeObjectValue('k', $this->getK());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -111,27 +82,11 @@ class Percentile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the array property value. The array property
-     * @param Json|null $value Value to set for the array property.
-    */
-    public function setArray(?Json $value): void {
-        $this->getBackingStore()->set('array', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the k property value. The k property
-     * @param Json|null $value Value to set for the k property.
-    */
-    public function setK(?Json $value): void {
-        $this->getBackingStore()->set('k', $value);
     }
 
 }

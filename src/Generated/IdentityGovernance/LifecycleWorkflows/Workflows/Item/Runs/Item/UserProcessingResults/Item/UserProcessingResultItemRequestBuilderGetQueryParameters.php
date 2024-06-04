@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The associated individual user execution.
+ * Get the user processing result of a user processing result of a run.
 */
 class UserProcessingResultItemRequestBuilderGetQueryParameters 
 {

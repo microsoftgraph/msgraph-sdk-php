@@ -69,10 +69,11 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param TermItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Term|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/termstore-term-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TermItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -116,7 +117,7 @@ class TermItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param TermItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

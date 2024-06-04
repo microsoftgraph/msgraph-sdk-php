@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Fvschedule;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the principal property value. The principal property
-     * @return Json|null
-    */
-    public function getPrincipal(): ?Json {
-        $val = $this->getBackingStore()->get('principal');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'principal'");
-    }
-
-    /**
-     * Gets the schedule property value. The schedule property
-     * @return Json|null
-    */
-    public function getSchedule(): ?Json {
-        $val = $this->getBackingStore()->get('schedule');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedule'");
     }
 
     /**
@@ -97,8 +70,6 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('principal', $this->getPrincipal());
-        $writer->writeObjectValue('schedule', $this->getSchedule());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the principal property value. The principal property
-     * @param Json|null $value Value to set for the principal property.
-    */
-    public function setPrincipal(?Json $value): void {
-        $this->getBackingStore()->set('principal', $value);
-    }
-
-    /**
-     * Sets the schedule property value. The schedule property
-     * @param Json|null $value Value to set for the schedule property.
-    */
-    public function setSchedule(?Json $value): void {
-        $this->getBackingStore()->set('schedule', $value);
     }
 
 }

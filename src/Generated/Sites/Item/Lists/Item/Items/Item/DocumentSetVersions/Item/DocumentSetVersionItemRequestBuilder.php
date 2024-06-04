@@ -47,10 +47,11 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property documentSetVersions for sites
+     * Delete a version of a document set in a list.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -61,10 +62,11 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DocumentSetVersion|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DocumentSetVersionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +92,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property documentSetVersions for sites
+     * Delete a version of a document set in a list.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -108,7 +110,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -48,7 +48,7 @@ class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the archiveStatus property value. The archiveStatus property
+     * Gets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select. The possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue.
      * @return SiteArchiveStatus|null
     */
     public function getArchiveStatus(): ?SiteArchiveStatus {
@@ -110,7 +110,7 @@ class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the archiveStatus property value. The archiveStatus property
+     * Sets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select. The possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue.
      * @param SiteArchiveStatus|null $value Value to set for the archiveStatus property.
     */
     public function setArchiveStatus(?SiteArchiveStatus $value): void {

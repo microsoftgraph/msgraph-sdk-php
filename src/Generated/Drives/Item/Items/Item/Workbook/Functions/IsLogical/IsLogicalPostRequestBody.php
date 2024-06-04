@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\IsLogical;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,20 +62,7 @@ class IsLogicalPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the value property value. The value property
-     * @return Json|null
-    */
-    public function getValue(): ?Json {
-        $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**
@@ -84,7 +70,6 @@ class IsLogicalPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('value', $this->getValue());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class IsLogicalPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the value property value. The value property
-     * @param Json|null $value Value to set for the value property.
-    */
-    public function setValue(?Json $value): void {
-        $this->getBackingStore()->set('value', $value);
     }
 
 }

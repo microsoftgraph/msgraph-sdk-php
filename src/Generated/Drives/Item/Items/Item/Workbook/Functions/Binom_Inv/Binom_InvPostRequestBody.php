@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Binom_Inv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the alpha property value. The alpha property
-     * @return Json|null
-    */
-    public function getAlpha(): ?Json {
-        $val = $this->getBackingStore()->get('alpha');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'alpha'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,34 +62,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'alpha' => fn(ParseNode $n) => $o->setAlpha($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'probabilityS' => fn(ParseNode $n) => $o->setProbabilityS($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'trials' => fn(ParseNode $n) => $o->setTrials($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the probabilityS property value. The probabilityS property
-     * @return Json|null
-    */
-    public function getProbabilityS(): ?Json {
-        $val = $this->getBackingStore()->get('probabilityS');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'probabilityS'");
-    }
-
-    /**
-     * Gets the trials property value. The trials property
-     * @return Json|null
-    */
-    public function getTrials(): ?Json {
-        $val = $this->getBackingStore()->get('trials');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'trials'");
     }
 
     /**
@@ -110,9 +70,6 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('alpha', $this->getAlpha());
-        $writer->writeObjectValue('probabilityS', $this->getProbabilityS());
-        $writer->writeObjectValue('trials', $this->getTrials());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -125,35 +82,11 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the alpha property value. The alpha property
-     * @param Json|null $value Value to set for the alpha property.
-    */
-    public function setAlpha(?Json $value): void {
-        $this->getBackingStore()->set('alpha', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the probabilityS property value. The probabilityS property
-     * @param Json|null $value Value to set for the probabilityS property.
-    */
-    public function setProbabilityS(?Json $value): void {
-        $this->getBackingStore()->set('probabilityS', $value);
-    }
-
-    /**
-     * Sets the trials property value. The trials property
-     * @param Json|null $value Value to set for the trials property.
-    */
-    public function setTrials(?Json $value): void {
-        $this->getBackingStore()->set('trials', $value);
     }
 
 }

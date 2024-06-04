@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Db;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,78 +56,13 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the cost property value. The cost property
-     * @return Json|null
-    */
-    public function getCost(): ?Json {
-        $val = $this->getBackingStore()->get('cost');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'cost'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'cost' => fn(ParseNode $n) => $o->setCost($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'life' => fn(ParseNode $n) => $o->setLife($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'month' => fn(ParseNode $n) => $o->setMonth($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'period' => fn(ParseNode $n) => $o->setPeriod($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'salvage' => fn(ParseNode $n) => $o->setSalvage($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the life property value. The life property
-     * @return Json|null
-    */
-    public function getLife(): ?Json {
-        $val = $this->getBackingStore()->get('life');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'life'");
-    }
-
-    /**
-     * Gets the month property value. The month property
-     * @return Json|null
-    */
-    public function getMonth(): ?Json {
-        $val = $this->getBackingStore()->get('month');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'month'");
-    }
-
-    /**
-     * Gets the period property value. The period property
-     * @return Json|null
-    */
-    public function getPeriod(): ?Json {
-        $val = $this->getBackingStore()->get('period');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'period'");
-    }
-
-    /**
-     * Gets the salvage property value. The salvage property
-     * @return Json|null
-    */
-    public function getSalvage(): ?Json {
-        $val = $this->getBackingStore()->get('salvage');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'salvage'");
     }
 
     /**
@@ -136,11 +70,6 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('cost', $this->getCost());
-        $writer->writeObjectValue('life', $this->getLife());
-        $writer->writeObjectValue('month', $this->getMonth());
-        $writer->writeObjectValue('period', $this->getPeriod());
-        $writer->writeObjectValue('salvage', $this->getSalvage());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -158,46 +87,6 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the cost property value. The cost property
-     * @param Json|null $value Value to set for the cost property.
-    */
-    public function setCost(?Json $value): void {
-        $this->getBackingStore()->set('cost', $value);
-    }
-
-    /**
-     * Sets the life property value. The life property
-     * @param Json|null $value Value to set for the life property.
-    */
-    public function setLife(?Json $value): void {
-        $this->getBackingStore()->set('life', $value);
-    }
-
-    /**
-     * Sets the month property value. The month property
-     * @param Json|null $value Value to set for the month property.
-    */
-    public function setMonth(?Json $value): void {
-        $this->getBackingStore()->set('month', $value);
-    }
-
-    /**
-     * Sets the period property value. The period property
-     * @param Json|null $value Value to set for the period property.
-    */
-    public function setPeriod(?Json $value): void {
-        $this->getBackingStore()->set('period', $value);
-    }
-
-    /**
-     * Sets the salvage property value. The salvage property
-     * @param Json|null $value Value to set for the salvage property.
-    */
-    public function setSalvage(?Json $value): void {
-        $this->getBackingStore()->set('salvage', $value);
     }
 
 }

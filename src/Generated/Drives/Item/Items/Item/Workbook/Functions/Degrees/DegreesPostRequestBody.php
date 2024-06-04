@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Degrees;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class DegreesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the angle property value. The angle property
-     * @return Json|null
-    */
-    public function getAngle(): ?Json {
-        $val = $this->getBackingStore()->get('angle');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'angle'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,7 +62,6 @@ class DegreesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'angle' => fn(ParseNode $n) => $o->setAngle($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -84,7 +70,6 @@ class DegreesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('angle', $this->getAngle());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -94,14 +79,6 @@ class DegreesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
-    }
-
-    /**
-     * Sets the angle property value. The angle property
-     * @param Json|null $value Value to set for the angle property.
-    */
-    public function setAngle(?Json $value): void {
-        $this->getBackingStore()->set('angle', $value);
     }
 
     /**

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Leftb;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class LeftbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'numBytes' => fn(ParseNode $n) => $o->setNumBytes($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the numBytes property value. The numBytes property
-     * @return Json|null
-    */
-    public function getNumBytes(): ?Json {
-        $val = $this->getBackingStore()->get('numBytes');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'numBytes'");
-    }
-
-    /**
-     * Gets the text property value. The text property
-     * @return Json|null
-    */
-    public function getText(): ?Json {
-        $val = $this->getBackingStore()->get('text');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**
@@ -97,8 +70,6 @@ class LeftbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('numBytes', $this->getNumBytes());
-        $writer->writeObjectValue('text', $this->getText());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class LeftbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the numBytes property value. The numBytes property
-     * @param Json|null $value Value to set for the numBytes property.
-    */
-    public function setNumBytes(?Json $value): void {
-        $this->getBackingStore()->set('numBytes', $value);
-    }
-
-    /**
-     * Sets the text property value. The text property
-     * @param Json|null $value Value to set for the text property.
-    */
-    public function setText(?Json $value): void {
-        $this->getBackingStore()->set('text', $value);
     }
 
 }

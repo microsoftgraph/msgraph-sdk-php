@@ -3,6 +3,9 @@
 namespace Microsoft\Graph\Generated\Models;
 
 use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
+use Microsoft\Graph\Generated\Models\CallRecords\Organizer;
+use Microsoft\Graph\Generated\Models\CallRecords\Participant;
+use Microsoft\Graph\Generated\Models\CallRecords\ParticipantBase;
 use Microsoft\Graph\Generated\Models\CallRecords\Segment;
 use Microsoft\Graph\Generated\Models\CallRecords\Session;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ConnectionOperation;
@@ -270,6 +273,9 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.call': return new Call();
                 case '#microsoft.graph.callRecording': return new CallRecording();
                 case '#microsoft.graph.callRecords.callRecord': return new CallRecord();
+                case '#microsoft.graph.callRecords.organizer': return new Organizer();
+                case '#microsoft.graph.callRecords.participant': return new Participant();
+                case '#microsoft.graph.callRecords.participantBase': return new ParticipantBase();
                 case '#microsoft.graph.callRecords.segment': return new Segment();
                 case '#microsoft.graph.callRecords.session': return new Session();
                 case '#microsoft.graph.callTranscript': return new CallTranscript();
@@ -985,6 +991,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.windows81CompliancePolicy': return new Windows81CompliancePolicy();
                 case '#microsoft.graph.windows81GeneralConfiguration': return new Windows81GeneralConfiguration();
                 case '#microsoft.graph.windowsAppX': return new WindowsAppX();
+                case '#microsoft.graph.windowsAutopilotDeploymentProfile': return new WindowsAutopilotDeploymentProfile();
+                case '#microsoft.graph.windowsAutopilotDeploymentProfileAssignment': return new WindowsAutopilotDeploymentProfileAssignment();
                 case '#microsoft.graph.windowsAutopilotDeviceIdentity': return new WindowsAutopilotDeviceIdentity();
                 case '#microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration': return new WindowsDefenderAdvancedThreatProtectionConfiguration();
                 case '#microsoft.graph.windowsDeviceMalwareState': return new WindowsDeviceMalwareState();

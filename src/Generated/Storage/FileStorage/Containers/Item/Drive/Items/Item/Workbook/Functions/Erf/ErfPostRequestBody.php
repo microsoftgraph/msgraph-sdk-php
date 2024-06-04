@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Erf;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'lowerLimit' => fn(ParseNode $n) => $o->setLowerLimit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'upperLimit' => fn(ParseNode $n) => $o->setUpperLimit($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the lowerLimit property value. The lowerLimit property
-     * @return Json|null
-    */
-    public function getLowerLimit(): ?Json {
-        $val = $this->getBackingStore()->get('lowerLimit');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'lowerLimit'");
-    }
-
-    /**
-     * Gets the upperLimit property value. The upperLimit property
-     * @return Json|null
-    */
-    public function getUpperLimit(): ?Json {
-        $val = $this->getBackingStore()->get('upperLimit');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'upperLimit'");
     }
 
     /**
@@ -97,8 +70,6 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('lowerLimit', $this->getLowerLimit());
-        $writer->writeObjectValue('upperLimit', $this->getUpperLimit());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the lowerLimit property value. The lowerLimit property
-     * @param Json|null $value Value to set for the lowerLimit property.
-    */
-    public function setLowerLimit(?Json $value): void {
-        $this->getBackingStore()->set('lowerLimit', $value);
-    }
-
-    /**
-     * Sets the upperLimit property value. The upperLimit property
-     * @param Json|null $value Value to set for the upperLimit property.
-    */
-    public function setUpperLimit(?Json $value): void {
-        $this->getBackingStore()->set('upperLimit', $value);
     }
 
 }

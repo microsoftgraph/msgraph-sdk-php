@@ -28,11 +28,12 @@ class TimeOffItemRequestBuilderGetRequestConfiguration extends BaseRequestConfig
 
     /**
      * Instantiates a new TimeOffItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return TimeOffItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): TimeOffItemRequestBuilderGetQueryParameters {
-        return new TimeOffItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): TimeOffItemRequestBuilderGetQueryParameters {
+        return new TimeOffItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

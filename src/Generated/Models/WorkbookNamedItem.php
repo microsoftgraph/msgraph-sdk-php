@@ -47,7 +47,6 @@ class WorkbookNamedItem extends Entity implements Parsable
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             'scope' => fn(ParseNode $n) => $o->setScope($n->getStringValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
-            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'visible' => fn(ParseNode $n) => $o->setVisible($n->getBooleanValue()),
             'worksheet' => fn(ParseNode $n) => $o->setWorksheet($n->getObjectValue([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -90,18 +89,6 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the value property value. Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
-     * @return Json|null
-    */
-    public function getValue(): ?Json {
-        $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
-    }
-
-    /**
      * Gets the visible property value. Specifies whether the object is visible or not.
      * @return bool|null
     */
@@ -135,7 +122,6 @@ class WorkbookNamedItem extends Entity implements Parsable
         $writer->writeStringValue('name', $this->getName());
         $writer->writeStringValue('scope', $this->getScope());
         $writer->writeStringValue('type', $this->getType());
-        $writer->writeObjectValue('value', $this->getValue());
         $writer->writeBooleanValue('visible', $this->getVisible());
         $writer->writeObjectValue('worksheet', $this->getWorksheet());
     }
@@ -170,14 +156,6 @@ class WorkbookNamedItem extends Entity implements Parsable
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
-    }
-
-    /**
-     * Sets the value property value. Represents the formula that the name is defined to refer to. for example, =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
-     * @param Json|null $value Value to set for the value property.
-    */
-    public function setValue(?Json $value): void {
-        $this->getBackingStore()->set('value', $value);
     }
 
     /**

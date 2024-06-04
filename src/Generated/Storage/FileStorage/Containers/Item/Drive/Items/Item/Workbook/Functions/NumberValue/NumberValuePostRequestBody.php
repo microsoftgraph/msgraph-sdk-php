@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\NumberValue;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,52 +56,13 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the decimalSeparator property value. The decimalSeparator property
-     * @return Json|null
-    */
-    public function getDecimalSeparator(): ?Json {
-        $val = $this->getBackingStore()->get('decimalSeparator');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'decimalSeparator'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'decimalSeparator' => fn(ParseNode $n) => $o->setDecimalSeparator($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'groupSeparator' => fn(ParseNode $n) => $o->setGroupSeparator($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the groupSeparator property value. The groupSeparator property
-     * @return Json|null
-    */
-    public function getGroupSeparator(): ?Json {
-        $val = $this->getBackingStore()->get('groupSeparator');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupSeparator'");
-    }
-
-    /**
-     * Gets the text property value. The text property
-     * @return Json|null
-    */
-    public function getText(): ?Json {
-        $val = $this->getBackingStore()->get('text');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**
@@ -110,9 +70,6 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('decimalSeparator', $this->getDecimalSeparator());
-        $writer->writeObjectValue('groupSeparator', $this->getGroupSeparator());
-        $writer->writeObjectValue('text', $this->getText());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the decimalSeparator property value. The decimalSeparator property
-     * @param Json|null $value Value to set for the decimalSeparator property.
-    */
-    public function setDecimalSeparator(?Json $value): void {
-        $this->getBackingStore()->set('decimalSeparator', $value);
-    }
-
-    /**
-     * Sets the groupSeparator property value. The groupSeparator property
-     * @param Json|null $value Value to set for the groupSeparator property.
-    */
-    public function setGroupSeparator(?Json $value): void {
-        $this->getBackingStore()->set('groupSeparator', $value);
-    }
-
-    /**
-     * Sets the text property value. The text property
-     * @param Json|null $value Value to set for the text property.
-    */
-    public function setText(?Json $value): void {
-        $this->getBackingStore()->set('text', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Gamma_Dist;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,47 +48,11 @@ class Gamma_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the alpha property value. The alpha property
-     * @return Json|null
-    */
-    public function getAlpha(): ?Json {
-        $val = $this->getBackingStore()->get('alpha');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'alpha'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
         return $this->backingStore;
-    }
-
-    /**
-     * Gets the beta property value. The beta property
-     * @return Json|null
-    */
-    public function getBeta(): ?Json {
-        $val = $this->getBackingStore()->get('beta');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'beta'");
-    }
-
-    /**
-     * Gets the cumulative property value. The cumulative property
-     * @return Json|null
-    */
-    public function getCumulative(): ?Json {
-        $val = $this->getBackingStore()->get('cumulative');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'cumulative'");
     }
 
     /**
@@ -99,23 +62,7 @@ class Gamma_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'alpha' => fn(ParseNode $n) => $o->setAlpha($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'beta' => fn(ParseNode $n) => $o->setBeta($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'cumulative' => fn(ParseNode $n) => $o->setCumulative($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the x property value. The x property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -123,10 +70,6 @@ class Gamma_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('alpha', $this->getAlpha());
-        $writer->writeObjectValue('beta', $this->getBeta());
-        $writer->writeObjectValue('cumulative', $this->getCumulative());
-        $writer->writeObjectValue('x', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -139,43 +82,11 @@ class Gamma_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the alpha property value. The alpha property
-     * @param Json|null $value Value to set for the alpha property.
-    */
-    public function setAlpha(?Json $value): void {
-        $this->getBackingStore()->set('alpha', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the beta property value. The beta property
-     * @param Json|null $value Value to set for the beta property.
-    */
-    public function setBeta(?Json $value): void {
-        $this->getBackingStore()->set('beta', $value);
-    }
-
-    /**
-     * Sets the cumulative property value. The cumulative property
-     * @param Json|null $value Value to set for the cumulative property.
-    */
-    public function setCumulative(?Json $value): void {
-        $this->getBackingStore()->set('cumulative', $value);
-    }
-
-    /**
-     * Sets the x property value. The x property
-     * @param Json|null $value Value to set for the x property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

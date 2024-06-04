@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Atan2;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'xNum' => fn(ParseNode $n) => $o->setXNum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'yNum' => fn(ParseNode $n) => $o->setYNum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the xNum property value. The xNum property
-     * @return Json|null
-    */
-    public function getXNum(): ?Json {
-        $val = $this->getBackingStore()->get('xNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'xNum'");
-    }
-
-    /**
-     * Gets the yNum property value. The yNum property
-     * @return Json|null
-    */
-    public function getYNum(): ?Json {
-        $val = $this->getBackingStore()->get('yNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'yNum'");
     }
 
     /**
@@ -97,8 +70,6 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('xNum', $this->getXNum());
-        $writer->writeObjectValue('yNum', $this->getYNum());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the xNum property value. The xNum property
-     * @param Json|null $value Value to set for the xNum property.
-    */
-    public function setXNum(?Json $value): void {
-        $this->getBackingStore()->set('xNum', $value);
-    }
-
-    /**
-     * Sets the yNum property value. The yNum property
-     * @param Json|null $value Value to set for the yNum property.
-    */
-    public function setYNum(?Json $value): void {
-        $this->getBackingStore()->set('yNum', $value);
     }
 
 }

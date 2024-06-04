@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Documen
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get documents from print
+ * Download the binary file associated with a printDocument. Calling this method yields a redirect response with a preauthenticated URL that can be used to download the payload.
 */
 class DocumentsRequestBuilderGetQueryParameters 
 {

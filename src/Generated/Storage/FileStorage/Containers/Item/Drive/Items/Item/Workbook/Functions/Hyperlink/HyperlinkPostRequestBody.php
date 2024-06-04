@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Hyperlink;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'friendlyName' => fn(ParseNode $n) => $o->setFriendlyName($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'linkLocation' => fn(ParseNode $n) => $o->setLinkLocation($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the friendlyName property value. The friendlyName property
-     * @return Json|null
-    */
-    public function getFriendlyName(): ?Json {
-        $val = $this->getBackingStore()->get('friendlyName');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'friendlyName'");
-    }
-
-    /**
-     * Gets the linkLocation property value. The linkLocation property
-     * @return Json|null
-    */
-    public function getLinkLocation(): ?Json {
-        $val = $this->getBackingStore()->get('linkLocation');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'linkLocation'");
     }
 
     /**
@@ -97,8 +70,6 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('friendlyName', $this->getFriendlyName());
-        $writer->writeObjectValue('linkLocation', $this->getLinkLocation());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the friendlyName property value. The friendlyName property
-     * @param Json|null $value Value to set for the friendlyName property.
-    */
-    public function setFriendlyName(?Json $value): void {
-        $this->getBackingStore()->set('friendlyName', $value);
-    }
-
-    /**
-     * Sets the linkLocation property value. The linkLocation property
-     * @param Json|null $value Value to set for the linkLocation property.
-    */
-    public function setLinkLocation(?Json $value): void {
-        $this->getBackingStore()->set('linkLocation', $value);
     }
 
 }

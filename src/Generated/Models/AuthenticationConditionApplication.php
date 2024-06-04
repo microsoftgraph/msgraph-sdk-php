@@ -48,7 +48,7 @@ class AuthenticationConditionApplication implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the appId property value. The identifier for an application corresponding to a condition that triggers an authenticationEventListener.
+     * Gets the appId property value. The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -110,7 +110,7 @@ class AuthenticationConditionApplication implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the appId property value. The identifier for an application corresponding to a condition that triggers an authenticationEventListener.
+     * Sets the appId property value. The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {

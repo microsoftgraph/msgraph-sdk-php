@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Time;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'hour' => fn(ParseNode $n) => $o->setHour($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'minute' => fn(ParseNode $n) => $o->setMinute($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'second' => fn(ParseNode $n) => $o->setSecond($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the hour property value. The hour property
-     * @return Json|null
-    */
-    public function getHour(): ?Json {
-        $val = $this->getBackingStore()->get('hour');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'hour'");
-    }
-
-    /**
-     * Gets the minute property value. The minute property
-     * @return Json|null
-    */
-    public function getMinute(): ?Json {
-        $val = $this->getBackingStore()->get('minute');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'minute'");
-    }
-
-    /**
-     * Gets the second property value. The second property
-     * @return Json|null
-    */
-    public function getSecond(): ?Json {
-        $val = $this->getBackingStore()->get('second');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'second'");
     }
 
     /**
@@ -110,9 +70,6 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('hour', $this->getHour());
-        $writer->writeObjectValue('minute', $this->getMinute());
-        $writer->writeObjectValue('second', $this->getSecond());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the hour property value. The hour property
-     * @param Json|null $value Value to set for the hour property.
-    */
-    public function setHour(?Json $value): void {
-        $this->getBackingStore()->set('hour', $value);
-    }
-
-    /**
-     * Sets the minute property value. The minute property
-     * @param Json|null $value Value to set for the minute property.
-    */
-    public function setMinute(?Json $value): void {
-        $this->getBackingStore()->set('minute', $value);
-    }
-
-    /**
-     * Sets the second property value. The second property
-     * @param Json|null $value Value to set for the second property.
-    */
-    public function setSecond(?Json $value): void {
-        $this->getBackingStore()->set('second', $value);
     }
 
 }

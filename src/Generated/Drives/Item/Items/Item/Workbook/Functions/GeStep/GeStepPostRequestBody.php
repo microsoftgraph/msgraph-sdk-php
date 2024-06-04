@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\GeStep;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'step' => fn(ParseNode $n) => $o->setStep($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
-    }
-
-    /**
-     * Gets the step property value. The step property
-     * @return Json|null
-    */
-    public function getStep(): ?Json {
-        $val = $this->getBackingStore()->get('step');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'step'");
     }
 
     /**
@@ -97,8 +70,6 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('number', $this->getNumber());
-        $writer->writeObjectValue('step', $this->getStep());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
-    }
-
-    /**
-     * Sets the step property value. The step property
-     * @param Json|null $value Value to set for the step property.
-    */
-    public function setStep(?Json $value): void {
-        $this->getBackingStore()->set('step', $value);
     }
 
 }

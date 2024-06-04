@@ -89,7 +89,6 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
             'dataVersion' => fn(ParseNode $n) => $o->setDataVersion($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'properties' => fn(ParseNode $n) => $o->setProperties($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             'serverProcessedContent' => fn(ParseNode $n) => $o->setServerProcessedContent($n->getObjectValue([ServerProcessedContent::class, 'createFromDiscriminatorValue'])),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
         ];
@@ -105,18 +104,6 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
-    }
-
-    /**
-     * Gets the properties property value. Properties bag of the web part.
-     * @return Json|null
-    */
-    public function getProperties(): ?Json {
-        $val = $this->getBackingStore()->get('properties');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'properties'");
     }
 
     /**
@@ -151,7 +138,6 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('dataVersion', $this->getDataVersion());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeObjectValue('properties', $this->getProperties());
         $writer->writeObjectValue('serverProcessedContent', $this->getServerProcessedContent());
         $writer->writeStringValue('title', $this->getTitle());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -195,14 +181,6 @@ class WebPartData implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
-    }
-
-    /**
-     * Sets the properties property value. Properties bag of the web part.
-     * @param Json|null $value Value to set for the properties property.
-    */
-    public function setProperties(?Json $value): void {
-        $this->getBackingStore()->set('properties', $value);
     }
 
     /**

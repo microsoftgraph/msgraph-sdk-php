@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodia
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Data source entity for groups associated with the custodian.
+ * Get a list of the unifiedGroupSource objects associated with an ediscoveryCustodian.
 */
 class UnifiedGroupSourcesRequestBuilderGetQueryParameters 
 {

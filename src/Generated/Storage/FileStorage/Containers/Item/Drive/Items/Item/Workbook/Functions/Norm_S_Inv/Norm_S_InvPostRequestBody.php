@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Norm_S_Inv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,20 +62,7 @@ class Norm_S_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'probability' => fn(ParseNode $n) => $o->setProbability($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the probability property value. The probability property
-     * @return Json|null
-    */
-    public function getProbability(): ?Json {
-        $val = $this->getBackingStore()->get('probability');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'probability'");
     }
 
     /**
@@ -84,7 +70,6 @@ class Norm_S_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('probability', $this->getProbability());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class Norm_S_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the probability property value. The probability property
-     * @param Json|null $value Value to set for the probability property.
-    */
-    public function setProbability(?Json $value): void {
-        $this->getBackingStore()->set('probability', $value);
     }
 
 }

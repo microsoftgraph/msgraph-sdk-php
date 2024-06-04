@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Month;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,20 +62,7 @@ class MonthPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'serialNumber' => fn(ParseNode $n) => $o->setSerialNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the serialNumber property value. The serialNumber property
-     * @return Json|null
-    */
-    public function getSerialNumber(): ?Json {
-        $val = $this->getBackingStore()->get('serialNumber');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'serialNumber'");
     }
 
     /**
@@ -84,7 +70,6 @@ class MonthPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('serialNumber', $this->getSerialNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class MonthPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the serialNumber property value. The serialNumber property
-     * @param Json|null $value Value to set for the serialNumber property.
-    */
-    public function setSerialNumber(?Json $value): void {
-        $this->getBackingStore()->set('serialNumber', $value);
     }
 
 }

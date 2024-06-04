@@ -28,11 +28,12 @@ class EventItemRequestBuilderGetRequestConfiguration extends BaseRequestConfigur
 
     /**
      * Instantiates a new EventItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return EventItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): EventItemRequestBuilderGetQueryParameters {
-        return new EventItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): EventItemRequestBuilderGetQueryParameters {
+        return new EventItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

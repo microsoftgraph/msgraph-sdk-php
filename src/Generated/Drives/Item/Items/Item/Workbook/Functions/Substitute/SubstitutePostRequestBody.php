@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Substitute;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,59 +62,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'instanceNum' => fn(ParseNode $n) => $o->setInstanceNum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'newText' => fn(ParseNode $n) => $o->setNewText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'oldText' => fn(ParseNode $n) => $o->setOldText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'text' => fn(ParseNode $n) => $o->setText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the instanceNum property value. The instanceNum property
-     * @return Json|null
-    */
-    public function getInstanceNum(): ?Json {
-        $val = $this->getBackingStore()->get('instanceNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'instanceNum'");
-    }
-
-    /**
-     * Gets the newText property value. The newText property
-     * @return Json|null
-    */
-    public function getNewText(): ?Json {
-        $val = $this->getBackingStore()->get('newText');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'newText'");
-    }
-
-    /**
-     * Gets the oldText property value. The oldText property
-     * @return Json|null
-    */
-    public function getOldText(): ?Json {
-        $val = $this->getBackingStore()->get('oldText');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'oldText'");
-    }
-
-    /**
-     * Gets the text property value. The text property
-     * @return Json|null
-    */
-    public function getText(): ?Json {
-        $val = $this->getBackingStore()->get('text');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**
@@ -123,10 +70,6 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('instanceNum', $this->getInstanceNum());
-        $writer->writeObjectValue('newText', $this->getNewText());
-        $writer->writeObjectValue('oldText', $this->getOldText());
-        $writer->writeObjectValue('text', $this->getText());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -144,38 +87,6 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the instanceNum property value. The instanceNum property
-     * @param Json|null $value Value to set for the instanceNum property.
-    */
-    public function setInstanceNum(?Json $value): void {
-        $this->getBackingStore()->set('instanceNum', $value);
-    }
-
-    /**
-     * Sets the newText property value. The newText property
-     * @param Json|null $value Value to set for the newText property.
-    */
-    public function setNewText(?Json $value): void {
-        $this->getBackingStore()->set('newText', $value);
-    }
-
-    /**
-     * Sets the oldText property value. The oldText property
-     * @param Json|null $value Value to set for the oldText property.
-    */
-    public function setOldText(?Json $value): void {
-        $this->getBackingStore()->set('oldText', $value);
-    }
-
-    /**
-     * Sets the text property value. The text property
-     * @param Json|null $value Value to set for the text property.
-    */
-    public function setText(?Json $value): void {
-        $this->getBackingStore()->set('text', $value);
     }
 
 }

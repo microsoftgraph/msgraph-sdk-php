@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Roman;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'form' => fn(ParseNode $n) => $o->setForm($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'number' => fn(ParseNode $n) => $o->setNumber($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the form property value. The form property
-     * @return Json|null
-    */
-    public function getForm(): ?Json {
-        $val = $this->getBackingStore()->get('form');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'form'");
-    }
-
-    /**
-     * Gets the number property value. The number property
-     * @return Json|null
-    */
-    public function getNumber(): ?Json {
-        $val = $this->getBackingStore()->get('number');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
     }
 
     /**
@@ -97,8 +70,6 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('form', $this->getForm());
-        $writer->writeObjectValue('number', $this->getNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the form property value. The form property
-     * @param Json|null $value Value to set for the form property.
-    */
-    public function setForm(?Json $value): void {
-        $this->getBackingStore()->set('form', $value);
-    }
-
-    /**
-     * Sets the number property value. The number property
-     * @param Json|null $value Value to set for the number property.
-    */
-    public function setNumber(?Json $value): void {
-        $this->getBackingStore()->set('number', $value);
     }
 
 }

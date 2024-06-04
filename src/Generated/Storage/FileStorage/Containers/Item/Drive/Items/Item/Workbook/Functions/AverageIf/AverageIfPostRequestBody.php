@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\AverageIf;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,35 +48,11 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the averageRange property value. The averageRange property
-     * @return Json|null
-    */
-    public function getAverageRange(): ?Json {
-        $val = $this->getBackingStore()->get('averageRange');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageRange'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
     public function getBackingStore(): BackingStore {
         return $this->backingStore;
-    }
-
-    /**
-     * Gets the criteria property value. The criteria property
-     * @return Json|null
-    */
-    public function getCriteria(): ?Json {
-        $val = $this->getBackingStore()->get('criteria');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
     }
 
     /**
@@ -87,22 +62,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'averageRange' => fn(ParseNode $n) => $o->setAverageRange($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'criteria' => fn(ParseNode $n) => $o->setCriteria($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'range' => fn(ParseNode $n) => $o->setRange($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the range property value. The range property
-     * @return Json|null
-    */
-    public function getRange(): ?Json {
-        $val = $this->getBackingStore()->get('range');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'range'");
     }
 
     /**
@@ -110,9 +70,6 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('averageRange', $this->getAverageRange());
-        $writer->writeObjectValue('criteria', $this->getCriteria());
-        $writer->writeObjectValue('range', $this->getRange());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -125,35 +82,11 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the averageRange property value. The averageRange property
-     * @param Json|null $value Value to set for the averageRange property.
-    */
-    public function setAverageRange(?Json $value): void {
-        $this->getBackingStore()->set('averageRange', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the criteria property value. The criteria property
-     * @param Json|null $value Value to set for the criteria property.
-    */
-    public function setCriteria(?Json $value): void {
-        $this->getBackingStore()->set('criteria', $value);
-    }
-
-    /**
-     * Sets the range property value. The range property
-     * @param Json|null $value Value to set for the range property.
-    */
-    public function setRange(?Json $value): void {
-        $this->getBackingStore()->set('range', $value);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\ErfC_Precise;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,20 +62,7 @@ class ErfC_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'X' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the X property value. The X property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -84,7 +70,6 @@ class ErfC_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('X', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class ErfC_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, 
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the X property value. The X property
-     * @param Json|null $value Value to set for the X property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

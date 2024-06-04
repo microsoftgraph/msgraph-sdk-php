@@ -44,20 +44,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'error' => fn(ParseNode $n) => $o->setError($n->getStringValue()),
-            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ]);
-    }
-
-    /**
-     * Gets the value property value. The value property
-     * @return Json|null
-    */
-    public function getValue(): ?Json {
-        $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**
@@ -67,7 +54,6 @@ class WorkbookFunctionResult extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('error', $this->getError());
-        $writer->writeObjectValue('value', $this->getValue());
     }
 
     /**
@@ -76,14 +62,6 @@ class WorkbookFunctionResult extends Entity implements Parsable
     */
     public function setError(?string $value): void {
         $this->getBackingStore()->set('error', $value);
-    }
-
-    /**
-     * Sets the value property value. The value property
-     * @param Json|null $value Value to set for the value property.
-    */
-    public function setValue(?Json $value): void {
-        $this->getBackingStore()->set('value', $value);
     }
 
 }

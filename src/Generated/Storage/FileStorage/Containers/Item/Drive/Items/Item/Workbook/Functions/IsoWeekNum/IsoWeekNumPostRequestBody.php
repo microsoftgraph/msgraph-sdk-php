@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\IsoWeekNum;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,25 +56,12 @@ class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the date property value. The date property
-     * @return Json|null
-    */
-    public function getDate(): ?Json {
-        $val = $this->getBackingStore()->get('date');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'date'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'date' => fn(ParseNode $n) => $o->setDate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -84,7 +70,6 @@ class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('date', $this->getDate());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the date property value. The date property
-     * @param Json|null $value Value to set for the date property.
-    */
-    public function setDate(?Json $value): void {
-        $this->getBackingStore()->set('date', $value);
     }
 
 }

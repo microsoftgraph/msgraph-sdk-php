@@ -31,12 +31,13 @@ class RefRequestBuilderGetRequestConfiguration extends BaseRequestConfiguration
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
+     * @param string|null $search Search items by search phrases
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
      * @return RefRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?int $skip = null, ?int $top = null): RefRequestBuilderGetQueryParameters {
-        return new RefRequestBuilderGetQueryParameters($count, $filter, $orderby, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?int $skip = null, ?int $top = null): RefRequestBuilderGetQueryParameters {
+        return new RefRequestBuilderGetQueryParameters($count, $filter, $orderby, $search, $skip, $top);
     }
 
 }

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\GammaLn;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,20 +62,7 @@ class GammaLnPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the x property value. The x property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -84,7 +70,6 @@ class GammaLnPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('x', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -102,14 +87,6 @@ class GammaLnPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the x property value. The x property
-     * @param Json|null $value Value to set for the x property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

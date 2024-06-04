@@ -31,10 +31,11 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property resources for education
+     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
      * @param EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationmoduleresource-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
      * @param EducationModuleResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModuleResource|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationModuleResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property resources in education
+     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
      * @param EducationModuleResource $body The request body
      * @param EducationModuleResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModuleResource|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationModuleResource $body, ?EducationModuleResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property resources for education
+     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
      * @param EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
      * @param EducationModuleResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property resources in education
+     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
      * @param EducationModuleResource $body The request body
      * @param EducationModuleResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

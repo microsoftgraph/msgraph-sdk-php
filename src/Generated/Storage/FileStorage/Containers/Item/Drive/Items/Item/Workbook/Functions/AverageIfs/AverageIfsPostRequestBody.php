@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\AverageIfs;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -49,18 +48,6 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the averageRange property value. The averageRange property
-     * @return Json|null
-    */
-    public function getAverageRange(): ?Json {
-        $val = $this->getBackingStore()->get('averageRange');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageRange'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -75,21 +62,7 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'averageRange' => fn(ParseNode $n) => $o->setAverageRange($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'values' => fn(ParseNode $n) => $o->setValues($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the values property value. The values property
-     * @return Json|null
-    */
-    public function getValues(): ?Json {
-        $val = $this->getBackingStore()->get('values');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**
@@ -97,8 +70,6 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('averageRange', $this->getAverageRange());
-        $writer->writeObjectValue('values', $this->getValues());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -111,27 +82,11 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the averageRange property value. The averageRange property
-     * @param Json|null $value Value to set for the averageRange property.
-    */
-    public function setAverageRange(?Json $value): void {
-        $this->getBackingStore()->set('averageRange', $value);
-    }
-
-    /**
      * Sets the BackingStore property value. Stores model information.
      * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the values property value. The values property
-     * @param Json|null $value Value to set for the values property.
-    */
-    public function setValues(?Json $value): void {
-        $this->getBackingStore()->set('values', $value);
     }
 
 }

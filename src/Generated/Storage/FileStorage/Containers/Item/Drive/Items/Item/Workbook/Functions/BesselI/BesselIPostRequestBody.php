@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\BesselI;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class BesselIPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'n' => fn(ParseNode $n) => $o->setN($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'x' => fn(ParseNode $n) => $o->setX($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the n property value. The n property
-     * @return Json|null
-    */
-    public function getN(): ?Json {
-        $val = $this->getBackingStore()->get('n');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'n'");
-    }
-
-    /**
-     * Gets the x property value. The x property
-     * @return Json|null
-    */
-    public function getX(): ?Json {
-        $val = $this->getBackingStore()->get('x');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**
@@ -97,8 +70,6 @@ class BesselIPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('n', $this->getN());
-        $writer->writeObjectValue('x', $this->getX());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class BesselIPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the n property value. The n property
-     * @param Json|null $value Value to set for the n property.
-    */
-    public function setN(?Json $value): void {
-        $this->getBackingStore()->set('n', $value);
-    }
-
-    /**
-     * Sets the x property value. The x property
-     * @param Json|null $value Value to set for the x property.
-    */
-    public function setX(?Json $value): void {
-        $this->getBackingStore()->set('x', $value);
     }
 
 }

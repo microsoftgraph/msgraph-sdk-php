@@ -28,11 +28,12 @@ class OutlookRequestBuilderGetRequestConfiguration extends BaseRequestConfigurat
 
     /**
      * Instantiates a new OutlookRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return OutlookRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): OutlookRequestBuilderGetQueryParameters {
-        return new OutlookRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): OutlookRequestBuilderGetQueryParameters {
+        return new OutlookRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

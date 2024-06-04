@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\FindB;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'findText' => fn(ParseNode $n) => $o->setFindText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'startNum' => fn(ParseNode $n) => $o->setStartNum($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'withinText' => fn(ParseNode $n) => $o->setWithinText($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the findText property value. The findText property
-     * @return Json|null
-    */
-    public function getFindText(): ?Json {
-        $val = $this->getBackingStore()->get('findText');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'findText'");
-    }
-
-    /**
-     * Gets the startNum property value. The startNum property
-     * @return Json|null
-    */
-    public function getStartNum(): ?Json {
-        $val = $this->getBackingStore()->get('startNum');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'startNum'");
-    }
-
-    /**
-     * Gets the withinText property value. The withinText property
-     * @return Json|null
-    */
-    public function getWithinText(): ?Json {
-        $val = $this->getBackingStore()->get('withinText');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'withinText'");
     }
 
     /**
@@ -110,9 +70,6 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('findText', $this->getFindText());
-        $writer->writeObjectValue('startNum', $this->getStartNum());
-        $writer->writeObjectValue('withinText', $this->getWithinText());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the findText property value. The findText property
-     * @param Json|null $value Value to set for the findText property.
-    */
-    public function setFindText(?Json $value): void {
-        $this->getBackingStore()->set('findText', $value);
-    }
-
-    /**
-     * Sets the startNum property value. The startNum property
-     * @param Json|null $value Value to set for the startNum property.
-    */
-    public function setStartNum(?Json $value): void {
-        $this->getBackingStore()->set('startNum', $value);
-    }
-
-    /**
-     * Sets the withinText property value. The withinText property
-     * @param Json|null $value Value to set for the withinText property.
-    */
-    public function setWithinText(?Json $value): void {
-        $this->getBackingStore()->set('withinText', $value);
     }
 
 }

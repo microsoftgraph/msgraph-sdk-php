@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Dsum;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -57,51 +56,12 @@ class DsumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the criteria property value. The criteria property
-     * @return Json|null
-    */
-    public function getCriteria(): ?Json {
-        $val = $this->getBackingStore()->get('criteria');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
-    }
-
-    /**
-     * Gets the database property value. The database property
-     * @return Json|null
-    */
-    public function getDatabase(): ?Json {
-        $val = $this->getBackingStore()->get('database');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'database'");
-    }
-
-    /**
-     * Gets the field property value. The field property
-     * @return Json|null
-    */
-    public function getField(): ?Json {
-        $val = $this->getBackingStore()->get('field');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'field'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'criteria' => fn(ParseNode $n) => $o->setCriteria($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'database' => fn(ParseNode $n) => $o->setDatabase($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'field' => fn(ParseNode $n) => $o->setField($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -110,9 +70,6 @@ class DsumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('criteria', $this->getCriteria());
-        $writer->writeObjectValue('database', $this->getDatabase());
-        $writer->writeObjectValue('field', $this->getField());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class DsumPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the criteria property value. The criteria property
-     * @param Json|null $value Value to set for the criteria property.
-    */
-    public function setCriteria(?Json $value): void {
-        $this->getBackingStore()->set('criteria', $value);
-    }
-
-    /**
-     * Sets the database property value. The database property
-     * @param Json|null $value Value to set for the database property.
-    */
-    public function setDatabase(?Json $value): void {
-        $this->getBackingStore()->set('database', $value);
-    }
-
-    /**
-     * Sets the field property value. The field property
-     * @param Json|null $value Value to set for the field property.
-    */
-    public function setField(?Json $value): void {
-        $this->getBackingStore()->set('field', $value);
     }
 
 }

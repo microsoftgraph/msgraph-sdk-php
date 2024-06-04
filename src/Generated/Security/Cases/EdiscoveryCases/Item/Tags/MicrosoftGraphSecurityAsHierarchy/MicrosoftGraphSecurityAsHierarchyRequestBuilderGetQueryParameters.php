@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Mic
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function asHierarchy
+ * List eDiscovery review tags with the tag hierarchy shown.
 */
 class MicrosoftGraphSecurityAsHierarchyRequestBuilderGetQueryParameters 
 {

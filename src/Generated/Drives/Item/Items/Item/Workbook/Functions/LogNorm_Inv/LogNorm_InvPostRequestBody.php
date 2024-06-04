@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\LogNorm_Inv;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,46 +62,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'mean' => fn(ParseNode $n) => $o->setMean($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'probability' => fn(ParseNode $n) => $o->setProbability($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'standardDev' => fn(ParseNode $n) => $o->setStandardDev($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the mean property value. The mean property
-     * @return Json|null
-    */
-    public function getMean(): ?Json {
-        $val = $this->getBackingStore()->get('mean');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'mean'");
-    }
-
-    /**
-     * Gets the probability property value. The probability property
-     * @return Json|null
-    */
-    public function getProbability(): ?Json {
-        $val = $this->getBackingStore()->get('probability');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'probability'");
-    }
-
-    /**
-     * Gets the standardDev property value. The standardDev property
-     * @return Json|null
-    */
-    public function getStandardDev(): ?Json {
-        $val = $this->getBackingStore()->get('standardDev');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'standardDev'");
     }
 
     /**
@@ -110,9 +70,6 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('mean', $this->getMean());
-        $writer->writeObjectValue('probability', $this->getProbability());
-        $writer->writeObjectValue('standardDev', $this->getStandardDev());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -130,30 +87,6 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the mean property value. The mean property
-     * @param Json|null $value Value to set for the mean property.
-    */
-    public function setMean(?Json $value): void {
-        $this->getBackingStore()->set('mean', $value);
-    }
-
-    /**
-     * Sets the probability property value. The probability property
-     * @param Json|null $value Value to set for the probability property.
-    */
-    public function setProbability(?Json $value): void {
-        $this->getBackingStore()->set('probability', $value);
-    }
-
-    /**
-     * Sets the standardDev property value. The standardDev property
-     * @param Json|null $value Value to set for the standardDev property.
-    */
-    public function setStandardDev(?Json $value): void {
-        $this->getBackingStore()->set('standardDev', $value);
     }
 
 }

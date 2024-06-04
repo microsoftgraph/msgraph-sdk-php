@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\Items\Item\Workbook\Functions\Edate;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -63,33 +62,7 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'months' => fn(ParseNode $n) => $o->setMonths($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
-            'startDate' => fn(ParseNode $n) => $o->setStartDate($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the months property value. The months property
-     * @return Json|null
-    */
-    public function getMonths(): ?Json {
-        $val = $this->getBackingStore()->get('months');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'months'");
-    }
-
-    /**
-     * Gets the startDate property value. The startDate property
-     * @return Json|null
-    */
-    public function getStartDate(): ?Json {
-        $val = $this->getBackingStore()->get('startDate');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDate'");
     }
 
     /**
@@ -97,8 +70,6 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeObjectValue('months', $this->getMonths());
-        $writer->writeObjectValue('startDate', $this->getStartDate());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -116,22 +87,6 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the months property value. The months property
-     * @param Json|null $value Value to set for the months property.
-    */
-    public function setMonths(?Json $value): void {
-        $this->getBackingStore()->set('months', $value);
-    }
-
-    /**
-     * Sets the startDate property value. The startDate property
-     * @param Json|null $value Value to set for the startDate property.
-    */
-    public function setStartDate(?Json $value): void {
-        $this->getBackingStore()->set('startDate', $value);
     }
 
 }

@@ -28,11 +28,12 @@ class AttachmentBaseItemRequestBuilderGetRequestConfiguration extends BaseReques
 
     /**
      * Instantiates a new AttachmentBaseItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return AttachmentBaseItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): AttachmentBaseItemRequestBuilderGetQueryParameters {
-        return new AttachmentBaseItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): AttachmentBaseItemRequestBuilderGetQueryParameters {
+        return new AttachmentBaseItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

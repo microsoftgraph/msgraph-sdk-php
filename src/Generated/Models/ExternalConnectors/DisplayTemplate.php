@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Models\ExternalConnectors;
 
-use Microsoft\Graph\Generated\Models\Json;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -65,7 +64,6 @@ class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
-            'layout' => fn(ParseNode $n) => $o->setLayout($n->getObjectValue([Json::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'priority' => fn(ParseNode $n) => $o->setPriority($n->getIntegerValue()),
             'rules' => fn(ParseNode $n) => $o->setRules($n->getCollectionOfObjectValues([PropertyRule::class, 'createFromDiscriminatorValue'])),
@@ -82,18 +80,6 @@ class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
-    }
-
-    /**
-     * Gets the layout property value. The layout property
-     * @return Json|null
-    */
-    public function getLayout(): ?Json {
-        $val = $this->getBackingStore()->get('layout');
-        if (is_null($val) || $val instanceof Json) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'layout'");
     }
 
     /**
@@ -140,7 +126,6 @@ class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('id', $this->getId());
-        $writer->writeObjectValue('layout', $this->getLayout());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('priority', $this->getPriority());
         $writer->writeCollectionOfObjectValues('rules', $this->getRules());
@@ -169,14 +154,6 @@ class DisplayTemplate implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
-    }
-
-    /**
-     * Sets the layout property value. The layout property
-     * @param Json|null $value Value to set for the layout property.
-    */
-    public function setLayout(?Json $value): void {
-        $this->getBackingStore()->set('layout', $value);
     }
 
     /**

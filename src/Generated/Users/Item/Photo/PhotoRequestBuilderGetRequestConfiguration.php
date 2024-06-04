@@ -28,11 +28,12 @@ class PhotoRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
 
     /**
      * Instantiates a new PhotoRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return PhotoRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): PhotoRequestBuilderGetQueryParameters {
-        return new PhotoRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): PhotoRequestBuilderGetQueryParameters {
+        return new PhotoRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }
