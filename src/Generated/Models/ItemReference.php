@@ -135,7 +135,7 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the path property value. Path that can be used to navigate to the item. Read-only.
+     * Gets the path property value. Percent-encoded path that can be used to navigate to the item. Read-only.
      * @return string|null
     */
     public function getPath(): ?string {
@@ -256,7 +256,7 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the path property value. Path that can be used to navigate to the item. Read-only.
+     * Sets the path property value. Percent-encoded path that can be used to navigate to the item. Read-only.
      * @param string|null $value Value to set for the path property.
     */
     public function setPath(?string $value): void {

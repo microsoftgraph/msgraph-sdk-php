@@ -47,7 +47,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the invitedUser property value. The user created as part of the invitation creation. Read-Only
+     * Gets the invitedUser property value. The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @return User|null
     */
     public function getInvitedUser(): ?User {
@@ -83,7 +83,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
+     * Gets the invitedUserMessageInfo property value. Contains configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
      * @return InvitedUserMessageInfo|null
     */
     public function getInvitedUserMessageInfo(): ?InvitedUserMessageInfo {
@@ -133,7 +133,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
+     * Gets the inviteRedirectUrl property value. The URL the user should be redirected to after the invitation is redeemed. Required.
      * @return string|null
     */
     public function getInviteRedirectUrl(): ?string {
@@ -145,7 +145,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
+     * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When true, the invitedUser/id relationship is required. For more information about using this property, see Reset redemption status for a guest user.
      * @return bool|null
     */
     public function getResetRedemption(): ?bool {
@@ -200,7 +200,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the invitedUser property value. The user created as part of the invitation creation. Read-Only
+     * Sets the invitedUser property value. The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @param User|null $value Value to set for the invitedUser property.
     */
     public function setInvitedUser(?User $value): void {
@@ -224,7 +224,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
+     * Sets the invitedUserMessageInfo property value. Contains configuration for the message being sent to the invited user, including customizing message text, language, and cc recipient list.
      * @param InvitedUserMessageInfo|null $value Value to set for the invitedUserMessageInfo property.
     */
     public function setInvitedUserMessageInfo(?InvitedUserMessageInfo $value): void {
@@ -256,7 +256,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
+     * Sets the inviteRedirectUrl property value. The URL the user should be redirected to after the invitation is redeemed. Required.
      * @param string|null $value Value to set for the inviteRedirectUrl property.
     */
     public function setInviteRedirectUrl(?string $value): void {
@@ -264,7 +264,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
+     * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When true, the invitedUser/id relationship is required. For more information about using this property, see Reset redemption status for a guest user.
      * @param bool|null $value Value to set for the resetRedemption property.
     */
     public function setResetRedemption(?bool $value): void {

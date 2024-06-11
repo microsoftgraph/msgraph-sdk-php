@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Invitations\Item\InvitedUser;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The user created as part of the invitation creation. Read-Only
+ * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
 */
 class InvitedUserRequestBuilderGetQueryParameters 
 {

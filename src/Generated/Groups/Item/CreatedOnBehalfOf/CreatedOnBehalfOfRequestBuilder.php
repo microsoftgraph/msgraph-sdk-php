@@ -31,7 +31,7 @@ class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @param CreatedOnBehalfOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObject|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class CreatedOnBehalfOfRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
+     * The user (or application) that created the group. NOTE: This property isn't set if the user is an administrator. Read-only.
      * @param CreatedOnBehalfOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

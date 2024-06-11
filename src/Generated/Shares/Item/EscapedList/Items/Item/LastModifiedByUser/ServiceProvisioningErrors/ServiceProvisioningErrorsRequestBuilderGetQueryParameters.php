@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\LastModif
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
+ * Errors published by a federated service describing a nontransient, service-specific error regarding the properties or link from a user object.  Supports $filter (eq, not, for isResolved and serviceInstance).
 */
 class ServiceProvisioningErrorsRequestBuilderGetQueryParameters 
 {
