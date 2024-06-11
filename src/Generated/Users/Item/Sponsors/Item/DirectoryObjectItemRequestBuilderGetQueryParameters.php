@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Sponsors\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+ * The users and groups responsible for this guest's privileges in the tenant and keeping the guest's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
 */
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {

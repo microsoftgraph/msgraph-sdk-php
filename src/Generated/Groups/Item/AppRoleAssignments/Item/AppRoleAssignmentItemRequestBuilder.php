@@ -46,7 +46,7 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      * @param AppRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignment|null>
      * @throws Exception
@@ -93,7 +93,7 @@ class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the app roles a group has been granted for an application. Supports $expand.
+     * Represents the app roles granted to a group for an application. Supports $expand.
      * @param AppRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

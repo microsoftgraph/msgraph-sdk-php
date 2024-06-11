@@ -270,7 +270,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
+     * Gets the isRooted property value. true if the device is rooted or jail-broken. This property can only be updated by Intune.
      * @return bool|null
     */
     public function getIsRooted(): ?bool {
@@ -672,7 +672,7 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isRooted property value. true if the device is rooted; false if the device is jail-broken. This property can only be updated by Intune.
+     * Sets the isRooted property value. true if the device is rooted or jail-broken. This property can only be updated by Intune.
      * @param bool|null $value Value to set for the isRooted property.
     */
     public function setIsRooted(?bool $value): void {

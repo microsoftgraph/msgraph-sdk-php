@@ -117,6 +117,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
             'clientApplications' => fn(ParseNode $n) => $o->setClientApplications($n->getObjectValue([ConditionalAccessClientApplications::class, 'createFromDiscriminatorValue'])),
             'clientAppTypes' => fn(ParseNode $n) => $o->setClientAppTypes($n->getCollectionOfEnumValues(ConditionalAccessClientApp::class)),
             'devices' => fn(ParseNode $n) => $o->setDevices($n->getObjectValue([ConditionalAccessDevices::class, 'createFromDiscriminatorValue'])),
+            'insiderRiskLevels' => fn(ParseNode $n) => $o->setInsiderRiskLevels($n->getEnumValue(ConditionalAccessInsiderRiskLevels::class)),
             'locations' => fn(ParseNode $n) => $o->setLocations($n->getObjectValue([ConditionalAccessLocations::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'platforms' => fn(ParseNode $n) => $o->setPlatforms($n->getObjectValue([ConditionalAccessPlatforms::class, 'createFromDiscriminatorValue'])),
@@ -125,6 +126,18 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
             'userRiskLevels' => fn(ParseNode $n) => $o->setUserRiskLevels($n->getCollectionOfEnumValues(RiskLevel::class)),
             'users' => fn(ParseNode $n) => $o->setUsers($n->getObjectValue([ConditionalAccessUsers::class, 'createFromDiscriminatorValue'])),
         ];
+    }
+
+    /**
+     * Gets the insiderRiskLevels property value. The insiderRiskLevels property
+     * @return ConditionalAccessInsiderRiskLevels|null
+    */
+    public function getInsiderRiskLevels(): ?ConditionalAccessInsiderRiskLevels {
+        $val = $this->getBackingStore()->get('insiderRiskLevels');
+        if (is_null($val) || $val instanceof ConditionalAccessInsiderRiskLevels) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'insiderRiskLevels'");
     }
 
     /**
@@ -226,6 +239,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
         $writer->writeObjectValue('clientApplications', $this->getClientApplications());
         $writer->writeCollectionOfEnumValues('clientAppTypes', $this->getClientAppTypes());
         $writer->writeObjectValue('devices', $this->getDevices());
+        $writer->writeEnumValue('insiderRiskLevels', $this->getInsiderRiskLevels());
         $writer->writeObjectValue('locations', $this->getLocations());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('platforms', $this->getPlatforms());
@@ -282,6 +296,14 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     */
     public function setDevices(?ConditionalAccessDevices $value): void {
         $this->getBackingStore()->set('devices', $value);
+    }
+
+    /**
+     * Sets the insiderRiskLevels property value. The insiderRiskLevels property
+     * @param ConditionalAccessInsiderRiskLevels|null $value Value to set for the insiderRiskLevels property.
+    */
+    public function setInsiderRiskLevels(?ConditionalAccessInsiderRiskLevels $value): void {
+        $this->getBackingStore()->set('insiderRiskLevels', $value);
     }
 
     /**

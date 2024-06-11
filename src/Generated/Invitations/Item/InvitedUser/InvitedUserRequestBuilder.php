@@ -47,7 +47,7 @@ class InvitedUserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @param InvitedUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
@@ -61,7 +61,7 @@ class InvitedUserRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user created as part of the invitation creation. Read-Only
+     * The user created as part of the invitation creation. Read-only. The id property is required in the request body to reset a redemption status.
      * @param InvitedUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
