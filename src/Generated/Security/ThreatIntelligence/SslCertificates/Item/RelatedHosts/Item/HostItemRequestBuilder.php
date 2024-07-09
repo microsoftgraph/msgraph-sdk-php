@@ -31,7 +31,7 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      * @param HostItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Host|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class HostItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The hosts related with this sslCertificate.
+     * The host resources related with this sslCertificate.
      * @param HostItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

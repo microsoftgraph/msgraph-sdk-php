@@ -142,7 +142,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Gets the subscriptions property value. The subscriptions property
+     * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @return array<CompanySubscription>|null
     */
     public function getSubscriptions(): ?array {
@@ -228,7 +228,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Sets the subscriptions property value. The subscriptions property
+     * Sets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @param array<CompanySubscription>|null $value Value to set for the subscriptions property.
     */
     public function setSubscriptions(?array $value): void {
