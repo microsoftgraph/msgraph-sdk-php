@@ -120,7 +120,7 @@ class SslCertificate extends Artifact implements Parsable
     }
 
     /**
-     * Gets the relatedHosts property value. The hosts related with this sslCertificate.
+     * Gets the relatedHosts property value. The host resources related with this sslCertificate.
      * @return array<Host>|null
     */
     public function getRelatedHosts(): ?array {
@@ -236,7 +236,7 @@ class SslCertificate extends Artifact implements Parsable
     }
 
     /**
-     * Sets the relatedHosts property value. The hosts related with this sslCertificate.
+     * Sets the relatedHosts property value. The host resources related with this sslCertificate.
      * @param array<Host>|null $value Value to set for the relatedHosts property.
     */
     public function setRelatedHosts(?array $value): void {
