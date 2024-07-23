@@ -47,8 +47,23 @@ class VirtualEventsRoot extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([VirtualEvent::class, 'createFromDiscriminatorValue'])),
+            'townhalls' => fn(ParseNode $n) => $o->setTownhalls($n->getCollectionOfObjectValues([VirtualEventTownhall::class, 'createFromDiscriminatorValue'])),
             'webinars' => fn(ParseNode $n) => $o->setWebinars($n->getCollectionOfObjectValues([VirtualEventWebinar::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the townhalls property value. The townhalls property
+     * @return array<VirtualEventTownhall>|null
+    */
+    public function getTownhalls(): ?array {
+        $val = $this->getBackingStore()->get('townhalls');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventTownhall::class);
+            /** @var array<VirtualEventTownhall>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'townhalls'");
     }
 
     /**
@@ -72,6 +87,7 @@ class VirtualEventsRoot extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('events', $this->getEvents());
+        $writer->writeCollectionOfObjectValues('townhalls', $this->getTownhalls());
         $writer->writeCollectionOfObjectValues('webinars', $this->getWebinars());
     }
 
@@ -81,6 +97,14 @@ class VirtualEventsRoot extends Entity implements Parsable
     */
     public function setEvents(?array $value): void {
         $this->getBackingStore()->set('events', $value);
+    }
+
+    /**
+     * Sets the townhalls property value. The townhalls property
+     * @param array<VirtualEventTownhall>|null $value Value to set for the townhalls property.
+    */
+    public function setTownhalls(?array $value): void {
+        $this->getBackingStore()->set('townhalls', $value);
     }
 
     /**

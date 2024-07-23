@@ -93,12 +93,11 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property assignmentPolicies in identityGovernance
      * @param AccessPackageAssignmentPolicy $body The request body
      * @param AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageAssignmentPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function put(AccessPackageAssignmentPolicy $body, ?AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
@@ -148,7 +147,7 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
+     * Update the navigation property assignmentPolicies in identityGovernance
      * @param AccessPackageAssignmentPolicy $body The request body
      * @param AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * This type represents the set of policies that dictate how bookings can be created in a Booking Calendar.
@@ -72,6 +73,20 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
+     * Gets the customAvailabilities property value. collection of custom availabilities for a given time range.
+     * @return array<BookingsAvailabilityWindow>|null
+    */
+    public function getCustomAvailabilities(): ?array {
+        $val = $this->getBackingStore()->get('customAvailabilities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BookingsAvailabilityWindow::class);
+            /** @var array<BookingsAvailabilityWindow>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customAvailabilities'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -79,12 +94,39 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
         $o = $this;
         return  [
             'allowStaffSelection' => fn(ParseNode $n) => $o->setAllowStaffSelection($n->getBooleanValue()),
+            'customAvailabilities' => fn(ParseNode $n) => $o->setCustomAvailabilities($n->getCollectionOfObjectValues([BookingsAvailabilityWindow::class, 'createFromDiscriminatorValue'])),
+            'generalAvailability' => fn(ParseNode $n) => $o->setGeneralAvailability($n->getObjectValue([BookingsAvailability::class, 'createFromDiscriminatorValue'])),
+            'isMeetingInviteToCustomersEnabled' => fn(ParseNode $n) => $o->setIsMeetingInviteToCustomersEnabled($n->getBooleanValue()),
             'maximumAdvance' => fn(ParseNode $n) => $o->setMaximumAdvance($n->getDateIntervalValue()),
             'minimumLeadTime' => fn(ParseNode $n) => $o->setMinimumLeadTime($n->getDateIntervalValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'sendConfirmationsToOwner' => fn(ParseNode $n) => $o->setSendConfirmationsToOwner($n->getBooleanValue()),
             'timeSlotInterval' => fn(ParseNode $n) => $o->setTimeSlotInterval($n->getDateIntervalValue()),
         ];
+    }
+
+    /**
+     * Gets the generalAvailability property value. General availability 
+     * @return BookingsAvailability|null
+    */
+    public function getGeneralAvailability(): ?BookingsAvailability {
+        $val = $this->getBackingStore()->get('generalAvailability');
+        if (is_null($val) || $val instanceof BookingsAvailability) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'generalAvailability'");
+    }
+
+    /**
+     * Gets the isMeetingInviteToCustomersEnabled property value. Enable sending meeting invite to customers. False by default.
+     * @return bool|null
+    */
+    public function getIsMeetingInviteToCustomersEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isMeetingInviteToCustomersEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMeetingInviteToCustomersEnabled'");
     }
 
     /**
@@ -153,6 +195,9 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('allowStaffSelection', $this->getAllowStaffSelection());
+        $writer->writeCollectionOfObjectValues('customAvailabilities', $this->getCustomAvailabilities());
+        $writer->writeObjectValue('generalAvailability', $this->getGeneralAvailability());
+        $writer->writeBooleanValue('isMeetingInviteToCustomersEnabled', $this->getIsMeetingInviteToCustomersEnabled());
         $writer->writeDateIntervalValue('maximumAdvance', $this->getMaximumAdvance());
         $writer->writeDateIntervalValue('minimumLeadTime', $this->getMinimumLeadTime());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -183,6 +228,30 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the customAvailabilities property value. collection of custom availabilities for a given time range.
+     * @param array<BookingsAvailabilityWindow>|null $value Value to set for the customAvailabilities property.
+    */
+    public function setCustomAvailabilities(?array $value): void {
+        $this->getBackingStore()->set('customAvailabilities', $value);
+    }
+
+    /**
+     * Sets the generalAvailability property value. General availability 
+     * @param BookingsAvailability|null $value Value to set for the generalAvailability property.
+    */
+    public function setGeneralAvailability(?BookingsAvailability $value): void {
+        $this->getBackingStore()->set('generalAvailability', $value);
+    }
+
+    /**
+     * Sets the isMeetingInviteToCustomersEnabled property value. Enable sending meeting invite to customers. False by default.
+     * @param bool|null $value Value to set for the isMeetingInviteToCustomersEnabled property.
+    */
+    public function setIsMeetingInviteToCustomersEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isMeetingInviteToCustomersEnabled', $value);
     }
 
     /**

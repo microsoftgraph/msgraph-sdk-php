@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -55,6 +56,18 @@ class BookingCustomQuestion extends Entity implements Parsable
     }
 
     /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
+    }
+
+    /**
      * Gets the displayName property value. The question.
      * @return string|null
     */
@@ -82,8 +95,22 @@ class BookingCustomQuestion extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setAnswerOptions($val);
             },
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
         ]);
+    }
+
+    /**
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @return DateTime|null
+    */
+    public function getLastUpdatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -94,7 +121,9 @@ class BookingCustomQuestion extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeEnumValue('answerInputType', $this->getAnswerInputType());
         $writer->writeCollectionOfPrimitiveValues('answerOptions', $this->getAnswerOptions());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
     }
 
     /**
@@ -114,11 +143,27 @@ class BookingCustomQuestion extends Entity implements Parsable
     }
 
     /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
      * Sets the displayName property value. The question.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+    */
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
 }
