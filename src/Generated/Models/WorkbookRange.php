@@ -73,7 +73,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Gets the columnHidden property value. Represents if all columns of the current range are hidden.
+     * Gets the columnHidden property value. Indicates whether all columns of the current range are hidden.
      * @return bool|null
     */
     public function getColumnHidden(): ?bool {
@@ -156,7 +156,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Gets the rowHidden property value. Represents if all rows of the current range are hidden.
+     * Gets the rowHidden property value. Indicates whether all rows of the current range are hidden.
      * @return bool|null
     */
     public function getRowHidden(): ?bool {
@@ -257,7 +257,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Sets the columnHidden property value. Represents if all columns of the current range are hidden.
+     * Sets the columnHidden property value. Indicates whether all columns of the current range are hidden.
      * @param bool|null $value Value to set for the columnHidden property.
     */
     public function setColumnHidden(?bool $value): void {
@@ -297,7 +297,7 @@ class WorkbookRange extends Entity implements Parsable
     }
 
     /**
-     * Sets the rowHidden property value. Represents if all rows of the current range are hidden.
+     * Sets the rowHidden property value. Indicates whether all rows of the current range are hidden.
      * @param bool|null $value Value to set for the rowHidden property.
     */
     public function setRowHidden(?bool $value): void {

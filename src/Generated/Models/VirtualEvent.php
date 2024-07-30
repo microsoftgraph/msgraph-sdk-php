@@ -26,6 +26,7 @@ class VirtualEvent extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.virtualEventTownhall': return new VirtualEventTownhall();
                 case '#microsoft.graph.virtualEventWebinar': return new VirtualEventWebinar();
             }
         }
@@ -91,10 +92,25 @@ class VirtualEvent extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'presenters' => fn(ParseNode $n) => $o->setPresenters($n->getCollectionOfObjectValues([VirtualEventPresenter::class, 'createFromDiscriminatorValue'])),
             'sessions' => fn(ParseNode $n) => $o->setSessions($n->getCollectionOfObjectValues([VirtualEventSession::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(VirtualEventStatus::class)),
         ]);
+    }
+
+    /**
+     * Gets the presenters property value. The presenters property
+     * @return array<VirtualEventPresenter>|null
+    */
+    public function getPresenters(): ?array {
+        $val = $this->getBackingStore()->get('presenters');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventPresenter::class);
+            /** @var array<VirtualEventPresenter>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'presenters'");
     }
 
     /**
@@ -145,6 +161,7 @@ class VirtualEvent extends Entity implements Parsable
         $writer->writeObjectValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
+        $writer->writeCollectionOfObjectValues('presenters', $this->getPresenters());
         $writer->writeCollectionOfObjectValues('sessions', $this->getSessions());
         $writer->writeObjectValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('status', $this->getStatus());
@@ -180,6 +197,14 @@ class VirtualEvent extends Entity implements Parsable
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
+    }
+
+    /**
+     * Sets the presenters property value. The presenters property
+     * @param array<VirtualEventPresenter>|null $value Value to set for the presenters property.
+    */
+    public function setPresenters(?array $value): void {
+        $this->getBackingStore()->set('presenters', $value);
     }
 
     /**

@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Admin\People;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Admin\People\ItemInsights\ItemInsightsRequestBuilder;
 use Microsoft\Graph\Generated\Admin\People\ProfileCardProperties\ProfileCardPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Admin\People\Pronouns\PronounsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class PeopleRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the itemInsights property of the microsoft.graph.peopleAdminSettings entity.
+    */
+    public function itemInsights(): ItemInsightsRequestBuilder {
+        return new ItemInsightsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the profileCardProperties property of the microsoft.graph.peopleAdminSettings entity.
     */

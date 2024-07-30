@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ChannelCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\GetAllRetainedMessages\GetAllRetainedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\ChannelItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,6 +33,13 @@ class ChannelsRequestBuilder extends BaseRequestBuilder
     */
     public function getAllMessages(): GetAllMessagesRequestBuilder {
         return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllRetainedMessages method.
+    */
+    public function getAllRetainedMessages(): GetAllRetainedMessagesRequestBuilder {
+        return new GetAllRetainedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

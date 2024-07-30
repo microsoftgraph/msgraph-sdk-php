@@ -102,7 +102,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. Represents the status of a long-running operation.
+     * Gets the operations property value. Represents the status of a long-running operation, such as a password reset operation.
      * @return array<LongRunningOperation>|null
     */
     public function getOperations(): ?array {
@@ -236,7 +236,7 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. Represents the status of a long-running operation.
+     * Sets the operations property value. Represents the status of a long-running operation, such as a password reset operation.
      * @param array<LongRunningOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {

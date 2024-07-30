@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -44,6 +45,18 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     }
 
     /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
+    }
+
+    /**
      * Gets the displayName property value. The name of the customer.
      * @return string|null
     */
@@ -75,10 +88,24 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'addresses' => fn(ParseNode $n) => $o->setAddresses($n->getCollectionOfObjectValues([PhysicalAddress::class, 'createFromDiscriminatorValue'])),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'phones' => fn(ParseNode $n) => $o->setPhones($n->getCollectionOfObjectValues([Phone::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @return DateTime|null
+    */
+    public function getLastUpdatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -102,8 +129,10 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('addresses', $this->getAddresses());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeCollectionOfObjectValues('phones', $this->getPhones());
     }
 
@@ -113,6 +142,14 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     */
     public function setAddresses(?array $value): void {
         $this->getBackingStore()->set('addresses', $value);
+    }
+
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
@@ -129,6 +166,14 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
+    }
+
+    /**
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+    */
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
     /**

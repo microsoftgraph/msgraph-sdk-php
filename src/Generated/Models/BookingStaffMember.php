@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -42,6 +43,18 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
+    }
+
+    /**
      * Gets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @return string|null
     */
@@ -73,9 +86,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'availabilityIsAffectedByPersonalCalendar' => fn(ParseNode $n) => $o->setAvailabilityIsAffectedByPersonalCalendar($n->getBooleanValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'isEmailNotificationEnabled' => fn(ParseNode $n) => $o->setIsEmailNotificationEnabled($n->getBooleanValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'membershipStatus' => fn(ParseNode $n) => $o->setMembershipStatus($n->getEnumValue(BookingStaffMembershipStatus::class)),
             'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(BookingStaffRole::class)),
             'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
@@ -94,6 +109,18 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isEmailNotificationEnabled'");
+    }
+
+    /**
+     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @return DateTime|null
+    */
+    public function getLastUpdatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -165,9 +192,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('availabilityIsAffectedByPersonalCalendar', $this->getAvailabilityIsAffectedByPersonalCalendar());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeBooleanValue('isEmailNotificationEnabled', $this->getIsEmailNotificationEnabled());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeEnumValue('membershipStatus', $this->getMembershipStatus());
         $writer->writeEnumValue('role', $this->getRole());
         $writer->writeStringValue('timeZone', $this->getTimeZone());
@@ -181,6 +210,14 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     */
     public function setAvailabilityIsAffectedByPersonalCalendar(?bool $value): void {
         $this->getBackingStore()->set('availabilityIsAffectedByPersonalCalendar', $value);
+    }
+
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
@@ -205,6 +242,14 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     */
     public function setIsEmailNotificationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEmailNotificationEnabled', $value);
+    }
+
+    /**
+     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+    */
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
     /**
