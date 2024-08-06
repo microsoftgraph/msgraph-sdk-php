@@ -49,7 +49,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
     }
 
     /**
-     * Gets the visible property value. Boolean value representing if the axis gridlines are visible or not.
+     * Gets the visible property value. Indicates whether the axis gridlines are visible.
      * @return bool|null
     */
     public function getVisible(): ?bool {
@@ -79,7 +79,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
     }
 
     /**
-     * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
+     * Sets the visible property value. Indicates whether the axis gridlines are visible.
      * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {

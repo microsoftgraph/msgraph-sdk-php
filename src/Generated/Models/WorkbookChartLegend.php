@@ -51,7 +51,7 @@ class WorkbookChartLegend extends Entity implements Parsable
     }
 
     /**
-     * Gets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
+     * Gets the overlay property value. Indicates whether the chart legend should overlap with the main body of the chart.
      * @return bool|null
     */
     public function getOverlay(): ?bool {
@@ -75,7 +75,7 @@ class WorkbookChartLegend extends Entity implements Parsable
     }
 
     /**
-     * Gets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
+     * Gets the visible property value. Indicates whether the chart legend is visible.
      * @return bool|null
     */
     public function getVisible(): ?bool {
@@ -107,7 +107,7 @@ class WorkbookChartLegend extends Entity implements Parsable
     }
 
     /**
-     * Sets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
+     * Sets the overlay property value. Indicates whether the chart legend should overlap with the main body of the chart.
      * @param bool|null $value Value to set for the overlay property.
     */
     public function setOverlay(?bool $value): void {
@@ -123,7 +123,7 @@ class WorkbookChartLegend extends Entity implements Parsable
     }
 
     /**
-     * Sets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
+     * Sets the visible property value. Indicates whether the chart legend is visible.
      * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {

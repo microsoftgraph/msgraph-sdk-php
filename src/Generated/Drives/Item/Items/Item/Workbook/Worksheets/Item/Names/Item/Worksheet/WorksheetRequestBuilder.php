@@ -31,7 +31,7 @@ class WorksheetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     * Returns the worksheet to which the named item is scoped. Available only if the item is scoped to the worksheet. Read-only.
      * @param WorksheetRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookWorksheet|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class WorksheetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     * Returns the worksheet to which the named item is scoped. Available only if the item is scoped to the worksheet. Read-only.
      * @param WorksheetRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

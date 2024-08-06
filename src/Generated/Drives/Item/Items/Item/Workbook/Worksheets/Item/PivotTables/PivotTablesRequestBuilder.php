@@ -60,7 +60,7 @@ class PivotTablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @param PivotTablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookPivotTableCollectionResponse|null>
      * @throws Exception
@@ -89,7 +89,7 @@ class PivotTablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @param PivotTablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -42,6 +43,18 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
+     * Gets the createdDateTime property value. The date, time, and time zone when the staff member was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
+    }
+
+    /**
      * Gets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @return string|null
     */
@@ -54,7 +67,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
+     * Gets the emailAddress property value. The email address of the staff member. This email address can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
      * @return string|null
     */
     public function getEmailAddress(): ?string {
@@ -73,9 +86,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'availabilityIsAffectedByPersonalCalendar' => fn(ParseNode $n) => $o->setAvailabilityIsAffectedByPersonalCalendar($n->getBooleanValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'isEmailNotificationEnabled' => fn(ParseNode $n) => $o->setIsEmailNotificationEnabled($n->getBooleanValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'membershipStatus' => fn(ParseNode $n) => $o->setMembershipStatus($n->getEnumValue(BookingStaffMembershipStatus::class)),
             'role' => fn(ParseNode $n) => $o->setRole($n->getEnumValue(BookingStaffRole::class)),
             'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
@@ -85,7 +100,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
+     * Gets the isEmailNotificationEnabled property value. Indicates that a staff member is notified via email when a booking assigned to them is created or changed. The default value is true.
      * @return bool|null
     */
     public function getIsEmailNotificationEnabled(): ?bool {
@@ -94,6 +109,18 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isEmailNotificationEnabled'");
+    }
+
+    /**
+     * Gets the lastUpdatedDateTime property value. The date, time, and time zone when the staff member was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getLastUpdatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -145,7 +172,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
+     * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they're initialized to be the same as the businessHours property of the business.
      * @return array<BookingWorkHours>|null
     */
     public function getWorkingHours(): ?array {
@@ -165,9 +192,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeBooleanValue('availabilityIsAffectedByPersonalCalendar', $this->getAvailabilityIsAffectedByPersonalCalendar());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeBooleanValue('isEmailNotificationEnabled', $this->getIsEmailNotificationEnabled());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeEnumValue('membershipStatus', $this->getMembershipStatus());
         $writer->writeEnumValue('role', $this->getRole());
         $writer->writeStringValue('timeZone', $this->getTimeZone());
@@ -184,6 +213,14 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
+     * Sets the createdDateTime property value. The date, time, and time zone when the staff member was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
      * Sets the displayName property value. The name of the staff member, as displayed to customers. Required.
      * @param string|null $value Value to set for the displayName property.
     */
@@ -192,7 +229,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the emailAddress property value. The email address of the staff member. This can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
+     * Sets the emailAddress property value. The email address of the staff member. This email address can be in the same Microsoft 365 tenant as the business, or in a different email domain. This email address can be used if the sendConfirmationsToOwner property is set to true in the scheduling policy of the business. Required.
      * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
@@ -200,11 +237,19 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
+     * Sets the isEmailNotificationEnabled property value. Indicates that a staff member is notified via email when a booking assigned to them is created or changed. The default value is true.
      * @param bool|null $value Value to set for the isEmailNotificationEnabled property.
     */
     public function setIsEmailNotificationEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEmailNotificationEnabled', $value);
+    }
+
+    /**
+     * Sets the lastUpdatedDateTime property value. The date, time, and time zone when the staff member was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+    */
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
     /**
@@ -240,7 +285,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
+     * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they're initialized to be the same as the businessHours property of the business.
      * @param array<BookingWorkHours>|null $value Value to set for the workingHours property.
     */
     public function setWorkingHours(?array $value): void {

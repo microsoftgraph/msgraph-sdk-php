@@ -54,7 +54,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Gets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
+     * Gets the continueOnError property value. A Boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @return bool|null
     */
     public function getContinueOnError(): ?bool {
@@ -121,7 +121,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Gets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
+     * Gets the isEnabled property value. A Boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -192,7 +192,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Sets the continueOnError property value. A boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
+     * Sets the continueOnError property value. A Boolean value that specifies whether, if this task fails, the workflow stops, and subsequent tasks aren't run. Optional.
      * @param bool|null $value Value to set for the continueOnError property.
     */
     public function setContinueOnError(?bool $value): void {
@@ -224,7 +224,7 @@ class Task extends Entity implements Parsable
     }
 
     /**
-     * Sets the isEnabled property value. A boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
+     * Sets the isEnabled property value. A Boolean value that denotes whether the task is set to run or not. Optional.Supports $filter(eq, ne) and orderBy.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {

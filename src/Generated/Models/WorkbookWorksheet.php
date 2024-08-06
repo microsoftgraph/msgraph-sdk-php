@@ -26,7 +26,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Gets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
+     * Gets the charts property value. The list of charts that are part of the worksheet. Read-only.
      * @return array<WorkbookChart>|null
     */
     public function getCharts(): ?array {
@@ -70,7 +70,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Gets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
+     * Gets the names property value. The list of names that are associated with the worksheet. Read-only.
      * @return array<WorkbookNamedItem>|null
     */
     public function getNames(): ?array {
@@ -84,7 +84,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Gets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
+     * Gets the pivotTables property value. The list of piot tables that are part of the worksheet.
      * @return array<WorkbookPivotTable>|null
     */
     public function getPivotTables(): ?array {
@@ -110,7 +110,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Gets the protection property value. Returns sheet protection object for a worksheet. Read-only.
+     * Gets the protection property value. The sheet protection object for a worksheet. Read-only.
      * @return WorkbookWorksheetProtection|null
     */
     public function getProtection(): ?WorkbookWorksheetProtection {
@@ -122,7 +122,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Gets the tables property value. Collection of tables that are part of the worksheet. Read-only.
+     * Gets the tables property value. The list of tables that are part of the worksheet. Read-only.
      * @return array<WorkbookTable>|null
     */
     public function getTables(): ?array {
@@ -136,7 +136,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Gets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     * Gets the visibility property value. The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      * @return string|null
     */
     public function getVisibility(): ?string {
@@ -164,7 +164,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Sets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
+     * Sets the charts property value. The list of charts that are part of the worksheet. Read-only.
      * @param array<WorkbookChart>|null $value Value to set for the charts property.
     */
     public function setCharts(?array $value): void {
@@ -180,7 +180,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Sets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
+     * Sets the names property value. The list of names that are associated with the worksheet. Read-only.
      * @param array<WorkbookNamedItem>|null $value Value to set for the names property.
     */
     public function setNames(?array $value): void {
@@ -188,7 +188,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Sets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
+     * Sets the pivotTables property value. The list of piot tables that are part of the worksheet.
      * @param array<WorkbookPivotTable>|null $value Value to set for the pivotTables property.
     */
     public function setPivotTables(?array $value): void {
@@ -204,7 +204,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Sets the protection property value. Returns sheet protection object for a worksheet. Read-only.
+     * Sets the protection property value. The sheet protection object for a worksheet. Read-only.
      * @param WorkbookWorksheetProtection|null $value Value to set for the protection property.
     */
     public function setProtection(?WorkbookWorksheetProtection $value): void {
@@ -212,7 +212,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Sets the tables property value. Collection of tables that are part of the worksheet. Read-only.
+     * Sets the tables property value. The list of tables that are part of the worksheet. Read-only.
      * @param array<WorkbookTable>|null $value Value to set for the tables property.
     */
     public function setTables(?array $value): void {
@@ -220,7 +220,7 @@ class WorkbookWorksheet extends Entity implements Parsable
     }
 
     /**
-     * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     * Sets the visibility property value. The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      * @param string|null $value Value to set for the visibility property.
     */
     public function setVisibility(?string $value): void {

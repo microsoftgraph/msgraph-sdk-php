@@ -58,9 +58,23 @@ class UserSettings extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'contributionToContentDiscoveryAsOrganizationDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()),
             'contributionToContentDiscoveryDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()),
+            'itemInsights' => fn(ParseNode $n) => $o->setItemInsights($n->getObjectValue([UserInsightsSettings::class, 'createFromDiscriminatorValue'])),
             'shiftPreferences' => fn(ParseNode $n) => $o->setShiftPreferences($n->getObjectValue([ShiftPreferences::class, 'createFromDiscriminatorValue'])),
+            'storage' => fn(ParseNode $n) => $o->setStorage($n->getObjectValue([UserStorage::class, 'createFromDiscriminatorValue'])),
             'windows' => fn(ParseNode $n) => $o->setWindows($n->getCollectionOfObjectValues([WindowsSetting::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the itemInsights property value. The itemInsights property
+     * @return UserInsightsSettings|null
+    */
+    public function getItemInsights(): ?UserInsightsSettings {
+        $val = $this->getBackingStore()->get('itemInsights');
+        if (is_null($val) || $val instanceof UserInsightsSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemInsights'");
     }
 
     /**
@@ -73,6 +87,18 @@ class UserSettings extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'shiftPreferences'");
+    }
+
+    /**
+     * Gets the storage property value. The storage property
+     * @return UserStorage|null
+    */
+    public function getStorage(): ?UserStorage {
+        $val = $this->getBackingStore()->get('storage');
+        if (is_null($val) || $val instanceof UserStorage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storage'");
     }
 
     /**
@@ -97,7 +123,9 @@ class UserSettings extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('contributionToContentDiscoveryAsOrganizationDisabled', $this->getContributionToContentDiscoveryAsOrganizationDisabled());
         $writer->writeBooleanValue('contributionToContentDiscoveryDisabled', $this->getContributionToContentDiscoveryDisabled());
+        $writer->writeObjectValue('itemInsights', $this->getItemInsights());
         $writer->writeObjectValue('shiftPreferences', $this->getShiftPreferences());
+        $writer->writeObjectValue('storage', $this->getStorage());
         $writer->writeCollectionOfObjectValues('windows', $this->getWindows());
     }
 
@@ -118,11 +146,27 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
+     * Sets the itemInsights property value. The itemInsights property
+     * @param UserInsightsSettings|null $value Value to set for the itemInsights property.
+    */
+    public function setItemInsights(?UserInsightsSettings $value): void {
+        $this->getBackingStore()->set('itemInsights', $value);
+    }
+
+    /**
      * Sets the shiftPreferences property value. The shiftPreferences property
      * @param ShiftPreferences|null $value Value to set for the shiftPreferences property.
     */
     public function setShiftPreferences(?ShiftPreferences $value): void {
         $this->getBackingStore()->set('shiftPreferences', $value);
+    }
+
+    /**
+     * Sets the storage property value. The storage property
+     * @param UserStorage|null $value Value to set for the storage property.
+    */
+    public function setStorage(?UserStorage $value): void {
+        $this->getBackingStore()->set('storage', $value);
     }
 
     /**

@@ -61,7 +61,7 @@ class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @param WorkbookPivotTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookPivotTable|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class WorkbookPivotTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of PivotTables that are part of the worksheet.
+     * The list of piot tables that are part of the worksheet.
      * @param WorkbookPivotTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

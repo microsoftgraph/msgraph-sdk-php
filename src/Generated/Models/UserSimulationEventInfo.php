@@ -69,6 +69,18 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
+     * Gets the clickSource property value. The clickSource property
+     * @return ClickSource|null
+    */
+    public function getClickSource(): ?ClickSource {
+        $val = $this->getBackingStore()->get('clickSource');
+        if (is_null($val) || $val instanceof ClickSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clickSource'");
+    }
+
+    /**
      * Gets the eventDateTime property value. Date and time of the simulation event by a user in an attack simulation and training campaign.
      * @return DateTime|null
     */
@@ -100,6 +112,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
         $o = $this;
         return  [
             'browser' => fn(ParseNode $n) => $o->setBrowser($n->getStringValue()),
+            'clickSource' => fn(ParseNode $n) => $o->setClickSource($n->getEnumValue(ClickSource::class)),
             'eventDateTime' => fn(ParseNode $n) => $o->setEventDateTime($n->getDateTimeValue()),
             'eventName' => fn(ParseNode $n) => $o->setEventName($n->getStringValue()),
             'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
@@ -150,6 +163,7 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('browser', $this->getBrowser());
+        $writer->writeEnumValue('clickSource', $this->getClickSource());
         $writer->writeDateTimeValue('eventDateTime', $this->getEventDateTime());
         $writer->writeStringValue('eventName', $this->getEventName());
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
@@ -180,6 +194,14 @@ class UserSimulationEventInfo implements AdditionalDataHolder, BackedModel, Pars
     */
     public function setBrowser(?string $value): void {
         $this->getBackingStore()->set('browser', $value);
+    }
+
+    /**
+     * Sets the clickSource property value. The clickSource property
+     * @param ClickSource|null $value Value to set for the clickSource property.
+    */
+    public function setClickSource(?ClickSource $value): void {
+        $this->getBackingStore()->set('clickSource', $value);
     }
 
     /**
