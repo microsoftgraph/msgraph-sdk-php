@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\FileStorageContainer;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Activate\ActivateRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Permissions\PermissionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,6 +32,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     */
     public function drive(): DriveRequestBuilder {
         return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

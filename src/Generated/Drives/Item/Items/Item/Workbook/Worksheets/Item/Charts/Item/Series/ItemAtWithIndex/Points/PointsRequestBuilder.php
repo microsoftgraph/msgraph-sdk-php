@@ -32,7 +32,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPointCollectionResponse|null>
      * @throws Exception
@@ -61,7 +61,7 @@ class PointsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

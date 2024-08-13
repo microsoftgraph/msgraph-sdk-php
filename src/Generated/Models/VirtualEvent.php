@@ -26,6 +26,7 @@ class VirtualEvent extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.virtualEventTownhall': return new VirtualEventTownhall();
                 case '#microsoft.graph.virtualEventWebinar': return new VirtualEventWebinar();
             }
         }
@@ -33,7 +34,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
+     * Gets the createdBy property value. The identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @return CommunicationsIdentitySet|null
     */
     public function getCreatedBy(): ?CommunicationsIdentitySet {
@@ -45,7 +46,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Description of the virtual event.
+     * Gets the description property value. A description of the virtual event.
      * @return ItemBody|null
     */
     public function getDescription(): ?ItemBody {
@@ -57,7 +58,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Display name of the virtual event.
+     * Gets the displayName property value. The display name of the virtual event.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -69,7 +70,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
+     * Gets the endDateTime property value. The end time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -91,6 +92,7 @@ class VirtualEvent extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'presenters' => fn(ParseNode $n) => $o->setPresenters($n->getCollectionOfObjectValues([VirtualEventPresenter::class, 'createFromDiscriminatorValue'])),
             'sessions' => fn(ParseNode $n) => $o->setSessions($n->getCollectionOfObjectValues([VirtualEventSession::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(VirtualEventStatus::class)),
@@ -98,7 +100,21 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the sessions property value. Sessions for the virtual event.
+     * Gets the presenters property value. The virtual event presenters.
+     * @return array<VirtualEventPresenter>|null
+    */
+    public function getPresenters(): ?array {
+        $val = $this->getBackingStore()->get('presenters');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventPresenter::class);
+            /** @var array<VirtualEventPresenter>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'presenters'");
+    }
+
+    /**
+     * Gets the sessions property value. The sessions for the virtual event.
      * @return array<VirtualEventSession>|null
     */
     public function getSessions(): ?array {
@@ -124,7 +140,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
+     * Gets the status property value. The status of the virtual event. The possible values are: draft, published, canceled, and unknownFutureValue.
      * @return VirtualEventStatus|null
     */
     public function getStatus(): ?VirtualEventStatus {
@@ -145,13 +161,14 @@ class VirtualEvent extends Entity implements Parsable
         $writer->writeObjectValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
+        $writer->writeCollectionOfObjectValues('presenters', $this->getPresenters());
         $writer->writeCollectionOfObjectValues('sessions', $this->getSessions());
         $writer->writeObjectValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 
     /**
-     * Sets the createdBy property value. Identity information for the creator of the virtual event. Inherited from virtualEvent.
+     * Sets the createdBy property value. The identity information for the creator of the virtual event. Inherited from virtualEvent.
      * @param CommunicationsIdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?CommunicationsIdentitySet $value): void {
@@ -159,7 +176,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. Description of the virtual event.
+     * Sets the description property value. A description of the virtual event.
      * @param ItemBody|null $value Value to set for the description property.
     */
     public function setDescription(?ItemBody $value): void {
@@ -167,7 +184,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Display name of the virtual event.
+     * Sets the displayName property value. The display name of the virtual event.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -175,7 +192,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. End time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
+     * Sets the endDateTime property value. The end time of the virtual event. The timeZone property can be set to any of the time zones currently supported by Windows. For details on how to get all available time zones using PowerShell, see Get-TimeZone.
      * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
@@ -183,7 +200,15 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the sessions property value. Sessions for the virtual event.
+     * Sets the presenters property value. The virtual event presenters.
+     * @param array<VirtualEventPresenter>|null $value Value to set for the presenters property.
+    */
+    public function setPresenters(?array $value): void {
+        $this->getBackingStore()->set('presenters', $value);
+    }
+
+    /**
+     * Sets the sessions property value. The sessions for the virtual event.
      * @param array<VirtualEventSession>|null $value Value to set for the sessions property.
     */
     public function setSessions(?array $value): void {
@@ -199,7 +224,7 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
+     * Sets the status property value. The status of the virtual event. The possible values are: draft, published, canceled, and unknownFutureValue.
      * @param VirtualEventStatus|null $value Value to set for the status property.
     */
     public function setStatus(?VirtualEventStatus $value): void {

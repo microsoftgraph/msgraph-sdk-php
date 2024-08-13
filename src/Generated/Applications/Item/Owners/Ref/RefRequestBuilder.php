@@ -62,7 +62,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add an owner to an application by posting to the owners collection.
+     * Add an owner to an application. Currently, only individual users are supported as owners of applications.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -120,7 +120,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add an owner to an application by posting to the owners collection.
+     * Add an owner to an application. Currently, only individual users are supported as owners of applications.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

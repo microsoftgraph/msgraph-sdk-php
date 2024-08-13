@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get insights from users
+ * Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
 */
 class InsightsRequestBuilderGetQueryParameters 
 {

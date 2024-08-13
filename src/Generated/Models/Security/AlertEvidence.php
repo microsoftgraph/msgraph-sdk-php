@@ -43,6 +43,8 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.blobContainerEvidence': return new BlobContainerEvidence();
                 case '#microsoft.graph.security.blobEvidence': return new BlobEvidence();
                 case '#microsoft.graph.security.cloudApplicationEvidence': return new CloudApplicationEvidence();
+                case '#microsoft.graph.security.cloudLogonRequestEvidence': return new CloudLogonRequestEvidence();
+                case '#microsoft.graph.security.cloudLogonSessionEvidence': return new CloudLogonSessionEvidence();
                 case '#microsoft.graph.security.containerEvidence': return new ContainerEvidence();
                 case '#microsoft.graph.security.containerImageEvidence': return new ContainerImageEvidence();
                 case '#microsoft.graph.security.containerRegistryEvidence': return new ContainerRegistryEvidence();

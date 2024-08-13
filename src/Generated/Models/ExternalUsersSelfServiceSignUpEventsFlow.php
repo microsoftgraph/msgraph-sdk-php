@@ -52,7 +52,7 @@ class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow 
     }
 
     /**
-     * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return OnAuthenticationMethodLoadStartHandler|null
     */
     public function getOnAuthenticationMethodLoadStart(): ?OnAuthenticationMethodLoadStartHandler {
@@ -108,7 +108,7 @@ class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow 
     }
 
     /**
-     * Sets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Sets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param OnAuthenticationMethodLoadStartHandler|null $value Value to set for the onAuthenticationMethodLoadStart property.
     */
     public function setOnAuthenticationMethodLoadStart(?OnAuthenticationMethodLoadStartHandler $value): void {

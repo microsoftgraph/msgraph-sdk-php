@@ -31,7 +31,7 @@ class PrincipalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @param PrincipalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObject|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class PrincipalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Referencing the assigned principal. Read-only. Supports $expand.
+     * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @param PrincipalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

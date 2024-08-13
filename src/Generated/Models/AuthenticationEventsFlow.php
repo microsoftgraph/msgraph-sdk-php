@@ -32,7 +32,7 @@ class AuthenticationEventsFlow extends Entity implements Parsable
     }
 
     /**
-     * Gets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.
+     * Gets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return AuthenticationConditions|null
     */
     public function getConditions(): ?AuthenticationConditions {
@@ -92,7 +92,7 @@ class AuthenticationEventsFlow extends Entity implements Parsable
     }
 
     /**
-     * Sets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.
+     * Sets the conditions property value. The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param AuthenticationConditions|null $value Value to set for the conditions property.
     */
     public function setConditions(?AuthenticationConditions $value): void {
