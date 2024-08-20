@@ -57,7 +57,7 @@ class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
+     * Gets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans > servicePlanId in the tenant's subscribedSkus or serviceStatus > servicePlanId in the tenant's companySubscription.
      * @return array<string>|null
     */
     public function getDisabledPlans(): ?array {
@@ -103,7 +103,7 @@ class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the skuId property value. The unique identifier for the SKU.
+     * Gets the skuId property value. The unique identifier for the SKU. Corresponds to the skuId from subscribedSkus or companySubscription.
      * @return string|null
     */
     public function getSkuId(): ?string {
@@ -142,7 +142,7 @@ class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled.
+     * Sets the disabledPlans property value. A collection of the unique identifiers for plans that have been disabled. IDs are available in servicePlans > servicePlanId in the tenant's subscribedSkus or serviceStatus > servicePlanId in the tenant's companySubscription.
      * @param array<string>|null $value Value to set for the disabledPlans property.
     */
     public function setDisabledPlans(?array $value): void {
@@ -158,7 +158,7 @@ class AssignedLicense implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the skuId property value. The unique identifier for the SKU.
+     * Sets the skuId property value. The unique identifier for the SKU. Corresponds to the skuId from subscribedSkus or companySubscription.
      * @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value): void {

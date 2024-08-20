@@ -31,6 +31,13 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
      * @return MeetingParticipantInfo
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): MeetingParticipantInfo {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.virtualEventPresenterInfo': return new VirtualEventPresenterInfo();
+            }
+        }
         return new MeetingParticipantInfo();
     }
 

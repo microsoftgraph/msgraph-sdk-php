@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use Microsoft\Graph\Generated\Models\IdentityGovernance\GroupBasedSubjectSet;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\RuleBasedSubjectSet;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -40,6 +41,7 @@ class SubjectSet implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.connectedOrganizationMembers': return new ConnectedOrganizationMembers();
                 case '#microsoft.graph.externalSponsors': return new ExternalSponsors();
                 case '#microsoft.graph.groupMembers': return new GroupMembers();
+                case '#microsoft.graph.identityGovernance.groupBasedSubjectSet': return new GroupBasedSubjectSet();
                 case '#microsoft.graph.identityGovernance.ruleBasedSubjectSet': return new RuleBasedSubjectSet();
                 case '#microsoft.graph.internalSponsors': return new InternalSponsors();
                 case '#microsoft.graph.requestorManager': return new RequestorManager();

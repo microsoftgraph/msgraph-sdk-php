@@ -62,11 +62,24 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'customTaskExtensions' => fn(ParseNode $n) => $o->setCustomTaskExtensions($n->getCollectionOfObjectValues([CustomTaskExtension::class, 'createFromDiscriminatorValue'])),
             'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getObjectValue([DeletedItemContainer::class, 'createFromDiscriminatorValue'])),
+            'insights' => fn(ParseNode $n) => $o->setInsights($n->getObjectValue([Insights::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([LifecycleManagementSettings::class, 'createFromDiscriminatorValue'])),
             'taskDefinitions' => fn(ParseNode $n) => $o->setTaskDefinitions($n->getCollectionOfObjectValues([TaskDefinition::class, 'createFromDiscriminatorValue'])),
             'workflows' => fn(ParseNode $n) => $o->setWorkflows($n->getCollectionOfObjectValues([Workflow::class, 'createFromDiscriminatorValue'])),
             'workflowTemplates' => fn(ParseNode $n) => $o->setWorkflowTemplates($n->getCollectionOfObjectValues([WorkflowTemplate::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the insights property value. The insight container holding workflow insight summaries for a tenant.
+     * @return Insights|null
+    */
+    public function getInsights(): ?Insights {
+        $val = $this->getBackingStore()->get('insights');
+        if (is_null($val) || $val instanceof Insights) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'insights'");
     }
 
     /**
@@ -131,6 +144,7 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('customTaskExtensions', $this->getCustomTaskExtensions());
         $writer->writeObjectValue('deletedItems', $this->getDeletedItems());
+        $writer->writeObjectValue('insights', $this->getInsights());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeCollectionOfObjectValues('taskDefinitions', $this->getTaskDefinitions());
         $writer->writeCollectionOfObjectValues('workflows', $this->getWorkflows());
@@ -151,6 +165,14 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
     */
     public function setDeletedItems(?DeletedItemContainer $value): void {
         $this->getBackingStore()->set('deletedItems', $value);
+    }
+
+    /**
+     * Sets the insights property value. The insight container holding workflow insight summaries for a tenant.
+     * @param Insights|null $value Value to set for the insights property.
+    */
+    public function setInsights(?Insights $value): void {
+        $this->getBackingStore()->set('insights', $value);
     }
 
     /**

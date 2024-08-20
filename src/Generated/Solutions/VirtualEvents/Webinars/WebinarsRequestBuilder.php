@@ -88,11 +88,12 @@ class WebinarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to webinars for solutions
+     * Create a new virtualEventWebinar object in draft mode.
      * @param VirtualEventWebinar $body The request body
      * @param WebinarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventWebinar|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/virtualeventsroot-post-webinars?view=graph-rest-1.0 Find more info here
     */
     public function post(VirtualEventWebinar $body, ?WebinarsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -124,7 +125,7 @@ class WebinarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to webinars for solutions
+     * Create a new virtualEventWebinar object in draft mode.
      * @param VirtualEventWebinar $body The request body
      * @param WebinarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

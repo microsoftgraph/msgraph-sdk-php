@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\Owners\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of owners for an application that are directoryObject objects.
+ * Retrieve a list of owners for an application that are directoryObject types.
 */
 class RefRequestBuilderGetQueryParameters 
 {

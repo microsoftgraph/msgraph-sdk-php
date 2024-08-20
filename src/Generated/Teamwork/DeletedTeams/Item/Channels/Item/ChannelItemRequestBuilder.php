@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\Channel;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\FilesFolder\FilesFolderRequestBuilder;
@@ -15,6 +16,7 @@ use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Provision
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\RemoveEmail\RemoveEmailRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\SharedWithTeams\SharedWithTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -25,6 +27,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ChannelItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the archive method.
+    */
+    public function archive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the completeMigration method.
     */
@@ -86,6 +95,13 @@ class ChannelItemRequestBuilder extends BaseRequestBuilder
     */
     public function tabs(): TabsRequestBuilder {
         return new TabsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unarchive method.
+    */
+    public function unarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

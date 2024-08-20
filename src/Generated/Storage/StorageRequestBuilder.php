@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Storage;
 use Microsoft\Graph\Generated\Storage\FileStorage\FileStorageRequestBuilder;
+use Microsoft\Graph\Generated\Storage\Settings\SettingsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -22,6 +23,13 @@ class StorageRequestBuilder extends BaseRequestBuilder
     */
     public function fileStorage(): FileStorageRequestBuilder {
         return new FileStorageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.storage entity.
+    */
+    public function settings(): SettingsRequestBuilder {
+        return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

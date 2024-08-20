@@ -25,7 +25,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the comment property value. Represents the comment associated with this name.
+     * Gets the comment property value. The comment associated with this name.
      * @return string|null
     */
     public function getComment(): ?string {
@@ -77,7 +77,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Gets the type property value. The type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @return string|null
     */
     public function getType(): ?string {
@@ -89,7 +89,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the visible property value. Specifies whether the object is visible or not.
+     * Gets the visible property value. Indicates whether the object is visible.
      * @return bool|null
     */
     public function getVisible(): ?bool {
@@ -101,7 +101,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     * Gets the worksheet property value. Returns the worksheet to which the named item is scoped. Available only if the item is scoped to the worksheet. Read-only.
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
@@ -127,7 +127,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the comment property value. Represents the comment associated with this name.
+     * Sets the comment property value. The comment associated with this name.
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -151,7 +151,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
+     * Sets the type property value. The type of reference is associated with the name. Possible values are: String, Integer, Double, Boolean, Range. Read-only.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
@@ -159,7 +159,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the visible property value. Specifies whether the object is visible or not.
+     * Sets the visible property value. Indicates whether the object is visible.
      * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {
@@ -167,7 +167,7 @@ class WorkbookNamedItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the worksheet property value. Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+     * Sets the worksheet property value. Returns the worksheet to which the named item is scoped. Available only if the item is scoped to the worksheet. Read-only.
      * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
