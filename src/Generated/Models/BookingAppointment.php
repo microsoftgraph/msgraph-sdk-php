@@ -3,6 +3,7 @@
 namespace Microsoft\Graph\Generated\Models;
 
 use DateInterval;
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -54,7 +55,31 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the customerEmailAddress property value. The customerEmailAddress property
+     * Gets the appointmentLabel property value. The custom label that can be stamped on this appointment by users.
+     * @return string|null
+    */
+    public function getAppointmentLabel(): ?string {
+        $val = $this->getBackingStore()->get('appointmentLabel');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appointmentLabel'");
+    }
+
+    /**
+     * Gets the createdDateTime property value. The date, time, and time zone when the appointment was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
+    }
+
+    /**
+     * Gets the customerEmailAddress property value. The SMTP address of the bookingCustomer who books the appointment.
      * @return string|null
     */
     public function getCustomerEmailAddress(): ?string {
@@ -66,7 +91,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the customerName property value. The customerName property
+     * Gets the customerName property value. The customer's name.
      * @return string|null
     */
     public function getCustomerName(): ?string {
@@ -78,7 +103,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the customerNotes property value. Notes from the customer associated with this appointment.
+     * Gets the customerNotes property value. Notes from the customer associated with this appointment. You can get the value only when you read this bookingAppointment by its ID. You can set this property only when you initially create an appointment with a new customer.
      * @return string|null
     */
     public function getCustomerNotes(): ?string {
@@ -90,7 +115,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the customerPhone property value. The customerPhone property
+     * Gets the customerPhone property value. The customer's phone number.
      * @return string|null
     */
     public function getCustomerPhone(): ?string {
@@ -160,6 +185,8 @@ class BookingAppointment extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'additionalInformation' => fn(ParseNode $n) => $o->setAdditionalInformation($n->getStringValue()),
             'anonymousJoinWebUrl' => fn(ParseNode $n) => $o->setAnonymousJoinWebUrl($n->getStringValue()),
+            'appointmentLabel' => fn(ParseNode $n) => $o->setAppointmentLabel($n->getStringValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customerEmailAddress' => fn(ParseNode $n) => $o->setCustomerEmailAddress($n->getStringValue()),
             'customerName' => fn(ParseNode $n) => $o->setCustomerName($n->getStringValue()),
             'customerNotes' => fn(ParseNode $n) => $o->setCustomerNotes($n->getStringValue()),
@@ -169,8 +196,10 @@ class BookingAppointment extends Entity implements Parsable
             'duration' => fn(ParseNode $n) => $o->setDuration($n->getDateIntervalValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'filledAttendeesCount' => fn(ParseNode $n) => $o->setFilledAttendeesCount($n->getIntegerValue()),
+            'isCustomerAllowedToManageBooking' => fn(ParseNode $n) => $o->setIsCustomerAllowedToManageBooking($n->getBooleanValue()),
             'isLocationOnline' => fn(ParseNode $n) => $o->setIsLocationOnline($n->getBooleanValue()),
             'joinWebUrl' => fn(ParseNode $n) => $o->setJoinWebUrl($n->getStringValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'maximumAttendeesCount' => fn(ParseNode $n) => $o->setMaximumAttendeesCount($n->getIntegerValue()),
             'optOutOfCustomerEmail' => fn(ParseNode $n) => $o->setOptOutOfCustomerEmail($n->getBooleanValue()),
             'postBuffer' => fn(ParseNode $n) => $o->setPostBuffer($n->getDateIntervalValue()),
@@ -197,7 +226,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the filledAttendeesCount property value. The current number of customers in the appointment
+     * Gets the filledAttendeesCount property value. The current number of customers in the appointment.
      * @return int|null
     */
     public function getFilledAttendeesCount(): ?int {
@@ -209,7 +238,19 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
+     * Gets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
+     * @return bool|null
+    */
+    public function getIsCustomerAllowedToManageBooking(): ?bool {
+        $val = $this->getBackingStore()->get('isCustomerAllowedToManageBooking');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCustomerAllowedToManageBooking'");
+    }
+
+    /**
+     * Gets the isLocationOnline property value. Indicates that the appointment is held online. The default value is false.
      * @return bool|null
     */
     public function getIsLocationOnline(): ?bool {
@@ -230,6 +271,18 @@ class BookingAppointment extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'joinWebUrl'");
+    }
+
+    /**
+     * Gets the lastUpdatedDateTime property value. The date, time, and time zone when the booking business was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getLastUpdatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -319,7 +372,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
+     * Gets the selfServiceAppointmentId property value. Another tracking ID for the appointment, if the appointment was created directly by the customer on the scheduling page, as opposed to by a staff member on behalf of the customer.
      * @return string|null
     */
     public function getSelfServiceAppointmentId(): ?string {
@@ -424,6 +477,8 @@ class BookingAppointment extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('additionalInformation', $this->getAdditionalInformation());
         $writer->writeStringValue('anonymousJoinWebUrl', $this->getAnonymousJoinWebUrl());
+        $writer->writeStringValue('appointmentLabel', $this->getAppointmentLabel());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('customerEmailAddress', $this->getCustomerEmailAddress());
         $writer->writeStringValue('customerName', $this->getCustomerName());
         $writer->writeStringValue('customerNotes', $this->getCustomerNotes());
@@ -431,8 +486,10 @@ class BookingAppointment extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('customers', $this->getCustomers());
         $writer->writeStringValue('customerTimeZone', $this->getCustomerTimeZone());
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
+        $writer->writeBooleanValue('isCustomerAllowedToManageBooking', $this->getIsCustomerAllowedToManageBooking());
         $writer->writeBooleanValue('isLocationOnline', $this->getIsLocationOnline());
         $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeIntegerValue('maximumAttendeesCount', $this->getMaximumAttendeesCount());
         $writer->writeBooleanValue('optOutOfCustomerEmail', $this->getOptOutOfCustomerEmail());
         $writer->writeDateIntervalValue('postBuffer', $this->getPostBuffer());
@@ -467,7 +524,23 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the customerEmailAddress property value. The customerEmailAddress property
+     * Sets the appointmentLabel property value. The custom label that can be stamped on this appointment by users.
+     * @param string|null $value Value to set for the appointmentLabel property.
+    */
+    public function setAppointmentLabel(?string $value): void {
+        $this->getBackingStore()->set('appointmentLabel', $value);
+    }
+
+    /**
+     * Sets the createdDateTime property value. The date, time, and time zone when the appointment was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the customerEmailAddress property value. The SMTP address of the bookingCustomer who books the appointment.
      * @param string|null $value Value to set for the customerEmailAddress property.
     */
     public function setCustomerEmailAddress(?string $value): void {
@@ -475,7 +548,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the customerName property value. The customerName property
+     * Sets the customerName property value. The customer's name.
      * @param string|null $value Value to set for the customerName property.
     */
     public function setCustomerName(?string $value): void {
@@ -483,7 +556,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the customerNotes property value. Notes from the customer associated with this appointment.
+     * Sets the customerNotes property value. Notes from the customer associated with this appointment. You can get the value only when you read this bookingAppointment by its ID. You can set this property only when you initially create an appointment with a new customer.
      * @param string|null $value Value to set for the customerNotes property.
     */
     public function setCustomerNotes(?string $value): void {
@@ -491,7 +564,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the customerPhone property value. The customerPhone property
+     * Sets the customerPhone property value. The customer's phone number.
      * @param string|null $value Value to set for the customerPhone property.
     */
     public function setCustomerPhone(?string $value): void {
@@ -531,7 +604,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the filledAttendeesCount property value. The current number of customers in the appointment
+     * Sets the filledAttendeesCount property value. The current number of customers in the appointment.
      * @param int|null $value Value to set for the filledAttendeesCount property.
     */
     public function setFilledAttendeesCount(?int $value): void {
@@ -539,7 +612,15 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
+     * Sets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
+     * @param bool|null $value Value to set for the isCustomerAllowedToManageBooking property.
+    */
+    public function setIsCustomerAllowedToManageBooking(?bool $value): void {
+        $this->getBackingStore()->set('isCustomerAllowedToManageBooking', $value);
+    }
+
+    /**
+     * Sets the isLocationOnline property value. Indicates that the appointment is held online. The default value is false.
      * @param bool|null $value Value to set for the isLocationOnline property.
     */
     public function setIsLocationOnline(?bool $value): void {
@@ -552,6 +633,14 @@ class BookingAppointment extends Entity implements Parsable
     */
     public function setJoinWebUrl(?string $value): void {
         $this->getBackingStore()->set('joinWebUrl', $value);
+    }
+
+    /**
+     * Sets the lastUpdatedDateTime property value. The date, time, and time zone when the booking business was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+    */
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
     /**
@@ -611,7 +700,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
+     * Sets the selfServiceAppointmentId property value. Another tracking ID for the appointment, if the appointment was created directly by the customer on the scheduling page, as opposed to by a staff member on behalf of the customer.
      * @param string|null $value Value to set for the selfServiceAppointmentId property.
     */
     public function setSelfServiceAppointmentId(?string $value): void {

@@ -49,7 +49,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
-            'restrictions' => fn(ParseNode $n) => $o->setRestrictions($n->getObjectValue([AppManagementConfiguration::class, 'createFromDiscriminatorValue'])),
+            'restrictions' => fn(ParseNode $n) => $o->setRestrictions($n->getObjectValue([CustomAppManagementConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -67,11 +67,11 @@ class AppManagementPolicy extends PolicyBase implements Parsable
 
     /**
      * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
-     * @return AppManagementConfiguration|null
+     * @return CustomAppManagementConfiguration|null
     */
-    public function getRestrictions(): ?AppManagementConfiguration {
+    public function getRestrictions(): ?CustomAppManagementConfiguration {
         $val = $this->getBackingStore()->get('restrictions');
-        if (is_null($val) || $val instanceof AppManagementConfiguration) {
+        if (is_null($val) || $val instanceof CustomAppManagementConfiguration) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'restrictions'");
@@ -106,9 +106,9 @@ class AppManagementPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
-     * @param AppManagementConfiguration|null $value Value to set for the restrictions property.
+     * @param CustomAppManagementConfiguration|null $value Value to set for the restrictions property.
     */
-    public function setRestrictions(?AppManagementConfiguration $value): void {
+    public function setRestrictions(?CustomAppManagementConfiguration $value): void {
         $this->getBackingStore()->set('restrictions', $value);
     }
 

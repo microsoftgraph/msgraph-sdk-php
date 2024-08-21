@@ -45,7 +45,7 @@ class FormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      * @param FormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPointFormat|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class FormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Encapsulates the format properties chart point. Read-only.
+     * The format properties of the chart point. Read-only.
      * @param FormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

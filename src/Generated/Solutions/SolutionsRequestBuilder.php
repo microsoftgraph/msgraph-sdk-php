@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SolutionsRoot;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\BackupRestoreRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\VirtualEventsRequestBuilder;
@@ -19,6 +20,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SolutionsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the backupRestore property of the microsoft.graph.solutionsRoot entity.
+    */
+    public function backupRestore(): BackupRestoreRequestBuilder {
+        return new BackupRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
     */

@@ -6,11 +6,11 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\GraphExternalUsersSelfServiceSignUpEventsFlow\OnAuthenticationMethodLoadStart\GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp\IdentityProviders\IdentityProvidersRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Psr\Http\Message\StreamInterface;
 
 /**
  * Casts the previous resource to onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.
@@ -39,9 +39,9 @@ class GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestB
     }
 
     /**
-     * Get the items of type microsoft.graph.onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp in the microsoft.graph.onAuthenticationMethodLoadStartHandler collection
+     * Get the item of type microsoft.graph.onAuthenticationMethodLoadStartHandler as microsoft.graph.onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp
      * @param GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<StreamInterface|null>
+     * @return Promise<OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp|null>
      * @throws Exception
     */
     public function get(?GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -49,13 +49,11 @@ class GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestB
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        /** @var Promise<StreamInterface|null> $result */
-        $result = $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
-        return $result;
+        return $this->requestAdapter->sendAsync($requestInfo, [OnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Get the items of type microsoft.graph.onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp in the microsoft.graph.onAuthenticationMethodLoadStartHandler collection
+     * Get the item of type microsoft.graph.onAuthenticationMethodLoadStartHandler as microsoft.graph.onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp
      * @param GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

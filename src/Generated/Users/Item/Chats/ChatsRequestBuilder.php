@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ChatCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Chats\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\GetAllRetainedMessages\GetAllRetainedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\ChatItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,6 +33,13 @@ class ChatsRequestBuilder extends BaseRequestBuilder
     */
     public function getAllMessages(): GetAllMessagesRequestBuilder {
         return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllRetainedMessages method.
+    */
+    public function getAllRetainedMessages(): GetAllRetainedMessagesRequestBuilder {
+        return new GetAllRetainedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

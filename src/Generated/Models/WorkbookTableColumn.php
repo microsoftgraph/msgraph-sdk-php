@@ -38,7 +38,7 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Gets the filter property value. Retrieve the filter applied to the column. Read-only.
+     * Gets the filter property value. The filter applied to the column. Read-only.
      * @return WorkbookFilter|null
     */
     public function getFilter(): ?WorkbookFilter {
@@ -50,7 +50,7 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Gets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+     * Gets the index property value. The index of the column within the columns collection of the table. Zero-indexed. Read-only.
      * @return int|null
     */
     public function getIndex(): ?int {
@@ -62,7 +62,7 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Returns the name of the table column.
+     * Gets the name property value. The name of the table column.
      * @return string|null
     */
     public function getName(): ?string {
@@ -85,7 +85,7 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Sets the filter property value. Retrieve the filter applied to the column. Read-only.
+     * Sets the filter property value. The filter applied to the column. Read-only.
      * @param WorkbookFilter|null $value Value to set for the filter property.
     */
     public function setFilter(?WorkbookFilter $value): void {
@@ -93,7 +93,7 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Sets the index property value. Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
+     * Sets the index property value. The index of the column within the columns collection of the table. Zero-indexed. Read-only.
      * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {
@@ -101,7 +101,7 @@ class WorkbookTableColumn extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Returns the name of the table column.
+     * Sets the name property value. The name of the table column.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

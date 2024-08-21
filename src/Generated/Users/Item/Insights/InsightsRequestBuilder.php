@@ -4,8 +4,8 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Models\ItemInsights;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OfficeGraphInsights;
 use Microsoft\Graph\Generated\Users\Item\Insights\Shared\SharedRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Trending\TrendingRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Used\UsedRequestBuilder;
@@ -69,9 +69,9 @@ class InsightsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get insights from users
+     * Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
      * @param InsightsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<OfficeGraphInsights|null>
+     * @return Promise<ItemInsights|null>
      * @throws Exception
     */
     public function get(?InsightsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -79,22 +79,22 @@ class InsightsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [OfficeGraphInsights::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ItemInsights::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Update the navigation property insights in users
-     * @param OfficeGraphInsights $body The request body
+     * @param ItemInsights $body The request body
      * @param InsightsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<OfficeGraphInsights|null>
+     * @return Promise<ItemInsights|null>
      * @throws Exception
     */
-    public function patch(OfficeGraphInsights $body, ?InsightsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ItemInsights $body, ?InsightsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [OfficeGraphInsights::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ItemInsights::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
@@ -116,7 +116,7 @@ class InsightsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get insights from users
+     * Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
      * @param InsightsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -138,11 +138,11 @@ class InsightsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update the navigation property insights in users
-     * @param OfficeGraphInsights $body The request body
+     * @param ItemInsights $body The request body
      * @param InsightsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OfficeGraphInsights $body, ?InsightsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ItemInsights $body, ?InsightsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

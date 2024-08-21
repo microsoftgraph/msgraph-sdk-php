@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcrip
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcripts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcripts\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Transcripts\Item\CallTranscriptItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallTranscript;
 use Microsoft\Graph\Generated\Models\CallTranscriptCollectionResponse;
@@ -24,6 +25,13 @@ class TranscriptsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

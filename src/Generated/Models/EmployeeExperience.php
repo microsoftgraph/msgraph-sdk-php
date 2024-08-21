@@ -57,12 +57,42 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the communities property value. A collection of communities in Viva Engage.
+     * @return array<Community>|null
+    */
+    public function getCommunities(): ?array {
+        $val = $this->getBackingStore()->get('communities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Community::class);
+            /** @var array<Community>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'communities'");
+    }
+
+    /**
+     * Gets the engagementAsyncOperations property value. A collection of long-running, asynchronous operations related to Viva Engage.
+     * @return array<EngagementAsyncOperation>|null
+    */
+    public function getEngagementAsyncOperations(): ?array {
+        $val = $this->getBackingStore()->get('engagementAsyncOperations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EngagementAsyncOperation::class);
+            /** @var array<EngagementAsyncOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'engagementAsyncOperations'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'communities' => fn(ParseNode $n) => $o->setCommunities($n->getCollectionOfObjectValues([Community::class, 'createFromDiscriminatorValue'])),
+            'engagementAsyncOperations' => fn(ParseNode $n) => $o->setEngagementAsyncOperations($n->getCollectionOfObjectValues([EngagementAsyncOperation::class, 'createFromDiscriminatorValue'])),
             'learningCourseActivities' => fn(ParseNode $n) => $o->setLearningCourseActivities($n->getCollectionOfObjectValues([LearningCourseActivity::class, 'createFromDiscriminatorValue'])),
             'learningProviders' => fn(ParseNode $n) => $o->setLearningProviders($n->getCollectionOfObjectValues([LearningProvider::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -114,6 +144,8 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeCollectionOfObjectValues('communities', $this->getCommunities());
+        $writer->writeCollectionOfObjectValues('engagementAsyncOperations', $this->getEngagementAsyncOperations());
         $writer->writeCollectionOfObjectValues('learningCourseActivities', $this->getLearningCourseActivities());
         $writer->writeCollectionOfObjectValues('learningProviders', $this->getLearningProviders());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -134,6 +166,22 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the communities property value. A collection of communities in Viva Engage.
+     * @param array<Community>|null $value Value to set for the communities property.
+    */
+    public function setCommunities(?array $value): void {
+        $this->getBackingStore()->set('communities', $value);
+    }
+
+    /**
+     * Sets the engagementAsyncOperations property value. A collection of long-running, asynchronous operations related to Viva Engage.
+     * @param array<EngagementAsyncOperation>|null $value Value to set for the engagementAsyncOperations property.
+    */
+    public function setEngagementAsyncOperations(?array $value): void {
+        $this->getBackingStore()->set('engagementAsyncOperations', $value);
     }
 
     /**

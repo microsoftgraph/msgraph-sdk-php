@@ -52,10 +52,11 @@ class SubscriptionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      * @param SubscriptionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CompanySubscriptionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubscriptionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class SubscriptionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subscriptions from directory
+     * Get the list of commercial subscriptions that an organization acquired.
      * @param SubscriptionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

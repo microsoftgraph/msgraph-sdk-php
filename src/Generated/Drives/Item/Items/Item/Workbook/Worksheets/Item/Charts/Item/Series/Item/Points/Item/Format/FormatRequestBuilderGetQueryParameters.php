@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Encapsulates the format properties chart point. Read-only.
+ * The format properties of the chart point. Read-only.
 */
 class FormatRequestBuilderGetQueryParameters 
 {

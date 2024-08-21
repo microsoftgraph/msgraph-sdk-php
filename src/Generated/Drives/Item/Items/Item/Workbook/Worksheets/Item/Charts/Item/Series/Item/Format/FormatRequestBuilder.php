@@ -61,7 +61,7 @@ class FormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @param FormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartSeriesFormat|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class FormatRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @param FormatRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+ * The formatting of a chart series, which includes fill and line formatting. Read-only.
 */
 class FormatRequestBuilderGetQueryParameters 
 {

@@ -31,7 +31,7 @@ class WorksheetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      * @param WorksheetRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookWorksheet|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class WorksheetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The worksheet containing the current PivotTable. Read-only.
+     * The worksheet that contains the current pivot table. Read-only.
      * @param WorksheetRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

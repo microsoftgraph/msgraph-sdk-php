@@ -14,7 +14,6 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\ExternalC
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetByPathWithPath1\GetByPathWithPath1RequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\LastModifiedByUser\LastModifiedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Lists\ListsRequestBuilder;
@@ -212,15 +211,6 @@ class GetByPathWithPathRequestBuilder extends BaseRequestBuilder
     */
     public function getApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
         return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
-    }
-
-    /**
-     * Provides operations to call the getByPath method.
-     * @param string $path1 Usage: path='{path1}'
-     * @return GetByPathWithPath1RequestBuilder
-    */
-    public function getByPathWithPath1(string $path1): GetByPathWithPath1RequestBuilder {
-        return new GetByPathWithPath1RequestBuilder($this->pathParameters, $this->requestAdapter, $path1);
     }
 
     /**

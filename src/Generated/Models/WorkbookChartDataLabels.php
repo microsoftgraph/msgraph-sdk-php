@@ -68,7 +68,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the separator property value. String representing the separator used for the data labels on a chart.
+     * Gets the separator property value. String that represents the separator used for the data labels on a chart.
      * @return string|null
     */
     public function getSeparator(): ?string {
@@ -80,7 +80,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
+     * Gets the showBubbleSize property value. Boolean value that represents whether the data label bubble size is visible.
      * @return bool|null
     */
     public function getShowBubbleSize(): ?bool {
@@ -92,7 +92,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
+     * Gets the showCategoryName property value. Boolean value that represents whether the data label category name is visible.
      * @return bool|null
     */
     public function getShowCategoryName(): ?bool {
@@ -104,7 +104,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
+     * Gets the showLegendKey property value. Boolean value that represents whether the data label legend key is visible.
      * @return bool|null
     */
     public function getShowLegendKey(): ?bool {
@@ -116,7 +116,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
+     * Gets the showPercentage property value. Boolean value that represents whether the data label percentage is visible.
      * @return bool|null
     */
     public function getShowPercentage(): ?bool {
@@ -128,7 +128,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
+     * Gets the showSeriesName property value. Boolean value that represents whether the data label series name is visible.
      * @return bool|null
     */
     public function getShowSeriesName(): ?bool {
@@ -140,7 +140,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Gets the showValue property value. Boolean value representing if the data label value is visible or not.
+     * Gets the showValue property value. Boolean value that represents whether the data label value is visible.
      * @return bool|null
     */
     public function getShowValue(): ?bool {
@@ -185,7 +185,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the separator property value. String representing the separator used for the data labels on a chart.
+     * Sets the separator property value. String that represents the separator used for the data labels on a chart.
      * @param string|null $value Value to set for the separator property.
     */
     public function setSeparator(?string $value): void {
@@ -193,7 +193,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
+     * Sets the showBubbleSize property value. Boolean value that represents whether the data label bubble size is visible.
      * @param bool|null $value Value to set for the showBubbleSize property.
     */
     public function setShowBubbleSize(?bool $value): void {
@@ -201,7 +201,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
+     * Sets the showCategoryName property value. Boolean value that represents whether the data label category name is visible.
      * @param bool|null $value Value to set for the showCategoryName property.
     */
     public function setShowCategoryName(?bool $value): void {
@@ -209,7 +209,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
+     * Sets the showLegendKey property value. Boolean value that represents whether the data label legend key is visible.
      * @param bool|null $value Value to set for the showLegendKey property.
     */
     public function setShowLegendKey(?bool $value): void {
@@ -217,7 +217,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
+     * Sets the showPercentage property value. Boolean value that represents whether the data label percentage is visible.
      * @param bool|null $value Value to set for the showPercentage property.
     */
     public function setShowPercentage(?bool $value): void {
@@ -225,7 +225,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
+     * Sets the showSeriesName property value. Boolean value that represents whether the data label series name is visible.
      * @param bool|null $value Value to set for the showSeriesName property.
     */
     public function setShowSeriesName(?bool $value): void {
@@ -233,7 +233,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
     }
 
     /**
-     * Sets the showValue property value. Boolean value representing if the data label value is visible or not.
+     * Sets the showValue property value. Boolean value that represents whether the data label value is visible.
      * @param bool|null $value Value to set for the showValue property.
     */
     public function setShowValue(?bool $value): void {

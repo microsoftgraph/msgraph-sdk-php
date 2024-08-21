@@ -26,7 +26,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @return bool|null
     */
     public function getContributionToContentDiscoveryAsOrganizationDisabled(): ?bool {
@@ -38,7 +38,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
+     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected. Users can control this setting in Office Delve.
      * @return bool|null
     */
     public function getContributionToContentDiscoveryDisabled(): ?bool {
@@ -58,9 +58,23 @@ class UserSettings extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'contributionToContentDiscoveryAsOrganizationDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()),
             'contributionToContentDiscoveryDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()),
+            'itemInsights' => fn(ParseNode $n) => $o->setItemInsights($n->getObjectValue([UserInsightsSettings::class, 'createFromDiscriminatorValue'])),
             'shiftPreferences' => fn(ParseNode $n) => $o->setShiftPreferences($n->getObjectValue([ShiftPreferences::class, 'createFromDiscriminatorValue'])),
+            'storage' => fn(ParseNode $n) => $o->setStorage($n->getObjectValue([UserStorage::class, 'createFromDiscriminatorValue'])),
             'windows' => fn(ParseNode $n) => $o->setWindows($n->getCollectionOfObjectValues([WindowsSetting::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * @return UserInsightsSettings|null
+    */
+    public function getItemInsights(): ?UserInsightsSettings {
+        $val = $this->getBackingStore()->get('itemInsights');
+        if (is_null($val) || $val instanceof UserInsightsSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemInsights'");
     }
 
     /**
@@ -73,6 +87,18 @@ class UserSettings extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'shiftPreferences'");
+    }
+
+    /**
+     * Gets the storage property value. The storage property
+     * @return UserStorage|null
+    */
+    public function getStorage(): ?UserStorage {
+        $val = $this->getBackingStore()->get('storage');
+        if (is_null($val) || $val instanceof UserStorage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'storage'");
     }
 
     /**
@@ -97,12 +123,14 @@ class UserSettings extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('contributionToContentDiscoveryAsOrganizationDisabled', $this->getContributionToContentDiscoveryAsOrganizationDisabled());
         $writer->writeBooleanValue('contributionToContentDiscoveryDisabled', $this->getContributionToContentDiscoveryDisabled());
+        $writer->writeObjectValue('itemInsights', $this->getItemInsights());
         $writer->writeObjectValue('shiftPreferences', $this->getShiftPreferences());
+        $writer->writeObjectValue('storage', $this->getStorage());
         $writer->writeCollectionOfObjectValues('windows', $this->getWindows());
     }
 
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn't have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @param bool|null $value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
     */
     public function setContributionToContentDiscoveryAsOrganizationDisabled(?bool $value): void {
@@ -110,11 +138,19 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.
+     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, the delegate access to the user's trending API is disabled. When set to true, documents in the user's Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for work or school is affected. Users can control this setting in Office Delve.
      * @param bool|null $value Value to set for the contributionToContentDiscoveryDisabled property.
     */
     public function setContributionToContentDiscoveryDisabled(?bool $value): void {
         $this->getBackingStore()->set('contributionToContentDiscoveryDisabled', $value);
+    }
+
+    /**
+     * Sets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * @param UserInsightsSettings|null $value Value to set for the itemInsights property.
+    */
+    public function setItemInsights(?UserInsightsSettings $value): void {
+        $this->getBackingStore()->set('itemInsights', $value);
     }
 
     /**
@@ -123,6 +159,14 @@ class UserSettings extends Entity implements Parsable
     */
     public function setShiftPreferences(?ShiftPreferences $value): void {
         $this->getBackingStore()->set('shiftPreferences', $value);
+    }
+
+    /**
+     * Sets the storage property value. The storage property
+     * @param UserStorage|null $value Value to set for the storage property.
+    */
+    public function setStorage(?UserStorage $value): void {
+        $this->getBackingStore()->set('storage', $value);
     }
 
     /**

@@ -40,7 +40,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the columnWidth property value. Gets or sets the width of all columns within the range. If the column widths aren't uniform, null will be returned.
+     * Gets the columnWidth property value. The width of all columns within the range. If the column widths aren't uniform, null will be returned.
      * @return float|null
     */
     public function getColumnWidth(): ?float {
@@ -95,7 +95,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Gets the horizontalAlignment property value. The horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @return string|null
     */
     public function getHorizontalAlignment(): ?string {
@@ -119,7 +119,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights aren't uniform null will be returned.
+     * Gets the rowHeight property value. The height of all rows in the range. If the row heights aren't uniform null will be returned.
      * @return float|null
     */
     public function getRowHeight(): ?float {
@@ -131,7 +131,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Gets the verticalAlignment property value. The vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
      * @return string|null
     */
     public function getVerticalAlignment(): ?string {
@@ -143,7 +143,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
+     * Gets the wrapText property value. Indicates whether Excel wraps the text in the object. A null value indicates that the entire range doesn't have a uniform wrap setting.
      * @return bool|null
     */
     public function getWrapText(): ?bool {
@@ -180,7 +180,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the columnWidth property value. Gets or sets the width of all columns within the range. If the column widths aren't uniform, null will be returned.
+     * Sets the columnWidth property value. The width of all columns within the range. If the column widths aren't uniform, null will be returned.
      * @param float|null $value Value to set for the columnWidth property.
     */
     public function setColumnWidth(?float $value): void {
@@ -204,7 +204,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
+     * Sets the horizontalAlignment property value. The horizontal alignment for the specified object. Possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      * @param string|null $value Value to set for the horizontalAlignment property.
     */
     public function setHorizontalAlignment(?string $value): void {
@@ -220,7 +220,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights aren't uniform null will be returned.
+     * Sets the rowHeight property value. The height of all rows in the range. If the row heights aren't uniform null will be returned.
      * @param float|null $value Value to set for the rowHeight property.
     */
     public function setRowHeight(?float $value): void {
@@ -228,7 +228,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
+     * Sets the verticalAlignment property value. The vertical alignment for the specified object. Possible values are: Top, Center, Bottom, Justify, Distributed.
      * @param string|null $value Value to set for the verticalAlignment property.
     */
     public function setVerticalAlignment(?string $value): void {
@@ -236,7 +236,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
+     * Sets the wrapText property value. Indicates whether Excel wraps the text in the object. A null value indicates that the entire range doesn't have a uniform wrap setting.
      * @param bool|null $value Value to set for the wrapText property.
     */
     public function setWrapText(?bool $value): void {

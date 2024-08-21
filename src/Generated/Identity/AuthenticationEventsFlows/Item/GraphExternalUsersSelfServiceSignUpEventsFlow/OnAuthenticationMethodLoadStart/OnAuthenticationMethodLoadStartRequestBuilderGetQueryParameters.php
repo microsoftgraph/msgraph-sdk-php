@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Grap
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+ * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
 */
 class OnAuthenticationMethodLoadStartRequestBuilderGetQueryParameters 
 {

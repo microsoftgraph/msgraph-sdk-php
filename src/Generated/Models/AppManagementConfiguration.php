@@ -32,6 +32,15 @@ class AppManagementConfiguration implements AdditionalDataHolder, BackedModel, P
      * @return AppManagementConfiguration
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AppManagementConfiguration {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.appManagementApplicationConfiguration': return new AppManagementApplicationConfiguration();
+                case '#microsoft.graph.appManagementServicePrincipalConfiguration': return new AppManagementServicePrincipalConfiguration();
+                case '#microsoft.graph.customAppManagementConfiguration': return new CustomAppManagementConfiguration();
+            }
+        }
         return new AppManagementConfiguration();
     }
 

@@ -116,7 +116,7 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
+     * Gets the values property value. A collection with one or many strings. One or more specified strings are matched with the specified property using the specified operation. Required.
      * @return array<string>|null
     */
     public function getValues(): ?array {
@@ -195,7 +195,7 @@ class PropertyRule implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the values property value. A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
+     * Sets the values property value. A collection with one or many strings. One or more specified strings are matched with the specified property using the specified operation. Required.
      * @param array<string>|null $value Value to set for the values property.
     */
     public function setValues(?array $value): void {

@@ -50,7 +50,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
+     * Gets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: User, Company.
      * @return string|null
     */
     public function getAppliesTo(): ?string {
@@ -151,7 +151,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Gets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+     * Gets the skuPartNumber property value. The SKU part number; for example: AAD_PREMIUM or RMSBASIC. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      * @return string|null
     */
     public function getSkuPartNumber(): ?string {
@@ -211,7 +211,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: 'User', 'Company'.
+     * Sets the appliesTo property value. The target class for this SKU. Only SKUs with target class User are assignable. Possible values are: User, Company.
      * @param string|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?string $value): void {
@@ -259,7 +259,7 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
-     * Sets the skuPartNumber property value. The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
+     * Sets the skuPartNumber property value. The SKU part number; for example: AAD_PREMIUM or RMSBASIC. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      * @param string|null $value Value to set for the skuPartNumber property.
     */
     public function setSkuPartNumber(?string $value): void {

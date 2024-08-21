@@ -27,7 +27,7 @@ class X509CertificateCombinationConfiguration extends AuthenticationCombinationC
     }
 
     /**
-     * Gets the allowedIssuerSkis property value. The allowedIssuerSkis property
+     * Gets the allowedIssuerSkis property value. A list of allowed subject key identifier values.
      * @return array<string>|null
     */
     public function getAllowedIssuerSkis(): ?array {
@@ -41,7 +41,7 @@ class X509CertificateCombinationConfiguration extends AuthenticationCombinationC
     }
 
     /**
-     * Gets the allowedPolicyOIDs property value. The allowedPolicyOIDs property
+     * Gets the allowedPolicyOIDs property value. A list of allowed policy OIDs.
      * @return array<string>|null
     */
     public function getAllowedPolicyOIDs(): ?array {
@@ -91,7 +91,7 @@ class X509CertificateCombinationConfiguration extends AuthenticationCombinationC
     }
 
     /**
-     * Sets the allowedIssuerSkis property value. The allowedIssuerSkis property
+     * Sets the allowedIssuerSkis property value. A list of allowed subject key identifier values.
      * @param array<string>|null $value Value to set for the allowedIssuerSkis property.
     */
     public function setAllowedIssuerSkis(?array $value): void {
@@ -99,7 +99,7 @@ class X509CertificateCombinationConfiguration extends AuthenticationCombinationC
     }
 
     /**
-     * Sets the allowedPolicyOIDs property value. The allowedPolicyOIDs property
+     * Sets the allowedPolicyOIDs property value. A list of allowed policy OIDs.
      * @param array<string>|null $value Value to set for the allowedPolicyOIDs property.
     */
     public function setAllowedPolicyOIDs(?array $value): void {
