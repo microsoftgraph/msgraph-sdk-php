@@ -128,7 +128,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      * @param WorkbookChartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChart|null>
      * @throws Exception
@@ -205,7 +205,7 @@ class WorkbookChartItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns collection of charts that are part of the worksheet. Read-only.
+     * The list of charts that are part of the worksheet. Read-only.
      * @param WorkbookChartItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

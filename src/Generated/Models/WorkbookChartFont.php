@@ -25,7 +25,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the bold property value. Represents the bold status of font.
+     * Gets the bold property value. Indicates whether the fond is bold.
      * @return bool|null
     */
     public function getBold(): ?bool {
@@ -37,7 +37,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
+     * Gets the color property value. The HTML color code representation of the text color. For example #FF0000 represents Red.
      * @return string|null
     */
     public function getColor(): ?string {
@@ -65,7 +65,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the italic property value. Represents the italic status of the font.
+     * Gets the italic property value. Indicates whether the fond is italic.
      * @return bool|null
     */
     public function getItalic(): ?bool {
@@ -77,7 +77,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Font name (for example 'Calibri')
+     * Gets the name property value. The font name. For example 'Calibri'.
      * @return string|null
     */
     public function getName(): ?string {
@@ -89,7 +89,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the size property value. Size of the font (for example 11)
+     * Gets the size property value. The size of the font. For example,  11.
      * @return float|null
     */
     public function getSize(): ?float {
@@ -101,7 +101,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
+     * Gets the underline property value. The type of underlining applied to the font. The possible values are: None, Single.
      * @return string|null
     */
     public function getUnderline(): ?string {
@@ -127,7 +127,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the bold property value. Represents the bold status of font.
+     * Sets the bold property value. Indicates whether the fond is bold.
      * @param bool|null $value Value to set for the bold property.
     */
     public function setBold(?bool $value): void {
@@ -135,7 +135,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
+     * Sets the color property value. The HTML color code representation of the text color. For example #FF0000 represents Red.
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
@@ -143,7 +143,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the italic property value. Represents the italic status of the font.
+     * Sets the italic property value. Indicates whether the fond is italic.
      * @param bool|null $value Value to set for the italic property.
     */
     public function setItalic(?bool $value): void {
@@ -151,7 +151,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Font name (for example 'Calibri')
+     * Sets the name property value. The font name. For example 'Calibri'.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -159,7 +159,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the size property value. Size of the font (for example 11)
+     * Sets the size property value. The size of the font. For example,  11.
      * @param float|null $value Value to set for the size property.
     */
     public function setSize(?float $value): void {
@@ -167,7 +167,7 @@ class WorkbookChartFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single.
+     * Sets the underline property value. The type of underlining applied to the font. The possible values are: None, Single.
      * @param string|null $value Value to set for the underline property.
     */
     public function setUnderline(?string $value): void {

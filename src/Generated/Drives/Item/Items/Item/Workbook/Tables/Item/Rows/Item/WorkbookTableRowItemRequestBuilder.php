@@ -53,7 +53,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the rows in the table. Read-only.
+     * The list of all the rows in the table. Read-only.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableRow|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class WorkbookTableRowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the rows in the table. Read-only.
+     * The list of all the rows in the table. Read-only.
      * @param WorkbookTableRowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

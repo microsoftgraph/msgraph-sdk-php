@@ -255,6 +255,7 @@ class Application extends DirectoryObject implements Parsable
             'isFallbackPublicClient' => fn(ParseNode $n) => $o->setIsFallbackPublicClient($n->getBooleanValue()),
             'keyCredentials' => fn(ParseNode $n) => $o->setKeyCredentials($n->getCollectionOfObjectValues([KeyCredential::class, 'createFromDiscriminatorValue'])),
             'logo' => fn(ParseNode $n) => $o->setLogo($n->getBinaryContent()),
+            'nativeAuthenticationApisEnabled' => fn(ParseNode $n) => $o->setNativeAuthenticationApisEnabled($n->getEnumValue(NativeAuthenticationApisEnabled::class)),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
             'oauth2RequirePostResponse' => fn(ParseNode $n) => $o->setOauth2RequirePostResponse($n->getBooleanValue()),
             'optionalClaims' => fn(ParseNode $n) => $o->setOptionalClaims($n->getObjectValue([OptionalClaims::class, 'createFromDiscriminatorValue'])),
@@ -388,6 +389,18 @@ class Application extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'logo'");
+    }
+
+    /**
+     * Gets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: none and all. Default is none. For more information, see Native Authentication.
+     * @return NativeAuthenticationApisEnabled|null
+    */
+    public function getNativeAuthenticationApisEnabled(): ?NativeAuthenticationApisEnabled {
+        $val = $this->getBackingStore()->get('nativeAuthenticationApisEnabled');
+        if (is_null($val) || $val instanceof NativeAuthenticationApisEnabled) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nativeAuthenticationApisEnabled'");
     }
 
     /**
@@ -707,6 +720,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeBooleanValue('isFallbackPublicClient', $this->getIsFallbackPublicClient());
         $writer->writeCollectionOfObjectValues('keyCredentials', $this->getKeyCredentials());
         $writer->writeBinaryContent('logo', $this->getLogo());
+        $writer->writeEnumValue('nativeAuthenticationApisEnabled', $this->getNativeAuthenticationApisEnabled());
         $writer->writeStringValue('notes', $this->getNotes());
         $writer->writeBooleanValue('oauth2RequirePostResponse', $this->getOauth2RequirePostResponse());
         $writer->writeObjectValue('optionalClaims', $this->getOptionalClaims());
@@ -914,6 +928,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setLogo(?StreamInterface $value): void {
         $this->getBackingStore()->set('logo', $value);
+    }
+
+    /**
+     * Sets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: none and all. Default is none. For more information, see Native Authentication.
+     * @param NativeAuthenticationApisEnabled|null $value Value to set for the nativeAuthenticationApisEnabled property.
+    */
+    public function setNativeAuthenticationApisEnabled(?NativeAuthenticationApisEnabled $value): void {
+        $this->getBackingStore()->set('nativeAuthenticationApisEnabled', $value);
     }
 
     /**

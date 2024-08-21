@@ -171,6 +171,7 @@ class Incident extends Entity implements Parsable
             'resolvingComment' => fn(ParseNode $n) => $o->setResolvingComment($n->getStringValue()),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(AlertSeverity::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(IncidentStatus::class)),
+            'summary' => fn(ParseNode $n) => $o->setSummary($n->getStringValue()),
             'systemTags' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -268,6 +269,18 @@ class Incident extends Entity implements Parsable
     }
 
     /**
+     * Gets the summary property value. The overview of an attack. When applicable, the summary contains details of what occurred, impacted assets, and the type of attack.
+     * @return string|null
+    */
+    public function getSummary(): ?string {
+        $val = $this->getBackingStore()->get('summary');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'summary'");
+    }
+
+    /**
      * Gets the systemTags property value. The system tags associated with the incident.
      * @return array<string>|null
     */
@@ -315,6 +328,7 @@ class Incident extends Entity implements Parsable
         $writer->writeStringValue('resolvingComment', $this->getResolvingComment());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeEnumValue('status', $this->getStatus());
+        $writer->writeStringValue('summary', $this->getSummary());
         $writer->writeCollectionOfPrimitiveValues('systemTags', $this->getSystemTags());
         $writer->writeStringValue('tenantId', $this->getTenantId());
     }
@@ -445,6 +459,14 @@ class Incident extends Entity implements Parsable
     */
     public function setStatus(?IncidentStatus $value): void {
         $this->getBackingStore()->set('status', $value);
+    }
+
+    /**
+     * Sets the summary property value. The overview of an attack. When applicable, the summary contains details of what occurred, impacted assets, and the type of attack.
+     * @param string|null $value Value to set for the summary property.
+    */
+    public function setSummary(?string $value): void {
+        $this->getBackingStore()->set('summary', $value);
     }
 
     /**

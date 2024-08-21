@@ -27,6 +27,18 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
+     * Gets the callId property value. The unique identifier for the call that is related to this recording. Read-only.
+     * @return string|null
+    */
+    public function getCallId(): ?string {
+        $val = $this->getBackingStore()->get('callId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callId'");
+    }
+
+    /**
      * Gets the content property value. The content of the recording. Read-only.
      * @return StreamInterface|null
     */
@@ -36,6 +48,18 @@ class CallRecording extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
+    }
+
+    /**
+     * Gets the contentCorrelationId property value. The unique identifier that links the transcript with its corresponding recording. Read-only.
+     * @return string|null
+    */
+    public function getContentCorrelationId(): ?string {
+        $val = $this->getBackingStore()->get('contentCorrelationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentCorrelationId'");
     }
 
     /**
@@ -51,14 +75,29 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
+     * Gets the endDateTime property value. Date and time at which the recording ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @return DateTime|null
+    */
+    public function getEndDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'callId' => fn(ParseNode $n) => $o->setCallId($n->getStringValue()),
             'content' => fn(ParseNode $n) => $o->setContent($n->getBinaryContent()),
+            'contentCorrelationId' => fn(ParseNode $n) => $o->setContentCorrelationId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'meetingId' => fn(ParseNode $n) => $o->setMeetingId($n->getStringValue()),
             'meetingOrganizer' => fn(ParseNode $n) => $o->setMeetingOrganizer($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'recordingContentUrl' => fn(ParseNode $n) => $o->setRecordingContentUrl($n->getStringValue()),
@@ -107,11 +146,22 @@ class CallRecording extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('callId', $this->getCallId());
         $writer->writeBinaryContent('content', $this->getContent());
+        $writer->writeStringValue('contentCorrelationId', $this->getContentCorrelationId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeStringValue('meetingId', $this->getMeetingId());
         $writer->writeObjectValue('meetingOrganizer', $this->getMeetingOrganizer());
         $writer->writeStringValue('recordingContentUrl', $this->getRecordingContentUrl());
+    }
+
+    /**
+     * Sets the callId property value. The unique identifier for the call that is related to this recording. Read-only.
+     * @param string|null $value Value to set for the callId property.
+    */
+    public function setCallId(?string $value): void {
+        $this->getBackingStore()->set('callId', $value);
     }
 
     /**
@@ -123,11 +173,27 @@ class CallRecording extends Entity implements Parsable
     }
 
     /**
+     * Sets the contentCorrelationId property value. The unique identifier that links the transcript with its corresponding recording. Read-only.
+     * @param string|null $value Value to set for the contentCorrelationId property.
+    */
+    public function setContentCorrelationId(?string $value): void {
+        $this->getBackingStore()->set('contentCorrelationId', $value);
+    }
+
+    /**
      * Sets the createdDateTime property value. Date and time at which the recording was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the endDateTime property value. Date and time at which the recording ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @param DateTime|null $value Value to set for the endDateTime property.
+    */
+    public function setEndDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('endDateTime', $value);
     }
 
     /**

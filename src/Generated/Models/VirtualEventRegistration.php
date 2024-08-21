@@ -61,8 +61,11 @@ class VirtualEventRegistration extends Entity implements Parsable
             'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
             'firstName' => fn(ParseNode $n) => $o->setFirstName($n->getStringValue()),
             'lastName' => fn(ParseNode $n) => $o->setLastName($n->getStringValue()),
+            'preferredLanguage' => fn(ParseNode $n) => $o->setPreferredLanguage($n->getStringValue()),
+            'preferredTimezone' => fn(ParseNode $n) => $o->setPreferredTimezone($n->getStringValue()),
             'registrationDateTime' => fn(ParseNode $n) => $o->setRegistrationDateTime($n->getDateTimeValue()),
             'registrationQuestionAnswers' => fn(ParseNode $n) => $o->setRegistrationQuestionAnswers($n->getCollectionOfObjectValues([VirtualEventRegistrationQuestionAnswer::class, 'createFromDiscriminatorValue'])),
+            'sessions' => fn(ParseNode $n) => $o->setSessions($n->getCollectionOfObjectValues([VirtualEventSession::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(VirtualEventAttendeeRegistrationStatus::class)),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
@@ -93,6 +96,30 @@ class VirtualEventRegistration extends Entity implements Parsable
     }
 
     /**
+     * Gets the preferredLanguage property value. The registrant's preferred language.
+     * @return string|null
+    */
+    public function getPreferredLanguage(): ?string {
+        $val = $this->getBackingStore()->get('preferredLanguage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preferredLanguage'");
+    }
+
+    /**
+     * Gets the preferredTimezone property value. The registrant's time zone details.
+     * @return string|null
+    */
+    public function getPreferredTimezone(): ?string {
+        $val = $this->getBackingStore()->get('preferredTimezone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preferredTimezone'");
+    }
+
+    /**
      * Gets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
@@ -119,7 +146,21 @@ class VirtualEventRegistration extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Registration status of the registrant. Read-only.
+     * Gets the sessions property value. Sessions for a registration.
+     * @return array<VirtualEventSession>|null
+    */
+    public function getSessions(): ?array {
+        $val = $this->getBackingStore()->get('sessions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventSession::class);
+            /** @var array<VirtualEventSession>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sessions'");
+    }
+
+    /**
+     * Gets the status property value. Registration status of the registrant. Read-only. Possible values are registered, canceled, waitlisted, pendingApproval, rejectedByOrganizer, and unknownFutureValue.
      * @return VirtualEventAttendeeRegistrationStatus|null
     */
     public function getStatus(): ?VirtualEventAttendeeRegistrationStatus {
@@ -152,8 +193,11 @@ class VirtualEventRegistration extends Entity implements Parsable
         $writer->writeStringValue('email', $this->getEmail());
         $writer->writeStringValue('firstName', $this->getFirstName());
         $writer->writeStringValue('lastName', $this->getLastName());
+        $writer->writeStringValue('preferredLanguage', $this->getPreferredLanguage());
+        $writer->writeStringValue('preferredTimezone', $this->getPreferredTimezone());
         $writer->writeDateTimeValue('registrationDateTime', $this->getRegistrationDateTime());
         $writer->writeCollectionOfObjectValues('registrationQuestionAnswers', $this->getRegistrationQuestionAnswers());
+        $writer->writeCollectionOfObjectValues('sessions', $this->getSessions());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('userId', $this->getUserId());
     }
@@ -191,6 +235,22 @@ class VirtualEventRegistration extends Entity implements Parsable
     }
 
     /**
+     * Sets the preferredLanguage property value. The registrant's preferred language.
+     * @param string|null $value Value to set for the preferredLanguage property.
+    */
+    public function setPreferredLanguage(?string $value): void {
+        $this->getBackingStore()->set('preferredLanguage', $value);
+    }
+
+    /**
+     * Sets the preferredTimezone property value. The registrant's time zone details.
+     * @param string|null $value Value to set for the preferredTimezone property.
+    */
+    public function setPreferredTimezone(?string $value): void {
+        $this->getBackingStore()->set('preferredTimezone', $value);
+    }
+
+    /**
      * Sets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the registrationDateTime property.
     */
@@ -207,7 +267,15 @@ class VirtualEventRegistration extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Registration status of the registrant. Read-only.
+     * Sets the sessions property value. Sessions for a registration.
+     * @param array<VirtualEventSession>|null $value Value to set for the sessions property.
+    */
+    public function setSessions(?array $value): void {
+        $this->getBackingStore()->set('sessions', $value);
+    }
+
+    /**
+     * Sets the status property value. Registration status of the registrant. Read-only. Possible values are registered, canceled, waitlisted, pendingApproval, rejectedByOrganizer, and unknownFutureValue.
      * @param VirtualEventAttendeeRegistrationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?VirtualEventAttendeeRegistrationStatus $value): void {

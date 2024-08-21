@@ -147,7 +147,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The meeting start time in UTC. Required when you create an online meeting.
+     * Gets the startDateTime property value. The meeting start time in UTC.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -255,7 +255,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The meeting start time in UTC. Required when you create an online meeting.
+     * Sets the startDateTime property value. The meeting start time in UTC.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {

@@ -25,7 +25,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the bold property value. Represents the bold status of font.
+     * Gets the bold property value. Inidicates whether the font is bold.
      * @return bool|null
     */
     public function getBold(): ?bool {
@@ -37,7 +37,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
+     * Gets the color property value. The HTML color code representation of the text color. For example, #FF0000 represents the color red.
      * @return string|null
     */
     public function getColor(): ?string {
@@ -65,7 +65,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the italic property value. Represents the italic status of the font.
+     * Gets the italic property value. Inidicates whether the font is italic.
      * @return bool|null
     */
     public function getItalic(): ?bool {
@@ -77,7 +77,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Font name (for example 'Calibri')
+     * Gets the name property value. The font name. For example, 'Calibri'.
      * @return string|null
     */
     public function getName(): ?string {
@@ -89,7 +89,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the size property value. Font size.
+     * Gets the size property value. The font size.
      * @return float|null
     */
     public function getSize(): ?float {
@@ -101,7 +101,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Gets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Gets the underline property value. The type of underlining applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      * @return string|null
     */
     public function getUnderline(): ?string {
@@ -127,7 +127,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the bold property value. Represents the bold status of font.
+     * Sets the bold property value. Inidicates whether the font is bold.
      * @param bool|null $value Value to set for the bold property.
     */
     public function setBold(?bool $value): void {
@@ -135,7 +135,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the color property value. HTML color code representation of the text color. for example #FF0000 represents Red.
+     * Sets the color property value. The HTML color code representation of the text color. For example, #FF0000 represents the color red.
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
@@ -143,7 +143,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the italic property value. Represents the italic status of the font.
+     * Sets the italic property value. Inidicates whether the font is italic.
      * @param bool|null $value Value to set for the italic property.
     */
     public function setItalic(?bool $value): void {
@@ -151,7 +151,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Font name (for example 'Calibri')
+     * Sets the name property value. The font name. For example, 'Calibri'.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -159,7 +159,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the size property value. Font size.
+     * Sets the size property value. The font size.
      * @param float|null $value Value to set for the size property.
     */
     public function setSize(?float $value): void {
@@ -167,7 +167,7 @@ class WorkbookRangeFont extends Entity implements Parsable
     }
 
     /**
-     * Sets the underline property value. Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
+     * Sets the underline property value. The type of underlining applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      * @param string|null $value Value to set for the underline property.
     */
     public function setUnderline(?string $value): void {

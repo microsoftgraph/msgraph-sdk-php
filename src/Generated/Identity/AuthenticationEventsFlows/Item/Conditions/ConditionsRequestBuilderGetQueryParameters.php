@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Cond
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.
+ * The conditions representing the context of the authentication request that's used to decide whether the events policy is invoked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
 */
 class ConditionsRequestBuilderGetQueryParameters 
 {

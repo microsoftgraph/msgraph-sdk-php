@@ -52,11 +52,11 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosVppEBook objects.
+     * List properties and relationships of the managedEBook objects.
      * @param ManagedEBooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebook-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-managedebook-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedEBooksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,7 +83,7 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosVppEBook objects.
+     * List properties and relationships of the managedEBook objects.
      * @param ManagedEBooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

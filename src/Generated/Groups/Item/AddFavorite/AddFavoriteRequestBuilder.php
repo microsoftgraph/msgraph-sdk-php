@@ -30,7 +30,7 @@ class AddFavoriteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
+     * Add the group to the list of the current user's favorite groups.  The group shows up in Outlook and Teams favorites. Supported for Microsoft 365 groups only.
      * @param AddFavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class AddFavoriteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add the group to the list of the current user's favorite groups. Supported for Microsoft 365 groups only.
+     * Add the group to the list of the current user's favorite groups.  The group shows up in Outlook and Teams favorites. Supported for Microsoft 365 groups only.
      * @param AddFavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

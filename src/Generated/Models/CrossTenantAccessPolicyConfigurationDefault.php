@@ -99,6 +99,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
             'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
             'invitationRedemptionIdentityProviderConfiguration' => fn(ParseNode $n) => $o->setInvitationRedemptionIdentityProviderConfiguration($n->getObjectValue([DefaultInvitationRedemptionIdentityProviderConfiguration::class, 'createFromDiscriminatorValue'])),
             'isServiceDefault' => fn(ParseNode $n) => $o->setIsServiceDefault($n->getBooleanValue()),
+            'tenantRestrictions' => fn(ParseNode $n) => $o->setTenantRestrictions($n->getObjectValue([CrossTenantAccessPolicyTenantRestrictions::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -139,6 +140,18 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     }
 
     /**
+     * Gets the tenantRestrictions property value. Defines the default tenant restrictions configuration for users in your organization who access an external organization on your network or devices.
+     * @return CrossTenantAccessPolicyTenantRestrictions|null
+    */
+    public function getTenantRestrictions(): ?CrossTenantAccessPolicyTenantRestrictions {
+        $val = $this->getBackingStore()->get('tenantRestrictions');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyTenantRestrictions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantRestrictions'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -152,6 +165,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
         $writer->writeObjectValue('invitationRedemptionIdentityProviderConfiguration', $this->getInvitationRedemptionIdentityProviderConfiguration());
         $writer->writeBooleanValue('isServiceDefault', $this->getIsServiceDefault());
+        $writer->writeObjectValue('tenantRestrictions', $this->getTenantRestrictions());
     }
 
     /**
@@ -216,6 +230,14 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     */
     public function setIsServiceDefault(?bool $value): void {
         $this->getBackingStore()->set('isServiceDefault', $value);
+    }
+
+    /**
+     * Sets the tenantRestrictions property value. Defines the default tenant restrictions configuration for users in your organization who access an external organization on your network or devices.
+     * @param CrossTenantAccessPolicyTenantRestrictions|null $value Value to set for the tenantRestrictions property.
+    */
+    public function setTenantRestrictions(?CrossTenantAccessPolicyTenantRestrictions $value): void {
+        $this->getBackingStore()->set('tenantRestrictions', $value);
     }
 
 }

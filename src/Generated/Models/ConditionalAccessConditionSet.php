@@ -129,7 +129,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the insiderRiskLevels property value. The insiderRiskLevels property
+     * Gets the insiderRiskLevels property value. Insider risk levels included in the policy. The possible values are: minor, moderate, elevated, unknownFutureValue.
      * @return ConditionalAccessInsiderRiskLevels|null
     */
     public function getInsiderRiskLevels(): ?ConditionalAccessInsiderRiskLevels {
@@ -299,7 +299,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the insiderRiskLevels property value. The insiderRiskLevels property
+     * Sets the insiderRiskLevels property value. Insider risk levels included in the policy. The possible values are: minor, moderate, elevated, unknownFutureValue.
      * @param ConditionalAccessInsiderRiskLevels|null $value Value to set for the insiderRiskLevels property.
     */
     public function setInsiderRiskLevels(?ConditionalAccessInsiderRiskLevels $value): void {

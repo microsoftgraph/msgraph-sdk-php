@@ -39,7 +39,7 @@ class WorkbookChartSeries extends Entity implements Parsable
     }
 
     /**
-     * Gets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * Gets the format property value. The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @return WorkbookChartSeriesFormat|null
     */
     public function getFormat(): ?WorkbookChartSeriesFormat {
@@ -51,7 +51,7 @@ class WorkbookChartSeries extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Represents the name of a series in a chart.
+     * Gets the name property value. The name of a series in a chart.
      * @return string|null
     */
     public function getName(): ?string {
@@ -63,7 +63,7 @@ class WorkbookChartSeries extends Entity implements Parsable
     }
 
     /**
-     * Gets the points property value. Represents a collection of all points in the series. Read-only.
+     * Gets the points property value. A collection of all points in the series. Read-only.
      * @return array<WorkbookChartPoint>|null
     */
     public function getPoints(): ?array {
@@ -88,7 +88,7 @@ class WorkbookChartSeries extends Entity implements Parsable
     }
 
     /**
-     * Sets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
+     * Sets the format property value. The formatting of a chart series, which includes fill and line formatting. Read-only.
      * @param WorkbookChartSeriesFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartSeriesFormat $value): void {
@@ -96,7 +96,7 @@ class WorkbookChartSeries extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Represents the name of a series in a chart.
+     * Sets the name property value. The name of a series in a chart.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -104,7 +104,7 @@ class WorkbookChartSeries extends Entity implements Parsable
     }
 
     /**
-     * Sets the points property value. Represents a collection of all points in the series. Read-only.
+     * Sets the points property value. A collection of all points in the series. Read-only.
      * @param array<WorkbookChartPoint>|null $value Value to set for the points property.
     */
     public function setPoints(?array $value): void {

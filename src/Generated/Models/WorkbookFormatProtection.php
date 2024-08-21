@@ -37,7 +37,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
     }
 
     /**
-     * Gets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * Gets the formulaHidden property value. Indicates whether Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
      * @return bool|null
     */
     public function getFormulaHidden(): ?bool {
@@ -49,7 +49,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
     }
 
     /**
-     * Gets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * Gets the locked property value. Indicates whether Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
      * @return bool|null
     */
     public function getLocked(): ?bool {
@@ -71,7 +71,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
     }
 
     /**
-     * Sets the formulaHidden property value. Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * Sets the formulaHidden property value. Indicates whether Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
      * @param bool|null $value Value to set for the formulaHidden property.
     */
     public function setFormulaHidden(?bool $value): void {
@@ -79,7 +79,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
     }
 
     /**
-     * Sets the locked property value. Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * Sets the locked property value. Indicates whether Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
      * @param bool|null $value Value to set for the locked property.
     */
     public function setLocked(?bool $value): void {

@@ -36,7 +36,7 @@ class WorkbookChartPoint extends Entity implements Parsable
     }
 
     /**
-     * Gets the format property value. Encapsulates the format properties chart point. Read-only.
+     * Gets the format property value. The format properties of the chart point. Read-only.
      * @return WorkbookChartPointFormat|null
     */
     public function getFormat(): ?WorkbookChartPointFormat {
@@ -57,7 +57,7 @@ class WorkbookChartPoint extends Entity implements Parsable
     }
 
     /**
-     * Sets the format property value. Encapsulates the format properties chart point. Read-only.
+     * Sets the format property value. The format properties of the chart point. Read-only.
      * @param WorkbookChartPointFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartPointFormat $value): void {

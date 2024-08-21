@@ -6,11 +6,11 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\GraphExternalUsersSelfServiceSignUpEventsFlow\OnAttributeCollection\GraphOnAttributeCollectionExternalUsersSelfServiceSignUp\Attributes\AttributesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\OnAttributeCollectionExternalUsersSelfServiceSignUp;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Psr\Http\Message\StreamInterface;
 
 /**
  * Casts the previous resource to onAttributeCollectionExternalUsersSelfServiceSignUp.
@@ -39,9 +39,9 @@ class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder ext
     }
 
     /**
-     * Get the items of type microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp in the microsoft.graph.onAttributeCollectionHandler collection
+     * Get the item of type microsoft.graph.onAttributeCollectionHandler as microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp
      * @param GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<StreamInterface|null>
+     * @return Promise<OnAttributeCollectionExternalUsersSelfServiceSignUp|null>
      * @throws Exception
     */
     public function get(?GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -49,13 +49,11 @@ class GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder ext
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        /** @var Promise<StreamInterface|null> $result */
-        $result = $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
-        return $result;
+        return $this->requestAdapter->sendAsync($requestInfo, [OnAttributeCollectionExternalUsersSelfServiceSignUp::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
-     * Get the items of type microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp in the microsoft.graph.onAttributeCollectionHandler collection
+     * Get the item of type microsoft.graph.onAttributeCollectionHandler as microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp
      * @param GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
