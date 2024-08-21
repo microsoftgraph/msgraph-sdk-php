@@ -64,6 +64,7 @@ class Storage implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'fileStorage' => fn(ParseNode $n) => $o->setFileStorage($n->getObjectValue([FileStorage::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([StorageSettings::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -92,12 +93,25 @@ class Storage implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the settings property value. The settings property
+     * @return StorageSettings|null
+    */
+    public function getSettings(): ?StorageSettings {
+        $val = $this->getBackingStore()->get('settings');
+        if (is_null($val) || $val instanceof StorageSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('fileStorage', $this->getFileStorage());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -131,6 +145,14 @@ class Storage implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the settings property value. The settings property
+     * @param StorageSettings|null $value Value to set for the settings property.
+    */
+    public function setSettings(?StorageSettings $value): void {
+        $this->getBackingStore()->set('settings', $value);
     }
 
 }

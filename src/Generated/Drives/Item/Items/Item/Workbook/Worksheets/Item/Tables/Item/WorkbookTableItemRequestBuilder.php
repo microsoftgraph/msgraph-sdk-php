@@ -133,7 +133,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @param WorkbookTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTable|null>
      * @throws Exception
@@ -180,7 +180,7 @@ class WorkbookTableItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @param WorkbookTableItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

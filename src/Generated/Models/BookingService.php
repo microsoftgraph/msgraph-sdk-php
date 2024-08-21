@@ -3,6 +3,7 @@
 namespace Microsoft\Graph\Generated\Models;
 
 use DateInterval;
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -39,6 +40,18 @@ class BookingService extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalInformation'");
+    }
+
+    /**
+     * Gets the createdDateTime property value. The date, time, and time zone when the service was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -149,6 +162,7 @@ class BookingService extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'additionalInformation' => fn(ParseNode $n) => $o->setAdditionalInformation($n->getStringValue()),
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customQuestions' => fn(ParseNode $n) => $o->setCustomQuestions($n->getCollectionOfObjectValues([BookingQuestionAssignment::class, 'createFromDiscriminatorValue'])),
             'defaultDuration' => fn(ParseNode $n) => $o->setDefaultDuration($n->getDateIntervalValue()),
             'defaultLocation' => fn(ParseNode $n) => $o->setDefaultLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
@@ -158,9 +172,11 @@ class BookingService extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'isAnonymousJoinEnabled' => fn(ParseNode $n) => $o->setIsAnonymousJoinEnabled($n->getBooleanValue()),
+            'isCustomerAllowedToManageBooking' => fn(ParseNode $n) => $o->setIsCustomerAllowedToManageBooking($n->getBooleanValue()),
             'isHiddenFromCustomers' => fn(ParseNode $n) => $o->setIsHiddenFromCustomers($n->getBooleanValue()),
             'isLocationOnline' => fn(ParseNode $n) => $o->setIsLocationOnline($n->getBooleanValue()),
             'languageTag' => fn(ParseNode $n) => $o->setLanguageTag($n->getStringValue()),
+            'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'maximumAttendeesCount' => fn(ParseNode $n) => $o->setMaximumAttendeesCount($n->getIntegerValue()),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
             'postBuffer' => fn(ParseNode $n) => $o->setPostBuffer($n->getDateIntervalValue()),
@@ -180,7 +196,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
+     * Gets the isAnonymousJoinEnabled property value. Indicates if an anonymousJoinWebUrl(webrtcUrl) is generated for the appointment booked for this service. The default value is false.
      * @return bool|null
     */
     public function getIsAnonymousJoinEnabled(): ?bool {
@@ -192,7 +208,19 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
+     * Gets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
+     * @return bool|null
+    */
+    public function getIsCustomerAllowedToManageBooking(): ?bool {
+        $val = $this->getBackingStore()->get('isCustomerAllowedToManageBooking');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCustomerAllowedToManageBooking'");
+    }
+
+    /**
+     * Gets the isHiddenFromCustomers property value. True indicates that this service isn't available to customers for booking.
      * @return bool|null
     */
     public function getIsHiddenFromCustomers(): ?bool {
@@ -204,7 +232,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Gets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
+     * Gets the isLocationOnline property value. Indicates that the appointments for the service are held online. The default value is false.
      * @return bool|null
     */
     public function getIsLocationOnline(): ?bool {
@@ -225,6 +253,18 @@ class BookingService extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'languageTag'");
+    }
+
+    /**
+     * Gets the lastUpdatedDateTime property value. The date, time, and time zone when the service was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getLastUpdatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -332,6 +372,7 @@ class BookingService extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('additionalInformation', $this->getAdditionalInformation());
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('customQuestions', $this->getCustomQuestions());
         $writer->writeDateIntervalValue('defaultDuration', $this->getDefaultDuration());
         $writer->writeObjectValue('defaultLocation', $this->getDefaultLocation());
@@ -341,9 +382,11 @@ class BookingService extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeBooleanValue('isAnonymousJoinEnabled', $this->getIsAnonymousJoinEnabled());
+        $writer->writeBooleanValue('isCustomerAllowedToManageBooking', $this->getIsCustomerAllowedToManageBooking());
         $writer->writeBooleanValue('isHiddenFromCustomers', $this->getIsHiddenFromCustomers());
         $writer->writeBooleanValue('isLocationOnline', $this->getIsLocationOnline());
         $writer->writeStringValue('languageTag', $this->getLanguageTag());
+        $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeIntegerValue('maximumAttendeesCount', $this->getMaximumAttendeesCount());
         $writer->writeStringValue('notes', $this->getNotes());
         $writer->writeDateIntervalValue('postBuffer', $this->getPostBuffer());
@@ -359,6 +402,14 @@ class BookingService extends Entity implements Parsable
     */
     public function setAdditionalInformation(?string $value): void {
         $this->getBackingStore()->set('additionalInformation', $value);
+    }
+
+    /**
+     * Sets the createdDateTime property value. The date, time, and time zone when the service was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
@@ -426,7 +477,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAnonymousJoinEnabled property value. True if the URL to join the appointment anonymously (anonymousJoinWebUrl) will be generated for the appointment booked for this service.
+     * Sets the isAnonymousJoinEnabled property value. Indicates if an anonymousJoinWebUrl(webrtcUrl) is generated for the appointment booked for this service. The default value is false.
      * @param bool|null $value Value to set for the isAnonymousJoinEnabled property.
     */
     public function setIsAnonymousJoinEnabled(?bool $value): void {
@@ -434,7 +485,15 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the isHiddenFromCustomers property value. True means this service is not available to customers for booking.
+     * Sets the isCustomerAllowedToManageBooking property value. Indicates that the customer can manage bookings created by the staff. The default value is false.
+     * @param bool|null $value Value to set for the isCustomerAllowedToManageBooking property.
+    */
+    public function setIsCustomerAllowedToManageBooking(?bool $value): void {
+        $this->getBackingStore()->set('isCustomerAllowedToManageBooking', $value);
+    }
+
+    /**
+     * Sets the isHiddenFromCustomers property value. True indicates that this service isn't available to customers for booking.
      * @param bool|null $value Value to set for the isHiddenFromCustomers property.
     */
     public function setIsHiddenFromCustomers(?bool $value): void {
@@ -442,7 +501,7 @@ class BookingService extends Entity implements Parsable
     }
 
     /**
-     * Sets the isLocationOnline property value. True indicates that the appointments for the service will be held online. Default value is false.
+     * Sets the isLocationOnline property value. Indicates that the appointments for the service are held online. The default value is false.
      * @param bool|null $value Value to set for the isLocationOnline property.
     */
     public function setIsLocationOnline(?bool $value): void {
@@ -455,6 +514,14 @@ class BookingService extends Entity implements Parsable
     */
     public function setLanguageTag(?string $value): void {
         $this->getBackingStore()->set('languageTag', $value);
+    }
+
+    /**
+     * Sets the lastUpdatedDateTime property value. The date, time, and time zone when the service was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
+    */
+    public function setLastUpdatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastUpdatedDateTime', $value);
     }
 
     /**

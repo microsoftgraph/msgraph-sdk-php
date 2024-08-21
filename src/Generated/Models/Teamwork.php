@@ -82,7 +82,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Gets the region property value. Represents the region of the organization. > The region property contains the organization's or the user's region. The property contains the user's region (if available) for users who have a valid multigeo license. For users without multigeo licenses, the region property contains the organization's region.
+     * Gets the region property value. Represents the region of the organization or the tenant. The region value can be any region supported by the Teams payload. The possible values are: Americas, Europe and MiddleEast, Asia Pacific, UAE, Australia, Brazil, Canada, Switzerland, Germany, France, India, Japan, South Korea, Norway, Singapore, United Kingdom, South Africa, Sweden, Qatar, Poland, Italy, Israel, Spain, Mexico, USGov Community Cloud, USGov Community Cloud High, USGov Department of Defense, and China.
      * @return string|null
     */
     public function getRegion(): ?string {
@@ -158,7 +158,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Sets the region property value. Represents the region of the organization. > The region property contains the organization's or the user's region. The property contains the user's region (if available) for users who have a valid multigeo license. For users without multigeo licenses, the region property contains the organization's region.
+     * Sets the region property value. Represents the region of the organization or the tenant. The region value can be any region supported by the Teams payload. The possible values are: Americas, Europe and MiddleEast, Asia Pacific, UAE, Australia, Brazil, Canada, Switzerland, Germany, France, India, Japan, South Korea, Norway, Singapore, United Kingdom, South Africa, Sweden, Qatar, Poland, Italy, Israel, Spain, Mexico, USGov Community Cloud, USGov Community Cloud High, USGov Department of Defense, and China.
      * @param string|null $value Value to set for the region property.
     */
     public function setRegion(?string $value): void {

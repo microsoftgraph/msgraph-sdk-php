@@ -13,4 +13,6 @@ class TeamsAsyncOperationType extends Enum {
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
     public const TEAMIFY_GROUP = 'teamifyGroup';
     public const CREATE_CHANNEL = 'createChannel';
+    public const ARCHIVE_CHANNEL = 'archiveChannel';
+    public const UNARCHIVE_CHANNEL = 'unarchiveChannel';
 }

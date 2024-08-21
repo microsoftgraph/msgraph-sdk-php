@@ -141,7 +141,7 @@ class FilterRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the filter applied to the column. Read-only.
+     * The filter applied to the column. Read-only.
      * @param FilterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookFilter|null>
      * @throws Exception
@@ -188,7 +188,7 @@ class FilterRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the filter applied to the column. Read-only.
+     * The filter applied to the column. Read-only.
      * @param FilterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

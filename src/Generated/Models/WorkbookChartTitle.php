@@ -39,7 +39,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Gets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     * Gets the format property value. The formatting of a chart title, which includes fill and font formatting. Read-only.
      * @return WorkbookChartTitleFormat|null
     */
     public function getFormat(): ?WorkbookChartTitleFormat {
@@ -51,7 +51,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Gets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
+     * Gets the overlay property value. Indicates whether the chart title will overlay the chart or not.
      * @return bool|null
     */
     public function getOverlay(): ?bool {
@@ -63,7 +63,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Gets the text property value. Represents the title text of a chart.
+     * Gets the text property value. The title text of the chart.
      * @return string|null
     */
     public function getText(): ?string {
@@ -75,7 +75,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Gets the visible property value. A boolean value that represents the visibility of a chart title object.
+     * Gets the visible property value. Indicates whether the chart title is visible.
      * @return bool|null
     */
     public function getVisible(): ?bool {
@@ -99,7 +99,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Sets the format property value. Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
+     * Sets the format property value. The formatting of a chart title, which includes fill and font formatting. Read-only.
      * @param WorkbookChartTitleFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartTitleFormat $value): void {
@@ -107,7 +107,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Sets the overlay property value. Boolean value representing if the chart title will overlay the chart or not.
+     * Sets the overlay property value. Indicates whether the chart title will overlay the chart or not.
      * @param bool|null $value Value to set for the overlay property.
     */
     public function setOverlay(?bool $value): void {
@@ -115,7 +115,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Sets the text property value. Represents the title text of a chart.
+     * Sets the text property value. The title text of the chart.
      * @param string|null $value Value to set for the text property.
     */
     public function setText(?string $value): void {
@@ -123,7 +123,7 @@ class WorkbookChartTitle extends Entity implements Parsable
     }
 
     /**
-     * Sets the visible property value. A boolean value that represents the visibility of a chart title object.
+     * Sets the visible property value. Indicates whether the chart title is visible.
      * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {

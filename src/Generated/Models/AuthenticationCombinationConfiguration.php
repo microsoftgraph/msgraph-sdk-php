@@ -34,7 +34,7 @@ class AuthenticationCombinationConfiguration extends Entity implements Parsable
     }
 
     /**
-     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
+     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object, part of the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
      * @return array<AuthenticationMethodModes>|null
     */
     public function getAppliesToCombinations(): ?array {
@@ -68,7 +68,7 @@ class AuthenticationCombinationConfiguration extends Entity implements Parsable
     }
 
     /**
-     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object that's defined for the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
+     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object, part of the authenticationStrengthPolicy. The only possible value for fido2combinationConfigurations is 'fido2'.
      * @param array<AuthenticationMethodModes>|null $value Value to set for the appliesToCombinations property.
     */
     public function setAppliesToCombinations(?array $value): void {

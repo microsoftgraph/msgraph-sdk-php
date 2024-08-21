@@ -26,7 +26,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content of comment.
+     * Gets the content property value. The content of the comment.
      * @return string|null
     */
     public function getContent(): ?string {
@@ -38,7 +38,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentType property value. Indicates the type for the comment.
+     * Gets the contentType property value. The content type of the comment.
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -63,7 +63,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Gets the replies property value. The replies property
+     * Gets the replies property value. The list of replies to the comment. Read-only. Nullable.
      * @return array<WorkbookCommentReply>|null
     */
     public function getReplies(): ?array {
@@ -88,7 +88,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content of comment.
+     * Sets the content property value. The content of the comment.
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -96,7 +96,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentType property value. Indicates the type for the comment.
+     * Sets the contentType property value. The content type of the comment.
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
@@ -104,7 +104,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Sets the replies property value. The replies property
+     * Sets the replies property value. The list of replies to the comment. Read-only. Nullable.
      * @param array<WorkbookCommentReply>|null $value Value to set for the replies property.
     */
     public function setReplies(?array $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\Subscriptions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get subscriptions from directory
+ * Get the list of commercial subscriptions that an organization acquired.
 */
 class SubscriptionsRequestBuilderGetQueryParameters 
 {

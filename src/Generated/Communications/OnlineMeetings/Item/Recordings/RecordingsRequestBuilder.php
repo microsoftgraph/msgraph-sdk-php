@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Recording
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Recordings\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Recordings\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\Recordings\Item\CallRecordingItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallRecording;
 use Microsoft\Graph\Generated\Models\CallRecordingCollectionResponse;
@@ -24,6 +25,13 @@ class RecordingsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

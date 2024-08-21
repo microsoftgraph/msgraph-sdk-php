@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Insights\Used;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
+ * Calculated relationship that identifies the latest documents viewed or modified by a user, including OneDrive for work or school and SharePoint documents, ranked by recency of use.
 */
 class UsedRequestBuilderGetQueryParameters 
 {

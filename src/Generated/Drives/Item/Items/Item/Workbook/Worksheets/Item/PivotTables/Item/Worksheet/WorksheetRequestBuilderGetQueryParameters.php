@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The worksheet containing the current PivotTable. Read-only.
+ * The worksheet that contains the current pivot table. Read-only.
 */
 class WorksheetRequestBuilderGetQueryParameters 
 {

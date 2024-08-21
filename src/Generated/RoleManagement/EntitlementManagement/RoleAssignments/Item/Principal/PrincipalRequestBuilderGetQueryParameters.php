@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Referencing the assigned principal. Read-only. Supports $expand.
+ * Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
 */
 class PrincipalRequestBuilderGetQueryParameters 
 {

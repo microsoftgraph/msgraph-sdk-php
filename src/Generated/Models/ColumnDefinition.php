@@ -25,7 +25,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the boolean property value. This column stores boolean values.
+     * Gets the boolean property value. This column stores Boolean values.
      * @return BooleanColumn|null
     */
     public function getBoolean(): ?BooleanColumn {
@@ -491,7 +491,7 @@ class ColumnDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the boolean property value. This column stores boolean values.
+     * Sets the boolean property value. This column stores Boolean values.
      * @param BooleanColumn|null $value Value to set for the boolean property.
     */
     public function setBoolean(?BooleanColumn $value): void {

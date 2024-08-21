@@ -26,7 +26,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the columns property value. Represents a collection of all the columns in the table. Read-only.
+     * Gets the columns property value. The list of all the columns in the table. Read-only.
      * @return array<WorkbookTableColumn>|null
     */
     public function getColumns(): ?array {
@@ -88,7 +88,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the legacyId property value. Legacy ID used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
+     * Gets the legacyId property value. A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
      * @return string|null
     */
     public function getLegacyId(): ?string {
@@ -100,7 +100,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Name of the table.
+     * Gets the name property value. The name of the table.
      * @return string|null
     */
     public function getName(): ?string {
@@ -112,7 +112,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the rows property value. Represents a collection of all the rows in the table. Read-only.
+     * Gets the rows property value. The list of all the rows in the table. Read-only.
      * @return array<WorkbookTableRow>|null
     */
     public function getRows(): ?array {
@@ -186,7 +186,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the sort property value. Represents the sorting for the table. Read-only.
+     * Gets the sort property value. The sorting for the table. Read-only.
      * @return WorkbookTableSort|null
     */
     public function getSort(): ?WorkbookTableSort {
@@ -198,7 +198,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Gets the style property value. A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return string|null
     */
     public function getStyle(): ?string {
@@ -244,7 +244,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the columns property value. Represents a collection of all the columns in the table. Read-only.
+     * Sets the columns property value. The list of all the columns in the table. Read-only.
      * @param array<WorkbookTableColumn>|null $value Value to set for the columns property.
     */
     public function setColumns(?array $value): void {
@@ -268,7 +268,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the legacyId property value. Legacy ID used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
+     * Sets the legacyId property value. A legacy identifier used in older Excel clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and shouldn't be parsed to any other type. Read-only.
      * @param string|null $value Value to set for the legacyId property.
     */
     public function setLegacyId(?string $value): void {
@@ -276,7 +276,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Name of the table.
+     * Sets the name property value. The name of the table.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -284,7 +284,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the rows property value. Represents a collection of all the rows in the table. Read-only.
+     * Sets the rows property value. The list of all the rows in the table. Read-only.
      * @param array<WorkbookTableRow>|null $value Value to set for the rows property.
     */
     public function setRows(?array $value): void {
@@ -332,7 +332,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the sort property value. Represents the sorting for the table. Read-only.
+     * Sets the sort property value. The sorting for the table. Read-only.
      * @param WorkbookTableSort|null $value Value to set for the sort property.
     */
     public function setSort(?WorkbookTableSort $value): void {
@@ -340,7 +340,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the style property value. Constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Sets the style property value. A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @param string|null $value Value to set for the style property.
     */
     public function setStyle(?string $value): void {

@@ -47,12 +47,27 @@ class VirtualEventsRoot extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([VirtualEvent::class, 'createFromDiscriminatorValue'])),
+            'townhalls' => fn(ParseNode $n) => $o->setTownhalls($n->getCollectionOfObjectValues([VirtualEventTownhall::class, 'createFromDiscriminatorValue'])),
             'webinars' => fn(ParseNode $n) => $o->setWebinars($n->getCollectionOfObjectValues([VirtualEventWebinar::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the webinars property value. The webinars property
+     * Gets the townhalls property value. A collection of town halls. Nullable.
+     * @return array<VirtualEventTownhall>|null
+    */
+    public function getTownhalls(): ?array {
+        $val = $this->getBackingStore()->get('townhalls');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventTownhall::class);
+            /** @var array<VirtualEventTownhall>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'townhalls'");
+    }
+
+    /**
+     * Gets the webinars property value. A collection of webinars. Nullable.
      * @return array<VirtualEventWebinar>|null
     */
     public function getWebinars(): ?array {
@@ -72,6 +87,7 @@ class VirtualEventsRoot extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('events', $this->getEvents());
+        $writer->writeCollectionOfObjectValues('townhalls', $this->getTownhalls());
         $writer->writeCollectionOfObjectValues('webinars', $this->getWebinars());
     }
 
@@ -84,7 +100,15 @@ class VirtualEventsRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the webinars property value. The webinars property
+     * Sets the townhalls property value. A collection of town halls. Nullable.
+     * @param array<VirtualEventTownhall>|null $value Value to set for the townhalls property.
+    */
+    public function setTownhalls(?array $value): void {
+        $this->getBackingStore()->set('townhalls', $value);
+    }
+
+    /**
+     * Sets the webinars property value. A collection of webinars. Nullable.
      * @param array<VirtualEventWebinar>|null $value Value to set for the webinars property.
     */
     public function setWebinars(?array $value): void {

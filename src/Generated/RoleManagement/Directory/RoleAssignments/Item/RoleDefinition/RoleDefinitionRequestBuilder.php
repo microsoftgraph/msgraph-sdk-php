@@ -31,7 +31,7 @@ class RoleDefinitionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      * @param RoleDefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleDefinition|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class RoleDefinitionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The roleDefinition the assignment is for.  Supports $expand.
+     * The roleDefinition the assignment is for. Supports $expand.
      * @param RoleDefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

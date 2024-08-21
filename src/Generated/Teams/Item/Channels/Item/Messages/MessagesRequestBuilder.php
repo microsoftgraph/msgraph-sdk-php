@@ -75,12 +75,12 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?MessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -112,7 +112,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -25,7 +25,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange').
+     * Gets the color property value. The HTML color code that represents the color of the border line. Can either be of the form #RRGGBB, for example 'FFA500', or a named HTML color, for example 'orange'.
      * @return string|null
     */
     public function getColor(): ?string {
@@ -51,7 +51,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Gets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Gets the sideIndex property value. Indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @return string|null
     */
     public function getSideIndex(): ?string {
@@ -63,7 +63,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Gets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * Gets the style property value. Indicates the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @return string|null
     */
     public function getStyle(): ?string {
@@ -75,7 +75,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Gets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
+     * Gets the weight property value. The weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @return string|null
     */
     public function getWeight(): ?string {
@@ -99,7 +99,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (for example 'FFA500') or as a named HTML color (for example 'orange').
+     * Sets the color property value. The HTML color code that represents the color of the border line. Can either be of the form #RRGGBB, for example 'FFA500', or a named HTML color, for example 'orange'.
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
@@ -107,7 +107,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Sets the sideIndex property value. Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
+     * Sets the sideIndex property value. Indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      * @param string|null $value Value to set for the sideIndex property.
     */
     public function setSideIndex(?string $value): void {
@@ -115,7 +115,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Sets the style property value. One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
+     * Sets the style property value. Indicates the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      * @param string|null $value Value to set for the style property.
     */
     public function setStyle(?string $value): void {
@@ -123,7 +123,7 @@ class WorkbookRangeBorder extends Entity implements Parsable
     }
 
     /**
-     * Sets the weight property value. Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
+     * Sets the weight property value. The weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      * @param string|null $value Value to set for the weight property.
     */
     public function setWeight(?string $value): void {

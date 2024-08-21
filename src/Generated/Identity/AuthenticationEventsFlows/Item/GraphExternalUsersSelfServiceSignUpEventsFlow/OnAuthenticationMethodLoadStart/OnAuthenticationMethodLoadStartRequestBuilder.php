@@ -39,7 +39,7 @@ class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param OnAuthenticationMethodLoadStartRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnAuthenticationMethodLoadStartHandler|null>
      * @throws Exception
@@ -53,7 +53,7 @@ class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param OnAuthenticationMethodLoadStartRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

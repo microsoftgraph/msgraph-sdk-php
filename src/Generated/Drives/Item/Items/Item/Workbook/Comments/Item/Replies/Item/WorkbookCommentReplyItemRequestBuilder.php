@@ -45,7 +45,7 @@ class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get replies from drives
+     * The list of replies to the comment. Read-only. Nullable.
      * @param WorkbookCommentReplyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookCommentReply|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get replies from drives
+     * The list of replies to the comment. Read-only. Nullable.
      * @param WorkbookCommentReplyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

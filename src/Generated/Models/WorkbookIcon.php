@@ -69,7 +69,7 @@ class WorkbookIcon implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the index property value. Represents the index of the icon in the given set.
+     * Gets the index property value. The index of the icon in the given set.
      * @return int|null
     */
     public function getIndex(): ?int {
@@ -93,7 +93,7 @@ class WorkbookIcon implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the set property value. Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
+     * Gets the set property value. The set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
      * @return string|null
     */
     public function getSet(): ?string {
@@ -132,7 +132,7 @@ class WorkbookIcon implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the index property value. Represents the index of the icon in the given set.
+     * Sets the index property value. The index of the icon in the given set.
      * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {
@@ -148,7 +148,7 @@ class WorkbookIcon implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the set property value. Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
+     * Sets the set property value. The set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
      * @param string|null $value Value to set for the set property.
     */
     public function setSet(?string $value): void {

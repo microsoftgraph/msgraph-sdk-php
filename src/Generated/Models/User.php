@@ -701,7 +701,7 @@ class User extends DirectoryObject implements Parsable
                 $this->setImAddresses($val);
             },
             'inferenceClassification' => fn(ParseNode $n) => $o->setInferenceClassification($n->getObjectValue([InferenceClassification::class, 'createFromDiscriminatorValue'])),
-            'insights' => fn(ParseNode $n) => $o->setInsights($n->getObjectValue([OfficeGraphInsights::class, 'createFromDiscriminatorValue'])),
+            'insights' => fn(ParseNode $n) => $o->setInsights($n->getObjectValue([ItemInsights::class, 'createFromDiscriminatorValue'])),
             'interests' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -906,12 +906,12 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the insights property value. The insights property
-     * @return OfficeGraphInsights|null
+     * Gets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
+     * @return ItemInsights|null
     */
-    public function getInsights(): ?OfficeGraphInsights {
+    public function getInsights(): ?ItemInsights {
         $val = $this->getBackingStore()->get('insights');
-        if (is_null($val) || $val instanceof OfficeGraphInsights) {
+        if (is_null($val) || $val instanceof ItemInsights) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'insights'");
@@ -2411,10 +2411,10 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the insights property value. The insights property
-     * @param OfficeGraphInsights|null $value Value to set for the insights property.
+     * Sets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
+     * @param ItemInsights|null $value Value to set for the insights property.
     */
-    public function setInsights(?OfficeGraphInsights $value): void {
+    public function setInsights(?ItemInsights $value): void {
         $this->getBackingStore()->set('insights', $value);
     }
 

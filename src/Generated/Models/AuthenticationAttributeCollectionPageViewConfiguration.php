@@ -83,7 +83,7 @@ class AuthenticationAttributeCollectionPageViewConfiguration implements Addition
     }
 
     /**
-     * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
+     * Gets the inputs property value. The display configuration of attributes being collected on the attribute collection page. You must specify all attributes that you want to retain, otherwise they're removed from the user flow.
      * @return array<AuthenticationAttributeCollectionInputConfiguration>|null
     */
     public function getInputs(): ?array {
@@ -157,7 +157,7 @@ class AuthenticationAttributeCollectionPageViewConfiguration implements Addition
     }
 
     /**
-     * Sets the inputs property value. The display configuration of attributes being collected on the attribute collection page.
+     * Sets the inputs property value. The display configuration of attributes being collected on the attribute collection page. You must specify all attributes that you want to retain, otherwise they're removed from the user flow.
      * @param array<AuthenticationAttributeCollectionInputConfiguration>|null $value Value to set for the inputs property.
     */
     public function setInputs(?array $value): void {

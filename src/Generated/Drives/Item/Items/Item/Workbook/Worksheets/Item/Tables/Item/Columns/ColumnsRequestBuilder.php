@@ -61,7 +61,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * The list of all the columns in the table. Read-only.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableColumnCollectionResponse|null>
      * @throws Exception
@@ -99,7 +99,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * The list of all the columns in the table. Read-only.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

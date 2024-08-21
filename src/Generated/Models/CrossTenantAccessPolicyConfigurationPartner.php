@@ -133,6 +133,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             'isServiceProvider' => fn(ParseNode $n) => $o->setIsServiceProvider($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
+            'tenantRestrictions' => fn(ParseNode $n) => $o->setTenantRestrictions($n->getObjectValue([CrossTenantAccessPolicyTenantRestrictions::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -209,6 +210,18 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
+     * Gets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for users in your organization who access a partner organization using partner supplied identities on your network or devices.
+     * @return CrossTenantAccessPolicyTenantRestrictions|null
+    */
+    public function getTenantRestrictions(): ?CrossTenantAccessPolicyTenantRestrictions {
+        $val = $this->getBackingStore()->get('tenantRestrictions');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyTenantRestrictions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantRestrictions'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -224,6 +237,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
         $writer->writeBooleanValue('isServiceProvider', $this->getIsServiceProvider());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('tenantId', $this->getTenantId());
+        $writer->writeObjectValue('tenantRestrictions', $this->getTenantRestrictions());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -329,6 +343,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);
+    }
+
+    /**
+     * Sets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for users in your organization who access a partner organization using partner supplied identities on your network or devices.
+     * @param CrossTenantAccessPolicyTenantRestrictions|null $value Value to set for the tenantRestrictions property.
+    */
+    public function setTenantRestrictions(?CrossTenantAccessPolicyTenantRestrictions $value): void {
+        $this->getBackingStore()->set('tenantRestrictions', $value);
     }
 
 }
