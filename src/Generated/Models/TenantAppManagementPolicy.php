@@ -27,11 +27,11 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
 
     /**
      * Gets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
-     * @return AppManagementConfiguration|null
+     * @return AppManagementApplicationConfiguration|null
     */
-    public function getApplicationRestrictions(): ?AppManagementConfiguration {
+    public function getApplicationRestrictions(): ?AppManagementApplicationConfiguration {
         $val = $this->getBackingStore()->get('applicationRestrictions');
-        if (is_null($val) || $val instanceof AppManagementConfiguration) {
+        if (is_null($val) || $val instanceof AppManagementApplicationConfiguration) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationRestrictions'");
@@ -44,9 +44,9 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'applicationRestrictions' => fn(ParseNode $n) => $o->setApplicationRestrictions($n->getObjectValue([AppManagementConfiguration::class, 'createFromDiscriminatorValue'])),
+            'applicationRestrictions' => fn(ParseNode $n) => $o->setApplicationRestrictions($n->getObjectValue([AppManagementApplicationConfiguration::class, 'createFromDiscriminatorValue'])),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
-            'servicePrincipalRestrictions' => fn(ParseNode $n) => $o->setServicePrincipalRestrictions($n->getObjectValue([AppManagementConfiguration::class, 'createFromDiscriminatorValue'])),
+            'servicePrincipalRestrictions' => fn(ParseNode $n) => $o->setServicePrincipalRestrictions($n->getObjectValue([AppManagementServicePrincipalConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -64,11 +64,11 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
 
     /**
      * Gets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
-     * @return AppManagementConfiguration|null
+     * @return AppManagementServicePrincipalConfiguration|null
     */
-    public function getServicePrincipalRestrictions(): ?AppManagementConfiguration {
+    public function getServicePrincipalRestrictions(): ?AppManagementServicePrincipalConfiguration {
         $val = $this->getBackingStore()->get('servicePrincipalRestrictions');
-        if (is_null($val) || $val instanceof AppManagementConfiguration) {
+        if (is_null($val) || $val instanceof AppManagementServicePrincipalConfiguration) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePrincipalRestrictions'");
@@ -87,9 +87,9 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
-     * @param AppManagementConfiguration|null $value Value to set for the applicationRestrictions property.
+     * @param AppManagementApplicationConfiguration|null $value Value to set for the applicationRestrictions property.
     */
-    public function setApplicationRestrictions(?AppManagementConfiguration $value): void {
+    public function setApplicationRestrictions(?AppManagementApplicationConfiguration $value): void {
         $this->getBackingStore()->set('applicationRestrictions', $value);
     }
 
@@ -103,9 +103,9 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
-     * @param AppManagementConfiguration|null $value Value to set for the servicePrincipalRestrictions property.
+     * @param AppManagementServicePrincipalConfiguration|null $value Value to set for the servicePrincipalRestrictions property.
     */
-    public function setServicePrincipalRestrictions(?AppManagementConfiguration $value): void {
+    public function setServicePrincipalRestrictions(?AppManagementServicePrincipalConfiguration $value): void {
         $this->getBackingStore()->set('servicePrincipalRestrictions', $value);
     }
 

@@ -68,7 +68,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
+     * Gets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
      * @return array<AssignedLabel>|null
     */
     public function getAssignedLabels(): ?array {
@@ -405,7 +405,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return bool|null
     */
     public function getHideFromAddressLists(): ?bool {
@@ -591,7 +591,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesDomainName property value. The onPremisesDomainName property
+     * Gets the onPremisesDomainName property value. Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @return string|null
     */
     public function getOnPremisesDomainName(): ?string {
@@ -615,7 +615,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
+     * Gets the onPremisesNetBiosName property value. Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @return string|null
     */
     public function getOnPremisesNetBiosName(): ?string {
@@ -653,7 +653,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values).
      * @return string|null
     */
     public function getOnPremisesSecurityIdentifier(): ?string {
@@ -1074,7 +1074,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select.
+     * Sets the assignedLabels property value. The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. This property can be updated only in delegated scenarios where the caller requires both the Microsoft Graph permission and a supported administrator role.
      * @param array<AssignedLabel>|null $value Value to set for the assignedLabels property.
     */
     public function setAssignedLabels(?array $value): void {
@@ -1226,7 +1226,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the hideFromAddressLists property value. True if the group isn't displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. The default value is false. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param bool|null $value Value to set for the hideFromAddressLists property.
     */
     public function setHideFromAddressLists(?bool $value): void {
@@ -1346,7 +1346,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesDomainName property value. The onPremisesDomainName property
+     * Sets the onPremisesDomainName property value. Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @param string|null $value Value to set for the onPremisesDomainName property.
     */
     public function setOnPremisesDomainName(?string $value): void {
@@ -1362,7 +1362,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
+     * Sets the onPremisesNetBiosName property value. Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers synchronizing their on-premises directory to Microsoft Entra ID via Microsoft Entra Connect.Returned by default. Read-only.
      * @param string|null $value Value to set for the onPremisesNetBiosName property.
     */
     public function setOnPremisesNetBiosName(?string $value): void {
@@ -1386,7 +1386,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values).
      * @param string|null $value Value to set for the onPremisesSecurityIdentifier property.
     */
     public function setOnPremisesSecurityIdentifier(?string $value): void {

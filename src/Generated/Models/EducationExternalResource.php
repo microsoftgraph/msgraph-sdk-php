@@ -37,7 +37,7 @@ class EducationExternalResource extends EducationResource implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. Location of the resource. Required
+     * Gets the webUrl property value. Location of the resource. Required.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -58,7 +58,7 @@ class EducationExternalResource extends EducationResource implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. Location of the resource. Required
+     * Sets the webUrl property value. Location of the resource. Required.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

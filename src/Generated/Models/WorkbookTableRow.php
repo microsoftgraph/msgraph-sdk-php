@@ -36,7 +36,7 @@ class WorkbookTableRow extends Entity implements Parsable
     }
 
     /**
-     * Gets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+     * Gets the index property value. The index of the row within the rows collection of the table. Zero-based. Read-only.
      * @return int|null
     */
     public function getIndex(): ?int {
@@ -57,7 +57,7 @@ class WorkbookTableRow extends Entity implements Parsable
     }
 
     /**
-     * Sets the index property value. Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
+     * Sets the index property value. The index of the row within the rows collection of the table. Zero-based. Read-only.
      * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {

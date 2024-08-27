@@ -62,7 +62,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
     }
 
     /**
-     * Gets the visible property value. A boolean that specifies the visibility of an axis title.
+     * Gets the visible property value. A Boolean that specifies the visibility of an axis title.
      * @return bool|null
     */
     public function getVisible(): ?bool {
@@ -101,7 +101,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
     }
 
     /**
-     * Sets the visible property value. A boolean that specifies the visibility of an axis title.
+     * Sets the visible property value. A Boolean that specifies the visibility of an axis title.
      * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {

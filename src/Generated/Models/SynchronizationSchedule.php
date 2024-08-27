@@ -84,7 +84,7 @@ class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
+     * Gets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601  format for durations. For example, P1M represents a period of one month and PT1M represents a period of one minute.
      * @return DateInterval|null
     */
     public function getInterval(): ?DateInterval {
@@ -156,7 +156,7 @@ class SynchronizationSchedule implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601 format for durations. For example, PT1M represents a period of one month.
+     * Sets the interval property value. The interval between synchronization iterations. The value is represented in ISO 8601  format for durations. For example, P1M represents a period of one month and PT1M represents a period of one minute.
      * @param DateInterval|null $value Value to set for the interval property.
     */
     public function setInterval(?DateInterval $value): void {

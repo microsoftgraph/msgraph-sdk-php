@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents the sorting for the table. Read-only.
+ * The sorting for the table. Read-only.
 */
 class SortRequestBuilderGetQueryParameters 
 {

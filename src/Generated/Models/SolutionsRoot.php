@@ -57,6 +57,18 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the backupRestore property value. The backupRestore property
+     * @return BackupRestoreRoot|null
+    */
+    public function getBackupRestore(): ?BackupRestoreRoot {
+        $val = $this->getBackingStore()->get('backupRestore');
+        if (is_null($val) || $val instanceof BackupRestoreRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'backupRestore'");
+    }
+
+    /**
      * Gets the bookingBusinesses property value. The bookingBusinesses property
      * @return array<BookingBusiness>|null
     */
@@ -91,6 +103,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'backupRestore' => fn(ParseNode $n) => $o->setBackupRestore($n->getObjectValue([BackupRestoreRoot::class, 'createFromDiscriminatorValue'])),
             'bookingBusinesses' => fn(ParseNode $n) => $o->setBookingBusinesses($n->getCollectionOfObjectValues([BookingBusiness::class, 'createFromDiscriminatorValue'])),
             'bookingCurrencies' => fn(ParseNode $n) => $o->setBookingCurrencies($n->getCollectionOfObjectValues([BookingCurrency::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -127,6 +140,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('backupRestore', $this->getBackupRestore());
         $writer->writeCollectionOfObjectValues('bookingBusinesses', $this->getBookingBusinesses());
         $writer->writeCollectionOfObjectValues('bookingCurrencies', $this->getBookingCurrencies());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -148,6 +162,14 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the backupRestore property value. The backupRestore property
+     * @param BackupRestoreRoot|null $value Value to set for the backupRestore property.
+    */
+    public function setBackupRestore(?BackupRestoreRoot $value): void {
+        $this->getBackingStore()->set('backupRestore', $value);
     }
 
     /**

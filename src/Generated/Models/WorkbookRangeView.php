@@ -26,7 +26,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the columnCount property value. Returns the number of visible columns. Read-only.
+     * Gets the columnCount property value. The number of visible columns. Read-only.
      * @return int|null
     */
     public function getColumnCount(): ?int {
@@ -52,7 +52,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the index property value. Index of the range.
+     * Gets the index property value. The index of the range.
      * @return int|null
     */
     public function getIndex(): ?int {
@@ -64,7 +64,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the rowCount property value. Returns the number of visible rows. Read-only.
+     * Gets the rowCount property value. The number of visible rows. Read-only.
      * @return int|null
     */
     public function getRowCount(): ?int {
@@ -76,7 +76,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the rows property value. Represents a collection of range views associated with the range. Read-only. Read-only.
+     * Gets the rows property value. The collection of range views associated with the range. Read-only. Read-only.
      * @return array<WorkbookRangeView>|null
     */
     public function getRows(): ?array {
@@ -102,7 +102,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the columnCount property value. Returns the number of visible columns. Read-only.
+     * Sets the columnCount property value. The number of visible columns. Read-only.
      * @param int|null $value Value to set for the columnCount property.
     */
     public function setColumnCount(?int $value): void {
@@ -110,7 +110,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the index property value. Index of the range.
+     * Sets the index property value. The index of the range.
      * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {
@@ -118,7 +118,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the rowCount property value. Returns the number of visible rows. Read-only.
+     * Sets the rowCount property value. The number of visible rows. Read-only.
      * @param int|null $value Value to set for the rowCount property.
     */
     public function setRowCount(?int $value): void {
@@ -126,7 +126,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the rows property value. Represents a collection of range views associated with the range. Read-only. Read-only.
+     * Sets the rows property value. The collection of range views associated with the range. Read-only. Read-only.
      * @param array<WorkbookRangeView>|null $value Value to set for the rows property.
     */
     public function setRows(?array $value): void {

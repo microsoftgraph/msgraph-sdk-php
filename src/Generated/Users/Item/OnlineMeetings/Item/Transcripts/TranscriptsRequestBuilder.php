@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\CallTranscript;
 use Microsoft\Graph\Generated\Models\CallTranscriptCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Transcripts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Transcripts\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Transcripts\Item\CallTranscriptItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class TranscriptsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

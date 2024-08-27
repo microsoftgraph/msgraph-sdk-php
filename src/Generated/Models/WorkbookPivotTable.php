@@ -37,7 +37,7 @@ class WorkbookPivotTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. Name of the PivotTable.
+     * Gets the name property value. The name of the pivot table.
      * @return string|null
     */
     public function getName(): ?string {
@@ -49,7 +49,7 @@ class WorkbookPivotTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
+     * Gets the worksheet property value. The worksheet that contains the current pivot table. Read-only.
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
@@ -71,7 +71,7 @@ class WorkbookPivotTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. Name of the PivotTable.
+     * Sets the name property value. The name of the pivot table.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -79,7 +79,7 @@ class WorkbookPivotTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the worksheet property value. The worksheet containing the current PivotTable. Read-only.
+     * Sets the worksheet property value. The worksheet that contains the current pivot table. Read-only.
      * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
