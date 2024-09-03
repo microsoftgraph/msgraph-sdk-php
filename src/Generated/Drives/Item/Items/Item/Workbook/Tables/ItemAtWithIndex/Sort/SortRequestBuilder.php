@@ -45,7 +45,7 @@ class SortRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      * @param SortRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableSort|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class SortRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the sorting for the table. Read-only.
+     * The sorting for the table. Read-only.
      * @param SortRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

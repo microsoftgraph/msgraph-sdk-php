@@ -61,7 +61,7 @@ class TablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableCollectionResponse|null>
      * @throws Exception
@@ -99,7 +99,7 @@ class TablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * The list of tables that are part of the worksheet. Read-only.
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

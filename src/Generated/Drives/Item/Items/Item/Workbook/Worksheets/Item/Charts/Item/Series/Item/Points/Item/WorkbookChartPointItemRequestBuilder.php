@@ -53,7 +53,7 @@ class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @param WorkbookChartPointItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookChartPoint|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class WorkbookChartPointItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all points in the series. Read-only.
+     * A collection of all points in the series. Read-only.
      * @param WorkbookChartPointItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

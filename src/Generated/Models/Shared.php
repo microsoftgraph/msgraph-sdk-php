@@ -96,7 +96,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+     * Gets the scope property value. Indicates the scope of how the item is shared. The possible values are: anonymous, organization, or users. Read-only.
      * @return string|null
     */
     public function getScope(): ?string {
@@ -177,7 +177,7 @@ class Shared implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the scope property value. Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+     * Sets the scope property value. Indicates the scope of how the item is shared. The possible values are: anonymous, organization, or users. Read-only.
      * @param string|null $value Value to set for the scope property.
     */
     public function setScope(?string $value): void {

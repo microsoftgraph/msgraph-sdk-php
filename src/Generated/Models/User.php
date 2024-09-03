@@ -701,7 +701,7 @@ class User extends DirectoryObject implements Parsable
                 $this->setImAddresses($val);
             },
             'inferenceClassification' => fn(ParseNode $n) => $o->setInferenceClassification($n->getObjectValue([InferenceClassification::class, 'createFromDiscriminatorValue'])),
-            'insights' => fn(ParseNode $n) => $o->setInsights($n->getObjectValue([OfficeGraphInsights::class, 'createFromDiscriminatorValue'])),
+            'insights' => fn(ParseNode $n) => $o->setInsights($n->getObjectValue([ItemInsights::class, 'createFromDiscriminatorValue'])),
             'interests' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -814,6 +814,7 @@ class User extends DirectoryObject implements Parsable
                 /** @var array<string>|null $val */
                 $this->setSkills($val);
             },
+            'solutions' => fn(ParseNode $n) => $o->setSolutions($n->getObjectValue([UserSolutionRoot::class, 'createFromDiscriminatorValue'])),
             'sponsors' => fn(ParseNode $n) => $o->setSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
             'streetAddress' => fn(ParseNode $n) => $o->setStreetAddress($n->getStringValue()),
@@ -906,12 +907,12 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the insights property value. The insights property
-     * @return OfficeGraphInsights|null
+     * Gets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
+     * @return ItemInsights|null
     */
-    public function getInsights(): ?OfficeGraphInsights {
+    public function getInsights(): ?ItemInsights {
         $val = $this->getBackingStore()->get('insights');
-        if (is_null($val) || $val instanceof OfficeGraphInsights) {
+        if (is_null($val) || $val instanceof ItemInsights) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'insights'");
@@ -1728,6 +1729,18 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the solutions property value. The solutions property
+     * @return UserSolutionRoot|null
+    */
+    public function getSolutions(): ?UserSolutionRoot {
+        $val = $this->getBackingStore()->get('solutions');
+        if (is_null($val) || $val instanceof UserSolutionRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'solutions'");
+    }
+
+    /**
      * Gets the sponsors property value. The users and groups responsible for this guest's privileges in the tenant and keeping the guest's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return array<DirectoryObject>|null
     */
@@ -1974,6 +1987,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeObjectValue('signInActivity', $this->getSignInActivity());
         $writer->writeDateTimeValue('signInSessionsValidFromDateTime', $this->getSignInSessionsValidFromDateTime());
         $writer->writeCollectionOfPrimitiveValues('skills', $this->getSkills());
+        $writer->writeObjectValue('solutions', $this->getSolutions());
         $writer->writeCollectionOfObjectValues('sponsors', $this->getSponsors());
         $writer->writeStringValue('state', $this->getState());
         $writer->writeStringValue('streetAddress', $this->getStreetAddress());
@@ -2411,10 +2425,10 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the insights property value. The insights property
-     * @param OfficeGraphInsights|null $value Value to set for the insights property.
+     * Sets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
+     * @param ItemInsights|null $value Value to set for the insights property.
     */
-    public function setInsights(?OfficeGraphInsights $value): void {
+    public function setInsights(?ItemInsights $value): void {
         $this->getBackingStore()->set('insights', $value);
     }
 
@@ -2920,6 +2934,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setSkills(?array $value): void {
         $this->getBackingStore()->set('skills', $value);
+    }
+
+    /**
+     * Sets the solutions property value. The solutions property
+     * @param UserSolutionRoot|null $value Value to set for the solutions property.
+    */
+    public function setSolutions(?UserSolutionRoot $value): void {
+        $this->getBackingStore()->set('solutions', $value);
     }
 
     /**

@@ -25,7 +25,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     }
 
     /**
-     * Gets the protected property value. Indicates if the worksheet is protected.  Read-only.
+     * Gets the protected property value. Indicates whether the worksheet is protected.  Read-only.
      * @return bool|null
     */
     public function getEscapedProtected(): ?bool {
@@ -49,7 +49,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     }
 
     /**
-     * Gets the options property value. Sheet protection options. Read-only.
+     * Gets the options property value. Worksheet protection options. Read-only.
      * @return WorkbookWorksheetProtectionOptions|null
     */
     public function getOptions(): ?WorkbookWorksheetProtectionOptions {
@@ -71,7 +71,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     }
 
     /**
-     * Sets the protected property value. Indicates if the worksheet is protected.  Read-only.
+     * Sets the protected property value. Indicates whether the worksheet is protected.  Read-only.
      * @param bool|null $value Value to set for the protected property.
     */
     public function setEscapedProtected(?bool $value): void {
@@ -79,7 +79,7 @@ class WorkbookWorksheetProtection extends Entity implements Parsable
     }
 
     /**
-     * Sets the options property value. Sheet protection options. Read-only.
+     * Sets the options property value. Worksheet protection options. Read-only.
      * @param WorkbookWorksheetProtectionOptions|null $value Value to set for the options property.
     */
     public function setOptions(?WorkbookWorksheetProtectionOptions $value): void {

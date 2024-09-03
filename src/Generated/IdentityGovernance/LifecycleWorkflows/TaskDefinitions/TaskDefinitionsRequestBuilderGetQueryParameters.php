@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\TaskDe
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the taskDefinition objects and their properties.
+ * Get a list of built-in tasks in Lifecycle Workflows. A task is represented by the taskDefinition object.
 */
 class TaskDefinitionsRequestBuilderGetQueryParameters 
 {

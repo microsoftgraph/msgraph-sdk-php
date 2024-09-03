@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
+ * Returns the worksheet to which the named item is scoped. Available only if the item is scoped to the worksheet. Read-only.
 */
 class WorksheetRequestBuilderGetQueryParameters 
 {

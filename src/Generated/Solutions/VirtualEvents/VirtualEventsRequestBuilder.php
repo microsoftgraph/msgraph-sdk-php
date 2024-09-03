@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VirtualEventsRoot;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\EventsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\TownhallsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\WebinarsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,6 +24,13 @@ class VirtualEventsRequestBuilder extends BaseRequestBuilder
     */
     public function events(): EventsRequestBuilder {
         return new EventsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the townhalls property of the microsoft.graph.virtualEventsRoot entity.
+    */
+    public function townhalls(): TownhallsRequestBuilder {
+        return new TownhallsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -53,7 +53,7 @@ class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Read the properties and relationships of a virtualEventSession object.  Currently, the following virtual event types are supported: - virtualEventTownhall- virtualEventWebinar
      * @param VirtualEventSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventSession|null>
      * @throws Exception
@@ -101,7 +101,7 @@ class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventSession object.
+     * Read the properties and relationships of a virtualEventSession object.  Currently, the following virtual event types are supported: - virtualEventTownhall- virtualEventWebinar
      * @param VirtualEventSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

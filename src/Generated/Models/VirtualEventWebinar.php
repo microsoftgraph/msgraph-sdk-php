@@ -14,6 +14,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.virtualEventWebinar');
     }
 
     /**
@@ -26,7 +27,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Gets the audience property value. To whom the webinar is visible.
+     * Gets the audience property value. To whom the webinar is visible. Possible values are: everyone, organization, and unknownFutureValue.
      * @return MeetingAudience|null
     */
     public function getAudience(): ?MeetingAudience {
@@ -60,8 +61,21 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'audience' => fn(ParseNode $n) => $o->setAudience($n->getEnumValue(MeetingAudience::class)),
             'coOrganizers' => fn(ParseNode $n) => $o->setCoOrganizers($n->getCollectionOfObjectValues([CommunicationsUserIdentity::class, 'createFromDiscriminatorValue'])),
+            'registrationConfiguration' => fn(ParseNode $n) => $o->setRegistrationConfiguration($n->getObjectValue([VirtualEventWebinarRegistrationConfiguration::class, 'createFromDiscriminatorValue'])),
             'registrations' => fn(ParseNode $n) => $o->setRegistrations($n->getCollectionOfObjectValues([VirtualEventRegistration::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the registrationConfiguration property value. Registration configuration of the webinar.
+     * @return VirtualEventWebinarRegistrationConfiguration|null
+    */
+    public function getRegistrationConfiguration(): ?VirtualEventWebinarRegistrationConfiguration {
+        $val = $this->getBackingStore()->get('registrationConfiguration');
+        if (is_null($val) || $val instanceof VirtualEventWebinarRegistrationConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registrationConfiguration'");
     }
 
     /**
@@ -86,11 +100,12 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
         parent::serialize($writer);
         $writer->writeEnumValue('audience', $this->getAudience());
         $writer->writeCollectionOfObjectValues('coOrganizers', $this->getCoOrganizers());
+        $writer->writeObjectValue('registrationConfiguration', $this->getRegistrationConfiguration());
         $writer->writeCollectionOfObjectValues('registrations', $this->getRegistrations());
     }
 
     /**
-     * Sets the audience property value. To whom the webinar is visible.
+     * Sets the audience property value. To whom the webinar is visible. Possible values are: everyone, organization, and unknownFutureValue.
      * @param MeetingAudience|null $value Value to set for the audience property.
     */
     public function setAudience(?MeetingAudience $value): void {
@@ -103,6 +118,14 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     */
     public function setCoOrganizers(?array $value): void {
         $this->getBackingStore()->set('coOrganizers', $value);
+    }
+
+    /**
+     * Sets the registrationConfiguration property value. Registration configuration of the webinar.
+     * @param VirtualEventWebinarRegistrationConfiguration|null $value Value to set for the registrationConfiguration property.
+    */
+    public function setRegistrationConfiguration(?VirtualEventWebinarRegistrationConfiguration $value): void {
+        $this->getBackingStore()->set('registrationConfiguration', $value);
     }
 
     /**
