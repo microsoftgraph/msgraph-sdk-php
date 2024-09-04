@@ -31,7 +31,7 @@ class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      * @param TaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TaskDefinition|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class TaskDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the details of a built-in workflow task.
+     * Read the details of a built-in workflow task in Lifecycle Workflows.
      * @param TaskDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

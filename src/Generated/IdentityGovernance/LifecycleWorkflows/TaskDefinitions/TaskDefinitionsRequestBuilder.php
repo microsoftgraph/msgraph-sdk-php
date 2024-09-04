@@ -51,7 +51,7 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the taskDefinition objects and their properties.
+     * Get a list of built-in tasks in Lifecycle Workflows. A task is represented by the taskDefinition object.
      * @param TaskDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TaskDefinitionCollectionResponse|null>
      * @throws Exception
@@ -66,7 +66,7 @@ class TaskDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the taskDefinition objects and their properties.
+     * Get a list of built-in tasks in Lifecycle Workflows. A task is represented by the taskDefinition object.
      * @param TaskDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

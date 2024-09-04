@@ -57,7 +57,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
+     * Gets the displayName property value. Refers to the name of the conditional access policy (example: 'Require MFA for Salesforce').
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -151,7 +151,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.  You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @return AppliedConditionalAccessPolicyResult|null
     */
     public function getResult(): ?AppliedConditionalAccessPolicyResult {
@@ -193,7 +193,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the displayName property value. Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
+     * Sets the displayName property value. Refers to the name of the conditional access policy (example: 'Require MFA for Salesforce').
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -233,7 +233,7 @@ class AppliedConditionalAccessPolicy implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.  You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (This is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @param AppliedConditionalAccessPolicyResult|null $value Value to set for the result property.
     */
     public function setResult(?AppliedConditionalAccessPolicyResult $value): void {

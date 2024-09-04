@@ -78,6 +78,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
             'microsoft365Apps' => fn(ParseNode $n) => $o->setMicrosoft365Apps($n->getObjectValue([AdminMicrosoft365Apps::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'people' => fn(ParseNode $n) => $o->setPeople($n->getObjectValue([PeopleAdminSettings::class, 'createFromDiscriminatorValue'])),
+            'reportSettings' => fn(ParseNode $n) => $o->setReportSettings($n->getObjectValue([AdminReportSettings::class, 'createFromDiscriminatorValue'])),
             'serviceAnnouncement' => fn(ParseNode $n) => $o->setServiceAnnouncement($n->getObjectValue([ServiceAnnouncement::class, 'createFromDiscriminatorValue'])),
             'sharepoint' => fn(ParseNode $n) => $o->setSharepoint($n->getObjectValue([Sharepoint::class, 'createFromDiscriminatorValue'])),
         ];
@@ -120,6 +121,18 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the reportSettings property value. A container for administrative resources to manage reports.
+     * @return AdminReportSettings|null
+    */
+    public function getReportSettings(): ?AdminReportSettings {
+        $val = $this->getBackingStore()->get('reportSettings');
+        if (is_null($val) || $val instanceof AdminReportSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reportSettings'");
+    }
+
+    /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
      * @return ServiceAnnouncement|null
     */
@@ -152,6 +165,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeObjectValue('microsoft365Apps', $this->getMicrosoft365Apps());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('people', $this->getPeople());
+        $writer->writeObjectValue('reportSettings', $this->getReportSettings());
         $writer->writeObjectValue('serviceAnnouncement', $this->getServiceAnnouncement());
         $writer->writeObjectValue('sharepoint', $this->getSharepoint());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -203,6 +217,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setPeople(?PeopleAdminSettings $value): void {
         $this->getBackingStore()->set('people', $value);
+    }
+
+    /**
+     * Sets the reportSettings property value. A container for administrative resources to manage reports.
+     * @param AdminReportSettings|null $value Value to set for the reportSettings property.
+    */
+    public function setReportSettings(?AdminReportSettings $value): void {
+        $this->getBackingStore()->set('reportSettings', $value);
     }
 
     /**

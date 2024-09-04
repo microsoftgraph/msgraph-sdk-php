@@ -69,7 +69,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the defaultValue property value. The default value of the attribute displayed to the end user.
+     * Gets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn't available through the Microsoft Entra admin center.
      * @return string|null
     */
     public function getDefaultValue(): ?string {
@@ -81,7 +81,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the editable property value. Whether the attribute is editable by the end user.
+     * Gets the editable property value. Defines whether the attribute is editable by the end user.
      * @return bool|null
     */
     public function getEditable(): ?bool {
@@ -114,7 +114,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the hidden property value. Whether the attribute is displayed to the end user.
+     * Gets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn't available through the Microsoft Entra admin center.
      * @return bool|null
     */
     public function getHidden(): ?bool {
@@ -138,7 +138,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
+     * Gets the label property value. The label of the attribute field that's displayed to end user, unless overridden.
      * @return string|null
     */
     public function getLabel(): ?string {
@@ -176,7 +176,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the required property value. Whether the field is required.
+     * Gets the required property value. Defines whether the field is required.
      * @return bool|null
     */
     public function getRequired(): ?bool {
@@ -188,7 +188,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the validationRegEx property value. The regex for the value of the field.
+     * Gets the validationRegEx property value. The regex for the value of the field. For more information about the supported regexes, see validationRegEx values for inputType objects. To understand how to specify regexes, see the Regular expressions cheat sheet.
      * @return string|null
     */
     public function getValidationRegEx(): ?string {
@@ -200,7 +200,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Gets the writeToDirectory property value. Whether the value collected is stored.
+     * Gets the writeToDirectory property value. Defines whether Microsoft Entra ID stores the value that it collects.
      * @return bool|null
     */
     public function getWriteToDirectory(): ?bool {
@@ -255,7 +255,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the defaultValue property value. The default value of the attribute displayed to the end user.
+     * Sets the defaultValue property value. The default value of the attribute displayed to the end user. The capability to set the default value isn't available through the Microsoft Entra admin center.
      * @param string|null $value Value to set for the defaultValue property.
     */
     public function setDefaultValue(?string $value): void {
@@ -263,7 +263,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the editable property value. Whether the attribute is editable by the end user.
+     * Sets the editable property value. Defines whether the attribute is editable by the end user.
      * @param bool|null $value Value to set for the editable property.
     */
     public function setEditable(?bool $value): void {
@@ -271,7 +271,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the hidden property value. Whether the attribute is displayed to the end user.
+     * Sets the hidden property value. Defines whether the attribute is displayed to the end user. The capability to hide isn't available through the Microsoft Entra admin center.
      * @param bool|null $value Value to set for the hidden property.
     */
     public function setHidden(?bool $value): void {
@@ -287,7 +287,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
+     * Sets the label property value. The label of the attribute field that's displayed to end user, unless overridden.
      * @param string|null $value Value to set for the label property.
     */
     public function setLabel(?string $value): void {
@@ -311,7 +311,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the required property value. Whether the field is required.
+     * Sets the required property value. Defines whether the field is required.
      * @param bool|null $value Value to set for the required property.
     */
     public function setRequired(?bool $value): void {
@@ -319,7 +319,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the validationRegEx property value. The regex for the value of the field.
+     * Sets the validationRegEx property value. The regex for the value of the field. For more information about the supported regexes, see validationRegEx values for inputType objects. To understand how to specify regexes, see the Regular expressions cheat sheet.
      * @param string|null $value Value to set for the validationRegEx property.
     */
     public function setValidationRegEx(?string $value): void {
@@ -327,7 +327,7 @@ class AuthenticationAttributeCollectionInputConfiguration implements AdditionalD
     }
 
     /**
-     * Sets the writeToDirectory property value. Whether the value collected is stored.
+     * Sets the writeToDirectory property value. Defines whether Microsoft Entra ID stores the value that it collects.
      * @param bool|null $value Value to set for the writeToDirectory property.
     */
     public function setWriteToDirectory(?bool $value): void {

@@ -25,7 +25,7 @@ class WorkbookChartLineFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. HTML color code representing the color of lines in the chart.
+     * Gets the color property value. The HTML color code that represents the color of lines in the chart.
      * @return string|null
     */
     public function getColor(): ?string {
@@ -57,7 +57,7 @@ class WorkbookChartLineFormat extends Entity implements Parsable
     }
 
     /**
-     * Sets the color property value. HTML color code representing the color of lines in the chart.
+     * Sets the color property value. The HTML color code that represents the color of lines in the chart.
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {

@@ -81,7 +81,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
+     * Gets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled, or aborted. Read-only.
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
@@ -261,7 +261,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
+     * Sets the completionDateTime property value. The dateTimeOffset when the job was completed, canceled, or aborted. Read-only.
      * @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value): void {

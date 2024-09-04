@@ -68,7 +68,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookNamedItemCollectionResponse|null>
      * @throws Exception
@@ -97,7 +97,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns collection of names that are associated with the worksheet. Read-only.
+     * The list of names that are associated with the worksheet. Read-only.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

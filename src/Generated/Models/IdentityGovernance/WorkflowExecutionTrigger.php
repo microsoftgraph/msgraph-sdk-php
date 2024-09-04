@@ -35,6 +35,8 @@ class WorkflowExecutionTrigger implements AdditionalDataHolder, BackedModel, Par
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.identityGovernance.attributeChangeTrigger': return new AttributeChangeTrigger();
+                case '#microsoft.graph.identityGovernance.membershipChangeTrigger': return new MembershipChangeTrigger();
                 case '#microsoft.graph.identityGovernance.timeBasedAttributeTrigger': return new TimeBasedAttributeTrigger();
             }
         }
