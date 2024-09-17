@@ -30,10 +30,11 @@ class EndWorkingTimeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Triggers the policies associated with the end of working hours for user.
+     * Trigger the policies associated with the end of working hours for a specific user.
      * @param EndWorkingTimeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/workingtimeschedule-endworkingtime?view=graph-rest-1.0 Find more info here
     */
     public function post(?EndWorkingTimeRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class EndWorkingTimeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Triggers the policies associated with the end of working hours for user.
+     * Trigger the policies associated with the end of working hours for a specific user.
      * @param EndWorkingTimeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

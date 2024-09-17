@@ -53,7 +53,7 @@ class IdentitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      * @param IdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityContainer|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class IdentitiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get identities from security
+     * A container for security identities APIs.
      * @param IdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

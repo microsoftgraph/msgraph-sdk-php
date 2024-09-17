@@ -28,7 +28,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the additionalInformation property value. The additionalInformation property
+     * Gets the additionalInformation property value. Contains additional information about the issue, such as a list of items to fix.
      * @return array<string>|null
     */
     public function getAdditionalInformation(): ?array {
@@ -42,7 +42,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the health issue was generated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -54,7 +54,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Contains more detailed information about the health issue.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -66,7 +66,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the health issue.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -78,7 +78,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the domainNames property value. The domainNames property
+     * Gets the domainNames property value. A list of the fully qualified domain names of the domains or the sensors the health issue is related to.
      * @return array<string>|null
     */
     public function getDomainNames(): ?array {
@@ -150,7 +150,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the healthIssueType property value. The healthIssueType property
+     * Gets the healthIssueType property value. The type of the health issue. The possible values are: sensor, global, unknownFutureValue. For a list of all health issues and their identifiers, see Microsoft Defender for Identity health issues.
      * @return HealthIssueType|null
     */
     public function getHealthIssueType(): ?HealthIssueType {
@@ -162,7 +162,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the issueTypeId property value. The issueTypeId property
+     * Gets the issueTypeId property value. The type identifier of the health issue. For a list of all health issues and their identifiers, see Microsoft Defender for Identity health issues.
      * @return string|null
     */
     public function getIssueTypeId(): ?string {
@@ -174,7 +174,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the health issue was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -186,7 +186,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the recommendations property value. The recommendations property
+     * Gets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren't limited to prewritten responses.
      * @return array<string>|null
     */
     public function getRecommendations(): ?array {
@@ -200,7 +200,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the recommendedActionCommands property value. The recommendedActionCommands property
+     * Gets the recommendedActionCommands property value. A list of commands from the PowerShell module for the product that can be used to resolve the issue, if available. If no commands can be used to solve the issue, this property is empty. The commands, if present, provide a quick and efficient way to address the issue. These commands run in sequence for the single recommended fix.
      * @return array<string>|null
     */
     public function getRecommendedActionCommands(): ?array {
@@ -214,7 +214,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the sensorDNSNames property value. The sensorDNSNames property
+     * Gets the sensorDNSNames property value. A list of the DNS names of the sensors the health issue is related to.
      * @return array<string>|null
     */
     public function getSensorDNSNames(): ?array {
@@ -228,7 +228,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the severity property value. The severity property
+     * Gets the severity property value. The severity of the health issue. The possible values are: low, medium, high, unknownFutureValue.
      * @return HealthIssueSeverity|null
     */
     public function getSeverity(): ?HealthIssueSeverity {
@@ -240,7 +240,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the health issue. The possible values are: open, closed, suppressed, unknownFutureValue.
      * @return HealthIssueStatus|null
     */
     public function getStatus(): ?HealthIssueStatus {
@@ -273,7 +273,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the additionalInformation property value. The additionalInformation property
+     * Sets the additionalInformation property value. Contains additional information about the issue, such as a list of items to fix.
      * @param array<string>|null $value Value to set for the additionalInformation property.
     */
     public function setAdditionalInformation(?array $value): void {
@@ -281,7 +281,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the health issue was generated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -289,7 +289,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Contains more detailed information about the health issue.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -297,7 +297,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the health issue.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -305,7 +305,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the domainNames property value. The domainNames property
+     * Sets the domainNames property value. A list of the fully qualified domain names of the domains or the sensors the health issue is related to.
      * @param array<string>|null $value Value to set for the domainNames property.
     */
     public function setDomainNames(?array $value): void {
@@ -313,7 +313,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the healthIssueType property value. The healthIssueType property
+     * Sets the healthIssueType property value. The type of the health issue. The possible values are: sensor, global, unknownFutureValue. For a list of all health issues and their identifiers, see Microsoft Defender for Identity health issues.
      * @param HealthIssueType|null $value Value to set for the healthIssueType property.
     */
     public function setHealthIssueType(?HealthIssueType $value): void {
@@ -321,7 +321,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the issueTypeId property value. The issueTypeId property
+     * Sets the issueTypeId property value. The type identifier of the health issue. For a list of all health issues and their identifiers, see Microsoft Defender for Identity health issues.
      * @param string|null $value Value to set for the issueTypeId property.
     */
     public function setIssueTypeId(?string $value): void {
@@ -329,7 +329,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the health issue was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -337,7 +337,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the recommendations property value. The recommendations property
+     * Sets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren't limited to prewritten responses.
      * @param array<string>|null $value Value to set for the recommendations property.
     */
     public function setRecommendations(?array $value): void {
@@ -345,7 +345,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the recommendedActionCommands property value. The recommendedActionCommands property
+     * Sets the recommendedActionCommands property value. A list of commands from the PowerShell module for the product that can be used to resolve the issue, if available. If no commands can be used to solve the issue, this property is empty. The commands, if present, provide a quick and efficient way to address the issue. These commands run in sequence for the single recommended fix.
      * @param array<string>|null $value Value to set for the recommendedActionCommands property.
     */
     public function setRecommendedActionCommands(?array $value): void {
@@ -353,7 +353,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the sensorDNSNames property value. The sensorDNSNames property
+     * Sets the sensorDNSNames property value. A list of the DNS names of the sensors the health issue is related to.
      * @param array<string>|null $value Value to set for the sensorDNSNames property.
     */
     public function setSensorDNSNames(?array $value): void {
@@ -361,7 +361,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the severity property value. The severity property
+     * Sets the severity property value. The severity of the health issue. The possible values are: low, medium, high, unknownFutureValue.
      * @param HealthIssueSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?HealthIssueSeverity $value): void {
@@ -369,7 +369,7 @@ class HealthIssue extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the health issue. The possible values are: open, closed, suppressed, unknownFutureValue.
      * @param HealthIssueStatus|null $value Value to set for the status property.
     */
     public function setStatus(?HealthIssueStatus $value): void {

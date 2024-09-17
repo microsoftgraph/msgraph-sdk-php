@@ -22,7 +22,6 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByInterval\Get
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Invite\InviteRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\ListItem\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Preview\PreviewRequestBuilder;
@@ -162,8 +161,8 @@ class DriveItemItemRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
     */
-    public function listItem(): ListItemRequestBuilder {
-        return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function listItem(): ListItem_EscapedRequestBuilder {
+        return new ListItem_EscapedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

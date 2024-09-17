@@ -10,7 +10,6 @@ use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Analytics\Analy
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\CreateLink\CreateLinkRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
@@ -57,8 +56,8 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.listItem entity.
     */
-    public function driveItem(): DriveItemRequestBuilder {
-        return new DriveItemRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function driveItem(): DriveItem_EscapedRequestBuilder {
+        return new DriveItem_EscapedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
