@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Identities;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get identities from security
+ * A container for security identities APIs.
 */
 class IdentitiesRequestBuilderGetQueryParameters 
 {

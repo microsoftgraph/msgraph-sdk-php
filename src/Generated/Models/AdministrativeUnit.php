@@ -74,10 +74,26 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
+            'isMemberManagementRestricted' => fn(ParseNode $n) => $o->setIsMemberManagementRestricted($n->getBooleanValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'membershipRule' => fn(ParseNode $n) => $o->setMembershipRule($n->getStringValue()),
+            'membershipRuleProcessingState' => fn(ParseNode $n) => $o->setMembershipRuleProcessingState($n->getStringValue()),
+            'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getStringValue()),
             'scopedRoleMembers' => fn(ParseNode $n) => $o->setScopedRoleMembers($n->getCollectionOfObjectValues([ScopedRoleMembership::class, 'createFromDiscriminatorValue'])),
             'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
+     * @return bool|null
+    */
+    public function getIsMemberManagementRestricted(): ?bool {
+        $val = $this->getBackingStore()->get('isMemberManagementRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMemberManagementRestricted'");
     }
 
     /**
@@ -92,6 +108,42 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
+    }
+
+    /**
+     * Gets the membershipRule property value. The membershipRule property
+     * @return string|null
+    */
+    public function getMembershipRule(): ?string {
+        $val = $this->getBackingStore()->get('membershipRule');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipRule'");
+    }
+
+    /**
+     * Gets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
+     * @return string|null
+    */
+    public function getMembershipRuleProcessingState(): ?string {
+        $val = $this->getBackingStore()->get('membershipRuleProcessingState');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipRuleProcessingState'");
+    }
+
+    /**
+     * Gets the membershipType property value. The membershipType property
+     * @return string|null
+    */
+    public function getMembershipType(): ?string {
+        $val = $this->getBackingStore()->get('membershipType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipType'");
     }
 
     /**
@@ -129,7 +181,11 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
+        $writer->writeBooleanValue('isMemberManagementRestricted', $this->getIsMemberManagementRestricted());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
+        $writer->writeStringValue('membershipRule', $this->getMembershipRule());
+        $writer->writeStringValue('membershipRuleProcessingState', $this->getMembershipRuleProcessingState());
+        $writer->writeStringValue('membershipType', $this->getMembershipType());
         $writer->writeCollectionOfObjectValues('scopedRoleMembers', $this->getScopedRoleMembers());
         $writer->writeStringValue('visibility', $this->getVisibility());
     }
@@ -159,11 +215,43 @@ class AdministrativeUnit extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
+     * @param bool|null $value Value to set for the isMemberManagementRestricted property.
+    */
+    public function setIsMemberManagementRestricted(?bool $value): void {
+        $this->getBackingStore()->set('isMemberManagementRestricted', $value);
+    }
+
+    /**
      * Sets the members property value. Users and groups that are members of this administrative unit. Supports $expand.
      * @param array<DirectoryObject>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
         $this->getBackingStore()->set('members', $value);
+    }
+
+    /**
+     * Sets the membershipRule property value. The membershipRule property
+     * @param string|null $value Value to set for the membershipRule property.
+    */
+    public function setMembershipRule(?string $value): void {
+        $this->getBackingStore()->set('membershipRule', $value);
+    }
+
+    /**
+     * Sets the membershipRuleProcessingState property value. The membershipRuleProcessingState property
+     * @param string|null $value Value to set for the membershipRuleProcessingState property.
+    */
+    public function setMembershipRuleProcessingState(?string $value): void {
+        $this->getBackingStore()->set('membershipRuleProcessingState', $value);
+    }
+
+    /**
+     * Sets the membershipType property value. The membershipType property
+     * @param string|null $value Value to set for the membershipType property.
+    */
+    public function setMembershipType(?string $value): void {
+        $this->getBackingStore()->set('membershipType', $value);
     }
 
     /**

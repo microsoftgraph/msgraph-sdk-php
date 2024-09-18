@@ -209,6 +209,7 @@ class Device extends DirectoryObject implements Parsable
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'isCompliant' => fn(ParseNode $n) => $o->setIsCompliant($n->getBooleanValue()),
             'isManaged' => fn(ParseNode $n) => $o->setIsManaged($n->getBooleanValue()),
+            'isManagementRestricted' => fn(ParseNode $n) => $o->setIsManagementRestricted($n->getBooleanValue()),
             'isRooted' => fn(ParseNode $n) => $o->setIsRooted($n->getBooleanValue()),
             'managementType' => fn(ParseNode $n) => $o->setManagementType($n->getStringValue()),
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
@@ -267,6 +268,18 @@ class Device extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isManaged'");
+    }
+
+    /**
+     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * @return bool|null
+    */
+    public function getIsManagementRestricted(): ?bool {
+        $val = $this->getBackingStore()->get('isManagementRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManagementRestricted'");
     }
 
     /**
@@ -530,6 +543,7 @@ class Device extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeBooleanValue('isCompliant', $this->getIsCompliant());
         $writer->writeBooleanValue('isManaged', $this->getIsManaged());
+        $writer->writeBooleanValue('isManagementRestricted', $this->getIsManagementRestricted());
         $writer->writeBooleanValue('isRooted', $this->getIsRooted());
         $writer->writeStringValue('managementType', $this->getManagementType());
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
@@ -669,6 +683,14 @@ class Device extends DirectoryObject implements Parsable
     */
     public function setIsManaged(?bool $value): void {
         $this->getBackingStore()->set('isManaged', $value);
+    }
+
+    /**
+     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * @param bool|null $value Value to set for the isManagementRestricted property.
+    */
+    public function setIsManagementRestricted(?bool $value): void {
+        $this->getBackingStore()->set('isManagementRestricted', $value);
     }
 
     /**

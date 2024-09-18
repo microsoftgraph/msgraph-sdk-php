@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Identities\HealthIssues;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get healthIssues from security
+ * Get a list of healthIssue objects and their properties.
 */
 class HealthIssuesRequestBuilderGetQueryParameters 
 {

@@ -53,7 +53,7 @@ class SolutionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get solutions from users
+     * The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
      * @param SolutionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserSolutionRoot|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class SolutionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get solutions from users
+     * The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
      * @param SolutionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

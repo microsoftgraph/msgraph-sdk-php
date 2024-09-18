@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Solutions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get solutions from users
+ * The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
 */
 class SolutionsRequestBuilderGetQueryParameters 
 {

@@ -36,7 +36,7 @@ class UserSolutionRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the workingTimeSchedule property value. The workingTimeSchedule property
+     * Gets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
      * @return WorkingTimeSchedule|null
     */
     public function getWorkingTimeSchedule(): ?WorkingTimeSchedule {
@@ -57,7 +57,7 @@ class UserSolutionRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the workingTimeSchedule property value. The workingTimeSchedule property
+     * Sets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
      * @param WorkingTimeSchedule|null $value Value to set for the workingTimeSchedule property.
     */
     public function setWorkingTimeSchedule(?WorkingTimeSchedule $value): void {

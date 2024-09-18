@@ -45,10 +45,11 @@ class HealthIssueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get healthIssues from security
+     * Read the properties and relationships of a healthIssue object.
      * @param HealthIssueItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HealthIssue|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-healthissue-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?HealthIssueItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class HealthIssueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property healthIssues in security
+     * Update the properties of a healthIssue object.
      * @param HealthIssue $body The request body
      * @param HealthIssueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HealthIssue|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-healthissue-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(HealthIssue $body, ?HealthIssueItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class HealthIssueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get healthIssues from security
+     * Read the properties and relationships of a healthIssue object.
      * @param HealthIssueItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class HealthIssueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property healthIssues in security
+     * Update the properties of a healthIssue object.
      * @param HealthIssue $body The request body
      * @param HealthIssueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

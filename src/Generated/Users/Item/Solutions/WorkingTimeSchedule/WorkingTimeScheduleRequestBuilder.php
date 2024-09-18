@@ -61,7 +61,7 @@ class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      * @param WorkingTimeScheduleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkingTimeSchedule|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class WorkingTimeScheduleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get workingTimeSchedule from users
+     * The working time schedule entity associated with the solution.
      * @param WorkingTimeScheduleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
