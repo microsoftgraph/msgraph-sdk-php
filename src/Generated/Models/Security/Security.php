@@ -107,7 +107,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the identities property value. The identities property
+     * Gets the identities property value. A container for security identities APIs.
      * @return IdentityContainer|null
     */
     public function getIdentities(): ?IdentityContainer {
@@ -276,7 +276,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the identities property value. The identities property
+     * Sets the identities property value. A container for security identities APIs.
      * @param IdentityContainer|null $value Value to set for the identities property.
     */
     public function setIdentities(?IdentityContainer $value): void {

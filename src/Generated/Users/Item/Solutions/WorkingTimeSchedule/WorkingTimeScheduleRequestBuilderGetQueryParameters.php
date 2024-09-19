@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Solutions\WorkingTimeSchedule;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get workingTimeSchedule from users
+ * The working time schedule entity associated with the solution.
 */
 class WorkingTimeScheduleRequestBuilderGetQueryParameters 
 {

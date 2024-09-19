@@ -313,6 +313,7 @@ class Group extends DirectoryObject implements Parsable
             'hideFromOutlookClients' => fn(ParseNode $n) => $o->setHideFromOutlookClients($n->getBooleanValue()),
             'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
             'isAssignableToRole' => fn(ParseNode $n) => $o->setIsAssignableToRole($n->getBooleanValue()),
+            'isManagementRestricted' => fn(ParseNode $n) => $o->setIsManagementRestricted($n->getBooleanValue()),
             'isSubscribedByMail' => fn(ParseNode $n) => $o->setIsSubscribedByMail($n->getBooleanValue()),
             'licenseProcessingState' => fn(ParseNode $n) => $o->setLicenseProcessingState($n->getObjectValue([LicenseProcessingState::class, 'createFromDiscriminatorValue'])),
             'mail' => fn(ParseNode $n) => $o->setMail($n->getStringValue()),
@@ -450,6 +451,18 @@ class Group extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isAssignableToRole'");
+    }
+
+    /**
+     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * @return bool|null
+    */
+    public function getIsManagementRestricted(): ?bool {
+        $val = $this->getBackingStore()->get('isManagementRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManagementRestricted'");
     }
 
     /**
@@ -677,7 +690,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
+     * Gets the owners property value. The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can't explicitly add themselves to this collection when they're creating the group. For more information, see the related known issue. For security groups, the admin user isn't automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
      * @return array<DirectoryObject>|null
     */
     public function getOwners(): ?array {
@@ -1006,6 +1019,7 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeBooleanValue('hideFromOutlookClients', $this->getHideFromOutlookClients());
         $writer->writeBooleanValue('isArchived', $this->getIsArchived());
         $writer->writeBooleanValue('isAssignableToRole', $this->getIsAssignableToRole());
+        $writer->writeBooleanValue('isManagementRestricted', $this->getIsManagementRestricted());
         $writer->writeBooleanValue('isSubscribedByMail', $this->getIsSubscribedByMail());
         $writer->writeObjectValue('licenseProcessingState', $this->getLicenseProcessingState());
         $writer->writeStringValue('mail', $this->getMail());
@@ -1258,6 +1272,14 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * @param bool|null $value Value to set for the isManagementRestricted property.
+    */
+    public function setIsManagementRestricted(?bool $value): void {
+        $this->getBackingStore()->set('isManagementRestricted', $value);
+    }
+
+    /**
      * Sets the isSubscribedByMail property value. Indicates whether the signed-in user is subscribed to receive email conversations. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param bool|null $value Value to set for the isSubscribedByMail property.
     */
@@ -1402,7 +1424,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the owners property value. The owners of the group. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group, the calling user is automatically assigned as the group owner.  Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1). Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
+     * Sets the owners property value. The owners of the group who can be users or service principals. Limited to 100 owners. Nullable. If this property isn't specified when creating a Microsoft 365 group the calling user (admin or non-admin) is automatically assigned as the group owner. A non-admin user can't explicitly add themselves to this collection when they're creating the group. For more information, see the related known issue. For security groups, the admin user isn't automatically added to this collection. For more information, see the related known issue. Supports $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1); Supports $expand including nested $select. For example, /groups?$filter=startsWith(displayName,'Role')&$select=id,displayName&$expand=owners($select=id,userPrincipalName,displayName).
      * @param array<DirectoryObject>|null $value Value to set for the owners property.
     */
     public function setOwners(?array $value): void {

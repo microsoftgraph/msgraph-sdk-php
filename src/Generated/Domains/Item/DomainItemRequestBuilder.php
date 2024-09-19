@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\DomainNameRefere
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\Promote\PromoteRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\RootDomain\RootDomainRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\Verify\VerifyRequestBuilder;
@@ -49,6 +50,13 @@ class DomainItemRequestBuilder extends BaseRequestBuilder
     */
     public function promote(): PromoteRequestBuilder {
         return new PromoteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the rootDomain property of the microsoft.graph.domain entity.
+    */
+    public function rootDomain(): RootDomainRequestBuilder {
+        return new RootDomainRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

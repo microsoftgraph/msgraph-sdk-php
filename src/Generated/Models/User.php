@@ -710,6 +710,7 @@ class User extends DirectoryObject implements Parsable
                 /** @var array<string>|null $val */
                 $this->setInterests($val);
             },
+            'isManagementRestricted' => fn(ParseNode $n) => $o->setIsManagementRestricted($n->getBooleanValue()),
             'isResourceAccount' => fn(ParseNode $n) => $o->setIsResourceAccount($n->getBooleanValue()),
             'jobTitle' => fn(ParseNode $n) => $o->setJobTitle($n->getStringValue()),
             'joinedTeams' => fn(ParseNode $n) => $o->setJoinedTeams($n->getCollectionOfObjectValues([Team::class, 'createFromDiscriminatorValue'])),
@@ -930,6 +931,18 @@ class User extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'interests'");
+    }
+
+    /**
+     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * @return bool|null
+    */
+    public function getIsManagementRestricted(): ?bool {
+        $val = $this->getBackingStore()->get('isManagementRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManagementRestricted'");
     }
 
     /**
@@ -1729,7 +1742,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the solutions property value. The solutions property
+     * Gets the solutions property value. The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
      * @return UserSolutionRoot|null
     */
     public function getSolutions(): ?UserSolutionRoot {
@@ -1925,6 +1938,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeObjectValue('inferenceClassification', $this->getInferenceClassification());
         $writer->writeObjectValue('insights', $this->getInsights());
         $writer->writeCollectionOfPrimitiveValues('interests', $this->getInterests());
+        $writer->writeBooleanValue('isManagementRestricted', $this->getIsManagementRestricted());
         $writer->writeBooleanValue('isResourceAccount', $this->getIsResourceAccount());
         $writer->writeStringValue('jobTitle', $this->getJobTitle());
         $writer->writeCollectionOfObjectValues('joinedTeams', $this->getJoinedTeams());
@@ -2441,6 +2455,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * @param bool|null $value Value to set for the isManagementRestricted property.
+    */
+    public function setIsManagementRestricted(?bool $value): void {
+        $this->getBackingStore()->set('isManagementRestricted', $value);
+    }
+
+    /**
      * Sets the isResourceAccount property value. Don't use – reserved for future use.
      * @param bool|null $value Value to set for the isResourceAccount property.
     */
@@ -2937,7 +2959,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the solutions property value. The solutions property
+     * Sets the solutions property value. The identifier that relates the user to the working time schedule triggers. Read-Only. Nullable
      * @param UserSolutionRoot|null $value Value to set for the solutions property.
     */
     public function setSolutions(?UserSolutionRoot $value): void {

@@ -97,6 +97,7 @@ class Domain extends Entity implements Parsable
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'passwordNotificationWindowInDays' => fn(ParseNode $n) => $o->setPasswordNotificationWindowInDays($n->getIntegerValue()),
             'passwordValidityPeriodInDays' => fn(ParseNode $n) => $o->setPasswordValidityPeriodInDays($n->getIntegerValue()),
+            'rootDomain' => fn(ParseNode $n) => $o->setRootDomain($n->getObjectValue([Domain::class, 'createFromDiscriminatorValue'])),
             'serviceConfigurationRecords' => fn(ParseNode $n) => $o->setServiceConfigurationRecords($n->getCollectionOfObjectValues([DomainDnsRecord::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getObjectValue([DomainState::class, 'createFromDiscriminatorValue'])),
             'supportedServices' => function (ParseNode $n) {
@@ -220,6 +221,18 @@ class Domain extends Entity implements Parsable
     }
 
     /**
+     * Gets the rootDomain property value. The rootDomain property
+     * @return Domain|null
+    */
+    public function getRootDomain(): ?Domain {
+        $val = $this->getBackingStore()->get('rootDomain');
+        if (is_null($val) || $val instanceof Domain) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rootDomain'");
+    }
+
+    /**
      * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
      * @return array<DomainDnsRecord>|null
     */
@@ -292,6 +305,7 @@ class Domain extends Entity implements Parsable
         $writer->writeStringValue('model', $this->getModel());
         $writer->writeIntegerValue('passwordNotificationWindowInDays', $this->getPasswordNotificationWindowInDays());
         $writer->writeIntegerValue('passwordValidityPeriodInDays', $this->getPasswordValidityPeriodInDays());
+        $writer->writeObjectValue('rootDomain', $this->getRootDomain());
         $writer->writeCollectionOfObjectValues('serviceConfigurationRecords', $this->getServiceConfigurationRecords());
         $writer->writeObjectValue('state', $this->getState());
         $writer->writeCollectionOfPrimitiveValues('supportedServices', $this->getSupportedServices());
@@ -400,6 +414,14 @@ class Domain extends Entity implements Parsable
     */
     public function setPasswordValidityPeriodInDays(?int $value): void {
         $this->getBackingStore()->set('passwordValidityPeriodInDays', $value);
+    }
+
+    /**
+     * Sets the rootDomain property value. The rootDomain property
+     * @param Domain|null $value Value to set for the rootDomain property.
+    */
+    public function setRootDomain(?Domain $value): void {
+        $this->getBackingStore()->set('rootDomain', $value);
     }
 
     /**

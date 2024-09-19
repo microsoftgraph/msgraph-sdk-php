@@ -67,7 +67,7 @@ class ContainersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new fileStorageContainer object.  The respective container type identified by containerTypeId must be enabled in the tenant.  For delegated calls, the calling user is set as the owner of the fileStorageContainer. 
+     * Create a new fileStorageContainer object.  The container type identified by containerTypeId must be enabled in the tenant.  For delegated calls, the calling user is set as the owner of the fileStorageContainer. 
      * @param FileStorageContainer $body The request body
      * @param ContainersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainer|null>
@@ -104,7 +104,7 @@ class ContainersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new fileStorageContainer object.  The respective container type identified by containerTypeId must be enabled in the tenant.  For delegated calls, the calling user is set as the owner of the fileStorageContainer. 
+     * Create a new fileStorageContainer object.  The container type identified by containerTypeId must be enabled in the tenant.  For delegated calls, the calling user is set as the owner of the fileStorageContainer. 
      * @param FileStorageContainer $body The request body
      * @param ContainersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -132,7 +132,7 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive,  active. Read-only.
+     * Gets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.
      * @return FileStorageContainerStatus|null
     */
     public function getStatus(): ?FileStorageContainerStatus {
@@ -229,7 +229,7 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive,  active. Read-only.
+     * Sets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.
      * @param FileStorageContainerStatus|null $value Value to set for the status property.
     */
     public function setStatus(?FileStorageContainerStatus $value): void {
