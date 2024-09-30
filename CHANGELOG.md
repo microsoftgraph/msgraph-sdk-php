@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.1](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.14.0...v2.14.1) (2024-09-30)
+
+
+### Bug Fixes
+
+* Remove DOM diff export from shipped files ([b7c4560](https://github.com/microsoftgraph/msgraph-sdk-php/commit/b7c4560ba3ef31a1771d21f016f1f8e8251d9124))
+
 ## [2.14.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.13.0...v2.14.0) (2024-09-19)
 
 
