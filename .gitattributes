@@ -12,3 +12,4 @@
 phpdoc.dist.xml export-ignore
 phpstan.neon export-ignore
 phpunit.xml export-ignore
+/src/**/kiota-dom-export.txt export-ignore
