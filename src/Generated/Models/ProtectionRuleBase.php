@@ -88,7 +88,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAutoApplyEnabled property value. Indicates whether the protection rule is static or dynamic.
+     * Gets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it's static. Currently, only static rules are supported.
      * @return bool|null
     */
     public function getIsAutoApplyEnabled(): ?bool {
@@ -175,7 +175,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAutoApplyEnabled property value. Indicates whether the protection rule is static or dynamic.
+     * Sets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it's static. Currently, only static rules are supported.
      * @param bool|null $value Value to set for the isAutoApplyEnabled property.
     */
     public function setIsAutoApplyEnabled(?bool $value): void {

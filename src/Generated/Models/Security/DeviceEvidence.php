@@ -64,6 +64,18 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
+     * Gets the dnsDomain property value. The DNS domain that this computer belongs to. A sequence of labels separated by dots.
+     * @return string|null
+    */
+    public function getDnsDomain(): ?string {
+        $val = $this->getBackingStore()->get('dnsDomain');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dnsDomain'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -73,8 +85,10 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             'azureAdDeviceId' => fn(ParseNode $n) => $o->setAzureAdDeviceId($n->getStringValue()),
             'defenderAvStatus' => fn(ParseNode $n) => $o->setDefenderAvStatus($n->getEnumValue(DefenderAvStatus::class)),
             'deviceDnsName' => fn(ParseNode $n) => $o->setDeviceDnsName($n->getStringValue()),
+            'dnsDomain' => fn(ParseNode $n) => $o->setDnsDomain($n->getStringValue()),
             'firstSeenDateTime' => fn(ParseNode $n) => $o->setFirstSeenDateTime($n->getDateTimeValue()),
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(DeviceHealthStatus::class)),
+            'hostName' => fn(ParseNode $n) => $o->setHostName($n->getStringValue()),
             'ipInterfaces' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -87,6 +101,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             'lastIpAddress' => fn(ParseNode $n) => $o->setLastIpAddress($n->getStringValue()),
             'loggedOnUsers' => fn(ParseNode $n) => $o->setLoggedOnUsers($n->getCollectionOfObjectValues([LoggedOnUser::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
+            'ntDomain' => fn(ParseNode $n) => $o->setNtDomain($n->getStringValue()),
             'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(OnboardingStatus::class)),
             'osBuild' => fn(ParseNode $n) => $o->setOsBuild($n->getIntegerValue()),
             'osPlatform' => fn(ParseNode $n) => $o->setOsPlatform($n->getStringValue()),
@@ -120,6 +135,18 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'healthStatus'");
+    }
+
+    /**
+     * Gets the hostName property value. The hostname without the domain suffix.
+     * @return string|null
+    */
+    public function getHostName(): ?string {
+        $val = $this->getBackingStore()->get('hostName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostName'");
     }
 
     /**
@@ -184,6 +211,18 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'mdeDeviceId'");
+    }
+
+    /**
+     * Gets the ntDomain property value. A logical grouping of computers within a Microsoft Windows network.
+     * @return string|null
+    */
+    public function getNtDomain(): ?string {
+        $val = $this->getBackingStore()->get('ntDomain');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ntDomain'");
     }
 
     /**
@@ -291,13 +330,16 @@ class DeviceEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('azureAdDeviceId', $this->getAzureAdDeviceId());
         $writer->writeEnumValue('defenderAvStatus', $this->getDefenderAvStatus());
         $writer->writeStringValue('deviceDnsName', $this->getDeviceDnsName());
+        $writer->writeStringValue('dnsDomain', $this->getDnsDomain());
         $writer->writeDateTimeValue('firstSeenDateTime', $this->getFirstSeenDateTime());
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
+        $writer->writeStringValue('hostName', $this->getHostName());
         $writer->writeCollectionOfPrimitiveValues('ipInterfaces', $this->getIpInterfaces());
         $writer->writeStringValue('lastExternalIpAddress', $this->getLastExternalIpAddress());
         $writer->writeStringValue('lastIpAddress', $this->getLastIpAddress());
         $writer->writeCollectionOfObjectValues('loggedOnUsers', $this->getLoggedOnUsers());
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
+        $writer->writeStringValue('ntDomain', $this->getNtDomain());
         $writer->writeEnumValue('onboardingStatus', $this->getOnboardingStatus());
         $writer->writeIntegerValue('osBuild', $this->getOsBuild());
         $writer->writeStringValue('osPlatform', $this->getOsPlatform());
@@ -333,6 +375,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
+     * Sets the dnsDomain property value. The DNS domain that this computer belongs to. A sequence of labels separated by dots.
+     * @param string|null $value Value to set for the dnsDomain property.
+    */
+    public function setDnsDomain(?string $value): void {
+        $this->getBackingStore()->set('dnsDomain', $value);
+    }
+
+    /**
      * Sets the firstSeenDateTime property value. The date and time when the device was first seen.
      * @param DateTime|null $value Value to set for the firstSeenDateTime property.
     */
@@ -346,6 +396,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     */
     public function setHealthStatus(?DeviceHealthStatus $value): void {
         $this->getBackingStore()->set('healthStatus', $value);
+    }
+
+    /**
+     * Sets the hostName property value. The hostname without the domain suffix.
+     * @param string|null $value Value to set for the hostName property.
+    */
+    public function setHostName(?string $value): void {
+        $this->getBackingStore()->set('hostName', $value);
     }
 
     /**
@@ -386,6 +444,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     */
     public function setMdeDeviceId(?string $value): void {
         $this->getBackingStore()->set('mdeDeviceId', $value);
+    }
+
+    /**
+     * Sets the ntDomain property value. A logical grouping of computers within a Microsoft Windows network.
+     * @param string|null $value Value to set for the ntDomain property.
+    */
+    public function setNtDomain(?string $value): void {
+        $this->getBackingStore()->set('ntDomain', $value);
     }
 
     /**

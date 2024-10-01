@@ -35,6 +35,7 @@ class CaseOperation extends Entity implements Parsable
                 case '#microsoft.graph.security.ediscoveryHoldOperation': return new EdiscoveryHoldOperation();
                 case '#microsoft.graph.security.ediscoveryIndexOperation': return new EdiscoveryIndexOperation();
                 case '#microsoft.graph.security.ediscoveryPurgeDataOperation': return new EdiscoveryPurgeDataOperation();
+                case '#microsoft.graph.security.ediscoverySearchExportOperation': return new EdiscoverySearchExportOperation();
                 case '#microsoft.graph.security.ediscoveryTagOperation': return new EdiscoveryTagOperation();
             }
         }

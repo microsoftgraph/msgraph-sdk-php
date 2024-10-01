@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a community in Viva Engage that is a central place for conversations,files, events, and updates for people sharing a common interest or goal.
+*/
 class Community extends Entity implements Parsable 
 {
     /**
@@ -104,7 +107,7 @@ class Community extends Entity implements Parsable
     }
 
     /**
-     * Gets the privacy property value. The privacy property
+     * Gets the privacy property value. Types of communityPrivacy.
      * @return CommunityPrivacy|null
     */
     public function getPrivacy(): ?CommunityPrivacy {
@@ -170,7 +173,7 @@ class Community extends Entity implements Parsable
     }
 
     /**
-     * Sets the privacy property value. The privacy property
+     * Sets the privacy property value. Types of communityPrivacy.
      * @param CommunityPrivacy|null $value Value to set for the privacy property.
     */
     public function setPrivacy(?CommunityPrivacy $value): void {

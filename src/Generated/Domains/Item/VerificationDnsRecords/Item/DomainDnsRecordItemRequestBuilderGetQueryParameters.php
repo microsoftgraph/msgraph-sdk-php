@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
+ * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn't support $expand.
 */
 class DomainDnsRecordItemRequestBuilderGetQueryParameters 
 {
