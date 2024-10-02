@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\GetAllR
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getAllRetainedMessages
+ * Get all retained messages across all channels in a team. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
 */
 class GetAllRetainedMessagesRequestBuilderGetQueryParameters 
 {

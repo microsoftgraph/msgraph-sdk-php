@@ -30,10 +30,11 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllRetainedMessages
+     * Get all retained messages across all channels in a team. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllRetainedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllRetainedMessagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-getallretainedmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllRetainedMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllRetainedMessages
+     * Get all retained messages across all channels in a team. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllRetainedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

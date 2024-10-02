@@ -30,10 +30,11 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllRetainedMessages
+     * Get all retained messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllRetainedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllRetainedMessagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/chat-getallretainedmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllRetainedMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllRetainedMessages
+     * Get all retained messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllRetainedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -70,7 +70,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. Friendly name for the key. Optional.
+     * Gets the displayName property value. The friendly name for the key, with a maximum length of 90 characters. Longer values are accepted but shortened. Optional.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -113,7 +113,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -226,7 +226,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. Friendly name for the key. Optional.
+     * Sets the displayName property value. The friendly name for the key, with a maximum length of 90 characters. Longer values are accepted but shortened. Optional.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -242,7 +242,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {

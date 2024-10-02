@@ -50,7 +50,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Doesn't support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @return array<DirectoryObject>|null
     */
     public function getDomainNameReferences(): ?array {
@@ -64,7 +64,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Gets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Doesn't support $expand.
      * @return array<InternalDomainFederation>|null
     */
     public function getFederationConfiguration(): ?array {
@@ -125,7 +125,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable
+     * Gets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable.
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
@@ -149,7 +149,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the isRoot property value. true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable
+     * Gets the isRoot property value. true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable.
      * @return bool|null
     */
     public function getIsRoot(): ?bool {
@@ -161,7 +161,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the isVerified property value. true if the domain has completed domain ownership verification. Not nullable
+     * Gets the isVerified property value. true if the domain completed domain ownership verification. Not nullable.
      * @return bool|null
     */
     public function getIsVerified(): ?bool {
@@ -197,7 +197,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property isn't set, a default value of 14 days is used.
+     * Gets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password expires. If the property isn't set, a default value of 14 days is used.
      * @return int|null
     */
     public function getPasswordNotificationWindowInDays(): ?int {
@@ -233,7 +233,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
+     * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Doesn't support $expand.
      * @return array<DomainDnsRecord>|null
     */
     public function getServiceConfigurationRecords(): ?array {
@@ -273,7 +273,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
+     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn't support $expand.
      * @return array<DomainDnsRecord>|null
     */
     public function getVerificationDnsRecords(): ?array {
@@ -329,7 +329,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Doesn't support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @param array<DirectoryObject>|null $value Value to set for the domainNameReferences property.
     */
     public function setDomainNameReferences(?array $value): void {
@@ -337,7 +337,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Supports $expand.
+     * Sets the federationConfiguration property value. Domain settings configured by a customer when federated with Microsoft Entra ID. Doesn't support $expand.
      * @param array<InternalDomainFederation>|null $value Value to set for the federationConfiguration property.
     */
     public function setFederationConfiguration(?array $value): void {
@@ -353,7 +353,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable
+     * Sets the isDefault property value. true if this is the default domain that is used for user creation. There's only one default domain per company. Not nullable.
      * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {
@@ -369,7 +369,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the isRoot property value. true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable
+     * Sets the isRoot property value. true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable.
      * @param bool|null $value Value to set for the isRoot property.
     */
     public function setIsRoot(?bool $value): void {
@@ -377,7 +377,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the isVerified property value. true if the domain has completed domain ownership verification. Not nullable
+     * Sets the isVerified property value. true if the domain completed domain ownership verification. Not nullable.
      * @param bool|null $value Value to set for the isVerified property.
     */
     public function setIsVerified(?bool $value): void {
@@ -401,7 +401,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password will expire. If the property isn't set, a default value of 14 days is used.
+     * Sets the passwordNotificationWindowInDays property value. Specifies the number of days before a user receives notification that their password expires. If the property isn't set, a default value of 14 days is used.
      * @param int|null $value Value to set for the passwordNotificationWindowInDays property.
     */
     public function setPasswordNotificationWindowInDays(?int $value): void {
@@ -425,7 +425,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
+     * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Doesn't support $expand.
      * @param array<DomainDnsRecord>|null $value Value to set for the serviceConfigurationRecords property.
     */
     public function setServiceConfigurationRecords(?array $value): void {
@@ -449,7 +449,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
+     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Doesn't support $expand.
      * @param array<DomainDnsRecord>|null $value Value to set for the verificationDnsRecords property.
     */
     public function setVerificationDnsRecords(?array $value): void {

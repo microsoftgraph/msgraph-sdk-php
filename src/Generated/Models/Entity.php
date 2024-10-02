@@ -71,6 +71,7 @@ use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSet;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSetQuery;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTag;
 use Microsoft\Graph\Generated\Models\Security\EdiscoverySearch;
+use Microsoft\Graph\Generated\Models\Security\EdiscoverySearchExportOperation;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryTagOperation;
 use Microsoft\Graph\Generated\Models\Security\EscapedCase;
 use Microsoft\Graph\Generated\Models\Security\FilePlanDescriptor;
@@ -797,6 +798,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.ediscoveryReviewSetQuery': return new EdiscoveryReviewSetQuery();
                 case '#microsoft.graph.security.ediscoveryReviewTag': return new EdiscoveryReviewTag();
                 case '#microsoft.graph.security.ediscoverySearch': return new EdiscoverySearch();
+                case '#microsoft.graph.security.ediscoverySearchExportOperation': return new EdiscoverySearchExportOperation();
                 case '#microsoft.graph.security.ediscoveryTagOperation': return new EdiscoveryTagOperation();
                 case '#microsoft.graph.security.filePlanDescriptor': return new FilePlanDescriptor();
                 case '#microsoft.graph.security.filePlanDescriptorTemplate': return new FilePlanDescriptorTemplate();

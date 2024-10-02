@@ -11,6 +11,9 @@ use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a container that exposes navigation properties for employee experience resources.
+*/
 class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
