@@ -230,7 +230,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
+     * Gets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled. This property isn't in use and updating it isn't supported.
      * @return bool|null
     */
     public function getPasswordWritebackEnabled(): ?bool {
@@ -466,7 +466,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled.
+     * Sets the passwordWritebackEnabled property value. Used to indicate that writeback of password resets from Microsoft Entra ID to on-premises AD is enabled. This property isn't in use and updating it isn't supported.
      * @param bool|null $value Value to set for the passwordWritebackEnabled property.
     */
     public function setPasswordWritebackEnabled(?bool $value): void {

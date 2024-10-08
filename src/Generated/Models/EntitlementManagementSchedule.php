@@ -95,7 +95,7 @@ class EntitlementManagementSchedule implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the recurrence property value. For recurring access reviews.  Not used in access requests.
+     * Gets the recurrence property value. The recurring access review pattern. Not used in access requests.
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
@@ -163,7 +163,7 @@ class EntitlementManagementSchedule implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the recurrence property value. For recurring access reviews.  Not used in access requests.
+     * Sets the recurrence property value. The recurring access review pattern. Not used in access requests.
      * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
