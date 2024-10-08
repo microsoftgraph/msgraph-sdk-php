@@ -49,11 +49,11 @@ class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the altitude property value. Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
-     * @return float|null
+     * @return GeoCoordinates_altitude|null
     */
-    public function getAltitude(): ?float {
+    public function getAltitude(): ?GeoCoordinates_altitude {
         $val = $this->getBackingStore()->get('altitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof GeoCoordinates_altitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'altitude'");
@@ -74,20 +74,20 @@ class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getFloatValue()),
-            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
-            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getObjectValue([GeoCoordinates_altitude::class, 'createFromDiscriminatorValue'])),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getObjectValue([GeoCoordinates_latitude::class, 'createFromDiscriminatorValue'])),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getObjectValue([GeoCoordinates_longitude::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
-     * @return float|null
+     * @return GeoCoordinates_latitude|null
     */
-    public function getLatitude(): ?float {
+    public function getLatitude(): ?GeoCoordinates_latitude {
         $val = $this->getBackingStore()->get('latitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof GeoCoordinates_latitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'latitude'");
@@ -95,11 +95,11 @@ class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
-     * @return float|null
+     * @return GeoCoordinates_longitude|null
     */
-    public function getLongitude(): ?float {
+    public function getLongitude(): ?GeoCoordinates_longitude {
         $val = $this->getBackingStore()->get('longitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof GeoCoordinates_longitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'longitude'");
@@ -122,9 +122,9 @@ class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('altitude', $this->getAltitude());
-        $writer->writeFloatValue('latitude', $this->getLatitude());
-        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeObjectValue('altitude', $this->getAltitude());
+        $writer->writeObjectValue('latitude', $this->getLatitude());
+        $writer->writeObjectValue('longitude', $this->getLongitude());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -139,9 +139,9 @@ class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the altitude property value. Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
-     * @param float|null $value Value to set for the altitude property.
+     * @param GeoCoordinates_altitude|null $value Value to set for the altitude property.
     */
-    public function setAltitude(?float $value): void {
+    public function setAltitude(?GeoCoordinates_altitude $value): void {
         $this->getBackingStore()->set('altitude', $value);
     }
 
@@ -155,17 +155,17 @@ class GeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the latitude property value. Optional. The latitude, in decimal, for the item. Read-only.
-     * @param float|null $value Value to set for the latitude property.
+     * @param GeoCoordinates_latitude|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value): void {
+    public function setLatitude(?GeoCoordinates_latitude $value): void {
         $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. Optional. The longitude, in decimal, for the item. Read-only.
-     * @param float|null $value Value to set for the longitude property.
+     * @param GeoCoordinates_longitude|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value): void {
+    public function setLongitude(?GeoCoordinates_longitude $value): void {
         $this->getBackingStore()->set('longitude', $value);
     }
 

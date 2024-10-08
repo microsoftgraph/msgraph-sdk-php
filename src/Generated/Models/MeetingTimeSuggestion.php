@@ -72,11 +72,11 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
-     * @return float|null
+     * @return MeetingTimeSuggestion_confidence|null
     */
-    public function getConfidence(): ?float {
+    public function getConfidence(): ?MeetingTimeSuggestion_confidence {
         $val = $this->getBackingStore()->get('confidence');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof MeetingTimeSuggestion_confidence) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'confidence'");
@@ -90,7 +90,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'attendeeAvailability' => fn(ParseNode $n) => $o->setAttendeeAvailability($n->getCollectionOfObjectValues([AttendeeAvailability::class, 'createFromDiscriminatorValue'])),
-            'confidence' => fn(ParseNode $n) => $o->setConfidence($n->getFloatValue()),
+            'confidence' => fn(ParseNode $n) => $o->setConfidence($n->getObjectValue([MeetingTimeSuggestion_confidence::class, 'createFromDiscriminatorValue'])),
             'locations' => fn(ParseNode $n) => $o->setLocations($n->getCollectionOfObjectValues([Location::class, 'createFromDiscriminatorValue'])),
             'meetingTimeSlot' => fn(ParseNode $n) => $o->setMeetingTimeSlot($n->getObjectValue([TimeSlot::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -180,7 +180,7 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('attendeeAvailability', $this->getAttendeeAvailability());
-        $writer->writeFloatValue('confidence', $this->getConfidence());
+        $writer->writeObjectValue('confidence', $this->getConfidence());
         $writer->writeCollectionOfObjectValues('locations', $this->getLocations());
         $writer->writeObjectValue('meetingTimeSlot', $this->getMeetingTimeSlot());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -216,9 +216,9 @@ class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the confidence property value. A percentage that represents the likelhood of all the attendees attending.
-     * @param float|null $value Value to set for the confidence property.
+     * @param MeetingTimeSuggestion_confidence|null $value Value to set for the confidence property.
     */
-    public function setConfidence(?float $value): void {
+    public function setConfidence(?MeetingTimeSuggestion_confidence $value): void {
         $this->getBackingStore()->set('confidence', $value);
     }
 

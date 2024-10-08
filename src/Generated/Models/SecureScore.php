@@ -92,11 +92,11 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Gets the currentScore property value. Tenant current attained score on specified date.
-     * @return float|null
+     * @return SecureScore_currentScore|null
     */
-    public function getCurrentScore(): ?float {
+    public function getCurrentScore(): ?SecureScore_currentScore {
         $val = $this->getBackingStore()->get('currentScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof SecureScore_currentScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'currentScore'");
@@ -128,7 +128,7 @@ class SecureScore extends Entity implements Parsable
             'azureTenantId' => fn(ParseNode $n) => $o->setAzureTenantId($n->getStringValue()),
             'controlScores' => fn(ParseNode $n) => $o->setControlScores($n->getCollectionOfObjectValues([ControlScore::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
-            'currentScore' => fn(ParseNode $n) => $o->setCurrentScore($n->getFloatValue()),
+            'currentScore' => fn(ParseNode $n) => $o->setCurrentScore($n->getObjectValue([SecureScore_currentScore::class, 'createFromDiscriminatorValue'])),
             'enabledServices' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -138,7 +138,7 @@ class SecureScore extends Entity implements Parsable
                 $this->setEnabledServices($val);
             },
             'licensedUserCount' => fn(ParseNode $n) => $o->setLicensedUserCount($n->getIntegerValue()),
-            'maxScore' => fn(ParseNode $n) => $o->setMaxScore($n->getFloatValue()),
+            'maxScore' => fn(ParseNode $n) => $o->setMaxScore($n->getObjectValue([SecureScore_maxScore::class, 'createFromDiscriminatorValue'])),
             'vendorInformation' => fn(ParseNode $n) => $o->setVendorInformation($n->getObjectValue([SecurityVendorInformation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -157,11 +157,11 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Gets the maxScore property value. Tenant maximum possible score on specified date.
-     * @return float|null
+     * @return SecureScore_maxScore|null
     */
-    public function getMaxScore(): ?float {
+    public function getMaxScore(): ?SecureScore_maxScore {
         $val = $this->getBackingStore()->get('maxScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof SecureScore_maxScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'maxScore'");
@@ -190,10 +190,10 @@ class SecureScore extends Entity implements Parsable
         $writer->writeStringValue('azureTenantId', $this->getAzureTenantId());
         $writer->writeCollectionOfObjectValues('controlScores', $this->getControlScores());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
-        $writer->writeFloatValue('currentScore', $this->getCurrentScore());
+        $writer->writeObjectValue('currentScore', $this->getCurrentScore());
         $writer->writeCollectionOfPrimitiveValues('enabledServices', $this->getEnabledServices());
         $writer->writeIntegerValue('licensedUserCount', $this->getLicensedUserCount());
-        $writer->writeFloatValue('maxScore', $this->getMaxScore());
+        $writer->writeObjectValue('maxScore', $this->getMaxScore());
         $writer->writeObjectValue('vendorInformation', $this->getVendorInformation());
     }
 
@@ -239,9 +239,9 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the currentScore property value. Tenant current attained score on specified date.
-     * @param float|null $value Value to set for the currentScore property.
+     * @param SecureScore_currentScore|null $value Value to set for the currentScore property.
     */
-    public function setCurrentScore(?float $value): void {
+    public function setCurrentScore(?SecureScore_currentScore $value): void {
         $this->getBackingStore()->set('currentScore', $value);
     }
 
@@ -263,9 +263,9 @@ class SecureScore extends Entity implements Parsable
 
     /**
      * Sets the maxScore property value. Tenant maximum possible score on specified date.
-     * @param float|null $value Value to set for the maxScore property.
+     * @param SecureScore_maxScore|null $value Value to set for the maxScore property.
     */
-    public function setMaxScore(?float $value): void {
+    public function setMaxScore(?SecureScore_maxScore $value): void {
         $this->getBackingStore()->set('maxScore', $value);
     }
 

@@ -117,8 +117,8 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
             'countryOrRegion' => fn(ParseNode $n) => $o->setCountryOrRegion($n->getStringValue()),
             'floor' => fn(ParseNode $n) => $o->setFloor($n->getStringValue()),
             'floorDescription' => fn(ParseNode $n) => $o->setFloorDescription($n->getStringValue()),
-            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
-            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getObjectValue([PrinterLocation_latitude::class, 'createFromDiscriminatorValue'])),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getObjectValue([PrinterLocation_longitude::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'organization' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -179,11 +179,11 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the latitude property value. The latitude that the printer is located at.
-     * @return float|null
+     * @return PrinterLocation_latitude|null
     */
-    public function getLatitude(): ?float {
+    public function getLatitude(): ?PrinterLocation_latitude {
         $val = $this->getBackingStore()->get('latitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof PrinterLocation_latitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'latitude'");
@@ -191,11 +191,11 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the longitude property value. The longitude that the printer is located at.
-     * @return float|null
+     * @return PrinterLocation_longitude|null
     */
-    public function getLongitude(): ?float {
+    public function getLongitude(): ?PrinterLocation_longitude {
         $val = $this->getBackingStore()->get('longitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof PrinterLocation_longitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'longitude'");
@@ -338,8 +338,8 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('countryOrRegion', $this->getCountryOrRegion());
         $writer->writeStringValue('floor', $this->getFloor());
         $writer->writeStringValue('floorDescription', $this->getFloorDescription());
-        $writer->writeFloatValue('latitude', $this->getLatitude());
-        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeObjectValue('latitude', $this->getLatitude());
+        $writer->writeObjectValue('longitude', $this->getLongitude());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('organization', $this->getOrganization());
         $writer->writeStringValue('postalCode', $this->getPostalCode());
@@ -419,17 +419,17 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the latitude property value. The latitude that the printer is located at.
-     * @param float|null $value Value to set for the latitude property.
+     * @param PrinterLocation_latitude|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value): void {
+    public function setLatitude(?PrinterLocation_latitude $value): void {
         $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. The longitude that the printer is located at.
-     * @param float|null $value Value to set for the longitude property.
+     * @param PrinterLocation_longitude|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value): void {
+    public function setLongitude(?PrinterLocation_longitude $value): void {
         $this->getBackingStore()->set('longitude', $value);
     }
 

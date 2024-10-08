@@ -77,7 +77,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
             'address' => fn(ParseNode $n) => $o->setAddress($n->getStringValue()),
             'itemId' => fn(ParseNode $n) => $o->setItemId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'relevanceScore' => fn(ParseNode $n) => $o->setRelevanceScore($n->getFloatValue()),
+            'relevanceScore' => fn(ParseNode $n) => $o->setRelevanceScore($n->getObjectValue([ScoredEmailAddress_relevanceScore::class, 'createFromDiscriminatorValue'])),
             'selectionLikelihood' => fn(ParseNode $n) => $o->setSelectionLikelihood($n->getEnumValue(SelectionLikelihoodInfo::class)),
         ];
     }
@@ -108,11 +108,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
-     * @return float|null
+     * @return ScoredEmailAddress_relevanceScore|null
     */
-    public function getRelevanceScore(): ?float {
+    public function getRelevanceScore(): ?ScoredEmailAddress_relevanceScore {
         $val = $this->getBackingStore()->get('relevanceScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof ScoredEmailAddress_relevanceScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'relevanceScore'");
@@ -138,7 +138,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('address', $this->getAddress());
         $writer->writeStringValue('itemId', $this->getItemId());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeFloatValue('relevanceScore', $this->getRelevanceScore());
+        $writer->writeObjectValue('relevanceScore', $this->getRelevanceScore());
         $writer->writeEnumValue('selectionLikelihood', $this->getSelectionLikelihood());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -185,9 +185,9 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the relevanceScore property value. The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
-     * @param float|null $value Value to set for the relevanceScore property.
+     * @param ScoredEmailAddress_relevanceScore|null $value Value to set for the relevanceScore property.
     */
-    public function setRelevanceScore(?float $value): void {
+    public function setRelevanceScore(?ScoredEmailAddress_relevanceScore $value): void {
         $this->getBackingStore()->set('relevanceScore', $value);
     }
 

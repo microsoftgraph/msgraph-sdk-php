@@ -49,11 +49,11 @@ class AverageComparativeScore implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Gets the averageScore property value. Average score within specified basis.
-     * @return float|null
+     * @return AverageComparativeScore_averageScore|null
     */
-    public function getAverageScore(): ?float {
+    public function getAverageScore(): ?AverageComparativeScore_averageScore {
         $val = $this->getBackingStore()->get('averageScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof AverageComparativeScore_averageScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'averageScore'");
@@ -86,7 +86,7 @@ class AverageComparativeScore implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'averageScore' => fn(ParseNode $n) => $o->setAverageScore($n->getFloatValue()),
+            'averageScore' => fn(ParseNode $n) => $o->setAverageScore($n->getObjectValue([AverageComparativeScore_averageScore::class, 'createFromDiscriminatorValue'])),
             'basis' => fn(ParseNode $n) => $o->setBasis($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -109,7 +109,7 @@ class AverageComparativeScore implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('averageScore', $this->getAverageScore());
+        $writer->writeObjectValue('averageScore', $this->getAverageScore());
         $writer->writeStringValue('basis', $this->getBasis());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -125,9 +125,9 @@ class AverageComparativeScore implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the averageScore property value. Average score within specified basis.
-     * @param float|null $value Value to set for the averageScore property.
+     * @param AverageComparativeScore_averageScore|null $value Value to set for the averageScore property.
     */
-    public function setAverageScore(?float $value): void {
+    public function setAverageScore(?AverageComparativeScore_averageScore $value): void {
         $this->getBackingStore()->set('averageScore', $value);
     }
 

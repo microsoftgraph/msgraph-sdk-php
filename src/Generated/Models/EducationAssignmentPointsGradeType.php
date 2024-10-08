@@ -32,17 +32,17 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'maxPoints' => fn(ParseNode $n) => $o->setMaxPoints($n->getFloatValue()),
+            'maxPoints' => fn(ParseNode $n) => $o->setMaxPoints($n->getObjectValue([EducationAssignmentPointsGradeType_maxPoints::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
      * Gets the maxPoints property value. Max points possible for this assignment.
-     * @return float|null
+     * @return EducationAssignmentPointsGradeType_maxPoints|null
     */
-    public function getMaxPoints(): ?float {
+    public function getMaxPoints(): ?EducationAssignmentPointsGradeType_maxPoints {
         $val = $this->getBackingStore()->get('maxPoints');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof EducationAssignmentPointsGradeType_maxPoints) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'maxPoints'");
@@ -54,14 +54,14 @@ class EducationAssignmentPointsGradeType extends EducationAssignmentGradeType im
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('maxPoints', $this->getMaxPoints());
+        $writer->writeObjectValue('maxPoints', $this->getMaxPoints());
     }
 
     /**
      * Sets the maxPoints property value. Max points possible for this assignment.
-     * @param float|null $value Value to set for the maxPoints property.
+     * @param EducationAssignmentPointsGradeType_maxPoints|null $value Value to set for the maxPoints property.
     */
-    public function setMaxPoints(?float $value): void {
+    public function setMaxPoints(?EducationAssignmentPointsGradeType_maxPoints $value): void {
         $this->getBackingStore()->set('maxPoints', $value);
     }
 

@@ -45,7 +45,7 @@ class DataPolicyOperation extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
-            'progress' => fn(ParseNode $n) => $o->setProgress($n->getFloatValue()),
+            'progress' => fn(ParseNode $n) => $o->setProgress($n->getObjectValue([DataPolicyOperation_progress::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(DataPolicyOperationStatus::class)),
             'storageLocation' => fn(ParseNode $n) => $o->setStorageLocation($n->getStringValue()),
             'submittedDateTime' => fn(ParseNode $n) => $o->setSubmittedDateTime($n->getDateTimeValue()),
@@ -55,11 +55,11 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Gets the progress property value. Specifies the progress of an operation.
-     * @return float|null
+     * @return DataPolicyOperation_progress|null
     */
-    public function getProgress(): ?float {
+    public function getProgress(): ?DataPolicyOperation_progress {
         $val = $this->getBackingStore()->get('progress');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DataPolicyOperation_progress) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'progress'");
@@ -120,7 +120,7 @@ class DataPolicyOperation extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
-        $writer->writeFloatValue('progress', $this->getProgress());
+        $writer->writeObjectValue('progress', $this->getProgress());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('storageLocation', $this->getStorageLocation());
         $writer->writeDateTimeValue('submittedDateTime', $this->getSubmittedDateTime());
@@ -137,9 +137,9 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the progress property value. Specifies the progress of an operation.
-     * @param float|null $value Value to set for the progress property.
+     * @param DataPolicyOperation_progress|null $value Value to set for the progress property.
     */
-    public function setProgress(?float $value): void {
+    public function setProgress(?DataPolicyOperation_progress $value): void {
         $this->getBackingStore()->set('progress', $value);
     }
 

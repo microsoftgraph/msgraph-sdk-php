@@ -59,7 +59,7 @@ class WorkbookChartFont extends Entity implements Parsable
             'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
             'italic' => fn(ParseNode $n) => $o->setItalic($n->getBooleanValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'size' => fn(ParseNode $n) => $o->setSize($n->getFloatValue()),
+            'size' => fn(ParseNode $n) => $o->setSize($n->getObjectValue([WorkbookChartFont_size::class, 'createFromDiscriminatorValue'])),
             'underline' => fn(ParseNode $n) => $o->setUnderline($n->getStringValue()),
         ]);
     }
@@ -90,11 +90,11 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Gets the size property value. The size of the font. For example,  11.
-     * @return float|null
+     * @return WorkbookChartFont_size|null
     */
-    public function getSize(): ?float {
+    public function getSize(): ?WorkbookChartFont_size {
         $val = $this->getBackingStore()->get('size');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookChartFont_size) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
@@ -122,7 +122,7 @@ class WorkbookChartFont extends Entity implements Parsable
         $writer->writeStringValue('color', $this->getColor());
         $writer->writeBooleanValue('italic', $this->getItalic());
         $writer->writeStringValue('name', $this->getName());
-        $writer->writeFloatValue('size', $this->getSize());
+        $writer->writeObjectValue('size', $this->getSize());
         $writer->writeStringValue('underline', $this->getUnderline());
     }
 
@@ -160,9 +160,9 @@ class WorkbookChartFont extends Entity implements Parsable
 
     /**
      * Sets the size property value. The size of the font. For example,  11.
-     * @param float|null $value Value to set for the size property.
+     * @param WorkbookChartFont_size|null $value Value to set for the size property.
     */
-    public function setSize(?float $value): void {
+    public function setSize(?WorkbookChartFont_size $value): void {
         $this->getBackingStore()->set('size', $value);
     }
 

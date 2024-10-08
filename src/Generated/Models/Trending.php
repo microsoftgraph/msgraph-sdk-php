@@ -36,7 +36,7 @@ class Trending extends Entity implements Parsable
             'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([Entity::class, 'createFromDiscriminatorValue'])),
             'resourceReference' => fn(ParseNode $n) => $o->setResourceReference($n->getObjectValue([ResourceReference::class, 'createFromDiscriminatorValue'])),
             'resourceVisualization' => fn(ParseNode $n) => $o->setResourceVisualization($n->getObjectValue([ResourceVisualization::class, 'createFromDiscriminatorValue'])),
-            'weight' => fn(ParseNode $n) => $o->setWeight($n->getFloatValue()),
+            'weight' => fn(ParseNode $n) => $o->setWeight($n->getObjectValue([Trending_weight::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -90,11 +90,11 @@ class Trending extends Entity implements Parsable
 
     /**
      * Gets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
-     * @return float|null
+     * @return Trending_weight|null
     */
-    public function getWeight(): ?float {
+    public function getWeight(): ?Trending_weight {
         $val = $this->getBackingStore()->get('weight');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Trending_weight) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'weight'");
@@ -108,7 +108,7 @@ class Trending extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeObjectValue('resource', $this->getResource());
-        $writer->writeFloatValue('weight', $this->getWeight());
+        $writer->writeObjectValue('weight', $this->getWeight());
     }
 
     /**
@@ -145,9 +145,9 @@ class Trending extends Entity implements Parsable
 
     /**
      * Sets the weight property value. Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
-     * @param float|null $value Value to set for the weight property.
+     * @param Trending_weight|null $value Value to set for the weight property.
     */
-    public function setWeight(?float $value): void {
+    public function setWeight(?Trending_weight $value): void {
         $this->getBackingStore()->set('weight', $value);
     }
 

@@ -102,7 +102,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
             'controlName' => fn(ParseNode $n) => $o->setControlName($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'score' => fn(ParseNode $n) => $o->setScore($n->getFloatValue()),
+            'score' => fn(ParseNode $n) => $o->setScore($n->getObjectValue([ControlScore_score::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -120,11 +120,11 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
-     * @return float|null
+     * @return ControlScore_score|null
     */
-    public function getScore(): ?float {
+    public function getScore(): ?ControlScore_score {
         $val = $this->getBackingStore()->get('score');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof ControlScore_score) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'score'");
@@ -139,7 +139,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('controlName', $this->getControlName());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeFloatValue('score', $this->getScore());
+        $writer->writeObjectValue('score', $this->getScore());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -193,9 +193,9 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
-     * @param float|null $value Value to set for the score property.
+     * @param ControlScore_score|null $value Value to set for the score property.
     */
-    public function setScore(?float $value): void {
+    public function setScore(?ControlScore_score $value): void {
         $this->getBackingStore()->set('score', $value);
     }
 

@@ -58,11 +58,11 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Gets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
-     * @return float|null
+     * @return SimulationEventsContent_compromisedRate|null
     */
-    public function getCompromisedRate(): ?float {
+    public function getCompromisedRate(): ?SimulationEventsContent_compromisedRate {
         $val = $this->getBackingStore()->get('compromisedRate');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof SimulationEventsContent_compromisedRate) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'compromisedRate'");
@@ -89,7 +89,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'compromisedRate' => fn(ParseNode $n) => $o->setCompromisedRate($n->getFloatValue()),
+            'compromisedRate' => fn(ParseNode $n) => $o->setCompromisedRate($n->getObjectValue([SimulationEventsContent_compromisedRate::class, 'createFromDiscriminatorValue'])),
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([SimulationEvent::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -112,7 +112,7 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('compromisedRate', $this->getCompromisedRate());
+        $writer->writeObjectValue('compromisedRate', $this->getCompromisedRate());
         $writer->writeCollectionOfObjectValues('events', $this->getEvents());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -136,9 +136,9 @@ class SimulationEventsContent implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the compromisedRate property value. Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
-     * @param float|null $value Value to set for the compromisedRate property.
+     * @param SimulationEventsContent_compromisedRate|null $value Value to set for the compromisedRate property.
     */
-    public function setCompromisedRate(?float $value): void {
+    public function setCompromisedRate(?SimulationEventsContent_compromisedRate $value): void {
         $this->getBackingStore()->set('compromisedRate', $value);
     }
 

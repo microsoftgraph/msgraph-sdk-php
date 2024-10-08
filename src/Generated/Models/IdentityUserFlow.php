@@ -39,7 +39,7 @@ class IdentityUserFlow extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'userFlowType' => fn(ParseNode $n) => $o->setUserFlowType($n->getEnumValue(UserFlowType::class)),
-            'userFlowTypeVersion' => fn(ParseNode $n) => $o->setUserFlowTypeVersion($n->getFloatValue()),
+            'userFlowTypeVersion' => fn(ParseNode $n) => $o->setUserFlowTypeVersion($n->getObjectValue([IdentityUserFlow_userFlowTypeVersion::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -57,11 +57,11 @@ class IdentityUserFlow extends Entity implements Parsable
 
     /**
      * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
-     * @return float|null
+     * @return IdentityUserFlow_userFlowTypeVersion|null
     */
-    public function getUserFlowTypeVersion(): ?float {
+    public function getUserFlowTypeVersion(): ?IdentityUserFlow_userFlowTypeVersion {
         $val = $this->getBackingStore()->get('userFlowTypeVersion');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof IdentityUserFlow_userFlowTypeVersion) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'userFlowTypeVersion'");
@@ -74,7 +74,7 @@ class IdentityUserFlow extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('userFlowType', $this->getUserFlowType());
-        $writer->writeFloatValue('userFlowTypeVersion', $this->getUserFlowTypeVersion());
+        $writer->writeObjectValue('userFlowTypeVersion', $this->getUserFlowTypeVersion());
     }
 
     /**
@@ -87,9 +87,9 @@ class IdentityUserFlow extends Entity implements Parsable
 
     /**
      * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
-     * @param float|null $value Value to set for the userFlowTypeVersion property.
+     * @param IdentityUserFlow_userFlowTypeVersion|null $value Value to set for the userFlowTypeVersion property.
     */
-    public function setUserFlowTypeVersion(?float $value): void {
+    public function setUserFlowTypeVersion(?IdentityUserFlow_userFlowTypeVersion $value): void {
         $this->getBackingStore()->set('userFlowTypeVersion', $value);
     }
 

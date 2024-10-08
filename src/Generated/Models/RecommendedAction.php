@@ -76,7 +76,7 @@ class RecommendedAction implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'actionWebUrl' => fn(ParseNode $n) => $o->setActionWebUrl($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'potentialScoreImpact' => fn(ParseNode $n) => $o->setPotentialScoreImpact($n->getFloatValue()),
+            'potentialScoreImpact' => fn(ParseNode $n) => $o->setPotentialScoreImpact($n->getObjectValue([RecommendedAction_potentialScoreImpact::class, 'createFromDiscriminatorValue'])),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
         ];
     }
@@ -95,11 +95,11 @@ class RecommendedAction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the potentialScoreImpact property value. Potential improvement in the tenant security score from the recommended action.
-     * @return float|null
+     * @return RecommendedAction_potentialScoreImpact|null
     */
-    public function getPotentialScoreImpact(): ?float {
+    public function getPotentialScoreImpact(): ?RecommendedAction_potentialScoreImpact {
         $val = $this->getBackingStore()->get('potentialScoreImpact');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof RecommendedAction_potentialScoreImpact) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'potentialScoreImpact'");
@@ -124,7 +124,7 @@ class RecommendedAction implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('actionWebUrl', $this->getActionWebUrl());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeFloatValue('potentialScoreImpact', $this->getPotentialScoreImpact());
+        $writer->writeObjectValue('potentialScoreImpact', $this->getPotentialScoreImpact());
         $writer->writeStringValue('title', $this->getTitle());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -163,9 +163,9 @@ class RecommendedAction implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the potentialScoreImpact property value. Potential improvement in the tenant security score from the recommended action.
-     * @param float|null $value Value to set for the potentialScoreImpact property.
+     * @param RecommendedAction_potentialScoreImpact|null $value Value to set for the potentialScoreImpact property.
     */
-    public function setPotentialScoreImpact(?float $value): void {
+    public function setPotentialScoreImpact(?RecommendedAction_potentialScoreImpact $value): void {
         $this->getBackingStore()->set('potentialScoreImpact', $value);
     }
 

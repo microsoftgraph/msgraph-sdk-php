@@ -41,11 +41,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Gets the columnWidth property value. The width of all columns within the range. If the column widths aren't uniform, null will be returned.
-     * @return float|null
+     * @return WorkbookRangeFormat_columnWidth|null
     */
-    public function getColumnWidth(): ?float {
+    public function getColumnWidth(): ?WorkbookRangeFormat_columnWidth {
         $val = $this->getBackingStore()->get('columnWidth');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookRangeFormat_columnWidth) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'columnWidth'");
@@ -59,12 +59,12 @@ class WorkbookRangeFormat extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'borders' => fn(ParseNode $n) => $o->setBorders($n->getCollectionOfObjectValues([WorkbookRangeBorder::class, 'createFromDiscriminatorValue'])),
-            'columnWidth' => fn(ParseNode $n) => $o->setColumnWidth($n->getFloatValue()),
+            'columnWidth' => fn(ParseNode $n) => $o->setColumnWidth($n->getObjectValue([WorkbookRangeFormat_columnWidth::class, 'createFromDiscriminatorValue'])),
             'fill' => fn(ParseNode $n) => $o->setFill($n->getObjectValue([WorkbookRangeFill::class, 'createFromDiscriminatorValue'])),
             'font' => fn(ParseNode $n) => $o->setFont($n->getObjectValue([WorkbookRangeFont::class, 'createFromDiscriminatorValue'])),
             'horizontalAlignment' => fn(ParseNode $n) => $o->setHorizontalAlignment($n->getStringValue()),
             'protection' => fn(ParseNode $n) => $o->setProtection($n->getObjectValue([WorkbookFormatProtection::class, 'createFromDiscriminatorValue'])),
-            'rowHeight' => fn(ParseNode $n) => $o->setRowHeight($n->getFloatValue()),
+            'rowHeight' => fn(ParseNode $n) => $o->setRowHeight($n->getObjectValue([WorkbookRangeFormat_rowHeight::class, 'createFromDiscriminatorValue'])),
             'verticalAlignment' => fn(ParseNode $n) => $o->setVerticalAlignment($n->getStringValue()),
             'wrapText' => fn(ParseNode $n) => $o->setWrapText($n->getBooleanValue()),
         ]);
@@ -120,11 +120,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Gets the rowHeight property value. The height of all rows in the range. If the row heights aren't uniform null will be returned.
-     * @return float|null
+     * @return WorkbookRangeFormat_rowHeight|null
     */
-    public function getRowHeight(): ?float {
+    public function getRowHeight(): ?WorkbookRangeFormat_rowHeight {
         $val = $this->getBackingStore()->get('rowHeight');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookRangeFormat_rowHeight) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'rowHeight'");
@@ -161,12 +161,12 @@ class WorkbookRangeFormat extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('borders', $this->getBorders());
-        $writer->writeFloatValue('columnWidth', $this->getColumnWidth());
+        $writer->writeObjectValue('columnWidth', $this->getColumnWidth());
         $writer->writeObjectValue('fill', $this->getFill());
         $writer->writeObjectValue('font', $this->getFont());
         $writer->writeStringValue('horizontalAlignment', $this->getHorizontalAlignment());
         $writer->writeObjectValue('protection', $this->getProtection());
-        $writer->writeFloatValue('rowHeight', $this->getRowHeight());
+        $writer->writeObjectValue('rowHeight', $this->getRowHeight());
         $writer->writeStringValue('verticalAlignment', $this->getVerticalAlignment());
         $writer->writeBooleanValue('wrapText', $this->getWrapText());
     }
@@ -181,9 +181,9 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the columnWidth property value. The width of all columns within the range. If the column widths aren't uniform, null will be returned.
-     * @param float|null $value Value to set for the columnWidth property.
+     * @param WorkbookRangeFormat_columnWidth|null $value Value to set for the columnWidth property.
     */
-    public function setColumnWidth(?float $value): void {
+    public function setColumnWidth(?WorkbookRangeFormat_columnWidth $value): void {
         $this->getBackingStore()->set('columnWidth', $value);
     }
 
@@ -221,9 +221,9 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the rowHeight property value. The height of all rows in the range. If the row heights aren't uniform null will be returned.
-     * @param float|null $value Value to set for the rowHeight property.
+     * @param WorkbookRangeFormat_rowHeight|null $value Value to set for the rowHeight property.
     */
-    public function setRowHeight(?float $value): void {
+    public function setRowHeight(?WorkbookRangeFormat_rowHeight $value): void {
         $this->getBackingStore()->set('rowHeight', $value);
     }
 

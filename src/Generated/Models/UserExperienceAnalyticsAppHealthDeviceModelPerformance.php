@@ -75,7 +75,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity impl
             'deviceModel' => fn(ParseNode $n) => $o->setDeviceModel($n->getStringValue()),
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(UserExperienceAnalyticsHealthState::class)),
             'meanTimeToFailureInMinutes' => fn(ParseNode $n) => $o->setMeanTimeToFailureInMinutes($n->getIntegerValue()),
-            'modelAppHealthScore' => fn(ParseNode $n) => $o->setModelAppHealthScore($n->getFloatValue()),
+            'modelAppHealthScore' => fn(ParseNode $n) => $o->setModelAppHealthScore($n->getObjectValue([UserExperienceAnalyticsAppHealthDeviceModelPerformance_modelAppHealthScore::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -105,11 +105,11 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity impl
 
     /**
      * Gets the modelAppHealthScore property value. The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsAppHealthDeviceModelPerformance_modelAppHealthScore|null
     */
-    public function getModelAppHealthScore(): ?float {
+    public function getModelAppHealthScore(): ?UserExperienceAnalyticsAppHealthDeviceModelPerformance_modelAppHealthScore {
         $val = $this->getBackingStore()->get('modelAppHealthScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsAppHealthDeviceModelPerformance_modelAppHealthScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'modelAppHealthScore'");
@@ -126,7 +126,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity impl
         $writer->writeStringValue('deviceModel', $this->getDeviceModel());
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
         $writer->writeIntegerValue('meanTimeToFailureInMinutes', $this->getMeanTimeToFailureInMinutes());
-        $writer->writeFloatValue('modelAppHealthScore', $this->getModelAppHealthScore());
+        $writer->writeObjectValue('modelAppHealthScore', $this->getModelAppHealthScore());
     }
 
     /**
@@ -171,9 +171,9 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity impl
 
     /**
      * Sets the modelAppHealthScore property value. The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the modelAppHealthScore property.
+     * @param UserExperienceAnalyticsAppHealthDeviceModelPerformance_modelAppHealthScore|null $value Value to set for the modelAppHealthScore property.
     */
-    public function setModelAppHealthScore(?float $value): void {
+    public function setModelAppHealthScore(?UserExperienceAnalyticsAppHealthDeviceModelPerformance_modelAppHealthScore $value): void {
         $this->getBackingStore()->set('modelAppHealthScore', $value);
     }
 

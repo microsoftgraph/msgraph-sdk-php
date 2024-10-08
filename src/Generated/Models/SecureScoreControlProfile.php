@@ -130,7 +130,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
             'deprecated' => fn(ParseNode $n) => $o->setDeprecated($n->getBooleanValue()),
             'implementationCost' => fn(ParseNode $n) => $o->setImplementationCost($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
-            'maxScore' => fn(ParseNode $n) => $o->setMaxScore($n->getFloatValue()),
+            'maxScore' => fn(ParseNode $n) => $o->setMaxScore($n->getObjectValue([SecureScoreControlProfile_maxScore::class, 'createFromDiscriminatorValue'])),
             'rank' => fn(ParseNode $n) => $o->setRank($n->getIntegerValue()),
             'remediation' => fn(ParseNode $n) => $o->setRemediation($n->getStringValue()),
             'remediationImpact' => fn(ParseNode $n) => $o->setRemediationImpact($n->getStringValue()),
@@ -176,11 +176,11 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Gets the maxScore property value. max attainable score for the control.
-     * @return float|null
+     * @return SecureScoreControlProfile_maxScore|null
     */
-    public function getMaxScore(): ?float {
+    public function getMaxScore(): ?SecureScoreControlProfile_maxScore {
         $val = $this->getBackingStore()->get('maxScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof SecureScoreControlProfile_maxScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'maxScore'");
@@ -311,7 +311,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
         $writer->writeBooleanValue('deprecated', $this->getDeprecated());
         $writer->writeStringValue('implementationCost', $this->getImplementationCost());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
-        $writer->writeFloatValue('maxScore', $this->getMaxScore());
+        $writer->writeObjectValue('maxScore', $this->getMaxScore());
         $writer->writeIntegerValue('rank', $this->getRank());
         $writer->writeStringValue('remediation', $this->getRemediation());
         $writer->writeStringValue('remediationImpact', $this->getRemediationImpact());
@@ -397,9 +397,9 @@ class SecureScoreControlProfile extends Entity implements Parsable
 
     /**
      * Sets the maxScore property value. max attainable score for the control.
-     * @param float|null $value Value to set for the maxScore property.
+     * @param SecureScoreControlProfile_maxScore|null $value Value to set for the maxScore property.
     */
-    public function setMaxScore(?float $value): void {
+    public function setMaxScore(?SecureScoreControlProfile_maxScore $value): void {
         $this->getBackingStore()->set('maxScore', $value);
     }
 

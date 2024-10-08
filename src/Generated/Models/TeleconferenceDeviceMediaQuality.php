@@ -71,11 +71,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Gets the averageInboundPacketLossRateInPercentage property value. The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return float|null
+     * @return TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage|null
     */
-    public function getAverageInboundPacketLossRateInPercentage(): ?float {
+    public function getAverageInboundPacketLossRateInPercentage(): ?TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage {
         $val = $this->getBackingStore()->get('averageInboundPacketLossRateInPercentage');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'averageInboundPacketLossRateInPercentage'");
@@ -107,11 +107,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Gets the averageOutboundPacketLossRateInPercentage property value. The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return float|null
+     * @return TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage|null
     */
-    public function getAverageOutboundPacketLossRateInPercentage(): ?float {
+    public function getAverageOutboundPacketLossRateInPercentage(): ?TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage {
         $val = $this->getBackingStore()->get('averageOutboundPacketLossRateInPercentage');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'averageOutboundPacketLossRateInPercentage'");
@@ -157,20 +157,20 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
         $o = $this;
         return  [
             'averageInboundJitter' => fn(ParseNode $n) => $o->setAverageInboundJitter($n->getDateIntervalValue()),
-            'averageInboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setAverageInboundPacketLossRateInPercentage($n->getFloatValue()),
+            'averageInboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setAverageInboundPacketLossRateInPercentage($n->getObjectValue([TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage::class, 'createFromDiscriminatorValue'])),
             'averageInboundRoundTripDelay' => fn(ParseNode $n) => $o->setAverageInboundRoundTripDelay($n->getDateIntervalValue()),
             'averageOutboundJitter' => fn(ParseNode $n) => $o->setAverageOutboundJitter($n->getDateIntervalValue()),
-            'averageOutboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setAverageOutboundPacketLossRateInPercentage($n->getFloatValue()),
+            'averageOutboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setAverageOutboundPacketLossRateInPercentage($n->getObjectValue([TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage::class, 'createFromDiscriminatorValue'])),
             'averageOutboundRoundTripDelay' => fn(ParseNode $n) => $o->setAverageOutboundRoundTripDelay($n->getDateIntervalValue()),
             'channelIndex' => fn(ParseNode $n) => $o->setChannelIndex($n->getIntegerValue()),
             'inboundPackets' => fn(ParseNode $n) => $o->setInboundPackets($n->getIntegerValue()),
             'localIPAddress' => fn(ParseNode $n) => $o->setLocalIPAddress($n->getStringValue()),
             'localPort' => fn(ParseNode $n) => $o->setLocalPort($n->getIntegerValue()),
             'maximumInboundJitter' => fn(ParseNode $n) => $o->setMaximumInboundJitter($n->getDateIntervalValue()),
-            'maximumInboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setMaximumInboundPacketLossRateInPercentage($n->getFloatValue()),
+            'maximumInboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setMaximumInboundPacketLossRateInPercentage($n->getObjectValue([TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage::class, 'createFromDiscriminatorValue'])),
             'maximumInboundRoundTripDelay' => fn(ParseNode $n) => $o->setMaximumInboundRoundTripDelay($n->getDateIntervalValue()),
             'maximumOutboundJitter' => fn(ParseNode $n) => $o->setMaximumOutboundJitter($n->getDateIntervalValue()),
-            'maximumOutboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setMaximumOutboundPacketLossRateInPercentage($n->getFloatValue()),
+            'maximumOutboundPacketLossRateInPercentage' => fn(ParseNode $n) => $o->setMaximumOutboundPacketLossRateInPercentage($n->getObjectValue([TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage::class, 'createFromDiscriminatorValue'])),
             'maximumOutboundRoundTripDelay' => fn(ParseNode $n) => $o->setMaximumOutboundRoundTripDelay($n->getDateIntervalValue()),
             'mediaDuration' => fn(ParseNode $n) => $o->setMediaDuration($n->getDateIntervalValue()),
             'networkLinkSpeedInBytes' => fn(ParseNode $n) => $o->setNetworkLinkSpeedInBytes($n->getIntegerValue()),
@@ -231,11 +231,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Gets the maximumInboundPacketLossRateInPercentage property value. The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return float|null
+     * @return TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage|null
     */
-    public function getMaximumInboundPacketLossRateInPercentage(): ?float {
+    public function getMaximumInboundPacketLossRateInPercentage(): ?TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage {
         $val = $this->getBackingStore()->get('maximumInboundPacketLossRateInPercentage');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumInboundPacketLossRateInPercentage'");
@@ -267,11 +267,11 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Gets the maximumOutboundPacketLossRateInPercentage property value. The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @return float|null
+     * @return TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage|null
     */
-    public function getMaximumOutboundPacketLossRateInPercentage(): ?float {
+    public function getMaximumOutboundPacketLossRateInPercentage(): ?TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage {
         $val = $this->getBackingStore()->get('maximumOutboundPacketLossRateInPercentage');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumOutboundPacketLossRateInPercentage'");
@@ -367,20 +367,20 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateIntervalValue('averageInboundJitter', $this->getAverageInboundJitter());
-        $writer->writeFloatValue('averageInboundPacketLossRateInPercentage', $this->getAverageInboundPacketLossRateInPercentage());
+        $writer->writeObjectValue('averageInboundPacketLossRateInPercentage', $this->getAverageInboundPacketLossRateInPercentage());
         $writer->writeDateIntervalValue('averageInboundRoundTripDelay', $this->getAverageInboundRoundTripDelay());
         $writer->writeDateIntervalValue('averageOutboundJitter', $this->getAverageOutboundJitter());
-        $writer->writeFloatValue('averageOutboundPacketLossRateInPercentage', $this->getAverageOutboundPacketLossRateInPercentage());
+        $writer->writeObjectValue('averageOutboundPacketLossRateInPercentage', $this->getAverageOutboundPacketLossRateInPercentage());
         $writer->writeDateIntervalValue('averageOutboundRoundTripDelay', $this->getAverageOutboundRoundTripDelay());
         $writer->writeIntegerValue('channelIndex', $this->getChannelIndex());
         $writer->writeIntegerValue('inboundPackets', $this->getInboundPackets());
         $writer->writeStringValue('localIPAddress', $this->getLocalIPAddress());
         $writer->writeIntegerValue('localPort', $this->getLocalPort());
         $writer->writeDateIntervalValue('maximumInboundJitter', $this->getMaximumInboundJitter());
-        $writer->writeFloatValue('maximumInboundPacketLossRateInPercentage', $this->getMaximumInboundPacketLossRateInPercentage());
+        $writer->writeObjectValue('maximumInboundPacketLossRateInPercentage', $this->getMaximumInboundPacketLossRateInPercentage());
         $writer->writeDateIntervalValue('maximumInboundRoundTripDelay', $this->getMaximumInboundRoundTripDelay());
         $writer->writeDateIntervalValue('maximumOutboundJitter', $this->getMaximumOutboundJitter());
-        $writer->writeFloatValue('maximumOutboundPacketLossRateInPercentage', $this->getMaximumOutboundPacketLossRateInPercentage());
+        $writer->writeObjectValue('maximumOutboundPacketLossRateInPercentage', $this->getMaximumOutboundPacketLossRateInPercentage());
         $writer->writeDateIntervalValue('maximumOutboundRoundTripDelay', $this->getMaximumOutboundRoundTripDelay());
         $writer->writeDateIntervalValue('mediaDuration', $this->getMediaDuration());
         $writer->writeIntegerValue('networkLinkSpeedInBytes', $this->getNetworkLinkSpeedInBytes());
@@ -409,9 +409,9 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageInboundPacketLossRateInPercentage property value. The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @param float|null $value Value to set for the averageInboundPacketLossRateInPercentage property.
+     * @param TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage|null $value Value to set for the averageInboundPacketLossRateInPercentage property.
     */
-    public function setAverageInboundPacketLossRateInPercentage(?float $value): void {
+    public function setAverageInboundPacketLossRateInPercentage(?TeleconferenceDeviceMediaQuality_averageInboundPacketLossRateInPercentage $value): void {
         $this->getBackingStore()->set('averageInboundPacketLossRateInPercentage', $value);
     }
 
@@ -433,9 +433,9 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageOutboundPacketLossRateInPercentage property value. The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @param float|null $value Value to set for the averageOutboundPacketLossRateInPercentage property.
+     * @param TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage|null $value Value to set for the averageOutboundPacketLossRateInPercentage property.
     */
-    public function setAverageOutboundPacketLossRateInPercentage(?float $value): void {
+    public function setAverageOutboundPacketLossRateInPercentage(?TeleconferenceDeviceMediaQuality_averageOutboundPacketLossRateInPercentage $value): void {
         $this->getBackingStore()->set('averageOutboundPacketLossRateInPercentage', $value);
     }
 
@@ -497,9 +497,9 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumInboundPacketLossRateInPercentage property value. The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @param float|null $value Value to set for the maximumInboundPacketLossRateInPercentage property.
+     * @param TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage|null $value Value to set for the maximumInboundPacketLossRateInPercentage property.
     */
-    public function setMaximumInboundPacketLossRateInPercentage(?float $value): void {
+    public function setMaximumInboundPacketLossRateInPercentage(?TeleconferenceDeviceMediaQuality_maximumInboundPacketLossRateInPercentage $value): void {
         $this->getBackingStore()->set('maximumInboundPacketLossRateInPercentage', $value);
     }
 
@@ -521,9 +521,9 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumOutboundPacketLossRateInPercentage property value. The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     * @param float|null $value Value to set for the maximumOutboundPacketLossRateInPercentage property.
+     * @param TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage|null $value Value to set for the maximumOutboundPacketLossRateInPercentage property.
     */
-    public function setMaximumOutboundPacketLossRateInPercentage(?float $value): void {
+    public function setMaximumOutboundPacketLossRateInPercentage(?TeleconferenceDeviceMediaQuality_maximumOutboundPacketLossRateInPercentage $value): void {
         $this->getBackingStore()->set('maximumOutboundPacketLossRateInPercentage', $value);
     }
 

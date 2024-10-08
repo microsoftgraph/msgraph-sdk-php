@@ -29,11 +29,11 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
 
     /**
      * Gets the appReliabilityScore property value. Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsModelScores_appReliabilityScore|null
     */
-    public function getAppReliabilityScore(): ?float {
+    public function getAppReliabilityScore(): ?UserExperienceAnalyticsModelScores_appReliabilityScore {
         $val = $this->getBackingStore()->get('appReliabilityScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsModelScores_appReliabilityScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'appReliabilityScore'");
@@ -41,11 +41,11 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
 
     /**
      * Gets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsModelScores_batteryHealthScore|null
     */
-    public function getBatteryHealthScore(): ?float {
+    public function getBatteryHealthScore(): ?UserExperienceAnalyticsModelScores_batteryHealthScore {
         $val = $this->getBackingStore()->get('batteryHealthScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsModelScores_batteryHealthScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'batteryHealthScore'");
@@ -53,11 +53,11 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
 
     /**
      * Gets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsModelScores_endpointAnalyticsScore|null
     */
-    public function getEndpointAnalyticsScore(): ?float {
+    public function getEndpointAnalyticsScore(): ?UserExperienceAnalyticsModelScores_endpointAnalyticsScore {
         $val = $this->getBackingStore()->get('endpointAnalyticsScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsModelScores_endpointAnalyticsScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'endpointAnalyticsScore'");
@@ -70,15 +70,15 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appReliabilityScore' => fn(ParseNode $n) => $o->setAppReliabilityScore($n->getFloatValue()),
-            'batteryHealthScore' => fn(ParseNode $n) => $o->setBatteryHealthScore($n->getFloatValue()),
-            'endpointAnalyticsScore' => fn(ParseNode $n) => $o->setEndpointAnalyticsScore($n->getFloatValue()),
+            'appReliabilityScore' => fn(ParseNode $n) => $o->setAppReliabilityScore($n->getObjectValue([UserExperienceAnalyticsModelScores_appReliabilityScore::class, 'createFromDiscriminatorValue'])),
+            'batteryHealthScore' => fn(ParseNode $n) => $o->setBatteryHealthScore($n->getObjectValue([UserExperienceAnalyticsModelScores_batteryHealthScore::class, 'createFromDiscriminatorValue'])),
+            'endpointAnalyticsScore' => fn(ParseNode $n) => $o->setEndpointAnalyticsScore($n->getObjectValue([UserExperienceAnalyticsModelScores_endpointAnalyticsScore::class, 'createFromDiscriminatorValue'])),
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(UserExperienceAnalyticsHealthState::class)),
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'modelDeviceCount' => fn(ParseNode $n) => $o->setModelDeviceCount($n->getIntegerValue()),
-            'startupPerformanceScore' => fn(ParseNode $n) => $o->setStartupPerformanceScore($n->getFloatValue()),
-            'workFromAnywhereScore' => fn(ParseNode $n) => $o->setWorkFromAnywhereScore($n->getFloatValue()),
+            'startupPerformanceScore' => fn(ParseNode $n) => $o->setStartupPerformanceScore($n->getObjectValue([UserExperienceAnalyticsModelScores_startupPerformanceScore::class, 'createFromDiscriminatorValue'])),
+            'workFromAnywhereScore' => fn(ParseNode $n) => $o->setWorkFromAnywhereScore($n->getObjectValue([UserExperienceAnalyticsModelScores_workFromAnywhereScore::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -132,11 +132,11 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
 
     /**
      * Gets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsModelScores_startupPerformanceScore|null
     */
-    public function getStartupPerformanceScore(): ?float {
+    public function getStartupPerformanceScore(): ?UserExperienceAnalyticsModelScores_startupPerformanceScore {
         $val = $this->getBackingStore()->get('startupPerformanceScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsModelScores_startupPerformanceScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'startupPerformanceScore'");
@@ -144,11 +144,11 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
 
     /**
      * Gets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsModelScores_workFromAnywhereScore|null
     */
-    public function getWorkFromAnywhereScore(): ?float {
+    public function getWorkFromAnywhereScore(): ?UserExperienceAnalyticsModelScores_workFromAnywhereScore {
         $val = $this->getBackingStore()->get('workFromAnywhereScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsModelScores_workFromAnywhereScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'workFromAnywhereScore'");
@@ -160,38 +160,38 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('appReliabilityScore', $this->getAppReliabilityScore());
-        $writer->writeFloatValue('batteryHealthScore', $this->getBatteryHealthScore());
-        $writer->writeFloatValue('endpointAnalyticsScore', $this->getEndpointAnalyticsScore());
+        $writer->writeObjectValue('appReliabilityScore', $this->getAppReliabilityScore());
+        $writer->writeObjectValue('batteryHealthScore', $this->getBatteryHealthScore());
+        $writer->writeObjectValue('endpointAnalyticsScore', $this->getEndpointAnalyticsScore());
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
         $writer->writeIntegerValue('modelDeviceCount', $this->getModelDeviceCount());
-        $writer->writeFloatValue('startupPerformanceScore', $this->getStartupPerformanceScore());
-        $writer->writeFloatValue('workFromAnywhereScore', $this->getWorkFromAnywhereScore());
+        $writer->writeObjectValue('startupPerformanceScore', $this->getStartupPerformanceScore());
+        $writer->writeObjectValue('workFromAnywhereScore', $this->getWorkFromAnywhereScore());
     }
 
     /**
      * Sets the appReliabilityScore property value. Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the appReliabilityScore property.
+     * @param UserExperienceAnalyticsModelScores_appReliabilityScore|null $value Value to set for the appReliabilityScore property.
     */
-    public function setAppReliabilityScore(?float $value): void {
+    public function setAppReliabilityScore(?UserExperienceAnalyticsModelScores_appReliabilityScore $value): void {
         $this->getBackingStore()->set('appReliabilityScore', $value);
     }
 
     /**
      * Sets the batteryHealthScore property value. Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the batteryHealthScore property.
+     * @param UserExperienceAnalyticsModelScores_batteryHealthScore|null $value Value to set for the batteryHealthScore property.
     */
-    public function setBatteryHealthScore(?float $value): void {
+    public function setBatteryHealthScore(?UserExperienceAnalyticsModelScores_batteryHealthScore $value): void {
         $this->getBackingStore()->set('batteryHealthScore', $value);
     }
 
     /**
      * Sets the endpointAnalyticsScore property value. Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the endpointAnalyticsScore property.
+     * @param UserExperienceAnalyticsModelScores_endpointAnalyticsScore|null $value Value to set for the endpointAnalyticsScore property.
     */
-    public function setEndpointAnalyticsScore(?float $value): void {
+    public function setEndpointAnalyticsScore(?UserExperienceAnalyticsModelScores_endpointAnalyticsScore $value): void {
         $this->getBackingStore()->set('endpointAnalyticsScore', $value);
     }
 
@@ -229,17 +229,17 @@ class UserExperienceAnalyticsModelScores extends Entity implements Parsable
 
     /**
      * Sets the startupPerformanceScore property value. Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the startupPerformanceScore property.
+     * @param UserExperienceAnalyticsModelScores_startupPerformanceScore|null $value Value to set for the startupPerformanceScore property.
     */
-    public function setStartupPerformanceScore(?float $value): void {
+    public function setStartupPerformanceScore(?UserExperienceAnalyticsModelScores_startupPerformanceScore $value): void {
         $this->getBackingStore()->set('startupPerformanceScore', $value);
     }
 
     /**
      * Sets the workFromAnywhereScore property value. Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the workFromAnywhereScore property.
+     * @param UserExperienceAnalyticsModelScores_workFromAnywhereScore|null $value Value to set for the workFromAnywhereScore property.
     */
-    public function setWorkFromAnywhereScore(?float $value): void {
+    public function setWorkFromAnywhereScore(?UserExperienceAnalyticsModelScores_workFromAnywhereScore $value): void {
         $this->getBackingStore()->set('workFromAnywhereScore', $value);
     }
 

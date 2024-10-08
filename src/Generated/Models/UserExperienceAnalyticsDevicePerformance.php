@@ -29,11 +29,11 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Gets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
-     * @return float|null
+     * @return UserExperienceAnalyticsDevicePerformance_averageBlueScreens|null
     */
-    public function getAverageBlueScreens(): ?float {
+    public function getAverageBlueScreens(): ?UserExperienceAnalyticsDevicePerformance_averageBlueScreens {
         $val = $this->getBackingStore()->get('averageBlueScreens');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsDevicePerformance_averageBlueScreens) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'averageBlueScreens'");
@@ -41,11 +41,11 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Gets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
-     * @return float|null
+     * @return UserExperienceAnalyticsDevicePerformance_averageRestarts|null
     */
-    public function getAverageRestarts(): ?float {
+    public function getAverageRestarts(): ?UserExperienceAnalyticsDevicePerformance_averageRestarts {
         $val = $this->getBackingStore()->get('averageRestarts');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsDevicePerformance_averageRestarts) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'averageRestarts'");
@@ -142,8 +142,8 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'averageBlueScreens' => fn(ParseNode $n) => $o->setAverageBlueScreens($n->getFloatValue()),
-            'averageRestarts' => fn(ParseNode $n) => $o->setAverageRestarts($n->getFloatValue()),
+            'averageBlueScreens' => fn(ParseNode $n) => $o->setAverageBlueScreens($n->getObjectValue([UserExperienceAnalyticsDevicePerformance_averageBlueScreens::class, 'createFromDiscriminatorValue'])),
+            'averageRestarts' => fn(ParseNode $n) => $o->setAverageRestarts($n->getObjectValue([UserExperienceAnalyticsDevicePerformance_averageRestarts::class, 'createFromDiscriminatorValue'])),
             'blueScreenCount' => fn(ParseNode $n) => $o->setBlueScreenCount($n->getIntegerValue()),
             'bootScore' => fn(ParseNode $n) => $o->setBootScore($n->getIntegerValue()),
             'coreBootTimeInMs' => fn(ParseNode $n) => $o->setCoreBootTimeInMs($n->getIntegerValue()),
@@ -157,11 +157,11 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
             'loginScore' => fn(ParseNode $n) => $o->setLoginScore($n->getIntegerValue()),
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
-            'modelStartupPerformanceScore' => fn(ParseNode $n) => $o->setModelStartupPerformanceScore($n->getFloatValue()),
+            'modelStartupPerformanceScore' => fn(ParseNode $n) => $o->setModelStartupPerformanceScore($n->getObjectValue([UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore::class, 'createFromDiscriminatorValue'])),
             'operatingSystemVersion' => fn(ParseNode $n) => $o->setOperatingSystemVersion($n->getStringValue()),
             'responsiveDesktopTimeInMs' => fn(ParseNode $n) => $o->setResponsiveDesktopTimeInMs($n->getIntegerValue()),
             'restartCount' => fn(ParseNode $n) => $o->setRestartCount($n->getIntegerValue()),
-            'startupPerformanceScore' => fn(ParseNode $n) => $o->setStartupPerformanceScore($n->getFloatValue()),
+            'startupPerformanceScore' => fn(ParseNode $n) => $o->setStartupPerformanceScore($n->getObjectValue([UserExperienceAnalyticsDevicePerformance_startupPerformanceScore::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -239,11 +239,11 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Gets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore|null
     */
-    public function getModelStartupPerformanceScore(): ?float {
+    public function getModelStartupPerformanceScore(): ?UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore {
         $val = $this->getBackingStore()->get('modelStartupPerformanceScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'modelStartupPerformanceScore'");
@@ -287,11 +287,11 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Gets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsDevicePerformance_startupPerformanceScore|null
     */
-    public function getStartupPerformanceScore(): ?float {
+    public function getStartupPerformanceScore(): ?UserExperienceAnalyticsDevicePerformance_startupPerformanceScore {
         $val = $this->getBackingStore()->get('startupPerformanceScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsDevicePerformance_startupPerformanceScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'startupPerformanceScore'");
@@ -303,8 +303,8 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('averageBlueScreens', $this->getAverageBlueScreens());
-        $writer->writeFloatValue('averageRestarts', $this->getAverageRestarts());
+        $writer->writeObjectValue('averageBlueScreens', $this->getAverageBlueScreens());
+        $writer->writeObjectValue('averageRestarts', $this->getAverageRestarts());
         $writer->writeIntegerValue('blueScreenCount', $this->getBlueScreenCount());
         $writer->writeIntegerValue('bootScore', $this->getBootScore());
         $writer->writeIntegerValue('coreBootTimeInMs', $this->getCoreBootTimeInMs());
@@ -318,26 +318,26 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
         $writer->writeIntegerValue('loginScore', $this->getLoginScore());
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
-        $writer->writeFloatValue('modelStartupPerformanceScore', $this->getModelStartupPerformanceScore());
+        $writer->writeObjectValue('modelStartupPerformanceScore', $this->getModelStartupPerformanceScore());
         $writer->writeStringValue('operatingSystemVersion', $this->getOperatingSystemVersion());
         $writer->writeIntegerValue('responsiveDesktopTimeInMs', $this->getResponsiveDesktopTimeInMs());
         $writer->writeIntegerValue('restartCount', $this->getRestartCount());
-        $writer->writeFloatValue('startupPerformanceScore', $this->getStartupPerformanceScore());
+        $writer->writeObjectValue('startupPerformanceScore', $this->getStartupPerformanceScore());
     }
 
     /**
      * Sets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
-     * @param float|null $value Value to set for the averageBlueScreens property.
+     * @param UserExperienceAnalyticsDevicePerformance_averageBlueScreens|null $value Value to set for the averageBlueScreens property.
     */
-    public function setAverageBlueScreens(?float $value): void {
+    public function setAverageBlueScreens(?UserExperienceAnalyticsDevicePerformance_averageBlueScreens $value): void {
         $this->getBackingStore()->set('averageBlueScreens', $value);
     }
 
     /**
      * Sets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
-     * @param float|null $value Value to set for the averageRestarts property.
+     * @param UserExperienceAnalyticsDevicePerformance_averageRestarts|null $value Value to set for the averageRestarts property.
     */
-    public function setAverageRestarts(?float $value): void {
+    public function setAverageRestarts(?UserExperienceAnalyticsDevicePerformance_averageRestarts $value): void {
         $this->getBackingStore()->set('averageRestarts', $value);
     }
 
@@ -447,9 +447,9 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the modelStartupPerformanceScore property.
+     * @param UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore|null $value Value to set for the modelStartupPerformanceScore property.
     */
-    public function setModelStartupPerformanceScore(?float $value): void {
+    public function setModelStartupPerformanceScore(?UserExperienceAnalyticsDevicePerformance_modelStartupPerformanceScore $value): void {
         $this->getBackingStore()->set('modelStartupPerformanceScore', $value);
     }
 
@@ -479,9 +479,9 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the startupPerformanceScore property.
+     * @param UserExperienceAnalyticsDevicePerformance_startupPerformanceScore|null $value Value to set for the startupPerformanceScore property.
     */
-    public function setStartupPerformanceScore(?float $value): void {
+    public function setStartupPerformanceScore(?UserExperienceAnalyticsDevicePerformance_startupPerformanceScore $value): void {
         $this->getBackingStore()->set('startupPerformanceScore', $value);
     }
 

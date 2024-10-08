@@ -106,7 +106,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'qualityId' => fn(ParseNode $n) => $o->setQualityId($n->getStringValue()),
-            'weight' => fn(ParseNode $n) => $o->setWeight($n->getFloatValue()),
+            'weight' => fn(ParseNode $n) => $o->setWeight($n->getObjectValue([RubricQuality_weight::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -136,11 +136,11 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
-     * @return float|null
+     * @return RubricQuality_weight|null
     */
-    public function getWeight(): ?float {
+    public function getWeight(): ?RubricQuality_weight {
         $val = $this->getBackingStore()->get('weight');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof RubricQuality_weight) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'weight'");
@@ -156,7 +156,7 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('qualityId', $this->getQualityId());
-        $writer->writeFloatValue('weight', $this->getWeight());
+        $writer->writeObjectValue('weight', $this->getWeight());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -218,9 +218,9 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
-     * @param float|null $value Value to set for the weight property.
+     * @param RubricQuality_weight|null $value Value to set for the weight property.
     */
-    public function setWeight(?float $value): void {
+    public function setWeight(?RubricQuality_weight $value): void {
         $this->getBackingStore()->set('weight', $value);
     }
 

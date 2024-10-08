@@ -204,7 +204,7 @@ class BookingAppointment extends Entity implements Parsable
             'optOutOfCustomerEmail' => fn(ParseNode $n) => $o->setOptOutOfCustomerEmail($n->getBooleanValue()),
             'postBuffer' => fn(ParseNode $n) => $o->setPostBuffer($n->getDateIntervalValue()),
             'preBuffer' => fn(ParseNode $n) => $o->setPreBuffer($n->getDateIntervalValue()),
-            'price' => fn(ParseNode $n) => $o->setPrice($n->getFloatValue()),
+            'price' => fn(ParseNode $n) => $o->setPrice($n->getObjectValue([BookingAppointment_price::class, 'createFromDiscriminatorValue'])),
             'priceType' => fn(ParseNode $n) => $o->setPriceType($n->getEnumValue(BookingPriceType::class)),
             'reminders' => fn(ParseNode $n) => $o->setReminders($n->getCollectionOfObjectValues([BookingReminder::class, 'createFromDiscriminatorValue'])),
             'selfServiceAppointmentId' => fn(ParseNode $n) => $o->setSelfServiceAppointmentId($n->getStringValue()),
@@ -335,11 +335,11 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Gets the price property value. The regular price for an appointment for the specified bookingService.
-     * @return float|null
+     * @return BookingAppointment_price|null
     */
-    public function getPrice(): ?float {
+    public function getPrice(): ?BookingAppointment_price {
         $val = $this->getBackingStore()->get('price');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof BookingAppointment_price) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'price'");
@@ -494,7 +494,7 @@ class BookingAppointment extends Entity implements Parsable
         $writer->writeBooleanValue('optOutOfCustomerEmail', $this->getOptOutOfCustomerEmail());
         $writer->writeDateIntervalValue('postBuffer', $this->getPostBuffer());
         $writer->writeDateIntervalValue('preBuffer', $this->getPreBuffer());
-        $writer->writeFloatValue('price', $this->getPrice());
+        $writer->writeObjectValue('price', $this->getPrice());
         $writer->writeEnumValue('priceType', $this->getPriceType());
         $writer->writeCollectionOfObjectValues('reminders', $this->getReminders());
         $writer->writeStringValue('selfServiceAppointmentId', $this->getSelfServiceAppointmentId());
@@ -677,9 +677,9 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the price property value. The regular price for an appointment for the specified bookingService.
-     * @param float|null $value Value to set for the price property.
+     * @param BookingAppointment_price|null $value Value to set for the price property.
     */
-    public function setPrice(?float $value): void {
+    public function setPrice(?BookingAppointment_price $value): void {
         $this->getBackingStore()->set('price', $value);
     }
 

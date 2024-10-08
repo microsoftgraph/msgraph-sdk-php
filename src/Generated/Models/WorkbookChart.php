@@ -59,14 +59,14 @@ class WorkbookChart extends Entity implements Parsable
             'axes' => fn(ParseNode $n) => $o->setAxes($n->getObjectValue([WorkbookChartAxes::class, 'createFromDiscriminatorValue'])),
             'dataLabels' => fn(ParseNode $n) => $o->setDataLabels($n->getObjectValue([WorkbookChartDataLabels::class, 'createFromDiscriminatorValue'])),
             'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartAreaFormat::class, 'createFromDiscriminatorValue'])),
-            'height' => fn(ParseNode $n) => $o->setHeight($n->getFloatValue()),
-            'left' => fn(ParseNode $n) => $o->setLeft($n->getFloatValue()),
+            'height' => fn(ParseNode $n) => $o->setHeight($n->getObjectValue([WorkbookChart_height::class, 'createFromDiscriminatorValue'])),
+            'left' => fn(ParseNode $n) => $o->setLeft($n->getObjectValue([WorkbookChart_left::class, 'createFromDiscriminatorValue'])),
             'legend' => fn(ParseNode $n) => $o->setLegend($n->getObjectValue([WorkbookChartLegend::class, 'createFromDiscriminatorValue'])),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             'series' => fn(ParseNode $n) => $o->setSeries($n->getCollectionOfObjectValues([WorkbookChartSeries::class, 'createFromDiscriminatorValue'])),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getObjectValue([WorkbookChartTitle::class, 'createFromDiscriminatorValue'])),
-            'top' => fn(ParseNode $n) => $o->setTop($n->getFloatValue()),
-            'width' => fn(ParseNode $n) => $o->setWidth($n->getFloatValue()),
+            'top' => fn(ParseNode $n) => $o->setTop($n->getObjectValue([WorkbookChart_top::class, 'createFromDiscriminatorValue'])),
+            'width' => fn(ParseNode $n) => $o->setWidth($n->getObjectValue([WorkbookChart_width::class, 'createFromDiscriminatorValue'])),
             'worksheet' => fn(ParseNode $n) => $o->setWorksheet($n->getObjectValue([WorkbookWorksheet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -85,11 +85,11 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Gets the height property value. Represents the height, in points, of the chart object.
-     * @return float|null
+     * @return WorkbookChart_height|null
     */
-    public function getHeight(): ?float {
+    public function getHeight(): ?WorkbookChart_height {
         $val = $this->getBackingStore()->get('height');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookChart_height) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'height'");
@@ -97,11 +97,11 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Gets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
-     * @return float|null
+     * @return WorkbookChart_left|null
     */
-    public function getLeft(): ?float {
+    public function getLeft(): ?WorkbookChart_left {
         $val = $this->getBackingStore()->get('left');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookChart_left) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'left'");
@@ -159,11 +159,11 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Gets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
-     * @return float|null
+     * @return WorkbookChart_top|null
     */
-    public function getTop(): ?float {
+    public function getTop(): ?WorkbookChart_top {
         $val = $this->getBackingStore()->get('top');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookChart_top) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'top'");
@@ -171,11 +171,11 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Gets the width property value. Represents the width, in points, of the chart object.
-     * @return float|null
+     * @return WorkbookChart_width|null
     */
-    public function getWidth(): ?float {
+    public function getWidth(): ?WorkbookChart_width {
         $val = $this->getBackingStore()->get('width');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WorkbookChart_width) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'width'");
@@ -202,14 +202,14 @@ class WorkbookChart extends Entity implements Parsable
         $writer->writeObjectValue('axes', $this->getAxes());
         $writer->writeObjectValue('dataLabels', $this->getDataLabels());
         $writer->writeObjectValue('format', $this->getFormat());
-        $writer->writeFloatValue('height', $this->getHeight());
-        $writer->writeFloatValue('left', $this->getLeft());
+        $writer->writeObjectValue('height', $this->getHeight());
+        $writer->writeObjectValue('left', $this->getLeft());
         $writer->writeObjectValue('legend', $this->getLegend());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeCollectionOfObjectValues('series', $this->getSeries());
         $writer->writeObjectValue('title', $this->getTitle());
-        $writer->writeFloatValue('top', $this->getTop());
-        $writer->writeFloatValue('width', $this->getWidth());
+        $writer->writeObjectValue('top', $this->getTop());
+        $writer->writeObjectValue('width', $this->getWidth());
         $writer->writeObjectValue('worksheet', $this->getWorksheet());
     }
 
@@ -239,17 +239,17 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the height property value. Represents the height, in points, of the chart object.
-     * @param float|null $value Value to set for the height property.
+     * @param WorkbookChart_height|null $value Value to set for the height property.
     */
-    public function setHeight(?float $value): void {
+    public function setHeight(?WorkbookChart_height $value): void {
         $this->getBackingStore()->set('height', $value);
     }
 
     /**
      * Sets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
-     * @param float|null $value Value to set for the left property.
+     * @param WorkbookChart_left|null $value Value to set for the left property.
     */
-    public function setLeft(?float $value): void {
+    public function setLeft(?WorkbookChart_left $value): void {
         $this->getBackingStore()->set('left', $value);
     }
 
@@ -287,17 +287,17 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
-     * @param float|null $value Value to set for the top property.
+     * @param WorkbookChart_top|null $value Value to set for the top property.
     */
-    public function setTop(?float $value): void {
+    public function setTop(?WorkbookChart_top $value): void {
         $this->getBackingStore()->set('top', $value);
     }
 
     /**
      * Sets the width property value. Represents the width, in points, of the chart object.
-     * @param float|null $value Value to set for the width property.
+     * @param WorkbookChart_width|null $value Value to set for the width property.
     */
-    public function setWidth(?float $value): void {
+    public function setWidth(?WorkbookChart_width $value): void {
         $this->getBackingStore()->set('width', $value);
     }
 

@@ -57,11 +57,11 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the columnId property value. Indicates the identifier of the column where the web part is located.
-     * @return float|null
+     * @return WebPartPosition_columnId|null
     */
-    public function getColumnId(): ?float {
+    public function getColumnId(): ?WebPartPosition_columnId {
         $val = $this->getBackingStore()->get('columnId');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WebPartPosition_columnId) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'columnId'");
@@ -74,21 +74,21 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'columnId' => fn(ParseNode $n) => $o->setColumnId($n->getFloatValue()),
-            'horizontalSectionId' => fn(ParseNode $n) => $o->setHorizontalSectionId($n->getFloatValue()),
+            'columnId' => fn(ParseNode $n) => $o->setColumnId($n->getObjectValue([WebPartPosition_columnId::class, 'createFromDiscriminatorValue'])),
+            'horizontalSectionId' => fn(ParseNode $n) => $o->setHorizontalSectionId($n->getObjectValue([WebPartPosition_horizontalSectionId::class, 'createFromDiscriminatorValue'])),
             'isInVerticalSection' => fn(ParseNode $n) => $o->setIsInVerticalSection($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'webPartIndex' => fn(ParseNode $n) => $o->setWebPartIndex($n->getFloatValue()),
+            'webPartIndex' => fn(ParseNode $n) => $o->setWebPartIndex($n->getObjectValue([WebPartPosition_webPartIndex::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
     /**
      * Gets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
-     * @return float|null
+     * @return WebPartPosition_horizontalSectionId|null
     */
-    public function getHorizontalSectionId(): ?float {
+    public function getHorizontalSectionId(): ?WebPartPosition_horizontalSectionId {
         $val = $this->getBackingStore()->get('horizontalSectionId');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WebPartPosition_horizontalSectionId) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'horizontalSectionId'");
@@ -120,11 +120,11 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
-     * @return float|null
+     * @return WebPartPosition_webPartIndex|null
     */
-    public function getWebPartIndex(): ?float {
+    public function getWebPartIndex(): ?WebPartPosition_webPartIndex {
         $val = $this->getBackingStore()->get('webPartIndex');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof WebPartPosition_webPartIndex) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'webPartIndex'");
@@ -135,11 +135,11 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('columnId', $this->getColumnId());
-        $writer->writeFloatValue('horizontalSectionId', $this->getHorizontalSectionId());
+        $writer->writeObjectValue('columnId', $this->getColumnId());
+        $writer->writeObjectValue('horizontalSectionId', $this->getHorizontalSectionId());
         $writer->writeBooleanValue('isInVerticalSection', $this->getIsInVerticalSection());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeFloatValue('webPartIndex', $this->getWebPartIndex());
+        $writer->writeObjectValue('webPartIndex', $this->getWebPartIndex());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -161,17 +161,17 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the columnId property value. Indicates the identifier of the column where the web part is located.
-     * @param float|null $value Value to set for the columnId property.
+     * @param WebPartPosition_columnId|null $value Value to set for the columnId property.
     */
-    public function setColumnId(?float $value): void {
+    public function setColumnId(?WebPartPosition_columnId $value): void {
         $this->getBackingStore()->set('columnId', $value);
     }
 
     /**
      * Sets the horizontalSectionId property value. Indicates the horizontal section where the web part is located.
-     * @param float|null $value Value to set for the horizontalSectionId property.
+     * @param WebPartPosition_horizontalSectionId|null $value Value to set for the horizontalSectionId property.
     */
-    public function setHorizontalSectionId(?float $value): void {
+    public function setHorizontalSectionId(?WebPartPosition_horizontalSectionId $value): void {
         $this->getBackingStore()->set('horizontalSectionId', $value);
     }
 
@@ -193,9 +193,9 @@ class WebPartPosition implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the webPartIndex property value. Index of the current web part. Represents the order of the web part in this column or section.
-     * @param float|null $value Value to set for the webPartIndex property.
+     * @param WebPartPosition_webPartIndex|null $value Value to set for the webPartIndex property.
     */
-    public function setWebPartIndex(?float $value): void {
+    public function setWebPartIndex(?WebPartPosition_webPartIndex $value): void {
         $this->getBackingStore()->set('webPartIndex', $value);
     }
 

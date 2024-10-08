@@ -50,7 +50,7 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
             'meanTimeToFailureInMinutes' => fn(ParseNode $n) => $o->setMeanTimeToFailureInMinutes($n->getIntegerValue()),
             'osBuildNumber' => fn(ParseNode $n) => $o->setOsBuildNumber($n->getStringValue()),
             'osVersion' => fn(ParseNode $n) => $o->setOsVersion($n->getStringValue()),
-            'osVersionAppHealthScore' => fn(ParseNode $n) => $o->setOsVersionAppHealthScore($n->getFloatValue()),
+            'osVersionAppHealthScore' => fn(ParseNode $n) => $o->setOsVersionAppHealthScore($n->getObjectValue([UserExperienceAnalyticsAppHealthOSVersionPerformance_osVersionAppHealthScore::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -92,11 +92,11 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
 
     /**
      * Gets the osVersionAppHealthScore property value. The application health score of the OS version. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsAppHealthOSVersionPerformance_osVersionAppHealthScore|null
     */
-    public function getOsVersionAppHealthScore(): ?float {
+    public function getOsVersionAppHealthScore(): ?UserExperienceAnalyticsAppHealthOSVersionPerformance_osVersionAppHealthScore {
         $val = $this->getBackingStore()->get('osVersionAppHealthScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsAppHealthOSVersionPerformance_osVersionAppHealthScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'osVersionAppHealthScore'");
@@ -112,7 +112,7 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
         $writer->writeIntegerValue('meanTimeToFailureInMinutes', $this->getMeanTimeToFailureInMinutes());
         $writer->writeStringValue('osBuildNumber', $this->getOsBuildNumber());
         $writer->writeStringValue('osVersion', $this->getOsVersion());
-        $writer->writeFloatValue('osVersionAppHealthScore', $this->getOsVersionAppHealthScore());
+        $writer->writeObjectValue('osVersionAppHealthScore', $this->getOsVersionAppHealthScore());
     }
 
     /**
@@ -149,9 +149,9 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implem
 
     /**
      * Sets the osVersionAppHealthScore property value. The application health score of the OS version. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the osVersionAppHealthScore property.
+     * @param UserExperienceAnalyticsAppHealthOSVersionPerformance_osVersionAppHealthScore|null $value Value to set for the osVersionAppHealthScore property.
     */
-    public function setOsVersionAppHealthScore(?float $value): void {
+    public function setOsVersionAppHealthScore(?UserExperienceAnalyticsAppHealthOSVersionPerformance_osVersionAppHealthScore $value): void {
         $this->getBackingStore()->set('osVersionAppHealthScore', $value);
     }
 

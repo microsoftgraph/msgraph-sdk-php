@@ -140,7 +140,7 @@ class Payload extends Entity implements Parsable
                 $this->setPayloadTags($val);
             },
             'platform' => fn(ParseNode $n) => $o->setPlatform($n->getEnumValue(PayloadDeliveryPlatform::class)),
-            'predictedCompromiseRate' => fn(ParseNode $n) => $o->setPredictedCompromiseRate($n->getFloatValue()),
+            'predictedCompromiseRate' => fn(ParseNode $n) => $o->setPredictedCompromiseRate($n->getObjectValue([Payload_predictedCompromiseRate::class, 'createFromDiscriminatorValue'])),
             'simulationAttackType' => fn(ParseNode $n) => $o->setSimulationAttackType($n->getEnumValue(SimulationAttackType::class)),
             'source' => fn(ParseNode $n) => $o->setSource($n->getEnumValue(SimulationContentSource::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(SimulationContentStatus::class)),
@@ -261,11 +261,11 @@ class Payload extends Entity implements Parsable
 
     /**
      * Gets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
-     * @return float|null
+     * @return Payload_predictedCompromiseRate|null
     */
-    public function getPredictedCompromiseRate(): ?float {
+    public function getPredictedCompromiseRate(): ?Payload_predictedCompromiseRate {
         $val = $this->getBackingStore()->get('predictedCompromiseRate');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Payload_predictedCompromiseRate) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'predictedCompromiseRate'");
@@ -353,7 +353,7 @@ class Payload extends Entity implements Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeCollectionOfPrimitiveValues('payloadTags', $this->getPayloadTags());
         $writer->writeEnumValue('platform', $this->getPlatform());
-        $writer->writeFloatValue('predictedCompromiseRate', $this->getPredictedCompromiseRate());
+        $writer->writeObjectValue('predictedCompromiseRate', $this->getPredictedCompromiseRate());
         $writer->writeEnumValue('simulationAttackType', $this->getSimulationAttackType());
         $writer->writeEnumValue('source', $this->getSource());
         $writer->writeEnumValue('status', $this->getStatus());
@@ -491,9 +491,9 @@ class Payload extends Entity implements Parsable
 
     /**
      * Sets the predictedCompromiseRate property value. Predicted probability for a payload to phish a targeted user.
-     * @param float|null $value Value to set for the predictedCompromiseRate property.
+     * @param Payload_predictedCompromiseRate|null $value Value to set for the predictedCompromiseRate property.
     */
-    public function setPredictedCompromiseRate(?float $value): void {
+    public function setPredictedCompromiseRate(?Payload_predictedCompromiseRate $value): void {
         $this->getBackingStore()->set('predictedCompromiseRate', $value);
     }
 

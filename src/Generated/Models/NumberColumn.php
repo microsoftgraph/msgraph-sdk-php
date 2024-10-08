@@ -88,19 +88,19 @@ class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'decimalPlaces' => fn(ParseNode $n) => $o->setDecimalPlaces($n->getStringValue()),
             'displayAs' => fn(ParseNode $n) => $o->setDisplayAs($n->getStringValue()),
-            'maximum' => fn(ParseNode $n) => $o->setMaximum($n->getFloatValue()),
-            'minimum' => fn(ParseNode $n) => $o->setMinimum($n->getFloatValue()),
+            'maximum' => fn(ParseNode $n) => $o->setMaximum($n->getObjectValue([NumberColumn_maximum::class, 'createFromDiscriminatorValue'])),
+            'minimum' => fn(ParseNode $n) => $o->setMinimum($n->getObjectValue([NumberColumn_minimum::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the maximum property value. The maximum permitted value.
-     * @return float|null
+     * @return NumberColumn_maximum|null
     */
-    public function getMaximum(): ?float {
+    public function getMaximum(): ?NumberColumn_maximum {
         $val = $this->getBackingStore()->get('maximum');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof NumberColumn_maximum) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'maximum'");
@@ -108,11 +108,11 @@ class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the minimum property value. The minimum permitted value.
-     * @return float|null
+     * @return NumberColumn_minimum|null
     */
-    public function getMinimum(): ?float {
+    public function getMinimum(): ?NumberColumn_minimum {
         $val = $this->getBackingStore()->get('minimum');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof NumberColumn_minimum) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'minimum'");
@@ -137,8 +137,8 @@ class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('decimalPlaces', $this->getDecimalPlaces());
         $writer->writeStringValue('displayAs', $this->getDisplayAs());
-        $writer->writeFloatValue('maximum', $this->getMaximum());
-        $writer->writeFloatValue('minimum', $this->getMinimum());
+        $writer->writeObjectValue('maximum', $this->getMaximum());
+        $writer->writeObjectValue('minimum', $this->getMinimum());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -177,17 +177,17 @@ class NumberColumn implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the maximum property value. The maximum permitted value.
-     * @param float|null $value Value to set for the maximum property.
+     * @param NumberColumn_maximum|null $value Value to set for the maximum property.
     */
-    public function setMaximum(?float $value): void {
+    public function setMaximum(?NumberColumn_maximum $value): void {
         $this->getBackingStore()->set('maximum', $value);
     }
 
     /**
      * Sets the minimum property value. The minimum permitted value.
-     * @param float|null $value Value to set for the minimum property.
+     * @param NumberColumn_minimum|null $value Value to set for the minimum property.
     */
-    public function setMinimum(?float $value): void {
+    public function setMinimum(?NumberColumn_minimum $value): void {
         $this->getBackingStore()->set('minimum', $value);
     }
 

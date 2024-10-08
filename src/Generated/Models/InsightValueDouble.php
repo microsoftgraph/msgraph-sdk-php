@@ -35,17 +35,17 @@ class InsightValueDouble extends UserExperienceAnalyticsInsightValue implements 
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => fn(ParseNode $n) => $o->setValue($n->getFloatValue()),
+            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([InsightValueDouble_value::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
      * Gets the value property value. The double value of the user experience analytics insight.
-     * @return float|null
+     * @return InsightValueDouble_value|null
     */
-    public function getValue(): ?float {
+    public function getValue(): ?InsightValueDouble_value {
         $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof InsightValueDouble_value) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
@@ -57,14 +57,14 @@ class InsightValueDouble extends UserExperienceAnalyticsInsightValue implements 
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('value', $this->getValue());
+        $writer->writeObjectValue('value', $this->getValue());
     }
 
     /**
      * Sets the value property value. The double value of the user experience analytics insight.
-     * @param float|null $value Value to set for the value property.
+     * @param InsightValueDouble_value|null $value Value to set for the value property.
     */
-    public function setValue(?float $value): void {
+    public function setValue(?InsightValueDouble_value $value): void {
         $this->getBackingStore()->set('value', $value);
     }
 

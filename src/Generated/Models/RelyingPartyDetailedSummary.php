@@ -58,7 +58,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
                 $this->setReplyUrls($val);
             },
             'serviceId' => fn(ParseNode $n) => $o->setServiceId($n->getStringValue()),
-            'signInSuccessRate' => fn(ParseNode $n) => $o->setSignInSuccessRate($n->getFloatValue()),
+            'signInSuccessRate' => fn(ParseNode $n) => $o->setSignInSuccessRate($n->getObjectValue([RelyingPartyDetailedSummary_signInSuccessRate::class, 'createFromDiscriminatorValue'])),
             'successfulSignInCount' => fn(ParseNode $n) => $o->setSuccessfulSignInCount($n->getIntegerValue()),
             'totalSignInCount' => fn(ParseNode $n) => $o->setTotalSignInCount($n->getIntegerValue()),
             'uniqueUserCount' => fn(ParseNode $n) => $o->setUniqueUserCount($n->getIntegerValue()),
@@ -143,11 +143,11 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
 
     /**
      * Gets the signInSuccessRate property value. Calculated as Number of successful / (Number of successful + Number of failed sign ins) or successfulSignInCount / totalSignInCount on AD FS in the period specified. Supports $orderby, $filter (eq).
-     * @return float|null
+     * @return RelyingPartyDetailedSummary_signInSuccessRate|null
     */
-    public function getSignInSuccessRate(): ?float {
+    public function getSignInSuccessRate(): ?RelyingPartyDetailedSummary_signInSuccessRate {
         $val = $this->getBackingStore()->get('signInSuccessRate');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof RelyingPartyDetailedSummary_signInSuccessRate) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'signInSuccessRate'");
@@ -202,7 +202,7 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
         $writer->writeStringValue('relyingPartyName', $this->getRelyingPartyName());
         $writer->writeCollectionOfPrimitiveValues('replyUrls', $this->getReplyUrls());
         $writer->writeStringValue('serviceId', $this->getServiceId());
-        $writer->writeFloatValue('signInSuccessRate', $this->getSignInSuccessRate());
+        $writer->writeObjectValue('signInSuccessRate', $this->getSignInSuccessRate());
         $writer->writeIntegerValue('successfulSignInCount', $this->getSuccessfulSignInCount());
         $writer->writeIntegerValue('totalSignInCount', $this->getTotalSignInCount());
         $writer->writeIntegerValue('uniqueUserCount', $this->getUniqueUserCount());
@@ -266,9 +266,9 @@ class RelyingPartyDetailedSummary extends Entity implements Parsable
 
     /**
      * Sets the signInSuccessRate property value. Calculated as Number of successful / (Number of successful + Number of failed sign ins) or successfulSignInCount / totalSignInCount on AD FS in the period specified. Supports $orderby, $filter (eq).
-     * @param float|null $value Value to set for the signInSuccessRate property.
+     * @param RelyingPartyDetailedSummary_signInSuccessRate|null $value Value to set for the signInSuccessRate property.
     */
-    public function setSignInSuccessRate(?float $value): void {
+    public function setSignInSuccessRate(?RelyingPartyDetailedSummary_signInSuccessRate $value): void {
         $this->getBackingStore()->set('signInSuccessRate', $value);
     }
 

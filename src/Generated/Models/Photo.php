@@ -82,11 +82,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
-     * @return float|null
+     * @return Photo_exposureDenominator|null
     */
-    public function getExposureDenominator(): ?float {
+    public function getExposureDenominator(): ?Photo_exposureDenominator {
         $val = $this->getBackingStore()->get('exposureDenominator');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Photo_exposureDenominator) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'exposureDenominator'");
@@ -94,11 +94,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
-     * @return float|null
+     * @return Photo_exposureNumerator|null
     */
-    public function getExposureNumerator(): ?float {
+    public function getExposureNumerator(): ?Photo_exposureNumerator {
         $val = $this->getBackingStore()->get('exposureNumerator');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Photo_exposureNumerator) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'exposureNumerator'");
@@ -113,10 +113,10 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'cameraMake' => fn(ParseNode $n) => $o->setCameraMake($n->getStringValue()),
             'cameraModel' => fn(ParseNode $n) => $o->setCameraModel($n->getStringValue()),
-            'exposureDenominator' => fn(ParseNode $n) => $o->setExposureDenominator($n->getFloatValue()),
-            'exposureNumerator' => fn(ParseNode $n) => $o->setExposureNumerator($n->getFloatValue()),
-            'fNumber' => fn(ParseNode $n) => $o->setFNumber($n->getFloatValue()),
-            'focalLength' => fn(ParseNode $n) => $o->setFocalLength($n->getFloatValue()),
+            'exposureDenominator' => fn(ParseNode $n) => $o->setExposureDenominator($n->getObjectValue([Photo_exposureDenominator::class, 'createFromDiscriminatorValue'])),
+            'exposureNumerator' => fn(ParseNode $n) => $o->setExposureNumerator($n->getObjectValue([Photo_exposureNumerator::class, 'createFromDiscriminatorValue'])),
+            'fNumber' => fn(ParseNode $n) => $o->setFNumber($n->getObjectValue([Photo_fNumber::class, 'createFromDiscriminatorValue'])),
+            'focalLength' => fn(ParseNode $n) => $o->setFocalLength($n->getObjectValue([Photo_focalLength::class, 'createFromDiscriminatorValue'])),
             'iso' => fn(ParseNode $n) => $o->setIso($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'orientation' => fn(ParseNode $n) => $o->setOrientation($n->getIntegerValue()),
@@ -126,11 +126,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the fNumber property value. The F-stop value from the camera. Read-only.
-     * @return float|null
+     * @return Photo_fNumber|null
     */
-    public function getFNumber(): ?float {
+    public function getFNumber(): ?Photo_fNumber {
         $val = $this->getBackingStore()->get('fNumber');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Photo_fNumber) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'fNumber'");
@@ -138,11 +138,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the focalLength property value. The focal length from the camera. Read-only.
-     * @return float|null
+     * @return Photo_focalLength|null
     */
-    public function getFocalLength(): ?float {
+    public function getFocalLength(): ?Photo_focalLength {
         $val = $this->getBackingStore()->get('focalLength');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Photo_focalLength) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'focalLength'");
@@ -203,10 +203,10 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('cameraMake', $this->getCameraMake());
         $writer->writeStringValue('cameraModel', $this->getCameraModel());
-        $writer->writeFloatValue('exposureDenominator', $this->getExposureDenominator());
-        $writer->writeFloatValue('exposureNumerator', $this->getExposureNumerator());
-        $writer->writeFloatValue('fNumber', $this->getFNumber());
-        $writer->writeFloatValue('focalLength', $this->getFocalLength());
+        $writer->writeObjectValue('exposureDenominator', $this->getExposureDenominator());
+        $writer->writeObjectValue('exposureNumerator', $this->getExposureNumerator());
+        $writer->writeObjectValue('fNumber', $this->getFNumber());
+        $writer->writeObjectValue('focalLength', $this->getFocalLength());
         $writer->writeIntegerValue('iso', $this->getIso());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('orientation', $this->getOrientation());
@@ -248,33 +248,33 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the exposureDenominator property value. The denominator for the exposure time fraction from the camera. Read-only.
-     * @param float|null $value Value to set for the exposureDenominator property.
+     * @param Photo_exposureDenominator|null $value Value to set for the exposureDenominator property.
     */
-    public function setExposureDenominator(?float $value): void {
+    public function setExposureDenominator(?Photo_exposureDenominator $value): void {
         $this->getBackingStore()->set('exposureDenominator', $value);
     }
 
     /**
      * Sets the exposureNumerator property value. The numerator for the exposure time fraction from the camera. Read-only.
-     * @param float|null $value Value to set for the exposureNumerator property.
+     * @param Photo_exposureNumerator|null $value Value to set for the exposureNumerator property.
     */
-    public function setExposureNumerator(?float $value): void {
+    public function setExposureNumerator(?Photo_exposureNumerator $value): void {
         $this->getBackingStore()->set('exposureNumerator', $value);
     }
 
     /**
      * Sets the fNumber property value. The F-stop value from the camera. Read-only.
-     * @param float|null $value Value to set for the fNumber property.
+     * @param Photo_fNumber|null $value Value to set for the fNumber property.
     */
-    public function setFNumber(?float $value): void {
+    public function setFNumber(?Photo_fNumber $value): void {
         $this->getBackingStore()->set('fNumber', $value);
     }
 
     /**
      * Sets the focalLength property value. The focal length from the camera. Read-only.
-     * @param float|null $value Value to set for the focalLength property.
+     * @param Photo_focalLength|null $value Value to set for the focalLength property.
     */
-    public function setFocalLength(?float $value): void {
+    public function setFocalLength(?Photo_focalLength $value): void {
         $this->getBackingStore()->set('focalLength', $value);
     }
 

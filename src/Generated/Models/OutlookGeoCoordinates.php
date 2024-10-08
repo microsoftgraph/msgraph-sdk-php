@@ -36,11 +36,11 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-     * @return float|null
+     * @return OutlookGeoCoordinates_accuracy|null
     */
-    public function getAccuracy(): ?float {
+    public function getAccuracy(): ?OutlookGeoCoordinates_accuracy {
         $val = $this->getBackingStore()->get('accuracy');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof OutlookGeoCoordinates_accuracy) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'accuracy'");
@@ -61,11 +61,11 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the altitude property value. The altitude of the location.
-     * @return float|null
+     * @return OutlookGeoCoordinates_altitude|null
     */
-    public function getAltitude(): ?float {
+    public function getAltitude(): ?OutlookGeoCoordinates_altitude {
         $val = $this->getBackingStore()->get('altitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof OutlookGeoCoordinates_altitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'altitude'");
@@ -73,11 +73,11 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the altitudeAccuracy property value. The accuracy of the altitude.
-     * @return float|null
+     * @return OutlookGeoCoordinates_altitudeAccuracy|null
     */
-    public function getAltitudeAccuracy(): ?float {
+    public function getAltitudeAccuracy(): ?OutlookGeoCoordinates_altitudeAccuracy {
         $val = $this->getBackingStore()->get('altitudeAccuracy');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof OutlookGeoCoordinates_altitudeAccuracy) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'altitudeAccuracy'");
@@ -98,22 +98,22 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'accuracy' => fn(ParseNode $n) => $o->setAccuracy($n->getFloatValue()),
-            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getFloatValue()),
-            'altitudeAccuracy' => fn(ParseNode $n) => $o->setAltitudeAccuracy($n->getFloatValue()),
-            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
-            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            'accuracy' => fn(ParseNode $n) => $o->setAccuracy($n->getObjectValue([OutlookGeoCoordinates_accuracy::class, 'createFromDiscriminatorValue'])),
+            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getObjectValue([OutlookGeoCoordinates_altitude::class, 'createFromDiscriminatorValue'])),
+            'altitudeAccuracy' => fn(ParseNode $n) => $o->setAltitudeAccuracy($n->getObjectValue([OutlookGeoCoordinates_altitudeAccuracy::class, 'createFromDiscriminatorValue'])),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getObjectValue([OutlookGeoCoordinates_latitude::class, 'createFromDiscriminatorValue'])),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getObjectValue([OutlookGeoCoordinates_longitude::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
      * Gets the latitude property value. The latitude of the location.
-     * @return float|null
+     * @return OutlookGeoCoordinates_latitude|null
     */
-    public function getLatitude(): ?float {
+    public function getLatitude(): ?OutlookGeoCoordinates_latitude {
         $val = $this->getBackingStore()->get('latitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof OutlookGeoCoordinates_latitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'latitude'");
@@ -121,11 +121,11 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the longitude property value. The longitude of the location.
-     * @return float|null
+     * @return OutlookGeoCoordinates_longitude|null
     */
-    public function getLongitude(): ?float {
+    public function getLongitude(): ?OutlookGeoCoordinates_longitude {
         $val = $this->getBackingStore()->get('longitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof OutlookGeoCoordinates_longitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'longitude'");
@@ -148,20 +148,20 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('accuracy', $this->getAccuracy());
-        $writer->writeFloatValue('altitude', $this->getAltitude());
-        $writer->writeFloatValue('altitudeAccuracy', $this->getAltitudeAccuracy());
-        $writer->writeFloatValue('latitude', $this->getLatitude());
-        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeObjectValue('accuracy', $this->getAccuracy());
+        $writer->writeObjectValue('altitude', $this->getAltitude());
+        $writer->writeObjectValue('altitudeAccuracy', $this->getAltitudeAccuracy());
+        $writer->writeObjectValue('latitude', $this->getLatitude());
+        $writer->writeObjectValue('longitude', $this->getLongitude());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
      * Sets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-     * @param float|null $value Value to set for the accuracy property.
+     * @param OutlookGeoCoordinates_accuracy|null $value Value to set for the accuracy property.
     */
-    public function setAccuracy(?float $value): void {
+    public function setAccuracy(?OutlookGeoCoordinates_accuracy $value): void {
         $this->getBackingStore()->set('accuracy', $value);
     }
 
@@ -175,17 +175,17 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the altitude property value. The altitude of the location.
-     * @param float|null $value Value to set for the altitude property.
+     * @param OutlookGeoCoordinates_altitude|null $value Value to set for the altitude property.
     */
-    public function setAltitude(?float $value): void {
+    public function setAltitude(?OutlookGeoCoordinates_altitude $value): void {
         $this->getBackingStore()->set('altitude', $value);
     }
 
     /**
      * Sets the altitudeAccuracy property value. The accuracy of the altitude.
-     * @param float|null $value Value to set for the altitudeAccuracy property.
+     * @param OutlookGeoCoordinates_altitudeAccuracy|null $value Value to set for the altitudeAccuracy property.
     */
-    public function setAltitudeAccuracy(?float $value): void {
+    public function setAltitudeAccuracy(?OutlookGeoCoordinates_altitudeAccuracy $value): void {
         $this->getBackingStore()->set('altitudeAccuracy', $value);
     }
 
@@ -199,17 +199,17 @@ class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the latitude property value. The latitude of the location.
-     * @param float|null $value Value to set for the latitude property.
+     * @param OutlookGeoCoordinates_latitude|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value): void {
+    public function setLatitude(?OutlookGeoCoordinates_latitude $value): void {
         $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. The longitude of the location.
-     * @param float|null $value Value to set for the longitude property.
+     * @param OutlookGeoCoordinates_longitude|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value): void {
+    public function setLongitude(?OutlookGeoCoordinates_longitude $value): void {
         $this->getBackingStore()->set('longitude', $value);
     }
 

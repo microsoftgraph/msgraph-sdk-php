@@ -77,11 +77,11 @@ class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity impl
 
     /**
      * Gets the appHealthScore property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore|null
     */
-    public function getAppHealthScore(): ?float {
+    public function getAppHealthScore(): ?UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore {
         $val = $this->getBackingStore()->get('appHealthScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'appHealthScore'");
@@ -134,7 +134,7 @@ class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity impl
             'appCrashCount' => fn(ParseNode $n) => $o->setAppCrashCount($n->getIntegerValue()),
             'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
             'appHangCount' => fn(ParseNode $n) => $o->setAppHangCount($n->getIntegerValue()),
-            'appHealthScore' => fn(ParseNode $n) => $o->setAppHealthScore($n->getFloatValue()),
+            'appHealthScore' => fn(ParseNode $n) => $o->setAppHealthScore($n->getObjectValue([UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore::class, 'createFromDiscriminatorValue'])),
             'appName' => fn(ParseNode $n) => $o->setAppName($n->getStringValue()),
             'appPublisher' => fn(ParseNode $n) => $o->setAppPublisher($n->getStringValue()),
             'appUsageDuration' => fn(ParseNode $n) => $o->setAppUsageDuration($n->getIntegerValue()),
@@ -164,7 +164,7 @@ class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity impl
         $writer->writeIntegerValue('appCrashCount', $this->getAppCrashCount());
         $writer->writeStringValue('appDisplayName', $this->getAppDisplayName());
         $writer->writeIntegerValue('appHangCount', $this->getAppHangCount());
-        $writer->writeFloatValue('appHealthScore', $this->getAppHealthScore());
+        $writer->writeObjectValue('appHealthScore', $this->getAppHealthScore());
         $writer->writeStringValue('appName', $this->getAppName());
         $writer->writeStringValue('appPublisher', $this->getAppPublisher());
         $writer->writeIntegerValue('appUsageDuration', $this->getAppUsageDuration());
@@ -205,9 +205,9 @@ class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity impl
 
     /**
      * Sets the appHealthScore property value. The health score of the application. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the appHealthScore property.
+     * @param UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore|null $value Value to set for the appHealthScore property.
     */
-    public function setAppHealthScore(?float $value): void {
+    public function setAppHealthScore(?UserExperienceAnalyticsAppHealthApplicationPerformance_appHealthScore $value): void {
         $this->getBackingStore()->set('appHealthScore', $value);
     }
 

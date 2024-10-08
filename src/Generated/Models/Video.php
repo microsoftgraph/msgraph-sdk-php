@@ -141,7 +141,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
             'bitrate' => fn(ParseNode $n) => $o->setBitrate($n->getIntegerValue()),
             'duration' => fn(ParseNode $n) => $o->setDuration($n->getIntegerValue()),
             'fourCC' => fn(ParseNode $n) => $o->setFourCC($n->getStringValue()),
-            'frameRate' => fn(ParseNode $n) => $o->setFrameRate($n->getFloatValue()),
+            'frameRate' => fn(ParseNode $n) => $o->setFrameRate($n->getObjectValue([Video_frameRate::class, 'createFromDiscriminatorValue'])),
             'height' => fn(ParseNode $n) => $o->setHeight($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'width' => fn(ParseNode $n) => $o->setWidth($n->getIntegerValue()),
@@ -162,11 +162,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the frameRate property value. Frame rate of the video.
-     * @return float|null
+     * @return Video_frameRate|null
     */
-    public function getFrameRate(): ?float {
+    public function getFrameRate(): ?Video_frameRate {
         $val = $this->getBackingStore()->get('frameRate');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof Video_frameRate) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'frameRate'");
@@ -220,7 +220,7 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeIntegerValue('bitrate', $this->getBitrate());
         $writer->writeIntegerValue('duration', $this->getDuration());
         $writer->writeStringValue('fourCC', $this->getFourCC());
-        $writer->writeFloatValue('frameRate', $this->getFrameRate());
+        $writer->writeObjectValue('frameRate', $this->getFrameRate());
         $writer->writeIntegerValue('height', $this->getHeight());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('width', $this->getWidth());
@@ -301,9 +301,9 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the frameRate property value. Frame rate of the video.
-     * @param float|null $value Value to set for the frameRate property.
+     * @param Video_frameRate|null $value Value to set for the frameRate property.
     */
-    public function setFrameRate(?float $value): void {
+    public function setFrameRate(?Video_frameRate $value): void {
         $this->getBackingStore()->set('frameRate', $value);
     }
 

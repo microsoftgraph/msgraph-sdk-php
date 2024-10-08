@@ -32,17 +32,17 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'points' => fn(ParseNode $n) => $o->setPoints($n->getFloatValue()),
+            'points' => fn(ParseNode $n) => $o->setPoints($n->getObjectValue([EducationAssignmentPointsGrade_points::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
      * Gets the points property value. Number of points a teacher is giving this submission object.
-     * @return float|null
+     * @return EducationAssignmentPointsGrade_points|null
     */
-    public function getPoints(): ?float {
+    public function getPoints(): ?EducationAssignmentPointsGrade_points {
         $val = $this->getBackingStore()->get('points');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof EducationAssignmentPointsGrade_points) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'points'");
@@ -54,14 +54,14 @@ class EducationAssignmentPointsGrade extends EducationAssignmentGrade implements
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('points', $this->getPoints());
+        $writer->writeObjectValue('points', $this->getPoints());
     }
 
     /**
      * Sets the points property value. Number of points a teacher is giving this submission object.
-     * @param float|null $value Value to set for the points property.
+     * @param EducationAssignmentPointsGrade_points|null $value Value to set for the points property.
     */
-    public function setPoints(?float $value): void {
+    public function setPoints(?EducationAssignmentPointsGrade_points $value): void {
         $this->getBackingStore()->set('points', $value);
     }
 

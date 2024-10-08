@@ -53,11 +53,11 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the altitude property value. Altitude, given in meters above sea level
-     * @return float|null
+     * @return DeviceGeoLocation_altitude|null
     */
-    public function getAltitude(): ?float {
+    public function getAltitude(): ?DeviceGeoLocation_altitude {
         $val = $this->getBackingStore()->get('altitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_altitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'altitude'");
@@ -78,25 +78,25 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getFloatValue()),
-            'heading' => fn(ParseNode $n) => $o->setHeading($n->getFloatValue()),
-            'horizontalAccuracy' => fn(ParseNode $n) => $o->setHorizontalAccuracy($n->getFloatValue()),
+            'altitude' => fn(ParseNode $n) => $o->setAltitude($n->getObjectValue([DeviceGeoLocation_altitude::class, 'createFromDiscriminatorValue'])),
+            'heading' => fn(ParseNode $n) => $o->setHeading($n->getObjectValue([DeviceGeoLocation_heading::class, 'createFromDiscriminatorValue'])),
+            'horizontalAccuracy' => fn(ParseNode $n) => $o->setHorizontalAccuracy($n->getObjectValue([DeviceGeoLocation_horizontalAccuracy::class, 'createFromDiscriminatorValue'])),
             'lastCollectedDateTime' => fn(ParseNode $n) => $o->setLastCollectedDateTime($n->getDateTimeValue()),
-            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
-            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getObjectValue([DeviceGeoLocation_latitude::class, 'createFromDiscriminatorValue'])),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getObjectValue([DeviceGeoLocation_longitude::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'speed' => fn(ParseNode $n) => $o->setSpeed($n->getFloatValue()),
-            'verticalAccuracy' => fn(ParseNode $n) => $o->setVerticalAccuracy($n->getFloatValue()),
+            'speed' => fn(ParseNode $n) => $o->setSpeed($n->getObjectValue([DeviceGeoLocation_speed::class, 'createFromDiscriminatorValue'])),
+            'verticalAccuracy' => fn(ParseNode $n) => $o->setVerticalAccuracy($n->getObjectValue([DeviceGeoLocation_verticalAccuracy::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
     /**
      * Gets the heading property value. Heading in degrees from true north
-     * @return float|null
+     * @return DeviceGeoLocation_heading|null
     */
-    public function getHeading(): ?float {
+    public function getHeading(): ?DeviceGeoLocation_heading {
         $val = $this->getBackingStore()->get('heading');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_heading) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'heading'");
@@ -104,11 +104,11 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
-     * @return float|null
+     * @return DeviceGeoLocation_horizontalAccuracy|null
     */
-    public function getHorizontalAccuracy(): ?float {
+    public function getHorizontalAccuracy(): ?DeviceGeoLocation_horizontalAccuracy {
         $val = $this->getBackingStore()->get('horizontalAccuracy');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_horizontalAccuracy) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'horizontalAccuracy'");
@@ -128,11 +128,11 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the latitude property value. Latitude coordinate of the device's location
-     * @return float|null
+     * @return DeviceGeoLocation_latitude|null
     */
-    public function getLatitude(): ?float {
+    public function getLatitude(): ?DeviceGeoLocation_latitude {
         $val = $this->getBackingStore()->get('latitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_latitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'latitude'");
@@ -140,11 +140,11 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the longitude property value. Longitude coordinate of the device's location
-     * @return float|null
+     * @return DeviceGeoLocation_longitude|null
     */
-    public function getLongitude(): ?float {
+    public function getLongitude(): ?DeviceGeoLocation_longitude {
         $val = $this->getBackingStore()->get('longitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_longitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'longitude'");
@@ -164,11 +164,11 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the speed property value. Speed the device is traveling in meters per second
-     * @return float|null
+     * @return DeviceGeoLocation_speed|null
     */
-    public function getSpeed(): ?float {
+    public function getSpeed(): ?DeviceGeoLocation_speed {
         $val = $this->getBackingStore()->get('speed');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_speed) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'speed'");
@@ -176,11 +176,11 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the verticalAccuracy property value. Accuracy of altitude in meters
-     * @return float|null
+     * @return DeviceGeoLocation_verticalAccuracy|null
     */
-    public function getVerticalAccuracy(): ?float {
+    public function getVerticalAccuracy(): ?DeviceGeoLocation_verticalAccuracy {
         $val = $this->getBackingStore()->get('verticalAccuracy');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof DeviceGeoLocation_verticalAccuracy) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'verticalAccuracy'");
@@ -191,15 +191,15 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('altitude', $this->getAltitude());
-        $writer->writeFloatValue('heading', $this->getHeading());
-        $writer->writeFloatValue('horizontalAccuracy', $this->getHorizontalAccuracy());
+        $writer->writeObjectValue('altitude', $this->getAltitude());
+        $writer->writeObjectValue('heading', $this->getHeading());
+        $writer->writeObjectValue('horizontalAccuracy', $this->getHorizontalAccuracy());
         $writer->writeDateTimeValue('lastCollectedDateTime', $this->getLastCollectedDateTime());
-        $writer->writeFloatValue('latitude', $this->getLatitude());
-        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeObjectValue('latitude', $this->getLatitude());
+        $writer->writeObjectValue('longitude', $this->getLongitude());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeFloatValue('speed', $this->getSpeed());
-        $writer->writeFloatValue('verticalAccuracy', $this->getVerticalAccuracy());
+        $writer->writeObjectValue('speed', $this->getSpeed());
+        $writer->writeObjectValue('verticalAccuracy', $this->getVerticalAccuracy());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -213,9 +213,9 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the altitude property value. Altitude, given in meters above sea level
-     * @param float|null $value Value to set for the altitude property.
+     * @param DeviceGeoLocation_altitude|null $value Value to set for the altitude property.
     */
-    public function setAltitude(?float $value): void {
+    public function setAltitude(?DeviceGeoLocation_altitude $value): void {
         $this->getBackingStore()->set('altitude', $value);
     }
 
@@ -229,17 +229,17 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the heading property value. Heading in degrees from true north
-     * @param float|null $value Value to set for the heading property.
+     * @param DeviceGeoLocation_heading|null $value Value to set for the heading property.
     */
-    public function setHeading(?float $value): void {
+    public function setHeading(?DeviceGeoLocation_heading $value): void {
         $this->getBackingStore()->set('heading', $value);
     }
 
     /**
      * Sets the horizontalAccuracy property value. Accuracy of longitude and latitude in meters
-     * @param float|null $value Value to set for the horizontalAccuracy property.
+     * @param DeviceGeoLocation_horizontalAccuracy|null $value Value to set for the horizontalAccuracy property.
     */
-    public function setHorizontalAccuracy(?float $value): void {
+    public function setHorizontalAccuracy(?DeviceGeoLocation_horizontalAccuracy $value): void {
         $this->getBackingStore()->set('horizontalAccuracy', $value);
     }
 
@@ -253,17 +253,17 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the latitude property value. Latitude coordinate of the device's location
-     * @param float|null $value Value to set for the latitude property.
+     * @param DeviceGeoLocation_latitude|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value): void {
+    public function setLatitude(?DeviceGeoLocation_latitude $value): void {
         $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. Longitude coordinate of the device's location
-     * @param float|null $value Value to set for the longitude property.
+     * @param DeviceGeoLocation_longitude|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value): void {
+    public function setLongitude(?DeviceGeoLocation_longitude $value): void {
         $this->getBackingStore()->set('longitude', $value);
     }
 
@@ -277,17 +277,17 @@ class DeviceGeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the speed property value. Speed the device is traveling in meters per second
-     * @param float|null $value Value to set for the speed property.
+     * @param DeviceGeoLocation_speed|null $value Value to set for the speed property.
     */
-    public function setSpeed(?float $value): void {
+    public function setSpeed(?DeviceGeoLocation_speed $value): void {
         $this->getBackingStore()->set('speed', $value);
     }
 
     /**
      * Sets the verticalAccuracy property value. Accuracy of altitude in meters
-     * @param float|null $value Value to set for the verticalAccuracy property.
+     * @param DeviceGeoLocation_verticalAccuracy|null $value Value to set for the verticalAccuracy property.
     */
-    public function setVerticalAccuracy(?float $value): void {
+    public function setVerticalAccuracy(?DeviceGeoLocation_verticalAccuracy $value): void {
         $this->getBackingStore()->set('verticalAccuracy', $value);
     }
 

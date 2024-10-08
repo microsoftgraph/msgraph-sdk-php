@@ -86,7 +86,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
             'locationConstraint' => fn(ParseNode $n) => $o->setLocationConstraint($n->getObjectValue([LocationConstraint::class, 'createFromDiscriminatorValue'])),
             'maxCandidates' => fn(ParseNode $n) => $o->setMaxCandidates($n->getIntegerValue()),
             'meetingDuration' => fn(ParseNode $n) => $o->setMeetingDuration($n->getDateIntervalValue()),
-            'minimumAttendeePercentage' => fn(ParseNode $n) => $o->setMinimumAttendeePercentage($n->getFloatValue()),
+            'minimumAttendeePercentage' => fn(ParseNode $n) => $o->setMinimumAttendeePercentage($n->getObjectValue([FindMeetingTimesPostRequestBody_minimumAttendeePercentage::class, 'createFromDiscriminatorValue'])),
             'returnSuggestionReasons' => fn(ParseNode $n) => $o->setReturnSuggestionReasons($n->getBooleanValue()),
             'timeConstraint' => fn(ParseNode $n) => $o->setTimeConstraint($n->getObjectValue([TimeConstraint::class, 'createFromDiscriminatorValue'])),
         ];
@@ -142,11 +142,11 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Gets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
-     * @return float|null
+     * @return FindMeetingTimesPostRequestBody_minimumAttendeePercentage|null
     */
-    public function getMinimumAttendeePercentage(): ?float {
+    public function getMinimumAttendeePercentage(): ?FindMeetingTimesPostRequestBody_minimumAttendeePercentage {
         $val = $this->getBackingStore()->get('minimumAttendeePercentage');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof FindMeetingTimesPostRequestBody_minimumAttendeePercentage) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumAttendeePercentage'");
@@ -186,7 +186,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
         $writer->writeObjectValue('locationConstraint', $this->getLocationConstraint());
         $writer->writeIntegerValue('maxCandidates', $this->getMaxCandidates());
         $writer->writeDateIntervalValue('meetingDuration', $this->getMeetingDuration());
-        $writer->writeFloatValue('minimumAttendeePercentage', $this->getMinimumAttendeePercentage());
+        $writer->writeObjectValue('minimumAttendeePercentage', $this->getMinimumAttendeePercentage());
         $writer->writeBooleanValue('returnSuggestionReasons', $this->getReturnSuggestionReasons());
         $writer->writeObjectValue('timeConstraint', $this->getTimeConstraint());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -250,9 +250,9 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
 
     /**
      * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
-     * @param float|null $value Value to set for the minimumAttendeePercentage property.
+     * @param FindMeetingTimesPostRequestBody_minimumAttendeePercentage|null $value Value to set for the minimumAttendeePercentage property.
     */
-    public function setMinimumAttendeePercentage(?float $value): void {
+    public function setMinimumAttendeePercentage(?FindMeetingTimesPostRequestBody_minimumAttendeePercentage $value): void {
         $this->getBackingStore()->set('minimumAttendeePercentage', $value);
     }
 

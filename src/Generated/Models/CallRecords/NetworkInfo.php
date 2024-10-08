@@ -58,11 +58,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-     * @return float|null
+     * @return NetworkInfo_bandwidthLowEventRatio|null
     */
-    public function getBandwidthLowEventRatio(): ?float {
+    public function getBandwidthLowEventRatio(): ?NetworkInfo_bandwidthLowEventRatio {
         $val = $this->getBackingStore()->get('bandwidthLowEventRatio');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof NetworkInfo_bandwidthLowEventRatio) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'bandwidthLowEventRatio'");
@@ -94,11 +94,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-     * @return float|null
+     * @return NetworkInfo_delayEventRatio|null
     */
-    public function getDelayEventRatio(): ?float {
+    public function getDelayEventRatio(): ?NetworkInfo_delayEventRatio {
         $val = $this->getBackingStore()->get('delayEventRatio');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof NetworkInfo_delayEventRatio) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'delayEventRatio'");
@@ -123,10 +123,10 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'bandwidthLowEventRatio' => fn(ParseNode $n) => $o->setBandwidthLowEventRatio($n->getFloatValue()),
+            'bandwidthLowEventRatio' => fn(ParseNode $n) => $o->setBandwidthLowEventRatio($n->getObjectValue([NetworkInfo_bandwidthLowEventRatio::class, 'createFromDiscriminatorValue'])),
             'basicServiceSetIdentifier' => fn(ParseNode $n) => $o->setBasicServiceSetIdentifier($n->getStringValue()),
             'connectionType' => fn(ParseNode $n) => $o->setConnectionType($n->getEnumValue(NetworkConnectionType::class)),
-            'delayEventRatio' => fn(ParseNode $n) => $o->setDelayEventRatio($n->getFloatValue()),
+            'delayEventRatio' => fn(ParseNode $n) => $o->setDelayEventRatio($n->getObjectValue([NetworkInfo_delayEventRatio::class, 'createFromDiscriminatorValue'])),
             'dnsSuffix' => fn(ParseNode $n) => $o->setDnsSuffix($n->getStringValue()),
             'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
             'linkSpeed' => fn(ParseNode $n) => $o->setLinkSpeed($n->getIntegerValue()),
@@ -134,11 +134,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
             'networkTransportProtocol' => fn(ParseNode $n) => $o->setNetworkTransportProtocol($n->getEnumValue(NetworkTransportProtocol::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'port' => fn(ParseNode $n) => $o->setPort($n->getIntegerValue()),
-            'receivedQualityEventRatio' => fn(ParseNode $n) => $o->setReceivedQualityEventRatio($n->getFloatValue()),
+            'receivedQualityEventRatio' => fn(ParseNode $n) => $o->setReceivedQualityEventRatio($n->getObjectValue([NetworkInfo_receivedQualityEventRatio::class, 'createFromDiscriminatorValue'])),
             'reflexiveIPAddress' => fn(ParseNode $n) => $o->setReflexiveIPAddress($n->getStringValue()),
             'relayIPAddress' => fn(ParseNode $n) => $o->setRelayIPAddress($n->getStringValue()),
             'relayPort' => fn(ParseNode $n) => $o->setRelayPort($n->getIntegerValue()),
-            'sentQualityEventRatio' => fn(ParseNode $n) => $o->setSentQualityEventRatio($n->getFloatValue()),
+            'sentQualityEventRatio' => fn(ParseNode $n) => $o->setSentQualityEventRatio($n->getObjectValue([NetworkInfo_sentQualityEventRatio::class, 'createFromDiscriminatorValue'])),
             'subnet' => fn(ParseNode $n) => $o->setSubnet($n->getStringValue()),
             'traceRouteHops' => fn(ParseNode $n) => $o->setTraceRouteHops($n->getCollectionOfObjectValues([TraceRouteHop::class, 'createFromDiscriminatorValue'])),
             'wifiBand' => fn(ParseNode $n) => $o->setWifiBand($n->getEnumValue(WifiBand::class)),
@@ -227,11 +227,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-     * @return float|null
+     * @return NetworkInfo_receivedQualityEventRatio|null
     */
-    public function getReceivedQualityEventRatio(): ?float {
+    public function getReceivedQualityEventRatio(): ?NetworkInfo_receivedQualityEventRatio {
         $val = $this->getBackingStore()->get('receivedQualityEventRatio');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof NetworkInfo_receivedQualityEventRatio) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'receivedQualityEventRatio'");
@@ -275,11 +275,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-     * @return float|null
+     * @return NetworkInfo_sentQualityEventRatio|null
     */
-    public function getSentQualityEventRatio(): ?float {
+    public function getSentQualityEventRatio(): ?NetworkInfo_sentQualityEventRatio {
         $val = $this->getBackingStore()->get('sentQualityEventRatio');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof NetworkInfo_sentQualityEventRatio) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'sentQualityEventRatio'");
@@ -424,10 +424,10 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeFloatValue('bandwidthLowEventRatio', $this->getBandwidthLowEventRatio());
+        $writer->writeObjectValue('bandwidthLowEventRatio', $this->getBandwidthLowEventRatio());
         $writer->writeStringValue('basicServiceSetIdentifier', $this->getBasicServiceSetIdentifier());
         $writer->writeEnumValue('connectionType', $this->getConnectionType());
-        $writer->writeFloatValue('delayEventRatio', $this->getDelayEventRatio());
+        $writer->writeObjectValue('delayEventRatio', $this->getDelayEventRatio());
         $writer->writeStringValue('dnsSuffix', $this->getDnsSuffix());
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
         $writer->writeIntegerValue('linkSpeed', $this->getLinkSpeed());
@@ -435,11 +435,11 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeEnumValue('networkTransportProtocol', $this->getNetworkTransportProtocol());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('port', $this->getPort());
-        $writer->writeFloatValue('receivedQualityEventRatio', $this->getReceivedQualityEventRatio());
+        $writer->writeObjectValue('receivedQualityEventRatio', $this->getReceivedQualityEventRatio());
         $writer->writeStringValue('reflexiveIPAddress', $this->getReflexiveIPAddress());
         $writer->writeStringValue('relayIPAddress', $this->getRelayIPAddress());
         $writer->writeIntegerValue('relayPort', $this->getRelayPort());
-        $writer->writeFloatValue('sentQualityEventRatio', $this->getSentQualityEventRatio());
+        $writer->writeObjectValue('sentQualityEventRatio', $this->getSentQualityEventRatio());
         $writer->writeStringValue('subnet', $this->getSubnet());
         $writer->writeCollectionOfObjectValues('traceRouteHops', $this->getTraceRouteHops());
         $writer->writeEnumValue('wifiBand', $this->getWifiBand());
@@ -472,9 +472,9 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the bandwidthLowEventRatio property value. Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
-     * @param float|null $value Value to set for the bandwidthLowEventRatio property.
+     * @param NetworkInfo_bandwidthLowEventRatio|null $value Value to set for the bandwidthLowEventRatio property.
     */
-    public function setBandwidthLowEventRatio(?float $value): void {
+    public function setBandwidthLowEventRatio(?NetworkInfo_bandwidthLowEventRatio $value): void {
         $this->getBackingStore()->set('bandwidthLowEventRatio', $value);
     }
 
@@ -496,9 +496,9 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the delayEventRatio property value. Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
-     * @param float|null $value Value to set for the delayEventRatio property.
+     * @param NetworkInfo_delayEventRatio|null $value Value to set for the delayEventRatio property.
     */
-    public function setDelayEventRatio(?float $value): void {
+    public function setDelayEventRatio(?NetworkInfo_delayEventRatio $value): void {
         $this->getBackingStore()->set('delayEventRatio', $value);
     }
 
@@ -560,9 +560,9 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the receivedQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
-     * @param float|null $value Value to set for the receivedQualityEventRatio property.
+     * @param NetworkInfo_receivedQualityEventRatio|null $value Value to set for the receivedQualityEventRatio property.
     */
-    public function setReceivedQualityEventRatio(?float $value): void {
+    public function setReceivedQualityEventRatio(?NetworkInfo_receivedQualityEventRatio $value): void {
         $this->getBackingStore()->set('receivedQualityEventRatio', $value);
     }
 
@@ -592,9 +592,9 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sentQualityEventRatio property value. Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
-     * @param float|null $value Value to set for the sentQualityEventRatio property.
+     * @param NetworkInfo_sentQualityEventRatio|null $value Value to set for the sentQualityEventRatio property.
     */
-    public function setSentQualityEventRatio(?float $value): void {
+    public function setSentQualityEventRatio(?NetworkInfo_sentQualityEventRatio $value): void {
         $this->getBackingStore()->set('sentQualityEventRatio', $value);
     }
 

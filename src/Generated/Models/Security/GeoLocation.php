@@ -88,8 +88,8 @@ class GeoLocation implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'city' => fn(ParseNode $n) => $o->setCity($n->getStringValue()),
             'countryName' => fn(ParseNode $n) => $o->setCountryName($n->getStringValue()),
-            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getFloatValue()),
-            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getFloatValue()),
+            'latitude' => fn(ParseNode $n) => $o->setLatitude($n->getObjectValue([GeoLocation_latitude::class, 'createFromDiscriminatorValue'])),
+            'longitude' => fn(ParseNode $n) => $o->setLongitude($n->getObjectValue([GeoLocation_longitude::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
         ];
@@ -97,11 +97,11 @@ class GeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the latitude property value. The latitude property
-     * @return float|null
+     * @return GeoLocation_latitude|null
     */
-    public function getLatitude(): ?float {
+    public function getLatitude(): ?GeoLocation_latitude {
         $val = $this->getBackingStore()->get('latitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof GeoLocation_latitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'latitude'");
@@ -109,11 +109,11 @@ class GeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the longitude property value. The longitude property
-     * @return float|null
+     * @return GeoLocation_longitude|null
     */
-    public function getLongitude(): ?float {
+    public function getLongitude(): ?GeoLocation_longitude {
         $val = $this->getBackingStore()->get('longitude');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof GeoLocation_longitude) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'longitude'");
@@ -150,8 +150,8 @@ class GeoLocation implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('city', $this->getCity());
         $writer->writeStringValue('countryName', $this->getCountryName());
-        $writer->writeFloatValue('latitude', $this->getLatitude());
-        $writer->writeFloatValue('longitude', $this->getLongitude());
+        $writer->writeObjectValue('latitude', $this->getLatitude());
+        $writer->writeObjectValue('longitude', $this->getLongitude());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('state', $this->getState());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -191,17 +191,17 @@ class GeoLocation implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the latitude property value. The latitude property
-     * @param float|null $value Value to set for the latitude property.
+     * @param GeoLocation_latitude|null $value Value to set for the latitude property.
     */
-    public function setLatitude(?float $value): void {
+    public function setLatitude(?GeoLocation_latitude $value): void {
         $this->getBackingStore()->set('latitude', $value);
     }
 
     /**
      * Sets the longitude property value. The longitude property
-     * @param float|null $value Value to set for the longitude property.
+     * @param GeoLocation_longitude|null $value Value to set for the longitude property.
     */
-    public function setLongitude(?float $value): void {
+    public function setLongitude(?GeoLocation_longitude $value): void {
         $this->getBackingStore()->set('longitude', $value);
     }
 

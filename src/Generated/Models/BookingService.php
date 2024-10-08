@@ -94,11 +94,11 @@ class BookingService extends Entity implements Parsable
 
     /**
      * Gets the defaultPrice property value. The default monetary price for the service.
-     * @return float|null
+     * @return BookingService_defaultPrice|null
     */
-    public function getDefaultPrice(): ?float {
+    public function getDefaultPrice(): ?BookingService_defaultPrice {
         $val = $this->getBackingStore()->get('defaultPrice');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof BookingService_defaultPrice) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultPrice'");
@@ -166,7 +166,7 @@ class BookingService extends Entity implements Parsable
             'customQuestions' => fn(ParseNode $n) => $o->setCustomQuestions($n->getCollectionOfObjectValues([BookingQuestionAssignment::class, 'createFromDiscriminatorValue'])),
             'defaultDuration' => fn(ParseNode $n) => $o->setDefaultDuration($n->getDateIntervalValue()),
             'defaultLocation' => fn(ParseNode $n) => $o->setDefaultLocation($n->getObjectValue([Location::class, 'createFromDiscriminatorValue'])),
-            'defaultPrice' => fn(ParseNode $n) => $o->setDefaultPrice($n->getFloatValue()),
+            'defaultPrice' => fn(ParseNode $n) => $o->setDefaultPrice($n->getObjectValue([BookingService_defaultPrice::class, 'createFromDiscriminatorValue'])),
             'defaultPriceType' => fn(ParseNode $n) => $o->setDefaultPriceType($n->getEnumValue(BookingPriceType::class)),
             'defaultReminders' => fn(ParseNode $n) => $o->setDefaultReminders($n->getCollectionOfObjectValues([BookingReminder::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
@@ -376,7 +376,7 @@ class BookingService extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('customQuestions', $this->getCustomQuestions());
         $writer->writeDateIntervalValue('defaultDuration', $this->getDefaultDuration());
         $writer->writeObjectValue('defaultLocation', $this->getDefaultLocation());
-        $writer->writeFloatValue('defaultPrice', $this->getDefaultPrice());
+        $writer->writeObjectValue('defaultPrice', $this->getDefaultPrice());
         $writer->writeEnumValue('defaultPriceType', $this->getDefaultPriceType());
         $writer->writeCollectionOfObjectValues('defaultReminders', $this->getDefaultReminders());
         $writer->writeStringValue('description', $this->getDescription());
@@ -438,9 +438,9 @@ class BookingService extends Entity implements Parsable
 
     /**
      * Sets the defaultPrice property value. The default monetary price for the service.
-     * @param float|null $value Value to set for the defaultPrice property.
+     * @param BookingService_defaultPrice|null $value Value to set for the defaultPrice property.
     */
-    public function setDefaultPrice(?float $value): void {
+    public function setDefaultPrice(?BookingService_defaultPrice $value): void {
         $this->getBackingStore()->set('defaultPrice', $value);
     }
 

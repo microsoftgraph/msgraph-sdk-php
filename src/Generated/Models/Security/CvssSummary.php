@@ -63,7 +63,7 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'score' => fn(ParseNode $n) => $o->setScore($n->getFloatValue()),
+            'score' => fn(ParseNode $n) => $o->setScore($n->getObjectValue([CvssSummary_score::class, 'createFromDiscriminatorValue'])),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(VulnerabilitySeverity::class)),
             'vectorString' => fn(ParseNode $n) => $o->setVectorString($n->getStringValue()),
         ];
@@ -83,11 +83,11 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the score property value. The CVSS score about this vulnerability.
-     * @return float|null
+     * @return CvssSummary_score|null
     */
-    public function getScore(): ?float {
+    public function getScore(): ?CvssSummary_score {
         $val = $this->getBackingStore()->get('score');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof CvssSummary_score) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'score'");
@@ -123,7 +123,7 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeFloatValue('score', $this->getScore());
+        $writer->writeObjectValue('score', $this->getScore());
         $writer->writeEnumValue('severity', $this->getSeverity());
         $writer->writeStringValue('vectorString', $this->getVectorString());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -155,9 +155,9 @@ class CvssSummary implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the score property value. The CVSS score about this vulnerability.
-     * @param float|null $value Value to set for the score property.
+     * @param CvssSummary_score|null $value Value to set for the score property.
     */
-    public function setScore(?float $value): void {
+    public function setScore(?CvssSummary_score $value): void {
         $this->getBackingStore()->set('score', $value);
     }
 

@@ -29,11 +29,11 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
 
     /**
      * Gets the cloudIdentityScore property value. The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudIdentityScore|null
     */
-    public function getCloudIdentityScore(): ?float {
+    public function getCloudIdentityScore(): ?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudIdentityScore {
         $val = $this->getBackingStore()->get('cloudIdentityScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudIdentityScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudIdentityScore'");
@@ -41,11 +41,11 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
 
     /**
      * Gets the cloudManagementScore property value. The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudManagementScore|null
     */
-    public function getCloudManagementScore(): ?float {
+    public function getCloudManagementScore(): ?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudManagementScore {
         $val = $this->getBackingStore()->get('cloudManagementScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudManagementScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudManagementScore'");
@@ -53,11 +53,11 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
 
     /**
      * Gets the cloudProvisioningScore property value. The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudProvisioningScore|null
     */
-    public function getCloudProvisioningScore(): ?float {
+    public function getCloudProvisioningScore(): ?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudProvisioningScore {
         $val = $this->getBackingStore()->get('cloudProvisioningScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudProvisioningScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudProvisioningScore'");
@@ -70,15 +70,15 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'cloudIdentityScore' => fn(ParseNode $n) => $o->setCloudIdentityScore($n->getFloatValue()),
-            'cloudManagementScore' => fn(ParseNode $n) => $o->setCloudManagementScore($n->getFloatValue()),
-            'cloudProvisioningScore' => fn(ParseNode $n) => $o->setCloudProvisioningScore($n->getFloatValue()),
+            'cloudIdentityScore' => fn(ParseNode $n) => $o->setCloudIdentityScore($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudIdentityScore::class, 'createFromDiscriminatorValue'])),
+            'cloudManagementScore' => fn(ParseNode $n) => $o->setCloudManagementScore($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudManagementScore::class, 'createFromDiscriminatorValue'])),
+            'cloudProvisioningScore' => fn(ParseNode $n) => $o->setCloudProvisioningScore($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudProvisioningScore::class, 'createFromDiscriminatorValue'])),
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(UserExperienceAnalyticsHealthState::class)),
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'modelDeviceCount' => fn(ParseNode $n) => $o->setModelDeviceCount($n->getIntegerValue()),
-            'windowsScore' => fn(ParseNode $n) => $o->setWindowsScore($n->getFloatValue()),
-            'workFromAnywhereScore' => fn(ParseNode $n) => $o->setWorkFromAnywhereScore($n->getFloatValue()),
+            'windowsScore' => fn(ParseNode $n) => $o->setWindowsScore($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereModelPerformance_windowsScore::class, 'createFromDiscriminatorValue'])),
+            'workFromAnywhereScore' => fn(ParseNode $n) => $o->setWorkFromAnywhereScore($n->getObjectValue([UserExperienceAnalyticsWorkFromAnywhereModelPerformance_workFromAnywhereScore::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -132,11 +132,11 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
 
     /**
      * Gets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsWorkFromAnywhereModelPerformance_windowsScore|null
     */
-    public function getWindowsScore(): ?float {
+    public function getWindowsScore(): ?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_windowsScore {
         $val = $this->getBackingStore()->get('windowsScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsWorkFromAnywhereModelPerformance_windowsScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsScore'");
@@ -144,11 +144,11 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
 
     /**
      * Gets the workFromAnywhereScore property value. The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return float|null
+     * @return UserExperienceAnalyticsWorkFromAnywhereModelPerformance_workFromAnywhereScore|null
     */
-    public function getWorkFromAnywhereScore(): ?float {
+    public function getWorkFromAnywhereScore(): ?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_workFromAnywhereScore {
         $val = $this->getBackingStore()->get('workFromAnywhereScore');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsWorkFromAnywhereModelPerformance_workFromAnywhereScore) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'workFromAnywhereScore'");
@@ -160,38 +160,38 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeFloatValue('cloudIdentityScore', $this->getCloudIdentityScore());
-        $writer->writeFloatValue('cloudManagementScore', $this->getCloudManagementScore());
-        $writer->writeFloatValue('cloudProvisioningScore', $this->getCloudProvisioningScore());
+        $writer->writeObjectValue('cloudIdentityScore', $this->getCloudIdentityScore());
+        $writer->writeObjectValue('cloudManagementScore', $this->getCloudManagementScore());
+        $writer->writeObjectValue('cloudProvisioningScore', $this->getCloudProvisioningScore());
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
         $writer->writeIntegerValue('modelDeviceCount', $this->getModelDeviceCount());
-        $writer->writeFloatValue('windowsScore', $this->getWindowsScore());
-        $writer->writeFloatValue('workFromAnywhereScore', $this->getWorkFromAnywhereScore());
+        $writer->writeObjectValue('windowsScore', $this->getWindowsScore());
+        $writer->writeObjectValue('workFromAnywhereScore', $this->getWorkFromAnywhereScore());
     }
 
     /**
      * Sets the cloudIdentityScore property value. The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the cloudIdentityScore property.
+     * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudIdentityScore|null $value Value to set for the cloudIdentityScore property.
     */
-    public function setCloudIdentityScore(?float $value): void {
+    public function setCloudIdentityScore(?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudIdentityScore $value): void {
         $this->getBackingStore()->set('cloudIdentityScore', $value);
     }
 
     /**
      * Sets the cloudManagementScore property value. The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the cloudManagementScore property.
+     * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudManagementScore|null $value Value to set for the cloudManagementScore property.
     */
-    public function setCloudManagementScore(?float $value): void {
+    public function setCloudManagementScore(?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudManagementScore $value): void {
         $this->getBackingStore()->set('cloudManagementScore', $value);
     }
 
     /**
      * Sets the cloudProvisioningScore property value. The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the cloudProvisioningScore property.
+     * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudProvisioningScore|null $value Value to set for the cloudProvisioningScore property.
     */
-    public function setCloudProvisioningScore(?float $value): void {
+    public function setCloudProvisioningScore(?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_cloudProvisioningScore $value): void {
         $this->getBackingStore()->set('cloudProvisioningScore', $value);
     }
 
@@ -229,17 +229,17 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity imp
 
     /**
      * Sets the windowsScore property value. The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the windowsScore property.
+     * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance_windowsScore|null $value Value to set for the windowsScore property.
     */
-    public function setWindowsScore(?float $value): void {
+    public function setWindowsScore(?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_windowsScore $value): void {
         $this->getBackingStore()->set('windowsScore', $value);
     }
 
     /**
      * Sets the workFromAnywhereScore property value. The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @param float|null $value Value to set for the workFromAnywhereScore property.
+     * @param UserExperienceAnalyticsWorkFromAnywhereModelPerformance_workFromAnywhereScore|null $value Value to set for the workFromAnywhereScore property.
     */
-    public function setWorkFromAnywhereScore(?float $value): void {
+    public function setWorkFromAnywhereScore(?UserExperienceAnalyticsWorkFromAnywhereModelPerformance_workFromAnywhereScore $value): void {
         $this->getBackingStore()->set('workFromAnywhereScore', $value);
     }
 

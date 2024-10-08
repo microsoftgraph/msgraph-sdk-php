@@ -35,7 +35,7 @@ class UserExperienceAnalyticsMetric extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'unit' => fn(ParseNode $n) => $o->setUnit($n->getStringValue()),
-            'value' => fn(ParseNode $n) => $o->setValue($n->getFloatValue()),
+            'value' => fn(ParseNode $n) => $o->setValue($n->getObjectValue([UserExperienceAnalyticsMetric_value::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -53,11 +53,11 @@ class UserExperienceAnalyticsMetric extends Entity implements Parsable
 
     /**
      * Gets the value property value. The value of the user experience analytics metric.
-     * @return float|null
+     * @return UserExperienceAnalyticsMetric_value|null
     */
-    public function getValue(): ?float {
+    public function getValue(): ?UserExperienceAnalyticsMetric_value {
         $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || is_float($val)) {
+        if (is_null($val) || $val instanceof UserExperienceAnalyticsMetric_value) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsMetric extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('unit', $this->getUnit());
-        $writer->writeFloatValue('value', $this->getValue());
+        $writer->writeObjectValue('value', $this->getValue());
     }
 
     /**
@@ -83,9 +83,9 @@ class UserExperienceAnalyticsMetric extends Entity implements Parsable
 
     /**
      * Sets the value property value. The value of the user experience analytics metric.
-     * @param float|null $value Value to set for the value property.
+     * @param UserExperienceAnalyticsMetric_value|null $value Value to set for the value property.
     */
-    public function setValue(?float $value): void {
+    public function setValue(?UserExperienceAnalyticsMetric_value $value): void {
         $this->getBackingStore()->set('value', $value);
     }
 
