@@ -108,7 +108,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
             'macAddress' => fn(ParseNode $n) => $o->setMacAddress($n->getStringValue()),
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
-            'nics' => fn(ParseNode $n) => $o->setNics($n->getObjectValue([NicEvidence::class, 'createFromDiscriminatorValue'])),
+            'nics' => fn(ParseNode $n) => $o->setNics($n->getCollectionOfObjectValues([NicEvidence::class, 'createFromDiscriminatorValue'])),
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'owners' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -258,11 +258,13 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Gets the nics property value. The nics property
-     * @return NicEvidence|null
+     * @return array<NicEvidence>|null
     */
-    public function getNics(): ?NicEvidence {
+    public function getNics(): ?array {
         $val = $this->getBackingStore()->get('nics');
-        if (is_null($val) || $val instanceof NicEvidence) {
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, NicEvidence::class);
+            /** @var array<NicEvidence>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'nics'");
@@ -413,7 +415,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('macAddress', $this->getMacAddress());
         $writer->writeStringValue('manufacturer', $this->getManufacturer());
         $writer->writeStringValue('model', $this->getModel());
-        $writer->writeObjectValue('nics', $this->getNics());
+        $writer->writeCollectionOfObjectValues('nics', $this->getNics());
         $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
         $writer->writeCollectionOfPrimitiveValues('owners', $this->getOwners());
         $writer->writeCollectionOfPrimitiveValues('protocols', $this->getProtocols());
@@ -548,9 +550,9 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the nics property value. The nics property
-     * @param NicEvidence|null $value Value to set for the nics property.
+     * @param array<NicEvidence>|null $value Value to set for the nics property.
     */
-    public function setNics(?NicEvidence $value): void {
+    public function setNics(?array $value): void {
         $this->getBackingStore()->set('nics', $value);
     }
 

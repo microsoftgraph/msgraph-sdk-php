@@ -71,7 +71,7 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<string>|null $val */
                 $this->setFields($val);
             },
-            'limit' => fn(ParseNode $n) => $o->setLimit($n->getIntegerValue()),
+            'limit' => fn(ParseNode $n) => $o->setLimit($n->getFloatValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -92,11 +92,11 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
-     * @return int|null
+     * @return float|null
     */
-    public function getLimit(): ?int {
+    public function getLimit(): ?float {
         $val = $this->getBackingStore()->get('limit');
-        if (is_null($val) || is_int($val)) {
+        if (is_null($val) || is_float($val)) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'limit'");
@@ -120,7 +120,7 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('fields', $this->getFields());
-        $writer->writeIntegerValue('limit', $this->getLimit());
+        $writer->writeFloatValue('limit', $this->getLimit());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -151,9 +151,9 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
-     * @param int|null $value Value to set for the limit property.
+     * @param float|null $value Value to set for the limit property.
     */
-    public function setLimit(?int $value): void {
+    public function setLimit(?float $value): void {
         $this->getBackingStore()->set('limit', $value);
     }
 

@@ -31,10 +31,11 @@ class RootDomainRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      * @param RootDomainRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Domain|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/domain-get-rootdomain?view=graph-rest-1.0 Find more info here
     */
     public function get(?RootDomainRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class RootDomainRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get rootDomain from domains
+     * Get the root domain of a subdomain. This API returns a single object.
      * @param RootDomainRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

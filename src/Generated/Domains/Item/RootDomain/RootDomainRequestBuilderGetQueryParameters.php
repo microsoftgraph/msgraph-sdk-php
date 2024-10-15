@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Domains\Item\RootDomain;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get rootDomain from domains
+ * Get the root domain of a subdomain. This API returns a single object.
 */
 class RootDomainRequestBuilderGetQueryParameters 
 {

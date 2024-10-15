@@ -32,13 +32,14 @@ class VerifyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Validates the ownership of the domain.
+     * @param VerifyPostRequestBody $body The request body
      * @param VerifyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Domain|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/domain-verify?view=graph-rest-1.0 Find more info here
     */
-    public function post(?VerifyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPostRequestInformation($requestConfiguration);
+    public function post(VerifyPostRequestBody $body, ?VerifyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
@@ -47,10 +48,11 @@ class VerifyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Validates the ownership of the domain.
+     * @param VerifyPostRequestBody $body The request body
      * @param VerifyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?VerifyRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(VerifyPostRequestBody $body, ?VerifyRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -60,6 +62,7 @@ class VerifyRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -77,7 +77,7 @@ class AssignmentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
+     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object. This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
      * @param AccessPackageAssignmentRequest $body The request body
      * @param AssignmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageAssignmentRequest|null>
@@ -114,7 +114,7 @@ class AssignmentRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
+     * In Microsoft Entra Entitlement Management, create a new accessPackageAssignmentRequest object. This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.
      * @param AccessPackageAssignmentRequest $body The request body
      * @param AssignmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

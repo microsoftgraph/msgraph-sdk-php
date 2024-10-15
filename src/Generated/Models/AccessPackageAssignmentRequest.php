@@ -148,7 +148,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
@@ -267,7 +267,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
      * @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?EntitlementManagementSchedule $value): void {
