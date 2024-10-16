@@ -119,7 +119,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
             'focalLength' => fn(ParseNode $n) => $o->setFocalLength($n->getFloatValue()),
             'iso' => fn(ParseNode $n) => $o->setIso($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'orientation' => fn(ParseNode $n) => $o->setOrientation($n->getIntegerValue()),
+            'orientation' => fn(ParseNode $n) => $o->setOrientation($n->getFloatValue()),
             'takenDateTime' => fn(ParseNode $n) => $o->setTakenDateTime($n->getDateTimeValue()),
         ];
     }
@@ -174,11 +174,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
-     * @return int|null
+     * @return float|null
     */
-    public function getOrientation(): ?int {
+    public function getOrientation(): ?float {
         $val = $this->getBackingStore()->get('orientation');
-        if (is_null($val) || is_int($val)) {
+        if (is_null($val) || is_float($val)) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'orientation'");
@@ -209,7 +209,7 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeFloatValue('focalLength', $this->getFocalLength());
         $writer->writeIntegerValue('iso', $this->getIso());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeIntegerValue('orientation', $this->getOrientation());
+        $writer->writeFloatValue('orientation', $this->getOrientation());
         $writer->writeDateTimeValue('takenDateTime', $this->getTakenDateTime());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -296,9 +296,9 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the orientation property value. The orientation value from the camera. Writable on OneDrive Personal.
-     * @param int|null $value Value to set for the orientation property.
+     * @param float|null $value Value to set for the orientation property.
     */
-    public function setOrientation(?int $value): void {
+    public function setOrientation(?float $value): void {
         $this->getBackingStore()->set('orientation', $value);
     }
 

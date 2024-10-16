@@ -27,7 +27,7 @@ class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttributeCol
     }
 
     /**
-     * Gets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
+     * Gets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign-up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
      * @return AuthenticationAttributeCollectionPage|null
     */
     public function getAttributeCollectionPage(): ?AuthenticationAttributeCollectionPage {
@@ -75,7 +75,7 @@ class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttributeCol
     }
 
     /**
-     * Sets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
+     * Sets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign-up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
      * @param AuthenticationAttributeCollectionPage|null $value Value to set for the attributeCollectionPage property.
     */
     public function setAttributeCollectionPage(?AuthenticationAttributeCollectionPage $value): void {

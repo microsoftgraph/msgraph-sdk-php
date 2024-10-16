@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnits;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the siteProtectionUnit objects that are associated with a sharePointProtectionPolicy.
+ * The list of site protection units in the tenant.
 */
 class SiteProtectionUnitsRequestBuilderGetQueryParameters 
 {

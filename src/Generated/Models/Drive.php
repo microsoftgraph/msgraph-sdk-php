@@ -41,7 +41,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     * Gets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
      * @return string|null
     */
     public function getDriveType(): ?string {
@@ -176,7 +176,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Gets the system property value. If present, indicates that it's a system-managed drive. Read-only.
      * @return SystemFacet|null
     */
     public function getSystem(): ?SystemFacet {
@@ -215,7 +215,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
      * @param string|null $value Value to set for the driveType property.
     */
     public function setDriveType(?string $value): void {
@@ -287,7 +287,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Sets the system property value. If present, indicates that it's a system-managed drive. Read-only.
      * @param SystemFacet|null $value Value to set for the system property.
     */
     public function setSystem(?SystemFacet $value): void {

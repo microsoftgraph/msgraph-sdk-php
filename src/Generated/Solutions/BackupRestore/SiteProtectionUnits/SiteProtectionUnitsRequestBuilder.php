@@ -52,11 +52,10 @@ class SiteProtectionUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the siteProtectionUnit objects that are associated with a sharePointProtectionPolicy.
+     * The list of site protection units in the tenant.
      * @param SiteProtectionUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/backuprestoreroot-list-siteprotectionunits?view=graph-rest-1.0 Find more info here
     */
     public function get(?SiteProtectionUnitsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class SiteProtectionUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the siteProtectionUnit objects that are associated with a sharePointProtectionPolicy.
+     * The list of site protection units in the tenant.
      * @param SiteProtectionUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

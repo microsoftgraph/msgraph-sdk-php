@@ -221,7 +221,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the rootDomain property value. The rootDomain property
+     * Gets the rootDomain property value. Root domain of a subdomain. Read-only, Nullable. Supports $expand.
      * @return Domain|null
     */
     public function getRootDomain(): ?Domain {
@@ -417,7 +417,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the rootDomain property value. The rootDomain property
+     * Sets the rootDomain property value. Root domain of a subdomain. Read-only, Nullable. Supports $expand.
      * @param Domain|null $value Value to set for the rootDomain property.
     */
     public function setRootDomain(?Domain $value): void {

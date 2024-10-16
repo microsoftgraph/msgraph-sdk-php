@@ -129,11 +129,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the disc property value. The number of the disc this audio file came from.
-     * @return int|null
+     * @return float|null
     */
-    public function getDisc(): ?int {
+    public function getDisc(): ?float {
         $val = $this->getBackingStore()->get('disc');
-        if (is_null($val) || is_int($val)) {
+        if (is_null($val) || is_float($val)) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'disc'");
@@ -141,11 +141,11 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the discCount property value. The total number of discs in this album.
-     * @return int|null
+     * @return float|null
     */
-    public function getDiscCount(): ?int {
+    public function getDiscCount(): ?float {
         $val = $this->getBackingStore()->get('discCount');
-        if (is_null($val) || is_int($val)) {
+        if (is_null($val) || is_float($val)) {
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'discCount'");
@@ -176,8 +176,8 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
             'bitrate' => fn(ParseNode $n) => $o->setBitrate($n->getIntegerValue()),
             'composers' => fn(ParseNode $n) => $o->setComposers($n->getStringValue()),
             'copyright' => fn(ParseNode $n) => $o->setCopyright($n->getStringValue()),
-            'disc' => fn(ParseNode $n) => $o->setDisc($n->getIntegerValue()),
-            'discCount' => fn(ParseNode $n) => $o->setDiscCount($n->getIntegerValue()),
+            'disc' => fn(ParseNode $n) => $o->setDisc($n->getFloatValue()),
+            'discCount' => fn(ParseNode $n) => $o->setDiscCount($n->getFloatValue()),
             'duration' => fn(ParseNode $n) => $o->setDuration($n->getIntegerValue()),
             'genre' => fn(ParseNode $n) => $o->setGenre($n->getStringValue()),
             'hasDrm' => fn(ParseNode $n) => $o->setHasDrm($n->getBooleanValue()),
@@ -297,8 +297,8 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeIntegerValue('bitrate', $this->getBitrate());
         $writer->writeStringValue('composers', $this->getComposers());
         $writer->writeStringValue('copyright', $this->getCopyright());
-        $writer->writeIntegerValue('disc', $this->getDisc());
-        $writer->writeIntegerValue('discCount', $this->getDiscCount());
+        $writer->writeFloatValue('disc', $this->getDisc());
+        $writer->writeFloatValue('discCount', $this->getDiscCount());
         $writer->writeIntegerValue('duration', $this->getDuration());
         $writer->writeStringValue('genre', $this->getGenre());
         $writer->writeBooleanValue('hasDrm', $this->getHasDrm());
@@ -377,17 +377,17 @@ class Audio implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the disc property value. The number of the disc this audio file came from.
-     * @param int|null $value Value to set for the disc property.
+     * @param float|null $value Value to set for the disc property.
     */
-    public function setDisc(?int $value): void {
+    public function setDisc(?float $value): void {
         $this->getBackingStore()->set('disc', $value);
     }
 
     /**
      * Sets the discCount property value. The total number of discs in this album.
-     * @param int|null $value Value to set for the discCount property.
+     * @param float|null $value Value to set for the discCount property.
     */
-    public function setDiscCount(?int $value): void {
+    public function setDiscCount(?float $value): void {
         $this->getBackingStore()->set('discCount', $value);
     }
 
