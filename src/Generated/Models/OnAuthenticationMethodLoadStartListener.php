@@ -37,7 +37,7 @@ class OnAuthenticationMethodLoadStartListener extends AuthenticationEventListene
     }
 
     /**
-     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This property lets us define potential handler configurations per-event.
      * @return OnAuthenticationMethodLoadStartHandler|null
     */
     public function getHandler(): ?OnAuthenticationMethodLoadStartHandler {
@@ -58,7 +58,7 @@ class OnAuthenticationMethodLoadStartListener extends AuthenticationEventListene
     }
 
     /**
-     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This property lets us define potential handler configurations per-event.
      * @param OnAuthenticationMethodLoadStartHandler|null $value Value to set for the handler property.
     */
     public function setHandler(?OnAuthenticationMethodLoadStartHandler $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCal
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get log of PSTN calls as a collection of pstnCallLogRow entries.
+ * Get a log of PSTN calls as a collection of pstnCallLogRow entries.
 */
 class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetQueryParameters 
 {

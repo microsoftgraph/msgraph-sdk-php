@@ -183,11 +183,11 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a iosStoreApp.
+     * Deletes a androidLobApp.
      * @param MobileAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-iosstoreapp-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MobileAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -198,11 +198,11 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosLobApp object.
+     * Read properties and relationships of the iosVppApp object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-ioslobapp-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-iosvppapp-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -229,7 +229,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a iosStoreApp.
+     * Deletes a androidLobApp.
      * @param MobileAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -247,7 +247,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosLobApp object.
+     * Read properties and relationships of the iosVppApp object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

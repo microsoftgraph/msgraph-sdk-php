@@ -52,11 +52,10 @@ class MailboxProtectionUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of mailboxProtectionUnit objects.
+     * The list of mailbox protection units in the tenant.
      * @param MailboxProtectionUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxProtectionUnitCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/backuprestoreroot-list-mailboxprotectionunits?view=graph-rest-1.0 Find more info here
     */
     public function get(?MailboxProtectionUnitsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class MailboxProtectionUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of mailboxProtectionUnit objects.
+     * The list of mailbox protection units in the tenant.
      * @param MailboxProtectionUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

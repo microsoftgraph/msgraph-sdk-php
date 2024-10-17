@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\MailboxProtectionUni
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of mailboxProtectionUnit objects.
+ * The list of mailbox protection units in the tenant.
 */
 class MailboxProtectionUnitsRequestBuilderGetQueryParameters 
 {
