@@ -52,11 +52,10 @@ class DriveProtectionUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the driveProtectionUnit objects that are associated with a oneDriveForBusinessProtectionPolicy.
+     * The list of drive protection units in the tenant.
      * @param DriveProtectionUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/backuprestoreroot-list-driveprotectionunits?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveProtectionUnitsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class DriveProtectionUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the driveProtectionUnit objects that are associated with a oneDriveForBusinessProtectionPolicy.
+     * The list of drive protection units in the tenant.
      * @param DriveProtectionUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
