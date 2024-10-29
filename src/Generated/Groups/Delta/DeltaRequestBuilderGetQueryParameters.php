@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get newly created, updated, or deleted groups, including group membership changes, without having to perform a full read of the entire group collection. See Using Delta Query for details.
+ * Get newly created, updated, or deleted groups, including group membership changes, without having to perform a full read of the entire group collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

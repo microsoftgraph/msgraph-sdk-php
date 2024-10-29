@@ -57,7 +57,7 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -69,6 +69,18 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the displayName property value. The name of the reaction.
+     * @return string|null
+    */
+    public function getDisplayName(): ?string {
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -76,7 +88,9 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'reactionContentUrl' => fn(ParseNode $n) => $o->setReactionContentUrl($n->getStringValue()),
             'reactionType' => fn(ParseNode $n) => $o->setReactionType($n->getStringValue()),
             'user' => fn(ParseNode $n) => $o->setUser($n->getObjectValue([ChatMessageReactionIdentitySet::class, 'createFromDiscriminatorValue'])),
         ];
@@ -95,7 +109,19 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the reactionType property value. Supported values are like, angry, sad, laugh, heart, surprised.
+     * Gets the reactionContentUrl property value. The hosted content URL for the custom reaction type.
+     * @return string|null
+    */
+    public function getReactionContentUrl(): ?string {
+        $val = $this->getBackingStore()->get('reactionContentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reactionContentUrl'");
+    }
+
+    /**
+     * Gets the reactionType property value. The reaction type. Supported values include Unicode characters, custom, and some backward-compatible reaction types, such as like, angry, sad, laugh, heart, and surprised.
      * @return string|null
     */
     public function getReactionType(): ?string {
@@ -124,7 +150,9 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeStringValue('reactionContentUrl', $this->getReactionContentUrl());
         $writer->writeStringValue('reactionType', $this->getReactionType());
         $writer->writeObjectValue('user', $this->getUser());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -147,11 +175,19 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the displayName property value. The name of the reaction.
+     * @param string|null $value Value to set for the displayName property.
+    */
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**
@@ -163,7 +199,15 @@ class ChatMessageReaction implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the reactionType property value. Supported values are like, angry, sad, laugh, heart, surprised.
+     * Sets the reactionContentUrl property value. The hosted content URL for the custom reaction type.
+     * @param string|null $value Value to set for the reactionContentUrl property.
+    */
+    public function setReactionContentUrl(?string $value): void {
+        $this->getBackingStore()->set('reactionContentUrl', $value);
+    }
+
+    /**
+     * Sets the reactionType property value. The reaction type. Supported values include Unicode characters, custom, and some backward-compatible reaction types, such as like, angry, sad, laugh, heart, and surprised.
      * @param string|null $value Value to set for the reactionType property.
     */
     public function setReactionType(?string $value): void {

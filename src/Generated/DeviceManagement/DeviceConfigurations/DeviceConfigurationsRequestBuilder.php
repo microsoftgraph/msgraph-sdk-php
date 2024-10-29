@@ -52,11 +52,11 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the androidCustomConfiguration objects.
+     * List properties and relationships of the iosCustomConfiguration objects.
      * @param DeviceConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-androidcustomconfiguration-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-ioscustomconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,7 +83,7 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the androidCustomConfiguration objects.
+     * List properties and relationships of the iosCustomConfiguration objects.
      * @param DeviceConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

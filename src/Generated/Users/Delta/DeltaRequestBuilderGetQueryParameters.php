@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get newly created, updated, or deleted users without having to perform a full read of the entire user collection. See change tracking for details.
+ * Get newly created, updated, or deleted users without having to perform a full read of the entire user collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

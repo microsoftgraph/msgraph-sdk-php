@@ -52,7 +52,7 @@ class SiteSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @param SiteSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteSourceCollectionResponse|null>
      * @throws Exception
@@ -83,7 +83,7 @@ class SiteSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the siteSource objects associated with an ediscoveryCustodian.
+     * Get a list of the siteSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @param SiteSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ApplicationTemplates\Item\Instantiate;
+namespace Microsoft\Graph\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
+class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
      * @var BackingStore $backingStore Stores model information.
@@ -18,7 +18,7 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new InstantiatePostRequestBody and sets the default values.
+     * Instantiates a new FileStorageContainerSettings and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -28,10 +28,10 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
-     * @return InstantiatePostRequestBody
+     * @return FileStorageContainerSettings
     */
-    public static function createFromDiscriminatorValue(ParseNode $parseNode): InstantiatePostRequestBody {
-        return new InstantiatePostRequestBody();
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): FileStorageContainerSettings {
+        return new FileStorageContainerSettings();
     }
 
     /**
@@ -56,39 +56,39 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the displayName property value. The displayName property
-     * @return string|null
-    */
-    public function getDisplayName(): ?string {
-        $val = $this->getBackingStore()->get('displayName');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
-            'serviceManagementReference' => fn(ParseNode $n) => $o->setServiceManagementReference($n->getStringValue()),
+            'isOcrEnabled' => fn(ParseNode $n) => $o->setIsOcrEnabled($n->getBooleanValue()),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
 
     /**
-     * Gets the serviceManagementReference property value. The serviceManagementReference property
+     * Gets the isOcrEnabled property value. Indicates whether optical character recognition (OCR) is enabled for a given container. When OCR is enabled on a container, OCR extraction is performed for new and updated documents of supported types. The extracted fields are added to the metadata of the document, enabling end-user search and search-driven solutions. Changing this property from true to false doesn't remove OCR metadata that was created while it was true. Default value is false.
+     * @return bool|null
+    */
+    public function getIsOcrEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isOcrEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOcrEnabled'");
+    }
+
+    /**
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
-    public function getServiceManagementReference(): ?string {
-        $val = $this->getBackingStore()->get('serviceManagementReference');
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
         if (is_null($val) || is_string($val)) {
             return $val;
         }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceManagementReference'");
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,8 +96,8 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeStringValue('displayName', $this->getDisplayName());
-        $writer->writeStringValue('serviceManagementReference', $this->getServiceManagementReference());
+        $writer->writeBooleanValue('isOcrEnabled', $this->getIsOcrEnabled());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -118,19 +118,19 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the displayName property value. The displayName property
-     * @param string|null $value Value to set for the displayName property.
+     * Sets the isOcrEnabled property value. Indicates whether optical character recognition (OCR) is enabled for a given container. When OCR is enabled on a container, OCR extraction is performed for new and updated documents of supported types. The extracted fields are added to the metadata of the document, enabling end-user search and search-driven solutions. Changing this property from true to false doesn't remove OCR metadata that was created while it was true. Default value is false.
+     * @param bool|null $value Value to set for the isOcrEnabled property.
     */
-    public function setDisplayName(?string $value): void {
-        $this->getBackingStore()->set('displayName', $value);
+    public function setIsOcrEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isOcrEnabled', $value);
     }
 
     /**
-     * Sets the serviceManagementReference property value. The serviceManagementReference property
-     * @param string|null $value Value to set for the serviceManagementReference property.
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the @odata.type property.
     */
-    public function setServiceManagementReference(?string $value): void {
-        $this->getBackingStore()->set('serviceManagementReference', $value);
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }
