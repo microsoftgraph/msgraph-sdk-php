@@ -23,6 +23,7 @@ use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceRep
 use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceSummaryReport\GetPolicyNonComplianceSummaryReportRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\GetReportFilters\GetReportFiltersRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\GetSettingNonComplianceReport\GetSettingNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\RetrieveDeviceAppInstallationStatusReport\RetrieveDeviceAppInstallationStatusReportRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementReports;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -166,6 +167,13 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     */
     public function getSettingNonComplianceReport(): GetSettingNonComplianceReportRequestBuilder {
         return new GetSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the retrieveDeviceAppInstallationStatusReport method.
+    */
+    public function retrieveDeviceAppInstallationStatusReport(): RetrieveDeviceAppInstallationStatusReportRequestBuilder {
+        return new RetrieveDeviceAppInstallationStatusReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

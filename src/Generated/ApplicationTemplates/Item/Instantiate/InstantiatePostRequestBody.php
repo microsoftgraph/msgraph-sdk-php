@@ -75,7 +75,20 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
         $o = $this;
         return  [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'serviceManagementReference' => fn(ParseNode $n) => $o->setServiceManagementReference($n->getStringValue()),
         ];
+    }
+
+    /**
+     * Gets the serviceManagementReference property value. The serviceManagementReference property
+     * @return string|null
+    */
+    public function getServiceManagementReference(): ?string {
+        $val = $this->getBackingStore()->get('serviceManagementReference');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceManagementReference'");
     }
 
     /**
@@ -84,6 +97,7 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('serviceManagementReference', $this->getServiceManagementReference());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -109,6 +123,14 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the serviceManagementReference property value. The serviceManagementReference property
+     * @param string|null $value Value to set for the serviceManagementReference property.
+    */
+    public function setServiceManagementReference(?string $value): void {
+        $this->getBackingStore()->set('serviceManagementReference', $value);
     }
 
 }

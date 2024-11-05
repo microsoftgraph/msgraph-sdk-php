@@ -30,7 +30,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get newly created, updated, or deleted applications without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted applications without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeltaGetResponse|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get newly created, updated, or deleted applications without performing a full read of the entire resource collection. For details, see Using delta query.
+     * Get newly created, updated, or deleted applications without performing a full read of the entire resource collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

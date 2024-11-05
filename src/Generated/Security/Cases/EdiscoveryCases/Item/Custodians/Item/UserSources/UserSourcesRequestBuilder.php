@@ -52,7 +52,7 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @param UserSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserSourceCollectionResponse|null>
      * @throws Exception
@@ -83,7 +83,7 @@ class UserSourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the userSource objects associated with an ediscoveryCustodian.
+     * Get a list of the userSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
      * @param UserSourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

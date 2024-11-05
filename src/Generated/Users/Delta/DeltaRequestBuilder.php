@@ -30,7 +30,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get newly created, updated, or deleted users without having to perform a full read of the entire user collection. See change tracking for details.
+     * Get newly created, updated, or deleted users without having to perform a full read of the entire user collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeltaGetResponse|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get newly created, updated, or deleted users without having to perform a full read of the entire user collection. See change tracking for details.
+     * Get newly created, updated, or deleted users without having to perform a full read of the entire user collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Owners\OwnersRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\OwnersWithUserPrincipalName\OwnersWithUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Models\Community;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -74,6 +75,15 @@ class CommunityItemRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [Community::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.community entity.
+     * @param string $userPrincipalName Alternate key of user
+     * @return OwnersWithUserPrincipalNameRequestBuilder
+    */
+    public function ownersWithUserPrincipalName(string $userPrincipalName): OwnersWithUserPrincipalNameRequestBuilder {
+        return new OwnersWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter, $userPrincipalName);
     }
 
     /**
