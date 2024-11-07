@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ParticipantBase extends Entity implements Parsable 
 {
@@ -35,12 +36,27 @@ class ParticipantBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the administrativeUnitInfos property value. The administrativeUnitInfos property
+     * @return array<AdministrativeUnitInfo>|null
+    */
+    public function getAdministrativeUnitInfos(): ?array {
+        $val = $this->getBackingStore()->get('administrativeUnitInfos');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AdministrativeUnitInfo::class);
+            /** @var array<AdministrativeUnitInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'administrativeUnitInfos'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'administrativeUnitInfos' => fn(ParseNode $n) => $o->setAdministrativeUnitInfos($n->getCollectionOfObjectValues([AdministrativeUnitInfo::class, 'createFromDiscriminatorValue'])),
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([CommunicationsIdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -63,7 +79,16 @@ class ParticipantBase extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('administrativeUnitInfos', $this->getAdministrativeUnitInfos());
         $writer->writeObjectValue('identity', $this->getIdentity());
+    }
+
+    /**
+     * Sets the administrativeUnitInfos property value. The administrativeUnitInfos property
+     * @param array<AdministrativeUnitInfo>|null $value Value to set for the administrativeUnitInfos property.
+    */
+    public function setAdministrativeUnitInfos(?array $value): void {
+        $this->getBackingStore()->set('administrativeUnitInfos', $value);
     }
 
     /**

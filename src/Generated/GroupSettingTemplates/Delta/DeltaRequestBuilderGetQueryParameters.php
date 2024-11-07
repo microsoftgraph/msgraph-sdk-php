@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\GroupSettingTemplates\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get newly created, updated, or deleted directory objects without performing a full read of the entire directoryObject collection. For more information about the delta function, see Use delta query to track changes in Microsoft Graph data for details.
+ * Get newly created, updated, or deleted directory objects without performing a full read of the entire directoryObject collection. For more information, see Use delta query to track changes in Microsoft Graph data for details.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

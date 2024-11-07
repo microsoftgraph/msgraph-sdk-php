@@ -26,7 +26,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the additionalOptions property value. The additionalOptions property
+     * Gets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
      * @return AdditionalOptions|null
     */
     public function getAdditionalOptions(): ?AdditionalOptions {
@@ -38,7 +38,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the export by the user.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -50,7 +50,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of export provided by the user.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -62,7 +62,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportCriteria property value. The exportCriteria property
+     * Gets the exportCriteria property value. Items to be included in the export. The possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @return ExportCriteria|null
     */
     public function getExportCriteria(): ?ExportCriteria {
@@ -74,7 +74,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportFileMetadata property value. The exportFileMetadata property
+     * Gets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @return array<ExportFileMetadata>|null
     */
     public function getExportFileMetadata(): ?array {
@@ -88,7 +88,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportFormat property value. The exportFormat property
+     * Gets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
      * @return ExportFormat|null
     */
     public function getExportFormat(): ?ExportFormat {
@@ -100,7 +100,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportLocation property value. The exportLocation property
+     * Gets the exportLocation property value. Location scope for partially indexed items. You can choose to include partially indexed items only in responsive locations with search hits or in all targeted locations. The possible values are: responsiveLocations, nonresponsiveLocations, unknownFutureValue.
      * @return ExportLocation|null
     */
     public function getExportLocation(): ?ExportLocation {
@@ -112,7 +112,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportSingleItems property value. The exportSingleItems property
+     * Gets the exportSingleItems property value. Indicates whether to export single items.
      * @return bool|null
     */
     public function getExportSingleItems(): ?bool {
@@ -143,7 +143,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the search property value. The search property
+     * Gets the search property value. The eDiscovery searches under each case.
      * @return EdiscoverySearch|null
     */
     public function getSearch(): ?EdiscoverySearch {
@@ -172,7 +172,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the additionalOptions property value. The additionalOptions property
+     * Sets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
      * @param AdditionalOptions|null $value Value to set for the additionalOptions property.
     */
     public function setAdditionalOptions(?AdditionalOptions $value): void {
@@ -180,7 +180,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the export by the user.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -188,7 +188,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of export provided by the user.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -196,7 +196,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportCriteria property value. The exportCriteria property
+     * Sets the exportCriteria property value. Items to be included in the export. The possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @param ExportCriteria|null $value Value to set for the exportCriteria property.
     */
     public function setExportCriteria(?ExportCriteria $value): void {
@@ -204,7 +204,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportFileMetadata property value. The exportFileMetadata property
+     * Sets the exportFileMetadata property value. Contains the properties for an export file metadata, including downloadUrl, fileName, and size.
      * @param array<ExportFileMetadata>|null $value Value to set for the exportFileMetadata property.
     */
     public function setExportFileMetadata(?array $value): void {
@@ -212,7 +212,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportFormat property value. The exportFormat property
+     * Sets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
      * @param ExportFormat|null $value Value to set for the exportFormat property.
     */
     public function setExportFormat(?ExportFormat $value): void {
@@ -220,7 +220,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportLocation property value. The exportLocation property
+     * Sets the exportLocation property value. Location scope for partially indexed items. You can choose to include partially indexed items only in responsive locations with search hits or in all targeted locations. The possible values are: responsiveLocations, nonresponsiveLocations, unknownFutureValue.
      * @param ExportLocation|null $value Value to set for the exportLocation property.
     */
     public function setExportLocation(?ExportLocation $value): void {
@@ -228,7 +228,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportSingleItems property value. The exportSingleItems property
+     * Sets the exportSingleItems property value. Indicates whether to export single items.
      * @param bool|null $value Value to set for the exportSingleItems property.
     */
     public function setExportSingleItems(?bool $value): void {
@@ -236,7 +236,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the search property value. The search property
+     * Sets the search property value. The eDiscovery searches under each case.
      * @param EdiscoverySearch|null $value Value to set for the search property.
     */
     public function setSearch(?EdiscoverySearch $value): void {

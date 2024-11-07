@@ -56,12 +56,25 @@ class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
+     * Gets the clientAppId property value. The registration ID of the Microsoft Entra app ID associated with the teamsApp.
+     * @return string|null
+    */
+    public function getClientAppId(): ?string {
+        $val = $this->getBackingStore()->get('clientAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientAppId'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'clientAppId' => fn(ParseNode $n) => $o->setClientAppId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'requiredPermissionSet' => fn(ParseNode $n) => $o->setRequiredPermissionSet($n->getObjectValue([TeamsAppPermissionSet::class, 'createFromDiscriminatorValue'])),
         ];
@@ -96,6 +109,7 @@ class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel, Parsab
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('clientAppId', $this->getClientAppId());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('requiredPermissionSet', $this->getRequiredPermissionSet());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -115,6 +129,14 @@ class TeamsAppAuthorization implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the clientAppId property value. The registration ID of the Microsoft Entra app ID associated with the teamsApp.
+     * @param string|null $value Value to set for the clientAppId property.
+    */
+    public function setClientAppId(?string $value): void {
+        $this->getBackingStore()->set('clientAppId', $value);
     }
 
     /**

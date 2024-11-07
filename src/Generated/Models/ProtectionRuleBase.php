@@ -124,7 +124,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue.
+     * Gets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue. The draft member is currently unsupported.
      * @return ProtectionRuleStatus|null
     */
     public function getStatus(): ?ProtectionRuleStatus {
@@ -199,7 +199,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue.
+     * Sets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue. The draft member is currently unsupported.
      * @param ProtectionRuleStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ProtectionRuleStatus $value): void {

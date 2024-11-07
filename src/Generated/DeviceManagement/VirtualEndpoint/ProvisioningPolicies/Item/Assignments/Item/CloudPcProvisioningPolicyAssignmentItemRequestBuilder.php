@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\Provisionin
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\ProvisioningPolicies\Item\Assignments\Item\AssignedUsers\AssignedUsersRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\ProvisioningPolicies\Item\Assignments\Item\AssignedUsersWithUserPrincipalName\AssignedUsersWithUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Models\CloudPcProvisioningPolicyAssignment;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -24,6 +25,15 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
         return new AssignedUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the assignedUsers property of the microsoft.graph.cloudPcProvisioningPolicyAssignment entity.
+     * @param string $userPrincipalName Alternate key of user
+     * @return AssignedUsersWithUserPrincipalNameRequestBuilder
+    */
+    public function assignedUsersWithUserPrincipalName(string $userPrincipalName): AssignedUsersWithUserPrincipalNameRequestBuilder {
+        return new AssignedUsersWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter, $userPrincipalName);
+    }
+
     /**
      * Instantiates a new CloudPcProvisioningPolicyAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

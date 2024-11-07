@@ -76,6 +76,7 @@ use Microsoft\Graph\Generated\TeamsTemplates\TeamsTemplatesRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\TeamworkRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\TenantRelationshipsRequestBuilder;
 use Microsoft\Graph\Generated\Users\UsersRequestBuilder;
+use Microsoft\Graph\Generated\UsersWithUserPrincipalName\UsersWithUserPrincipalNameRequestBuilder;
 use Microsoft\Kiota\Abstractions\ApiClientBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -643,6 +644,15 @@ class BaseGraphClient extends BaseRequestBuilder
     */
     public function servicePrincipalsWithAppId(string $appId): ServicePrincipalsWithAppIdRequestBuilder {
         return new ServicePrincipalsWithAppIdRequestBuilder($this->pathParameters, $this->requestAdapter, $appId);
+    }
+
+    /**
+     * Provides operations to manage the collection of user entities.
+     * @param string $userPrincipalName Alternate key of user
+     * @return UsersWithUserPrincipalNameRequestBuilder
+    */
+    public function usersWithUserPrincipalName(string $userPrincipalName): UsersWithUserPrincipalNameRequestBuilder {
+        return new UsersWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter, $userPrincipalName);
     }
 
 }

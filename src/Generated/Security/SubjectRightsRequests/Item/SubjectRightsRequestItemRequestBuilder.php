@@ -7,7 +7,9 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
 use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Approvers\ApproversRequestBuilder;
+use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\ApproversWithUserPrincipalName\ApproversWithUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Collaborators\CollaboratorsRequestBuilder;
+use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\CollaboratorsWithUserPrincipalName\CollaboratorsWithUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
 use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
 use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
@@ -64,6 +66,24 @@ class SubjectRightsRequestItemRequestBuilder extends BaseRequestBuilder
         return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the approvers property of the microsoft.graph.subjectRightsRequest entity.
+     * @param string $userPrincipalName Alternate key of user
+     * @return ApproversWithUserPrincipalNameRequestBuilder
+    */
+    public function approversWithUserPrincipalName(string $userPrincipalName): ApproversWithUserPrincipalNameRequestBuilder {
+        return new ApproversWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter, $userPrincipalName);
+    }
+
+    /**
+     * Provides operations to manage the collaborators property of the microsoft.graph.subjectRightsRequest entity.
+     * @param string $userPrincipalName Alternate key of user
+     * @return CollaboratorsWithUserPrincipalNameRequestBuilder
+    */
+    public function collaboratorsWithUserPrincipalName(string $userPrincipalName): CollaboratorsWithUserPrincipalNameRequestBuilder {
+        return new CollaboratorsWithUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter, $userPrincipalName);
+    }
+
     /**
      * Instantiates a new SubjectRightsRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

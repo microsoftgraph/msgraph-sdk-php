@@ -67,7 +67,7 @@ class EdiscoverySearch extends Search implements Parsable
     }
 
     /**
-     * Gets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * Gets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @return DataSourceScopes|null
     */
     public function getDataSourceScopes(): ?DataSourceScopes {
@@ -159,7 +159,7 @@ class EdiscoverySearch extends Search implements Parsable
     }
 
     /**
-     * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * Sets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @param DataSourceScopes|null $value Value to set for the dataSourceScopes property.
     */
     public function setDataSourceScopes(?DataSourceScopes $value): void {

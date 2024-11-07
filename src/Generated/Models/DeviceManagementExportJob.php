@@ -81,7 +81,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the format property value. Possible values for the file format of a report.
+     * Gets the format property value. Possible values for the file format of a report to be exported.
      * @return DeviceManagementReportFileFormat|null
     */
     public function getFormat(): ?DeviceManagementReportFileFormat {
@@ -213,7 +213,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the format property value. Possible values for the file format of a report.
+     * Sets the format property value. Possible values for the file format of a report to be exported.
      * @param DeviceManagementReportFileFormat|null $value Value to set for the format property.
     */
     public function setFormat(?DeviceManagementReportFileFormat $value): void {
