@@ -36,7 +36,7 @@ class ParticipantBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the administrativeUnitInfos property value. The administrativeUnitInfos property
+     * Gets the administrativeUnitInfos property value. List of administrativeUnitInfo objects for the call participant.
      * @return array<AdministrativeUnitInfo>|null
     */
     public function getAdministrativeUnitInfos(): ?array {
@@ -84,7 +84,7 @@ class ParticipantBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the administrativeUnitInfos property value. The administrativeUnitInfos property
+     * Sets the administrativeUnitInfos property value. List of administrativeUnitInfo objects for the call participant.
      * @param array<AdministrativeUnitInfo>|null $value Value to set for the administrativeUnitInfos property.
     */
     public function setAdministrativeUnitInfos(?array $value): void {
