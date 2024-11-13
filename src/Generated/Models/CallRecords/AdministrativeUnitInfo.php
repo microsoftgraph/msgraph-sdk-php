@@ -68,7 +68,7 @@ class AdministrativeUnitInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Unique identifier for the administrative unit.
      * @return string|null
     */
     public function getId(): ?string {
@@ -118,7 +118,7 @@ class AdministrativeUnitInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Unique identifier for the administrative unit.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

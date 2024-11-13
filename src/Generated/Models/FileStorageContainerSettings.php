@@ -68,7 +68,7 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isOcrEnabled property value. Indicates whether optical character recognition (OCR) is enabled for a given container. When OCR is enabled on a container, OCR extraction is performed for new and updated documents of supported types. The extracted fields are added to the metadata of the document, enabling end-user search and search-driven solutions. Changing this property from true to false doesn't remove OCR metadata that was created while it was true. Default value is false.
+     * Gets the isOcrEnabled property value. Indicates whether Optical Character Recognition (OCR) is enabled for the container. The default value is false. When set to true, OCR extraction is performed for new and updated documents of supported document types, and the extracted fields in the metadata of the document enable end-user search and search-driven solutions. When set to false, existing OCR metadata is not impacted. Optional. Read-write.
      * @return bool|null
     */
     public function getIsOcrEnabled(): ?bool {
@@ -118,7 +118,7 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isOcrEnabled property value. Indicates whether optical character recognition (OCR) is enabled for a given container. When OCR is enabled on a container, OCR extraction is performed for new and updated documents of supported types. The extracted fields are added to the metadata of the document, enabling end-user search and search-driven solutions. Changing this property from true to false doesn't remove OCR metadata that was created while it was true. Default value is false.
+     * Sets the isOcrEnabled property value. Indicates whether Optical Character Recognition (OCR) is enabled for the container. The default value is false. When set to true, OCR extraction is performed for new and updated documents of supported document types, and the extracted fields in the metadata of the document enable end-user search and search-driven solutions. When set to false, existing OCR metadata is not impacted. Optional. Read-write.
      * @param bool|null $value Value to set for the isOcrEnabled property.
     */
     public function setIsOcrEnabled(?bool $value): void {
