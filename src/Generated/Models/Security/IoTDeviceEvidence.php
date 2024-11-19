@@ -27,7 +27,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. The device ID.
      * @return string|null
     */
     public function getDeviceId(): ?string {
@@ -39,7 +39,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the deviceName property value. The deviceName property
+     * Gets the deviceName property value. The friendly name of the device.
      * @return string|null
     */
     public function getDeviceName(): ?string {
@@ -51,7 +51,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the devicePageLink property value. The devicePageLink property
+     * Gets the devicePageLink property value. The URL to the device page in the IoT Defender portal.
      * @return string|null
     */
     public function getDevicePageLink(): ?string {
@@ -63,7 +63,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the deviceSubType property value. The deviceSubType property
+     * Gets the deviceSubType property value. The device subtype.
      * @return string|null
     */
     public function getDeviceSubType(): ?string {
@@ -75,7 +75,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the deviceType property value. The deviceType property
+     * Gets the deviceType property value. The type of the device. For example, 'temperature sensor,' 'freezer,' 'wind turbine,' and so on.
      * @return string|null
     */
     public function getDeviceType(): ?string {
@@ -137,7 +137,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the importance property value. The importance property
+     * Gets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
      * @return IoTDeviceImportanceType|null
     */
     public function getImportance(): ?IoTDeviceImportanceType {
@@ -149,7 +149,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ioTHub property value. The ioTHub property
+     * Gets the ioTHub property value. The azureResourceEvidence entity that represents the IoT Hub that the device belongs to.
      * @return AzureResourceEvidence|null
     */
     public function getIoTHub(): ?AzureResourceEvidence {
@@ -161,7 +161,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ioTSecurityAgentId property value. The ioTSecurityAgentId property
+     * Gets the ioTSecurityAgentId property value. The ID of the Azure Security Center for the IoT agent that is running on the device.
      * @return string|null
     */
     public function getIoTSecurityAgentId(): ?string {
@@ -173,7 +173,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. The current IP address of the device.
      * @return IpEvidence|null
     */
     public function getIpAddress(): ?IpEvidence {
@@ -185,7 +185,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the isAuthorized property value. The isAuthorized property
+     * Gets the isAuthorized property value. Indicates whether the device classified as an authorized device.
      * @return bool|null
     */
     public function getIsAuthorized(): ?bool {
@@ -197,7 +197,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the isProgramming property value. The isProgramming property
+     * Gets the isProgramming property value. Indicates whether the device classified as a programming device.
      * @return bool|null
     */
     public function getIsProgramming(): ?bool {
@@ -209,7 +209,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the isScanner property value. The isScanner property
+     * Gets the isScanner property value. Indicates whether the device classified as a scanner.
      * @return bool|null
     */
     public function getIsScanner(): ?bool {
@@ -221,7 +221,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the macAddress property value. The macAddress property
+     * Gets the macAddress property value. The MAC address of the device.
      * @return string|null
     */
     public function getMacAddress(): ?string {
@@ -233,7 +233,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the manufacturer property value. The manufacturer property
+     * Gets the manufacturer property value. The manufacturer of the device.
      * @return string|null
     */
     public function getManufacturer(): ?string {
@@ -245,7 +245,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the model property value. The model property
+     * Gets the model property value. The model of the device.
      * @return string|null
     */
     public function getModel(): ?string {
@@ -257,7 +257,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the nics property value. The nics property
+     * Gets the nics property value. The current network interface controllers on the device.
      * @return array<NicEvidence>|null
     */
     public function getNics(): ?array {
@@ -271,7 +271,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the operatingSystem property value. The operatingSystem property
+     * Gets the operatingSystem property value. The operating system the device is running.
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
@@ -283,7 +283,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the owners property value. The owners property
+     * Gets the owners property value. The owners for the device.
      * @return array<string>|null
     */
     public function getOwners(): ?array {
@@ -297,7 +297,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the protocols property value. The protocols property
+     * Gets the protocols property value. The list of protocols that the device supports.
      * @return array<string>|null
     */
     public function getProtocols(): ?array {
@@ -311,7 +311,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the purdueLayer property value. The purdueLayer property
+     * Gets the purdueLayer property value. The Purdue Layer of the device.
      * @return string|null
     */
     public function getPurdueLayer(): ?string {
@@ -323,7 +323,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the sensor property value. The sensor property
+     * Gets the sensor property value. The sensor that monitors the device.
      * @return string|null
     */
     public function getSensor(): ?string {
@@ -335,7 +335,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the serialNumber property value. The serialNumber property
+     * Gets the serialNumber property value. The serial number of the device.
      * @return string|null
     */
     public function getSerialNumber(): ?string {
@@ -347,7 +347,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the site property value. The site property
+     * Gets the site property value. The site location of the device.
      * @return string|null
     */
     public function getSite(): ?string {
@@ -359,7 +359,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the source property value. The source property
+     * Gets the source property value. The source (microsoft/vendor) of the device entity.
      * @return string|null
     */
     public function getSource(): ?string {
@@ -371,7 +371,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the sourceRef property value. The sourceRef property
+     * Gets the sourceRef property value. A URL reference to the source item where the device is managed.
      * @return UrlEvidence|null
     */
     public function getSourceRef(): ?UrlEvidence {
@@ -383,7 +383,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the zone property value. The zone property
+     * Gets the zone property value. The zone location of the device within a site.
      * @return string|null
     */
     public function getZone(): ?string {
@@ -429,7 +429,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. The device ID.
      * @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {
@@ -437,7 +437,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the deviceName property value. The deviceName property
+     * Sets the deviceName property value. The friendly name of the device.
      * @param string|null $value Value to set for the deviceName property.
     */
     public function setDeviceName(?string $value): void {
@@ -445,7 +445,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the devicePageLink property value. The devicePageLink property
+     * Sets the devicePageLink property value. The URL to the device page in the IoT Defender portal.
      * @param string|null $value Value to set for the devicePageLink property.
     */
     public function setDevicePageLink(?string $value): void {
@@ -453,7 +453,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the deviceSubType property value. The deviceSubType property
+     * Sets the deviceSubType property value. The device subtype.
      * @param string|null $value Value to set for the deviceSubType property.
     */
     public function setDeviceSubType(?string $value): void {
@@ -461,7 +461,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the deviceType property value. The deviceType property
+     * Sets the deviceType property value. The type of the device. For example, 'temperature sensor,' 'freezer,' 'wind turbine,' and so on.
      * @param string|null $value Value to set for the deviceType property.
     */
     public function setDeviceType(?string $value): void {
@@ -469,7 +469,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the importance property value. The importance property
+     * Sets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
      * @param IoTDeviceImportanceType|null $value Value to set for the importance property.
     */
     public function setImportance(?IoTDeviceImportanceType $value): void {
@@ -477,7 +477,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ioTHub property value. The ioTHub property
+     * Sets the ioTHub property value. The azureResourceEvidence entity that represents the IoT Hub that the device belongs to.
      * @param AzureResourceEvidence|null $value Value to set for the ioTHub property.
     */
     public function setIoTHub(?AzureResourceEvidence $value): void {
@@ -485,7 +485,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ioTSecurityAgentId property value. The ioTSecurityAgentId property
+     * Sets the ioTSecurityAgentId property value. The ID of the Azure Security Center for the IoT agent that is running on the device.
      * @param string|null $value Value to set for the ioTSecurityAgentId property.
     */
     public function setIoTSecurityAgentId(?string $value): void {
@@ -493,7 +493,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. The current IP address of the device.
      * @param IpEvidence|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?IpEvidence $value): void {
@@ -501,7 +501,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the isAuthorized property value. The isAuthorized property
+     * Sets the isAuthorized property value. Indicates whether the device classified as an authorized device.
      * @param bool|null $value Value to set for the isAuthorized property.
     */
     public function setIsAuthorized(?bool $value): void {
@@ -509,7 +509,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the isProgramming property value. The isProgramming property
+     * Sets the isProgramming property value. Indicates whether the device classified as a programming device.
      * @param bool|null $value Value to set for the isProgramming property.
     */
     public function setIsProgramming(?bool $value): void {
@@ -517,7 +517,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the isScanner property value. The isScanner property
+     * Sets the isScanner property value. Indicates whether the device classified as a scanner.
      * @param bool|null $value Value to set for the isScanner property.
     */
     public function setIsScanner(?bool $value): void {
@@ -525,7 +525,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the macAddress property value. The macAddress property
+     * Sets the macAddress property value. The MAC address of the device.
      * @param string|null $value Value to set for the macAddress property.
     */
     public function setMacAddress(?string $value): void {
@@ -533,7 +533,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the manufacturer property value. The manufacturer property
+     * Sets the manufacturer property value. The manufacturer of the device.
      * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
@@ -541,7 +541,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the model property value. The model property
+     * Sets the model property value. The model of the device.
      * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
@@ -549,7 +549,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the nics property value. The nics property
+     * Sets the nics property value. The current network interface controllers on the device.
      * @param array<NicEvidence>|null $value Value to set for the nics property.
     */
     public function setNics(?array $value): void {
@@ -557,7 +557,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the operatingSystem property value. The operatingSystem property
+     * Sets the operatingSystem property value. The operating system the device is running.
      * @param string|null $value Value to set for the operatingSystem property.
     */
     public function setOperatingSystem(?string $value): void {
@@ -565,7 +565,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the owners property value. The owners property
+     * Sets the owners property value. The owners for the device.
      * @param array<string>|null $value Value to set for the owners property.
     */
     public function setOwners(?array $value): void {
@@ -573,7 +573,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the protocols property value. The protocols property
+     * Sets the protocols property value. The list of protocols that the device supports.
      * @param array<string>|null $value Value to set for the protocols property.
     */
     public function setProtocols(?array $value): void {
@@ -581,7 +581,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the purdueLayer property value. The purdueLayer property
+     * Sets the purdueLayer property value. The Purdue Layer of the device.
      * @param string|null $value Value to set for the purdueLayer property.
     */
     public function setPurdueLayer(?string $value): void {
@@ -589,7 +589,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the sensor property value. The sensor property
+     * Sets the sensor property value. The sensor that monitors the device.
      * @param string|null $value Value to set for the sensor property.
     */
     public function setSensor(?string $value): void {
@@ -597,7 +597,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the serialNumber property value. The serialNumber property
+     * Sets the serialNumber property value. The serial number of the device.
      * @param string|null $value Value to set for the serialNumber property.
     */
     public function setSerialNumber(?string $value): void {
@@ -605,7 +605,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the site property value. The site property
+     * Sets the site property value. The site location of the device.
      * @param string|null $value Value to set for the site property.
     */
     public function setSite(?string $value): void {
@@ -613,7 +613,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the source property value. The source property
+     * Sets the source property value. The source (microsoft/vendor) of the device entity.
      * @param string|null $value Value to set for the source property.
     */
     public function setSource(?string $value): void {
@@ -621,7 +621,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the sourceRef property value. The sourceRef property
+     * Sets the sourceRef property value. A URL reference to the source item where the device is managed.
      * @param UrlEvidence|null $value Value to set for the sourceRef property.
     */
     public function setSourceRef(?UrlEvidence $value): void {
@@ -629,7 +629,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the zone property value. The zone property
+     * Sets the zone property value. The zone location of the device within a site.
      * @param string|null $value Value to set for the zone property.
     */
     public function setZone(?string $value): void {
