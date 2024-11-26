@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Test;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
+use League\OAuth2\Client\Grant\AuthorizationCode;
 use League\OAuth2\Client\Token\AccessToken;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAccessTokenProvider;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
@@ -103,10 +104,12 @@ class GraphServiceClientTest extends TestCase
         $this->assertEquals($this->testJWT, $customCache->getTokenWithContext($tokenRequestContext)->getToken());
 
         // hydrate another cache for follow-up request
-        $newCache = new InMemoryAccessTokenCache($tokenRequestContext, $customCache->getTokenWithContext($tokenRequestContext));
+        $previousAccessToken = $customCache->getTokenWithContext($tokenRequestContext);
+        $newTokenRequestContext = new AuthorizationCodeContext('tenant', 'clientId', 'clientSecret', 'redirectUri', 'code');
+        $newCache = new InMemoryAccessTokenCache($newTokenRequestContext, $previousAccessToken);
         $accessTokenProvider = GraphPhpLeagueAccessTokenProvider::createWithCache(
             $newCache,
-            $tokenRequestContext,
+            $newTokenRequestContext,
             $scopes
         );
         $client = GraphServiceClient::createWithRequestAdapter(
@@ -120,6 +123,7 @@ class GraphServiceClientTest extends TestCase
 
         $me = $client->me()->get()->wait();
         // cache is populated
-        $this->assertInstanceOf(AccessToken::class, $newCache->getTokenWithContext($tokenRequestContext));
+        $this->assertInstanceOf(AccessToken::class, $newCache->getTokenWithContext($newTokenRequestContext));
+        $this->assertEquals($this->testJWT, $newCache->getTokenWithContext($newTokenRequestContext)->getToken());
     }
 }
