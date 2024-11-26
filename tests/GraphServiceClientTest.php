@@ -100,6 +100,7 @@ class GraphServiceClientTest extends TestCase
 
         // cache is populated
         $this->assertInstanceOf(AccessToken::class, $customCache->getTokenWithContext($tokenRequestContext));
+        $this->assertEquals($this->testJWT, $customCache->getTokenWithContext($tokenRequestContext)->getToken());
 
         // hydrate another cache for follow-up request
         $newCache = new InMemoryAccessTokenCache($tokenRequestContext, $customCache->getTokenWithContext($tokenRequestContext));
@@ -119,6 +120,6 @@ class GraphServiceClientTest extends TestCase
 
         $me = $client->me()->get()->wait();
         // cache is populated
-        $this->assertInstanceOf(AccessToken::class, $customCache->getTokenWithContext($tokenRequestContext));
+        $this->assertInstanceOf(AccessToken::class, $newCache->getTokenWithContext($tokenRequestContext));
     }
 }
