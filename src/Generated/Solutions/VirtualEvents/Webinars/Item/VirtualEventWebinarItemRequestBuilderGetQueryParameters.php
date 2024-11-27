@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a virtualEventWebinar object.
+ * Read the properties and relationships of a virtualEventWebinar object. All roles can get the details of a webinar event.
 */
 class VirtualEventWebinarItemRequestBuilderGetQueryParameters 
 {

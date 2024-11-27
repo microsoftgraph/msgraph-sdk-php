@@ -61,7 +61,7 @@ class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param VirtualEventTownhallItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventTownhall|null>
      * @throws Exception
@@ -76,7 +76,7 @@ class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a virtualEventTownhall object.
+     * Update the properties of a virtualEventTownhall object. Only the Organizer and Co-organizer can make changes to a townhall event.
      * @param VirtualEventTownhall $body The request body
      * @param VirtualEventTownhallItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventTownhall|null>
@@ -110,7 +110,7 @@ class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param VirtualEventTownhallItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -131,7 +131,7 @@ class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a virtualEventTownhall object.
+     * Update the properties of a virtualEventTownhall object. Only the Organizer and Co-organizer can make changes to a townhall event.
      * @param VirtualEventTownhall $body The request body
      * @param VirtualEventTownhallItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
