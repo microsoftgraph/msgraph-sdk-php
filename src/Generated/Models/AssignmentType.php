@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Enum;
 
 class AssignmentType extends Enum {
-    public const REQUIRED = 'required';
-    public const RECOMMENDED = 'recommended';
-    public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
-    public const PEER_RECOMMENDED = 'peerRecommended';
+    public const REQUIRED = "required";
+    public const RECOMMENDED = "recommended";
+    public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const PEER_RECOMMENDED = "peerRecommended";
 }

@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Enum;
 
 class RoutingType extends Enum {
-    public const FORWARDED = 'forwarded';
-    public const LOOKUP = 'lookup';
-    public const SELF_FORK = 'selfFork';
-    public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
+    public const FORWARDED = "forwarded";
+    public const LOOKUP = "lookup";
+    public const SELF_FORK = "selfFork";
+    public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

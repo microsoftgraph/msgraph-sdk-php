@@ -47,7 +47,7 @@ class NicEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. The current IP address of the NIC.
      * @return IpEvidence|null
     */
     public function getIpAddress(): ?IpEvidence {
@@ -59,7 +59,7 @@ class NicEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the macAddress property value. The macAddress property
+     * Gets the macAddress property value. The MAC address of the NIC.
      * @return string|null
     */
     public function getMacAddress(): ?string {
@@ -71,7 +71,7 @@ class NicEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the vlans property value. The vlans property
+     * Gets the vlans property value. The current virtual local area networks of the NIC.
      * @return array<string>|null
     */
     public function getVlans(): ?array {
@@ -96,7 +96,7 @@ class NicEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. The current IP address of the NIC.
      * @param IpEvidence|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?IpEvidence $value): void {
@@ -104,7 +104,7 @@ class NicEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the macAddress property value. The macAddress property
+     * Sets the macAddress property value. The MAC address of the NIC.
      * @param string|null $value Value to set for the macAddress property.
     */
     public function setMacAddress(?string $value): void {
@@ -112,7 +112,7 @@ class NicEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the vlans property value. The vlans property
+     * Sets the vlans property value. The current virtual local area networks of the NIC.
      * @param array<string>|null $value Value to set for the vlans property.
     */
     public function setVlans(?array $value): void {
