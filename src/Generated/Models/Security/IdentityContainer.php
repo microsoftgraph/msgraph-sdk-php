@@ -34,6 +34,7 @@ class IdentityContainer extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'healthIssues' => fn(ParseNode $n) => $o->setHealthIssues($n->getCollectionOfObjectValues([HealthIssue::class, 'createFromDiscriminatorValue'])),
+            'sensors' => fn(ParseNode $n) => $o->setSensors($n->getCollectionOfObjectValues([Sensor::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -52,12 +53,27 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
+     * Gets the sensors property value. Represents a customer's Microsoft Defender for Identity sensors.
+     * @return array<Sensor>|null
+    */
+    public function getSensors(): ?array {
+        $val = $this->getBackingStore()->get('sensors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Sensor::class);
+            /** @var array<Sensor>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensors'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('healthIssues', $this->getHealthIssues());
+        $writer->writeCollectionOfObjectValues('sensors', $this->getSensors());
     }
 
     /**
@@ -66,6 +82,14 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setHealthIssues(?array $value): void {
         $this->getBackingStore()->set('healthIssues', $value);
+    }
+
+    /**
+     * Sets the sensors property value. Represents a customer's Microsoft Defender for Identity sensors.
+     * @param array<Sensor>|null $value Value to set for the sensors property.
+    */
+    public function setSensors(?array $value): void {
+        $this->getBackingStore()->set('sensors', $value);
     }
 
 }

@@ -61,6 +61,18 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
+     * Gets the authenticationFlows property value. The authenticationFlows property
+     * @return ConditionalAccessAuthenticationFlows|null
+    */
+    public function getAuthenticationFlows(): ?ConditionalAccessAuthenticationFlows {
+        $val = $this->getBackingStore()->get('authenticationFlows');
+        if (is_null($val) || $val instanceof ConditionalAccessAuthenticationFlows) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationFlows'");
+    }
+
+    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -114,6 +126,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
         $o = $this;
         return  [
             'applications' => fn(ParseNode $n) => $o->setApplications($n->getObjectValue([ConditionalAccessApplications::class, 'createFromDiscriminatorValue'])),
+            'authenticationFlows' => fn(ParseNode $n) => $o->setAuthenticationFlows($n->getObjectValue([ConditionalAccessAuthenticationFlows::class, 'createFromDiscriminatorValue'])),
             'clientApplications' => fn(ParseNode $n) => $o->setClientApplications($n->getObjectValue([ConditionalAccessClientApplications::class, 'createFromDiscriminatorValue'])),
             'clientAppTypes' => fn(ParseNode $n) => $o->setClientAppTypes($n->getCollectionOfEnumValues(ConditionalAccessClientApp::class)),
             'devices' => fn(ParseNode $n) => $o->setDevices($n->getObjectValue([ConditionalAccessDevices::class, 'createFromDiscriminatorValue'])),
@@ -236,6 +249,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('applications', $this->getApplications());
+        $writer->writeObjectValue('authenticationFlows', $this->getAuthenticationFlows());
         $writer->writeObjectValue('clientApplications', $this->getClientApplications());
         $writer->writeCollectionOfEnumValues('clientAppTypes', $this->getClientAppTypes());
         $writer->writeObjectValue('devices', $this->getDevices());
@@ -264,6 +278,14 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     */
     public function setApplications(?ConditionalAccessApplications $value): void {
         $this->getBackingStore()->set('applications', $value);
+    }
+
+    /**
+     * Sets the authenticationFlows property value. The authenticationFlows property
+     * @param ConditionalAccessAuthenticationFlows|null $value Value to set for the authenticationFlows property.
+    */
+    public function setAuthenticationFlows(?ConditionalAccessAuthenticationFlows $value): void {
+        $this->getBackingStore()->set('authenticationFlows', $value);
     }
 
     /**

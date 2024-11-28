@@ -39,7 +39,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete a microsoftAuthenticatorAuthenticationMethod object.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -69,7 +69,7 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder extends BaseR
     }
 
     /**
-     * Deletes a microsoftAuthenticatorAuthenticationMethod object.
+     * Delete a microsoftAuthenticatorAuthenticationMethod object.
      * @param MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

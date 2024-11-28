@@ -79,7 +79,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. All roles can get the details of a webinar event.
      * @param VirtualEventWebinarItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventWebinar|null>
      * @throws Exception
@@ -94,7 +94,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a virtualEventWebinar object.
+     * Update the properties of a virtualEventWebinar object. Only the Organizer and Co-organizer can make changes to a webinar event.
      * @param VirtualEventWebinar $body The request body
      * @param VirtualEventWebinarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventWebinar|null>
@@ -146,7 +146,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. All roles can get the details of a webinar event.
      * @param VirtualEventWebinarItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -167,7 +167,7 @@ class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a virtualEventWebinar object.
+     * Update the properties of a virtualEventWebinar object. Only the Organizer and Co-organizer can make changes to a webinar event.
      * @param VirtualEventWebinar $body The request body
      * @param VirtualEventWebinarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

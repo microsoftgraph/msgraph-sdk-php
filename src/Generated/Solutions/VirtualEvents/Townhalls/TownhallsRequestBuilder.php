@@ -52,7 +52,7 @@ class TownhallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param TownhallsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventTownhallCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class TownhallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read the properties and relationships of a virtualEventTownhall object.
+     * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
      * @param TownhallsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

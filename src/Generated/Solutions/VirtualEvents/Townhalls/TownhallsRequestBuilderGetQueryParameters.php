@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of a virtualEventTownhall object.
+ * Read the properties and relationships of a virtualEventTownhall object. All roles can get the details of a townhall event.
 */
 class TownhallsRequestBuilderGetQueryParameters 
 {
