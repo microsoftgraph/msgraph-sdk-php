@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey.
+ * Get a list of the bitlockerRecoveryKey objects and their properties.  This operation does not return the key property. For information about how to read the key property, see Get bitlockerRecoveryKey. You can use this API to programmatically iterate through the list of recovery keys in the tenant and identify devices with BitLocker enabled. For more information, see the sample PowerShell code in BitLocker recovery process.
 */
 class RecoveryKeysRequestBuilderGetQueryParameters 
 {

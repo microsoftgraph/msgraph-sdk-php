@@ -62,9 +62,23 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'isItemVersioningEnabled' => fn(ParseNode $n) => $o->setIsItemVersioningEnabled($n->getBooleanValue()),
             'isOcrEnabled' => fn(ParseNode $n) => $o->setIsOcrEnabled($n->getBooleanValue()),
+            'itemMajorVersionLimit' => fn(ParseNode $n) => $o->setItemMajorVersionLimit($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
+    }
+
+    /**
+     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * @return bool|null
+    */
+    public function getIsItemVersioningEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isItemVersioningEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isItemVersioningEnabled'");
     }
 
     /**
@@ -77,6 +91,18 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isOcrEnabled'");
+    }
+
+    /**
+     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * @return int|null
+    */
+    public function getItemMajorVersionLimit(): ?int {
+        $val = $this->getBackingStore()->get('itemMajorVersionLimit');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemMajorVersionLimit'");
     }
 
     /**
@@ -96,7 +122,9 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeBooleanValue('isItemVersioningEnabled', $this->getIsItemVersioningEnabled());
         $writer->writeBooleanValue('isOcrEnabled', $this->getIsOcrEnabled());
+        $writer->writeIntegerValue('itemMajorVersionLimit', $this->getItemMajorVersionLimit());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -118,11 +146,27 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
+     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * @param bool|null $value Value to set for the isItemVersioningEnabled property.
+    */
+    public function setIsItemVersioningEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isItemVersioningEnabled', $value);
+    }
+
+    /**
      * Sets the isOcrEnabled property value. Indicates whether Optical Character Recognition (OCR) is enabled for the container. The default value is false. When set to true, OCR extraction is performed for new and updated documents of supported document types, and the extracted fields in the metadata of the document enable end-user search and search-driven solutions. When set to false, existing OCR metadata is not impacted. Optional. Read-write.
      * @param bool|null $value Value to set for the isOcrEnabled property.
     */
     public function setIsOcrEnabled(?bool $value): void {
         $this->getBackingStore()->set('isOcrEnabled', $value);
+    }
+
+    /**
+     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * @param int|null $value Value to set for the itemMajorVersionLimit property.
+    */
+    public function setItemMajorVersionLimit(?int $value): void {
+        $this->getBackingStore()->set('itemMajorVersionLimit', $value);
     }
 
     /**

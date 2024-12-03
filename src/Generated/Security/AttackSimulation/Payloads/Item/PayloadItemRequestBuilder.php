@@ -45,10 +45,11 @@ class PayloadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign payload in a tenant.
+     * Get an attack simulation campaign payload for a tenant.
      * @param PayloadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Payload|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/payload-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PayloadItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class PayloadItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign payload in a tenant.
+     * Get an attack simulation campaign payload for a tenant.
      * @param PayloadItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
