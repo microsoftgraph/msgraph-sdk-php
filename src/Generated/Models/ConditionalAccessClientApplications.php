@@ -125,7 +125,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * Gets the servicePrincipalFilter property value. Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
      * @return ConditionalAccessFilter|null
     */
     public function getServicePrincipalFilter(): ?ConditionalAccessFilter {
@@ -189,7 +189,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the servicePrincipalFilter property value. The servicePrincipalFilter property
+     * Sets the servicePrincipalFilter property value. Filter that defines the dynamic-servicePrincipal-syntax rule to include/exclude service principals. A filter can use custom security attributes to include/exclude service principals.
      * @param ConditionalAccessFilter|null $value Value to set for the servicePrincipalFilter property.
     */
     public function setServicePrincipalFilter(?ConditionalAccessFilter $value): void {

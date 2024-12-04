@@ -68,7 +68,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
+     * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Maximum length is 256 characters. Read-only. Supports $filter (eq and startswith).
      * @return string|null
     */
     public function getPrincipalDisplayName(): ?string {
@@ -104,7 +104,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
+     * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made. Maximum length is 256 characters.
      * @return string|null
     */
     public function getResourceDisplayName(): ?string {
@@ -159,7 +159,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
+     * Sets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Maximum length is 256 characters. Read-only. Supports $filter (eq and startswith).
      * @param string|null $value Value to set for the principalDisplayName property.
     */
     public function setPrincipalDisplayName(?string $value): void {
@@ -183,7 +183,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
+     * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made. Maximum length is 256 characters.
      * @param string|null $value Value to set for the resourceDisplayName property.
     */
     public function setResourceDisplayName(?string $value): void {
