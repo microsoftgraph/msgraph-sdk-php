@@ -126,4 +126,10 @@ class GraphServiceClientTest extends TestCase
         $this->assertInstanceOf(AccessToken::class, $newCache->getTokenWithContext($newTokenRequestContext));
         $this->assertEquals($this->testJWT, $newCache->getTokenWithContext($newTokenRequestContext)->getToken());
     }
+
+    public function testNationalCloudUsed(): void
+    {
+        $client = new GraphServiceClient(new ClientCredentialContext('tenant', 'client', 'secret'), [], NationalCloud::US_GOV);
+        $this->assertEquals(NationalCloud::US_GOV.'/v1.0', $client->getRequestAdapter()->getBaseUrl());
+    }
 }

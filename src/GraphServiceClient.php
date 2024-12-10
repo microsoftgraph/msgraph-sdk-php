@@ -8,6 +8,7 @@
 
 namespace Microsoft\Graph;
 
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAccessTokenProvider;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 use Microsoft\Graph\Core\NationalCloud;
 use Microsoft\Graph\Generated\BaseGraphClient;
@@ -45,9 +46,13 @@ class GraphServiceClient extends BaseGraphClient
             parent::__construct($requestAdapter);
             return;
         }
-        parent::__construct(new GraphRequestAdapter(new GraphPhpLeagueAuthenticationProvider(
-            $tokenRequestContext, $scopes, $nationalCloud
-        )));
+        $defaultRequestAdapter = new GraphRequestAdapter(
+            GraphPhpLeagueAuthenticationProvider::createWithAccessTokenProvider(
+                new GraphPhpLeagueAccessTokenProvider($tokenRequestContext, $scopes, $nationalCloud)
+            )
+        );
+        $defaultRequestAdapter->setBaseUrl($nationalCloud.'/v1.0');
+        parent::__construct($defaultRequestAdapter);
     }
 
     /**
