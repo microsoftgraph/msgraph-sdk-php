@@ -26,7 +26,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the draftOpenShift property value. An unpublished open shift.
+     * Gets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
      * @return OpenShiftItem|null
     */
     public function getDraftOpenShift(): ?OpenShiftItem {
@@ -51,7 +51,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
+     * Gets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
      * @return string|null
     */
     public function getSchedulingGroupId(): ?string {
@@ -63,7 +63,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the sharedOpenShift property value. A published open shift.
+     * Gets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
      * @return OpenShiftItem|null
     */
     public function getSharedOpenShift(): ?OpenShiftItem {
@@ -86,7 +86,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the draftOpenShift property value. An unpublished open shift.
+     * Sets the draftOpenShift property value. Draft changes in the openShift are only visible to managers until they're shared.
      * @param OpenShiftItem|null $value Value to set for the draftOpenShift property.
     */
     public function setDraftOpenShift(?OpenShiftItem $value): void {
@@ -94,7 +94,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the schedulingGroupId property value. ID for the scheduling group that the open shift belongs to.
+     * Sets the schedulingGroupId property value. The ID of the schedulingGroup that contains the openShift.
      * @param string|null $value Value to set for the schedulingGroupId property.
     */
     public function setSchedulingGroupId(?string $value): void {
@@ -102,7 +102,7 @@ class OpenShift extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the sharedOpenShift property value. A published open shift.
+     * Sets the sharedOpenShift property value. The shared version of this openShift that is viewable by both employees and managers.
      * @param OpenShiftItem|null $value Value to set for the sharedOpenShift property.
     */
     public function setSharedOpenShift(?OpenShiftItem $value): void {

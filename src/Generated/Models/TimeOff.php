@@ -26,7 +26,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
+     * Gets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it's visible to team members. Required.
      * @return TimeOffItem|null
     */
     public function getDraftTimeOff(): ?TimeOffItem {
@@ -86,7 +86,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it is visible to team members. Required.
+     * Sets the draftTimeOff property value. The draft version of this timeOff item that is viewable by managers. It must be shared before it's visible to team members. Required.
      * @param TimeOffItem|null $value Value to set for the draftTimeOff property.
     */
     public function setDraftTimeOff(?TimeOffItem $value): void {

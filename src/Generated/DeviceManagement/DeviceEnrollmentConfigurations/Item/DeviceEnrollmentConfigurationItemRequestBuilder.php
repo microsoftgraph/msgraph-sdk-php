@@ -55,11 +55,11 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Deletes a deviceEnrollmentLimitConfiguration.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -70,11 +70,11 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceEnrollmentConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +85,12 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the properties of a deviceEnrollmentLimitConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceEnrollmentConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -101,7 +101,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+     * Deletes a deviceEnrollmentLimitConfiguration.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +119,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+     * Read properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -140,7 +140,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+     * Update the properties of a deviceEnrollmentLimitConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
