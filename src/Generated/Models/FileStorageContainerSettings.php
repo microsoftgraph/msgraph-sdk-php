@@ -70,7 +70,7 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * Gets the isItemVersioningEnabled property value. Indicates whether versioning is enabled for items in the container. Optional. Read-write.
      * @return bool|null
     */
     public function getIsItemVersioningEnabled(): ?bool {
@@ -94,7 +94,7 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * Gets the itemMajorVersionLimit property value. The maximum major versions allowed for items in the container. Optional. Read-write.
      * @return int|null
     */
     public function getItemMajorVersionLimit(): ?int {
@@ -146,7 +146,7 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * Sets the isItemVersioningEnabled property value. Indicates whether versioning is enabled for items in the container. Optional. Read-write.
      * @param bool|null $value Value to set for the isItemVersioningEnabled property.
     */
     public function setIsItemVersioningEnabled(?bool $value): void {
@@ -162,7 +162,7 @@ class FileStorageContainerSettings implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * Sets the itemMajorVersionLimit property value. The maximum major versions allowed for items in the container. Optional. Read-write.
      * @param int|null $value Value to set for the itemMajorVersionLimit property.
     */
     public function setItemMajorVersionLimit(?int $value): void {

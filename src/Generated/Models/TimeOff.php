@@ -45,9 +45,22 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'draftTimeOff' => fn(ParseNode $n) => $o->setDraftTimeOff($n->getObjectValue([TimeOffItem::class, 'createFromDiscriminatorValue'])),
+            'isStagedForDeletion' => fn(ParseNode $n) => $o->setIsStagedForDeletion($n->getBooleanValue()),
             'sharedTimeOff' => fn(ParseNode $n) => $o->setSharedTimeOff($n->getObjectValue([TimeOffItem::class, 'createFromDiscriminatorValue'])),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
+     * @return bool|null
+    */
+    public function getIsStagedForDeletion(): ?bool {
+        $val = $this->getBackingStore()->get('isStagedForDeletion');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isStagedForDeletion'");
     }
 
     /**
@@ -81,6 +94,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('draftTimeOff', $this->getDraftTimeOff());
+        $writer->writeBooleanValue('isStagedForDeletion', $this->getIsStagedForDeletion());
         $writer->writeObjectValue('sharedTimeOff', $this->getSharedTimeOff());
         $writer->writeStringValue('userId', $this->getUserId());
     }
@@ -91,6 +105,14 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
     */
     public function setDraftTimeOff(?TimeOffItem $value): void {
         $this->getBackingStore()->set('draftTimeOff', $value);
+    }
+
+    /**
+     * Sets the isStagedForDeletion property value. The timeOff is marked for deletion, a process that is finalized when the schedule is shared.
+     * @param bool|null $value Value to set for the isStagedForDeletion property.
+    */
+    public function setIsStagedForDeletion(?bool $value): void {
+        $this->getBackingStore()->set('isStagedForDeletion', $value);
     }
 
     /**

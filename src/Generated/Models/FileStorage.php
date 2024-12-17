@@ -40,6 +40,20 @@ class FileStorage extends Entity implements Parsable
     }
 
     /**
+     * Gets the deletedContainers property value. The deletedContainers property
+     * @return array<FileStorageContainer>|null
+    */
+    public function getDeletedContainers(): ?array {
+        $val = $this->getBackingStore()->get('deletedContainers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, FileStorageContainer::class);
+            /** @var array<FileStorageContainer>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedContainers'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -47,6 +61,7 @@ class FileStorage extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'containers' => fn(ParseNode $n) => $o->setContainers($n->getCollectionOfObjectValues([FileStorageContainer::class, 'createFromDiscriminatorValue'])),
+            'deletedContainers' => fn(ParseNode $n) => $o->setDeletedContainers($n->getCollectionOfObjectValues([FileStorageContainer::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -57,6 +72,7 @@ class FileStorage extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('containers', $this->getContainers());
+        $writer->writeCollectionOfObjectValues('deletedContainers', $this->getDeletedContainers());
     }
 
     /**
@@ -65,6 +81,14 @@ class FileStorage extends Entity implements Parsable
     */
     public function setContainers(?array $value): void {
         $this->getBackingStore()->set('containers', $value);
+    }
+
+    /**
+     * Sets the deletedContainers property value. The deletedContainers property
+     * @param array<FileStorageContainer>|null $value Value to set for the deletedContainers property.
+    */
+    public function setDeletedContainers(?array $value): void {
+        $this->getBackingStore()->set('deletedContainers', $value);
     }
 
 }

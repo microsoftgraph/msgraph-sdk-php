@@ -734,6 +734,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.provisioningObjectSummary': return new ProvisioningObjectSummary();
                 case '#microsoft.graph.rbacApplication': return new RbacApplication();
                 case '#microsoft.graph.recordOperation': return new RecordOperation();
+                case '#microsoft.graph.recycleBin': return new RecycleBin();
+                case '#microsoft.graph.recycleBinItem': return new RecycleBinItem();
                 case '#microsoft.graph.referenceAttachment': return new ReferenceAttachment();
                 case '#microsoft.graph.relyingPartyDetailedSummary': return new RelyingPartyDetailedSummary();
                 case '#microsoft.graph.remoteAssistancePartner': return new RemoteAssistancePartner();
