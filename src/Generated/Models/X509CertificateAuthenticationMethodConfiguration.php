@@ -53,6 +53,18 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
+     * Gets the crlValidationConfiguration property value. The crlValidationConfiguration property
+     * @return X509CertificateCRLValidationConfiguration|null
+    */
+    public function getCrlValidationConfiguration(): ?X509CertificateCRLValidationConfiguration {
+        $val = $this->getBackingStore()->get('crlValidationConfiguration');
+        if (is_null($val) || $val instanceof X509CertificateCRLValidationConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'crlValidationConfiguration'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -61,6 +73,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationModeConfiguration' => fn(ParseNode $n) => $o->setAuthenticationModeConfiguration($n->getObjectValue([X509CertificateAuthenticationModeConfiguration::class, 'createFromDiscriminatorValue'])),
             'certificateUserBindings' => fn(ParseNode $n) => $o->setCertificateUserBindings($n->getCollectionOfObjectValues([X509CertificateUserBinding::class, 'createFromDiscriminatorValue'])),
+            'crlValidationConfiguration' => fn(ParseNode $n) => $o->setCrlValidationConfiguration($n->getObjectValue([X509CertificateCRLValidationConfiguration::class, 'createFromDiscriminatorValue'])),
             'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -87,6 +100,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
         parent::serialize($writer);
         $writer->writeObjectValue('authenticationModeConfiguration', $this->getAuthenticationModeConfiguration());
         $writer->writeCollectionOfObjectValues('certificateUserBindings', $this->getCertificateUserBindings());
+        $writer->writeObjectValue('crlValidationConfiguration', $this->getCrlValidationConfiguration());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
     }
 
@@ -104,6 +118,14 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     */
     public function setCertificateUserBindings(?array $value): void {
         $this->getBackingStore()->set('certificateUserBindings', $value);
+    }
+
+    /**
+     * Sets the crlValidationConfiguration property value. The crlValidationConfiguration property
+     * @param X509CertificateCRLValidationConfiguration|null $value Value to set for the crlValidationConfiguration property.
+    */
+    public function setCrlValidationConfiguration(?X509CertificateCRLValidationConfiguration $value): void {
+        $this->getBackingStore()->set('crlValidationConfiguration', $value);
     }
 
     /**

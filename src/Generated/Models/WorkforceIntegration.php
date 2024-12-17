@@ -50,6 +50,18 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     }
 
     /**
+     * Gets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * @return EligibilityFilteringEnabledEntities|null
+    */
+    public function getEligibilityFilteringEnabledEntities(): ?EligibilityFilteringEnabledEntities {
+        $val = $this->getBackingStore()->get('eligibilityFilteringEnabledEntities');
+        if (is_null($val) || $val instanceof EligibilityFilteringEnabledEntities) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eligibilityFilteringEnabledEntities'");
+    }
+
+    /**
      * Gets the encryption property value. The workforce integration encryption resource.
      * @return WorkforceIntegrationEncryption|null
     */
@@ -70,6 +82,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'apiVersion' => fn(ParseNode $n) => $o->setApiVersion($n->getIntegerValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'eligibilityFilteringEnabledEntities' => fn(ParseNode $n) => $o->setEligibilityFilteringEnabledEntities($n->getEnumValue(EligibilityFilteringEnabledEntities::class)),
             'encryption' => fn(ParseNode $n) => $o->setEncryption($n->getObjectValue([WorkforceIntegrationEncryption::class, 'createFromDiscriminatorValue'])),
             'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
             'supportedEntities' => fn(ParseNode $n) => $o->setSupportedEntities($n->getEnumValue(WorkforceIntegrationSupportedEntities::class)),
@@ -121,6 +134,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
         parent::serialize($writer);
         $writer->writeIntegerValue('apiVersion', $this->getApiVersion());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('eligibilityFilteringEnabledEntities', $this->getEligibilityFilteringEnabledEntities());
         $writer->writeObjectValue('encryption', $this->getEncryption());
         $writer->writeBooleanValue('isActive', $this->getIsActive());
         $writer->writeEnumValue('supportedEntities', $this->getSupportedEntities());
@@ -141,6 +155,14 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * @param EligibilityFilteringEnabledEntities|null $value Value to set for the eligibilityFilteringEnabledEntities property.
+    */
+    public function setEligibilityFilteringEnabledEntities(?EligibilityFilteringEnabledEntities $value): void {
+        $this->getBackingStore()->set('eligibilityFilteringEnabledEntities', $value);
     }
 
     /**

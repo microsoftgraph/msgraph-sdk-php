@@ -8,8 +8,12 @@ use Microsoft\Graph\Generated\Models\FileStorageContainer;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Activate\ActivateRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\DriveRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Lock\LockRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\RecycleBin\RecycleBinRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Unlock\UnlockRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -35,6 +39,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to call the lock method.
+    */
+    public function lock(): LockRequestBuilder {
+        return new LockRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the permanentDelete method.
     */
     public function permanentDelete(): PermanentDeleteRequestBuilder {
@@ -46,6 +57,27 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     */
     public function permissions(): PermissionsRequestBuilder {
         return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the recycleBin property of the microsoft.graph.fileStorageContainer entity.
+    */
+    public function recycleBin(): RecycleBinRequestBuilder {
+        return new RecycleBinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unlock method.
+    */
+    public function unlock(): UnlockRequestBuilder {
+        return new UnlockRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

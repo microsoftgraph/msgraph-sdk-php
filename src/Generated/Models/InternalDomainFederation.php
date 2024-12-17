@@ -60,6 +60,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
             'federatedIdpMfaBehavior' => fn(ParseNode $n) => $o->setFederatedIdpMfaBehavior($n->getEnumValue(FederatedIdpMfaBehavior::class)),
             'isSignedAuthenticationRequestRequired' => fn(ParseNode $n) => $o->setIsSignedAuthenticationRequestRequired($n->getBooleanValue()),
             'nextSigningCertificate' => fn(ParseNode $n) => $o->setNextSigningCertificate($n->getStringValue()),
+            'passwordResetUri' => fn(ParseNode $n) => $o->setPasswordResetUri($n->getStringValue()),
             'promptLoginBehavior' => fn(ParseNode $n) => $o->setPromptLoginBehavior($n->getEnumValue(PromptLoginBehavior::class)),
             'signingCertificateUpdateStatus' => fn(ParseNode $n) => $o->setSigningCertificateUpdateStatus($n->getObjectValue([SigningCertificateUpdateStatus::class, 'createFromDiscriminatorValue'])),
             'signOutUri' => fn(ParseNode $n) => $o->setSignOutUri($n->getStringValue()),
@@ -88,6 +89,18 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'nextSigningCertificate'");
+    }
+
+    /**
+     * Gets the passwordResetUri property value. The passwordResetUri property
+     * @return string|null
+    */
+    public function getPasswordResetUri(): ?string {
+        $val = $this->getBackingStore()->get('passwordResetUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordResetUri'");
     }
 
     /**
@@ -136,6 +149,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
         $writer->writeEnumValue('federatedIdpMfaBehavior', $this->getFederatedIdpMfaBehavior());
         $writer->writeBooleanValue('isSignedAuthenticationRequestRequired', $this->getIsSignedAuthenticationRequestRequired());
         $writer->writeStringValue('nextSigningCertificate', $this->getNextSigningCertificate());
+        $writer->writeStringValue('passwordResetUri', $this->getPasswordResetUri());
         $writer->writeEnumValue('promptLoginBehavior', $this->getPromptLoginBehavior());
         $writer->writeObjectValue('signingCertificateUpdateStatus', $this->getSigningCertificateUpdateStatus());
         $writer->writeStringValue('signOutUri', $this->getSignOutUri());
@@ -171,6 +185,14 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     */
     public function setNextSigningCertificate(?string $value): void {
         $this->getBackingStore()->set('nextSigningCertificate', $value);
+    }
+
+    /**
+     * Sets the passwordResetUri property value. The passwordResetUri property
+     * @param string|null $value Value to set for the passwordResetUri property.
+    */
+    public function setPasswordResetUri(?string $value): void {
+        $this->getBackingStore()->set('passwordResetUri', $value);
     }
 
     /**

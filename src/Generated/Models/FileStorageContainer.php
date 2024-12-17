@@ -111,11 +111,25 @@ class FileStorageContainer extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
+            'lockState' => fn(ParseNode $n) => $o->setLockState($n->getEnumValue(SiteLockState::class)),
             'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfObjectValues([Permission::class, 'createFromDiscriminatorValue'])),
+            'recycleBin' => fn(ParseNode $n) => $o->setRecycleBin($n->getObjectValue([RecycleBin::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([FileStorageContainerSettings::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(FileStorageContainerStatus::class)),
             'viewpoint' => fn(ParseNode $n) => $o->setViewpoint($n->getObjectValue([FileStorageContainerViewpoint::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
+     * @return SiteLockState|null
+    */
+    public function getLockState(): ?SiteLockState {
+        $val = $this->getBackingStore()->get('lockState');
+        if (is_null($val) || $val instanceof SiteLockState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lockState'");
     }
 
     /**
@@ -130,6 +144,18 @@ class FileStorageContainer extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'permissions'");
+    }
+
+    /**
+     * Gets the recycleBin property value. Recycle bin of the fileStorageContainer. Read-only.
+     * @return RecycleBin|null
+    */
+    public function getRecycleBin(): ?RecycleBin {
+        $val = $this->getBackingStore()->get('recycleBin');
+        if (is_null($val) || $val instanceof RecycleBin) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recycleBin'");
     }
 
     /**
@@ -180,7 +206,9 @@ class FileStorageContainer extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('drive', $this->getDrive());
+        $writer->writeEnumValue('lockState', $this->getLockState());
         $writer->writeCollectionOfObjectValues('permissions', $this->getPermissions());
+        $writer->writeObjectValue('recycleBin', $this->getRecycleBin());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeObjectValue('viewpoint', $this->getViewpoint());
@@ -235,11 +263,27 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
+     * Sets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
+     * @param SiteLockState|null $value Value to set for the lockState property.
+    */
+    public function setLockState(?SiteLockState $value): void {
+        $this->getBackingStore()->set('lockState', $value);
+    }
+
+    /**
      * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. Permission for each user is set by the roles property. The possible values are: reader, writer, manager, and owner. Read-write.
      * @param array<Permission>|null $value Value to set for the permissions property.
     */
     public function setPermissions(?array $value): void {
         $this->getBackingStore()->set('permissions', $value);
+    }
+
+    /**
+     * Sets the recycleBin property value. Recycle bin of the fileStorageContainer. Read-only.
+     * @param RecycleBin|null $value Value to set for the recycleBin property.
+    */
+    public function setRecycleBin(?RecycleBin $value): void {
+        $this->getBackingStore()->set('recycleBin', $value);
     }
 
     /**
