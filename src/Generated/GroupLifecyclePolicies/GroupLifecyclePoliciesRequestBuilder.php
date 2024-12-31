@@ -67,7 +67,7 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Creates a new groupLifecyclePolicy.
+     * Creates a new groupLifecyclePolicy. Only one policy exists in the tenant.
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupLifecyclePolicy|null>
@@ -104,7 +104,7 @@ class GroupLifecyclePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Creates a new groupLifecyclePolicy.
+     * Creates a new groupLifecyclePolicy. Only one policy exists in the tenant.
      * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

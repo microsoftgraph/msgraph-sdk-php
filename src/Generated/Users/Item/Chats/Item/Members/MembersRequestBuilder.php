@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\Remove\RemoveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -32,6 +33,13 @@ class MembersRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the remove method.
+    */
+    public function remove(): RemoveRequestBuilder {
+        return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
