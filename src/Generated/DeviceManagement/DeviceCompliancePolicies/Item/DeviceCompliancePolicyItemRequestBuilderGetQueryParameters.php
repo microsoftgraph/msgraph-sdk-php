@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the windowsPhone81CompliancePolicy object.
+ * Read properties and relationships of the deviceCompliancePolicy object.
 */
 class DeviceCompliancePolicyItemRequestBuilderGetQueryParameters 
 {

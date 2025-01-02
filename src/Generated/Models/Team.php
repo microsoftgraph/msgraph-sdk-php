@@ -55,7 +55,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant's directory.
      * @return string|null
     */
     public function getClassification(): ?string {
@@ -79,7 +79,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. An optional description for the team. Maximum length: 1024 characters.
+     * Gets the description property value. An optional description for the team. Maximum length: 1,024 characters.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -205,7 +205,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     * Gets the internalId property value. A unique ID for the team that was used in a few places such as the audit log/Office 365 Management Activity API.
      * @return string|null
     */
     public function getInternalId(): ?string {
@@ -331,7 +331,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * Gets the specialization property value. Optional. Indicates whether the team is intended for a particular use case. Each team specialization has access to unique behaviors and experiences targeted to its use case.
      * @return TeamSpecialization|null
     */
     public function getSpecialization(): ?TeamSpecialization {
@@ -405,7 +405,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Gets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. You get this URL when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -469,7 +469,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a preconfigured set in the tenant's directory.
      * @param string|null $value Value to set for the classification property.
     */
     public function setClassification(?string $value): void {
@@ -485,7 +485,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. An optional description for the team. Maximum length: 1024 characters.
+     * Sets the description property value. An optional description for the team. Maximum length: 1,024 characters.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -541,7 +541,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the internalId property value. A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     * Sets the internalId property value. A unique ID for the team that was used in a few places such as the audit log/Office 365 Management Activity API.
      * @param string|null $value Value to set for the internalId property.
     */
     public function setInternalId(?string $value): void {
@@ -621,7 +621,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * Sets the specialization property value. Optional. Indicates whether the team is intended for a particular use case. Each team specialization has access to unique behaviors and experiences targeted to its use case.
      * @param TeamSpecialization|null $value Value to set for the specialization property.
     */
     public function setSpecialization(?TeamSpecialization $value): void {
@@ -669,7 +669,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Sets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. You get this URL when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

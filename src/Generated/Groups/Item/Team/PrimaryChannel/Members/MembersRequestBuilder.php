@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Remove\RemoveRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationMember;
 use Microsoft\Graph\Generated\Models\ConversationMemberCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,6 +33,13 @@ class MembersRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the remove method.
+    */
+    public function remove(): RemoveRequestBuilder {
+        return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

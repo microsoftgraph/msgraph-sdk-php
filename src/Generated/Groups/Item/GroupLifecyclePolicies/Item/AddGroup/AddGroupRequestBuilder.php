@@ -30,7 +30,7 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the managedGroupTypes property of groupLifecyclePolicy is set to Selected.
+     * Add a group to a groupLifecyclePolicy. This action is supported only if the managedGroupTypes property of the policy is set to Selected.
      * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AddGroupPostResponse|null>
@@ -46,7 +46,7 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the managedGroupTypes property of groupLifecyclePolicy is set to Selected.
+     * Add a group to a groupLifecyclePolicy. This action is supported only if the managedGroupTypes property of the policy is set to Selected.
      * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

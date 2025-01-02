@@ -63,7 +63,7 @@ class ActionResultPart implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the error property value. The error that occurred, if any, during the course of the bulk operation.
+     * Gets the error property value. The error that occurred, if any, during the bulk operation.
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -125,7 +125,7 @@ class ActionResultPart implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the error property value. The error that occurred, if any, during the course of the bulk operation.
+     * Sets the error property value. The error that occurred, if any, during the bulk operation.
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {

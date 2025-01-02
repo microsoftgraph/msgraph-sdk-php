@@ -97,7 +97,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
+     * Gets the remaining property value. Total space remaining before reaching the capacity limit, in bytes. Read-only.
      * @return int|null
     */
     public function getRemaining(): ?int {
@@ -204,7 +204,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
+     * Sets the remaining property value. Total space remaining before reaching the capacity limit, in bytes. Read-only.
      * @param int|null $value Value to set for the remaining property.
     */
     public function setRemaining(?int $value): void {
