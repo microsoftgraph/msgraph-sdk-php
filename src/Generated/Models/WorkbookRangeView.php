@@ -76,7 +76,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Gets the rows property value. The collection of range views associated with the range. Read-only.Read-only.
+     * Gets the rows property value. The collection of range views associated with the range. Read-only. Read-only.
      * @return array<WorkbookRangeView>|null
     */
     public function getRows(): ?array {
@@ -126,7 +126,7 @@ class WorkbookRangeView extends Entity implements Parsable
     }
 
     /**
-     * Sets the rows property value. The collection of range views associated with the range. Read-only.Read-only.
+     * Sets the rows property value. The collection of range views associated with the range. Read-only. Read-only.
      * @param array<WorkbookRangeView>|null $value Value to set for the rows property.
     */
     public function setRows(?array $value): void {
