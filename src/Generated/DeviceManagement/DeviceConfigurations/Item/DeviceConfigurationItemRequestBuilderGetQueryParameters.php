@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the editionUpgradeConfiguration object.
+ * Read properties and relationships of the macOSGeneralDeviceConfiguration object.
 */
 class DeviceConfigurationItemRequestBuilderGetQueryParameters 
 {
