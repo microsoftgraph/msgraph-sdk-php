@@ -31,7 +31,7 @@ class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
+     * Get the count of users that are enabled and the ones that activated the Office subscription on desktop or devices or shared computers.
      * @param GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
@@ -48,7 +48,7 @@ class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the count of users that are enabled and those that have activated the Office subscription on desktop or devices or shared computers.
+     * Get the count of users that are enabled and the ones that activated the Office subscription on desktop or devices or shared computers.
      * @param GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
