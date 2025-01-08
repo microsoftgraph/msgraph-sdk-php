@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.23.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.22.0...v2.23.0) (2025-01-08)
+
+
+### Features
+
+* bump graph core version ([850f791](https://github.com/microsoftgraph/msgraph-sdk-php/commit/850f791f4ada894c3220aac66632a5a235bbc3e5))
+* bump graph core version ([7db25d7](https://github.com/microsoftgraph/msgraph-sdk-php/commit/7db25d74db921caa3066da576b784ce9cc6ea29f))
+* **generation:** update request builders and models ([800b10f](https://github.com/microsoftgraph/msgraph-sdk-php/commit/800b10f60f82b34657c4148c7c7d0140ffd7dde8))
+
+
+### Bug Fixes
+
+* Use provided national cloud as base url ([cf1181a](https://github.com/microsoftgraph/msgraph-sdk-php/commit/cf1181ae3793ca55387d8b7145c11a4e1bf66147))
+* Use provided national cloud as base URL and map it to the correct authentication endpoint ([d40f2a2](https://github.com/microsoftgraph/msgraph-sdk-php/commit/d40f2a2485a0ebd69e18c1cd1509983e69ee2f4e))
+
 ## [2.22.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.21.0...v2.22.0) (2025-01-02)
 
 
