@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the windows10EnterpriseModernAppManagementConfiguration objects.
+ * List properties and relationships of the windows10SecureAssessmentConfiguration objects.
 */
 class DeviceConfigurationsRequestBuilderGetQueryParameters 
 {
