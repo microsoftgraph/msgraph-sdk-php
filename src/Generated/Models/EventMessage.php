@@ -46,7 +46,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
+     * Gets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property. Read-only.
      * @return Event|null
     */
     public function getEvent(): ?Event {
@@ -200,7 +200,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
+     * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property. Read-only.
      * @param Event|null $value Value to set for the event property.
     */
     public function setEvent(?Event $value): void {
