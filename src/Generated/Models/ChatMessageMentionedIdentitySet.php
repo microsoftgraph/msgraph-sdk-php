@@ -26,7 +26,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Gets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     * Gets the conversation property value. If present, represents a conversation (for example, team, channel, or chat) @mentioned in a message.
      * @return TeamworkConversationIdentity|null
     */
     public function getConversation(): ?TeamworkConversationIdentity {
@@ -58,7 +58,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Sets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     * Sets the conversation property value. If present, represents a conversation (for example, team, channel, or chat) @mentioned in a message.
      * @param TeamworkConversationIdentity|null $value Value to set for the conversation property.
     */
     public function setConversation(?TeamworkConversationIdentity $value): void {

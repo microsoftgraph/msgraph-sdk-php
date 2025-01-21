@@ -233,7 +233,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, chat, and tag.
      * @return array<ChatMessageMention>|null
     */
     public function getMentions(): ?array {
@@ -505,7 +505,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
+     * Sets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, chat, and tag.
      * @param array<ChatMessageMention>|null $value Value to set for the mentions property.
     */
     public function setMentions(?array $value): void {

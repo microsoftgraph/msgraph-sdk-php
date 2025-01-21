@@ -60,6 +60,7 @@ class Chat extends Entity implements Parsable
             'chatType' => fn(ParseNode $n) => $o->setChatType($n->getEnumValue(ChatType::class)),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'installedApps' => fn(ParseNode $n) => $o->setInstalledApps($n->getCollectionOfObjectValues([TeamsAppInstallation::class, 'createFromDiscriminatorValue'])),
+            'isHiddenForAllMembers' => fn(ParseNode $n) => $o->setIsHiddenForAllMembers($n->getBooleanValue()),
             'lastMessagePreview' => fn(ParseNode $n) => $o->setLastMessagePreview($n->getObjectValue([ChatMessageInfo::class, 'createFromDiscriminatorValue'])),
             'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
@@ -87,6 +88,18 @@ class Chat extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'installedApps'");
+    }
+
+    /**
+     * Gets the isHiddenForAllMembers property value. Indicates whether the chat is hidden for all its members. Read-only.
+     * @return bool|null
+    */
+    public function getIsHiddenForAllMembers(): ?bool {
+        $val = $this->getBackingStore()->get('isHiddenForAllMembers');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isHiddenForAllMembers'");
     }
 
     /**
@@ -252,6 +265,7 @@ class Chat extends Entity implements Parsable
         $writer->writeEnumValue('chatType', $this->getChatType());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('installedApps', $this->getInstalledApps());
+        $writer->writeBooleanValue('isHiddenForAllMembers', $this->getIsHiddenForAllMembers());
         $writer->writeObjectValue('lastMessagePreview', $this->getLastMessagePreview());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
@@ -288,6 +302,14 @@ class Chat extends Entity implements Parsable
     */
     public function setInstalledApps(?array $value): void {
         $this->getBackingStore()->set('installedApps', $value);
+    }
+
+    /**
+     * Sets the isHiddenForAllMembers property value. Indicates whether the chat is hidden for all its members. Read-only.
+     * @param bool|null $value Value to set for the isHiddenForAllMembers property.
+    */
+    public function setIsHiddenForAllMembers(?bool $value): void {
+        $this->getBackingStore()->set('isHiddenForAllMembers', $value);
     }
 
     /**

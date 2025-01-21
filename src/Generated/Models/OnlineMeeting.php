@@ -101,6 +101,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'externalId' => fn(ParseNode $n) => $o->setExternalId($n->getStringValue()),
             'isBroadcast' => fn(ParseNode $n) => $o->setIsBroadcast($n->getBooleanValue()),
+            'meetingTemplateId' => fn(ParseNode $n) => $o->setMeetingTemplateId($n->getStringValue()),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getObjectValue([MeetingParticipants::class, 'createFromDiscriminatorValue'])),
             'recordings' => fn(ParseNode $n) => $o->setRecordings($n->getCollectionOfObjectValues([CallRecording::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
@@ -118,6 +119,18 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isBroadcast'");
+    }
+
+    /**
+     * Gets the meetingTemplateId property value. The ID of the meeting template.
+     * @return string|null
+    */
+    public function getMeetingTemplateId(): ?string {
+        $val = $this->getBackingStore()->get('meetingTemplateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingTemplateId'");
     }
 
     /**
@@ -184,6 +197,7 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeStringValue('externalId', $this->getExternalId());
         $writer->writeBooleanValue('isBroadcast', $this->getIsBroadcast());
+        $writer->writeStringValue('meetingTemplateId', $this->getMeetingTemplateId());
         $writer->writeObjectValue('participants', $this->getParticipants());
         $writer->writeCollectionOfObjectValues('recordings', $this->getRecordings());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
@@ -236,6 +250,14 @@ class OnlineMeeting extends OnlineMeetingBase implements Parsable
     */
     public function setIsBroadcast(?bool $value): void {
         $this->getBackingStore()->set('isBroadcast', $value);
+    }
+
+    /**
+     * Sets the meetingTemplateId property value. The ID of the meeting template.
+     * @param string|null $value Value to set for the meetingTemplateId property.
+    */
+    public function setMeetingTemplateId(?string $value): void {
+        $this->getBackingStore()->set('meetingTemplateId', $value);
     }
 
     /**

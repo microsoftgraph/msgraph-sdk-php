@@ -82,6 +82,20 @@ class VirtualEvent extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers; otherwise, null.
+     * @return array<VirtualEventExternalInformation>|null
+    */
+    public function getExternalEventInformation(): ?array {
+        $val = $this->getBackingStore()->get('externalEventInformation');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventExternalInformation::class);
+            /** @var array<VirtualEventExternalInformation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalEventInformation'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -92,6 +106,7 @@ class VirtualEvent extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'externalEventInformation' => fn(ParseNode $n) => $o->setExternalEventInformation($n->getCollectionOfObjectValues([VirtualEventExternalInformation::class, 'createFromDiscriminatorValue'])),
             'presenters' => fn(ParseNode $n) => $o->setPresenters($n->getCollectionOfObjectValues([VirtualEventPresenter::class, 'createFromDiscriminatorValue'])),
             'sessions' => fn(ParseNode $n) => $o->setSessions($n->getCollectionOfObjectValues([VirtualEventSession::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([VirtualEventSettings::class, 'createFromDiscriminatorValue'])),
@@ -174,6 +189,7 @@ class VirtualEvent extends Entity implements Parsable
         $writer->writeObjectValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
+        $writer->writeCollectionOfObjectValues('externalEventInformation', $this->getExternalEventInformation());
         $writer->writeCollectionOfObjectValues('presenters', $this->getPresenters());
         $writer->writeCollectionOfObjectValues('sessions', $this->getSessions());
         $writer->writeObjectValue('settings', $this->getSettings());
@@ -211,6 +227,14 @@ class VirtualEvent extends Entity implements Parsable
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
+    }
+
+    /**
+     * Sets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers; otherwise, null.
+     * @param array<VirtualEventExternalInformation>|null $value Value to set for the externalEventInformation property.
+    */
+    public function setExternalEventInformation(?array $value): void {
+        $this->getBackingStore()->set('externalEventInformation', $value);
     }
 
     /**

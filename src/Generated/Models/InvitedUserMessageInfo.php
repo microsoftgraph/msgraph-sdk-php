@@ -71,7 +71,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
+     * Gets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message. Only plain text is allowed.
      * @return string|null
     */
     public function getCustomizedMessageBody(): ?string {
@@ -157,7 +157,7 @@ class InvitedUserMessageInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message.
+     * Sets the customizedMessageBody property value. Customized message body you want to send if you don't want the default message. Only plain text is allowed.
      * @param string|null $value Value to set for the customizedMessageBody property.
     */
     public function setCustomizedMessageBody(?string $value): void {
