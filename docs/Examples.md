@@ -23,8 +23,60 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 ```
 
-To make requests on behalf of an already signed in user, where your front-end application has already acquired an access token for the user, you can use the `OnBehalfOfContext` which uses the [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to fetch
-an access token for your backend application to access the Microsoft Graph API. To do this, you pass the already acquired access token as the "assertion";
+To make requests without a signed-in user (using application permissions), you can initialise a `ClientCredentialsContext` object:
+
+```php
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
+
+// Uses https://graph.microsoft.com/.default scopes if none are specified
+$tokenRequestContext = new ClientCredentialContext(
+    'tenantId',
+    'clientId',
+    'clientSecret'
+);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext);
+
+```
+
+To make requests on behalf of a signed in user, you can use the `OnBehalfOfContext` which uses the [On-Behalf-Of flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to fetch
+an access token for your backend application to access the Microsoft Graph API.
+
+This is useful when you would like your user to log in once and have your application do some background work
+on behalf of the user without asking them to log in again.
+
+See the following guides on how to expose an API using your application registration:
+- https://learn.microsoft.com/en-us/answers/questions/1412022/aadsts50013-assertion-failed-signature-validation
+- https://stackoverflow.com/questions/77000068/acquire-azure-on-behalf-of-access-token-in-react-next-app/77002285#77002285
+- https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-configure-app-expose-web-apis
+
+Execute the initial authentication request for your user e.g. via `AuthorizationCodeContext`:
+
+```php
+
+$oAuthClient = ProviderFactory::create(new AuthorizationCodeContext($tenantId, $clientId, $clientSecret, "", $redirectUri));
+$authorizationUrl = $oAuthClient->getAuthorizationUrl();
+
+header("Location: $authorizationUrl");
+$code = $_GET['code'];
+
+$authCodeContext = new AuthorizationCodeContext(
+    $tenantId,
+    $clientId,
+    $clientSecret,
+    $code,
+    $redirectUri
+);
+
+$scopes = ["api://{your-app-id}/.default"];
+
+$tokenProvider = new GraphPhpLeagueAccessTokenProvider($authCodeContext, $scopes);
+
+// access token containing your app as the audience (`aud`) claim
+$assertion = $tokenProvider->getAuthorizationTokenAsync("https://graph.microsoft.com")->wait();
+```
+
+For future token requests, pass the previously acquired access token as the `assertion` and the Microsoft Identity platform will return an access token valid for accessing Microsoft Graph data;
 
 ```php
 use Microsoft\Graph\GraphServiceClient;
@@ -39,23 +91,6 @@ $tokenRequestContext = new OnBehalfOfContext(
 
 $scopes = ['User.Read', 'Mail.ReadWrite'];
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
-
-```
-
-
-To make requests without a signed-in user (using application permissions), you can initialise a `ClientCredentialsContext` object:
-
-```php
-use Microsoft\Graph\GraphServiceClient;
-use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-
-// Uses https://graph.microsoft.com/.default scopes if none are specified
-$tokenRequestContext = new ClientCredentialContext(
-    'tenantId',
-    'clientId',
-    'clientSecret'
-);
-$graphServiceClient = new GraphServiceClient($tokenRequestContext);
 
 ```
 
