@@ -51,6 +51,18 @@ class VirtualEventRegistration extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalRegistrationInformation property value. The external information for a virtual event registration.
+     * @return VirtualEventExternalRegistrationInformation|null
+    */
+    public function getExternalRegistrationInformation(): ?VirtualEventExternalRegistrationInformation {
+        $val = $this->getBackingStore()->get('externalRegistrationInformation');
+        if (is_null($val) || $val instanceof VirtualEventExternalRegistrationInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalRegistrationInformation'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -59,6 +71,7 @@ class VirtualEventRegistration extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'cancelationDateTime' => fn(ParseNode $n) => $o->setCancelationDateTime($n->getDateTimeValue()),
             'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'externalRegistrationInformation' => fn(ParseNode $n) => $o->setExternalRegistrationInformation($n->getObjectValue([VirtualEventExternalRegistrationInformation::class, 'createFromDiscriminatorValue'])),
             'firstName' => fn(ParseNode $n) => $o->setFirstName($n->getStringValue()),
             'lastName' => fn(ParseNode $n) => $o->setLastName($n->getStringValue()),
             'preferredLanguage' => fn(ParseNode $n) => $o->setPreferredLanguage($n->getStringValue()),
@@ -191,6 +204,7 @@ class VirtualEventRegistration extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('cancelationDateTime', $this->getCancelationDateTime());
         $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeObjectValue('externalRegistrationInformation', $this->getExternalRegistrationInformation());
         $writer->writeStringValue('firstName', $this->getFirstName());
         $writer->writeStringValue('lastName', $this->getLastName());
         $writer->writeStringValue('preferredLanguage', $this->getPreferredLanguage());
@@ -216,6 +230,14 @@ class VirtualEventRegistration extends Entity implements Parsable
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
+    }
+
+    /**
+     * Sets the externalRegistrationInformation property value. The external information for a virtual event registration.
+     * @param VirtualEventExternalRegistrationInformation|null $value Value to set for the externalRegistrationInformation property.
+    */
+    public function setExternalRegistrationInformation(?VirtualEventExternalRegistrationInformation $value): void {
+        $this->getBackingStore()->set('externalRegistrationInformation', $value);
     }
 
     /**

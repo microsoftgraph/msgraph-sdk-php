@@ -150,7 +150,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
+     * Gets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      * @return ChannelMembershipType|null
     */
     public function getMembershipType(): ?ChannelMembershipType {
@@ -327,7 +327,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
+     * Sets the membershipType property value. The type of the channel. Can be set during creation and can't be changed. The possible values are: standard, private, unknownFutureValue, shared. The default value is standard. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: shared.
      * @param ChannelMembershipType|null $value Value to set for the membershipType property.
     */
     public function setMembershipType(?ChannelMembershipType $value): void {

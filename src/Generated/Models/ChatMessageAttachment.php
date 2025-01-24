@@ -68,7 +68,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentType that is supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
+     * Gets the contentType property value. The media type of the content attachment. The possible values are: reference: The attachment is a link to another file. Populate the contentURL with the link to the object.forwardedMessageReference: The attachment is a reference to a forwarded message. Populate the content with the original message context.Any contentType that is supported by the Bot Framework's Attachment object.application/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -110,7 +110,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the id property value. Read-only. The unique id of the attachment.
+     * Gets the id property value. Read-only. The unique ID of the attachment.
      * @return string|null
     */
     public function getId(): ?string {
@@ -210,7 +210,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the contentType property value. The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.Any contentType that is supported by the Bot Framework's Attachment objectapplication/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
+     * Sets the contentType property value. The media type of the content attachment. The possible values are: reference: The attachment is a link to another file. Populate the contentURL with the link to the object.forwardedMessageReference: The attachment is a reference to a forwarded message. Populate the content with the original message context.Any contentType that is supported by the Bot Framework's Attachment object.application/vnd.microsoft.card.codesnippet: A code snippet. application/vnd.microsoft.card.announcement: An announcement header.
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
@@ -226,7 +226,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the id property value. Read-only. The unique id of the attachment.
+     * Sets the id property value. Read-only. The unique ID of the attachment.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

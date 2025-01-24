@@ -8,6 +8,8 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VirtualEventTownhall;
 use Microsoft\Graph\Generated\Models\VirtualEventTownhallCollectionResponse;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\GetByUserIdAndRoleWithUserIdWithRole\GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\GetByUserRoleWithRole\GetByUserRoleWithRoleRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\VirtualEventTownhallItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -63,6 +65,25 @@ class TownhallsRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [VirtualEventTownhallCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to call the getByUserIdAndRole method.
+     * @param string $role Usage: role='{role}'
+     * @param string $userId Usage: userId='{userId}'
+     * @return GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder
+    */
+    public function getByUserIdAndRoleWithUserIdWithRole(string $role, string $userId): GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder {
+        return new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder($this->pathParameters, $this->requestAdapter, $role, $userId);
+    }
+
+    /**
+     * Provides operations to call the getByUserRole method.
+     * @param string $role Usage: role='{role}'
+     * @return GetByUserRoleWithRoleRequestBuilder
+    */
+    public function getByUserRoleWithRole(string $role): GetByUserRoleWithRoleRequestBuilder {
+        return new GetByUserRoleWithRoleRequestBuilder($this->pathParameters, $this->requestAdapter, $role);
     }
 
     /**

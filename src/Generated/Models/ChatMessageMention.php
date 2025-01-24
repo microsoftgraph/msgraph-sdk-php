@@ -82,7 +82,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
+     * Gets the mentioned property value. The entity (user, application, team, channel, or chat) that was @mentioned.
      * @return ChatMessageMentionedIdentitySet|null
     */
     public function getMentioned(): ?ChatMessageMentionedIdentitySet {
@@ -154,7 +154,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
+     * Sets the mentioned property value. The entity (user, application, team, channel, or chat) that was @mentioned.
      * @param ChatMessageMentionedIdentitySet|null $value Value to set for the mentioned property.
     */
     public function setMentioned(?ChatMessageMentionedIdentitySet $value): void {
