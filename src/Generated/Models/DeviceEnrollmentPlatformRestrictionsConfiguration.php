@@ -7,7 +7,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Device Enrollment Configuration that restricts the types of devices a user can enroll
+ * Default Device Enrollment Platform Restrictions Configuration that restricts the types of devices a user can enroll
 */
 class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable 
 {

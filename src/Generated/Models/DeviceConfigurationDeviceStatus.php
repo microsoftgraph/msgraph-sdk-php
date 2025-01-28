@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Support for this Entity is being deprecated starting May 2026 & will no longer be supported.
+*/
 class DeviceConfigurationDeviceStatus extends Entity implements Parsable 
 {
     /**

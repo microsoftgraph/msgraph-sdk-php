@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the mobileLobApp objects.
+ * List properties and relationships of the macOSLobApp objects.
 */
 class MobileAppsRequestBuilderGetQueryParameters 
 {
