@@ -180,11 +180,11 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-mobilelobapp-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-macoslobapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -211,7 +211,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the mobileLobApp objects.
+     * List properties and relationships of the macOSLobApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

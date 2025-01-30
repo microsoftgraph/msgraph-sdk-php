@@ -48,7 +48,7 @@ class ChatRestrictions implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the allowTextOnly property value. The allowTextOnly property
+     * Gets the allowTextOnly property value. Indicates whether only text is allowed in the meeting chat. Optional.
      * @return bool|null
     */
     public function getAllowTextOnly(): ?bool {
@@ -110,7 +110,7 @@ class ChatRestrictions implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the allowTextOnly property value. The allowTextOnly property
+     * Sets the allowTextOnly property value. Indicates whether only text is allowed in the meeting chat. Optional.
      * @param bool|null $value Value to set for the allowTextOnly property.
     */
     public function setAllowTextOnly(?bool $value): void {

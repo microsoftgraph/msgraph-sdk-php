@@ -168,7 +168,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the chatRestrictions property value. The chatRestrictions property
+     * Gets the chatRestrictions property value. Specifies the configuration settings for meeting chat restrictions.
      * @return ChatRestrictions|null
     */
     public function getChatRestrictions(): ?ChatRestrictions {
@@ -450,7 +450,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the chatRestrictions property value. The chatRestrictions property
+     * Sets the chatRestrictions property value. Specifies the configuration settings for meeting chat restrictions.
      * @param ChatRestrictions|null $value Value to set for the chatRestrictions property.
     */
     public function setChatRestrictions(?ChatRestrictions $value): void {

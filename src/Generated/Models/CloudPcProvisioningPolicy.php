@@ -52,6 +52,18 @@ class CloudPcProvisioningPolicy extends Entity implements Parsable
     }
 
     /**
+     * Gets the autopatch property value. The autopatch property
+     * @return CloudPcProvisioningPolicyAutopatch|null
+    */
+    public function getAutopatch(): ?CloudPcProvisioningPolicyAutopatch {
+        $val = $this->getBackingStore()->get('autopatch');
+        if (is_null($val) || $val instanceof CloudPcProvisioningPolicyAutopatch) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'autopatch'");
+    }
+
+    /**
      * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @return string|null
     */
@@ -134,6 +146,7 @@ class CloudPcProvisioningPolicy extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'alternateResourceUrl' => fn(ParseNode $n) => $o->setAlternateResourceUrl($n->getStringValue()),
             'assignments' => fn(ParseNode $n) => $o->setAssignments($n->getCollectionOfObjectValues([CloudPcProvisioningPolicyAssignment::class, 'createFromDiscriminatorValue'])),
+            'autopatch' => fn(ParseNode $n) => $o->setAutopatch($n->getObjectValue([CloudPcProvisioningPolicyAutopatch::class, 'createFromDiscriminatorValue'])),
             'cloudPcGroupDisplayName' => fn(ParseNode $n) => $o->setCloudPcGroupDisplayName($n->getStringValue()),
             'cloudPcNamingTemplate' => fn(ParseNode $n) => $o->setCloudPcNamingTemplate($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
@@ -255,6 +268,7 @@ class CloudPcProvisioningPolicy extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('alternateResourceUrl', $this->getAlternateResourceUrl());
         $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeObjectValue('autopatch', $this->getAutopatch());
         $writer->writeStringValue('cloudPcGroupDisplayName', $this->getCloudPcGroupDisplayName());
         $writer->writeStringValue('cloudPcNamingTemplate', $this->getCloudPcNamingTemplate());
         $writer->writeStringValue('description', $this->getDescription());
@@ -285,6 +299,14 @@ class CloudPcProvisioningPolicy extends Entity implements Parsable
     */
     public function setAssignments(?array $value): void {
         $this->getBackingStore()->set('assignments', $value);
+    }
+
+    /**
+     * Sets the autopatch property value. The autopatch property
+     * @param CloudPcProvisioningPolicyAutopatch|null $value Value to set for the autopatch property.
+    */
+    public function setAutopatch(?CloudPcProvisioningPolicyAutopatch $value): void {
+        $this->getBackingStore()->set('autopatch', $value);
     }
 
     /**

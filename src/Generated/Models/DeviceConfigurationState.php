@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * Device Configuration State for a given device.
+ * Support for this Entity is being deprecated starting May 2026 & will no longer be supported.
 */
 class DeviceConfigurationState extends Entity implements Parsable 
 {
