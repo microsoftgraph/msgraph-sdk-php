@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the macOSCompliancePolicy objects.
+ * List properties and relationships of the iosCompliancePolicy objects.
 */
 class DeviceCompliancePoliciesRequestBuilderGetQueryParameters 
 {

@@ -51,10 +51,11 @@ class ChildTagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param ChildTagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewTagCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewtag-ashierarchy?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChildTagsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +66,7 @@ class ChildTagsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns the tags that are a child of a tag.
+     * List eDiscovery review tags with the tag hierarchy shown.
      * @param ChildTagsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

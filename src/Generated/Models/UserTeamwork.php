@@ -68,7 +68,7 @@ class UserTeamwork extends Entity implements Parsable
     }
 
     /**
-     * Gets the locale property value. Represents the location that a user selected in Microsoft Teams and doesn't follow the Office's locale setting. A user’s locale is represented by their preferred language and country or region. For example, en-us. The language component follows two-letter codes as defined in ISO 639-1, and the country component follows two-letter codes as defined in ISO 3166-1 alpha-2.
+     * Gets the locale property value. Represents the location that a user selected in Microsoft Teams and doesn't follow the Office's locale setting. A user's locale is represented by their preferred language and country or region. For example, en-us. The language component follows two-letter codes as defined in ISO 639-1, and the country component follows two-letter codes as defined in ISO 3166-1 alpha-2.
      * @return string|null
     */
     public function getLocale(): ?string {
@@ -120,7 +120,7 @@ class UserTeamwork extends Entity implements Parsable
     }
 
     /**
-     * Sets the locale property value. Represents the location that a user selected in Microsoft Teams and doesn't follow the Office's locale setting. A user’s locale is represented by their preferred language and country or region. For example, en-us. The language component follows two-letter codes as defined in ISO 639-1, and the country component follows two-letter codes as defined in ISO 3166-1 alpha-2.
+     * Sets the locale property value. Represents the location that a user selected in Microsoft Teams and doesn't follow the Office's locale setting. A user's locale is represented by their preferred language and country or region. For example, en-us. The language component follows two-letter codes as defined in ISO 639-1, and the country component follows two-letter codes as defined in ISO 3166-1 alpha-2.
      * @param string|null $value Value to set for the locale property.
     */
     public function setLocale(?string $value): void {
