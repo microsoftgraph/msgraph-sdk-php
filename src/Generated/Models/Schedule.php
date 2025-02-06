@@ -296,7 +296,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Gets the workforceIntegrationIds property value. The IDs for the workforce integrations associated with this schedule.
      * @return array<string>|null
     */
     public function getWorkforceIntegrationIds(): ?array {
@@ -479,7 +479,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Sets the workforceIntegrationIds property value. The IDs for the workforce integrations associated with this schedule.
      * @param array<string>|null $value Value to set for the workforceIntegrationIds property.
     */
     public function setWorkforceIntegrationIds(?array $value): void {

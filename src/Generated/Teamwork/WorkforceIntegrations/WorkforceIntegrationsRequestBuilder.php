@@ -67,7 +67,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
+     * Create a new workforceIntegration object.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkforceIntegration|null>
@@ -104,7 +104,7 @@ class WorkforceIntegrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
+     * Create a new workforceIntegration object.
      * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

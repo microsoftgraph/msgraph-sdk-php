@@ -109,7 +109,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
+     * Gets the isPublisherAttested property value. Indicates whether the application developer or publisher completed Publisher Attestation.
      * @return bool|null
     */
     public function getIsPublisherAttested(): ?bool {
@@ -197,7 +197,7 @@ class Certification implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
+     * Sets the isPublisherAttested property value. Indicates whether the application developer or publisher completed Publisher Attestation.
      * @param bool|null $value Value to set for the isPublisherAttested property.
     */
     public function setIsPublisherAttested(?bool $value): void {
