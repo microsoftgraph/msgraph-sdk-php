@@ -26,6 +26,7 @@ class ChangeTrackedEntity extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.dayNote': return new DayNote();
                 case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
                 case '#microsoft.graph.openShift': return new OpenShift();
                 case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
@@ -34,6 +35,7 @@ class ChangeTrackedEntity extends Entity implements Parsable
                 case '#microsoft.graph.shift': return new Shift();
                 case '#microsoft.graph.shiftPreferences': return new ShiftPreferences();
                 case '#microsoft.graph.swapShiftsChangeRequest': return new SwapShiftsChangeRequest();
+                case '#microsoft.graph.timeCard': return new TimeCard();
                 case '#microsoft.graph.timeOff': return new TimeOff();
                 case '#microsoft.graph.timeOffReason': return new TimeOffReason();
                 case '#microsoft.graph.timeOffRequest': return new TimeOffRequest();
@@ -41,6 +43,18 @@ class ChangeTrackedEntity extends Entity implements Parsable
             }
         }
         return new ChangeTrackedEntity();
+    }
+
+    /**
+     * Gets the createdBy property value. Identity of the creator of the entity.
+     * @return IdentitySet|null
+    */
+    public function getCreatedBy(): ?IdentitySet {
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -62,6 +76,7 @@ class ChangeTrackedEntity extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
@@ -98,6 +113,15 @@ class ChangeTrackedEntity extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('createdBy', $this->getCreatedBy());
+    }
+
+    /**
+     * Sets the createdBy property value. Identity of the creator of the entity.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
+    */
+    public function setCreatedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('createdBy', $value);
     }
 
     /**
