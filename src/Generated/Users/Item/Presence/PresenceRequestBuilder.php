@@ -85,11 +85,11 @@ class PresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      * @param PresenceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Presence|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/presence-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PresenceRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -133,7 +133,7 @@ class PresenceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set a presence status message for a user. An optional expiration date and time can be supplied.
+     * Get a user's presence information.
      * @param PresenceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
