@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\Channel;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\AllMembers\AllMembersRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
@@ -27,6 +28,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ChannelItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the allMembers property of the microsoft.graph.channel entity.
+    */
+    public function allMembers(): AllMembersRequestBuilder {
+        return new AllMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the archive method.
     */

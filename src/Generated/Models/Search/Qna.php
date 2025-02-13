@@ -163,7 +163,7 @@ class Qna extends SearchAnswer implements Parsable
     }
 
     /**
-     * Gets the targetedVariations property value. Variations of a QnA for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
+     * Gets the targetedVariations property value. Variations of a QnA for different countries/regions or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      * @return array<AnswerVariant>|null
     */
     public function getTargetedVariations(): ?array {
@@ -258,7 +258,7 @@ class Qna extends SearchAnswer implements Parsable
     }
 
     /**
-     * Sets the targetedVariations property value. Variations of a QnA for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
+     * Sets the targetedVariations property value. Variations of a QnA for different countries/regions or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      * @param array<AnswerVariant>|null $value Value to set for the targetedVariations property.
     */
     public function setTargetedVariations(?array $value): void {

@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\AllMembers\AllMembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
@@ -27,6 +28,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class PrimaryChannelRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the allMembers property of the microsoft.graph.channel entity.
+    */
+    public function allMembers(): AllMembersRequestBuilder {
+        return new AllMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the archive method.
     */

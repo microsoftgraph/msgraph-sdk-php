@@ -26,6 +26,18 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     }
 
     /**
+     * Gets the code property value. The code of the timeOffReason to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
+     * @return string|null
+    */
+    public function getCode(): ?string {
+        $val = $this->getBackingStore()->get('code');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'code'");
+    }
+
+    /**
      * Gets the displayName property value. The name of the timeOffReason. Required.
      * @return string|null
     */
@@ -44,6 +56,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'code' => fn(ParseNode $n) => $o->setCode($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'iconType' => fn(ParseNode $n) => $o->setIconType($n->getEnumValue(TimeOffReasonIconType::class)),
             'isActive' => fn(ParseNode $n) => $o->setIsActive($n->getBooleanValue()),
@@ -80,9 +93,18 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('code', $this->getCode());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeEnumValue('iconType', $this->getIconType());
         $writer->writeBooleanValue('isActive', $this->getIsActive());
+    }
+
+    /**
+     * Sets the code property value. The code of the timeOffReason to represent an external identifier. This field must be unique within the team in Microsoft Teams and uses an alphanumeric format, with a maximum of 100 characters.
+     * @param string|null $value Value to set for the code property.
+    */
+    public function setCode(?string $value): void {
+        $this->getBackingStore()->set('code', $value);
     }
 
     /**

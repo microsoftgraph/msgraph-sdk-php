@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Schedule;
+use Microsoft\Graph\Generated\Teams\Item\Schedule\DayNotes\DayNotesRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\OpenShiftChangeRequests\OpenShiftChangeRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\OpenShifts\OpenShiftsRequestBuilder;
@@ -13,6 +14,7 @@ use Microsoft\Graph\Generated\Teams\Item\Schedule\SchedulingGroups\SchedulingGro
 use Microsoft\Graph\Generated\Teams\Item\Schedule\Share\ShareRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\Shifts\ShiftsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\SwapShiftsChangeRequests\SwapShiftsChangeRequestsRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Schedule\TimeCards\TimeCardsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\TimeOffReasons\TimeOffReasonsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\TimeOffRequests\TimeOffRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\TimesOff\TimesOffRequestBuilder;
@@ -26,6 +28,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ScheduleRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the dayNotes property of the microsoft.graph.schedule entity.
+    */
+    public function dayNotes(): DayNotesRequestBuilder {
+        return new DayNotesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
     */
@@ -73,6 +82,13 @@ class ScheduleRequestBuilder extends BaseRequestBuilder
     */
     public function swapShiftsChangeRequests(): SwapShiftsChangeRequestsRequestBuilder {
         return new SwapShiftsChangeRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the timeCards property of the microsoft.graph.schedule entity.
+    */
+    public function timeCards(): TimeCardsRequestBuilder {
+        return new TimeCardsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
