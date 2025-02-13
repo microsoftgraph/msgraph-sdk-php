@@ -27,6 +27,20 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the allMembers property value. A collection of membership records associated with the channel, including both direct and indirect members of shared channels.
+     * @return array<ConversationMember>|null
+    */
+    public function getAllMembers(): ?array {
+        $val = $this->getBackingStore()->get('allMembers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConversationMember::class);
+            /** @var array<ConversationMember>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allMembers'");
+    }
+
+    /**
      * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
      * @return DateTime|null
     */
@@ -81,6 +95,7 @@ class Channel extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'allMembers' => fn(ParseNode $n) => $o->setAllMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
@@ -245,6 +260,7 @@ class Channel extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('allMembers', $this->getAllMembers());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
@@ -260,6 +276,14 @@ class Channel extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeStringValue('webUrl', $this->getWebUrl());
+    }
+
+    /**
+     * Sets the allMembers property value. A collection of membership records associated with the channel, including both direct and indirect members of shared channels.
+     * @param array<ConversationMember>|null $value Value to set for the allMembers property.
+    */
+    public function setAllMembers(?array $value): void {
+        $this->getBackingStore()->set('allMembers', $value);
     }
 
     /**

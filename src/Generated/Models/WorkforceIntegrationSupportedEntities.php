@@ -13,6 +13,7 @@ class WorkforceIntegrationSupportedEntities extends Enum {
     public const OPEN_SHIFT_REQUEST = "openShiftRequest";
     public const OFFER_SHIFT_REQUEST = "offerShiftRequest";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const TIME_CARD = "timeCard";
     public const TIME_OFF_REASON = "timeOffReason";
     public const TIME_OFF = "timeOff";
     public const TIME_OFF_REQUEST = "timeOffRequest";
