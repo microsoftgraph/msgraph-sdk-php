@@ -107,6 +107,18 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the authenticationBehaviors property value. The authenticationBehaviors property
+     * @return AuthenticationBehaviors|null
+    */
+    public function getAuthenticationBehaviors(): ?AuthenticationBehaviors {
+        $val = $this->getBackingStore()->get('authenticationBehaviors');
+        if (is_null($val) || $val instanceof AuthenticationBehaviors) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationBehaviors'");
+    }
+
+    /**
      * Gets the certification property value. Specifies the certification status of the application.
      * @return Certification|null
     */
@@ -231,6 +243,7 @@ class Application extends DirectoryObject implements Parsable
             'applicationTemplateId' => fn(ParseNode $n) => $o->setApplicationTemplateId($n->getStringValue()),
             'appManagementPolicies' => fn(ParseNode $n) => $o->setAppManagementPolicies($n->getCollectionOfObjectValues([AppManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'appRoles' => fn(ParseNode $n) => $o->setAppRoles($n->getCollectionOfObjectValues([AppRole::class, 'createFromDiscriminatorValue'])),
+            'authenticationBehaviors' => fn(ParseNode $n) => $o->setAuthenticationBehaviors($n->getObjectValue([AuthenticationBehaviors::class, 'createFromDiscriminatorValue'])),
             'certification' => fn(ParseNode $n) => $o->setCertification($n->getObjectValue([Certification::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'createdOnBehalfOf' => fn(ParseNode $n) => $o->setCreatedOnBehalfOf($n->getObjectValue([DirectoryObject::class, 'createFromDiscriminatorValue'])),
@@ -703,6 +716,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeStringValue('applicationTemplateId', $this->getApplicationTemplateId());
         $writer->writeCollectionOfObjectValues('appManagementPolicies', $this->getAppManagementPolicies());
         $writer->writeCollectionOfObjectValues('appRoles', $this->getAppRoles());
+        $writer->writeObjectValue('authenticationBehaviors', $this->getAuthenticationBehaviors());
         $writer->writeObjectValue('certification', $this->getCertification());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('createdOnBehalfOf', $this->getCreatedOnBehalfOf());
@@ -792,6 +806,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setAppRoles(?array $value): void {
         $this->getBackingStore()->set('appRoles', $value);
+    }
+
+    /**
+     * Sets the authenticationBehaviors property value. The authenticationBehaviors property
+     * @param AuthenticationBehaviors|null $value Value to set for the authenticationBehaviors property.
+    */
+    public function setAuthenticationBehaviors(?AuthenticationBehaviors $value): void {
+        $this->getBackingStore()->set('authenticationBehaviors', $value);
     }
 
     /**

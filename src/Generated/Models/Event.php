@@ -28,7 +28,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+     * Gets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. The default is true.
      * @return bool|null
     */
     public function getAllowNewTimeProposals(): ?bool {
@@ -80,7 +80,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
+     * Gets the bodyPreview property value. The preview of the message associated with the event. It's in text format.
      * @return string|null
     */
     public function getBodyPreview(): ?string {
@@ -194,7 +194,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
+     * Gets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. The default is false.
      * @return bool|null
     */
     public function getHideAttendees(): ?bool {
@@ -230,7 +230,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
      * @return array<Event>|null
     */
     public function getInstances(): ?array {
@@ -244,7 +244,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone.
+     * Gets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start, and endtime must be set to midnight and be in the same time zone.
      * @return bool|null
     */
     public function getIsAllDay(): ?bool {
@@ -268,7 +268,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isDraft property value. Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
+     * Gets the isDraft property value. Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes are sent, or if the event is an appointment without any attendees.
      * @return bool|null
     */
     public function getIsDraft(): ?bool {
@@ -280,7 +280,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isOnlineMeeting property value. True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional.  After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Subsequently Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.
+     * Gets the isOnlineMeeting property value. True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional.  After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Subsequently, Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.
      * @return bool|null
     */
     public function getIsOnlineMeeting(): ?bool {
@@ -292,7 +292,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isOrganizer property value. Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
+     * Gets the isOrganizer property value. Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). It also applies if a delegate organized the event on behalf of the owner.
      * @return bool|null
     */
     public function getIsOrganizer(): ?bool {
@@ -328,7 +328,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the locations property value. The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
+     * Gets the locations property value. The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection are removed and replaced by the new location value.
      * @return array<Location>|null
     */
     public function getLocations(): ?array {
@@ -356,7 +356,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the onlineMeeting property value. Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you cannot change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
+     * Gets the onlineMeeting property value. Details for an attendee to join the meeting online. The default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
      * @return OnlineMeetingInfo|null
     */
     public function getOnlineMeeting(): ?OnlineMeetingInfo {
@@ -368,7 +368,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently you cannot change onlineMeetingProvider again, and the meeting remains available online.
+     * Gets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently, you can't change onlineMeetingProvider again, and the meeting remains available online.
      * @return OnlineMeetingProviderType|null
     */
     public function getOnlineMeetingProvider(): ?OnlineMeetingProviderType {
@@ -416,7 +416,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the originalStart property value. Represents the start time of an event when it is initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the originalStart property value. Represents the start time of an event when it's initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
     public function getOriginalStart(): ?DateTime {
@@ -488,7 +488,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the sensitivity property value. Possible values are: normal, personal, private, confidential.
+     * Gets the sensitivity property value. Possible values are: normal, personal, private, and confidential.
      * @return Sensitivity|null
     */
     public function getSensitivity(): ?Sensitivity {
@@ -562,7 +562,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
+     * Gets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. It's useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
      * @return string|null
     */
     public function getTransactionId(): ?string {
@@ -586,7 +586,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
+     * Gets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can't be accessed from within an iFrame.
      * @return string|null
     */
     public function getWebLink(): ?string {
@@ -648,7 +648,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+     * Sets the allowNewTimeProposals property value. true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. The default is true.
      * @param bool|null $value Value to set for the allowNewTimeProposals property.
     */
     public function setAllowNewTimeProposals(?bool $value): void {
@@ -680,7 +680,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the bodyPreview property value. The preview of the message associated with the event. It is in text format.
+     * Sets the bodyPreview property value. The preview of the message associated with the event. It's in text format.
      * @param string|null $value Value to set for the bodyPreview property.
     */
     public function setBodyPreview(?string $value): void {
@@ -720,7 +720,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
+     * Sets the hideAttendees property value. When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. The default is false.
      * @param bool|null $value Value to set for the hideAttendees property.
     */
     public function setHideAttendees(?bool $value): void {
@@ -744,7 +744,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
      * @param array<Event>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value): void {
@@ -752,7 +752,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start and end time must be set to midnight and be in the same time zone.
+     * Sets the isAllDay property value. Set to true if the event lasts all day. If true, regardless of whether it's a single-day or multi-day event, start, and endtime must be set to midnight and be in the same time zone.
      * @param bool|null $value Value to set for the isAllDay property.
     */
     public function setIsAllDay(?bool $value): void {
@@ -768,7 +768,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isDraft property value. Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
+     * Sets the isDraft property value. Set to true if the user has updated the meeting in Outlook but hasn't sent the updates to attendees. Set to false if all changes are sent, or if the event is an appointment without any attendees.
      * @param bool|null $value Value to set for the isDraft property.
     */
     public function setIsDraft(?bool $value): void {
@@ -776,7 +776,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isOnlineMeeting property value. True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional.  After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Subsequently Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.
+     * Sets the isOnlineMeeting property value. True if this event has online meeting information (that is, onlineMeeting points to an onlineMeetingInfo resource), false otherwise. Default is false (onlineMeeting is null). Optional.  After you set isOnlineMeeting to true, Microsoft Graph initializes onlineMeeting. Subsequently, Outlook ignores any further changes to isOnlineMeeting, and the meeting remains available online.
      * @param bool|null $value Value to set for the isOnlineMeeting property.
     */
     public function setIsOnlineMeeting(?bool $value): void {
@@ -784,7 +784,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isOrganizer property value. Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
+     * Sets the isOrganizer property value. Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). It also applies if a delegate organized the event on behalf of the owner.
      * @param bool|null $value Value to set for the isOrganizer property.
     */
     public function setIsOrganizer(?bool $value): void {
@@ -808,7 +808,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the locations property value. The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
+     * Sets the locations property value. The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection are removed and replaced by the new location value.
      * @param array<Location>|null $value Value to set for the locations property.
     */
     public function setLocations(?array $value): void {
@@ -824,7 +824,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the onlineMeeting property value. Details for an attendee to join the meeting online. Default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you cannot change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
+     * Sets the onlineMeeting property value. Details for an attendee to join the meeting online. The default is null. Read-only. After you set the isOnlineMeeting and onlineMeetingProvider properties to enable a meeting online, Microsoft Graph initializes onlineMeeting. When set, the meeting remains available online, and you can't change the isOnlineMeeting, onlineMeetingProvider, and onlneMeeting properties again.
      * @param OnlineMeetingInfo|null $value Value to set for the onlineMeeting property.
     */
     public function setOnlineMeeting(?OnlineMeetingInfo $value): void {
@@ -832,7 +832,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently you cannot change onlineMeetingProvider again, and the meeting remains available online.
+     * Sets the onlineMeetingProvider property value. Represents the online meeting service provider. By default, onlineMeetingProvider is unknown. The possible values are unknown, teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.  After you set onlineMeetingProvider, Microsoft Graph initializes onlineMeeting. Subsequently, you can't change onlineMeetingProvider again, and the meeting remains available online.
      * @param OnlineMeetingProviderType|null $value Value to set for the onlineMeetingProvider property.
     */
     public function setOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {
@@ -864,7 +864,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the originalStart property value. Represents the start time of an event when it is initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the originalStart property value. Represents the start time of an event when it's initially created as an occurrence or exception in a recurring series. This property is not returned for events that are single instances. Its date and time information is expressed in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param DateTime|null $value Value to set for the originalStart property.
     */
     public function setOriginalStart(?DateTime $value): void {
@@ -912,7 +912,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the sensitivity property value. Possible values are: normal, personal, private, confidential.
+     * Sets the sensitivity property value. Possible values are: normal, personal, private, and confidential.
      * @param Sensitivity|null $value Value to set for the sensitivity property.
     */
     public function setSensitivity(?Sensitivity $value): void {
@@ -960,7 +960,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
+     * Sets the transactionId property value. A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. It's useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you can't change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
      * @param string|null $value Value to set for the transactionId property.
     */
     public function setTransactionId(?string $value): void {
@@ -976,7 +976,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
+     * Sets the webLink property value. The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can't be accessed from within an iFrame.
      * @param string|null $value Value to set for the webLink property.
     */
     public function setWebLink(?string $value): void {
