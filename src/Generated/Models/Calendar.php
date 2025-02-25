@@ -68,7 +68,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * Gets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who shared a calendar and granted write access.
      * @return bool|null
     */
     public function getCanEdit(): ?bool {
@@ -80,7 +80,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * Gets the canShare property value. true if the user has permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @return bool|null
     */
     public function getCanShare(): ?bool {
@@ -92,7 +92,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
+     * Gets the canViewPrivateItems property value. If true, the user can read calendar items that have been marked private, false otherwise.
      * @return bool|null
     */
     public function getCanViewPrivateItems(): ?bool {
@@ -332,7 +332,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who shared a calendar and granted write access.
      * @param bool|null $value Value to set for the canEdit property.
     */
     public function setCanEdit(?bool $value): void {
@@ -340,7 +340,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * Sets the canShare property value. true if the user has permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      * @param bool|null $value Value to set for the canShare property.
     */
     public function setCanShare(?bool $value): void {
@@ -348,7 +348,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
+     * Sets the canViewPrivateItems property value. If true, the user can read calendar items that have been marked private, false otherwise.
      * @param bool|null $value Value to set for the canViewPrivateItems property.
     */
     public function setCanViewPrivateItems(?bool $value): void {

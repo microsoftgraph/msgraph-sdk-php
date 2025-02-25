@@ -90,7 +90,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
+     * Gets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. The default is false.
      * @return bool|null
     */
     public function getIsDelegated(): ?bool {
@@ -216,7 +216,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. Default is false.
+     * Sets the isDelegated property value. True if this meeting request is accessible to a delegate, false otherwise. The default is false.
      * @param bool|null $value Value to set for the isDelegated property.
     */
     public function setIsDelegated(?bool $value): void {
