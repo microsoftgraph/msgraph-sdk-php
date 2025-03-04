@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Copy\CopyRequestBuilde
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MessageRules\MessageRulesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Move\MoveRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -54,6 +55,13 @@ class MailFolderItemRequestBuilder extends BaseRequestBuilder
     */
     public function move(): MoveRequestBuilder {
         return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

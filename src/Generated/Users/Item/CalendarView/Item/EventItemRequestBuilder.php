@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\DismissReminder\Dismi
 use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarView\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -88,6 +89,13 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -46,6 +46,7 @@ class MailboxEvidence extends AlertEvidence implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'primaryAddress' => fn(ParseNode $n) => $o->setPrimaryAddress($n->getStringValue()),
+            'upn' => fn(ParseNode $n) => $o->setUpn($n->getStringValue()),
             'userAccount' => fn(ParseNode $n) => $o->setUserAccount($n->getObjectValue([UserAccount::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -60,6 +61,18 @@ class MailboxEvidence extends AlertEvidence implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'primaryAddress'");
+    }
+
+    /**
+     * Gets the upn property value. The user principal name of the mailbox.
+     * @return string|null
+    */
+    public function getUpn(): ?string {
+        $val = $this->getBackingStore()->get('upn');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'upn'");
     }
 
     /**
@@ -82,6 +95,7 @@ class MailboxEvidence extends AlertEvidence implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('primaryAddress', $this->getPrimaryAddress());
+        $writer->writeStringValue('upn', $this->getUpn());
         $writer->writeObjectValue('userAccount', $this->getUserAccount());
     }
 
@@ -99,6 +113,14 @@ class MailboxEvidence extends AlertEvidence implements Parsable
     */
     public function setPrimaryAddress(?string $value): void {
         $this->getBackingStore()->set('primaryAddress', $value);
+    }
+
+    /**
+     * Sets the upn property value. The user principal name of the mailbox.
+     * @param string|null $value Value to set for the upn property.
+    */
+    public function setUpn(?string $value): void {
+        $this->getBackingStore()->set('upn', $value);
     }
 
     /**

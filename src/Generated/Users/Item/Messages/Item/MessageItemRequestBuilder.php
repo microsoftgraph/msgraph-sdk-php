@@ -14,6 +14,7 @@ use Microsoft\Graph\Generated\Users\Item\Messages\Item\CreateReplyAll\CreateRepl
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Move\MoveRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Send\SendRequestBuilder;
@@ -89,6 +90,13 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
     */
     public function move(): MoveRequestBuilder {
         return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

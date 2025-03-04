@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodia
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the siteSource objects associated with an ediscoveryCustodian or ediscoveryHoldPolicy.
+ * Get a list of the siteSource objects associated with an ediscoveryCustodian.
 */
 class SiteSourcesRequestBuilderGetQueryParameters 
 {
