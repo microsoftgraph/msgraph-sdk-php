@@ -56,7 +56,7 @@ class PrintSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the documentConversionEnabled property value. Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service will automatically convert documents into a format compatible with the printer (xps to pdf) when needed.
+     * Gets the documentConversionEnabled property value. Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service converts documents into a format compatible with the printer (xps to pdf) when needed.
      * @return bool|null
     */
     public function getDocumentConversionEnabled(): ?bool {
@@ -118,7 +118,7 @@ class PrintSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the documentConversionEnabled property value. Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service will automatically convert documents into a format compatible with the printer (xps to pdf) when needed.
+     * Sets the documentConversionEnabled property value. Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service converts documents into a format compatible with the printer (xps to pdf) when needed.
      * @param bool|null $value Value to set for the documentConversionEnabled property.
     */
     public function setDocumentConversionEnabled(?bool $value): void {

@@ -39,10 +39,11 @@ class SiteSourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property siteSources for security
+     * Delete a siteSource object associated with an ediscoveryCustodian.
      * @param SiteSourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-delete-sitesources?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SiteSourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -82,7 +83,7 @@ class SiteSourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property siteSources for security
+     * Delete a siteSource object associated with an ediscoveryCustodian.
      * @param SiteSourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

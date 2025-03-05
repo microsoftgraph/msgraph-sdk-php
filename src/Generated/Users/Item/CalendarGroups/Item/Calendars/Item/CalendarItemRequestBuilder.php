@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Cale
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\EventsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\GetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -47,6 +48,13 @@ class CalendarItemRequestBuilder extends BaseRequestBuilder
     */
     public function getSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -80,6 +80,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.securityGroupEvidence': return new SecurityGroupEvidence();
                 case '#microsoft.graph.security.servicePrincipalEvidence': return new ServicePrincipalEvidence();
                 case '#microsoft.graph.security.submissionMailEvidence': return new SubmissionMailEvidence();
+                case '#microsoft.graph.security.teamsMessageEvidence': return new TeamsMessageEvidence();
                 case '#microsoft.graph.security.urlEvidence': return new UrlEvidence();
                 case '#microsoft.graph.security.userEvidence': return new UserEvidence();
             }

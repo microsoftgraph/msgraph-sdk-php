@@ -39,10 +39,11 @@ class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property unifiedGroupSources for security
+     * Delete a unifiedGroupSource object associated with an ediscoveryCustodian.
      * @param UnifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-unifiedgroupsource-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UnifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -82,7 +83,7 @@ class UnifiedGroupSourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property unifiedGroupSources for security
+     * Delete a unifiedGroupSource object associated with an ediscoveryCustodian.
      * @param UnifiedGroupSourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

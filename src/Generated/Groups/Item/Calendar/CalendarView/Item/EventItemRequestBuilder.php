@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\DismissRemi
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
@@ -88,6 +89,13 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

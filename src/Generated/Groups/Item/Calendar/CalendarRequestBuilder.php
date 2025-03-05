@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarPermissions\CalendarP
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\EventsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\GetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Calendar\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Models\Calendar;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -47,6 +48,13 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     */
     public function getSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

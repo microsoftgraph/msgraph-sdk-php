@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\Groups\Item\Events\Item\DismissReminder\DismissRem
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Instances\InstancesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Events\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
@@ -88,6 +89,13 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the permanentDelete method.
+    */
+    public function permanentDelete(): PermanentDeleteRequestBuilder {
+        return new PermanentDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

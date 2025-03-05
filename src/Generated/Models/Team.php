@@ -115,6 +115,7 @@ class Team extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'firstChannelName' => fn(ParseNode $n) => $o->setFirstChannelName($n->getStringValue()),
             'funSettings' => fn(ParseNode $n) => $o->setFunSettings($n->getObjectValue([TeamFunSettings::class, 'createFromDiscriminatorValue'])),
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Group::class, 'createFromDiscriminatorValue'])),
             'guestSettings' => fn(ParseNode $n) => $o->setGuestSettings($n->getObjectValue([TeamGuestSettings::class, 'createFromDiscriminatorValue'])),
@@ -138,6 +139,18 @@ class Team extends Entity implements Parsable
             'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getEnumValue(TeamVisibilityType::class)),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the firstChannelName property value. The firstChannelName property
+     * @return string|null
+    */
+    public function getFirstChannelName(): ?string {
+        $val = $this->getBackingStore()->get('firstChannelName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'firstChannelName'");
     }
 
     /**
@@ -428,6 +441,7 @@ class Team extends Entity implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('firstChannelName', $this->getFirstChannelName());
         $writer->writeObjectValue('funSettings', $this->getFunSettings());
         $writer->writeObjectValue('group', $this->getGroup());
         $writer->writeObjectValue('guestSettings', $this->getGuestSettings());
@@ -498,6 +512,14 @@ class Team extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the firstChannelName property value. The firstChannelName property
+     * @param string|null $value Value to set for the firstChannelName property.
+    */
+    public function setFirstChannelName(?string $value): void {
+        $this->getBackingStore()->set('firstChannelName', $value);
     }
 
     /**
