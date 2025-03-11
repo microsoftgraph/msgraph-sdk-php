@@ -142,7 +142,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Gets the firstChannelName property value. The firstChannelName property
+     * Gets the firstChannelName property value. The name of the first channel in the team. This is an optional property, only used during team creation and isn't returned in methods to get and list teams.
      * @return string|null
     */
     public function getFirstChannelName(): ?string {
@@ -515,7 +515,7 @@ class Team extends Entity implements Parsable
     }
 
     /**
-     * Sets the firstChannelName property value. The firstChannelName property
+     * Sets the firstChannelName property value. The name of the first channel in the team. This is an optional property, only used during team creation and isn't returned in methods to get and list teams.
      * @param string|null $value Value to set for the firstChannelName property.
     */
     public function setFirstChannelName(?string $value): void {
