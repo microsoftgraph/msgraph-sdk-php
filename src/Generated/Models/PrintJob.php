@@ -27,6 +27,18 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
+     * Gets the acknowledgedDateTime property value. The dateTimeOffset when the job was acknowledged. Read-only.
+     * @return DateTime|null
+    */
+    public function getAcknowledgedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('acknowledgedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'acknowledgedDateTime'");
+    }
+
+    /**
      * Gets the configuration property value. The configuration property
      * @return PrintJobConfiguration|null
     */
@@ -77,16 +89,30 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
+     * Gets the errorCode property value. The error code of the print job. Read-only.
+     * @return int|null
+    */
+    public function getErrorCode(): ?int {
+        $val = $this->getBackingStore()->get('errorCode');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorCode'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'acknowledgedDateTime' => fn(ParseNode $n) => $o->setAcknowledgedDateTime($n->getDateTimeValue()),
             'configuration' => fn(ParseNode $n) => $o->setConfiguration($n->getObjectValue([PrintJobConfiguration::class, 'createFromDiscriminatorValue'])),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([UserIdentity::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'documents' => fn(ParseNode $n) => $o->setDocuments($n->getCollectionOfObjectValues([PrintDocument::class, 'createFromDiscriminatorValue'])),
+            'errorCode' => fn(ParseNode $n) => $o->setErrorCode($n->getIntegerValue()),
             'isFetchable' => fn(ParseNode $n) => $o->setIsFetchable($n->getBooleanValue()),
             'redirectedFrom' => fn(ParseNode $n) => $o->setRedirectedFrom($n->getStringValue()),
             'redirectedTo' => fn(ParseNode $n) => $o->setRedirectedTo($n->getStringValue()),
@@ -163,15 +189,25 @@ class PrintJob extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeDateTimeValue('acknowledgedDateTime', $this->getAcknowledgedDateTime());
         $writer->writeObjectValue('configuration', $this->getConfiguration());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('documents', $this->getDocuments());
+        $writer->writeIntegerValue('errorCode', $this->getErrorCode());
         $writer->writeBooleanValue('isFetchable', $this->getIsFetchable());
         $writer->writeStringValue('redirectedFrom', $this->getRedirectedFrom());
         $writer->writeStringValue('redirectedTo', $this->getRedirectedTo());
         $writer->writeObjectValue('status', $this->getStatus());
         $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
+    }
+
+    /**
+     * Sets the acknowledgedDateTime property value. The dateTimeOffset when the job was acknowledged. Read-only.
+     * @param DateTime|null $value Value to set for the acknowledgedDateTime property.
+    */
+    public function setAcknowledgedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('acknowledgedDateTime', $value);
     }
 
     /**
@@ -204,6 +240,14 @@ class PrintJob extends Entity implements Parsable
     */
     public function setDocuments(?array $value): void {
         $this->getBackingStore()->set('documents', $value);
+    }
+
+    /**
+     * Sets the errorCode property value. The error code of the print job. Read-only.
+     * @param int|null $value Value to set for the errorCode property.
+    */
+    public function setErrorCode(?int $value): void {
+        $this->getBackingStore()->set('errorCode', $value);
     }
 
     /**

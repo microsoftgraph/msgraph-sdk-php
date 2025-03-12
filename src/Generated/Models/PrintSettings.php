@@ -76,6 +76,7 @@ class PrintSettings implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'documentConversionEnabled' => fn(ParseNode $n) => $o->setDocumentConversionEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'printerDiscoverySettings' => fn(ParseNode $n) => $o->setPrinterDiscoverySettings($n->getObjectValue([PrinterDiscoverySettings::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -92,12 +93,25 @@ class PrintSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the printerDiscoverySettings property value. Specifies settings that affect printer discovery when using Universal Print.
+     * @return PrinterDiscoverySettings|null
+    */
+    public function getPrinterDiscoverySettings(): ?PrinterDiscoverySettings {
+        $val = $this->getBackingStore()->get('printerDiscoverySettings');
+        if (is_null($val) || $val instanceof PrinterDiscoverySettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'printerDiscoverySettings'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('documentConversionEnabled', $this->getDocumentConversionEnabled());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('printerDiscoverySettings', $this->getPrinterDiscoverySettings());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -131,6 +145,14 @@ class PrintSettings implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the printerDiscoverySettings property value. Specifies settings that affect printer discovery when using Universal Print.
+     * @param PrinterDiscoverySettings|null $value Value to set for the printerDiscoverySettings property.
+    */
+    public function setPrinterDiscoverySettings(?PrinterDiscoverySettings $value): void {
+        $this->getBackingStore()->set('printerDiscoverySettings', $value);
     }
 
 }
