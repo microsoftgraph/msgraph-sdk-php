@@ -48,7 +48,7 @@ class CloudPcProvisioningPolicyAutopatch implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the autopatchGroupId property value. The autopatchGroupId property
+     * Gets the autopatchGroupId property value. The unique identifier (ID) of a Windows Autopatch group. An Autopatch group is a logical container or unit that groups several Microsoft Entra groups and software update policies. Devices with the same Autopatch group ID share unified software update management. The default value is null that indicates that no Autopatch group is associated with the provisioning policy.
      * @return string|null
     */
     public function getAutopatchGroupId(): ?string {
@@ -110,7 +110,7 @@ class CloudPcProvisioningPolicyAutopatch implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the autopatchGroupId property value. The autopatchGroupId property
+     * Sets the autopatchGroupId property value. The unique identifier (ID) of a Windows Autopatch group. An Autopatch group is a logical container or unit that groups several Microsoft Entra groups and software update policies. Devices with the same Autopatch group ID share unified software update management. The default value is null that indicates that no Autopatch group is associated with the provisioning policy.
      * @param string|null $value Value to set for the autopatchGroupId property.
     */
     public function setAutopatchGroupId(?string $value): void {
