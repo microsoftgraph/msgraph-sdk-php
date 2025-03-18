@@ -52,7 +52,7 @@ class CloudPcProvisioningPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the autopatch property value. The autopatch property
+     * Gets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. Supports $select.
      * @return CloudPcProvisioningPolicyAutopatch|null
     */
     public function getAutopatch(): ?CloudPcProvisioningPolicyAutopatch {
@@ -302,7 +302,7 @@ class CloudPcProvisioningPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the autopatch property value. The autopatch property
+     * Sets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. Supports $select.
      * @param CloudPcProvisioningPolicyAutopatch|null $value Value to set for the autopatch property.
     */
     public function setAutopatch(?CloudPcProvisioningPolicyAutopatch $value): void {

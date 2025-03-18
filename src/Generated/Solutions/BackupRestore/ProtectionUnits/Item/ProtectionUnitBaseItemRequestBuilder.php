@@ -6,6 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ProtectionUnitBase;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphDriveProtectionUnit\GraphDriveProtectionUnitRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphMailboxProtectionUnit\GraphMailboxProtectionUnitRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphSiteProtectionUnit\GraphSiteProtectionUnitRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -16,6 +19,27 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ProtectionUnitBaseItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Casts the previous resource to driveProtectionUnit.
+    */
+    public function graphDriveProtectionUnit(): GraphDriveProtectionUnitRequestBuilder {
+        return new GraphDriveProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to mailboxProtectionUnit.
+    */
+    public function graphMailboxProtectionUnit(): GraphMailboxProtectionUnitRequestBuilder {
+        return new GraphMailboxProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to siteProtectionUnit.
+    */
+    public function graphSiteProtectionUnit(): GraphSiteProtectionUnitRequestBuilder {
+        return new GraphSiteProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ProtectionUnitBaseItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

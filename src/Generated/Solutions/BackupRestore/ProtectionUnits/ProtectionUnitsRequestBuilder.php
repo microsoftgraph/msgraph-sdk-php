@@ -7,6 +7,9 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ProtectionUnitBaseCollectionResponse;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphDriveProtectionUnit\GraphDriveProtectionUnitRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphMailboxProtectionUnit\GraphMailboxProtectionUnitRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphSiteProtectionUnit\GraphSiteProtectionUnitRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\ProtectionUnitBaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,6 +26,27 @@ class ProtectionUnitsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to driveProtectionUnit.
+    */
+    public function graphDriveProtectionUnit(): GraphDriveProtectionUnitRequestBuilder {
+        return new GraphDriveProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to mailboxProtectionUnit.
+    */
+    public function graphMailboxProtectionUnit(): GraphMailboxProtectionUnitRequestBuilder {
+        return new GraphMailboxProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to siteProtectionUnit.
+    */
+    public function graphSiteProtectionUnit(): GraphSiteProtectionUnitRequestBuilder {
+        return new GraphSiteProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
