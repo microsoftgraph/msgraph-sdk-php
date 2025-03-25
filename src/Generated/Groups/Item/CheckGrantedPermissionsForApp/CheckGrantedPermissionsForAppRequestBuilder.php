@@ -32,7 +32,7 @@ class CheckGrantedPermissionsForAppRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action checkGrantedPermissionsForApp
      * @param CheckGrantedPermissionsForAppRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<CheckGrantedPermissionsForAppPostResponse|null>
+     * @return Promise<CheckGrantedPermissionsForApppostResponse|null>
      * @throws Exception
     */
     public function post(?CheckGrantedPermissionsForAppRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class CheckGrantedPermissionsForAppRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [CheckGrantedPermissionsForAppPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [CheckGrantedPermissionsForApppostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

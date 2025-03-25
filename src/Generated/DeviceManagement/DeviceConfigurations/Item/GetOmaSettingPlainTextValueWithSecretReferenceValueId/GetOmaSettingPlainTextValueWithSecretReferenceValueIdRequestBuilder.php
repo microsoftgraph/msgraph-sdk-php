@@ -35,7 +35,7 @@ class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder extend
     /**
      * Invoke function getOmaSettingPlainTextValue
      * @param GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse|null>
+     * @return Promise<GetOmaSettingPlainTextValueWithSecretReferenceValueIdgetResponse|null>
      * @throws Exception
     */
     public function get(?GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -43,7 +43,7 @@ class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder extend
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetOmaSettingPlainTextValueWithSecretReferenceValueIdGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetOmaSettingPlainTextValueWithSecretReferenceValueIdgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

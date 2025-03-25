@@ -33,7 +33,7 @@ class GetMemberGroupsRequestBuilder extends BaseRequestBuilder
      * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive. This API returns up to 11,000 group IDs. If more than 11,000 results are available, it returns a 400 Bad Request error with the DirectoryResultSizeLimitExceeded error code. If you get the DirectoryResultSizeLimitExceeded error code, use the List group transitive memberOf API instead.
      * @param GetMemberGroupsPostRequestBody $body The request body
      * @param GetMemberGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetMemberGroupsPostResponse|null>
+     * @return Promise<GetMemberGroupspostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryobject-getmembergroups?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GetMemberGroupsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetMemberGroupsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetMemberGroupspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

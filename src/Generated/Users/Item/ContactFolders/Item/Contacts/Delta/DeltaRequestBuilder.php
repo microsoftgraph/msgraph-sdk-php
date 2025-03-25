@@ -32,7 +32,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     /**
      * Get a set of contacts that have been added, deleted, or updated in a specified folder. A delta function call for contacts in a folder is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the contacts in that folder. This allows you to maintain and synchronize a local store of a user's contacts without having to fetch the entire set of contacts from the server every time.  
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<DeltaGetResponse|null>
+     * @return Promise<DeltagetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/contact-delta?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [DeltaGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [DeltagetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

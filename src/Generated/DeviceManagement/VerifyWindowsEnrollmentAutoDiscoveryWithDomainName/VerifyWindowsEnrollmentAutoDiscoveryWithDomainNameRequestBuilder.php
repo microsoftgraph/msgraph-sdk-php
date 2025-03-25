@@ -35,7 +35,7 @@ class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder extends B
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
      * @param VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse|null>
+     * @return Promise<VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse|null>
      * @throws Exception
     */
     public function get(?VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -43,7 +43,7 @@ class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder extends B
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [VerifyWindowsEnrollmentAutoDiscoveryWithDomainNamegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

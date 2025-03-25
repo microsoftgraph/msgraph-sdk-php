@@ -35,7 +35,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     /**
      * In Microsoft Entra Entitlement Management, retrieve a list of accessPackageAssignmentRequest objects filtered on the signed-in user.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
+     * @return Promise<FilterByCurrentUserWithOngetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOnGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOngetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

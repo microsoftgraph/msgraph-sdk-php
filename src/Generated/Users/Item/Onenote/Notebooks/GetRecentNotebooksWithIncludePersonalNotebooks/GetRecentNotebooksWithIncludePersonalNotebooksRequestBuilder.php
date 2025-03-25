@@ -35,7 +35,7 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extends BaseR
     /**
      * Get a list of recentNotebook instances that have been accessed by the signed-in user.
      * @param GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetRecentNotebooksWithIncludePersonalNotebooksGetResponse|null>
+     * @return Promise<GetRecentNotebooksWithIncludePersonalNotebooksgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/notebook-getrecentnotebooks?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extends BaseR
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetRecentNotebooksWithIncludePersonalNotebooksGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetRecentNotebooksWithIncludePersonalNotebooksgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

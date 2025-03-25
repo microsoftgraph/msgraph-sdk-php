@@ -35,7 +35,7 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieves the effective permissions of the currently authenticated user
      * @param GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetEffectivePermissionsWithScopeGetResponse|null>
+     * @return Promise<GetEffectivePermissionsWithScopegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-geteffectivepermissions?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetEffectivePermissionsWithScopeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetEffectivePermissionsWithScopegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

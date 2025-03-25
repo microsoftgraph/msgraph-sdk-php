@@ -33,7 +33,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
      * Grant users access to a link represented by a permission.
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GrantPostResponse|null>
+     * @return Promise<GrantpostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GrantPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GrantpostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

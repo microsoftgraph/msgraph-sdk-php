@@ -33,7 +33,7 @@ class GetByIdsRequestBuilder extends BaseRequestBuilder
      * Return the directory objects specified in a list of IDs. Only a subset of user properties are returned by default in v1.0. Some common uses for this function are to:
      * @param GetByIdsPostRequestBody $body The request body
      * @param GetByIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetByIdsPostResponse|null>
+     * @return Promise<GetByIdspostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GetByIdsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetByIdsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetByIdspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

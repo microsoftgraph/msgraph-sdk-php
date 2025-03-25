@@ -32,7 +32,7 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequestBuil
     /**
      * Not yet documented
      * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetUserIdsWithFlaggedAppRegistrationGetResponse|null>
+     * @return Promise<GetUserIdsWithFlaggedAppRegistrationgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-getuseridswithflaggedappregistration?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequestBuil
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetUserIdsWithFlaggedAppRegistrationGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetUserIdsWithFlaggedAppRegistrationgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

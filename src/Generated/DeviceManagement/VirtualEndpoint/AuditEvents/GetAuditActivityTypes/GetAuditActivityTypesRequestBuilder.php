@@ -32,7 +32,7 @@ class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder
     /**
      * Get audit activity types by tenant ID.
      * @param GetAuditActivityTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAuditActivityTypesGetResponse|null>
+     * @return Promise<GetAuditActivityTypesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpcauditevent-getauditactivitytypes?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetAuditActivityTypesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAuditActivityTypesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAuditActivityTypesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

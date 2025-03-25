@@ -32,7 +32,7 @@ class RecentRequestBuilder extends BaseRequestBuilder
     /**
      * List a set of items that have been recently used by the signed in user.This collection includes items that are in the user's drive and items they have access to from other drives.
      * @param RecentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<RecentGetResponse|null>
+     * @return Promise<RecentgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/drive-recent?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class RecentRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [RecentGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [RecentgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

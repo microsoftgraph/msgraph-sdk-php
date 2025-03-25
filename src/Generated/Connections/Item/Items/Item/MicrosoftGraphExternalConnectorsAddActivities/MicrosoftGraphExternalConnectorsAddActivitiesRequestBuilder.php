@@ -33,7 +33,7 @@ class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends BaseRe
      * Invoke action addActivities
      * @param AddActivitiesPostRequestBody $body The request body
      * @param MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AddActivitiesPostResponse|null>
+     * @return Promise<AddActivitiespostResponse|null>
      * @throws Exception
     */
     public function post(AddActivitiesPostRequestBody $body, ?MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
@@ -41,7 +41,7 @@ class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends BaseRe
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AddActivitiesPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AddActivitiespostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -38,7 +38,7 @@ class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequest
     /**
      * Get a log of PSTN calls as a collection of pstnCallLogRow entries.
      * @param MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse|null>
+     * @return Promise<GetPstnCallsWithFromDateTimeWithToDateTimegetResponse|null>
      * @throws Exception
     */
     public function get(?MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -46,7 +46,7 @@ class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequest
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetPstnCallsWithFromDateTimeWithToDateTimegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

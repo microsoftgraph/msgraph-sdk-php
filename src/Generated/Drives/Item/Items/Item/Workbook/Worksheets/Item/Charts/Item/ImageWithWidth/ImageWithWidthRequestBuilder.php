@@ -35,7 +35,7 @@ class ImageWithWidthRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function image
      * @param ImageWithWidthRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ImageWithWidthGetResponse|null>
+     * @return Promise<ImageWithWidthgetResponse|null>
      * @throws Exception
     */
     public function get(?ImageWithWidthRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -43,7 +43,7 @@ class ImageWithWidthRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ImageWithWidthGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ImageWithWidthgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -32,7 +32,7 @@ class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBuilder
     /**
      * Gets diagnostics validation status for a given user.
      * @param GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetManagedAppDiagnosticStatusesGetResponse|null>
+     * @return Promise<GetManagedAppDiagnosticStatusesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedappdiagnosticstatuses?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetManagedAppDiagnosticStatusesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetManagedAppDiagnosticStatusesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

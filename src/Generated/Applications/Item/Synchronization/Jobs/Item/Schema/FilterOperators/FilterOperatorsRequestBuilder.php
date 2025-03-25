@@ -32,7 +32,7 @@ class FilterOperatorsRequestBuilder extends BaseRequestBuilder
     /**
      * List all operators supported in the scoping filters.
      * @param FilterOperatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<FilterOperatorsGetResponse|null>
+     * @return Promise<FilterOperatorsgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationschema-filteroperators?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class FilterOperatorsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [FilterOperatorsGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [FilterOperatorsgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -35,7 +35,7 @@ class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseRequestBuild
     /**
      * Invoke function allowedCalendarSharingRoles
      * @param AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AllowedCalendarSharingRolesWithUserGetResponse|null>
+     * @return Promise<AllowedCalendarSharingRolesWithUsergetResponse|null>
      * @throws Exception
     */
     public function get(?AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -43,7 +43,7 @@ class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseRequestBuild
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AllowedCalendarSharingRolesWithUserGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AllowedCalendarSharingRolesWithUsergetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

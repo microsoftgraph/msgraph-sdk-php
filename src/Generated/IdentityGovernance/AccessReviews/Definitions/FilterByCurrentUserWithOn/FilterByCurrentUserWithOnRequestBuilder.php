@@ -35,7 +35,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     /**
      * Returns accessReviewScheduleDefinition objects where the calling user is a reviewer on one or more accessReviewInstance objects.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
+     * @return Promise<FilterByCurrentUserWithOngetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accessreviewscheduledefinition-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOnGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOngetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

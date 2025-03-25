@@ -32,7 +32,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function getAllMessages
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAllMessagesGetResponse|null>
+     * @return Promise<GetAllMessagesgetResponse|null>
      * @throws Exception
     */
     public function get(?GetAllMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAllMessagesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAllMessagesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -35,7 +35,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve all decision items for an instance of an access review or a stage of an instance of a multi-stage access review, for which the calling user is the reviewer. The decision items are represented by accessReviewInstanceDecisionItem objects on a given accessReviewInstance or accessReviewStage for which the calling user is the reviewer.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
+     * @return Promise<FilterByCurrentUserWithOngetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOnGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOngetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

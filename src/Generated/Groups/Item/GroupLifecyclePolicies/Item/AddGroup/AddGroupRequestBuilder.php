@@ -33,7 +33,7 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
      * Add a group to a groupLifecyclePolicy. This action is supported only if the managedGroupTypes property of the policy is set to Selected.
      * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AddGroupPostResponse|null>
+     * @return Promise<AddGrouppostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AddGroupPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AddGrouppostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -32,7 +32,7 @@ class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseRequestBuilde
     /**
      * Set mobile device management authority
      * @param SetMobileDeviceManagementAuthorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<SetMobileDeviceManagementAuthorityPostResponse|null>
+     * @return Promise<SetMobileDeviceManagementAuthoritypostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseRequestBuilde
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [SetMobileDeviceManagementAuthorityPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [SetMobileDeviceManagementAuthoritypostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

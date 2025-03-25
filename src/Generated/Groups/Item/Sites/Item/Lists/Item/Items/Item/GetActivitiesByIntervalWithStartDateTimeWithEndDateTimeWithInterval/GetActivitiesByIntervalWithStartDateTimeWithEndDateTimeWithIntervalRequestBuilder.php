@@ -39,7 +39,7 @@ class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequest
     /**
      * Invoke function getActivitiesByInterval
      * @param GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse|null>
+     * @return Promise<GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalgetResponse|null>
      * @throws Exception
     */
     public function get(?GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -47,7 +47,7 @@ class GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequest
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

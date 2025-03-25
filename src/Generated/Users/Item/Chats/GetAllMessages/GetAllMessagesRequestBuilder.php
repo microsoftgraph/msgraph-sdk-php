@@ -32,7 +32,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     /**
      * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAllMessagesGetResponse|null>
+     * @return Promise<GetAllMessagesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/chats-getallmessages?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAllMessagesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAllMessagesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

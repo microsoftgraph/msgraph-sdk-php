@@ -41,7 +41,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
      * Update property secrets value.
      * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<SecretsPutResponse|null>
+     * @return Promise<SecretsputResponse|null>
      * @throws Exception
     */
     public function put(SecretsPutRequestBody $body, ?SecretsRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
@@ -49,7 +49,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [SecretsPutResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [SecretsputResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

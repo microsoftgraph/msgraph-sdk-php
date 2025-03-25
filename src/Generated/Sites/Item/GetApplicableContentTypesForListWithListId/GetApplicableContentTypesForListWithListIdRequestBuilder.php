@@ -35,7 +35,7 @@ class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseReque
     /**
      * Get site contentTypes that can be added to a list.
      * @param GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetApplicableContentTypesForListWithListIdGetResponse|null>
+     * @return Promise<GetApplicableContentTypesForListWithListIdgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/site-getapplicablecontenttypesforlist?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseReque
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetApplicableContentTypesForListWithListIdGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetApplicableContentTypesForListWithListIdgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

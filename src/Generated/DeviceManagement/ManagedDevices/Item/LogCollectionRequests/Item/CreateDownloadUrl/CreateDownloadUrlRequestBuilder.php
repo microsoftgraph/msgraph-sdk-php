@@ -32,7 +32,7 @@ class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action createDownloadUrl
      * @param CreateDownloadUrlRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<CreateDownloadUrlPostResponse|null>
+     * @return Promise<CreateDownloadUrlpostResponse|null>
      * @throws Exception
     */
     public function post(?CreateDownloadUrlRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class CreateDownloadUrlRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [CreateDownloadUrlPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [CreateDownloadUrlpostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

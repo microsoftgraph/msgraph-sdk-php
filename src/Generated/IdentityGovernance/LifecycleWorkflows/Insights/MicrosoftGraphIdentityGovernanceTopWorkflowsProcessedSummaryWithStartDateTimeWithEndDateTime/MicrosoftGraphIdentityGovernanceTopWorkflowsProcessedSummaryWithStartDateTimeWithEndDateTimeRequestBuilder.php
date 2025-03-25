@@ -38,7 +38,7 @@ class MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateT
     /**
      * Provide a summary of the workflows processed the most, known as top workflows, for a specified period in a tenant. Workflow basic details are given, along with run information. For information about tasks processed, see insights: topTasksProcessedSummary.
      * @param MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<TopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse|null>
+     * @return Promise<TopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitygovernance-insights-topworkflowsprocessedsummary?view=graph-rest-1.0 Find more info here
     */
@@ -47,7 +47,7 @@ class MicrosoftGraphIdentityGovernanceTopWorkflowsProcessedSummaryWithStartDateT
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [TopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [TopWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

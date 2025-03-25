@@ -32,7 +32,7 @@ class GetSourceImagesRequestBuilder extends BaseRequestBuilder
     /**
      * Get cloudPcSourceDeviceImage objects that can be uploaded and used on Cloud PCs. View a list of all the managed image resources from your Microsoft Entra subscriptions.
      * @param GetSourceImagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetSourceImagesGetResponse|null>
+     * @return Promise<GetSourceImagesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpcdeviceimage-getsourceimages?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetSourceImagesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetSourceImagesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetSourceImagesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

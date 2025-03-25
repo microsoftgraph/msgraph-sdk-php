@@ -32,7 +32,7 @@ class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseRequestBuilde
     /**
      * List the tenant users who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAttackSimulationRepeatOffendersGetResponse|null>
+     * @return Promise<GetAttackSimulationRepeatOffendersgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationrepeatoffenders?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseRequestBuilde
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAttackSimulationRepeatOffendersGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAttackSimulationRepeatOffendersgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

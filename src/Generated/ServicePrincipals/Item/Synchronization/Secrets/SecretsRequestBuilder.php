@@ -41,7 +41,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
      * Provide credentials for establishing connectivity with the target system.
      * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<SecretsPutResponse|null>
+     * @return Promise<SecretsputResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-1.0 Find more info here
     */
@@ -50,7 +50,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [SecretsPutResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [SecretsputResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

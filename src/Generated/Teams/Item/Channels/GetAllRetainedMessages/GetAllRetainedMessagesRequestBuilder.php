@@ -32,7 +32,7 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
     /**
      * Get all retained messages across all channels in a team. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllRetainedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAllRetainedMessagesGetResponse|null>
+     * @return Promise<GetAllRetainedMessagesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/channel-getallretainedmessages?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAllRetainedMessagesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAllRetainedMessagesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

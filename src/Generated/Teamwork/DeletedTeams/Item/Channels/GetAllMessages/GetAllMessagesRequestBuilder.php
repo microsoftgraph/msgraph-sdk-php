@@ -32,7 +32,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve messages across all channels in a team, including text, audio, and video conversations. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAllMessagesGetResponse|null>
+     * @return Promise<GetAllMessagesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/channel-getallmessages?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAllMessagesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAllMessagesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

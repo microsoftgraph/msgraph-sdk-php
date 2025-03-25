@@ -33,7 +33,7 @@ class UnarchiveRequestBuilder extends BaseRequestBuilder
      * Unarchive a list of serviceUpdateMessages for the signed in user.
      * @param UnarchivePostRequestBody $body The request body
      * @param UnarchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<UnarchivePostResponse|null>
+     * @return Promise<UnarchivepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class UnarchiveRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [UnarchivePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [UnarchivepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

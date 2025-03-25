@@ -33,7 +33,7 @@ class UnfavoriteRequestBuilder extends BaseRequestBuilder
      * Remove the favorite status of serviceUpdateMessages for the signed in user.
      * @param UnfavoritePostRequestBody $body The request body
      * @param UnfavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<UnfavoritePostResponse|null>
+     * @return Promise<UnfavoritepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-unfavorite?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class UnfavoriteRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [UnfavoritePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [UnfavoritepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

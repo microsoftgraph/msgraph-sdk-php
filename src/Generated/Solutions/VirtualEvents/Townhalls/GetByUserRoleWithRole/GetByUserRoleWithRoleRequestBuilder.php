@@ -35,7 +35,7 @@ class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder
     /**
      * Get a list of virtualEventTownhall objects where the signed-in user is either the organizer or a coorganizer.
      * @param GetByUserRoleWithRoleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetByUserRoleWithRoleGetResponse|null>
+     * @return Promise<GetByUserRoleWithRolegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualeventtownhall-getbyuserrole?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class GetByUserRoleWithRoleRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetByUserRoleWithRoleGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetByUserRoleWithRolegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

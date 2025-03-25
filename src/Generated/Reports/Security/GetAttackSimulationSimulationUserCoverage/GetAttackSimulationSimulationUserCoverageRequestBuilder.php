@@ -32,7 +32,7 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilder extends BaseReques
     /**
      * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @param GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAttackSimulationSimulationUserCoverageGetResponse|null>
+     * @return Promise<GetAttackSimulationSimulationUserCoveragegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationsimulationusercoverage?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilder extends BaseReques
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAttackSimulationSimulationUserCoverageGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAttackSimulationSimulationUserCoveragegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

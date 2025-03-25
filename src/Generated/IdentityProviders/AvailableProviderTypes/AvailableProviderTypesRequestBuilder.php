@@ -32,7 +32,7 @@ class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieves all identity provider types available in a directory.
      * @param AvailableProviderTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AvailableProviderTypesGetResponse|null>
+     * @return Promise<AvailableProviderTypesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identityprovider-list-availableprovidertypes?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class AvailableProviderTypesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AvailableProviderTypesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AvailableProviderTypesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

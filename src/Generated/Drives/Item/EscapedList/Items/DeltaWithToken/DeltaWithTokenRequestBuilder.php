@@ -35,7 +35,7 @@ class DeltaWithTokenRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function delta
      * @param DeltaWithTokenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<DeltaWithTokenGetResponse|null>
+     * @return Promise<DeltaWithTokengetResponse|null>
      * @throws Exception
     */
     public function get(?DeltaWithTokenRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -43,7 +43,7 @@ class DeltaWithTokenRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [DeltaWithTokenGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [DeltaWithTokengetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

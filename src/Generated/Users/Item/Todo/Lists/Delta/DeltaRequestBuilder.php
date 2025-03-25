@@ -32,7 +32,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     /**
      * Get a set of todoTaskList resources that have been added, deleted, or removed in Microsoft To Do. A delta function call for todoTaskList is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the todoTaskList. This allows you to maintain and synchronize a local store of a user's todoTaskList without having to fetch all the todoTaskList from the server every time.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<DeltaGetResponse|null>
+     * @return Promise<DeltagetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/todotasklist-delta?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [DeltaGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [DeltagetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

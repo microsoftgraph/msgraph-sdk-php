@@ -32,7 +32,7 @@ class GetActivitiesByIntervalRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function getActivitiesByInterval
      * @param GetActivitiesByIntervalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetActivitiesByIntervalGetResponse|null>
+     * @return Promise<GetActivitiesByIntervalgetResponse|null>
      * @throws Exception
     */
     public function get(?GetActivitiesByIntervalRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class GetActivitiesByIntervalRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetActivitiesByIntervalGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetActivitiesByIntervalgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

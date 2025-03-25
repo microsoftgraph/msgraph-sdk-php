@@ -32,7 +32,7 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequestBuilder
     /**
      * List eDiscovery review tags with the tag hierarchy shown.
      * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AsHierarchyGetResponse|null>
+     * @return Promise<AsHierarchygetResponse|null>
      * @throws Exception
     */
     public function get(?MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AsHierarchyGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AsHierarchygetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

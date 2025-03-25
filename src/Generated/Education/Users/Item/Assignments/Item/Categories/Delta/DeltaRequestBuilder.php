@@ -32,7 +32,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     /**
      * Get a list of newly created or updated educationCategory objects without having to perform a full read of the collection.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<DeltaGetResponse|null>
+     * @return Promise<DeltagetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationcategory-delta?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [DeltaGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [DeltagetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

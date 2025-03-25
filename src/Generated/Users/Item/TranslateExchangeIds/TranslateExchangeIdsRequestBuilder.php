@@ -33,7 +33,7 @@ class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder
      * Translate identifiers of Outlook-related resources between formats.
      * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<TranslateExchangeIdsPostResponse|null>
+     * @return Promise<TranslateExchangeIdspostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [TranslateExchangeIdsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [TranslateExchangeIdspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

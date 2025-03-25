@@ -32,7 +32,7 @@ class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBuilder
     /**
      * In Microsoft Entra entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.
      * @param GetApplicablePolicyRequirementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetApplicablePolicyRequirementsPostResponse|null>
+     * @return Promise<GetApplicablePolicyRequirementspostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackage-getapplicablepolicyrequirements?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetApplicablePolicyRequirementsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetApplicablePolicyRequirementsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetApplicablePolicyRequirementspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

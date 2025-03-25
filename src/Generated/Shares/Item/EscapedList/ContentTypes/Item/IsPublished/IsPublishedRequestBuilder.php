@@ -32,7 +32,7 @@ class IsPublishedRequestBuilder extends BaseRequestBuilder
     /**
      * Check the publishing status of a contentType in a content type hub site.
      * @param IsPublishedRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<IsPublishedGetResponse|null>
+     * @return Promise<IsPublishedgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class IsPublishedRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [IsPublishedGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [IsPublishedgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

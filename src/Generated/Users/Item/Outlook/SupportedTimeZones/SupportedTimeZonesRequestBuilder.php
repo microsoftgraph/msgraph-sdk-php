@@ -32,7 +32,7 @@ class SupportedTimeZonesRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function supportedTimeZones
      * @param SupportedTimeZonesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<SupportedTimeZonesGetResponse|null>
+     * @return Promise<SupportedTimeZonesgetResponse|null>
      * @throws Exception
     */
     public function get(?SupportedTimeZonesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class SupportedTimeZonesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [SupportedTimeZonesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [SupportedTimeZonesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

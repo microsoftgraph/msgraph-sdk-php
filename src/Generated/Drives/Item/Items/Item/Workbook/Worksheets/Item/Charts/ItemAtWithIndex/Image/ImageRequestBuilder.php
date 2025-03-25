@@ -32,7 +32,7 @@ class ImageRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function image
      * @param ImageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ImageGetResponse|null>
+     * @return Promise<ImagegetResponse|null>
      * @throws Exception
     */
     public function get(?ImageRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class ImageRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ImageGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ImagegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

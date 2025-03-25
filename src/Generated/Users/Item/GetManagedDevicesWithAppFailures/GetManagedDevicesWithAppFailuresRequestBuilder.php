@@ -32,7 +32,7 @@ class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieves the list of devices with failed apps
      * @param GetManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetManagedDevicesWithAppFailuresGetResponse|null>
+     * @return Promise<GetManagedDevicesWithAppFailuresgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-troubleshooting-user-getmanageddeviceswithappfailures?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetManagedDevicesWithAppFailuresGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetManagedDevicesWithAppFailuresgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

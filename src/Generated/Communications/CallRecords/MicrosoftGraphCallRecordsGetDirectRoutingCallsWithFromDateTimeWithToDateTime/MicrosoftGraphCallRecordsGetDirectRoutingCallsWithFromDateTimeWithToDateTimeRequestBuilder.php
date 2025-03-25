@@ -38,7 +38,7 @@ class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTi
     /**
      * Get a log of direct routing calls as a collection of directRoutingLogRow entries.
      * @param MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse|null>
+     * @return Promise<GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse|null>
      * @throws Exception
     */
     public function get(?MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -46,7 +46,7 @@ class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTi
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetDirectRoutingCallsWithFromDateTimeWithToDateTimegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

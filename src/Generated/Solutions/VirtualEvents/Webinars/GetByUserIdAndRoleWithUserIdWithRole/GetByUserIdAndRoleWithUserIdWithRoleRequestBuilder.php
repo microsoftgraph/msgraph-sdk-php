@@ -37,7 +37,7 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuil
     /**
      * Get a virtualEventWebinar collection where the specified user is either the organizer or a coorganizer.
      * @param GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetByUserIdAndRoleWithUserIdWithRoleGetResponse|null>
+     * @return Promise<GetByUserIdAndRoleWithUserIdWithRolegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualeventwebinar-getbyuseridandrole?view=graph-rest-1.0 Find more info here
     */
@@ -46,7 +46,7 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuil
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetByUserIdAndRoleWithUserIdWithRoleGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetByUserIdAndRoleWithUserIdWithRolegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -33,7 +33,7 @@ class AssignRequestBuilder extends BaseRequestBuilder
      * Not yet documented
      * @param AssignPostRequestBody $body The request body
      * @param AssignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AssignPostResponse|null>
+     * @return Promise<AssignpostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfiguration-assign?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class AssignRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AssignPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AssignpostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

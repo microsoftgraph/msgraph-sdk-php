@@ -33,7 +33,7 @@ class CheckMemberObjectsRequestBuilder extends BaseRequestBuilder
      * Invoke action checkMemberObjects
      * @param CheckMemberObjectsPostRequestBody $body The request body
      * @param CheckMemberObjectsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<CheckMemberObjectsPostResponse|null>
+     * @return Promise<CheckMemberObjectspostResponse|null>
      * @throws Exception
     */
     public function post(CheckMemberObjectsPostRequestBody $body, ?CheckMemberObjectsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
@@ -41,7 +41,7 @@ class CheckMemberObjectsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [CheckMemberObjectsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [CheckMemberObjectspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -32,7 +32,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
     /**
      * Get newly created, updated, or deleted sites without having to perform a full read of the entire sites collection. A delta function call for sites is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls,you can query for incremental changes in the sites. It allows you to maintain and synchronize a local store of a user's sites without having to fetch all the sites from the server every time.The application calls the API without specifying any parameters.The service begins enumerating sites and returns pages of changes to these sites, accompanied by either an @odata.nextLink or an @odata.deltaLink.Your application should continue making calls using the @odata.nextLink until there's an @odata.deltaLink  in the response. After you receive all the changes, you can apply them to your local state.To monitor future changes, call the delta API by using the @odata.deltaLink in the previous response. Any resources marked as deleted should be removed from your local state.
      * @param DeltaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<DeltaGetResponse|null>
+     * @return Promise<DeltagetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/site-delta?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class DeltaRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [DeltaGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [DeltagetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -32,7 +32,7 @@ class GetActivitiesByIntervalRequestBuilder extends BaseRequestBuilder
     /**
      * Get a collection of itemActivityStats resources for the activities that took place on this resource within the specified time interval. Analytics aggregates might not be available for all action types.
      * @param GetActivitiesByIntervalRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetActivitiesByIntervalGetResponse|null>
+     * @return Promise<GetActivitiesByIntervalgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/itemactivitystat-getactivitybyinterval?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetActivitiesByIntervalRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetActivitiesByIntervalGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetActivitiesByIntervalgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

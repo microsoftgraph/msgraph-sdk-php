@@ -40,7 +40,7 @@ class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRe
     /**
      * Get a list of archived print jobs that were queued for particular printer.
      * @param GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeGetResponse|null>
+     * @return Promise<GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reports-getprinterarchivedprintjobs?view=graph-rest-1.0 Find more info here
     */
@@ -49,7 +49,7 @@ class GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRe
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

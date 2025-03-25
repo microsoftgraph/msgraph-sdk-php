@@ -33,7 +33,7 @@ class FavoriteRequestBuilder extends BaseRequestBuilder
      * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
      * @param FavoritePostRequestBody $body The request body
      * @param FavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<FavoritePostResponse|null>
+     * @return Promise<FavoritepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-favorite?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class FavoriteRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [FavoritePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [FavoritepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

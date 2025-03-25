@@ -33,7 +33,7 @@ class GetMemberObjectsRequestBuilder extends BaseRequestBuilder
      * Return all IDs for the groups, administrative units, and directory roles that an object of one of the following types is a member of:- user- group- service principal- organizational contact- device- directory object This function is transitive. Only users and role-enabled groups can be members of directory roles.
      * @param GetMemberObjectsPostRequestBody $body The request body
      * @param GetMemberObjectsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetMemberObjectsPostResponse|null>
+     * @return Promise<GetMemberObjectspostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryobject-getmemberobjects?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GetMemberObjectsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetMemberObjectsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetMemberObjectspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

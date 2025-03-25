@@ -33,7 +33,7 @@ class ArchiveRequestBuilder extends BaseRequestBuilder
      * Archive a list of serviceUpdateMessages for the signed in user.
      * @param ArchivePostRequestBody $body The request body
      * @param ArchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ArchivePostResponse|null>
+     * @return Promise<ArchivepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class ArchiveRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ArchivePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ArchivepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

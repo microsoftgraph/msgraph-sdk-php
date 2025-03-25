@@ -33,7 +33,7 @@ class RemoveGroupRequestBuilder extends BaseRequestBuilder
      * Removes a group from a lifecycle policy.
      * @param RemoveGroupPostRequestBody $body The request body
      * @param RemoveGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<RemoveGroupPostResponse|null>
+     * @return Promise<RemoveGrouppostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class RemoveGroupRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [RemoveGroupPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [RemoveGrouppostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

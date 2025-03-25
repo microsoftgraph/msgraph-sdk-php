@@ -32,7 +32,7 @@ class GetManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Gets app restrictions for a given user.
      * @param GetManagedAppPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetManagedAppPoliciesGetResponse|null>
+     * @return Promise<GetManagedAppPoliciesgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/intune-mam-user-getmanagedapppolicies?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class GetManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetManagedAppPoliciesGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetManagedAppPoliciesgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -33,7 +33,7 @@ class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBuilder
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:
      * @param GetAvailableExtensionPropertiesPostRequestBody $body The request body
      * @param GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAvailableExtensionPropertiesPostResponse|null>
+     * @return Promise<GetAvailableExtensionPropertiespostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAvailableExtensionPropertiesPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAvailableExtensionPropertiespostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -32,7 +32,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
     /**
      * Promote a verified subdomain to the root domain. A verified domain has its isVerified property set to true.
      * @param PromoteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<PromotePostResponse|null>
+     * @return Promise<PromotepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/domain-promote?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class PromoteRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [PromotePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [PromotepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

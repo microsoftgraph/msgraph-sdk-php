@@ -32,7 +32,7 @@ class CountRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function count
      * @param CountRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<CountGetResponse|null>
+     * @return Promise<CountgetResponse|null>
      * @throws Exception
     */
     public function get(?CountRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -40,7 +40,7 @@ class CountRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [CountGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [CountgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

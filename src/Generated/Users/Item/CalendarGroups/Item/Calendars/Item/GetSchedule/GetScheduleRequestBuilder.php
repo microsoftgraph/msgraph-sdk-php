@@ -33,7 +33,7 @@ class GetScheduleRequestBuilder extends BaseRequestBuilder
      * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param GetSchedulePostRequestBody $body The request body
      * @param GetScheduleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetSchedulePostResponse|null>
+     * @return Promise<GetSchedulepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GetScheduleRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetSchedulePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetSchedulepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

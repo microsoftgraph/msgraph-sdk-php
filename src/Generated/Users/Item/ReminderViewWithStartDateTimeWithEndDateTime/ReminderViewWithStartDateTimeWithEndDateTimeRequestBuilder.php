@@ -37,7 +37,7 @@ class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends BaseReq
     /**
      * Invoke function reminderView
      * @param ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ReminderViewWithStartDateTimeWithEndDateTimeGetResponse|null>
+     * @return Promise<ReminderViewWithStartDateTimeWithEndDateTimegetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/user-reminderview?view=graph-rest-1.0 Find more info here
     */
@@ -46,7 +46,7 @@ class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder extends BaseReq
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ReminderViewWithStartDateTimeWithEndDateTimeGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ReminderViewWithStartDateTimeWithEndDateTimegetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

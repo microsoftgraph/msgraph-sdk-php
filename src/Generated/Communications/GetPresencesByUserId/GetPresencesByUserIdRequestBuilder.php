@@ -33,7 +33,7 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
      * Get the presence information for multiple users.
      * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetPresencesByUserIdPostResponse|null>
+     * @return Promise<GetPresencesByUserIdpostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetPresencesByUserIdPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetPresencesByUserIdpostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

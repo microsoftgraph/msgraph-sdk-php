@@ -35,7 +35,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
     /**
      * In PIM for groups, retrieve the schedules for membership or ownership assignments for the calling principal to groups that are governed by PIM.
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
+     * @return Promise<FilterByCurrentUserWithOngetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedule-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
@@ -44,7 +44,7 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOnGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [FilterByCurrentUserWithOngetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

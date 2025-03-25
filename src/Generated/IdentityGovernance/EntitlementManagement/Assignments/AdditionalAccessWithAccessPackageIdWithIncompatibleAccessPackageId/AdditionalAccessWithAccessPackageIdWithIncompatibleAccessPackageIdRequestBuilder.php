@@ -37,7 +37,7 @@ class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestB
     /**
      * Invoke function additionalAccess
      * @param AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdGetResponse|null>
+     * @return Promise<AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdgetResponse|null>
      * @throws Exception
     */
     public function get(?AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -45,7 +45,7 @@ class AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestB
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

@@ -33,7 +33,7 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
      * Mark a list of serviceUpdateMessages as read for the signed in user.
      * @param MarkReadPostRequestBody $body The request body
      * @param MarkReadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<MarkReadPostResponse|null>
+     * @return Promise<MarkReadpostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [MarkReadPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [MarkReadpostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

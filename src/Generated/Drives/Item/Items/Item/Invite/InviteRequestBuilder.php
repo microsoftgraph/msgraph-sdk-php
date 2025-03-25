@@ -33,7 +33,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
      * Sends a sharing invitation for a driveItem.A sharing invitation provides permissions to the recipients and optionally sends them an email with a sharing link.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<InvitePostResponse|null>
+     * @return Promise<InvitepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [InvitePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [InvitepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

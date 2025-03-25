@@ -32,7 +32,7 @@ class AdditionalAccessRequestBuilder extends BaseRequestBuilder
     /**
      * In Microsoft Entra Entitlement Management, retrieve a collection of accessPackageAssignment objects that indicate a target user has an assignment to a specified access package and also an assignment to another, potentially incompatible, access package.  This can be used to prepare to configure the incompatible access packages for a specific access package.
      * @param AdditionalAccessRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<AdditionalAccessGetResponse|null>
+     * @return Promise<AdditionalAccessgetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackageassignment-additionalaccess?view=graph-rest-1.0 Find more info here
     */
@@ -41,7 +41,7 @@ class AdditionalAccessRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [AdditionalAccessGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [AdditionalAccessgetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

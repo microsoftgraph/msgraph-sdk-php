@@ -35,7 +35,7 @@ class GetAuditActivityTypesWithCategoryRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke function getAuditActivityTypes
      * @param GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<GetAuditActivityTypesWithCategoryGetResponse|null>
+     * @return Promise<GetAuditActivityTypesWithCategorygetResponse|null>
      * @throws Exception
     */
     public function get(?GetAuditActivityTypesWithCategoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -43,7 +43,7 @@ class GetAuditActivityTypesWithCategoryRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [GetAuditActivityTypesWithCategoryGetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [GetAuditActivityTypesWithCategorygetResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

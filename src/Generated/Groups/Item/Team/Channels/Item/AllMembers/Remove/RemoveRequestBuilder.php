@@ -33,7 +33,7 @@ class RemoveRequestBuilder extends BaseRequestBuilder
      * Remove multiple members from a team in a single request. The response provides details about which memberships could and couldn't be removed.
      * @param RemovePostRequestBody $body The request body
      * @param RemoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<RemovePostResponse|null>
+     * @return Promise<RemovepostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/conversationmember-remove?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class RemoveRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [RemovePostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [RemovepostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

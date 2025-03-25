@@ -33,7 +33,7 @@ class CheckMemberGroupsRequestBuilder extends BaseRequestBuilder
      * Check for membership in a specified list of group IDs, and return from that list the IDs of groups where a specified object is a member. The specified object can be of one of the following types:- user- group- service principal- organizational contact- device- directory object This function is transitive. You can check up to a maximum of 20 groups per request. This function supports all groups provisioned in Microsoft Entra ID. Because Microsoft 365 groups cannot contain other groups, membership in a Microsoft 365 group is always direct.
      * @param CheckMemberGroupsPostRequestBody $body The request body
      * @param CheckMemberGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<CheckMemberGroupsPostResponse|null>
+     * @return Promise<CheckMemberGroupspostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryobject-checkmembergroups?view=graph-rest-1.0 Find more info here
     */
@@ -42,7 +42,7 @@ class CheckMemberGroupsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [CheckMemberGroupsPostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [CheckMemberGroupspostResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
