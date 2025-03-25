@@ -48,7 +48,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowAutoFilter property value. Indicates whether the worksheet protection option to allow the use of the autofilter feature is enabled.
+     * Gets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
      * @return bool|null
     */
     public function getAllowAutoFilter(): ?bool {
@@ -60,7 +60,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowDeleteColumns property value. Indicates whether the worksheet protection option to allow deleting columns is enabled.
+     * Gets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
      * @return bool|null
     */
     public function getAllowDeleteColumns(): ?bool {
@@ -72,7 +72,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowDeleteRows property value. Indicates whether the worksheet protection option to allow deleting rows is enabled.
+     * Gets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
      * @return bool|null
     */
     public function getAllowDeleteRows(): ?bool {
@@ -84,7 +84,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowFormatCells property value. Indicates whether the worksheet protection option to allow formatting cells is enabled.
+     * Gets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
      * @return bool|null
     */
     public function getAllowFormatCells(): ?bool {
@@ -96,7 +96,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowFormatColumns property value. Indicates whether the worksheet protection option to allow formatting columns is enabled.
+     * Gets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
      * @return bool|null
     */
     public function getAllowFormatColumns(): ?bool {
@@ -108,7 +108,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowFormatRows property value. Indicates whether the worksheet protection option to allow formatting rows is enabled.
+     * Gets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
      * @return bool|null
     */
     public function getAllowFormatRows(): ?bool {
@@ -120,7 +120,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowInsertColumns property value. Indicates whether the worksheet protection option to allow inserting columns is enabled.
+     * Gets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
      * @return bool|null
     */
     public function getAllowInsertColumns(): ?bool {
@@ -132,7 +132,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowInsertHyperlinks property value. Indicates whether the worksheet protection option to allow inserting hyperlinks is enabled.
+     * Gets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
      * @return bool|null
     */
     public function getAllowInsertHyperlinks(): ?bool {
@@ -144,7 +144,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowInsertRows property value. Indicates whether the worksheet protection option to allow inserting rows is enabled.
+     * Gets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
      * @return bool|null
     */
     public function getAllowInsertRows(): ?bool {
@@ -156,7 +156,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowPivotTables property value. Indicates whether the worksheet protection option to allow the use of the pivot table feature is enabled.
+     * Gets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
      * @return bool|null
     */
     public function getAllowPivotTables(): ?bool {
@@ -168,7 +168,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the allowSort property value. Indicates whether the worksheet protection option to allow the use of the sort feature is enabled.
+     * Gets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
      * @return bool|null
     */
     public function getAllowSort(): ?bool {
@@ -250,7 +250,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowAutoFilter property value. Indicates whether the worksheet protection option to allow the use of the autofilter feature is enabled.
+     * Sets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
      * @param bool|null $value Value to set for the allowAutoFilter property.
     */
     public function setAllowAutoFilter(?bool $value): void {
@@ -258,7 +258,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowDeleteColumns property value. Indicates whether the worksheet protection option to allow deleting columns is enabled.
+     * Sets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
      * @param bool|null $value Value to set for the allowDeleteColumns property.
     */
     public function setAllowDeleteColumns(?bool $value): void {
@@ -266,7 +266,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowDeleteRows property value. Indicates whether the worksheet protection option to allow deleting rows is enabled.
+     * Sets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
      * @param bool|null $value Value to set for the allowDeleteRows property.
     */
     public function setAllowDeleteRows(?bool $value): void {
@@ -274,7 +274,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowFormatCells property value. Indicates whether the worksheet protection option to allow formatting cells is enabled.
+     * Sets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
      * @param bool|null $value Value to set for the allowFormatCells property.
     */
     public function setAllowFormatCells(?bool $value): void {
@@ -282,7 +282,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowFormatColumns property value. Indicates whether the worksheet protection option to allow formatting columns is enabled.
+     * Sets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
      * @param bool|null $value Value to set for the allowFormatColumns property.
     */
     public function setAllowFormatColumns(?bool $value): void {
@@ -290,7 +290,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowFormatRows property value. Indicates whether the worksheet protection option to allow formatting rows is enabled.
+     * Sets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
      * @param bool|null $value Value to set for the allowFormatRows property.
     */
     public function setAllowFormatRows(?bool $value): void {
@@ -298,7 +298,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowInsertColumns property value. Indicates whether the worksheet protection option to allow inserting columns is enabled.
+     * Sets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
      * @param bool|null $value Value to set for the allowInsertColumns property.
     */
     public function setAllowInsertColumns(?bool $value): void {
@@ -306,7 +306,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowInsertHyperlinks property value. Indicates whether the worksheet protection option to allow inserting hyperlinks is enabled.
+     * Sets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
      * @param bool|null $value Value to set for the allowInsertHyperlinks property.
     */
     public function setAllowInsertHyperlinks(?bool $value): void {
@@ -314,7 +314,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowInsertRows property value. Indicates whether the worksheet protection option to allow inserting rows is enabled.
+     * Sets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
      * @param bool|null $value Value to set for the allowInsertRows property.
     */
     public function setAllowInsertRows(?bool $value): void {
@@ -322,7 +322,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowPivotTables property value. Indicates whether the worksheet protection option to allow the use of the pivot table feature is enabled.
+     * Sets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
      * @param bool|null $value Value to set for the allowPivotTables property.
     */
     public function setAllowPivotTables(?bool $value): void {
@@ -330,7 +330,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the allowSort property value. Indicates whether the worksheet protection option to allow the use of the sort feature is enabled.
+     * Sets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
      * @param bool|null $value Value to set for the allowSort property.
     */
     public function setAllowSort(?bool $value): void {

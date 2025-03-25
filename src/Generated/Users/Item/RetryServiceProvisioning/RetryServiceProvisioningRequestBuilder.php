@@ -30,7 +30,7 @@ class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retry the user service provisioning.
+     * Retry the provisioning of a user object in Microsoft Entra ID.
      * @param RetryServiceProvisioningRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retry the user service provisioning.
+     * Retry the provisioning of a user object in Microsoft Entra ID.
      * @param RetryServiceProvisioningRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
