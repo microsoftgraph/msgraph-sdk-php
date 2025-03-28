@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.32.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.31.0...v2.32.0) (2025-03-28)
+
+
+### Features
+
+* PHP 8.4 compatibility ([#1665](https://github.com/microsoftgraph/msgraph-sdk-php/issues/1665)) ([ed2a1b5](https://github.com/microsoftgraph/msgraph-sdk-php/commit/ed2a1b5d4984e5ad40cf7d55ed1045aa5c77d7f2))
+
 ## [2.31.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.30.0...v2.31.0) (2025-03-25)
 
 
