@@ -25,15 +25,67 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
+     * Gets the additionalDataOptions property value. The additionalDataOptions property
+     * @return AdditionalDataOptions|null
+    */
+    public function getAdditionalDataOptions(): ?AdditionalDataOptions {
+        $val = $this->getBackingStore()->get('additionalDataOptions');
+        if (is_null($val) || $val instanceof AdditionalDataOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalDataOptions'");
+    }
+
+    /**
+     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @return CloudAttachmentVersion|null
+    */
+    public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
+        $val = $this->getBackingStore()->get('cloudAttachmentVersion');
+        if (is_null($val) || $val instanceof CloudAttachmentVersion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAttachmentVersion'");
+    }
+
+    /**
+     * Gets the documentVersion property value. The documentVersion property
+     * @return DocumentVersion|null
+    */
+    public function getDocumentVersion(): ?DocumentVersion {
+        $val = $this->getBackingStore()->get('documentVersion');
+        if (is_null($val) || $val instanceof DocumentVersion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentVersion'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'additionalDataOptions' => fn(ParseNode $n) => $o->setAdditionalDataOptions($n->getEnumValue(AdditionalDataOptions::class)),
+            'cloudAttachmentVersion' => fn(ParseNode $n) => $o->setCloudAttachmentVersion($n->getEnumValue(CloudAttachmentVersion::class)),
+            'documentVersion' => fn(ParseNode $n) => $o->setDocumentVersion($n->getEnumValue(DocumentVersion::class)),
+            'itemsToInclude' => fn(ParseNode $n) => $o->setItemsToInclude($n->getEnumValue(ItemsToInclude::class)),
             'reviewSet' => fn(ParseNode $n) => $o->setReviewSet($n->getObjectValue([EdiscoveryReviewSet::class, 'createFromDiscriminatorValue'])),
             'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the itemsToInclude property value. The itemsToInclude property
+     * @return ItemsToInclude|null
+    */
+    public function getItemsToInclude(): ?ItemsToInclude {
+        $val = $this->getBackingStore()->get('itemsToInclude');
+        if (is_null($val) || $val instanceof ItemsToInclude) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemsToInclude'");
     }
 
     /**
@@ -66,8 +118,44 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeEnumValue('additionalDataOptions', $this->getAdditionalDataOptions());
+        $writer->writeEnumValue('cloudAttachmentVersion', $this->getCloudAttachmentVersion());
+        $writer->writeEnumValue('documentVersion', $this->getDocumentVersion());
+        $writer->writeEnumValue('itemsToInclude', $this->getItemsToInclude());
         $writer->writeObjectValue('reviewSet', $this->getReviewSet());
         $writer->writeObjectValue('search', $this->getSearch());
+    }
+
+    /**
+     * Sets the additionalDataOptions property value. The additionalDataOptions property
+     * @param AdditionalDataOptions|null $value Value to set for the additionalDataOptions property.
+    */
+    public function setAdditionalDataOptions(?AdditionalDataOptions $value): void {
+        $this->getBackingStore()->set('additionalDataOptions', $value);
+    }
+
+    /**
+     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
+    */
+    public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
+        $this->getBackingStore()->set('cloudAttachmentVersion', $value);
+    }
+
+    /**
+     * Sets the documentVersion property value. The documentVersion property
+     * @param DocumentVersion|null $value Value to set for the documentVersion property.
+    */
+    public function setDocumentVersion(?DocumentVersion $value): void {
+        $this->getBackingStore()->set('documentVersion', $value);
+    }
+
+    /**
+     * Sets the itemsToInclude property value. The itemsToInclude property
+     * @param ItemsToInclude|null $value Value to set for the itemsToInclude property.
+    */
+    public function setItemsToInclude(?ItemsToInclude $value): void {
+        $this->getBackingStore()->set('itemsToInclude', $value);
     }
 
     /**
