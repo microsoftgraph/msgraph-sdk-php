@@ -38,6 +38,18 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
+     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @return CloudAttachmentVersion|null
+    */
+    public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
+        $val = $this->getBackingStore()->get('cloudAttachmentVersion');
+        if (is_null($val) || $val instanceof CloudAttachmentVersion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAttachmentVersion'");
+    }
+
+    /**
      * Gets the description property value. The description of the export by the user.
      * @return string|null
     */
@@ -59,6 +71,18 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
+    }
+
+    /**
+     * Gets the documentVersion property value. The documentVersion property
+     * @return DocumentVersion|null
+    */
+    public function getDocumentVersion(): ?DocumentVersion {
+        $val = $this->getBackingStore()->get('documentVersion');
+        if (is_null($val) || $val instanceof DocumentVersion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentVersion'");
     }
 
     /**
@@ -131,8 +155,10 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'additionalOptions' => fn(ParseNode $n) => $o->setAdditionalOptions($n->getEnumValue(AdditionalOptions::class)),
+            'cloudAttachmentVersion' => fn(ParseNode $n) => $o->setCloudAttachmentVersion($n->getEnumValue(CloudAttachmentVersion::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'documentVersion' => fn(ParseNode $n) => $o->setDocumentVersion($n->getEnumValue(DocumentVersion::class)),
             'exportCriteria' => fn(ParseNode $n) => $o->setExportCriteria($n->getEnumValue(ExportCriteria::class)),
             'exportFileMetadata' => fn(ParseNode $n) => $o->setExportFileMetadata($n->getCollectionOfObjectValues([ExportFileMetadata::class, 'createFromDiscriminatorValue'])),
             'exportFormat' => fn(ParseNode $n) => $o->setExportFormat($n->getEnumValue(ExportFormat::class)),
@@ -161,8 +187,10 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('additionalOptions', $this->getAdditionalOptions());
+        $writer->writeEnumValue('cloudAttachmentVersion', $this->getCloudAttachmentVersion());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('documentVersion', $this->getDocumentVersion());
         $writer->writeEnumValue('exportCriteria', $this->getExportCriteria());
         $writer->writeCollectionOfObjectValues('exportFileMetadata', $this->getExportFileMetadata());
         $writer->writeEnumValue('exportFormat', $this->getExportFormat());
@@ -180,6 +208,14 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
+     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
+    */
+    public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
+        $this->getBackingStore()->set('cloudAttachmentVersion', $value);
+    }
+
+    /**
      * Sets the description property value. The description of the export by the user.
      * @param string|null $value Value to set for the description property.
     */
@@ -193,6 +229,14 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the documentVersion property value. The documentVersion property
+     * @param DocumentVersion|null $value Value to set for the documentVersion property.
+    */
+    public function setDocumentVersion(?DocumentVersion $value): void {
+        $this->getBackingStore()->set('documentVersion', $value);
     }
 
     /**

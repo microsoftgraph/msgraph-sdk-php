@@ -39,11 +39,11 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a roleDefinition.
+     * Deletes a deviceAndAppManagementRoleDefinition.
      * @param RoleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RoleDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +54,11 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
+     * Read properties and relationships of the roleDefinition object.
      * @param RoleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +69,12 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param RoleDefinition $body The request body
      * @param RoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(RoleDefinition $body, ?RoleDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +85,7 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a roleDefinition.
+     * Deletes a deviceAndAppManagementRoleDefinition.
      * @param RoleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -98,12 +98,11 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read properties and relationships of the deviceAndAppManagementRoleDefinition object.
+     * Read properties and relationships of the roleDefinition object.
      * @param RoleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +123,7 @@ class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceAndAppManagementRoleDefinition object.
+     * Update the properties of a roleDefinition object.
      * @param RoleDefinition $body The request body
      * @param RoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

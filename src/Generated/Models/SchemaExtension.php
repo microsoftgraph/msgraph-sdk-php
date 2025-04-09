@@ -26,7 +26,7 @@ class SchemaExtension extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Description for the schema extension. Supports $filter (eq).
+     * Gets the description property value. Description for the schema extension.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -125,7 +125,7 @@ class SchemaExtension extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. Description for the schema extension. Supports $filter (eq).
+     * Sets the description property value. Description for the schema extension.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
