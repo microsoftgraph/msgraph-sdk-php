@@ -60,7 +60,6 @@ class CreateRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json");
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }

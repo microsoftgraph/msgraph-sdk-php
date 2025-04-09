@@ -138,6 +138,18 @@ class Alert extends Entity implements Parsable
     }
 
     /**
+     * Gets the customDetails property value. The customDetails property
+     * @return Dictionary|null
+    */
+    public function getCustomDetails(): ?Dictionary {
+        $val = $this->getBackingStore()->get('customDetails');
+        if (is_null($val) || $val instanceof Dictionary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customDetails'");
+    }
+
+    /**
      * Gets the description property value. String value describing each alert.
      * @return string|null
     */
@@ -215,6 +227,7 @@ class Alert extends Entity implements Parsable
             'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(AlertClassification::class)),
             'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfObjectValues([AlertComment::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'customDetails' => fn(ParseNode $n) => $o->setCustomDetails($n->getObjectValue([Dictionary::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'detectionSource' => fn(ParseNode $n) => $o->setDetectionSource($n->getEnumValue(DetectionSource::class)),
             'detectorId' => fn(ParseNode $n) => $o->setDetectorId($n->getStringValue()),
@@ -490,6 +503,7 @@ class Alert extends Entity implements Parsable
         $writer->writeEnumValue('classification', $this->getClassification());
         $writer->writeCollectionOfObjectValues('comments', $this->getComments());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeObjectValue('customDetails', $this->getCustomDetails());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeEnumValue('detectionSource', $this->getDetectionSource());
         $writer->writeStringValue('detectorId', $this->getDetectorId());
@@ -585,6 +599,14 @@ class Alert extends Entity implements Parsable
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the customDetails property value. The customDetails property
+     * @param Dictionary|null $value Value to set for the customDetails property.
+    */
+    public function setCustomDetails(?Dictionary $value): void {
+        $this->getBackingStore()->set('customDetails', $value);
     }
 
     /**

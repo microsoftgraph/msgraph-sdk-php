@@ -153,6 +153,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'expiration' => fn(ParseNode $n) => $o->setExpiration($n->getObjectValue([ExpirationPattern::class, 'createFromDiscriminatorValue'])),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
+            'notificationSettings' => fn(ParseNode $n) => $o->setNotificationSettings($n->getObjectValue([AccessPackageNotificationSettings::class, 'createFromDiscriminatorValue'])),
             'questions' => fn(ParseNode $n) => $o->setQuestions($n->getCollectionOfObjectValues([AccessPackageQuestion::class, 'createFromDiscriminatorValue'])),
             'requestApprovalSettings' => fn(ParseNode $n) => $o->setRequestApprovalSettings($n->getObjectValue([AccessPackageAssignmentApprovalSettings::class, 'createFromDiscriminatorValue'])),
             'requestorSettings' => fn(ParseNode $n) => $o->setRequestorSettings($n->getObjectValue([AccessPackageAssignmentRequestorSettings::class, 'createFromDiscriminatorValue'])),
@@ -171,6 +172,18 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'modifiedDateTime'");
+    }
+
+    /**
+     * Gets the notificationSettings property value. The notificationSettings property
+     * @return AccessPackageNotificationSettings|null
+    */
+    public function getNotificationSettings(): ?AccessPackageNotificationSettings {
+        $val = $this->getBackingStore()->get('notificationSettings');
+        if (is_null($val) || $val instanceof AccessPackageNotificationSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationSettings'");
     }
 
     /**
@@ -253,6 +266,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('expiration', $this->getExpiration());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeObjectValue('notificationSettings', $this->getNotificationSettings());
         $writer->writeCollectionOfObjectValues('questions', $this->getQuestions());
         $writer->writeObjectValue('requestApprovalSettings', $this->getRequestApprovalSettings());
         $writer->writeObjectValue('requestorSettings', $this->getRequestorSettings());
@@ -338,6 +352,14 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the notificationSettings property value. The notificationSettings property
+     * @param AccessPackageNotificationSettings|null $value Value to set for the notificationSettings property.
+    */
+    public function setNotificationSettings(?AccessPackageNotificationSettings $value): void {
+        $this->getBackingStore()->set('notificationSettings', $value);
     }
 
     /**

@@ -67,9 +67,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
             'filePublisher' => fn(ParseNode $n) => $o->setFilePublisher($n->getStringValue()),
             'fileSize' => fn(ParseNode $n) => $o->setFileSize($n->getIntegerValue()),
             'issuer' => fn(ParseNode $n) => $o->setIssuer($n->getStringValue()),
+            'md5' => fn(ParseNode $n) => $o->setMd5($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'sha1' => fn(ParseNode $n) => $o->setSha1($n->getStringValue()),
             'sha256' => fn(ParseNode $n) => $o->setSha256($n->getStringValue()),
+            'sha256Ac' => fn(ParseNode $n) => $o->setSha256Ac($n->getStringValue()),
             'signer' => fn(ParseNode $n) => $o->setSigner($n->getStringValue()),
         ];
     }
@@ -135,6 +137,18 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the md5 property value. The Md5 cryptographic hash of the file content.
+     * @return string|null
+    */
+    public function getMd5(): ?string {
+        $val = $this->getBackingStore()->get('md5');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'md5'");
+    }
+
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
@@ -171,6 +185,18 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the sha256Ac property value. The sha256Ac property
+     * @return string|null
+    */
+    public function getSha256Ac(): ?string {
+        $val = $this->getBackingStore()->get('sha256Ac');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sha256Ac'");
+    }
+
+    /**
      * Gets the signer property value. The signer of the signed file.
      * @return string|null
     */
@@ -192,9 +218,11 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('filePublisher', $this->getFilePublisher());
         $writer->writeIntegerValue('fileSize', $this->getFileSize());
         $writer->writeStringValue('issuer', $this->getIssuer());
+        $writer->writeStringValue('md5', $this->getMd5());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('sha1', $this->getSha1());
         $writer->writeStringValue('sha256', $this->getSha256());
+        $writer->writeStringValue('sha256Ac', $this->getSha256Ac());
         $writer->writeStringValue('signer', $this->getSigner());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -256,6 +284,14 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Sets the md5 property value. The Md5 cryptographic hash of the file content.
+     * @param string|null $value Value to set for the md5 property.
+    */
+    public function setMd5(?string $value): void {
+        $this->getBackingStore()->set('md5', $value);
+    }
+
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the @odata.type property.
     */
@@ -277,6 +313,14 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setSha256(?string $value): void {
         $this->getBackingStore()->set('sha256', $value);
+    }
+
+    /**
+     * Sets the sha256Ac property value. The sha256Ac property
+     * @param string|null $value Value to set for the sha256Ac property.
+    */
+    public function setSha256Ac(?string $value): void {
+        $this->getBackingStore()->set('sha256Ac', $value);
     }
 
     /**

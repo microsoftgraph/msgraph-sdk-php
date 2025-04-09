@@ -85,12 +85,12 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceEnrollmentLimitConfiguration object.
+     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceEnrollmentConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -114,7 +114,6 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -140,7 +139,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceEnrollmentLimitConfiguration object.
+     * Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

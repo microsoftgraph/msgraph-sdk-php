@@ -46,11 +46,11 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConversationMember|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationMemberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,12 +89,11 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Retrieve a conversationMember from a chat or channel.
+     * Retrieve a conversationMember from a chat.
      * @param ConversationMemberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

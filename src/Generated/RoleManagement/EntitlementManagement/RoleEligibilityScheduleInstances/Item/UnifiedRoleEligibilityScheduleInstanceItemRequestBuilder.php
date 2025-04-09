@@ -119,7 +119,6 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
