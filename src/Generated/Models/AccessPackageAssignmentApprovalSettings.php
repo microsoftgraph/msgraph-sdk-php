@@ -65,6 +65,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
         return  [
             'isApprovalRequiredForAdd' => fn(ParseNode $n) => $o->setIsApprovalRequiredForAdd($n->getBooleanValue()),
             'isApprovalRequiredForUpdate' => fn(ParseNode $n) => $o->setIsApprovalRequiredForUpdate($n->getBooleanValue()),
+            'isRequestorJustificationRequired' => fn(ParseNode $n) => $o->setIsRequestorJustificationRequired($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'stages' => fn(ParseNode $n) => $o->setStages($n->getCollectionOfObjectValues([AccessPackageApprovalStage::class, 'createFromDiscriminatorValue'])),
         ];
@@ -92,6 +93,18 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isApprovalRequiredForUpdate'");
+    }
+
+    /**
+     * Gets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * @return bool|null
+    */
+    public function getIsRequestorJustificationRequired(): ?bool {
+        $val = $this->getBackingStore()->get('isRequestorJustificationRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRequestorJustificationRequired'");
     }
 
     /**
@@ -127,6 +140,7 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isApprovalRequiredForAdd', $this->getIsApprovalRequiredForAdd());
         $writer->writeBooleanValue('isApprovalRequiredForUpdate', $this->getIsApprovalRequiredForUpdate());
+        $writer->writeBooleanValue('isRequestorJustificationRequired', $this->getIsRequestorJustificationRequired());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('stages', $this->getStages());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -162,6 +176,14 @@ class AccessPackageAssignmentApprovalSettings implements AdditionalDataHolder, B
     */
     public function setIsApprovalRequiredForUpdate(?bool $value): void {
         $this->getBackingStore()->set('isApprovalRequiredForUpdate', $value);
+    }
+
+    /**
+     * Sets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * @param bool|null $value Value to set for the isRequestorJustificationRequired property.
+    */
+    public function setIsRequestorJustificationRequired(?bool $value): void {
+        $this->getBackingStore()->set('isRequestorJustificationRequired', $value);
     }
 
     /**

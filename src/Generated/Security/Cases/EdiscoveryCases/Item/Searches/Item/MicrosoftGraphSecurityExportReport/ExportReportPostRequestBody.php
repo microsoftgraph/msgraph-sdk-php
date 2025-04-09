@@ -3,6 +3,8 @@
 namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityExportReport;
 
 use Microsoft\Graph\Generated\Models\Security\AdditionalOptions;
+use Microsoft\Graph\Generated\Models\Security\CloudAttachmentVersion;
+use Microsoft\Graph\Generated\Models\Security\DocumentVersion;
 use Microsoft\Graph\Generated\Models\Security\ExportCriteria;
 use Microsoft\Graph\Generated\Models\Security\ExportLocation;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
@@ -71,6 +73,18 @@ class ExportReportPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
+     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @return CloudAttachmentVersion|null
+    */
+    public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
+        $val = $this->getBackingStore()->get('cloudAttachmentVersion');
+        if (is_null($val) || $val instanceof CloudAttachmentVersion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAttachmentVersion'");
+    }
+
+    /**
      * Gets the description property value. The description property
      * @return string|null
     */
@@ -92,6 +106,18 @@ class ExportReportPostRequestBody implements AdditionalDataHolder, BackedModel, 
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
+    }
+
+    /**
+     * Gets the documentVersion property value. The documentVersion property
+     * @return DocumentVersion|null
+    */
+    public function getDocumentVersion(): ?DocumentVersion {
+        $val = $this->getBackingStore()->get('documentVersion');
+        if (is_null($val) || $val instanceof DocumentVersion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentVersion'");
     }
 
     /**
@@ -126,8 +152,10 @@ class ExportReportPostRequestBody implements AdditionalDataHolder, BackedModel, 
         $o = $this;
         return  [
             'additionalOptions' => fn(ParseNode $n) => $o->setAdditionalOptions($n->getEnumValue(AdditionalOptions::class)),
+            'cloudAttachmentVersion' => fn(ParseNode $n) => $o->setCloudAttachmentVersion($n->getEnumValue(CloudAttachmentVersion::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'documentVersion' => fn(ParseNode $n) => $o->setDocumentVersion($n->getEnumValue(DocumentVersion::class)),
             'exportCriteria' => fn(ParseNode $n) => $o->setExportCriteria($n->getEnumValue(ExportCriteria::class)),
             'exportLocation' => fn(ParseNode $n) => $o->setExportLocation($n->getEnumValue(ExportLocation::class)),
         ];
@@ -139,8 +167,10 @@ class ExportReportPostRequestBody implements AdditionalDataHolder, BackedModel, 
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('additionalOptions', $this->getAdditionalOptions());
+        $writer->writeEnumValue('cloudAttachmentVersion', $this->getCloudAttachmentVersion());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeEnumValue('documentVersion', $this->getDocumentVersion());
         $writer->writeEnumValue('exportCriteria', $this->getExportCriteria());
         $writer->writeEnumValue('exportLocation', $this->getExportLocation());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -171,6 +201,14 @@ class ExportReportPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
+     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
+    */
+    public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
+        $this->getBackingStore()->set('cloudAttachmentVersion', $value);
+    }
+
+    /**
      * Sets the description property value. The description property
      * @param string|null $value Value to set for the description property.
     */
@@ -184,6 +222,14 @@ class ExportReportPostRequestBody implements AdditionalDataHolder, BackedModel, 
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the documentVersion property value. The documentVersion property
+     * @param DocumentVersion|null $value Value to set for the documentVersion property.
+    */
+    public function setDocumentVersion(?DocumentVersion $value): void {
+        $this->getBackingStore()->set('documentVersion', $value);
     }
 
     /**

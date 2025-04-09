@@ -63,7 +63,7 @@ class GetYammerGroupsActivityDetailWithPeriodRequestBuilder extends BaseRequestB
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/octet-stream, application/json");
+        $requestInfo->tryAddHeader('Accept', "application/octet-stream");
         return $requestInfo;
     }
 

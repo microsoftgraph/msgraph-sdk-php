@@ -57,7 +57,7 @@ class X509CertificateCRLValidationConfiguration implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. The exemptedCertificateAuthoritiesSubjectKeyIdentifiers property
+     * Gets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. Represents the SKIs of CAs that should be excluded from the valid CRL distribution point check. SKI is represented as a hexadecimal string.
      * @return array<string>|null
     */
     public function getExemptedCertificateAuthoritiesSubjectKeyIdentifiers(): ?array {
@@ -142,7 +142,7 @@ class X509CertificateCRLValidationConfiguration implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. The exemptedCertificateAuthoritiesSubjectKeyIdentifiers property
+     * Sets the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property value. Represents the SKIs of CAs that should be excluded from the valid CRL distribution point check. SKI is represented as a hexadecimal string.
      * @param array<string>|null $value Value to set for the exemptedCertificateAuthoritiesSubjectKeyIdentifiers property.
     */
     public function setExemptedCertificateAuthoritiesSubjectKeyIdentifiers(?array $value): void {

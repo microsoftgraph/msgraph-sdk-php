@@ -10,4 +10,9 @@ class ExportOptions extends Enum {
     public const PDF_REPLACEMENT = "pdfReplacement";
     public const TAGS = "tags";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const SPLIT_SOURCE = "splitSource";
+    public const INCLUDE_FOLDER_AND_PATH = "includeFolderAndPath";
+    public const FRIENDLY_NAME = "friendlyName";
+    public const CONDENSE_PATHS = "condensePaths";
+    public const OPTIMIZED_PARTITION_SIZE = "optimizedPartitionSize";
 }

@@ -115,12 +115,25 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customExtensionCalloutInstances' => fn(ParseNode $n) => $o->setCustomExtensionCalloutInstances($n->getCollectionOfObjectValues([CustomExtensionCalloutInstance::class, 'createFromDiscriminatorValue'])),
+            'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
             'requestor' => fn(ParseNode $n) => $o->setRequestor($n->getObjectValue([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
             'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageRequestType::class)),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AccessPackageRequestState::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the justification property value. The justification property
+     * @return string|null
+    */
+    public function getJustification(): ?string {
+        $val = $this->getBackingStore()->get('justification');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
     }
 
     /**
@@ -195,6 +208,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('customExtensionCalloutInstances', $this->getCustomExtensionCalloutInstances());
+        $writer->writeStringValue('justification', $this->getJustification());
         $writer->writeObjectValue('requestor', $this->getRequestor());
         $writer->writeEnumValue('requestType', $this->getRequestType());
         $writer->writeObjectValue('schedule', $this->getSchedule());
@@ -248,6 +262,14 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     */
     public function setCustomExtensionCalloutInstances(?array $value): void {
         $this->getBackingStore()->set('customExtensionCalloutInstances', $value);
+    }
+
+    /**
+     * Sets the justification property value. The justification property
+     * @param string|null $value Value to set for the justification property.
+    */
+    public function setJustification(?string $value): void {
+        $this->getBackingStore()->set('justification', $value);
     }
 
     /**

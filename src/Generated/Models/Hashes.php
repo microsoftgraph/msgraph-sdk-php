@@ -56,7 +56,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
+     * Gets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
      * @return string|null
     */
     public function getCrc32Hash(): ?string {
@@ -95,7 +95,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
+     * Gets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file change (if available). Read-only.
      * @return string|null
     */
     public function getQuickXorHash(): ?string {
@@ -119,7 +119,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
+     * Gets the sha256Hash property value. This property isn't supported. Don't use.
      * @return string|null
     */
     public function getSha256Hash(): ?string {
@@ -160,7 +160,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the crc32Hash property value. The CRC32 value of the file in little endian (if available). Read-only.
+     * Sets the crc32Hash property value. The CRC32 value of the file (if available). Read-only.
      * @param string|null $value Value to set for the crc32Hash property.
     */
     public function setCrc32Hash(?string $value): void {
@@ -176,7 +176,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
+     * Sets the quickXorHash property value. A proprietary hash of the file that can be used to determine if the contents of the file change (if available). Read-only.
      * @param string|null $value Value to set for the quickXorHash property.
     */
     public function setQuickXorHash(?string $value): void {
@@ -192,7 +192,7 @@ class Hashes implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sha256Hash property value. SHA256 hash for the contents of the file (if available). Read-only.
+     * Sets the sha256Hash property value. This property isn't supported. Don't use.
      * @param string|null $value Value to set for the sha256Hash property.
     */
     public function setSha256Hash(?string $value): void {
