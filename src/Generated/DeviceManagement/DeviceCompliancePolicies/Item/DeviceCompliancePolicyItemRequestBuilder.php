@@ -118,11 +118,11 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windows10CompliancePolicy object.
+     * Read properties and relationships of the androidWorkProfileCompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-androidworkprofilecompliancepolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -133,12 +133,12 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windows10MobileCompliancePolicy object.
+     * Update the properties of a windows81CompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows10mobilecompliancepolicy-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-windows81compliancepolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCompliancePolicy $body, ?DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -166,7 +166,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windows10CompliancePolicy object.
+     * Read properties and relationships of the androidWorkProfileCompliancePolicy object.
      * @param DeviceCompliancePolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -187,7 +187,7 @@ class DeviceCompliancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a windows10MobileCompliancePolicy object.
+     * Update the properties of a windows81CompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
