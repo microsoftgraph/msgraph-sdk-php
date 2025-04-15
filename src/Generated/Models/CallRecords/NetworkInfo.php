@@ -69,7 +69,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+     * Gets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network. This property isn't available if the user disables precise location sharing in their operating system or Microsoft Teams app settings.
      * @return string|null
     */
     public function getBasicServiceSetIdentifier(): ?string {
@@ -479,7 +479,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
+     * Sets the basicServiceSetIdentifier property value. The wireless LAN basic service set identifier of the media endpoint used to connect to the network. This property isn't available if the user disables precise location sharing in their operating system or Microsoft Teams app settings.
      * @param string|null $value Value to set for the basicServiceSetIdentifier property.
     */
     public function setBasicServiceSetIdentifier(?string $value): void {
