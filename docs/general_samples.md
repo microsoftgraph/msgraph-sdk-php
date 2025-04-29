@@ -1,4 +1,4 @@
- Usage Examples
+# Usage Examples
 
 ## Creating a Graph client
 This creates a default Graph client that uses `https://graph.microsoft.com` as the default base URL and default configured Guzzle HTTP client to make the requests.

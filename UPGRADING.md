@@ -67,22 +67,22 @@ respects the `Retry-After` header values. It also exponentially backs-off should
 
 This would be mostly helpful for handling [throttling scenarios](https://docs.microsoft.com/en-us/graph/throttling) on the Microsoft Graph API.
 
-See [this example](docs/Examples.md#customizing-middleware-configuration) on how to customize middleware.
+See [this example](docs/general_samples.md#customizing-middleware-configuration) on how to customize middleware.
 
 ## Improved support for paged collections
 For performance reasons, collections of entities are often split into pages and each page is returned with a URL to the next page. The `PageIterator` class simplifies consuming of paged collections. `PageIterator` handles enumerating the current page and requesting subsequent pages automatically.
 
-See [this example](docs/Examples.md#paging-through-a-collection)
+See [this example](docs/general_samples.md#paging-through-a-collection)
 
 ## Support for Batch Requests
 Combine multiple requests in a single call with ease. Up to 20 individual requests can be batched together to reduce network latency of making each request separately. The `BatchRequestBuilder` allows you to make requests to the `/$batch` endpoint of the Microsoft Graph API.
 
-See [this example](docs/Examples.md#batching-requests)
+See [this example](docs/general_samples.md#batching-requests)
 
 ## Support for resumable large file uploads
 To upload files larger than 3MB, Microsoft Graph API supports uploads using resumable upload sessions where several bytes are uploaded at a time. The SDK provides a LargeFileUpload task that slices your file into chunks and progressively uploads them until completion.
 
-See [this example](docs/Examples.md#uploading-large-files)
+See [this example](docs/uploads_samples.md#uploading-large-files)
 
 # Breaking Changes
 The following breaking changes were introduced in v2.0.0 with more detailed upgrade steps in the following section:
@@ -128,7 +128,7 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext);
 ```
 With version 2's configuration, all your requests are authenticated without additional effort.
 
-See [this example](docs/Examples.md#creating-a-graph-client) on how to customise the Guzzle HTTP client configuration.
+See [this example](docs/general_samples.md#creating-a-graph-client) on how to customise the Guzzle HTTP client configuration.
 
 ## Changes to Graph request functionality
 
@@ -152,7 +152,7 @@ $requestConfig->top = 5;
 $messages = $graphClient->me()->messages()->get($requestConfig)->wait();
 ```
 
-See [the examples](docs/Examples.md) on how to pass headers and query parameters in your requests.
+See [the examples](docs/general_samples.md#passing-request-headers) on how to pass headers and query parameters in your requests.
 
 ## Exception Handling
 
