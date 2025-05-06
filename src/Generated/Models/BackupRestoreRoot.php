@@ -54,6 +54,20 @@ class BackupRestoreRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the driveProtectionUnitsBulkAdditionJobs property value. The driveProtectionUnitsBulkAdditionJobs property
+     * @return array<DriveProtectionUnitsBulkAdditionJob>|null
+    */
+    public function getDriveProtectionUnitsBulkAdditionJobs(): ?array {
+        $val = $this->getBackingStore()->get('driveProtectionUnitsBulkAdditionJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveProtectionUnitsBulkAdditionJob::class);
+            /** @var array<DriveProtectionUnitsBulkAdditionJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveProtectionUnitsBulkAdditionJobs'");
+    }
+
+    /**
      * Gets the exchangeProtectionPolicies property value. The list of Exchange protection policies in the tenant.
      * @return array<ExchangeProtectionPolicy>|null
     */
@@ -90,10 +104,12 @@ class BackupRestoreRoot extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'driveInclusionRules' => fn(ParseNode $n) => $o->setDriveInclusionRules($n->getCollectionOfObjectValues([DriveProtectionRule::class, 'createFromDiscriminatorValue'])),
             'driveProtectionUnits' => fn(ParseNode $n) => $o->setDriveProtectionUnits($n->getCollectionOfObjectValues([DriveProtectionUnit::class, 'createFromDiscriminatorValue'])),
+            'driveProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setDriveProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([DriveProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
             'exchangeProtectionPolicies' => fn(ParseNode $n) => $o->setExchangeProtectionPolicies($n->getCollectionOfObjectValues([ExchangeProtectionPolicy::class, 'createFromDiscriminatorValue'])),
             'exchangeRestoreSessions' => fn(ParseNode $n) => $o->setExchangeRestoreSessions($n->getCollectionOfObjectValues([ExchangeRestoreSession::class, 'createFromDiscriminatorValue'])),
             'mailboxInclusionRules' => fn(ParseNode $n) => $o->setMailboxInclusionRules($n->getCollectionOfObjectValues([MailboxProtectionRule::class, 'createFromDiscriminatorValue'])),
             'mailboxProtectionUnits' => fn(ParseNode $n) => $o->setMailboxProtectionUnits($n->getCollectionOfObjectValues([MailboxProtectionUnit::class, 'createFromDiscriminatorValue'])),
+            'mailboxProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setMailboxProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([MailboxProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
             'oneDriveForBusinessProtectionPolicies' => fn(ParseNode $n) => $o->setOneDriveForBusinessProtectionPolicies($n->getCollectionOfObjectValues([OneDriveForBusinessProtectionPolicy::class, 'createFromDiscriminatorValue'])),
             'oneDriveForBusinessRestoreSessions' => fn(ParseNode $n) => $o->setOneDriveForBusinessRestoreSessions($n->getCollectionOfObjectValues([OneDriveForBusinessRestoreSession::class, 'createFromDiscriminatorValue'])),
             'protectionPolicies' => fn(ParseNode $n) => $o->setProtectionPolicies($n->getCollectionOfObjectValues([ProtectionPolicyBase::class, 'createFromDiscriminatorValue'])),
@@ -106,6 +122,7 @@ class BackupRestoreRoot extends Entity implements Parsable
             'sharePointRestoreSessions' => fn(ParseNode $n) => $o->setSharePointRestoreSessions($n->getCollectionOfObjectValues([SharePointRestoreSession::class, 'createFromDiscriminatorValue'])),
             'siteInclusionRules' => fn(ParseNode $n) => $o->setSiteInclusionRules($n->getCollectionOfObjectValues([SiteProtectionRule::class, 'createFromDiscriminatorValue'])),
             'siteProtectionUnits' => fn(ParseNode $n) => $o->setSiteProtectionUnits($n->getCollectionOfObjectValues([SiteProtectionUnit::class, 'createFromDiscriminatorValue'])),
+            'siteProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setSiteProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([SiteProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -135,6 +152,20 @@ class BackupRestoreRoot extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxProtectionUnits'");
+    }
+
+    /**
+     * Gets the mailboxProtectionUnitsBulkAdditionJobs property value. The mailboxProtectionUnitsBulkAdditionJobs property
+     * @return array<MailboxProtectionUnitsBulkAdditionJob>|null
+    */
+    public function getMailboxProtectionUnitsBulkAdditionJobs(): ?array {
+        $val = $this->getBackingStore()->get('mailboxProtectionUnitsBulkAdditionJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MailboxProtectionUnitsBulkAdditionJob::class);
+            /** @var array<MailboxProtectionUnitsBulkAdditionJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxProtectionUnitsBulkAdditionJobs'");
     }
 
     /**
@@ -304,6 +335,20 @@ class BackupRestoreRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the siteProtectionUnitsBulkAdditionJobs property value. The siteProtectionUnitsBulkAdditionJobs property
+     * @return array<SiteProtectionUnitsBulkAdditionJob>|null
+    */
+    public function getSiteProtectionUnitsBulkAdditionJobs(): ?array {
+        $val = $this->getBackingStore()->get('siteProtectionUnitsBulkAdditionJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SiteProtectionUnitsBulkAdditionJob::class);
+            /** @var array<SiteProtectionUnitsBulkAdditionJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteProtectionUnitsBulkAdditionJobs'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -311,10 +356,12 @@ class BackupRestoreRoot extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('driveInclusionRules', $this->getDriveInclusionRules());
         $writer->writeCollectionOfObjectValues('driveProtectionUnits', $this->getDriveProtectionUnits());
+        $writer->writeCollectionOfObjectValues('driveProtectionUnitsBulkAdditionJobs', $this->getDriveProtectionUnitsBulkAdditionJobs());
         $writer->writeCollectionOfObjectValues('exchangeProtectionPolicies', $this->getExchangeProtectionPolicies());
         $writer->writeCollectionOfObjectValues('exchangeRestoreSessions', $this->getExchangeRestoreSessions());
         $writer->writeCollectionOfObjectValues('mailboxInclusionRules', $this->getMailboxInclusionRules());
         $writer->writeCollectionOfObjectValues('mailboxProtectionUnits', $this->getMailboxProtectionUnits());
+        $writer->writeCollectionOfObjectValues('mailboxProtectionUnitsBulkAdditionJobs', $this->getMailboxProtectionUnitsBulkAdditionJobs());
         $writer->writeCollectionOfObjectValues('oneDriveForBusinessProtectionPolicies', $this->getOneDriveForBusinessProtectionPolicies());
         $writer->writeCollectionOfObjectValues('oneDriveForBusinessRestoreSessions', $this->getOneDriveForBusinessRestoreSessions());
         $writer->writeCollectionOfObjectValues('protectionPolicies', $this->getProtectionPolicies());
@@ -327,6 +374,7 @@ class BackupRestoreRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('sharePointRestoreSessions', $this->getSharePointRestoreSessions());
         $writer->writeCollectionOfObjectValues('siteInclusionRules', $this->getSiteInclusionRules());
         $writer->writeCollectionOfObjectValues('siteProtectionUnits', $this->getSiteProtectionUnits());
+        $writer->writeCollectionOfObjectValues('siteProtectionUnitsBulkAdditionJobs', $this->getSiteProtectionUnitsBulkAdditionJobs());
     }
 
     /**
@@ -343,6 +391,14 @@ class BackupRestoreRoot extends Entity implements Parsable
     */
     public function setDriveProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('driveProtectionUnits', $value);
+    }
+
+    /**
+     * Sets the driveProtectionUnitsBulkAdditionJobs property value. The driveProtectionUnitsBulkAdditionJobs property
+     * @param array<DriveProtectionUnitsBulkAdditionJob>|null $value Value to set for the driveProtectionUnitsBulkAdditionJobs property.
+    */
+    public function setDriveProtectionUnitsBulkAdditionJobs(?array $value): void {
+        $this->getBackingStore()->set('driveProtectionUnitsBulkAdditionJobs', $value);
     }
 
     /**
@@ -375,6 +431,14 @@ class BackupRestoreRoot extends Entity implements Parsable
     */
     public function setMailboxProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('mailboxProtectionUnits', $value);
+    }
+
+    /**
+     * Sets the mailboxProtectionUnitsBulkAdditionJobs property value. The mailboxProtectionUnitsBulkAdditionJobs property
+     * @param array<MailboxProtectionUnitsBulkAdditionJob>|null $value Value to set for the mailboxProtectionUnitsBulkAdditionJobs property.
+    */
+    public function setMailboxProtectionUnitsBulkAdditionJobs(?array $value): void {
+        $this->getBackingStore()->set('mailboxProtectionUnitsBulkAdditionJobs', $value);
     }
 
     /**
@@ -471,6 +535,14 @@ class BackupRestoreRoot extends Entity implements Parsable
     */
     public function setSiteProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('siteProtectionUnits', $value);
+    }
+
+    /**
+     * Sets the siteProtectionUnitsBulkAdditionJobs property value. The siteProtectionUnitsBulkAdditionJobs property
+     * @param array<SiteProtectionUnitsBulkAdditionJob>|null $value Value to set for the siteProtectionUnitsBulkAdditionJobs property.
+    */
+    public function setSiteProtectionUnitsBulkAdditionJobs(?array $value): void {
+        $this->getBackingStore()->set('siteProtectionUnitsBulkAdditionJobs', $value);
     }
 
 }

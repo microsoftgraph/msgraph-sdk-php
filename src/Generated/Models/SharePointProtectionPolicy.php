@@ -35,6 +35,7 @@ class SharePointProtectionPolicy extends ProtectionPolicyBase implements Parsabl
         return array_merge(parent::getFieldDeserializers(), [
             'siteInclusionRules' => fn(ParseNode $n) => $o->setSiteInclusionRules($n->getCollectionOfObjectValues([SiteProtectionRule::class, 'createFromDiscriminatorValue'])),
             'siteProtectionUnits' => fn(ParseNode $n) => $o->setSiteProtectionUnits($n->getCollectionOfObjectValues([SiteProtectionUnit::class, 'createFromDiscriminatorValue'])),
+            'siteProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setSiteProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([SiteProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -67,6 +68,20 @@ class SharePointProtectionPolicy extends ProtectionPolicyBase implements Parsabl
     }
 
     /**
+     * Gets the siteProtectionUnitsBulkAdditionJobs property value. The siteProtectionUnitsBulkAdditionJobs property
+     * @return array<SiteProtectionUnitsBulkAdditionJob>|null
+    */
+    public function getSiteProtectionUnitsBulkAdditionJobs(): ?array {
+        $val = $this->getBackingStore()->get('siteProtectionUnitsBulkAdditionJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SiteProtectionUnitsBulkAdditionJob::class);
+            /** @var array<SiteProtectionUnitsBulkAdditionJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteProtectionUnitsBulkAdditionJobs'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -74,6 +89,7 @@ class SharePointProtectionPolicy extends ProtectionPolicyBase implements Parsabl
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('siteInclusionRules', $this->getSiteInclusionRules());
         $writer->writeCollectionOfObjectValues('siteProtectionUnits', $this->getSiteProtectionUnits());
+        $writer->writeCollectionOfObjectValues('siteProtectionUnitsBulkAdditionJobs', $this->getSiteProtectionUnitsBulkAdditionJobs());
     }
 
     /**
@@ -90,6 +106,14 @@ class SharePointProtectionPolicy extends ProtectionPolicyBase implements Parsabl
     */
     public function setSiteProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('siteProtectionUnits', $value);
+    }
+
+    /**
+     * Sets the siteProtectionUnitsBulkAdditionJobs property value. The siteProtectionUnitsBulkAdditionJobs property
+     * @param array<SiteProtectionUnitsBulkAdditionJob>|null $value Value to set for the siteProtectionUnitsBulkAdditionJobs property.
+    */
+    public function setSiteProtectionUnitsBulkAdditionJobs(?array $value): void {
+        $this->getBackingStore()->set('siteProtectionUnitsBulkAdditionJobs', $value);
     }
 
 }

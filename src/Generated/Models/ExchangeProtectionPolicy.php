@@ -35,6 +35,7 @@ class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'mailboxInclusionRules' => fn(ParseNode $n) => $o->setMailboxInclusionRules($n->getCollectionOfObjectValues([MailboxProtectionRule::class, 'createFromDiscriminatorValue'])),
             'mailboxProtectionUnits' => fn(ParseNode $n) => $o->setMailboxProtectionUnits($n->getCollectionOfObjectValues([MailboxProtectionUnit::class, 'createFromDiscriminatorValue'])),
+            'mailboxProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setMailboxProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([MailboxProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -67,6 +68,20 @@ class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Parsable
     }
 
     /**
+     * Gets the mailboxProtectionUnitsBulkAdditionJobs property value. The mailboxProtectionUnitsBulkAdditionJobs property
+     * @return array<MailboxProtectionUnitsBulkAdditionJob>|null
+    */
+    public function getMailboxProtectionUnitsBulkAdditionJobs(): ?array {
+        $val = $this->getBackingStore()->get('mailboxProtectionUnitsBulkAdditionJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MailboxProtectionUnitsBulkAdditionJob::class);
+            /** @var array<MailboxProtectionUnitsBulkAdditionJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxProtectionUnitsBulkAdditionJobs'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -74,6 +89,7 @@ class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('mailboxInclusionRules', $this->getMailboxInclusionRules());
         $writer->writeCollectionOfObjectValues('mailboxProtectionUnits', $this->getMailboxProtectionUnits());
+        $writer->writeCollectionOfObjectValues('mailboxProtectionUnitsBulkAdditionJobs', $this->getMailboxProtectionUnitsBulkAdditionJobs());
     }
 
     /**
@@ -90,6 +106,14 @@ class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Parsable
     */
     public function setMailboxProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('mailboxProtectionUnits', $value);
+    }
+
+    /**
+     * Sets the mailboxProtectionUnitsBulkAdditionJobs property value. The mailboxProtectionUnitsBulkAdditionJobs property
+     * @param array<MailboxProtectionUnitsBulkAdditionJob>|null $value Value to set for the mailboxProtectionUnitsBulkAdditionJobs property.
+    */
+    public function setMailboxProtectionUnitsBulkAdditionJobs(?array $value): void {
+        $this->getBackingStore()->set('mailboxProtectionUnitsBulkAdditionJobs', $value);
     }
 
 }

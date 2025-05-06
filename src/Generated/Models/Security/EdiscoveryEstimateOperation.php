@@ -36,7 +36,6 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
             'mailboxCount' => fn(ParseNode $n) => $o->setMailboxCount($n->getIntegerValue()),
             'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
             'siteCount' => fn(ParseNode $n) => $o->setSiteCount($n->getIntegerValue()),
-            'statisticsOptions' => fn(ParseNode $n) => $o->setStatisticsOptions($n->getEnumValue(StatisticsOptions::class)),
             'unindexedItemCount' => fn(ParseNode $n) => $o->setUnindexedItemCount($n->getIntegerValue()),
             'unindexedItemsSize' => fn(ParseNode $n) => $o->setUnindexedItemsSize($n->getIntegerValue()),
         ]);
@@ -103,18 +102,6 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the statisticsOptions property value. The statisticsOptions property
-     * @return StatisticsOptions|null
-    */
-    public function getStatisticsOptions(): ?StatisticsOptions {
-        $val = $this->getBackingStore()->get('statisticsOptions');
-        if (is_null($val) || $val instanceof StatisticsOptions) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'statisticsOptions'");
-    }
-
-    /**
      * Gets the unindexedItemCount property value. The estimated count of unindexed items for the collection.
      * @return int|null
     */
@@ -149,7 +136,6 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
         $writer->writeIntegerValue('mailboxCount', $this->getMailboxCount());
         $writer->writeObjectValue('search', $this->getSearch());
         $writer->writeIntegerValue('siteCount', $this->getSiteCount());
-        $writer->writeEnumValue('statisticsOptions', $this->getStatisticsOptions());
         $writer->writeIntegerValue('unindexedItemCount', $this->getUnindexedItemCount());
         $writer->writeIntegerValue('unindexedItemsSize', $this->getUnindexedItemsSize());
     }
@@ -192,14 +178,6 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
     */
     public function setSiteCount(?int $value): void {
         $this->getBackingStore()->set('siteCount', $value);
-    }
-
-    /**
-     * Sets the statisticsOptions property value. The statisticsOptions property
-     * @param StatisticsOptions|null $value Value to set for the statisticsOptions property.
-    */
-    public function setStatisticsOptions(?StatisticsOptions $value): void {
-        $this->getBackingStore()->set('statisticsOptions', $value);
     }
 
     /**
