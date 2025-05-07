@@ -52,6 +52,18 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * @return VirtualEventExternalRegistrationInformation|null
+    */
+    public function getExternalRegistrationInformation(): ?VirtualEventExternalRegistrationInformation {
+        $val = $this->getBackingStore()->get('externalRegistrationInformation');
+        if (is_null($val) || $val instanceof VirtualEventExternalRegistrationInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalRegistrationInformation'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -60,7 +72,9 @@ class AttendanceRecord extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'attendanceIntervals' => fn(ParseNode $n) => $o->setAttendanceIntervals($n->getCollectionOfObjectValues([AttendanceInterval::class, 'createFromDiscriminatorValue'])),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
+            'externalRegistrationInformation' => fn(ParseNode $n) => $o->setExternalRegistrationInformation($n->getObjectValue([VirtualEventExternalRegistrationInformation::class, 'createFromDiscriminatorValue'])),
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'registrationId' => fn(ParseNode $n) => $o->setRegistrationId($n->getStringValue()),
             'role' => fn(ParseNode $n) => $o->setRole($n->getStringValue()),
             'totalAttendanceInSeconds' => fn(ParseNode $n) => $o->setTotalAttendanceInSeconds($n->getIntegerValue()),
         ]);
@@ -76,6 +90,18 @@ class AttendanceRecord extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'identity'");
+    }
+
+    /**
+     * Gets the registrationId property value. The registrationId property
+     * @return string|null
+    */
+    public function getRegistrationId(): ?string {
+        $val = $this->getBackingStore()->get('registrationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registrationId'");
     }
 
     /**
@@ -110,7 +136,9 @@ class AttendanceRecord extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('attendanceIntervals', $this->getAttendanceIntervals());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeObjectValue('externalRegistrationInformation', $this->getExternalRegistrationInformation());
         $writer->writeObjectValue('identity', $this->getIdentity());
+        $writer->writeStringValue('registrationId', $this->getRegistrationId());
         $writer->writeStringValue('role', $this->getRole());
         $writer->writeIntegerValue('totalAttendanceInSeconds', $this->getTotalAttendanceInSeconds());
     }
@@ -132,11 +160,27 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
+     * Sets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * @param VirtualEventExternalRegistrationInformation|null $value Value to set for the externalRegistrationInformation property.
+    */
+    public function setExternalRegistrationInformation(?VirtualEventExternalRegistrationInformation $value): void {
+        $this->getBackingStore()->set('externalRegistrationInformation', $value);
+    }
+
+    /**
      * Sets the identity property value. Identity of the user associated with this attendance record.
      * @param Identity|null $value Value to set for the identity property.
     */
     public function setIdentity(?Identity $value): void {
         $this->getBackingStore()->set('identity', $value);
+    }
+
+    /**
+     * Sets the registrationId property value. The registrationId property
+     * @param string|null $value Value to set for the registrationId property.
+    */
+    public function setRegistrationId(?string $value): void {
+        $this->getBackingStore()->set('registrationId', $value);
     }
 
     /**

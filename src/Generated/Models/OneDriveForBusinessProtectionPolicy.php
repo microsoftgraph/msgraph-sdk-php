@@ -55,6 +55,20 @@ class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase implement
     }
 
     /**
+     * Gets the driveProtectionUnitsBulkAdditionJobs property value. The driveProtectionUnitsBulkAdditionJobs property
+     * @return array<DriveProtectionUnitsBulkAdditionJob>|null
+    */
+    public function getDriveProtectionUnitsBulkAdditionJobs(): ?array {
+        $val = $this->getBackingStore()->get('driveProtectionUnitsBulkAdditionJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveProtectionUnitsBulkAdditionJob::class);
+            /** @var array<DriveProtectionUnitsBulkAdditionJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveProtectionUnitsBulkAdditionJobs'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -63,6 +77,7 @@ class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase implement
         return array_merge(parent::getFieldDeserializers(), [
             'driveInclusionRules' => fn(ParseNode $n) => $o->setDriveInclusionRules($n->getCollectionOfObjectValues([DriveProtectionRule::class, 'createFromDiscriminatorValue'])),
             'driveProtectionUnits' => fn(ParseNode $n) => $o->setDriveProtectionUnits($n->getCollectionOfObjectValues([DriveProtectionUnit::class, 'createFromDiscriminatorValue'])),
+            'driveProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setDriveProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([DriveProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -74,6 +89,7 @@ class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase implement
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('driveInclusionRules', $this->getDriveInclusionRules());
         $writer->writeCollectionOfObjectValues('driveProtectionUnits', $this->getDriveProtectionUnits());
+        $writer->writeCollectionOfObjectValues('driveProtectionUnitsBulkAdditionJobs', $this->getDriveProtectionUnitsBulkAdditionJobs());
     }
 
     /**
@@ -90,6 +106,14 @@ class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase implement
     */
     public function setDriveProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('driveProtectionUnits', $value);
+    }
+
+    /**
+     * Sets the driveProtectionUnitsBulkAdditionJobs property value. The driveProtectionUnitsBulkAdditionJobs property
+     * @param array<DriveProtectionUnitsBulkAdditionJob>|null $value Value to set for the driveProtectionUnitsBulkAdditionJobs property.
+    */
+    public function setDriveProtectionUnitsBulkAdditionJobs(?array $value): void {
+        $this->getBackingStore()->set('driveProtectionUnitsBulkAdditionJobs', $value);
     }
 
 }

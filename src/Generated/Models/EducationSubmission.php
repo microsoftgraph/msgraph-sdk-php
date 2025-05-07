@@ -27,6 +27,18 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
+     * Gets the assignmentId property value. The unique identifier for the assignment with which this submission is associated. A submission is always associated with one and only one assignment.
+     * @return string|null
+    */
+    public function getAssignmentId(): ?string {
+        $val = $this->getBackingStore()->get('assignmentId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentId'");
+    }
+
+    /**
      * Gets the excusedBy property value. The user that marked the submission as excused.
      * @return IdentitySet|null
     */
@@ -57,8 +69,11 @@ class EducationSubmission extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'assignmentId' => fn(ParseNode $n) => $o->setAssignmentId($n->getStringValue()),
             'excusedBy' => fn(ParseNode $n) => $o->setExcusedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'excusedDateTime' => fn(ParseNode $n) => $o->setExcusedDateTime($n->getDateTimeValue()),
+            'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'outcomes' => fn(ParseNode $n) => $o->setOutcomes($n->getCollectionOfObjectValues([EducationOutcome::class, 'createFromDiscriminatorValue'])),
             'reassignedBy' => fn(ParseNode $n) => $o->setReassignedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'reassignedDateTime' => fn(ParseNode $n) => $o->setReassignedDateTime($n->getDateTimeValue()),
@@ -75,6 +90,30 @@ class EducationSubmission extends Entity implements Parsable
             'unsubmittedDateTime' => fn(ParseNode $n) => $o->setUnsubmittedDateTime($n->getDateTimeValue()),
             'webUrl' => fn(ParseNode $n) => $o->setWebUrl($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the lastModifiedBy property value. The identities of those who modified the submission.
+     * @return IdentitySet|null
+    */
+    public function getLastModifiedBy(): ?IdentitySet {
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
+    }
+
+    /**
+     * Gets the lastModifiedDateTime property value. The date and time the submission was modified.
+     * @return DateTime|null
+    */
+    public function getLastModifiedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -276,6 +315,14 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
+     * Sets the assignmentId property value. The unique identifier for the assignment with which this submission is associated. A submission is always associated with one and only one assignment.
+     * @param string|null $value Value to set for the assignmentId property.
+    */
+    public function setAssignmentId(?string $value): void {
+        $this->getBackingStore()->set('assignmentId', $value);
+    }
+
+    /**
      * Sets the excusedBy property value. The user that marked the submission as excused.
      * @param IdentitySet|null $value Value to set for the excusedBy property.
     */
@@ -289,6 +336,22 @@ class EducationSubmission extends Entity implements Parsable
     */
     public function setExcusedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('excusedDateTime', $value);
+    }
+
+    /**
+     * Sets the lastModifiedBy property value. The identities of those who modified the submission.
+     * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
+    */
+    public function setLastModifiedBy(?IdentitySet $value): void {
+        $this->getBackingStore()->set('lastModifiedBy', $value);
+    }
+
+    /**
+     * Sets the lastModifiedDateTime property value. The date and time the submission was modified.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+    */
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**

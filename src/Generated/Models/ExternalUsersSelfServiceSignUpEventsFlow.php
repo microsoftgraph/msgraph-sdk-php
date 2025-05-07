@@ -33,6 +33,8 @@ class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow 
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'onAttributeCollection' => fn(ParseNode $n) => $o->setOnAttributeCollection($n->getObjectValue([OnAttributeCollectionHandler::class, 'createFromDiscriminatorValue'])),
+            'onAttributeCollectionStart' => fn(ParseNode $n) => $o->setOnAttributeCollectionStart($n->getObjectValue([OnAttributeCollectionStartHandler::class, 'createFromDiscriminatorValue'])),
+            'onAttributeCollectionSubmit' => fn(ParseNode $n) => $o->setOnAttributeCollectionSubmit($n->getObjectValue([OnAttributeCollectionSubmitHandler::class, 'createFromDiscriminatorValue'])),
             'onAuthenticationMethodLoadStart' => fn(ParseNode $n) => $o->setOnAuthenticationMethodLoadStart($n->getObjectValue([OnAuthenticationMethodLoadStartHandler::class, 'createFromDiscriminatorValue'])),
             'onInteractiveAuthFlowStart' => fn(ParseNode $n) => $o->setOnInteractiveAuthFlowStart($n->getObjectValue([OnInteractiveAuthFlowStartHandler::class, 'createFromDiscriminatorValue'])),
             'onUserCreateStart' => fn(ParseNode $n) => $o->setOnUserCreateStart($n->getObjectValue([OnUserCreateStartHandler::class, 'createFromDiscriminatorValue'])),
@@ -49,6 +51,30 @@ class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow 
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onAttributeCollection'");
+    }
+
+    /**
+     * Gets the onAttributeCollectionStart property value. The configuration for what to invoke when attribution collection starts.
+     * @return OnAttributeCollectionStartHandler|null
+    */
+    public function getOnAttributeCollectionStart(): ?OnAttributeCollectionStartHandler {
+        $val = $this->getBackingStore()->get('onAttributeCollectionStart');
+        if (is_null($val) || $val instanceof OnAttributeCollectionStartHandler) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onAttributeCollectionStart'");
+    }
+
+    /**
+     * Gets the onAttributeCollectionSubmit property value. The configuration for what to invoke when attributes are submitted at the end of attribution collection.
+     * @return OnAttributeCollectionSubmitHandler|null
+    */
+    public function getOnAttributeCollectionSubmit(): ?OnAttributeCollectionSubmitHandler {
+        $val = $this->getBackingStore()->get('onAttributeCollectionSubmit');
+        if (is_null($val) || $val instanceof OnAttributeCollectionSubmitHandler) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onAttributeCollectionSubmit'");
     }
 
     /**
@@ -94,6 +120,8 @@ class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow 
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('onAttributeCollection', $this->getOnAttributeCollection());
+        $writer->writeObjectValue('onAttributeCollectionStart', $this->getOnAttributeCollectionStart());
+        $writer->writeObjectValue('onAttributeCollectionSubmit', $this->getOnAttributeCollectionSubmit());
         $writer->writeObjectValue('onAuthenticationMethodLoadStart', $this->getOnAuthenticationMethodLoadStart());
         $writer->writeObjectValue('onInteractiveAuthFlowStart', $this->getOnInteractiveAuthFlowStart());
         $writer->writeObjectValue('onUserCreateStart', $this->getOnUserCreateStart());
@@ -105,6 +133,22 @@ class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEventsFlow 
     */
     public function setOnAttributeCollection(?OnAttributeCollectionHandler $value): void {
         $this->getBackingStore()->set('onAttributeCollection', $value);
+    }
+
+    /**
+     * Sets the onAttributeCollectionStart property value. The configuration for what to invoke when attribution collection starts.
+     * @param OnAttributeCollectionStartHandler|null $value Value to set for the onAttributeCollectionStart property.
+    */
+    public function setOnAttributeCollectionStart(?OnAttributeCollectionStartHandler $value): void {
+        $this->getBackingStore()->set('onAttributeCollectionStart', $value);
+    }
+
+    /**
+     * Sets the onAttributeCollectionSubmit property value. The configuration for what to invoke when attributes are submitted at the end of attribution collection.
+     * @param OnAttributeCollectionSubmitHandler|null $value Value to set for the onAttributeCollectionSubmit property.
+    */
+    public function setOnAttributeCollectionSubmit(?OnAttributeCollectionSubmitHandler $value): void {
+        $this->getBackingStore()->set('onAttributeCollectionSubmit', $value);
     }
 
     /**

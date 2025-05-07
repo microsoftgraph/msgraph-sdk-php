@@ -9,5 +9,4 @@ class ExportFileStructure extends Enum {
     public const DIRECTORY = "directory";
     public const PST = "pst";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    public const MSG = "msg";
 }

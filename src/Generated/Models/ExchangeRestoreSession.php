@@ -35,6 +35,7 @@ class ExchangeRestoreSession extends RestoreSessionBase implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'granularMailboxRestoreArtifacts' => fn(ParseNode $n) => $o->setGranularMailboxRestoreArtifacts($n->getCollectionOfObjectValues([GranularMailboxRestoreArtifact::class, 'createFromDiscriminatorValue'])),
             'mailboxRestoreArtifacts' => fn(ParseNode $n) => $o->setMailboxRestoreArtifacts($n->getCollectionOfObjectValues([MailboxRestoreArtifact::class, 'createFromDiscriminatorValue'])),
+            'mailboxRestoreArtifactsBulkAdditionRequests' => fn(ParseNode $n) => $o->setMailboxRestoreArtifactsBulkAdditionRequests($n->getCollectionOfObjectValues([MailboxRestoreArtifactsBulkAdditionRequest::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -67,6 +68,20 @@ class ExchangeRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
+     * Gets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * @return array<MailboxRestoreArtifactsBulkAdditionRequest>|null
+    */
+    public function getMailboxRestoreArtifactsBulkAdditionRequests(): ?array {
+        $val = $this->getBackingStore()->get('mailboxRestoreArtifactsBulkAdditionRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MailboxRestoreArtifactsBulkAdditionRequest::class);
+            /** @var array<MailboxRestoreArtifactsBulkAdditionRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxRestoreArtifactsBulkAdditionRequests'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -74,6 +89,7 @@ class ExchangeRestoreSession extends RestoreSessionBase implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('granularMailboxRestoreArtifacts', $this->getGranularMailboxRestoreArtifacts());
         $writer->writeCollectionOfObjectValues('mailboxRestoreArtifacts', $this->getMailboxRestoreArtifacts());
+        $writer->writeCollectionOfObjectValues('mailboxRestoreArtifactsBulkAdditionRequests', $this->getMailboxRestoreArtifactsBulkAdditionRequests());
     }
 
     /**
@@ -90,6 +106,14 @@ class ExchangeRestoreSession extends RestoreSessionBase implements Parsable
     */
     public function setMailboxRestoreArtifacts(?array $value): void {
         $this->getBackingStore()->set('mailboxRestoreArtifacts', $value);
+    }
+
+    /**
+     * Sets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * @param array<MailboxRestoreArtifactsBulkAdditionRequest>|null $value Value to set for the mailboxRestoreArtifactsBulkAdditionRequests property.
+    */
+    public function setMailboxRestoreArtifactsBulkAdditionRequests(?array $value): void {
+        $this->getBackingStore()->set('mailboxRestoreArtifactsBulkAdditionRequests', $value);
     }
 
 }
