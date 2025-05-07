@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthenticatorMe
 use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\PasswordMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\PhoneMethodsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\PlatformCredentialMethods\PlatformCredentialMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\SoftwareOathMethods\SoftwareOathMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\TemporaryAccessPassMethods\TemporaryAccessPassMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
@@ -73,6 +74,13 @@ class AuthenticationRequestBuilder extends BaseRequestBuilder
     */
     public function phoneMethods(): PhoneMethodsRequestBuilder {
         return new PhoneMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the platformCredentialMethods property of the microsoft.graph.authentication entity.
+    */
+    public function platformCredentialMethods(): PlatformCredentialMethodsRequestBuilder {
+        return new PlatformCredentialMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

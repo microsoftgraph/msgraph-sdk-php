@@ -104,6 +104,20 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
+     * Gets the cancelledOccurrences property value. The cancelledOccurrences property
+     * @return array<string>|null
+    */
+    public function getCancelledOccurrences(): ?array {
+        $val = $this->getBackingStore()->get('cancelledOccurrences');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cancelledOccurrences'");
+    }
+
+    /**
      * Gets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @return DateTimeTimeZone|null
     */
@@ -113,6 +127,20 @@ class Event extends OutlookItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'end'");
+    }
+
+    /**
+     * Gets the exceptionOccurrences property value. The exceptionOccurrences property
+     * @return array<Event>|null
+    */
+    public function getExceptionOccurrences(): ?array {
+        $val = $this->getBackingStore()->get('exceptionOccurrences');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Event::class);
+            /** @var array<Event>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exceptionOccurrences'");
     }
 
     /**
@@ -142,7 +170,16 @@ class Event extends OutlookItem implements Parsable
             'body' => fn(ParseNode $n) => $o->setBody($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'bodyPreview' => fn(ParseNode $n) => $o->setBodyPreview($n->getStringValue()),
             'calendar' => fn(ParseNode $n) => $o->setCalendar($n->getObjectValue([Calendar::class, 'createFromDiscriminatorValue'])),
+            'cancelledOccurrences' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCancelledOccurrences($val);
+            },
             'end' => fn(ParseNode $n) => $o->setEnd($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'exceptionOccurrences' => fn(ParseNode $n) => $o->setExceptionOccurrences($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
             'hideAttendees' => fn(ParseNode $n) => $o->setHideAttendees($n->getBooleanValue()),
@@ -609,7 +646,9 @@ class Event extends OutlookItem implements Parsable
         $writer->writeObjectValue('body', $this->getBody());
         $writer->writeStringValue('bodyPreview', $this->getBodyPreview());
         $writer->writeObjectValue('calendar', $this->getCalendar());
+        $writer->writeCollectionOfPrimitiveValues('cancelledOccurrences', $this->getCancelledOccurrences());
         $writer->writeObjectValue('end', $this->getEnd());
+        $writer->writeCollectionOfObjectValues('exceptionOccurrences', $this->getExceptionOccurrences());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeBooleanValue('hasAttachments', $this->getHasAttachments());
         $writer->writeBooleanValue('hideAttendees', $this->getHideAttendees());
@@ -696,11 +735,27 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
+     * Sets the cancelledOccurrences property value. The cancelledOccurrences property
+     * @param array<string>|null $value Value to set for the cancelledOccurrences property.
+    */
+    public function setCancelledOccurrences(?array $value): void {
+        $this->getBackingStore()->set('cancelledOccurrences', $value);
+    }
+
+    /**
      * Sets the end property value. The date, time, and time zone that the event ends. By default, the end time is in UTC.
      * @param DateTimeTimeZone|null $value Value to set for the end property.
     */
     public function setEnd(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('end', $value);
+    }
+
+    /**
+     * Sets the exceptionOccurrences property value. The exceptionOccurrences property
+     * @param array<Event>|null $value Value to set for the exceptionOccurrences property.
+    */
+    public function setExceptionOccurrences(?array $value): void {
+        $this->getBackingStore()->set('exceptionOccurrences', $value);
     }
 
     /**

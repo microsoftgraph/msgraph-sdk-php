@@ -3,10 +3,7 @@
 namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet;
 
 use Microsoft\Graph\Generated\Models\Security\AdditionalDataOptions;
-use Microsoft\Graph\Generated\Models\Security\CloudAttachmentVersion;
-use Microsoft\Graph\Generated\Models\Security\DocumentVersion;
 use Microsoft\Graph\Generated\Models\Security\EdiscoverySearch;
-use Microsoft\Graph\Generated\Models\Security\ItemsToInclude;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -73,30 +70,6 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
-     * @return CloudAttachmentVersion|null
-    */
-    public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
-        $val = $this->getBackingStore()->get('cloudAttachmentVersion');
-        if (is_null($val) || $val instanceof CloudAttachmentVersion) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAttachmentVersion'");
-    }
-
-    /**
-     * Gets the documentVersion property value. The documentVersion property
-     * @return DocumentVersion|null
-    */
-    public function getDocumentVersion(): ?DocumentVersion {
-        $val = $this->getBackingStore()->get('documentVersion');
-        if (is_null($val) || $val instanceof DocumentVersion) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentVersion'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -104,23 +77,8 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
         $o = $this;
         return  [
             'additionalDataOptions' => fn(ParseNode $n) => $o->setAdditionalDataOptions($n->getEnumValue(AdditionalDataOptions::class)),
-            'cloudAttachmentVersion' => fn(ParseNode $n) => $o->setCloudAttachmentVersion($n->getEnumValue(CloudAttachmentVersion::class)),
-            'documentVersion' => fn(ParseNode $n) => $o->setDocumentVersion($n->getEnumValue(DocumentVersion::class)),
-            'itemsToInclude' => fn(ParseNode $n) => $o->setItemsToInclude($n->getEnumValue(ItemsToInclude::class)),
             'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
         ];
-    }
-
-    /**
-     * Gets the itemsToInclude property value. The itemsToInclude property
-     * @return ItemsToInclude|null
-    */
-    public function getItemsToInclude(): ?ItemsToInclude {
-        $val = $this->getBackingStore()->get('itemsToInclude');
-        if (is_null($val) || $val instanceof ItemsToInclude) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemsToInclude'");
     }
 
     /**
@@ -141,9 +99,6 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeEnumValue('additionalDataOptions', $this->getAdditionalDataOptions());
-        $writer->writeEnumValue('cloudAttachmentVersion', $this->getCloudAttachmentVersion());
-        $writer->writeEnumValue('documentVersion', $this->getDocumentVersion());
-        $writer->writeEnumValue('itemsToInclude', $this->getItemsToInclude());
         $writer->writeObjectValue('search', $this->getSearch());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -170,30 +125,6 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
-    }
-
-    /**
-     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
-     * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
-    */
-    public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
-        $this->getBackingStore()->set('cloudAttachmentVersion', $value);
-    }
-
-    /**
-     * Sets the documentVersion property value. The documentVersion property
-     * @param DocumentVersion|null $value Value to set for the documentVersion property.
-    */
-    public function setDocumentVersion(?DocumentVersion $value): void {
-        $this->getBackingStore()->set('documentVersion', $value);
-    }
-
-    /**
-     * Sets the itemsToInclude property value. The itemsToInclude property
-     * @param ItemsToInclude|null $value Value to set for the itemsToInclude property.
-    */
-    public function setItemsToInclude(?ItemsToInclude $value): void {
-        $this->getBackingStore()->set('itemsToInclude', $value);
     }
 
     /**

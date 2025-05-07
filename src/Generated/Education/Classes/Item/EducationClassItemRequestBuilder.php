@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Assign
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentDefaults\AssignmentDefaultsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings\AssignmentSettingsRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions\GetRecentlyModifiedSubmissionsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Modules\ModulesRequestBuilder;
@@ -51,6 +52,13 @@ class EducationClassItemRequestBuilder extends BaseRequestBuilder
     */
     public function assignmentSettings(): AssignmentSettingsRequestBuilder {
         return new AssignmentSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getRecentlyModifiedSubmissions method.
+    */
+    public function getRecentlyModifiedSubmissions(): GetRecentlyModifiedSubmissionsRequestBuilder {
+        return new GetRecentlyModifiedSubmissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

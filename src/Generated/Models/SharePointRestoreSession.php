@@ -34,6 +34,7 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'siteRestoreArtifacts' => fn(ParseNode $n) => $o->setSiteRestoreArtifacts($n->getCollectionOfObjectValues([SiteRestoreArtifact::class, 'createFromDiscriminatorValue'])),
+            'siteRestoreArtifactsBulkAdditionRequests' => fn(ParseNode $n) => $o->setSiteRestoreArtifactsBulkAdditionRequests($n->getCollectionOfObjectValues([SiteRestoreArtifactsBulkAdditionRequest::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -52,12 +53,27 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
+     * Gets the siteRestoreArtifactsBulkAdditionRequests property value. The siteRestoreArtifactsBulkAdditionRequests property
+     * @return array<SiteRestoreArtifactsBulkAdditionRequest>|null
+    */
+    public function getSiteRestoreArtifactsBulkAdditionRequests(): ?array {
+        $val = $this->getBackingStore()->get('siteRestoreArtifactsBulkAdditionRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SiteRestoreArtifactsBulkAdditionRequest::class);
+            /** @var array<SiteRestoreArtifactsBulkAdditionRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteRestoreArtifactsBulkAdditionRequests'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('siteRestoreArtifacts', $this->getSiteRestoreArtifacts());
+        $writer->writeCollectionOfObjectValues('siteRestoreArtifactsBulkAdditionRequests', $this->getSiteRestoreArtifactsBulkAdditionRequests());
     }
 
     /**
@@ -66,6 +82,14 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     */
     public function setSiteRestoreArtifacts(?array $value): void {
         $this->getBackingStore()->set('siteRestoreArtifacts', $value);
+    }
+
+    /**
+     * Sets the siteRestoreArtifactsBulkAdditionRequests property value. The siteRestoreArtifactsBulkAdditionRequests property
+     * @param array<SiteRestoreArtifactsBulkAdditionRequest>|null $value Value to set for the siteRestoreArtifactsBulkAdditionRequests property.
+    */
+    public function setSiteRestoreArtifactsBulkAdditionRequests(?array $value): void {
+        $this->getBackingStore()->set('siteRestoreArtifactsBulkAdditionRequests', $value);
     }
 
 }

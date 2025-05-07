@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Groups\Item\Events\Item\Calendar\CalendarRequestBu
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Decline\DeclineRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\DismissReminder\DismissReminderRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Events\Item\ExceptionOccurrences\ExceptionOccurrencesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\Item\Instances\InstancesRequestBuilder;
@@ -68,6 +69,13 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     */
     public function dismissReminder(): DismissReminderRequestBuilder {
         return new DismissReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the exceptionOccurrences property of the microsoft.graph.event entity.
+    */
+    public function exceptionOccurrences(): ExceptionOccurrencesRequestBuilder {
+        return new ExceptionOccurrencesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

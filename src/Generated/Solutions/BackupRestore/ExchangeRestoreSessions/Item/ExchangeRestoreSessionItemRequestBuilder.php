@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ExchangeRestoreSession;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\GranularMailboxRestoreArtifacts\GranularMailboxRestoreArtifactsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifacts\MailboxRestoreArtifactsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests\MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,6 +31,13 @@ class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     */
     public function mailboxRestoreArtifacts(): MailboxRestoreArtifactsRequestBuilder {
         return new MailboxRestoreArtifactsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the mailboxRestoreArtifactsBulkAdditionRequests property of the microsoft.graph.exchangeRestoreSession entity.
+    */
+    public function mailboxRestoreArtifactsBulkAdditionRequests(): MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder {
+        return new MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

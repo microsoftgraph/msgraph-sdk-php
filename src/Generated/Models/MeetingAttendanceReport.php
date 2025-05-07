@@ -41,6 +41,20 @@ class MeetingAttendanceReport extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalEventInformation property value. The externalEventInformation property
+     * @return array<VirtualEventExternalInformation>|null
+    */
+    public function getExternalEventInformation(): ?array {
+        $val = $this->getBackingStore()->get('externalEventInformation');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventExternalInformation::class);
+            /** @var array<VirtualEventExternalInformation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalEventInformation'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -48,6 +62,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'attendanceRecords' => fn(ParseNode $n) => $o->setAttendanceRecords($n->getCollectionOfObjectValues([AttendanceRecord::class, 'createFromDiscriminatorValue'])),
+            'externalEventInformation' => fn(ParseNode $n) => $o->setExternalEventInformation($n->getCollectionOfObjectValues([VirtualEventExternalInformation::class, 'createFromDiscriminatorValue'])),
             'meetingEndDateTime' => fn(ParseNode $n) => $o->setMeetingEndDateTime($n->getDateTimeValue()),
             'meetingStartDateTime' => fn(ParseNode $n) => $o->setMeetingStartDateTime($n->getDateTimeValue()),
             'totalParticipantCount' => fn(ParseNode $n) => $o->setTotalParticipantCount($n->getIntegerValue()),
@@ -97,6 +112,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('attendanceRecords', $this->getAttendanceRecords());
+        $writer->writeCollectionOfObjectValues('externalEventInformation', $this->getExternalEventInformation());
         $writer->writeDateTimeValue('meetingEndDateTime', $this->getMeetingEndDateTime());
         $writer->writeDateTimeValue('meetingStartDateTime', $this->getMeetingStartDateTime());
         $writer->writeIntegerValue('totalParticipantCount', $this->getTotalParticipantCount());
@@ -108,6 +124,14 @@ class MeetingAttendanceReport extends Entity implements Parsable
     */
     public function setAttendanceRecords(?array $value): void {
         $this->getBackingStore()->set('attendanceRecords', $value);
+    }
+
+    /**
+     * Sets the externalEventInformation property value. The externalEventInformation property
+     * @param array<VirtualEventExternalInformation>|null $value Value to set for the externalEventInformation property.
+    */
+    public function setExternalEventInformation(?array $value): void {
+        $this->getBackingStore()->set('externalEventInformation', $value);
     }
 
     /**
