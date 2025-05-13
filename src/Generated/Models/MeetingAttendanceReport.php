@@ -41,7 +41,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalEventInformation property value. The externalEventInformation property
+     * Gets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers. Read-only.
      * @return array<VirtualEventExternalInformation>|null
     */
     public function getExternalEventInformation(): ?array {
@@ -127,7 +127,7 @@ class MeetingAttendanceReport extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalEventInformation property value. The externalEventInformation property
+     * Sets the externalEventInformation property value. The external information of a virtual event. Returned only for event organizers or coorganizers. Read-only.
      * @param array<VirtualEventExternalInformation>|null $value Value to set for the externalEventInformation property.
     */
     public function setExternalEventInformation(?array $value): void {

@@ -36,7 +36,7 @@ class CopilotAdmin extends Entity implements Parsable
     }
 
     /**
-     * Gets the settings property value. The settings property
+     * Gets the settings property value. Set of Microsoft 365 Copilot settings that can be added or modified. Read-only. Nullable.
      * @return CopilotAdminSetting|null
     */
     public function getSettings(): ?CopilotAdminSetting {
@@ -57,7 +57,7 @@ class CopilotAdmin extends Entity implements Parsable
     }
 
     /**
-     * Sets the settings property value. The settings property
+     * Sets the settings property value. Set of Microsoft 365 Copilot settings that can be added or modified. Read-only. Nullable.
      * @param CopilotAdminSetting|null $value Value to set for the settings property.
     */
     public function setSettings(?CopilotAdminSetting $value): void {

@@ -67,12 +67,12 @@ class RoleDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceAndAppManagementRoleDefinition object.
+     * Create a new roleDefinition object.
      * @param RoleDefinition $body The request body
      * @param RoleDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleDefinition|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-create?view=graph-rest-1.0 Find more info here
     */
     public function post(RoleDefinition $body, ?RoleDefinitionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -104,7 +104,7 @@ class RoleDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceAndAppManagementRoleDefinition object.
+     * Create a new roleDefinition object.
      * @param RoleDefinition $body The request body
      * @param RoleDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

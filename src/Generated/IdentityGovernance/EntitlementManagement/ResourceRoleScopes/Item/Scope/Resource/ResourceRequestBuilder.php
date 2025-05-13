@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Res
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Scope\Resource\Environment\EnvironmentRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Scope\Resource\Refresh\RefreshRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Scope\Resource\Roles\RolesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Scope\Resource\Scopes\ScopesRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageResource;
@@ -24,6 +25,13 @@ class ResourceRequestBuilder extends BaseRequestBuilder
     */
     public function environment(): EnvironmentRequestBuilder {
         return new EnvironmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the refresh method.
+    */
+    public function refresh(): RefreshRequestBuilder {
+        return new RefreshRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
