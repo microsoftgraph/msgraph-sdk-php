@@ -52,7 +52,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * Gets the externalRegistrationInformation property value. The external information for a virtualEventRegistration.
      * @return VirtualEventExternalRegistrationInformation|null
     */
     public function getExternalRegistrationInformation(): ?VirtualEventExternalRegistrationInformation {
@@ -81,7 +81,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the identity property value. Identity of the user associated with this attendance record.
+     * Gets the identity property value. The identity of the user associated with this attendance record. The specific type is one of the following derived types of identity, depending on the user type: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @return Identity|null
     */
     public function getIdentity(): ?Identity {
@@ -93,7 +93,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the registrationId property value. The registrationId property
+     * Gets the registrationId property value. Unique identifier of a virtualEventRegistration that is available to all participants registered for the virtualEventWebinar.
      * @return string|null
     */
     public function getRegistrationId(): ?string {
@@ -160,7 +160,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * Sets the externalRegistrationInformation property value. The external information for a virtualEventRegistration.
      * @param VirtualEventExternalRegistrationInformation|null $value Value to set for the externalRegistrationInformation property.
     */
     public function setExternalRegistrationInformation(?VirtualEventExternalRegistrationInformation $value): void {
@@ -168,7 +168,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the identity property value. Identity of the user associated with this attendance record.
+     * Sets the identity property value. The identity of the user associated with this attendance record. The specific type is one of the following derived types of identity, depending on the user type: communicationsUserIdentity, azureCommunicationServicesUserIdentity.
      * @param Identity|null $value Value to set for the identity property.
     */
     public function setIdentity(?Identity $value): void {
@@ -176,7 +176,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the registrationId property value. The registrationId property
+     * Sets the registrationId property value. Unique identifier of a virtualEventRegistration that is available to all participants registered for the virtualEventWebinar.
      * @param string|null $value Value to set for the registrationId property.
     */
     public function setRegistrationId(?string $value): void {
