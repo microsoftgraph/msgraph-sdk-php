@@ -123,6 +123,7 @@ class Directory extends Entity implements Parsable
             'deviceLocalCredentials' => fn(ParseNode $n) => $o->setDeviceLocalCredentials($n->getCollectionOfObjectValues([DeviceLocalCredentialInfo::class, 'createFromDiscriminatorValue'])),
             'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
+            'publicKeyInfrastructure' => fn(ParseNode $n) => $o->setPublicKeyInfrastructure($n->getObjectValue([PublicKeyInfrastructureRoot::class, 'createFromDiscriminatorValue'])),
             'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([CompanySubscription::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -139,6 +140,18 @@ class Directory extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesSynchronization'");
+    }
+
+    /**
+     * Gets the publicKeyInfrastructure property value. The publicKeyInfrastructure property
+     * @return PublicKeyInfrastructureRoot|null
+    */
+    public function getPublicKeyInfrastructure(): ?PublicKeyInfrastructureRoot {
+        $val = $this->getBackingStore()->get('publicKeyInfrastructure');
+        if (is_null($val) || $val instanceof PublicKeyInfrastructureRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publicKeyInfrastructure'");
     }
 
     /**
@@ -168,6 +181,7 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('deviceLocalCredentials', $this->getDeviceLocalCredentials());
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
+        $writer->writeObjectValue('publicKeyInfrastructure', $this->getPublicKeyInfrastructure());
         $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());
     }
 
@@ -225,6 +239,14 @@ class Directory extends Entity implements Parsable
     */
     public function setOnPremisesSynchronization(?array $value): void {
         $this->getBackingStore()->set('onPremisesSynchronization', $value);
+    }
+
+    /**
+     * Sets the publicKeyInfrastructure property value. The publicKeyInfrastructure property
+     * @param PublicKeyInfrastructureRoot|null $value Value to set for the publicKeyInfrastructure property.
+    */
+    public function setPublicKeyInfrastructure(?PublicKeyInfrastructureRoot $value): void {
+        $this->getBackingStore()->set('publicKeyInfrastructure', $value);
     }
 
     /**

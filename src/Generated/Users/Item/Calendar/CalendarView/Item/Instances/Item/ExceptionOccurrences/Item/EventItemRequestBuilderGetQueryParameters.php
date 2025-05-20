@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\Item\Instan
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get exceptionOccurrences from users
+ * Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don't include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
 */
 class EventItemRequestBuilderGetQueryParameters 
 {

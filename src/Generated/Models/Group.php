@@ -85,7 +85,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
+     * Gets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq). Read-only.
      * @return array<AssignedLicense>|null
     */
     public function getAssignedLicenses(): ?array {
@@ -1099,7 +1099,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq).Read-only.
+     * Sets the assignedLicenses property value. The licenses that are assigned to the group. Returned only on $select. Supports $filter (eq). Read-only.
      * @param array<AssignedLicense>|null $value Value to set for the assignedLicenses property.
     */
     public function setAssignedLicenses(?array $value): void {

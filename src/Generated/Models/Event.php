@@ -104,7 +104,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the cancelledOccurrences property value. The cancelledOccurrences property
+     * Gets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called canceled occurences.Returned only on $select in a Get operation which specifies the ID (seriesMasterId property value) of a series master event.
      * @return array<string>|null
     */
     public function getCancelledOccurrences(): ?array {
@@ -130,7 +130,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the exceptionOccurrences property value. The exceptionOccurrences property
+     * Gets the exceptionOccurrences property value. Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don't include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @return array<Event>|null
     */
     public function getExceptionOccurrences(): ?array {
@@ -267,7 +267,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
+     * Gets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences canceled from the series. Navigation property. Read-only. Nullable.
      * @return array<Event>|null
     */
     public function getInstances(): ?array {
@@ -735,7 +735,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the cancelledOccurrences property value. The cancelledOccurrences property
+     * Sets the cancelledOccurrences property value. Contains occurrenceId property values of canceled instances in a recurring series, if the event is the series master. Instances in a recurring series that are canceled are called canceled occurences.Returned only on $select in a Get operation which specifies the ID (seriesMasterId property value) of a series master event.
      * @param array<string>|null $value Value to set for the cancelledOccurrences property.
     */
     public function setCancelledOccurrences(?array $value): void {
@@ -751,7 +751,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the exceptionOccurrences property value. The exceptionOccurrences property
+     * Sets the exceptionOccurrences property value. Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don't include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @param array<Event>|null $value Value to set for the exceptionOccurrences property.
     */
     public function setExceptionOccurrences(?array $value): void {
@@ -799,7 +799,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences cancelled from the series. Navigation property. Read-only. Nullable.
+     * Sets the instances property value. The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions modified, but doesn't include occurrences canceled from the series. Navigation property. Read-only. Nullable.
      * @param array<Event>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value): void {

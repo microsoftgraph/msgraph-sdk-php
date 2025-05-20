@@ -125,7 +125,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the justification property value. The justification property
+     * Gets the justification property value. The requestor's supplied justification.
      * @return string|null
     */
     public function getJustification(): ?string {
@@ -265,7 +265,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the justification property value. The justification property
+     * Sets the justification property value. The requestor's supplied justification.
      * @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value): void {
