@@ -59,7 +59,7 @@ class ExceptionOccurrencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get exceptionOccurrences from users
+     * Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don't include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @param ExceptionOccurrencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EventCollectionResponse|null>
      * @throws Exception
@@ -73,7 +73,7 @@ class ExceptionOccurrencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get exceptionOccurrences from users
+     * Contains the id property values of the event instances that are exceptions in a recurring series.Exceptions can differ from other occurrences in a recurring series, such as the subject, start or end times, or attendees. Exceptions don't include canceled occurrences.Returned only on $select and $expand in a GET operation that specifies the ID (seriesMasterId property value) of a series master event.
      * @param ExceptionOccurrencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -195,6 +195,9 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.agreementFileLocalization': return new AgreementFileLocalization();
                 case '#microsoft.graph.agreementFileProperties': return new AgreementFileProperties();
                 case '#microsoft.graph.agreementFileVersion': return new AgreementFileVersion();
+                case '#microsoft.graph.aiInteraction': return new AiInteraction();
+                case '#microsoft.graph.aiInteractionHistory': return new AiInteractionHistory();
+                case '#microsoft.graph.aiUser': return new AiUser();
                 case '#microsoft.graph.alert': return new Alert();
                 case '#microsoft.graph.allowedValue': return new AllowedValue();
                 case '#microsoft.graph.androidCompliancePolicy': return new AndroidCompliancePolicy();
@@ -287,7 +290,9 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.callTranscript': return new CallTranscript();
                 case '#microsoft.graph.cancelMediaProcessingOperation': return new CancelMediaProcessingOperation();
                 case '#microsoft.graph.canvasLayout': return new CanvasLayout();
+                case '#microsoft.graph.certificateAuthorityDetail': return new CertificateAuthorityDetail();
                 case '#microsoft.graph.certificateBasedAuthConfiguration': return new CertificateBasedAuthConfiguration();
+                case '#microsoft.graph.certificateBasedAuthPki': return new CertificateBasedAuthPki();
                 case '#microsoft.graph.changeTrackedEntity': return new ChangeTrackedEntity();
                 case '#microsoft.graph.channel': return new Channel();
                 case '#microsoft.graph.chat': return new Chat();
@@ -746,6 +751,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.protectionUnitBase': return new ProtectionUnitBase();
                 case '#microsoft.graph.protectionUnitsBulkJobBase': return new ProtectionUnitsBulkJobBase();
                 case '#microsoft.graph.provisioningObjectSummary': return new ProvisioningObjectSummary();
+                case '#microsoft.graph.publicKeyInfrastructureRoot': return new PublicKeyInfrastructureRoot();
                 case '#microsoft.graph.rbacApplication': return new RbacApplication();
                 case '#microsoft.graph.recordOperation': return new RecordOperation();
                 case '#microsoft.graph.recycleBin': return new RecycleBin();

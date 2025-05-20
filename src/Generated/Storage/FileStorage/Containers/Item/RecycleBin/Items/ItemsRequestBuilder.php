@@ -52,10 +52,11 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of the recycleBinItems deleted by a user.
+     * Get a collection of recycleBinItem resources in the recycleBin of the specified SharePoint Embedded fileStorageContainer.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RecycleBinItemCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/recyclebin-list-items?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of the recycleBinItems deleted by a user.
+     * Get a collection of recycleBinItem resources in the recycleBin of the specified SharePoint Embedded fileStorageContainer.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

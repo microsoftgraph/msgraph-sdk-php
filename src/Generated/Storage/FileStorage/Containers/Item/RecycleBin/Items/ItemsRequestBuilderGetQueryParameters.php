@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\RecycleB
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List of the recycleBinItems deleted by a user.
+ * Get a collection of recycleBinItem resources in the recycleBin of the specified SharePoint Embedded fileStorageContainer.
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

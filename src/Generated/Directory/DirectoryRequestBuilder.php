@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeviceLocalCredentials\DeviceLocalCredentialsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\PublicKeyInfrastructure\PublicKeyInfrastructureRequestBuilder;
 use Microsoft\Graph\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
@@ -72,6 +73,13 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     */
     public function onPremisesSynchronization(): OnPremisesSynchronizationRequestBuilder {
         return new OnPremisesSynchronizationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the publicKeyInfrastructure property of the microsoft.graph.directory entity.
+    */
+    public function publicKeyInfrastructure(): PublicKeyInfrastructureRequestBuilder {
+        return new PublicKeyInfrastructureRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -63,7 +63,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Gets the complianceInformation property value. The collection of compliance information associated with secure score control. Not implemented. Currently returns null.
      * @return array<ComplianceInformation>|null
     */
     public function getComplianceInformation(): ?array {
@@ -348,7 +348,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control
+     * Sets the complianceInformation property value. The collection of compliance information associated with secure score control. Not implemented. Currently returns null.
      * @param array<ComplianceInformation>|null $value Value to set for the complianceInformation property.
     */
     public function setComplianceInformation(?array $value): void {

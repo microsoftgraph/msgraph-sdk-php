@@ -113,7 +113,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
     }
 
     /**
-     * Gets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * Gets the isRequestorJustificationRequired property value. Indicates whether requestors must justify requesting access to an access package.
      * @return bool|null
     */
     public function getIsRequestorJustificationRequired(): ?bool {
@@ -257,7 +257,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
     }
 
     /**
-     * Sets the isRequestorJustificationRequired property value. The isRequestorJustificationRequired property
+     * Sets the isRequestorJustificationRequired property value. Indicates whether requestors must justify requesting access to an access package.
      * @param bool|null $value Value to set for the isRequestorJustificationRequired property.
     */
     public function setIsRequestorJustificationRequired(?bool $value): void {

@@ -68,7 +68,7 @@ class AccessPackageNotificationSettings implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the isAssignmentNotificationDisabled property value. The isAssignmentNotificationDisabled property
+     * Gets the isAssignmentNotificationDisabled property value. Indicates if notification emails for an access package are disabled within an access package assignment policy.
      * @return bool|null
     */
     public function getIsAssignmentNotificationDisabled(): ?bool {
@@ -118,7 +118,7 @@ class AccessPackageNotificationSettings implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the isAssignmentNotificationDisabled property value. The isAssignmentNotificationDisabled property
+     * Sets the isAssignmentNotificationDisabled property value. Indicates if notification emails for an access package are disabled within an access package assignment policy.
      * @param bool|null $value Value to set for the isAssignmentNotificationDisabled property.
     */
     public function setIsAssignmentNotificationDisabled(?bool $value): void {
