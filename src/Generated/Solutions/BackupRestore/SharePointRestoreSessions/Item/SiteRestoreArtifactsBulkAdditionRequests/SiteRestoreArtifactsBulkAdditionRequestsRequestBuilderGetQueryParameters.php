@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointRestoreSes
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+ * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
 */
 class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderGetQueryParameters 
 {

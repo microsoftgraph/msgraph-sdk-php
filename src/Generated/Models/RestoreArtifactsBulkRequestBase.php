@@ -36,7 +36,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The identity of the person who created the bulk request.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -48,7 +48,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The time when the bulk request was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -60,7 +60,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the destinationType property value. The destinationType property
+     * Gets the destinationType property value. Indicates the restoration destination. The possible values are: new, inPlace, unknownFutureValue.
      * @return DestinationType|null
     */
     public function getDestinationType(): ?DestinationType {
@@ -72,7 +72,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the addition request.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -84,7 +84,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Error details are populated for resource resolution failures.
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -125,7 +125,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Identity of the person who last modified this entity.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -137,7 +137,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Timestamp when this entity was last modified.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -149,7 +149,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the protectionTimePeriod property value. The protectionTimePeriod property
+     * Gets the protectionTimePeriod property value. The start and end date and time of the protection period.
      * @return TimePeriod|null
     */
     public function getProtectionTimePeriod(): ?TimePeriod {
@@ -161,7 +161,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the protectionUnitIds property value. The protectionUnitIds property
+     * Gets the protectionUnitIds property value. Indicates which protection units to restore. This property isn't implemented yet. Future value; don't use.
      * @return array<string>|null
     */
     public function getProtectionUnitIds(): ?array {
@@ -175,7 +175,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the restorePointPreference property value. The restorePointPreference property
+     * Gets the restorePointPreference property value. Indicates which restore point to return. The possible values are: oldest, latest, unknownFutureValue.
      * @return RestorePointPreference|null
     */
     public function getRestorePointPreference(): ?RestorePointPreference {
@@ -199,7 +199,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. The type of the restore point. The possible values are: none, fastRestore, unknownFutureValue.
      * @return RestorePointTags|null
     */
     public function getTags(): ?RestorePointTags {
@@ -231,7 +231,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The identity of the person who created the bulk request.
      * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
@@ -239,7 +239,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The time when the bulk request was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -247,7 +247,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the destinationType property value. The destinationType property
+     * Sets the destinationType property value. Indicates the restoration destination. The possible values are: new, inPlace, unknownFutureValue.
      * @param DestinationType|null $value Value to set for the destinationType property.
     */
     public function setDestinationType(?DestinationType $value): void {
@@ -255,7 +255,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the addition request.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -263,7 +263,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Error details are populated for resource resolution failures.
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
@@ -271,7 +271,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the person who last modified this entity.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -279,7 +279,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Timestamp when this entity was last modified.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -287,7 +287,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the protectionTimePeriod property value. The protectionTimePeriod property
+     * Sets the protectionTimePeriod property value. The start and end date and time of the protection period.
      * @param TimePeriod|null $value Value to set for the protectionTimePeriod property.
     */
     public function setProtectionTimePeriod(?TimePeriod $value): void {
@@ -295,7 +295,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the protectionUnitIds property value. The protectionUnitIds property
+     * Sets the protectionUnitIds property value. Indicates which protection units to restore. This property isn't implemented yet. Future value; don't use.
      * @param array<string>|null $value Value to set for the protectionUnitIds property.
     */
     public function setProtectionUnitIds(?array $value): void {
@@ -303,7 +303,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the restorePointPreference property value. The restorePointPreference property
+     * Sets the restorePointPreference property value. Indicates which restore point to return. The possible values are: oldest, latest, unknownFutureValue.
      * @param RestorePointPreference|null $value Value to set for the restorePointPreference property.
     */
     public function setRestorePointPreference(?RestorePointPreference $value): void {
@@ -319,7 +319,7 @@ class RestoreArtifactsBulkRequestBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. The type of the restore point. The possible values are: none, fastRestore, unknownFutureValue.
      * @param RestorePointTags|null $value Value to set for the tags property.
     */
     public function setTags(?RestorePointTags $value): void {

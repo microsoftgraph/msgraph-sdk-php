@@ -31,10 +31,11 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
     }
 
     /**
-     * Delete navigation property driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
      * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
     }
 
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
     }
 
     /**
-     * Delete navigation property driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
      * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +93,7 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
     }
 
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
      * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

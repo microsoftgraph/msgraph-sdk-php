@@ -52,10 +52,11 @@ class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequ
     }
 
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      * @param MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/exchangerestoresession-list-mailboxrestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequ
     }
 
     /**
-     * Create new navigation property to mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param MailboxRestoreArtifactsBulkAdditionRequest $body The request body
      * @param MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/exchangerestoresession-post-mailboxrestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
     public function post(MailboxRestoreArtifactsBulkAdditionRequest $body, ?MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequ
     }
 
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the maiboxRestoreArtifactsBulkAdditionRequest objects associated with an exchangeRestoreSession. The mailboxes property is deliberately omitted from the response body in order to limit the response size.
      * @param MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequ
     }
 
     /**
-     * Create new navigation property to mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param MailboxRestoreArtifactsBulkAdditionRequest $body The request body
      * @param MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

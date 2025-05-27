@@ -53,7 +53,7 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
-     * Gets the siteRestoreArtifactsBulkAdditionRequests property value. The siteRestoreArtifactsBulkAdditionRequests property
+     * Gets the siteRestoreArtifactsBulkAdditionRequests property value. A collection of SharePoint site URLs and destination details that can be used to restore SharePoint sites.
      * @return array<SiteRestoreArtifactsBulkAdditionRequest>|null
     */
     public function getSiteRestoreArtifactsBulkAdditionRequests(): ?array {
@@ -85,7 +85,7 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
-     * Sets the siteRestoreArtifactsBulkAdditionRequests property value. The siteRestoreArtifactsBulkAdditionRequests property
+     * Sets the siteRestoreArtifactsBulkAdditionRequests property value. A collection of SharePoint site URLs and destination details that can be used to restore SharePoint sites.
      * @param array<SiteRestoreArtifactsBulkAdditionRequest>|null $value Value to set for the siteRestoreArtifactsBulkAdditionRequests property.
     */
     public function setSiteRestoreArtifactsBulkAdditionRequests(?array $value): void {
