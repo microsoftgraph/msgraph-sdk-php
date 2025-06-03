@@ -68,7 +68,7 @@ class ExchangeRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
-     * Gets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * Gets the mailboxRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore Exchange mailboxes.
      * @return array<MailboxRestoreArtifactsBulkAdditionRequest>|null
     */
     public function getMailboxRestoreArtifactsBulkAdditionRequests(): ?array {
@@ -109,7 +109,7 @@ class ExchangeRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
-     * Sets the mailboxRestoreArtifactsBulkAdditionRequests property value. The mailboxRestoreArtifactsBulkAdditionRequests property
+     * Sets the mailboxRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore Exchange mailboxes.
      * @param array<MailboxRestoreArtifactsBulkAdditionRequest>|null $value Value to set for the mailboxRestoreArtifactsBulkAdditionRequests property.
     */
     public function setMailboxRestoreArtifactsBulkAdditionRequests(?array $value): void {

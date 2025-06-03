@@ -36,7 +36,7 @@ class AiUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the interactionHistory property value. The interactionHistory property
+     * Gets the interactionHistory property value. The history of interactions between AI agents and users.
      * @return AiInteractionHistory|null
     */
     public function getInteractionHistory(): ?AiInteractionHistory {
@@ -57,7 +57,7 @@ class AiUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the interactionHistory property value. The interactionHistory property
+     * Sets the interactionHistory property value. The history of interactions between AI agents and users.
      * @param AiInteractionHistory|null $value Value to set for the interactionHistory property.
     */
     public function setInteractionHistory(?AiInteractionHistory $value): void {

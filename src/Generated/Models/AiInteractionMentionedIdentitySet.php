@@ -50,7 +50,7 @@ class AiInteractionMentionedIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Gets the tag property value. The tag property
+     * Gets the tag property value. The tag details.
      * @return TeamworkTagIdentity|null
     */
     public function getTag(): ?TeamworkTagIdentity {
@@ -80,7 +80,7 @@ class AiInteractionMentionedIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Sets the tag property value. The tag property
+     * Sets the tag property value. The tag details.
      * @param TeamworkTagIdentity|null $value Value to set for the tag property.
     */
     public function setTag(?TeamworkTagIdentity $value): void {

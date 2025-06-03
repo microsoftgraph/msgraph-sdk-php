@@ -65,6 +65,7 @@ class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
         return  [
             'isAtApprovedLocation' => fn(ParseNode $n) => $o->setIsAtApprovedLocation($n->getBooleanValue()),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
+            'onBehalfOfUserId' => fn(ParseNode $n) => $o->setOnBehalfOfUserId($n->getStringValue()),
         ];
     }
 
@@ -93,12 +94,25 @@ class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
+     * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
+     * @return string|null
+    */
+    public function getOnBehalfOfUserId(): ?string {
+        $val = $this->getBackingStore()->get('onBehalfOfUserId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onBehalfOfUserId'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isAtApprovedLocation', $this->getIsAtApprovedLocation());
         $writer->writeObjectValue('notes', $this->getNotes());
+        $writer->writeStringValue('onBehalfOfUserId', $this->getOnBehalfOfUserId());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -132,6 +146,14 @@ class ClockInPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setNotes(?ItemBody $value): void {
         $this->getBackingStore()->set('notes', $value);
+    }
+
+    /**
+     * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
+     * @param string|null $value Value to set for the onBehalfOfUserId property.
+    */
+    public function setOnBehalfOfUserId(?string $value): void {
+        $this->getBackingStore()->set('onBehalfOfUserId', $value);
     }
 
 }

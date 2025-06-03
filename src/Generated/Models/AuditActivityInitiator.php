@@ -48,7 +48,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
+     * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId and name.
      * @return AppIdentity|null
     */
     public function getApp(): ?AppIdentity {
@@ -93,7 +93,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like user ID and userPrincipalName.
      * @return UserIdentity|null
     */
     public function getUser(): ?UserIdentity {
@@ -124,7 +124,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
+     * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId and name.
      * @param AppIdentity|null $value Value to set for the app property.
     */
     public function setApp(?AppIdentity $value): void {
@@ -148,7 +148,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like user ID and userPrincipalName.
      * @param UserIdentity|null $value Value to set for the user property.
     */
     public function setUser(?UserIdentity $value): void {

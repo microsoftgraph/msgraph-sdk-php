@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointProtection
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get siteProtectionUnitsBulkAdditionJobs from solutions
+ * Get a siteProtectionUnitsBulkAdditionJob object by the ID associated with a sharePointProtectionPolicy.
 */
 class SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGetQueryParameters 
 {

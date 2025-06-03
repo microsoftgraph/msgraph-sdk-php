@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessP
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get driveProtectionUnitsBulkAdditionJobs from solutions
+ * Get a list of driveProtectionUnitsBulkAdditionJobs objects associated with a oneDriveForBusinessProtectionPolicy.
 */
 class DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetQueryParameters 
 {

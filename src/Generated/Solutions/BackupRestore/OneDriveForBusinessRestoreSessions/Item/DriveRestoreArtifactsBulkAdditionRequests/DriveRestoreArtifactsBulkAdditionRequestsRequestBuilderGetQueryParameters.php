@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessR
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+ * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
 */
 class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetQueryParameters 
 {
