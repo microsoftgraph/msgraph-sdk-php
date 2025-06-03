@@ -27,7 +27,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     }
 
     /**
-     * Gets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+     * Gets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @return array<DriveRestoreArtifact>|null
     */
     public function getDriveRestoreArtifacts(): ?array {
@@ -41,7 +41,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     }
 
     /**
-     * Gets the driveRestoreArtifactsBulkAdditionRequests property value. The driveRestoreArtifactsBulkAdditionRequests property
+     * Gets the driveRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore a OneDrive for work or school drive.
      * @return array<DriveRestoreArtifactsBulkAdditionRequest>|null
     */
     public function getDriveRestoreArtifactsBulkAdditionRequests(): ?array {
@@ -77,7 +77,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     }
 
     /**
-     * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+     * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @param array<DriveRestoreArtifact>|null $value Value to set for the driveRestoreArtifacts property.
     */
     public function setDriveRestoreArtifacts(?array $value): void {
@@ -85,7 +85,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     }
 
     /**
-     * Sets the driveRestoreArtifactsBulkAdditionRequests property value. The driveRestoreArtifactsBulkAdditionRequests property
+     * Sets the driveRestoreArtifactsBulkAdditionRequests property value. A collection of user mailboxes and destination details that can be used to restore a OneDrive for work or school drive.
      * @param array<DriveRestoreArtifactsBulkAdditionRequest>|null $value Value to set for the driveRestoreArtifactsBulkAdditionRequests property.
     */
     public function setDriveRestoreArtifactsBulkAdditionRequests(?array $value): void {

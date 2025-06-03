@@ -51,10 +51,11 @@ class MailboxProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      * @param MailboxProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxProtectionUnitsBulkAdditionJobCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxprotectionunitsbulkadditionjobs?view=graph-rest-1.0 Find more info here
     */
     public function get(?MailboxProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +66,7 @@ class MailboxProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailboxProtectionUnitsBulkAdditionJobs objects associated with an exchangeProtectionPolicy.
      * @param MailboxProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

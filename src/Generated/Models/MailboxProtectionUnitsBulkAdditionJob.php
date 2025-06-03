@@ -27,7 +27,7 @@ class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase i
     }
 
     /**
-     * Gets the directoryObjectIds property value. The directoryObjectIds property
+     * Gets the directoryObjectIds property value. The list of Exchange directoryObjectIds to add to the Exchange protection policy.
      * @return array<string>|null
     */
     public function getDirectoryObjectIds(): ?array {
@@ -67,7 +67,7 @@ class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase i
     }
 
     /**
-     * Gets the mailboxes property value. The mailboxes property
+     * Gets the mailboxes property value. The list of Exchange email addresses to add to the Exchange protection policy.
      * @return array<string>|null
     */
     public function getMailboxes(): ?array {
@@ -91,7 +91,7 @@ class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase i
     }
 
     /**
-     * Sets the directoryObjectIds property value. The directoryObjectIds property
+     * Sets the directoryObjectIds property value. The list of Exchange directoryObjectIds to add to the Exchange protection policy.
      * @param array<string>|null $value Value to set for the directoryObjectIds property.
     */
     public function setDirectoryObjectIds(?array $value): void {
@@ -99,7 +99,7 @@ class MailboxProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase i
     }
 
     /**
-     * Sets the mailboxes property value. The mailboxes property
+     * Sets the mailboxes property value. The list of Exchange email addresses to add to the Exchange protection policy.
      * @param array<string>|null $value Value to set for the mailboxes property.
     */
     public function setMailboxes(?array $value): void {

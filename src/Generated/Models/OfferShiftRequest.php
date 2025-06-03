@@ -48,7 +48,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Gets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the recipientActionDateTime property value. The date and time when the recipient approved or declined the request.
      * @return DateTime|null
     */
     public function getRecipientActionDateTime(): ?DateTime {
@@ -60,7 +60,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Gets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
+     * Gets the recipientActionMessage property value. The message sent by the recipient regarding the request.
      * @return string|null
     */
     public function getRecipientActionMessage(): ?string {
@@ -72,7 +72,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Gets the recipientUserId property value. User ID of the recipient of the offer shift request.
+     * Gets the recipientUserId property value. The recipient's user ID.
      * @return string|null
     */
     public function getRecipientUserId(): ?string {
@@ -84,7 +84,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Gets the senderShiftId property value. User ID of the sender of the offer shift request.
+     * Gets the senderShiftId property value. The sender's shift ID.
      * @return string|null
     */
     public function getSenderShiftId(): ?string {
@@ -107,7 +107,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Sets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the recipientActionDateTime property value. The date and time when the recipient approved or declined the request.
      * @param DateTime|null $value Value to set for the recipientActionDateTime property.
     */
     public function setRecipientActionDateTime(?DateTime $value): void {
@@ -115,7 +115,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
+     * Sets the recipientActionMessage property value. The message sent by the recipient regarding the request.
      * @param string|null $value Value to set for the recipientActionMessage property.
     */
     public function setRecipientActionMessage(?string $value): void {
@@ -123,7 +123,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
+     * Sets the recipientUserId property value. The recipient's user ID.
      * @param string|null $value Value to set for the recipientUserId property.
     */
     public function setRecipientUserId(?string $value): void {
@@ -131,7 +131,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
     }
 
     /**
-     * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
+     * Sets the senderShiftId property value. The sender's shift ID.
      * @param string|null $value Value to set for the senderShiftId property.
     */
     public function setSenderShiftId(?string $value): void {

@@ -26,7 +26,7 @@ class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBulkReq
     }
 
     /**
-     * Gets the directoryObjectIds property value. The directoryObjectIds property
+     * Gets the directoryObjectIds property value. The list of directory object IDs that are added to the corresponding Exchange restore session in a bulk operation.
      * @return array<string>|null
     */
     public function getDirectoryObjectIds(): ?array {
@@ -66,7 +66,7 @@ class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBulkReq
     }
 
     /**
-     * Gets the mailboxes property value. The mailboxes property
+     * Gets the mailboxes property value. The list of email addresses that are added to the corresponding Exchange restore session in a bulk operation.
      * @return array<string>|null
     */
     public function getMailboxes(): ?array {
@@ -90,7 +90,7 @@ class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBulkReq
     }
 
     /**
-     * Sets the directoryObjectIds property value. The directoryObjectIds property
+     * Sets the directoryObjectIds property value. The list of directory object IDs that are added to the corresponding Exchange restore session in a bulk operation.
      * @param array<string>|null $value Value to set for the directoryObjectIds property.
     */
     public function setDirectoryObjectIds(?array $value): void {
@@ -98,7 +98,7 @@ class MailboxRestoreArtifactsBulkAdditionRequest extends RestoreArtifactsBulkReq
     }
 
     /**
-     * Sets the mailboxes property value. The mailboxes property
+     * Sets the mailboxes property value. The list of email addresses that are added to the corresponding Exchange restore session in a bulk operation.
      * @param array<string>|null $value Value to set for the mailboxes property.
     */
     public function setMailboxes(?array $value): void {

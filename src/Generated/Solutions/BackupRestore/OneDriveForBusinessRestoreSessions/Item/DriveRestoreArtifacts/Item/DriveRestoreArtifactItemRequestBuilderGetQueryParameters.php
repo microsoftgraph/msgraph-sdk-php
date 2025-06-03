@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessR
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+ * A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
 */
 class DriveRestoreArtifactItemRequestBuilderGetQueryParameters 
 {

@@ -67,11 +67,12 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to timeOffRequests for teams
+     * Create instance of a timeoffrequest object.
      * @param TimeOffRequest $body The request body
      * @param TimeOffRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeOffRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/timeoffrequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(TimeOffRequest $body, ?TimeOffRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -103,7 +104,7 @@ class TimeOffRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to timeOffRequests for teams
+     * Create instance of a timeoffrequest object.
      * @param TimeOffRequest $body The request body
      * @param TimeOffRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

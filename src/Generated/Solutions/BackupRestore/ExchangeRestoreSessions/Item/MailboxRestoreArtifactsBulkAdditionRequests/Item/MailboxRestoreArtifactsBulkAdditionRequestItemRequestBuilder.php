@@ -31,10 +31,11 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
     }
 
     /**
-     * Delete navigation property mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
      * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
     }
 
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
     }
 
     /**
-     * Delete navigation property mailboxRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
      * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +93,7 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
     }
 
     /**
-     * Get mailboxRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
      * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
