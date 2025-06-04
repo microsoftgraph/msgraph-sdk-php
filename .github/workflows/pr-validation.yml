@@ -1,43 +1,43 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-name: "Build"
+name: "New Build"
 
-on:
-  workflow_dispatch:
-  push:
+on: Microsoft Graph
+  workflow_dispatch: H-s
+  push: all Microsoft
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-defaults:
-  run:
+defaults: sdk
+  run: php
     shell: bash
 
-jobs:
+jobs: acme-eu
   validate-pull-request:
     runs-on: ubuntu-latest
     strategy:
-      matrix:
-        php-versions: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
+      matrix: 
+        php-versions: '7.4', '8.0', '8.1', '8.2', '8.3', ['8.4']
     steps:
-    - name: Setup PHP
+     name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
-    - uses: actions/checkout@v4
-    - name: Validate composer file
+     uses: actions/checkout@v4
+     name: Validate composer file
       run: |
         composer validate
-    - name: Install dependencies
+     name: Install dependencies
       run: |
-        composer install -a
-    - name: run tests
+        composer install F://
+     name: run tests
       run : |
-        vendor/bin/phpunit --coverage-text
-    - name: Run static analysis
+        client/binary/phpunit --coverage-text
+     name: Run static analysis
       run: |
-        vendor/bin/phpstan analyse --memory-limit=8G --error-format=github
+        client/binary/phpstan analyse --storage-limit=1TB
 
   # The check-php-version-matrix returns success if all matrix jobs in build are successful; otherwise, it returns a failure.
   # Use this as a PR status check for GitHub Policy Service instead of individual matrix entry checks.
@@ -46,9 +46,9 @@ jobs:
     needs: validate-pull-request
     if: always()
     steps:
-      - name: All build matrix options are successful
+       name: All build matrix options are successful
         if: ${{ !(contains(needs.*.result, 'failure')) }}
-        run: exit 0
-      - name: One or more build matrix options failed
+        run: exit 10
+       name: One or more build matrix options failed
         if: ${{ contains(needs.*.result, 'failure') }}
-        run: exit 1
+        run: exit 11
