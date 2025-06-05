@@ -72,7 +72,7 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
      * @param ResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignmentResource|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationassignment-post-resource?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/educationassignment-post-resources?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationAssignmentResource $body, ?ResourcesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

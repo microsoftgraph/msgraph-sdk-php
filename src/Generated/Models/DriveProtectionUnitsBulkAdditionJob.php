@@ -27,7 +27,7 @@ class DriveProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase imp
     }
 
     /**
-     * Gets the directoryObjectIds property value. The directoryObjectIds property
+     * Gets the directoryObjectIds property value. The list of OneDrive directoryObjectIds to add to the OneDrive protection policy.
      * @return array<string>|null
     */
     public function getDirectoryObjectIds(): ?array {
@@ -41,7 +41,7 @@ class DriveProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase imp
     }
 
     /**
-     * Gets the drives property value. The drives property
+     * Gets the drives property value. The list of email addresses to add to the OneDrive protection policy.
      * @return array<string>|null
     */
     public function getDrives(): ?array {
@@ -91,7 +91,7 @@ class DriveProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase imp
     }
 
     /**
-     * Sets the directoryObjectIds property value. The directoryObjectIds property
+     * Sets the directoryObjectIds property value. The list of OneDrive directoryObjectIds to add to the OneDrive protection policy.
      * @param array<string>|null $value Value to set for the directoryObjectIds property.
     */
     public function setDirectoryObjectIds(?array $value): void {
@@ -99,7 +99,7 @@ class DriveProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase imp
     }
 
     /**
-     * Sets the drives property value. The drives property
+     * Sets the drives property value. The list of email addresses to add to the OneDrive protection policy.
      * @param array<string>|null $value Value to set for the drives property.
     */
     public function setDrives(?array $value): void {

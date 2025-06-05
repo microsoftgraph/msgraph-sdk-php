@@ -52,10 +52,11 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
     }
 
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequestCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-list-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
     }
 
     /**
-     * Create new navigation property to driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param DriveRestoreArtifactsBulkAdditionRequest $body The request body
      * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-post-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
     public function post(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
     }
 
     /**
-     * Get driveRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
      * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
     }
 
     /**
-     * Create new navigation property to driveRestoreArtifactsBulkAdditionRequests for solutions
+     * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param DriveRestoreArtifactsBulkAdditionRequest $body The request body
      * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

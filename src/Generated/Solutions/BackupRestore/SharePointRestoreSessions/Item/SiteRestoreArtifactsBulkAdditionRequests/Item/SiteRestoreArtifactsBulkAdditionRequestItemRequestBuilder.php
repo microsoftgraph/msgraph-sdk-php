@@ -31,10 +31,11 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete navigation property siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
      * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Delete navigation property siteRestoreArtifactsBulkAdditionRequests for solutions
+     * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
      * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +93,7 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
     }
 
     /**
-     * Get siteRestoreArtifactsBulkAdditionRequests from solutions
+     * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
      * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

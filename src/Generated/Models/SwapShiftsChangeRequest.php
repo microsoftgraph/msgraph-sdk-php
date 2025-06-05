@@ -37,7 +37,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
     }
 
     /**
-     * Gets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
+     * Gets the recipientShiftId property value. The recipient's Shift ID
      * @return string|null
     */
     public function getRecipientShiftId(): ?string {
@@ -58,7 +58,7 @@ class SwapShiftsChangeRequest extends OfferShiftRequest implements Parsable
     }
 
     /**
-     * Sets the recipientShiftId property value. ShiftId for the recipient user with whom the request is to swap.
+     * Sets the recipientShiftId property value. The recipient's Shift ID
      * @param string|null $value Value to set for the recipientShiftId property.
     */
     public function setRecipientShiftId(?string $value): void {

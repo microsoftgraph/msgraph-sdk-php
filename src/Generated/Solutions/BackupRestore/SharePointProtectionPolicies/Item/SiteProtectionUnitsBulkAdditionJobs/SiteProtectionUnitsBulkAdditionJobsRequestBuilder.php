@@ -51,10 +51,11 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Get siteProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of siteProtectionUnitsBulkAdditionJobs objects associated with a sharePointProtectionPolicy.
      * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitsBulkAdditionJobCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sharepointprotectionpolicy-list-siteprotectionunitsbulkadditionjobs?view=graph-rest-1.0 Find more info here
     */
     public function get(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -65,7 +66,7 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Get siteProtectionUnitsBulkAdditionJobs from solutions
+     * Get a list of siteProtectionUnitsBulkAdditionJobs objects associated with a sharePointProtectionPolicy.
      * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

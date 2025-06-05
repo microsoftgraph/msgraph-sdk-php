@@ -53,7 +53,7 @@ class SiteProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase impl
     }
 
     /**
-     * Gets the siteIds property value. The siteIds property
+     * Gets the siteIds property value. The list of SharePoint site IDs to add to the SharePoint protection policy.
      * @return array<string>|null
     */
     public function getSiteIds(): ?array {
@@ -67,7 +67,7 @@ class SiteProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase impl
     }
 
     /**
-     * Gets the siteWebUrls property value. The siteWebUrls property
+     * Gets the siteWebUrls property value. The list of SharePoint site URLs to add to the SharePoint protection policy.
      * @return array<string>|null
     */
     public function getSiteWebUrls(): ?array {
@@ -91,7 +91,7 @@ class SiteProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase impl
     }
 
     /**
-     * Sets the siteIds property value. The siteIds property
+     * Sets the siteIds property value. The list of SharePoint site IDs to add to the SharePoint protection policy.
      * @param array<string>|null $value Value to set for the siteIds property.
     */
     public function setSiteIds(?array $value): void {
@@ -99,7 +99,7 @@ class SiteProtectionUnitsBulkAdditionJob extends ProtectionUnitsBulkJobBase impl
     }
 
     /**
-     * Sets the siteWebUrls property value. The siteWebUrls property
+     * Sets the siteWebUrls property value. The list of SharePoint site URLs to add to the SharePoint protection policy.
      * @param array<string>|null $value Value to set for the siteWebUrls property.
     */
     public function setSiteWebUrls(?array $value): void {

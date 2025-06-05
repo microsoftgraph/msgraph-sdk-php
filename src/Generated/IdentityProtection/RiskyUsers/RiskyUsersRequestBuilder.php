@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmSafe\ConfirmSafeRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss\DismissRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
@@ -26,6 +27,13 @@ class RiskyUsersRequestBuilder extends BaseRequestBuilder
     */
     public function confirmCompromised(): ConfirmCompromisedRequestBuilder {
         return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the confirmSafe method.
+    */
+    public function confirmSafe(): ConfirmSafeRequestBuilder {
+        return new ConfirmSafeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

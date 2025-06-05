@@ -31,10 +31,11 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/driveprotectionunitsbulkadditionjobs-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Get driveProtectionUnitsBulkAdditionJobs from solutions
+     * Get a driveProtectionUnitsBulkAdditionJob object by the ID associated with a oneDriveForBusinessProtectionPolicy.
      * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

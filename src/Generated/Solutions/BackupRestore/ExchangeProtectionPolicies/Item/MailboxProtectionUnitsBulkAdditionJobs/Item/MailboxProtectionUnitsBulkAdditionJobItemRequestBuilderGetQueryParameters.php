@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeProtectionPo
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
+ * Get a mailboxProtectionUnitsBulkAdditionJob object by the ID associated with an exchangeProtectionPolicy.
 */
 class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetQueryParameters 
 {
