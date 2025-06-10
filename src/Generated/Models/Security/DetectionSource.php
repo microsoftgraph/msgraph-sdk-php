@@ -40,5 +40,6 @@ class DetectionSource extends Enum {
     public const MICROSOFT_DEFENDER_THREAT_INTELLIGENCE_ANALYTICS = "microsoftDefenderThreatIntelligenceAnalytics";
     public const BUILT_IN_ML = "builtInMl";
     public const MICROSOFT_INSIDER_RISK_MANAGEMENT = "microsoftInsiderRiskManagement";
+    public const MICROSOFT_THREAT_INTELLIGENCE = "microsoftThreatIntelligence";
     public const MICROSOFT_SENTINEL = "microsoftSentinel";
 }

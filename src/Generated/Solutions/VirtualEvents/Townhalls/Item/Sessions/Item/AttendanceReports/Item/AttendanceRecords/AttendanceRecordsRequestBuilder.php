@@ -52,10 +52,11 @@ class AttendanceRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @param AttendanceRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttendanceRecordCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/attendancerecord-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttendanceRecordsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class AttendanceRecordsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of attendance records of an attendance report. Read-only.
+     * Get a list of attendanceRecord objects and their properties.
      * @param AttendanceRecordsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
