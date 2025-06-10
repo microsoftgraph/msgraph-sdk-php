@@ -64,7 +64,7 @@ class GetEmailActivityUserDetailWithDateRequestBuilder extends BaseRequestBuilde
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
-        $requestInfo->tryAddHeader('Accept', "application/octet-stream");
+        $requestInfo->tryAddHeader('Accept', "application/octet-stream, application/json");
         return $requestInfo;
     }
 

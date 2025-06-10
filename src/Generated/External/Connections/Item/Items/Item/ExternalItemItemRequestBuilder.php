@@ -77,12 +77,12 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new externalItem object.
+     * Update the properties of an externalItem object.
      * @param ExternalItem $body The request body
      * @param ExternalItemItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalItem|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-put-items?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalitem-update?view=graph-rest-1.0 Find more info here
     */
     public function put(ExternalItem $body, ?ExternalItemItemRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
@@ -106,6 +106,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
@@ -131,7 +132,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new externalItem object.
+     * Update the properties of an externalItem object.
      * @param ExternalItem $body The request body
      * @param ExternalItemItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

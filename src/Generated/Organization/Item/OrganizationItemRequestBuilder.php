@@ -117,11 +117,11 @@ class OrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the organization object.
+     * Get the properties and relationships of the currently authenticated organization. Since the organization resource supports extensions, you can also use the GET operation to get custom properties and extension data in an organization instance.
      * @param OrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Organization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-organization-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/organization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OrganizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -161,11 +161,12 @@ class OrganizationItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read properties and relationships of the organization object.
+     * Get the properties and relationships of the currently authenticated organization. Since the organization resource supports extensions, you can also use the GET operation to get custom properties and extension data in an organization instance.
      * @param OrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
