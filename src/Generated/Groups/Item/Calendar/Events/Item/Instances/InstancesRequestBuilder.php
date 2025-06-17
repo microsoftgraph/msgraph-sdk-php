@@ -4,9 +4,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Instances;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Instances\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Instances\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Instances\Item\EventItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -20,30 +18,12 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class InstancesRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the delta method.
     */
     public function delta(): DeltaRequestBuilder {
         return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.event entity.
-     * @param string $eventId1 The unique identifier of event
-     * @return EventItemRequestBuilder
-    */
-    public function byEventId1(string $eventId1): EventItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['event%2Did1'] = $eventId1;
-        return new EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new InstancesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
