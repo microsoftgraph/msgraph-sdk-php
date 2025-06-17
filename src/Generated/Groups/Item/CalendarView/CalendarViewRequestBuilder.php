@@ -4,9 +4,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\CalendarView;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\CalendarView\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\CalendarView\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -20,30 +18,12 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class CalendarViewRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the delta method.
     */
     public function delta(): DeltaRequestBuilder {
         return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.group entity.
-     * @param string $eventId The unique identifier of event
-     * @return EventItemRequestBuilder
-    */
-    public function byEventId(string $eventId): EventItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['event%2Did'] = $eventId;
-        return new EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new CalendarViewRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

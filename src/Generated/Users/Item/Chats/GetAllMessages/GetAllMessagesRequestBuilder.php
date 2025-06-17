@@ -30,7 +30,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllMessagesGetResponse|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+     * Get all messages from all chats in which a user is a participant, including one-on-one chats, group chats, and meeting chats. To learn more about how to use the Microsoft Teams export APIs to export content, see Export content with the Microsoft Teams export APIs.
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

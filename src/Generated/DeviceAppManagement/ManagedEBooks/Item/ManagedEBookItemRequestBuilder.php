@@ -86,11 +86,11 @@ class ManagedEBookItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedEBook object.
+     * Read properties and relationships of the iosVppEBook object.
      * @param ManagedEBookItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBook|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-managedebook-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebook-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedEBookItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -130,11 +130,12 @@ class ManagedEBookItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addHeaders($requestConfiguration->headers);
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        $requestInfo->tryAddHeader('Accept', "application/json");
         return $requestInfo;
     }
 
     /**
-     * Read properties and relationships of the managedEBook object.
+     * Read properties and relationships of the iosVppEBook object.
      * @param ManagedEBookItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
