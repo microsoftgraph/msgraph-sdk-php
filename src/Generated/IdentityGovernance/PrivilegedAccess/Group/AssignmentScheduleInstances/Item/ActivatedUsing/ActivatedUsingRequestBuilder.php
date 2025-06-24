@@ -31,7 +31,7 @@ class ActivatedUsingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
+     * When the request activates a membership or ownership in PIM for Groups, this object represents the eligibility request for the group. Otherwise, it is null.
      * @param ActivatedUsingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleInstance|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class ActivatedUsingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
+     * When the request activates a membership or ownership in PIM for Groups, this object represents the eligibility request for the group. Otherwise, it is null.
      * @param ActivatedUsingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

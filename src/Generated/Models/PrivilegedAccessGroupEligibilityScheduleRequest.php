@@ -55,7 +55,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
+     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for Groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -67,7 +67,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Gets the groupId property value. The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
+     * Gets the groupId property value. The identifier of the group representing the scope of the membership and ownership eligibility through PIM for Groups. Required.
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -91,7 +91,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
+     * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for Groups. Required.
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -150,7 +150,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
+     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility request through PIM for Groups. Supports $expand and $select nested in $expand for select properties like id, displayName, and mail.
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
@@ -158,7 +158,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Sets the groupId property value. The identifier of the group representing the scope of the membership and ownership eligibility through PIM for groups. Required.
+     * Sets the groupId property value. The identifier of the group representing the scope of the membership and ownership eligibility through PIM for Groups. Required.
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -174,7 +174,7 @@ class PrivilegedAccessGroupEligibilityScheduleRequest extends PrivilegedAccessSc
     }
 
     /**
-     * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required.
+     * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for Groups. Required.
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {

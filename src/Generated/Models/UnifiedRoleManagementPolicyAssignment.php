@@ -64,7 +64,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * Gets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for Groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
@@ -76,7 +76,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
+     * Gets the scopeId property value. The identifier of the scope where the policy is assigned. Can be / for the tenant or a group ID. Required.
      * @return string|null
     */
     public function getScopeId(): ?string {
@@ -129,7 +129,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for groups membership and ownership, it's either member or owner. Supports $filter (eq).
+     * Sets the roleDefinitionId property value. For Microsoft Entra roles policy, it's the identifier of the role definition object where the policy applies. For PIM for Groups membership and ownership, it's either member or owner. Supports $filter (eq).
      * @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value): void {
@@ -137,7 +137,7 @@ class UnifiedRoleManagementPolicyAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the scopeId property value. The identifier of the scope where the policy is assigned.  Can be / for the tenant or a group ID. Required.
+     * Sets the scopeId property value. The identifier of the scope where the policy is assigned. Can be / for the tenant or a group ID. Required.
      * @param string|null $value Value to set for the scopeId property.
     */
     public function setScopeId(?string $value): void {

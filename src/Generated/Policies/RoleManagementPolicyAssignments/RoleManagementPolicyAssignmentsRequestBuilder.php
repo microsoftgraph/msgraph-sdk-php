@@ -52,7 +52,7 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for Groups.
      * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyAssignmentCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for groups.
+     * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for Groups.
      * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

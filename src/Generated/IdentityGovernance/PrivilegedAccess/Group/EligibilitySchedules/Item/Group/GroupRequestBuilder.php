@@ -39,7 +39,7 @@ class GroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @param GroupRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Group|null>
      * @throws Exception
@@ -53,7 +53,7 @@ class GroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @param GroupRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
