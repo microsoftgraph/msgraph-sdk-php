@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\As
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * In PIM for groups, retrieve the requests for membership or ownership assignments for the calling principal to groups that are governed by PIM.
+ * In PIM for Groups, retrieve the requests for membership or ownership assignments for the calling principal to groups that are governed by PIM.
 */
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {

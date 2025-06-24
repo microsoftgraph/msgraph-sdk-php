@@ -67,7 +67,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessS
     }
 
     /**
-     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * Gets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -79,7 +79,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessS
     }
 
     /**
-     * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
+     * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for Groups. Required. Supports $filter (eq).
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -115,7 +115,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessS
     }
 
     /**
-     * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required. Supports $filter (eq).
+     * Gets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for Groups. Required. Supports $filter (eq).
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -158,7 +158,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessS
     }
 
     /**
-     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
+     * Sets the group property value. References the group that is the scope of the membership or ownership eligibility through PIM for Groups. Supports $expand.
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {
@@ -166,7 +166,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessS
     }
 
     /**
-     * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for groups. Required. Supports $filter (eq).
+     * Sets the groupId property value. The identifier of the group representing the scope of the membership or ownership eligibility through PIM for Groups. Required. Supports $filter (eq).
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -190,7 +190,7 @@ class PrivilegedAccessGroupEligibilityScheduleInstance extends PrivilegedAccessS
     }
 
     /**
-     * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for groups. Required. Supports $filter (eq).
+     * Sets the principalId property value. The identifier of the principal whose membership or ownership eligibility to the group is managed through PIM for Groups. Required. Supports $filter (eq).
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
