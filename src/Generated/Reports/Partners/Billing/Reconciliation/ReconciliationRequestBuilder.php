@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Partners\Billing\BillingReconciliation;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\Billed\BilledRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\Unbilled\UnbilledRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -22,6 +23,13 @@ class ReconciliationRequestBuilder extends BaseRequestBuilder
     */
     public function billed(): BilledRequestBuilder {
         return new BilledRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the unbilled property of the microsoft.graph.partners.billing.billingReconciliation entity.
+    */
+    public function unbilled(): UnbilledRequestBuilder {
+        return new UnbilledRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

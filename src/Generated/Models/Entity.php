@@ -37,6 +37,7 @@ use Microsoft\Graph\Generated\Models\Partners\Billing\FailedOperation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\Manifest;
 use Microsoft\Graph\Generated\Models\Partners\Billing\Operation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\RunningOperation;
+use Microsoft\Graph\Generated\Models\Partners\Billing\UnbilledReconciliation;
 use Microsoft\Graph\Generated\Models\Partners\Billing\UnbilledUsage;
 use Microsoft\Graph\Generated\Models\Partners\Partners;
 use Microsoft\Graph\Generated\Models\Search\Acronym;
@@ -280,6 +281,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.calendarPermission': return new CalendarPermission();
                 case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
                 case '#microsoft.graph.call': return new Call();
+                case '#microsoft.graph.callEvent': return new CallEvent();
                 case '#microsoft.graph.callRecording': return new CallRecording();
                 case '#microsoft.graph.callRecords.callRecord': return new CallRecord();
                 case '#microsoft.graph.callRecords.organizer': return new Organizer();
@@ -444,6 +446,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.emailAuthenticationMethod': return new EmailAuthenticationMethod();
                 case '#microsoft.graph.emailAuthenticationMethodConfiguration': return new EmailAuthenticationMethodConfiguration();
                 case '#microsoft.graph.emailFileAssessmentRequest': return new EmailFileAssessmentRequest();
+                case '#microsoft.graph.emergencyCallEvent': return new EmergencyCallEvent();
                 case '#microsoft.graph.employeeExperienceUser': return new EmployeeExperienceUser();
                 case '#microsoft.graph.endpoint': return new Endpoint();
                 case '#microsoft.graph.endUserNotification': return new EndUserNotification();
@@ -687,6 +690,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.partners.billing.manifest': return new Manifest();
                 case '#microsoft.graph.partners.billing.operation': return new Operation();
                 case '#microsoft.graph.partners.billing.runningOperation': return new RunningOperation();
+                case '#microsoft.graph.partners.billing.unbilledReconciliation': return new UnbilledReconciliation();
                 case '#microsoft.graph.partners.billing.unbilledUsage': return new UnbilledUsage();
                 case '#microsoft.graph.passwordAuthenticationMethod': return new PasswordAuthenticationMethod();
                 case '#microsoft.graph.payload': return new Payload();

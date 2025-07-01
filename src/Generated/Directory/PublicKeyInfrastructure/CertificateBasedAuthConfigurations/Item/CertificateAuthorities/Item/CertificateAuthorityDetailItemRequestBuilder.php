@@ -31,10 +31,11 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property certificateAuthorities for directory
+     * Delete a certificateAuthorityDetail object.
      * @param CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-delete-certificateauthorities?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      * @param CertificateAuthorityDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateAuthorityDetail|null>
      * @throws Exception
@@ -59,11 +60,12 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property certificateAuthorities in directory
+     * Update certificateAuthorityDetail
      * @param CertificateAuthorityDetail $body The request body
      * @param CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateAuthorityDetail|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/certificateauthoritydetail-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CertificateAuthorityDetail $body, ?CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +76,7 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property certificateAuthorities for directory
+     * Delete a certificateAuthorityDetail object.
      * @param CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get certificateAuthorities from directory
+     * The collection of certificate authorities contained in this public key infrastructure resource.
      * @param CertificateAuthorityDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property certificateAuthorities in directory
+     * Update certificateAuthorityDetail
      * @param CertificateAuthorityDetail $body The request body
      * @param CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

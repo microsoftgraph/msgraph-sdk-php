@@ -26,7 +26,7 @@ class PublicKeyInfrastructureRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the certificateBasedAuthConfigurations property value. The certificateBasedAuthConfigurations property
+     * Gets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
      * @return array<CertificateBasedAuthPki>|null
     */
     public function getCertificateBasedAuthConfigurations(): ?array {
@@ -60,7 +60,7 @@ class PublicKeyInfrastructureRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the certificateBasedAuthConfigurations property value. The certificateBasedAuthConfigurations property
+     * Sets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
      * @param array<CertificateBasedAuthPki>|null $value Value to set for the certificateBasedAuthConfigurations property.
     */
     public function setCertificateBasedAuthConfigurations(?array $value): void {

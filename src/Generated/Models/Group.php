@@ -457,7 +457,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isManagementRestricted property value. The isManagementRestricted property
+     * Gets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Returned only on $select.
      * @return bool|null
     */
     public function getIsManagementRestricted(): ?bool {
@@ -1275,7 +1275,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isManagementRestricted property value. The isManagementRestricted property
+     * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Returned only on $select.
      * @param bool|null $value Value to set for the isManagementRestricted property.
     */
     public function setIsManagementRestricted(?bool $value): void {

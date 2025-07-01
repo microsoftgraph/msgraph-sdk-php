@@ -52,10 +52,11 @@ class CertificateAuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get certificateAuthorities from directory
+     * Get a list of the certificateAuthorityDetail objects and their properties.
      * @param CertificateAuthoritiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateAuthorityDetailCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-list-certificateauthorities?view=graph-rest-1.0 Find more info here
     */
     public function get(?CertificateAuthoritiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class CertificateAuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to certificateAuthorities for directory
+     * Create a new certificateAuthorityDetail object.
      * @param CertificateAuthorityDetail $body The request body
      * @param CertificateAuthoritiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateAuthorityDetail|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-post-certificateauthorities?view=graph-rest-1.0 Find more info here
     */
     public function post(CertificateAuthorityDetail $body, ?CertificateAuthoritiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class CertificateAuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get certificateAuthorities from directory
+     * Get a list of the certificateAuthorityDetail objects and their properties.
      * @param CertificateAuthoritiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class CertificateAuthoritiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to certificateAuthorities for directory
+     * Create a new certificateAuthorityDetail object.
      * @param CertificateAuthorityDetail $body The request body
      * @param CertificateAuthoritiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

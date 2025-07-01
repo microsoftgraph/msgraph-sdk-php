@@ -47,10 +47,11 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property certificateBasedAuthConfigurations for directory
+     * Delete a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-delete-certificatebasedauthconfigurations?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -61,10 +62,11 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPkiItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPki|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CertificateBasedAuthPkiItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,11 +77,12 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property certificateBasedAuthConfigurations in directory
+     * Update the properties of a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
      * @param CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPki|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CertificateBasedAuthPki $body, ?CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -90,7 +93,7 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property certificateBasedAuthConfigurations for directory
+     * Delete a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -108,7 +111,7 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Read the properties and relationships of a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPkiItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,7 +132,7 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property certificateBasedAuthConfigurations in directory
+     * Update the properties of a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
      * @param CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

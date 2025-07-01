@@ -45,7 +45,20 @@ class BillingReconciliation extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'billed' => fn(ParseNode $n) => $o->setBilled($n->getObjectValue([BilledReconciliation::class, 'createFromDiscriminatorValue'])),
+            'unbilled' => fn(ParseNode $n) => $o->setUnbilled($n->getObjectValue([UnbilledReconciliation::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the unbilled property value. The unbilled property
+     * @return UnbilledReconciliation|null
+    */
+    public function getUnbilled(): ?UnbilledReconciliation {
+        $val = $this->getBackingStore()->get('unbilled');
+        if (is_null($val) || $val instanceof UnbilledReconciliation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unbilled'");
     }
 
     /**
@@ -55,6 +68,7 @@ class BillingReconciliation extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('billed', $this->getBilled());
+        $writer->writeObjectValue('unbilled', $this->getUnbilled());
     }
 
     /**
@@ -63,6 +77,14 @@ class BillingReconciliation extends Entity implements Parsable
     */
     public function setBilled(?BilledReconciliation $value): void {
         $this->getBackingStore()->set('billed', $value);
+    }
+
+    /**
+     * Sets the unbilled property value. The unbilled property
+     * @param UnbilledReconciliation|null $value Value to set for the unbilled property.
+    */
+    public function setUnbilled(?UnbilledReconciliation $value): void {
+        $this->getBackingStore()->set('unbilled', $value);
     }
 
 }

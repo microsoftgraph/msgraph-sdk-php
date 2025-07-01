@@ -52,10 +52,11 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Get a list of the certificateBasedAuthPki objects and their properties.
      * @param CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPkiCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-list-certificatebasedauthconfigurations?view=graph-rest-1.0 Find more info here
     */
     public function get(?CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Create new navigation property to certificateBasedAuthConfigurations for directory
+     * Create a new certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
      * @param CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPki|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-post-certificatebasedauthconfigurations?view=graph-rest-1.0 Find more info here
     */
     public function post(CertificateBasedAuthPki $body, ?CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get certificateBasedAuthConfigurations from directory
+     * Get a list of the certificateBasedAuthPki objects and their properties.
      * @param CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Create new navigation property to certificateBasedAuthConfigurations for directory
+     * Create a new certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
      * @param CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
