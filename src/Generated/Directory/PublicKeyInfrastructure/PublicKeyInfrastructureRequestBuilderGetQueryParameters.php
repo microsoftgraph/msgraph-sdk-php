@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\PublicKeyInfrastructure;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get publicKeyInfrastructure from directory
+ * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
 */
 class PublicKeyInfrastructureRequestBuilderGetQueryParameters 
 {

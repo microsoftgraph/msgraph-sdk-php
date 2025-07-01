@@ -28,7 +28,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the certificate property value. The certificate property
+     * Gets the certificate property value. The public key of the certificate authority.
      * @return StreamInterface|null
     */
     public function getCertificate(): ?StreamInterface {
@@ -40,7 +40,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the certificateAuthorityType property value. The certificateAuthorityType property
+     * Gets the certificateAuthorityType property value. The type of certificate authority. The possible values are: root, intermediate, unknownFutureValue. Supports $filter (eq).
      * @return CertificateAuthorityType|null
     */
     public function getCertificateAuthorityType(): ?CertificateAuthorityType {
@@ -52,7 +52,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the certificateRevocationListUrl property value. The certificateRevocationListUrl property
+     * Gets the certificateRevocationListUrl property value. The URL to check if the certificate is revoked.
      * @return string|null
     */
     public function getCertificateRevocationListUrl(): ?string {
@@ -64,7 +64,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the certificate authority was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -88,7 +88,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the certificate authority.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -100,7 +100,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time when the certificate authority expires. Supports $filter (eq) and $orderby.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -133,7 +133,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the isIssuerHintEnabled property value. The isIssuerHintEnabled property
+     * Gets the isIssuerHintEnabled property value. Indicates whether the certificate picker presents the certificate authority to the user to use for authentication. Default value is false. Optional.
      * @return bool|null
     */
     public function getIsIssuerHintEnabled(): ?bool {
@@ -145,7 +145,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the issuer property value. The issuer property
+     * Gets the issuer property value. The issuer of the certificate authority.
      * @return string|null
     */
     public function getIssuer(): ?string {
@@ -157,7 +157,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the issuerSubjectKeyIdentifier property value. The issuerSubjectKeyIdentifier property
+     * Gets the issuerSubjectKeyIdentifier property value. The subject key identifier of certificate authority.
      * @return string|null
     */
     public function getIssuerSubjectKeyIdentifier(): ?string {
@@ -169,7 +169,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the thumbprint property value. The thumbprint property
+     * Gets the thumbprint property value. The thumbprint of certificate authority certificate. Supports $filter (eq, startswith).
      * @return string|null
     */
     public function getThumbprint(): ?string {
@@ -200,7 +200,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the certificate property value. The certificate property
+     * Sets the certificate property value. The public key of the certificate authority.
      * @param StreamInterface|null $value Value to set for the certificate property.
     */
     public function setCertificate(?StreamInterface $value): void {
@@ -208,7 +208,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the certificateAuthorityType property value. The certificateAuthorityType property
+     * Sets the certificateAuthorityType property value. The type of certificate authority. The possible values are: root, intermediate, unknownFutureValue. Supports $filter (eq).
      * @param CertificateAuthorityType|null $value Value to set for the certificateAuthorityType property.
     */
     public function setCertificateAuthorityType(?CertificateAuthorityType $value): void {
@@ -216,7 +216,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the certificateRevocationListUrl property value. The certificateRevocationListUrl property
+     * Sets the certificateRevocationListUrl property value. The URL to check if the certificate is revoked.
      * @param string|null $value Value to set for the certificateRevocationListUrl property.
     */
     public function setCertificateRevocationListUrl(?string $value): void {
@@ -224,7 +224,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the certificate authority was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -240,7 +240,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the certificate authority.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -248,7 +248,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time when the certificate authority expires. Supports $filter (eq) and $orderby.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -256,7 +256,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isIssuerHintEnabled property value. The isIssuerHintEnabled property
+     * Sets the isIssuerHintEnabled property value. Indicates whether the certificate picker presents the certificate authority to the user to use for authentication. Default value is false. Optional.
      * @param bool|null $value Value to set for the isIssuerHintEnabled property.
     */
     public function setIsIssuerHintEnabled(?bool $value): void {
@@ -264,7 +264,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the issuer property value. The issuer property
+     * Sets the issuer property value. The issuer of the certificate authority.
      * @param string|null $value Value to set for the issuer property.
     */
     public function setIssuer(?string $value): void {
@@ -272,7 +272,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the issuerSubjectKeyIdentifier property value. The issuerSubjectKeyIdentifier property
+     * Sets the issuerSubjectKeyIdentifier property value. The subject key identifier of certificate authority.
      * @param string|null $value Value to set for the issuerSubjectKeyIdentifier property.
     */
     public function setIssuerSubjectKeyIdentifier(?string $value): void {
@@ -280,7 +280,7 @@ class CertificateAuthorityDetail extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the thumbprint property value. The thumbprint property
+     * Sets the thumbprint property value. The thumbprint of certificate authority certificate. Supports $filter (eq, startswith).
      * @param string|null $value Value to set for the thumbprint property.
     */
     public function setThumbprint(?string $value): void {

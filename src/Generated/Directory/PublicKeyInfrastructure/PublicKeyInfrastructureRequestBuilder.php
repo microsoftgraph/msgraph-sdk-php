@@ -53,7 +53,7 @@ class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @param PublicKeyInfrastructureRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PublicKeyInfrastructureRoot|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class PublicKeyInfrastructureRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get publicKeyInfrastructure from directory
+     * The collection of public key infrastructure instances for the certificate-based authentication feature for users in a Microsoft Entra tenant.
      * @param PublicKeyInfrastructureRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

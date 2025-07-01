@@ -28,7 +28,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the certificateAuthorities property value. The certificateAuthorities property
+     * Gets the certificateAuthorities property value. The collection of certificate authorities contained in this public key infrastructure resource.
      * @return array<CertificateAuthorityDetail>|null
     */
     public function getCertificateAuthorities(): ?array {
@@ -42,7 +42,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the object. Maximum length is 256 characters.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -69,7 +69,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the object was created or last modified.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -81,7 +81,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of any asynchronous jobs runs on the object which can be upload or delete.
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -93,7 +93,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the statusDetails property value. The statusDetails property
+     * Gets the statusDetails property value. The status details of the upload/deleted operation of PKI (Public Key Infrastructure).
      * @return string|null
     */
     public function getStatusDetails(): ?string {
@@ -118,7 +118,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the certificateAuthorities property value. The certificateAuthorities property
+     * Sets the certificateAuthorities property value. The collection of certificate authorities contained in this public key infrastructure resource.
      * @param array<CertificateAuthorityDetail>|null $value Value to set for the certificateAuthorities property.
     */
     public function setCertificateAuthorities(?array $value): void {
@@ -126,7 +126,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the object. Maximum length is 256 characters.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -134,7 +134,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the object was created or last modified.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -142,7 +142,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of any asynchronous jobs runs on the object which can be upload or delete.
      * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
@@ -150,7 +150,7 @@ class CertificateBasedAuthPki extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the statusDetails property value. The statusDetails property
+     * Sets the statusDetails property value. The status details of the upload/deleted operation of PKI (Public Key Infrastructure).
      * @param string|null $value Value to set for the statusDetails property.
     */
     public function setStatusDetails(?string $value): void {
