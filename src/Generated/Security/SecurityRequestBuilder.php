@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Security\Alerts_v2\Alerts_v2RequestBuilder;
 use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
+use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\DataSecurityAndGovernanceRequestBuilder;
 use Microsoft\Graph\Generated\Security\Identities\IdentitiesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Labels\LabelsRequestBuilder;
@@ -56,6 +57,13 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     */
     public function cases(): CasesRequestBuilder {
         return new CasesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the dataSecurityAndGovernance property of the microsoft.graph.security entity.
+    */
+    public function dataSecurityAndGovernance(): DataSecurityAndGovernanceRequestBuilder {
+        return new DataSecurityAndGovernanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

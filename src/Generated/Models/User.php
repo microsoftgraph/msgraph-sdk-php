@@ -393,6 +393,18 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the dataSecurityAndGovernance property value. The data security and governance settings for the user. Read-only. Nullable.
+     * @return UserDataSecurityAndGovernance|null
+    */
+    public function getDataSecurityAndGovernance(): ?UserDataSecurityAndGovernance {
+        $val = $this->getBackingStore()->get('dataSecurityAndGovernance');
+        if (is_null($val) || $val instanceof UserDataSecurityAndGovernance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataSecurityAndGovernance'");
+    }
+
+    /**
      * Gets the department property value. The name of the department in which the user works. Maximum length is 64 characters. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in, and eq on null values).
      * @return string|null
     */
@@ -672,6 +684,7 @@ class User extends DirectoryObject implements Parsable
             'createdObjects' => fn(ParseNode $n) => $o->setCreatedObjects($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'creationType' => fn(ParseNode $n) => $o->setCreationType($n->getStringValue()),
             'customSecurityAttributes' => fn(ParseNode $n) => $o->setCustomSecurityAttributes($n->getObjectValue([CustomSecurityAttributeValue::class, 'createFromDiscriminatorValue'])),
+            'dataSecurityAndGovernance' => fn(ParseNode $n) => $o->setDataSecurityAndGovernance($n->getObjectValue([UserDataSecurityAndGovernance::class, 'createFromDiscriminatorValue'])),
             'department' => fn(ParseNode $n) => $o->setDepartment($n->getStringValue()),
             'deviceEnrollmentLimit' => fn(ParseNode $n) => $o->setDeviceEnrollmentLimit($n->getIntegerValue()),
             'deviceManagementTroubleshootingEvents' => fn(ParseNode $n) => $o->setDeviceManagementTroubleshootingEvents($n->getCollectionOfObjectValues([DeviceManagementTroubleshootingEvent::class, 'createFromDiscriminatorValue'])),
@@ -1914,6 +1927,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('createdObjects', $this->getCreatedObjects());
         $writer->writeStringValue('creationType', $this->getCreationType());
         $writer->writeObjectValue('customSecurityAttributes', $this->getCustomSecurityAttributes());
+        $writer->writeObjectValue('dataSecurityAndGovernance', $this->getDataSecurityAndGovernance());
         $writer->writeStringValue('department', $this->getDepartment());
         $writer->writeIntegerValue('deviceEnrollmentLimit', $this->getDeviceEnrollmentLimit());
         $writer->writeCollectionOfObjectValues('deviceManagementTroubleshootingEvents', $this->getDeviceManagementTroubleshootingEvents());
@@ -2239,6 +2253,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setCustomSecurityAttributes(?CustomSecurityAttributeValue $value): void {
         $this->getBackingStore()->set('customSecurityAttributes', $value);
+    }
+
+    /**
+     * Sets the dataSecurityAndGovernance property value. The data security and governance settings for the user. Read-only. Nullable.
+     * @param UserDataSecurityAndGovernance|null $value Value to set for the dataSecurityAndGovernance property.
+    */
+    public function setDataSecurityAndGovernance(?UserDataSecurityAndGovernance $value): void {
+        $this->getBackingStore()->set('dataSecurityAndGovernance', $value);
     }
 
     /**

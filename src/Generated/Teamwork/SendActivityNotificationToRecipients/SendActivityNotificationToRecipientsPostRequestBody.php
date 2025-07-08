@@ -93,12 +93,25 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
         return  [
             'activityType' => fn(ParseNode $n) => $o->setActivityType($n->getStringValue()),
             'chainId' => fn(ParseNode $n) => $o->setChainId($n->getIntegerValue()),
+            'iconId' => fn(ParseNode $n) => $o->setIconId($n->getStringValue()),
             'previewText' => fn(ParseNode $n) => $o->setPreviewText($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'recipients' => fn(ParseNode $n) => $o->setRecipients($n->getCollectionOfObjectValues([TeamworkNotificationRecipient::class, 'createFromDiscriminatorValue'])),
             'teamsAppId' => fn(ParseNode $n) => $o->setTeamsAppId($n->getStringValue()),
             'templateParameters' => fn(ParseNode $n) => $o->setTemplateParameters($n->getCollectionOfObjectValues([KeyValuePair::class, 'createFromDiscriminatorValue'])),
             'topic' => fn(ParseNode $n) => $o->setTopic($n->getObjectValue([TeamworkActivityTopic::class, 'createFromDiscriminatorValue'])),
         ];
+    }
+
+    /**
+     * Gets the iconId property value. The iconId property
+     * @return string|null
+    */
+    public function getIconId(): ?string {
+        $val = $this->getBackingStore()->get('iconId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iconId'");
     }
 
     /**
@@ -172,6 +185,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('activityType', $this->getActivityType());
         $writer->writeIntegerValue('chainId', $this->getChainId());
+        $writer->writeStringValue('iconId', $this->getIconId());
         $writer->writeObjectValue('previewText', $this->getPreviewText());
         $writer->writeCollectionOfObjectValues('recipients', $this->getRecipients());
         $writer->writeStringValue('teamsAppId', $this->getTeamsAppId());
@@ -210,6 +224,14 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     */
     public function setChainId(?int $value): void {
         $this->getBackingStore()->set('chainId', $value);
+    }
+
+    /**
+     * Sets the iconId property value. The iconId property
+     * @param string|null $value Value to set for the iconId property.
+    */
+    public function setIconId(?string $value): void {
+        $this->getBackingStore()->set('iconId', $value);
     }
 
     /**

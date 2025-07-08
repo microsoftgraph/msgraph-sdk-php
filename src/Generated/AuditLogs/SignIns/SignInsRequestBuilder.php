@@ -4,7 +4,10 @@ namespace Microsoft\Graph\Generated\AuditLogs\SignIns;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\AuditLogs\SignIns\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\SignIns\ConfirmSafe\ConfirmSafeRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\SignIns\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\SignIns\Dismiss\DismissRequestBuilder;
 use Microsoft\Graph\Generated\AuditLogs\SignIns\Item\SignInItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SignIn;
@@ -20,10 +23,31 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class SignInsRequestBuilder extends BaseRequestBuilder 
 {
     /**
+     * Provides operations to call the confirmCompromised method.
+    */
+    public function confirmCompromised(): ConfirmCompromisedRequestBuilder {
+        return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the confirmSafe method.
+    */
+    public function confirmSafe(): ConfirmSafeRequestBuilder {
+        return new ConfirmSafeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the dismiss method.
+    */
+    public function dismiss(): DismissRequestBuilder {
+        return new DismissRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

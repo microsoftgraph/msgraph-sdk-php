@@ -84,11 +84,11 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of user objects.
+     * List properties and relationships of the user objects.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -99,12 +99,12 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
+     * Create a new user object.
      * @param User $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-create?view=graph-rest-1.0 Find more info here
     */
     public function post(User $body, ?UsersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -115,7 +115,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of user objects.
+     * List properties and relationships of the user objects.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class UsersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties.
+     * Create a new user object.
      * @param User $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

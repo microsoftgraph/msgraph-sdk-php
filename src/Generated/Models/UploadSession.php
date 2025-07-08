@@ -58,7 +58,7 @@ class UploadSession implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     * Gets the expirationDateTime property value. The date and time in UTC that the upload session expires. The complete file must be uploaded before this expiration time is reached. Each fragment uploaded during the session extends the expiration time.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -157,7 +157,7 @@ class UploadSession implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     * Sets the expirationDateTime property value. The date and time in UTC that the upload session expires. The complete file must be uploaded before this expiration time is reached. Each fragment uploaded during the session extends the expiration time.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
