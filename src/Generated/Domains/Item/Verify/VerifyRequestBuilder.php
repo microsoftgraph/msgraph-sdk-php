@@ -31,7 +31,7 @@ class VerifyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Validates the ownership of the domain.
+     * Validate the ownership of a domain. This operation only applies to an unverified domain. For an unverified domain, the isVerified property is false.
      * @param VerifyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Domain|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class VerifyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Validates the ownership of the domain.
+     * Validate the ownership of a domain. This operation only applies to an unverified domain. For an unverified domain, the isVerified property is false.
      * @param VerifyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

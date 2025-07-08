@@ -35,6 +35,7 @@ class Dictionary implements AdditionalDataHolder, BackedModel, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.customMetadataDictionary': return new CustomMetadataDictionary();
                 case '#microsoft.graph.fileStorageContainerCustomPropertyDictionary': return new FileStorageContainerCustomPropertyDictionary();
                 case '#microsoft.graph.resultTemplateDictionary': return new ResultTemplateDictionary();
             }

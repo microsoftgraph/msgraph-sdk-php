@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Graph\Generated\Models\SecureScore;
 use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
+use Microsoft\Graph\Generated\Models\TenantDataSecurityAndGovernance;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -84,6 +85,18 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * @return TenantDataSecurityAndGovernance|null
+    */
+    public function getDataSecurityAndGovernance(): ?TenantDataSecurityAndGovernance {
+        $val = $this->getBackingStore()->get('dataSecurityAndGovernance');
+        if (is_null($val) || $val instanceof TenantDataSecurityAndGovernance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataSecurityAndGovernance'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -94,6 +107,7 @@ class Security extends Entity implements Parsable
             'alerts_v2' => fn(ParseNode $n) => $o->setAlertsV2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
+            'dataSecurityAndGovernance' => fn(ParseNode $n) => $o->setDataSecurityAndGovernance($n->getObjectValue([TenantDataSecurityAndGovernance::class, 'createFromDiscriminatorValue'])),
             'identities' => fn(ParseNode $n) => $o->setIdentities($n->getObjectValue([IdentityContainer::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'labels' => fn(ParseNode $n) => $o->setLabels($n->getObjectValue([LabelsRoot::class, 'createFromDiscriminatorValue'])),
@@ -232,6 +246,7 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlertsV2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
+        $writer->writeObjectValue('dataSecurityAndGovernance', $this->getDataSecurityAndGovernance());
         $writer->writeObjectValue('identities', $this->getIdentities());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeObjectValue('labels', $this->getLabels());
@@ -273,6 +288,14 @@ class Security extends Entity implements Parsable
     */
     public function setCases(?CasesRoot $value): void {
         $this->getBackingStore()->set('cases', $value);
+    }
+
+    /**
+     * Sets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * @param TenantDataSecurityAndGovernance|null $value Value to set for the dataSecurityAndGovernance property.
+    */
+    public function setDataSecurityAndGovernance(?TenantDataSecurityAndGovernance $value): void {
+        $this->getBackingStore()->set('dataSecurityAndGovernance', $value);
     }
 
     /**

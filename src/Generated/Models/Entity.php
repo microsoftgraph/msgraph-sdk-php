@@ -183,6 +183,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.accessReviewScheduleDefinition': return new AccessReviewScheduleDefinition();
                 case '#microsoft.graph.accessReviewSet': return new AccessReviewSet();
                 case '#microsoft.graph.accessReviewStage': return new AccessReviewStage();
+                case '#microsoft.graph.activitiesContainer': return new ActivitiesContainer();
                 case '#microsoft.graph.activityBasedTimeoutPolicy': return new ActivityBasedTimeoutPolicy();
                 case '#microsoft.graph.activityHistoryItem': return new ActivityHistoryItem();
                 case '#microsoft.graph.addLargeGalleryViewOperation': return new AddLargeGalleryViewOperation();
@@ -326,6 +327,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.connectedOrganization': return new ConnectedOrganization();
                 case '#microsoft.graph.contact': return new Contact();
                 case '#microsoft.graph.contactFolder': return new ContactFolder();
+                case '#microsoft.graph.contentActivity': return new ContentActivity();
                 case '#microsoft.graph.contentSharingSession': return new ContentSharingSession();
                 case '#microsoft.graph.contentType': return new ContentType();
                 case '#microsoft.graph.contract': return new Contract();
@@ -343,6 +345,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.customExtensionStageSetting': return new CustomExtensionStageSetting();
                 case '#microsoft.graph.customSecurityAttributeDefinition': return new CustomSecurityAttributeDefinition();
                 case '#microsoft.graph.dataPolicyOperation': return new DataPolicyOperation();
+                case '#microsoft.graph.dataSecurityAndGovernance': return new DataSecurityAndGovernance();
                 case '#microsoft.graph.dayNote': return new DayNote();
                 case '#microsoft.graph.defaultManagedAppProtection': return new DefaultManagedAppProtection();
                 case '#microsoft.graph.delegatedAdminAccessAssignment': return new DelegatedAdminAccessAssignment();
@@ -549,6 +552,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.itemAttachment': return new ItemAttachment();
                 case '#microsoft.graph.itemInsights': return new ItemInsights();
                 case '#microsoft.graph.itemRetentionLabel': return new ItemRetentionLabel();
+                case '#microsoft.graph.labelContentRight': return new LabelContentRight();
                 case '#microsoft.graph.landingPage': return new LandingPage();
                 case '#microsoft.graph.landingPageDetail': return new LandingPageDetail();
                 case '#microsoft.graph.learningAssignment': return new LearningAssignment();
@@ -953,6 +957,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethod': return new TemporaryAccessPassAuthenticationMethod();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();
                 case '#microsoft.graph.tenantAppManagementPolicy': return new TenantAppManagementPolicy();
+                case '#microsoft.graph.tenantDataSecurityAndGovernance': return new TenantDataSecurityAndGovernance();
+                case '#microsoft.graph.tenantProtectionScopeContainer': return new TenantProtectionScopeContainer();
                 case '#microsoft.graph.termsAndConditions': return new TermsAndConditions();
                 case '#microsoft.graph.termsAndConditionsAcceptanceStatus': return new TermsAndConditionsAcceptanceStatus();
                 case '#microsoft.graph.termsAndConditionsAssignment': return new TermsAndConditionsAssignment();
@@ -1002,10 +1008,12 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.unmuteParticipantOperation': return new UnmuteParticipantOperation();
                 case '#microsoft.graph.updateRecordingStatusOperation': return new UpdateRecordingStatusOperation();
                 case '#microsoft.graph.urlAssessmentRequest': return new UrlAssessmentRequest();
+                case '#microsoft.graph.usageRightsIncluded': return new UsageRightsIncluded();
                 case '#microsoft.graph.usedInsight': return new UsedInsight();
                 case '#microsoft.graph.user': return new User();
                 case '#microsoft.graph.userActivity': return new UserActivity();
                 case '#microsoft.graph.userConsentRequest': return new UserConsentRequest();
+                case '#microsoft.graph.userDataSecurityAndGovernance': return new UserDataSecurityAndGovernance();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance': return new UserExperienceAnalyticsAppHealthApplicationPerformance();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails': return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId': return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId();
@@ -1034,6 +1042,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.userFlowLanguagePage': return new UserFlowLanguagePage();
                 case '#microsoft.graph.userInsightsSettings': return new UserInsightsSettings();
                 case '#microsoft.graph.userInstallStateSummary': return new UserInstallStateSummary();
+                case '#microsoft.graph.userProtectionScopeContainer': return new UserProtectionScopeContainer();
                 case '#microsoft.graph.userRegistrationDetails': return new UserRegistrationDetails();
                 case '#microsoft.graph.userScopeTeamsAppInstallation': return new UserScopeTeamsAppInstallation();
                 case '#microsoft.graph.userSettings': return new UserSettings();
