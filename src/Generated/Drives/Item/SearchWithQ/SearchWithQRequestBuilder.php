@@ -37,7 +37,6 @@ class SearchWithQRequestBuilder extends BaseRequestBuilder
      * @param SearchWithQRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SearchWithQGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/driveitem-search?view=graph-rest-1.0 Find more info here
     */
     public function get(?SearchWithQRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

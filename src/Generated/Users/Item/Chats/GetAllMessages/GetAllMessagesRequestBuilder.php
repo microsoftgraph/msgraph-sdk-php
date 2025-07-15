@@ -34,7 +34,6 @@ class GetAllMessagesRequestBuilder extends BaseRequestBuilder
      * @param GetAllMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllMessagesGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/chats-getallmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

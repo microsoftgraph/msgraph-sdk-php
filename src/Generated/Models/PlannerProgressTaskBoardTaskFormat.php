@@ -31,20 +31,7 @@ class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'orderHint' => fn(ParseNode $n) => $o->setOrderHint($n->getStringValue()),
         ]);
-    }
-
-    /**
-     * Gets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     * @return string|null
-    */
-    public function getOrderHint(): ?string {
-        $val = $this->getBackingStore()->get('orderHint');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'orderHint'");
     }
 
     /**
@@ -53,15 +40,6 @@ class PlannerProgressTaskBoardTaskFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('orderHint', $this->getOrderHint());
-    }
-
-    /**
-     * Sets the orderHint property value. Hint value used to order the task on the progress view of the task board. For details about the supported format, see Using order hints in Planner.
-     * @param string|null $value Value to set for the orderHint property.
-    */
-    public function setOrderHint(?string $value): void {
-        $this->getBackingStore()->set('orderHint', $value);
     }
 
 }

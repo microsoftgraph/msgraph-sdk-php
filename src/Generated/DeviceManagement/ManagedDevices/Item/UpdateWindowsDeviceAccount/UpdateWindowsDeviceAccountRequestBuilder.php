@@ -35,7 +35,6 @@ class UpdateWindowsDeviceAccountRequestBuilder extends BaseRequestBuilder
      * @param UpdateWindowsDeviceAccountRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-updatewindowsdeviceaccount?view=graph-rest-1.0 Find more info here
     */
     public function post(UpdateWindowsDeviceAccountPostRequestBody $body, ?UpdateWindowsDeviceAccountRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

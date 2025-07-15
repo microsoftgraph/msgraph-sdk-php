@@ -36,7 +36,6 @@ class AddCopyRequestBuilder extends BaseRequestBuilder
      * @param AddCopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ContentType|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0 Find more info here
     */
     public function post(AddCopyPostRequestBody $body, ?AddCopyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

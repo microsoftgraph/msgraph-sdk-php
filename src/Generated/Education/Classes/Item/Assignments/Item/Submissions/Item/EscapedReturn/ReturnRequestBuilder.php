@@ -35,7 +35,6 @@ class ReturnRequestBuilder extends BaseRequestBuilder
      * @param ReturnRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSubmission|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationsubmission-return?view=graph-rest-1.0 Find more info here
     */
     public function post(?ReturnRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

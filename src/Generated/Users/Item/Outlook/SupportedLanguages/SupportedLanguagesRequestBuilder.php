@@ -34,7 +34,6 @@ class SupportedLanguagesRequestBuilder extends BaseRequestBuilder
      * @param SupportedLanguagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SupportedLanguagesGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0 Find more info here
     */
     public function get(?SupportedLanguagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

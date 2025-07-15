@@ -36,7 +36,6 @@ class AddRequestBuilder extends BaseRequestBuilder
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookWorksheet|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/worksheetcollection-add?view=graph-rest-1.0 Find more info here
     */
     public function post(AddPostRequestBody $body, ?AddRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

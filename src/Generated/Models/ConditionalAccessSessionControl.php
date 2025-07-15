@@ -38,6 +38,7 @@ class ConditionalAccessSessionControl implements AdditionalDataHolder, BackedMod
                 case '#microsoft.graph.applicationEnforcedRestrictionsSessionControl': return new ApplicationEnforcedRestrictionsSessionControl();
                 case '#microsoft.graph.cloudAppSecuritySessionControl': return new CloudAppSecuritySessionControl();
                 case '#microsoft.graph.persistentBrowserSessionControl': return new PersistentBrowserSessionControl();
+                case '#microsoft.graph.secureSignInSessionControl': return new SecureSignInSessionControl();
                 case '#microsoft.graph.signInFrequencySessionControl': return new SignInFrequencySessionControl();
             }
         }

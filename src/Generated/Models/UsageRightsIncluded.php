@@ -31,46 +31,7 @@ class UsageRightsIncluded extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'ownerEmail' => fn(ParseNode $n) => $o->setOwnerEmail($n->getStringValue()),
-            'userEmail' => fn(ParseNode $n) => $o->setUserEmail($n->getStringValue()),
-            'value' => fn(ParseNode $n) => $o->setValue($n->getEnumValue(UsageRights::class)),
         ]);
-    }
-
-    /**
-     * Gets the ownerEmail property value. The email of owner label rights.
-     * @return string|null
-    */
-    public function getOwnerEmail(): ?string {
-        $val = $this->getBackingStore()->get('ownerEmail');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'ownerEmail'");
-    }
-
-    /**
-     * Gets the userEmail property value. The email of user with label user rights.
-     * @return string|null
-    */
-    public function getUserEmail(): ?string {
-        $val = $this->getBackingStore()->get('userEmail');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'userEmail'");
-    }
-
-    /**
-     * Gets the value property value. The value property
-     * @return UsageRights|null
-    */
-    public function getValue(): ?UsageRights {
-        $val = $this->getBackingStore()->get('value');
-        if (is_null($val) || $val instanceof UsageRights) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**
@@ -79,33 +40,6 @@ class UsageRightsIncluded extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('ownerEmail', $this->getOwnerEmail());
-        $writer->writeStringValue('userEmail', $this->getUserEmail());
-        $writer->writeEnumValue('value', $this->getValue());
-    }
-
-    /**
-     * Sets the ownerEmail property value. The email of owner label rights.
-     * @param string|null $value Value to set for the ownerEmail property.
-    */
-    public function setOwnerEmail(?string $value): void {
-        $this->getBackingStore()->set('ownerEmail', $value);
-    }
-
-    /**
-     * Sets the userEmail property value. The email of user with label user rights.
-     * @param string|null $value Value to set for the userEmail property.
-    */
-    public function setUserEmail(?string $value): void {
-        $this->getBackingStore()->set('userEmail', $value);
-    }
-
-    /**
-     * Sets the value property value. The value property
-     * @param UsageRights|null $value Value to set for the value property.
-    */
-    public function setValue(?UsageRights $value): void {
-        $this->getBackingStore()->set('value', $value);
     }
 
 }

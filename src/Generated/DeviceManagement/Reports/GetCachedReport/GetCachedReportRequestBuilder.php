@@ -36,7 +36,6 @@ class GetCachedReportRequestBuilder extends BaseRequestBuilder
      * @param GetCachedReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getcachedreport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetCachedReportPostRequestBody $body, ?GetCachedReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -36,7 +36,6 @@ class UploadClientCertificateRequestBuilder extends BaseRequestBuilder
      * @param UploadClientCertificateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityApiConnector|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/identityapiconnector-uploadclientcertificate?view=graph-rest-1.0 Find more info here
     */
     public function post(UploadClientCertificatePostRequestBody $body, ?UploadClientCertificateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

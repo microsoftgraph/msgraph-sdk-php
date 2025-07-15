@@ -35,7 +35,6 @@ class TranslateExchangeIdsRequestBuilder extends BaseRequestBuilder
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TranslateExchangeIdsPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0 Find more info here
     */
     public function post(TranslateExchangeIdsPostRequestBody $body, ?TranslateExchangeIdsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

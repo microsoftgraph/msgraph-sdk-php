@@ -35,7 +35,6 @@ class UsageRequestBuilder extends BaseRequestBuilder
      * @param UsageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthUsage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-usage?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsageRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

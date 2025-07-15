@@ -73,6 +73,18 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the auditLog property value. The auditLog property
+     * @return AuditCoreRoot|null
+    */
+    public function getAuditLog(): ?AuditCoreRoot {
+        $val = $this->getBackingStore()->get('auditLog');
+        if (is_null($val) || $val instanceof AuditCoreRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'auditLog'");
+    }
+
+    /**
      * Gets the cases property value. The cases property
      * @return CasesRoot|null
     */
@@ -106,6 +118,7 @@ class Security extends Entity implements Parsable
             'alerts' => fn(ParseNode $n) => $o->setAlerts($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'alerts_v2' => fn(ParseNode $n) => $o->setAlertsV2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
+            'auditLog' => fn(ParseNode $n) => $o->setAuditLog($n->getObjectValue([AuditCoreRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
             'dataSecurityAndGovernance' => fn(ParseNode $n) => $o->setDataSecurityAndGovernance($n->getObjectValue([TenantDataSecurityAndGovernance::class, 'createFromDiscriminatorValue'])),
             'identities' => fn(ParseNode $n) => $o->setIdentities($n->getObjectValue([IdentityContainer::class, 'createFromDiscriminatorValue'])),
@@ -245,6 +258,7 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('alerts', $this->getAlerts());
         $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlertsV2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
+        $writer->writeObjectValue('auditLog', $this->getAuditLog());
         $writer->writeObjectValue('cases', $this->getCases());
         $writer->writeObjectValue('dataSecurityAndGovernance', $this->getDataSecurityAndGovernance());
         $writer->writeObjectValue('identities', $this->getIdentities());
@@ -280,6 +294,14 @@ class Security extends Entity implements Parsable
     */
     public function setAttackSimulation(?AttackSimulationRoot $value): void {
         $this->getBackingStore()->set('attackSimulation', $value);
+    }
+
+    /**
+     * Sets the auditLog property value. The auditLog property
+     * @param AuditCoreRoot|null $value Value to set for the auditLog property.
+    */
+    public function setAuditLog(?AuditCoreRoot $value): void {
+        $this->getBackingStore()->set('auditLog', $value);
     }
 
     /**

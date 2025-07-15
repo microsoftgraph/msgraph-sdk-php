@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents details for billed invoice reconciliation data.
+ * Represents details for billed and unbilled invoice reconciliation data.
 */
 class ReconciliationRequestBuilderGetQueryParameters 
 {

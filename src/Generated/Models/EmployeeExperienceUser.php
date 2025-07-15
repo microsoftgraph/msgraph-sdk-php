@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EmployeeExperienceUser extends Entity implements Parsable 
 {
@@ -32,22 +31,7 @@ class EmployeeExperienceUser extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'learningCourseActivities' => fn(ParseNode $n) => $o->setLearningCourseActivities($n->getCollectionOfObjectValues([LearningCourseActivity::class, 'createFromDiscriminatorValue'])),
         ]);
-    }
-
-    /**
-     * Gets the learningCourseActivities property value. The learningCourseActivities property
-     * @return array<LearningCourseActivity>|null
-    */
-    public function getLearningCourseActivities(): ?array {
-        $val = $this->getBackingStore()->get('learningCourseActivities');
-        if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, LearningCourseActivity::class);
-            /** @var array<LearningCourseActivity>|null $val */
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'learningCourseActivities'");
     }
 
     /**
@@ -56,15 +40,6 @@ class EmployeeExperienceUser extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('learningCourseActivities', $this->getLearningCourseActivities());
-    }
-
-    /**
-     * Sets the learningCourseActivities property value. The learningCourseActivities property
-     * @param array<LearningCourseActivity>|null $value Value to set for the learningCourseActivities property.
-    */
-    public function setLearningCourseActivities(?array $value): void {
-        $this->getBackingStore()->set('learningCourseActivities', $value);
     }
 
 }

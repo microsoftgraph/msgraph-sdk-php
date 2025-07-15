@@ -53,7 +53,7 @@ class UnbilledRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      * @param UnbilledRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnbilledReconciliation|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class UnbilledRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get unbilled from reports
+     * Represents details for unbilled invoice reconciliation data.
      * @param UnbilledRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

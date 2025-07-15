@@ -35,7 +35,6 @@ class GetPresencesByUserIdRequestBuilder extends BaseRequestBuilder
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetPresencesByUserIdPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0 Find more info here
     */
     public function post(GetPresencesByUserIdPostRequestBody $body, ?GetPresencesByUserIdRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

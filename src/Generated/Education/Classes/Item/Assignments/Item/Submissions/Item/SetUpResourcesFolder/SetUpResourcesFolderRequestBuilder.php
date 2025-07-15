@@ -35,7 +35,6 @@ class SetUpResourcesFolderRequestBuilder extends BaseRequestBuilder
      * @param SetUpResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSubmission|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/educationsubmission-setupresourcesfolder?view=graph-rest-1.0 Find more info here
     */
     public function post(?SetUpResourcesFolderRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

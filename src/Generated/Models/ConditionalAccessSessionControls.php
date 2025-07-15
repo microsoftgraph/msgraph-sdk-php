@@ -103,6 +103,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
             'disableResilienceDefaults' => fn(ParseNode $n) => $o->setDisableResilienceDefaults($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'persistentBrowser' => fn(ParseNode $n) => $o->setPersistentBrowser($n->getObjectValue([PersistentBrowserSessionControl::class, 'createFromDiscriminatorValue'])),
+            'secureSignInSession' => fn(ParseNode $n) => $o->setSecureSignInSession($n->getObjectValue([SecureSignInSessionControl::class, 'createFromDiscriminatorValue'])),
             'signInFrequency' => fn(ParseNode $n) => $o->setSignInFrequency($n->getObjectValue([SignInFrequencySessionControl::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -132,6 +133,18 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
     }
 
     /**
+     * Gets the secureSignInSession property value. The secureSignInSession property
+     * @return SecureSignInSessionControl|null
+    */
+    public function getSecureSignInSession(): ?SecureSignInSessionControl {
+        $val = $this->getBackingStore()->get('secureSignInSession');
+        if (is_null($val) || $val instanceof SecureSignInSessionControl) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureSignInSession'");
+    }
+
+    /**
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
      * @return SignInFrequencySessionControl|null
     */
@@ -153,6 +166,7 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
         $writer->writeBooleanValue('disableResilienceDefaults', $this->getDisableResilienceDefaults());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('persistentBrowser', $this->getPersistentBrowser());
+        $writer->writeObjectValue('secureSignInSession', $this->getSecureSignInSession());
         $writer->writeObjectValue('signInFrequency', $this->getSignInFrequency());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -211,6 +225,14 @@ class ConditionalAccessSessionControls implements AdditionalDataHolder, BackedMo
     */
     public function setPersistentBrowser(?PersistentBrowserSessionControl $value): void {
         $this->getBackingStore()->set('persistentBrowser', $value);
+    }
+
+    /**
+     * Sets the secureSignInSession property value. The secureSignInSession property
+     * @param SecureSignInSessionControl|null $value Value to set for the secureSignInSession property.
+    */
+    public function setSecureSignInSession(?SecureSignInSessionControl $value): void {
+        $this->getBackingStore()->set('secureSignInSession', $value);
     }
 
     /**

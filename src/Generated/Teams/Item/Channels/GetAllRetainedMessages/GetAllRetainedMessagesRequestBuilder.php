@@ -34,7 +34,6 @@ class GetAllRetainedMessagesRequestBuilder extends BaseRequestBuilder
      * @param GetAllRetainedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllRetainedMessagesGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/channel-getallretainedmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllRetainedMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

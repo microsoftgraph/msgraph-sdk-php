@@ -48,6 +48,9 @@ use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\Article;
 use Microsoft\Graph\Generated\Models\Security\ArticleIndicator;
 use Microsoft\Graph\Generated\Models\Security\Artifact;
+use Microsoft\Graph\Generated\Models\Security\AuditCoreRoot;
+use Microsoft\Graph\Generated\Models\Security\AuditLogQuery;
+use Microsoft\Graph\Generated\Models\Security\AuditLogRecord;
 use Microsoft\Graph\Generated\Models\Security\AuthorityTemplate;
 use Microsoft\Graph\Generated\Models\Security\CaseOperation;
 use Microsoft\Graph\Generated\Models\Security\CasesRoot;
@@ -806,6 +809,9 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.article': return new Article();
                 case '#microsoft.graph.security.articleIndicator': return new ArticleIndicator();
                 case '#microsoft.graph.security.artifact': return new Artifact();
+                case '#microsoft.graph.security.auditCoreRoot': return new AuditCoreRoot();
+                case '#microsoft.graph.security.auditLogQuery': return new AuditLogQuery();
+                case '#microsoft.graph.security.auditLogRecord': return new AuditLogRecord();
                 case '#microsoft.graph.security.authorityTemplate': return new AuthorityTemplate();
                 case '#microsoft.graph.security.case': return new EscapedCase();
                 case '#microsoft.graph.security.caseOperation': return new CaseOperation();
@@ -878,6 +884,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.whoisRecord': return new WhoisRecord();
                 case '#microsoft.graph.securityReportsRoot': return new SecurityReportsRoot();
                 case '#microsoft.graph.sendDtmfTonesOperation': return new SendDtmfTonesOperation();
+                case '#microsoft.graph.sensitivityLabel': return new SensitivityLabel();
                 case '#microsoft.graph.serviceAnnouncement': return new ServiceAnnouncement();
                 case '#microsoft.graph.serviceAnnouncementAttachment': return new ServiceAnnouncementAttachment();
                 case '#microsoft.graph.serviceAnnouncementBase': return new ServiceAnnouncementBase();

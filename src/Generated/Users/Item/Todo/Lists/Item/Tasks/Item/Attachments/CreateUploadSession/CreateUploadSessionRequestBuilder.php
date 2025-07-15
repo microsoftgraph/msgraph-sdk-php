@@ -36,7 +36,6 @@ class CreateUploadSessionRequestBuilder extends BaseRequestBuilder
      * @param CreateUploadSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UploadSession|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/taskfileattachment-createuploadsession?view=graph-rest-1.0 Find more info here
     */
     public function post(CreateUploadSessionPostRequestBody $body, ?CreateUploadSessionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -34,7 +34,6 @@ class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuilder
      * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0 Find more info here
     */
     public function post(?MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

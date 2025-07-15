@@ -141,7 +141,14 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
             'dpi' => fn(ParseNode $n) => $o->setDpi($n->getIntegerValue()),
             'duplexMode' => fn(ParseNode $n) => $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)),
             'feedOrientation' => fn(ParseNode $n) => $o->setFeedOrientation($n->getEnumValue(PrinterFeedOrientation::class)),
-            'finishings' => fn(ParseNode $n) => $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)),
+            'finishings' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setFinishings($val);
+            },
             'fitPdfToPage' => fn(ParseNode $n) => $o->setFitPdfToPage($n->getBooleanValue()),
             'inputBin' => fn(ParseNode $n) => $o->setInputBin($n->getStringValue()),
             'margin' => fn(ParseNode $n) => $o->setMargin($n->getObjectValue([PrintMargin::class, 'createFromDiscriminatorValue'])),
@@ -160,13 +167,13 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Gets the finishings property value. Finishing processes to use when printing.
-     * @return array<PrintFinishing>|null
+     * @return array<string>|null
     */
     public function getFinishings(): ?array {
         $val = $this->getBackingStore()->get('finishings');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintFinishing::class);
-            /** @var array<PrintFinishing>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'finishings'");
@@ -341,7 +348,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
         $writer->writeIntegerValue('dpi', $this->getDpi());
         $writer->writeEnumValue('duplexMode', $this->getDuplexMode());
         $writer->writeEnumValue('feedOrientation', $this->getFeedOrientation());
-        $writer->writeCollectionOfEnumValues('finishings', $this->getFinishings());
+        $writer->writeCollectionOfPrimitiveValues('finishings', $this->getFinishings());
         $writer->writeBooleanValue('fitPdfToPage', $this->getFitPdfToPage());
         $writer->writeStringValue('inputBin', $this->getInputBin());
         $writer->writeObjectValue('margin', $this->getMargin());
@@ -424,7 +431,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
-     * @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     * @param array<string>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value): void {
         $this->getBackingStore()->set('finishings', $value);

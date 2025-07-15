@@ -25,25 +25,12 @@ class WorkbookChartLineFormat extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. The HTML color code that represents the color of lines in the chart.
-     * @return string|null
-    */
-    public function getColor(): ?string {
-        $val = $this->getBackingStore()->get('color');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'color' => fn(ParseNode $n) => $o->setColor($n->getStringValue()),
         ]);
     }
 
@@ -53,15 +40,6 @@ class WorkbookChartLineFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('color', $this->getColor());
-    }
-
-    /**
-     * Sets the color property value. The HTML color code that represents the color of lines in the chart.
-     * @param string|null $value Value to set for the color property.
-    */
-    public function setColor(?string $value): void {
-        $this->getBackingStore()->set('color', $value);
     }
 
 }

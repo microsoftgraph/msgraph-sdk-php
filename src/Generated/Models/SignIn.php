@@ -145,7 +145,14 @@ class SignIn extends Entity implements Parsable
             'resourceDisplayName' => fn(ParseNode $n) => $o->setResourceDisplayName($n->getStringValue()),
             'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
             'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
-            'riskEventTypes' => fn(ParseNode $n) => $o->setRiskEventTypes($n->getCollectionOfEnumValues(RiskEventType::class)),
+            'riskEventTypes' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setRiskEventTypes($val);
+            },
             'riskEventTypes_v2' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -238,13 +245,13 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Gets the riskEventTypes property value. The riskEventTypes property
-     * @return array<RiskEventType>|null
+     * @return array<string>|null
     */
     public function getRiskEventTypes(): ?array {
         $val = $this->getBackingStore()->get('riskEventTypes');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, RiskEventType::class);
-            /** @var array<RiskEventType>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'riskEventTypes'");
@@ -368,7 +375,7 @@ class SignIn extends Entity implements Parsable
         $writer->writeStringValue('resourceDisplayName', $this->getResourceDisplayName());
         $writer->writeStringValue('resourceId', $this->getResourceId());
         $writer->writeEnumValue('riskDetail', $this->getRiskDetail());
-        $writer->writeCollectionOfEnumValues('riskEventTypes', $this->getRiskEventTypes());
+        $writer->writeCollectionOfPrimitiveValues('riskEventTypes', $this->getRiskEventTypes());
         $writer->writeCollectionOfPrimitiveValues('riskEventTypes_v2', $this->getRiskEventTypesV2());
         $writer->writeEnumValue('riskLevelAggregated', $this->getRiskLevelAggregated());
         $writer->writeEnumValue('riskLevelDuringSignIn', $this->getRiskLevelDuringSignIn());
@@ -493,7 +500,7 @@ class SignIn extends Entity implements Parsable
 
     /**
      * Sets the riskEventTypes property value. The riskEventTypes property
-     * @param array<RiskEventType>|null $value Value to set for the riskEventTypes property.
+     * @param array<string>|null $value Value to set for the riskEventTypes property.
     */
     public function setRiskEventTypes(?array $value): void {
         $this->getBackingStore()->set('riskEventTypes', $value);

@@ -25,52 +25,13 @@ class M365AppsInstallationOptions extends Entity implements Parsable
     }
 
     /**
-     * Gets the appsForMac property value. The appsForMac property
-     * @return AppsInstallationOptionsForMac|null
-    */
-    public function getAppsForMac(): ?AppsInstallationOptionsForMac {
-        $val = $this->getBackingStore()->get('appsForMac');
-        if (is_null($val) || $val instanceof AppsInstallationOptionsForMac) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'appsForMac'");
-    }
-
-    /**
-     * Gets the appsForWindows property value. The appsForWindows property
-     * @return AppsInstallationOptionsForWindows|null
-    */
-    public function getAppsForWindows(): ?AppsInstallationOptionsForWindows {
-        $val = $this->getBackingStore()->get('appsForWindows');
-        if (is_null($val) || $val instanceof AppsInstallationOptionsForWindows) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'appsForWindows'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'appsForMac' => fn(ParseNode $n) => $o->setAppsForMac($n->getObjectValue([AppsInstallationOptionsForMac::class, 'createFromDiscriminatorValue'])),
-            'appsForWindows' => fn(ParseNode $n) => $o->setAppsForWindows($n->getObjectValue([AppsInstallationOptionsForWindows::class, 'createFromDiscriminatorValue'])),
-            'updateChannel' => fn(ParseNode $n) => $o->setUpdateChannel($n->getEnumValue(AppsUpdateChannelType::class)),
         ]);
-    }
-
-    /**
-     * Gets the updateChannel property value. The updateChannel property
-     * @return AppsUpdateChannelType|null
-    */
-    public function getUpdateChannel(): ?AppsUpdateChannelType {
-        $val = $this->getBackingStore()->get('updateChannel');
-        if (is_null($val) || $val instanceof AppsUpdateChannelType) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'updateChannel'");
     }
 
     /**
@@ -79,33 +40,6 @@ class M365AppsInstallationOptions extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('appsForMac', $this->getAppsForMac());
-        $writer->writeObjectValue('appsForWindows', $this->getAppsForWindows());
-        $writer->writeEnumValue('updateChannel', $this->getUpdateChannel());
-    }
-
-    /**
-     * Sets the appsForMac property value. The appsForMac property
-     * @param AppsInstallationOptionsForMac|null $value Value to set for the appsForMac property.
-    */
-    public function setAppsForMac(?AppsInstallationOptionsForMac $value): void {
-        $this->getBackingStore()->set('appsForMac', $value);
-    }
-
-    /**
-     * Sets the appsForWindows property value. The appsForWindows property
-     * @param AppsInstallationOptionsForWindows|null $value Value to set for the appsForWindows property.
-    */
-    public function setAppsForWindows(?AppsInstallationOptionsForWindows $value): void {
-        $this->getBackingStore()->set('appsForWindows', $value);
-    }
-
-    /**
-     * Sets the updateChannel property value. The updateChannel property
-     * @param AppsUpdateChannelType|null $value Value to set for the updateChannel property.
-    */
-    public function setUpdateChannel(?AppsUpdateChannelType $value): void {
-        $this->getBackingStore()->set('updateChannel', $value);
     }
 
 }

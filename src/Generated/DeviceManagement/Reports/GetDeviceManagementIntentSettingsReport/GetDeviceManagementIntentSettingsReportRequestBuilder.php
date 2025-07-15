@@ -36,7 +36,6 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder extends BaseRequestB
      * @param GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdevicemanagementintentsettingsreport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetDeviceManagementIntentSettingsReportPostRequestBody $body, ?GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

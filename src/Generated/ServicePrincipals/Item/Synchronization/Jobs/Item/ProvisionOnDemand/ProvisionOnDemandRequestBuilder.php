@@ -36,7 +36,6 @@ class ProvisionOnDemandRequestBuilder extends BaseRequestBuilder
      * @param ProvisionOnDemandRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringKeyStringValuePair|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-provisionondemand?view=graph-rest-1.0 Find more info here
     */
     public function post(ProvisionOnDemandPostRequestBody $body, ?ProvisionOnDemandRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

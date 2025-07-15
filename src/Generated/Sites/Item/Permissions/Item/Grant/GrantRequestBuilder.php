@@ -35,7 +35,6 @@ class GrantRequestBuilder extends BaseRequestBuilder
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GrantPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0 Find more info here
     */
     public function post(GrantPostRequestBody $body, ?GrantRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

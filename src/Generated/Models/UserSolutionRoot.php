@@ -31,20 +31,7 @@ class UserSolutionRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'workingTimeSchedule' => fn(ParseNode $n) => $o->setWorkingTimeSchedule($n->getObjectValue([WorkingTimeSchedule::class, 'createFromDiscriminatorValue'])),
         ]);
-    }
-
-    /**
-     * Gets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
-     * @return WorkingTimeSchedule|null
-    */
-    public function getWorkingTimeSchedule(): ?WorkingTimeSchedule {
-        $val = $this->getBackingStore()->get('workingTimeSchedule');
-        if (is_null($val) || $val instanceof WorkingTimeSchedule) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'workingTimeSchedule'");
     }
 
     /**
@@ -53,15 +40,6 @@ class UserSolutionRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('workingTimeSchedule', $this->getWorkingTimeSchedule());
-    }
-
-    /**
-     * Sets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
-     * @param WorkingTimeSchedule|null $value Value to set for the workingTimeSchedule property.
-    */
-    public function setWorkingTimeSchedule(?WorkingTimeSchedule $value): void {
-        $this->getBackingStore()->set('workingTimeSchedule', $value);
     }
 
 }
