@@ -38,7 +38,6 @@ class GetSharePointActivityPagesWithPeriodRequestBuilder extends BaseRequestBuil
      * @param GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointactivitypages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

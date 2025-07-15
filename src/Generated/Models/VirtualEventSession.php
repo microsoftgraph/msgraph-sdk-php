@@ -46,6 +46,7 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'videoOnDemandWebUrl' => fn(ParseNode $n) => $o->setVideoOnDemandWebUrl($n->getStringValue()),
         ]);
     }
 
@@ -62,6 +63,18 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
     }
 
     /**
+     * Gets the videoOnDemandWebUrl property value. The URL of the video on demand (VOD) for Microsoft Teams events that allows webinar and town hall organizers to quickly publish and share event recordings.
+     * @return string|null
+    */
+    public function getVideoOnDemandWebUrl(): ?string {
+        $val = $this->getBackingStore()->get('videoOnDemandWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'videoOnDemandWebUrl'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -69,6 +82,7 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
         $writer->writeObjectValue('startDateTime', $this->getStartDateTime());
+        $writer->writeStringValue('videoOnDemandWebUrl', $this->getVideoOnDemandWebUrl());
     }
 
     /**
@@ -85,6 +99,14 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
+    }
+
+    /**
+     * Sets the videoOnDemandWebUrl property value. The URL of the video on demand (VOD) for Microsoft Teams events that allows webinar and town hall organizers to quickly publish and share event recordings.
+     * @param string|null $value Value to set for the videoOnDemandWebUrl property.
+    */
+    public function setVideoOnDemandWebUrl(?string $value): void {
+        $this->getBackingStore()->set('videoOnDemandWebUrl', $value);
     }
 
 }

@@ -36,7 +36,6 @@ class AddLargeGalleryViewRequestBuilder extends BaseRequestBuilder
      * @param AddLargeGalleryViewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AddLargeGalleryViewOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/call-addlargegalleryview?view=graph-rest-1.0 Find more info here
     */
     public function post(AddLargeGalleryViewPostRequestBody $body, ?AddLargeGalleryViewRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

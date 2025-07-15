@@ -31,20 +31,7 @@ class TeamsLicensingDetails extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'hasTeamsLicense' => fn(ParseNode $n) => $o->setHasTeamsLicense($n->getBooleanValue()),
         ]);
-    }
-
-    /**
-     * Gets the hasTeamsLicense property value. Indicates whether the user has a valid license to use Microsoft Teams.
-     * @return bool|null
-    */
-    public function getHasTeamsLicense(): ?bool {
-        $val = $this->getBackingStore()->get('hasTeamsLicense');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasTeamsLicense'");
     }
 
     /**
@@ -53,15 +40,6 @@ class TeamsLicensingDetails extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('hasTeamsLicense', $this->getHasTeamsLicense());
-    }
-
-    /**
-     * Sets the hasTeamsLicense property value. Indicates whether the user has a valid license to use Microsoft Teams.
-     * @param bool|null $value Value to set for the hasTeamsLicense property.
-    */
-    public function setHasTeamsLicense(?bool $value): void {
-        $this->getBackingStore()->set('hasTeamsLicense', $value);
     }
 
 }

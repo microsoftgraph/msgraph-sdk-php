@@ -34,7 +34,6 @@ class SharedWithMeRequestBuilder extends BaseRequestBuilder
      * @param SharedWithMeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharedWithMeGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/drive-sharedwithme?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharedWithMeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

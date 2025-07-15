@@ -35,7 +35,6 @@ class CheckMemberGroupsRequestBuilder extends BaseRequestBuilder
      * @param CheckMemberGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckMemberGroupsPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/directoryobject-checkmembergroups?view=graph-rest-1.0 Find more info here
     */
     public function post(CheckMemberGroupsPostRequestBody $body, ?CheckMemberGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

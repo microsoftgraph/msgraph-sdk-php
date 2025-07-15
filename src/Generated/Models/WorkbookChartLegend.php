@@ -31,59 +31,7 @@ class WorkbookChartLegend extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartLegendFormat::class, 'createFromDiscriminatorValue'])),
-            'overlay' => fn(ParseNode $n) => $o->setOverlay($n->getBooleanValue()),
-            'position' => fn(ParseNode $n) => $o->setPosition($n->getStringValue()),
-            'visible' => fn(ParseNode $n) => $o->setVisible($n->getBooleanValue()),
         ]);
-    }
-
-    /**
-     * Gets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
-     * @return WorkbookChartLegendFormat|null
-    */
-    public function getFormat(): ?WorkbookChartLegendFormat {
-        $val = $this->getBackingStore()->get('format');
-        if (is_null($val) || $val instanceof WorkbookChartLegendFormat) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
-    }
-
-    /**
-     * Gets the overlay property value. Indicates whether the chart legend should overlap with the main body of the chart.
-     * @return bool|null
-    */
-    public function getOverlay(): ?bool {
-        $val = $this->getBackingStore()->get('overlay');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'overlay'");
-    }
-
-    /**
-     * Gets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
-     * @return string|null
-    */
-    public function getPosition(): ?string {
-        $val = $this->getBackingStore()->get('position');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'position'");
-    }
-
-    /**
-     * Gets the visible property value. Indicates whether the chart legend is visible.
-     * @return bool|null
-    */
-    public function getVisible(): ?bool {
-        $val = $this->getBackingStore()->get('visible');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'visible'");
     }
 
     /**
@@ -92,42 +40,6 @@ class WorkbookChartLegend extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->getFormat());
-        $writer->writeBooleanValue('overlay', $this->getOverlay());
-        $writer->writeStringValue('position', $this->getPosition());
-        $writer->writeBooleanValue('visible', $this->getVisible());
-    }
-
-    /**
-     * Sets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
-     * @param WorkbookChartLegendFormat|null $value Value to set for the format property.
-    */
-    public function setFormat(?WorkbookChartLegendFormat $value): void {
-        $this->getBackingStore()->set('format', $value);
-    }
-
-    /**
-     * Sets the overlay property value. Indicates whether the chart legend should overlap with the main body of the chart.
-     * @param bool|null $value Value to set for the overlay property.
-    */
-    public function setOverlay(?bool $value): void {
-        $this->getBackingStore()->set('overlay', $value);
-    }
-
-    /**
-     * Sets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
-     * @param string|null $value Value to set for the position property.
-    */
-    public function setPosition(?string $value): void {
-        $this->getBackingStore()->set('position', $value);
-    }
-
-    /**
-     * Sets the visible property value. Indicates whether the chart legend is visible.
-     * @param bool|null $value Value to set for the visible property.
-    */
-    public function setVisible(?bool $value): void {
-        $this->getBackingStore()->set('visible', $value);
     }
 
 }

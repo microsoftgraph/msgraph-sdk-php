@@ -35,7 +35,6 @@ class SendVirtualAppointmentReminderSmsRequestBuilder extends BaseRequestBuilder
      * @param SendVirtualAppointmentReminderSmsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/virtualappointment-sendvirtualappointmentremindersms?view=graph-rest-1.0 Find more info here
     */
     public function post(SendVirtualAppointmentReminderSmsPostRequestBody $body, ?SendVirtualAppointmentReminderSmsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

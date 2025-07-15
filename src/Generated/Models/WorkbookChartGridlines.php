@@ -31,33 +31,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'format' => fn(ParseNode $n) => $o->setFormat($n->getObjectValue([WorkbookChartGridlinesFormat::class, 'createFromDiscriminatorValue'])),
-            'visible' => fn(ParseNode $n) => $o->setVisible($n->getBooleanValue()),
         ]);
-    }
-
-    /**
-     * Gets the format property value. Represents the formatting of chart gridlines. Read-only.
-     * @return WorkbookChartGridlinesFormat|null
-    */
-    public function getFormat(): ?WorkbookChartGridlinesFormat {
-        $val = $this->getBackingStore()->get('format');
-        if (is_null($val) || $val instanceof WorkbookChartGridlinesFormat) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
-    }
-
-    /**
-     * Gets the visible property value. Indicates whether the axis gridlines are visible.
-     * @return bool|null
-    */
-    public function getVisible(): ?bool {
-        $val = $this->getBackingStore()->get('visible');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'visible'");
     }
 
     /**
@@ -66,24 +40,6 @@ class WorkbookChartGridlines extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeObjectValue('format', $this->getFormat());
-        $writer->writeBooleanValue('visible', $this->getVisible());
-    }
-
-    /**
-     * Sets the format property value. Represents the formatting of chart gridlines. Read-only.
-     * @param WorkbookChartGridlinesFormat|null $value Value to set for the format property.
-    */
-    public function setFormat(?WorkbookChartGridlinesFormat $value): void {
-        $this->getBackingStore()->set('format', $value);
-    }
-
-    /**
-     * Sets the visible property value. Indicates whether the axis gridlines are visible.
-     * @param bool|null $value Value to set for the visible property.
-    */
-    public function setVisible(?bool $value): void {
-        $this->getBackingStore()->set('visible', $value);
     }
 
 }

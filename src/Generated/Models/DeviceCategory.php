@@ -28,38 +28,12 @@ class DeviceCategory extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Optional description for the device category.
-     * @return string|null
-    */
-    public function getDescription(): ?string {
-        $val = $this->getBackingStore()->get('description');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
-    }
-
-    /**
-     * Gets the displayName property value. Display name for the device category.
-     * @return string|null
-    */
-    public function getDisplayName(): ?string {
-        $val = $this->getBackingStore()->get('displayName');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
-            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
         ]);
     }
 
@@ -69,24 +43,6 @@ class DeviceCategory extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeStringValue('description', $this->getDescription());
-        $writer->writeStringValue('displayName', $this->getDisplayName());
-    }
-
-    /**
-     * Sets the description property value. Optional description for the device category.
-     * @param string|null $value Value to set for the description property.
-    */
-    public function setDescription(?string $value): void {
-        $this->getBackingStore()->set('description', $value);
-    }
-
-    /**
-     * Sets the displayName property value. Display name for the device category.
-     * @param string|null $value Value to set for the displayName property.
-    */
-    public function setDisplayName(?string $value): void {
-        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

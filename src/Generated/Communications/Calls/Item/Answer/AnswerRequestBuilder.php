@@ -35,7 +35,6 @@ class AnswerRequestBuilder extends BaseRequestBuilder
      * @param AnswerRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/call-answer?view=graph-rest-1.0 Find more info here
     */
     public function post(AnswerPostRequestBody $body, ?AnswerRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

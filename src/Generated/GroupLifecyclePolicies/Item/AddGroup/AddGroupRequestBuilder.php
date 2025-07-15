@@ -35,7 +35,6 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AddGroupPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0 Find more info here
     */
     public function post(AddGroupPostRequestBody $body, ?AddGroupRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

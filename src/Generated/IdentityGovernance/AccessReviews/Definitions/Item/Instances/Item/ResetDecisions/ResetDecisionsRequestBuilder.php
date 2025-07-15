@@ -34,7 +34,6 @@ class ResetDecisionsRequestBuilder extends BaseRequestBuilder
      * @param ResetDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0 Find more info here
     */
     public function post(?ResetDecisionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

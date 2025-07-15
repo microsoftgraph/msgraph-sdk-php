@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\Unbi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get unbilled from reports
+ * Represents details for unbilled invoice reconciliation data.
 */
 class UnbilledRequestBuilderGetQueryParameters 
 {

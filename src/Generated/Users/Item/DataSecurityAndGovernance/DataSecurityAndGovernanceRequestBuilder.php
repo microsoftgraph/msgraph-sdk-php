@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\UserDataSecurityAndGovernance;
 use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\Activities\ActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\ProcessContent\ProcessContentRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes\ProtectionScopesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\SensitivityLabels\SensitivityLabelsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -38,6 +39,13 @@ class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder
     */
     public function protectionScopes(): ProtectionScopesRequestBuilder {
         return new ProtectionScopesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sensitivityLabels property of the microsoft.graph.dataSecurityAndGovernance entity.
+    */
+    public function sensitivityLabels(): SensitivityLabelsRequestBuilder {
+        return new SensitivityLabelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

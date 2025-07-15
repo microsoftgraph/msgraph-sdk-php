@@ -37,7 +37,6 @@ class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseReque
      * @param GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetApplicableContentTypesForListWithListIdGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/site-getapplicablecontenttypesforlist?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

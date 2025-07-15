@@ -35,7 +35,6 @@ class RenameRequestBuilder extends BaseRequestBuilder
      * @param RenameRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/cloudpc-rename?view=graph-rest-1.0 Find more info here
     */
     public function post(RenamePostRequestBody $body, ?RenameRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

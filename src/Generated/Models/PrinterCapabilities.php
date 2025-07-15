@@ -84,13 +84,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
-     * @return array<PrintColorMode>|null
+     * @return array<string>|null
     */
     public function getColorModes(): ?array {
         $val = $this->getBackingStore()->get('colorModes');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintColorMode::class);
-            /** @var array<PrintColorMode>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'colorModes'");
@@ -138,13 +138,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     * @return array<PrintDuplexMode>|null
+     * @return array<string>|null
     */
     public function getDuplexModes(): ?array {
         $val = $this->getBackingStore()->get('duplexModes');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintDuplexMode::class);
-            /** @var array<PrintDuplexMode>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'duplexModes'");
@@ -152,13 +152,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
-     * @return array<PrinterFeedOrientation>|null
+     * @return array<string>|null
     */
     public function getFeedOrientations(): ?array {
         $val = $this->getBackingStore()->get('feedOrientations');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrinterFeedOrientation::class);
-            /** @var array<PrinterFeedOrientation>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'feedOrientations'");
@@ -180,7 +180,14 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
                 $this->setBottomMargins($val);
             },
             'collation' => fn(ParseNode $n) => $o->setCollation($n->getBooleanValue()),
-            'colorModes' => fn(ParseNode $n) => $o->setColorModes($n->getCollectionOfEnumValues(PrintColorMode::class)),
+            'colorModes' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setColorModes($val);
+            },
             'contentTypes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -198,9 +205,30 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<int>|null $val */
                 $this->setDpis($val);
             },
-            'duplexModes' => fn(ParseNode $n) => $o->setDuplexModes($n->getCollectionOfEnumValues(PrintDuplexMode::class)),
-            'feedOrientations' => fn(ParseNode $n) => $o->setFeedOrientations($n->getCollectionOfEnumValues(PrinterFeedOrientation::class)),
-            'finishings' => fn(ParseNode $n) => $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)),
+            'duplexModes' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setDuplexModes($val);
+            },
+            'feedOrientations' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setFeedOrientations($val);
+            },
+            'finishings' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setFinishings($val);
+            },
             'inputBins' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -243,9 +271,23 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<string>|null $val */
                 $this->setMediaTypes($val);
             },
-            'multipageLayouts' => fn(ParseNode $n) => $o->setMultipageLayouts($n->getCollectionOfEnumValues(PrintMultipageLayout::class)),
+            'multipageLayouts' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setMultipageLayouts($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'orientations' => fn(ParseNode $n) => $o->setOrientations($n->getCollectionOfEnumValues(PrintOrientation::class)),
+            'orientations' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setOrientations($val);
+            },
             'outputBins' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -262,7 +304,14 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<int>|null $val */
                 $this->setPagesPerSheet($val);
             },
-            'qualities' => fn(ParseNode $n) => $o->setQualities($n->getCollectionOfEnumValues(PrintQuality::class)),
+            'qualities' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setQualities($val);
+            },
             'rightMargins' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -271,7 +320,14 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<int>|null $val */
                 $this->setRightMargins($val);
             },
-            'scalings' => fn(ParseNode $n) => $o->setScalings($n->getCollectionOfEnumValues(PrintScaling::class)),
+            'scalings' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setScalings($val);
+            },
             'supportsFitPdfToPage' => fn(ParseNode $n) => $o->setSupportsFitPdfToPage($n->getBooleanValue()),
             'topMargins' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -286,13 +342,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the finishings property value. Finishing processes the printer supports for a printed document.
-     * @return array<PrintFinishing>|null
+     * @return array<string>|null
     */
     public function getFinishings(): ?array {
         $val = $this->getBackingStore()->get('finishings');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintFinishing::class);
-            /** @var array<PrintFinishing>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'finishings'");
@@ -394,13 +450,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
-     * @return array<PrintMultipageLayout>|null
+     * @return array<string>|null
     */
     public function getMultipageLayouts(): ?array {
         $val = $this->getBackingStore()->get('multipageLayouts');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintMultipageLayout::class);
-            /** @var array<PrintMultipageLayout>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'multipageLayouts'");
@@ -420,13 +476,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
-     * @return array<PrintOrientation>|null
+     * @return array<string>|null
     */
     public function getOrientations(): ?array {
         $val = $this->getBackingStore()->get('orientations');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintOrientation::class);
-            /** @var array<PrintOrientation>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'orientations'");
@@ -462,13 +518,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the qualities property value. The print qualities supported by the printer.
-     * @return array<PrintQuality>|null
+     * @return array<string>|null
     */
     public function getQualities(): ?array {
         $val = $this->getBackingStore()->get('qualities');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintQuality::class);
-            /** @var array<PrintQuality>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'qualities'");
@@ -490,13 +546,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the scalings property value. Supported print scalings.
-     * @return array<PrintScaling>|null
+     * @return array<string>|null
     */
     public function getScalings(): ?array {
         $val = $this->getBackingStore()->get('scalings');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, PrintScaling::class);
-            /** @var array<PrintScaling>|null $val */
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'scalings'");
@@ -535,13 +591,13 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('bottomMargins', $this->getBottomMargins());
         $writer->writeBooleanValue('collation', $this->getCollation());
-        $writer->writeCollectionOfEnumValues('colorModes', $this->getColorModes());
+        $writer->writeCollectionOfPrimitiveValues('colorModes', $this->getColorModes());
         $writer->writeCollectionOfPrimitiveValues('contentTypes', $this->getContentTypes());
         $writer->writeObjectValue('copiesPerJob', $this->getCopiesPerJob());
         $writer->writeCollectionOfPrimitiveValues('dpis', $this->getDpis());
-        $writer->writeCollectionOfEnumValues('duplexModes', $this->getDuplexModes());
-        $writer->writeCollectionOfEnumValues('feedOrientations', $this->getFeedOrientations());
-        $writer->writeCollectionOfEnumValues('finishings', $this->getFinishings());
+        $writer->writeCollectionOfPrimitiveValues('duplexModes', $this->getDuplexModes());
+        $writer->writeCollectionOfPrimitiveValues('feedOrientations', $this->getFeedOrientations());
+        $writer->writeCollectionOfPrimitiveValues('finishings', $this->getFinishings());
         $writer->writeCollectionOfPrimitiveValues('inputBins', $this->getInputBins());
         $writer->writeBooleanValue('isColorPrintingSupported', $this->getIsColorPrintingSupported());
         $writer->writeBooleanValue('isPageRangeSupported', $this->getIsPageRangeSupported());
@@ -549,14 +605,14 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeCollectionOfPrimitiveValues('mediaColors', $this->getMediaColors());
         $writer->writeCollectionOfPrimitiveValues('mediaSizes', $this->getMediaSizes());
         $writer->writeCollectionOfPrimitiveValues('mediaTypes', $this->getMediaTypes());
-        $writer->writeCollectionOfEnumValues('multipageLayouts', $this->getMultipageLayouts());
+        $writer->writeCollectionOfPrimitiveValues('multipageLayouts', $this->getMultipageLayouts());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeCollectionOfEnumValues('orientations', $this->getOrientations());
+        $writer->writeCollectionOfPrimitiveValues('orientations', $this->getOrientations());
         $writer->writeCollectionOfPrimitiveValues('outputBins', $this->getOutputBins());
         $writer->writeCollectionOfPrimitiveValues('pagesPerSheet', $this->getPagesPerSheet());
-        $writer->writeCollectionOfEnumValues('qualities', $this->getQualities());
+        $writer->writeCollectionOfPrimitiveValues('qualities', $this->getQualities());
         $writer->writeCollectionOfPrimitiveValues('rightMargins', $this->getRightMargins());
-        $writer->writeCollectionOfEnumValues('scalings', $this->getScalings());
+        $writer->writeCollectionOfPrimitiveValues('scalings', $this->getScalings());
         $writer->writeBooleanValue('supportsFitPdfToPage', $this->getSupportsFitPdfToPage());
         $writer->writeCollectionOfPrimitiveValues('topMargins', $this->getTopMargins());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -596,7 +652,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
-     * @param array<PrintColorMode>|null $value Value to set for the colorModes property.
+     * @param array<string>|null $value Value to set for the colorModes property.
     */
     public function setColorModes(?array $value): void {
         $this->getBackingStore()->set('colorModes', $value);
@@ -628,7 +684,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     * @param array<PrintDuplexMode>|null $value Value to set for the duplexModes property.
+     * @param array<string>|null $value Value to set for the duplexModes property.
     */
     public function setDuplexModes(?array $value): void {
         $this->getBackingStore()->set('duplexModes', $value);
@@ -636,7 +692,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the feedOrientations property value. The list of feed orientations that are supported by the printer.
-     * @param array<PrinterFeedOrientation>|null $value Value to set for the feedOrientations property.
+     * @param array<string>|null $value Value to set for the feedOrientations property.
     */
     public function setFeedOrientations(?array $value): void {
         $this->getBackingStore()->set('feedOrientations', $value);
@@ -644,7 +700,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the finishings property value. Finishing processes the printer supports for a printed document.
-     * @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     * @param array<string>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value): void {
         $this->getBackingStore()->set('finishings', $value);
@@ -708,7 +764,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
-     * @param array<PrintMultipageLayout>|null $value Value to set for the multipageLayouts property.
+     * @param array<string>|null $value Value to set for the multipageLayouts property.
     */
     public function setMultipageLayouts(?array $value): void {
         $this->getBackingStore()->set('multipageLayouts', $value);
@@ -724,7 +780,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
-     * @param array<PrintOrientation>|null $value Value to set for the orientations property.
+     * @param array<string>|null $value Value to set for the orientations property.
     */
     public function setOrientations(?array $value): void {
         $this->getBackingStore()->set('orientations', $value);
@@ -748,7 +804,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the qualities property value. The print qualities supported by the printer.
-     * @param array<PrintQuality>|null $value Value to set for the qualities property.
+     * @param array<string>|null $value Value to set for the qualities property.
     */
     public function setQualities(?array $value): void {
         $this->getBackingStore()->set('qualities', $value);
@@ -764,7 +820,7 @@ class PrinterCapabilities implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the scalings property value. Supported print scalings.
-     * @param array<PrintScaling>|null $value Value to set for the scalings property.
+     * @param array<string>|null $value Value to set for the scalings property.
     */
     public function setScalings(?array $value): void {
         $this->getBackingStore()->set('scalings', $value);

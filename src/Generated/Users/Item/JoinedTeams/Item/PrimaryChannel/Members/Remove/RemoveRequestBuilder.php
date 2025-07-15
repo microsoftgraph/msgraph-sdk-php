@@ -35,7 +35,6 @@ class RemoveRequestBuilder extends BaseRequestBuilder
      * @param RemoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RemovePostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/conversationmember-remove?view=graph-rest-1.0 Find more info here
     */
     public function post(RemovePostRequestBody $body, ?RemoveRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

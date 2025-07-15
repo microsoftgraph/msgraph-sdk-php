@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TenantDataSecurityAndGovernance;
 use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\ProcessContentAsync\ProcessContentAsyncRequestBuilder;
 use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\ProtectionScopes\ProtectionScopesRequestBuilder;
+use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\SensitivityLabelsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,6 +31,13 @@ class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder
     */
     public function protectionScopes(): ProtectionScopesRequestBuilder {
         return new ProtectionScopesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sensitivityLabels property of the microsoft.graph.dataSecurityAndGovernance entity.
+    */
+    public function sensitivityLabels(): SensitivityLabelsRequestBuilder {
+        return new SensitivityLabelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

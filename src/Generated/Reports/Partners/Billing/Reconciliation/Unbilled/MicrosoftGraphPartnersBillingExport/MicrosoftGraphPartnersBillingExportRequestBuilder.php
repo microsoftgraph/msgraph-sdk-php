@@ -31,7 +31,7 @@ class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Invoke action export
+     * Export the unbilled invoice reconciliation data for a specific billing period and a given currency.
      * @param ExportPostRequestBody $body The request body
      * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Operation|null>
@@ -46,7 +46,7 @@ class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Invoke action export
+     * Export the unbilled invoice reconciliation data for a specific billing period and a given currency.
      * @param ExportPostRequestBody $body The request body
      * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

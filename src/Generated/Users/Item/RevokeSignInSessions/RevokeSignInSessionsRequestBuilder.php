@@ -34,7 +34,6 @@ class RevokeSignInSessionsRequestBuilder extends BaseRequestBuilder
      * @param RevokeSignInSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RevokeSignInSessionsPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-revokesigninsessions?view=graph-rest-1.0 Find more info here
     */
     public function post(?RevokeSignInSessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

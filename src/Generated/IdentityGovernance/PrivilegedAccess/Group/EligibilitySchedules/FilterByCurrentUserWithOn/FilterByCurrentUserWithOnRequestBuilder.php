@@ -37,7 +37,6 @@ class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder
      * @param FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilterByCurrentUserWithOnGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-filterbycurrentuser?view=graph-rest-1.0 Find more info here
     */
     public function get(?FilterByCurrentUserWithOnRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

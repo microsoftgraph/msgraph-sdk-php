@@ -34,7 +34,6 @@ class GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDate
      * @param GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/onlinemeeting-getalltranscripts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

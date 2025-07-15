@@ -35,7 +35,6 @@ class ReprocessLicenseAssignmentRequestBuilder extends BaseRequestBuilder
      * @param ReprocessLicenseAssignmentRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-reprocesslicenseassignment?view=graph-rest-1.0 Find more info here
     */
     public function post(?ReprocessLicenseAssignmentRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

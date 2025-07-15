@@ -34,7 +34,6 @@ class IsPublishedRequestBuilder extends BaseRequestBuilder
      * @param IsPublishedRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IsPublishedGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/contenttype-ispublished?view=graph-rest-1.0 Find more info here
     */
     public function get(?IsPublishedRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

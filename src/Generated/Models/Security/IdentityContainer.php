@@ -6,7 +6,6 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IdentityContainer extends Entity implements Parsable 
 {
@@ -33,37 +32,7 @@ class IdentityContainer extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'healthIssues' => fn(ParseNode $n) => $o->setHealthIssues($n->getCollectionOfObjectValues([HealthIssue::class, 'createFromDiscriminatorValue'])),
-            'sensors' => fn(ParseNode $n) => $o->setSensors($n->getCollectionOfObjectValues([Sensor::class, 'createFromDiscriminatorValue'])),
         ]);
-    }
-
-    /**
-     * Gets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer's Microsoft Defender for Identity configuration.
-     * @return array<HealthIssue>|null
-    */
-    public function getHealthIssues(): ?array {
-        $val = $this->getBackingStore()->get('healthIssues');
-        if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, HealthIssue::class);
-            /** @var array<HealthIssue>|null $val */
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'healthIssues'");
-    }
-
-    /**
-     * Gets the sensors property value. Represents a customer's Microsoft Defender for Identity sensors.
-     * @return array<Sensor>|null
-    */
-    public function getSensors(): ?array {
-        $val = $this->getBackingStore()->get('sensors');
-        if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, Sensor::class);
-            /** @var array<Sensor>|null $val */
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensors'");
     }
 
     /**
@@ -72,24 +41,6 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfObjectValues('healthIssues', $this->getHealthIssues());
-        $writer->writeCollectionOfObjectValues('sensors', $this->getSensors());
-    }
-
-    /**
-     * Sets the healthIssues property value. Represents potential issues identified by Microsoft Defender for Identity within a customer's Microsoft Defender for Identity configuration.
-     * @param array<HealthIssue>|null $value Value to set for the healthIssues property.
-    */
-    public function setHealthIssues(?array $value): void {
-        $this->getBackingStore()->set('healthIssues', $value);
-    }
-
-    /**
-     * Sets the sensors property value. Represents a customer's Microsoft Defender for Identity sensors.
-     * @param array<Sensor>|null $value Value to set for the sensors property.
-    */
-    public function setSensors(?array $value): void {
-        $this->getBackingStore()->set('sensors', $value);
     }
 
 }

@@ -48,7 +48,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (for example, security groups).
      * @return string|null
     */
     public function getAlias(): ?string {
@@ -138,7 +138,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (for example, security groups).
      * @param string|null $value Value to set for the alias property.
     */
     public function setAlias(?string $value): void {

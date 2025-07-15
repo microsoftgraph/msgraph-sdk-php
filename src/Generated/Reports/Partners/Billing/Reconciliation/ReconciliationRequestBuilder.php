@@ -61,7 +61,7 @@ class ReconciliationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      * @param ReconciliationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BillingReconciliation|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class ReconciliationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents details for billed invoice reconciliation data.
+     * Represents details for billed and unbilled invoice reconciliation data.
      * @param ReconciliationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -34,7 +34,6 @@ class KeepAliveRequestBuilder extends BaseRequestBuilder
      * @param KeepAliveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/call-keepalive?view=graph-rest-1.0 Find more info here
     */
     public function post(?KeepAliveRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

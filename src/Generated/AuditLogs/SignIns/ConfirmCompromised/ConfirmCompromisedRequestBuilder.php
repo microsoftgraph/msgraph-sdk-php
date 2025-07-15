@@ -35,7 +35,6 @@ class ConfirmCompromisedRequestBuilder extends BaseRequestBuilder
      * @param ConfirmCompromisedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/signin-confirmcompromised?view=graph-rest-1.0 Find more info here
     */
     public function post(ConfirmCompromisedPostRequestBody $body, ?ConfirmCompromisedRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
