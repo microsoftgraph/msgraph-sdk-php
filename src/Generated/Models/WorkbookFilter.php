@@ -25,12 +25,25 @@ class WorkbookFilter extends Entity implements Parsable
     }
 
     /**
+     * Gets the criteria property value. The currently applied filter on the given column. Read-only.
+     * @return WorkbookFilterCriteria|null
+    */
+    public function getCriteria(): ?WorkbookFilterCriteria {
+        $val = $this->getBackingStore()->get('criteria');
+        if (is_null($val) || $val instanceof WorkbookFilterCriteria) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'criteria' => fn(ParseNode $n) => $o->setCriteria($n->getObjectValue([WorkbookFilterCriteria::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -40,6 +53,15 @@ class WorkbookFilter extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('criteria', $this->getCriteria());
+    }
+
+    /**
+     * Sets the criteria property value. The currently applied filter on the given column. Read-only.
+     * @param WorkbookFilterCriteria|null $value Value to set for the criteria property.
+    */
+    public function setCriteria(?WorkbookFilterCriteria $value): void {
+        $this->getBackingStore()->set('criteria', $value);
     }
 
 }

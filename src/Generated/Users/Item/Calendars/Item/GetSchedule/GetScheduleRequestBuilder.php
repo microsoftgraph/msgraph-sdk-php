@@ -35,6 +35,7 @@ class GetScheduleRequestBuilder extends BaseRequestBuilder
      * @param GetScheduleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetSchedulePostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0 Find more info here
     */
     public function post(GetSchedulePostRequestBody $body, ?GetScheduleRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

@@ -6,6 +6,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TriggerTypesRoot extends Entity implements Parsable 
 {
@@ -32,7 +33,22 @@ class TriggerTypesRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'retentionEventTypes' => fn(ParseNode $n) => $o->setRetentionEventTypes($n->getCollectionOfObjectValues([RetentionEventType::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the retentionEventTypes property value. The retentionEventTypes property
+     * @return array<RetentionEventType>|null
+    */
+    public function getRetentionEventTypes(): ?array {
+        $val = $this->getBackingStore()->get('retentionEventTypes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RetentionEventType::class);
+            /** @var array<RetentionEventType>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'retentionEventTypes'");
     }
 
     /**
@@ -41,6 +57,15 @@ class TriggerTypesRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('retentionEventTypes', $this->getRetentionEventTypes());
+    }
+
+    /**
+     * Sets the retentionEventTypes property value. The retentionEventTypes property
+     * @param array<RetentionEventType>|null $value Value to set for the retentionEventTypes property.
+    */
+    public function setRetentionEventTypes(?array $value): void {
+        $this->getBackingStore()->set('retentionEventTypes', $value);
     }
 
 }

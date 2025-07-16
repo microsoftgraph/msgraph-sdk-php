@@ -35,6 +35,7 @@ class MarkReadRequestBuilder extends BaseRequestBuilder
      * @param MarkReadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MarkReadPostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-markread?view=graph-rest-1.0 Find more info here
     */
     public function post(MarkReadPostRequestBody $body, ?MarkReadRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

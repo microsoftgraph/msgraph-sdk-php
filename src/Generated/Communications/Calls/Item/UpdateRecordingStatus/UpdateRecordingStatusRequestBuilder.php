@@ -36,6 +36,7 @@ class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder
      * @param UpdateRecordingStatusRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UpdateRecordingStatusOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/call-updaterecordingstatus?view=graph-rest-1.0 Find more info here
     */
     public function post(UpdateRecordingStatusPostRequestBody $body, ?UpdateRecordingStatusRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

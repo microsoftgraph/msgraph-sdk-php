@@ -35,6 +35,7 @@ class ArchiveRequestBuilder extends BaseRequestBuilder
      * @param ArchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ArchivePostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0 Find more info here
     */
     public function post(ArchivePostRequestBody $body, ?ArchiveRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

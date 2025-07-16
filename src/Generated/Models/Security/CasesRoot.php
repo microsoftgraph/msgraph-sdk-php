@@ -6,6 +6,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CasesRoot extends Entity implements Parsable 
 {
@@ -26,12 +27,27 @@ class CasesRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the ediscoveryCases property value. The ediscoveryCases property
+     * @return array<EdiscoveryCase>|null
+    */
+    public function getEdiscoveryCases(): ?array {
+        $val = $this->getBackingStore()->get('ediscoveryCases');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EdiscoveryCase::class);
+            /** @var array<EdiscoveryCase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ediscoveryCases'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'ediscoveryCases' => fn(ParseNode $n) => $o->setEdiscoveryCases($n->getCollectionOfObjectValues([EdiscoveryCase::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -41,6 +57,15 @@ class CasesRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('ediscoveryCases', $this->getEdiscoveryCases());
+    }
+
+    /**
+     * Sets the ediscoveryCases property value. The ediscoveryCases property
+     * @param array<EdiscoveryCase>|null $value Value to set for the ediscoveryCases property.
+    */
+    public function setEdiscoveryCases(?array $value): void {
+        $this->getBackingStore()->set('ediscoveryCases', $value);
     }
 
 }

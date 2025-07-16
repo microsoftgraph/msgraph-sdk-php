@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the user objects.
+ * Retrieve a list of user objects.
 */
 class UsersRequestBuilderGetQueryParameters 
 {

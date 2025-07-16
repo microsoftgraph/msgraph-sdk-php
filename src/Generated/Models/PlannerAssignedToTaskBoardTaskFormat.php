@@ -31,7 +31,33 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'orderHintsByAssignee' => fn(ParseNode $n) => $o->setOrderHintsByAssignee($n->getObjectValue([PlannerOrderHintsByAssignee::class, 'createFromDiscriminatorValue'])),
+            'unassignedOrderHint' => fn(ParseNode $n) => $o->setUnassignedOrderHint($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+     * @return PlannerOrderHintsByAssignee|null
+    */
+    public function getOrderHintsByAssignee(): ?PlannerOrderHintsByAssignee {
+        $val = $this->getBackingStore()->get('orderHintsByAssignee');
+        if (is_null($val) || $val instanceof PlannerOrderHintsByAssignee) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'orderHintsByAssignee'");
+    }
+
+    /**
+     * Gets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn't assigned to anyone, or if the orderHintsByAssignee dictionary doesn't provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+     * @return string|null
+    */
+    public function getUnassignedOrderHint(): ?string {
+        $val = $this->getBackingStore()->get('unassignedOrderHint');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unassignedOrderHint'");
     }
 
     /**
@@ -40,6 +66,24 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('orderHintsByAssignee', $this->getOrderHintsByAssignee());
+        $writer->writeStringValue('unassignedOrderHint', $this->getUnassignedOrderHint());
+    }
+
+    /**
+     * Sets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
+     * @param PlannerOrderHintsByAssignee|null $value Value to set for the orderHintsByAssignee property.
+    */
+    public function setOrderHintsByAssignee(?PlannerOrderHintsByAssignee $value): void {
+        $this->getBackingStore()->set('orderHintsByAssignee', $value);
+    }
+
+    /**
+     * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task isn't assigned to anyone, or if the orderHintsByAssignee dictionary doesn't provide an order hint for the user the task is assigned to. The format is defined as outlined here.
+     * @param string|null $value Value to set for the unassignedOrderHint property.
+    */
+    public function setUnassignedOrderHint(?string $value): void {
+        $this->getBackingStore()->set('unassignedOrderHint', $value);
     }
 
 }

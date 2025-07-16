@@ -35,6 +35,7 @@ class IncidentReportRequestBuilder extends BaseRequestBuilder
      * @param IncidentReportRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/servicehealthissue-incidentreport?view=graph-rest-1.0 Find more info here
     */
     public function get(?IncidentReportRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

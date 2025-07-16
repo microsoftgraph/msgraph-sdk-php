@@ -198,11 +198,11 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the windowsMobileMSI object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-managedmobilelobapp-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmobilemsi-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -213,12 +213,12 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a managedAndroidStoreApp object.
+     * Update the properties of a windowsUniversalAppX object.
      * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-managedandroidstoreapp-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsuniversalappx-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileApp $body, ?MobileAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -247,7 +247,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedMobileLobApp object.
+     * Read properties and relationships of the windowsMobileMSI object.
      * @param MobileAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -268,7 +268,7 @@ class MobileAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a managedAndroidStoreApp object.
+     * Update the properties of a windowsUniversalAppX object.
      * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -59,13 +59,13 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the daysOfWeek property value. The days of the week on which the user works.
-     * @return array<string>|null
+     * @return array<DayOfWeek>|null
     */
     public function getDaysOfWeek(): ?array {
         $val = $this->getBackingStore()->get('daysOfWeek');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, DayOfWeek::class);
+            /** @var array<DayOfWeek>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'daysOfWeek'");
@@ -90,14 +90,7 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'daysOfWeek' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setDaysOfWeek($val);
-            },
+            'daysOfWeek' => fn(ParseNode $n) => $o->setDaysOfWeek($n->getCollectionOfEnumValues(DayOfWeek::class)),
             'endTime' => fn(ParseNode $n) => $o->setEndTime($n->getTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'startTime' => fn(ParseNode $n) => $o->setStartTime($n->getTimeValue()),
@@ -146,7 +139,7 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('daysOfWeek', $this->getDaysOfWeek());
+        $writer->writeCollectionOfEnumValues('daysOfWeek', $this->getDaysOfWeek());
         $writer->writeTimeValue('endTime', $this->getEndTime());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeTimeValue('startTime', $this->getStartTime());
@@ -172,7 +165,7 @@ class WorkingHours implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the daysOfWeek property value. The days of the week on which the user works.
-     * @param array<string>|null $value Value to set for the daysOfWeek property.
+     * @param array<DayOfWeek>|null $value Value to set for the daysOfWeek property.
     */
     public function setDaysOfWeek(?array $value): void {
         $this->getBackingStore()->set('daysOfWeek', $value);

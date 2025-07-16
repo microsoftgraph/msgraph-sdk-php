@@ -28,13 +28,13 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
 
     /**
      * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @return array<string>|null
+     * @return array<TrainingAssignedTo>|null
     */
     public function getAssignedTo(): ?array {
         $val = $this->getBackingStore()->get('assignedTo');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, TrainingAssignedTo::class);
+            /** @var array<TrainingAssignedTo>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
@@ -83,14 +83,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'assignedTo' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setAssignedTo($val);
-            },
+            'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getCollectionOfEnumValues(TrainingAssignedTo::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'durationInMinutes' => fn(ParseNode $n) => $o->setDurationInMinutes($n->getIntegerValue()),
@@ -116,7 +109,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('assignedTo', $this->getAssignedTo());
+        $writer->writeCollectionOfEnumValues('assignedTo', $this->getAssignedTo());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeIntegerValue('durationInMinutes', $this->getDurationInMinutes());
@@ -125,7 +118,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
 
     /**
      * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
-     * @param array<string>|null $value Value to set for the assignedTo property.
+     * @param array<TrainingAssignedTo>|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?array $value): void {
         $this->getBackingStore()->set('assignedTo', $value);

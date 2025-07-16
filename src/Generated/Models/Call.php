@@ -149,14 +149,7 @@ class Call extends Entity implements Parsable
             'myParticipantId' => fn(ParseNode $n) => $o->setMyParticipantId($n->getStringValue()),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([CommsOperation::class, 'createFromDiscriminatorValue'])),
             'participants' => fn(ParseNode $n) => $o->setParticipants($n->getCollectionOfObjectValues([Participant::class, 'createFromDiscriminatorValue'])),
-            'requestedModalities' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setRequestedModalities($val);
-            },
+            'requestedModalities' => fn(ParseNode $n) => $o->setRequestedModalities($n->getCollectionOfEnumValues(Modality::class)),
             'resultInfo' => fn(ParseNode $n) => $o->setResultInfo($n->getObjectValue([ResultInfo::class, 'createFromDiscriminatorValue'])),
             'source' => fn(ParseNode $n) => $o->setSource($n->getObjectValue([ParticipantInfo::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(CallState::class)),
@@ -258,13 +251,13 @@ class Call extends Entity implements Parsable
 
     /**
      * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     * @return array<string>|null
+     * @return array<Modality>|null
     */
     public function getRequestedModalities(): ?array {
         $val = $this->getBackingStore()->get('requestedModalities');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, Modality::class);
+            /** @var array<Modality>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'requestedModalities'");
@@ -389,7 +382,7 @@ class Call extends Entity implements Parsable
         $writer->writeStringValue('myParticipantId', $this->getMyParticipantId());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeCollectionOfObjectValues('participants', $this->getParticipants());
-        $writer->writeCollectionOfPrimitiveValues('requestedModalities', $this->getRequestedModalities());
+        $writer->writeCollectionOfEnumValues('requestedModalities', $this->getRequestedModalities());
         $writer->writeObjectValue('resultInfo', $this->getResultInfo());
         $writer->writeObjectValue('source', $this->getSource());
         $writer->writeEnumValue('state', $this->getState());
@@ -522,7 +515,7 @@ class Call extends Entity implements Parsable
 
     /**
      * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
-     * @param array<string>|null $value Value to set for the requestedModalities property.
+     * @param array<Modality>|null $value Value to set for the requestedModalities property.
     */
     public function setRequestedModalities(?array $value): void {
         $this->getBackingStore()->set('requestedModalities', $value);

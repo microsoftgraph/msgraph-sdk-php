@@ -35,6 +35,7 @@ class SetStatusMessageRequestBuilder extends BaseRequestBuilder
      * @param SetStatusMessageRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0 Find more info here
     */
     public function post(SetStatusMessagePostRequestBody $body, ?SetStatusMessageRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

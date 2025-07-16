@@ -31,7 +31,20 @@ class WorkbookChartPointFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'fill' => fn(ParseNode $n) => $o->setFill($n->getObjectValue([WorkbookChartFill::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the fill property value. Represents the fill format of a chart, which includes background formatting information. Read-only.
+     * @return WorkbookChartFill|null
+    */
+    public function getFill(): ?WorkbookChartFill {
+        $val = $this->getBackingStore()->get('fill');
+        if (is_null($val) || $val instanceof WorkbookChartFill) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fill'");
     }
 
     /**
@@ -40,6 +53,15 @@ class WorkbookChartPointFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('fill', $this->getFill());
+    }
+
+    /**
+     * Sets the fill property value. Represents the fill format of a chart, which includes background formatting information. Read-only.
+     * @param WorkbookChartFill|null $value Value to set for the fill property.
+    */
+    public function setFill(?WorkbookChartFill $value): void {
+        $this->getBackingStore()->set('fill', $value);
     }
 
 }

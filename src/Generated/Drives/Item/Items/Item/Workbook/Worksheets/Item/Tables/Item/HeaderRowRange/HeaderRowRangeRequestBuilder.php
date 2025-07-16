@@ -245,6 +245,7 @@ class HeaderRowRangeRequestBuilder extends BaseRequestBuilder
      * @param HeaderRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookRange|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/table-headerrowrange?view=graph-rest-1.0 Find more info here
     */
     public function get(?HeaderRowRangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

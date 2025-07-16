@@ -27,13 +27,13 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     * @return array<string>|null
+     * @return array<CalendarRoleType>|null
     */
     public function getAllowedRoles(): ?array {
         $val = $this->getBackingStore()->get('allowedRoles');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, CalendarRoleType::class);
+            /** @var array<CalendarRoleType>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedRoles'");
@@ -58,14 +58,7 @@ class CalendarPermission extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedRoles' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setAllowedRoles($val);
-            },
+            'allowedRoles' => fn(ParseNode $n) => $o->setAllowedRoles($n->getCollectionOfEnumValues(CalendarRoleType::class)),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
             'isInsideOrganization' => fn(ParseNode $n) => $o->setIsInsideOrganization($n->getBooleanValue()),
             'isRemovable' => fn(ParseNode $n) => $o->setIsRemovable($n->getBooleanValue()),
@@ -115,7 +108,7 @@ class CalendarPermission extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeCollectionOfPrimitiveValues('allowedRoles', $this->getAllowedRoles());
+        $writer->writeCollectionOfEnumValues('allowedRoles', $this->getAllowedRoles());
         $writer->writeObjectValue('emailAddress', $this->getEmailAddress());
         $writer->writeBooleanValue('isInsideOrganization', $this->getIsInsideOrganization());
         $writer->writeBooleanValue('isRemovable', $this->getIsRemovable());
@@ -124,7 +117,7 @@ class CalendarPermission extends Entity implements Parsable
 
     /**
      * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     * @param array<string>|null $value Value to set for the allowedRoles property.
+     * @param array<CalendarRoleType>|null $value Value to set for the allowedRoles property.
     */
     public function setAllowedRoles(?array $value): void {
         $this->getBackingStore()->set('allowedRoles', $value);

@@ -31,7 +31,20 @@ class CopilotAdminSetting extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'limitedMode' => fn(ParseNode $n) => $o->setLimitedMode($n->getObjectValue([CopilotAdminLimitedMode::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
+     * @return CopilotAdminLimitedMode|null
+    */
+    public function getLimitedMode(): ?CopilotAdminLimitedMode {
+        $val = $this->getBackingStore()->get('limitedMode');
+        if (is_null($val) || $val instanceof CopilotAdminLimitedMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'limitedMode'");
     }
 
     /**
@@ -40,6 +53,15 @@ class CopilotAdminSetting extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('limitedMode', $this->getLimitedMode());
+    }
+
+    /**
+     * Sets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
+     * @param CopilotAdminLimitedMode|null $value Value to set for the limitedMode property.
+    */
+    public function setLimitedMode(?CopilotAdminLimitedMode $value): void {
+        $this->getBackingStore()->set('limitedMode', $value);
     }
 
 }

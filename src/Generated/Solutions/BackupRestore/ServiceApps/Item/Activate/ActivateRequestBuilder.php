@@ -36,6 +36,7 @@ class ActivateRequestBuilder extends BaseRequestBuilder
      * @param ActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceApp|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceapp-activate?view=graph-rest-1.0 Find more info here
     */
     public function post(ActivatePostRequestBody $body, ?ActivateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

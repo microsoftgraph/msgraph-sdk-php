@@ -36,6 +36,7 @@ class CancelMediaProcessingRequestBuilder extends BaseRequestBuilder
      * @param CancelMediaProcessingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CancelMediaProcessingOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/call-cancelmediaprocessing?view=graph-rest-1.0 Find more info here
     */
     public function post(CancelMediaProcessingPostRequestBody $body, ?CancelMediaProcessingRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

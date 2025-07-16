@@ -35,6 +35,7 @@ class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequestBuilder
      * @param GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365activationsusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetOffice365ActivationsUserCountsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

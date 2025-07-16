@@ -34,6 +34,7 @@ class GetAuditCategoriesRequestBuilder extends BaseRequestBuilder
      * @param GetAuditCategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAuditCategoriesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-auditing-auditevent-getauditcategories?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAuditCategoriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

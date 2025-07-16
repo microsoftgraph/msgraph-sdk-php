@@ -36,6 +36,7 @@ class AddKeyRequestBuilder extends BaseRequestBuilder
      * @param AddKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<KeyCredential|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-addkey?view=graph-rest-1.0 Find more info here
     */
     public function post(AddKeyPostRequestBody $body, ?AddKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

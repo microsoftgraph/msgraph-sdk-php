@@ -36,6 +36,7 @@ class SubscribeToToneRequestBuilder extends BaseRequestBuilder
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SubscribeToToneOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/call-subscribetotone?view=graph-rest-1.0 Find more info here
     */
     public function post(SubscribeToTonePostRequestBody $body, ?SubscribeToToneRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
