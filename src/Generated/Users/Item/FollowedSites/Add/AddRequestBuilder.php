@@ -35,6 +35,7 @@ class AddRequestBuilder extends BaseRequestBuilder
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AddPostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/site-follow?view=graph-rest-1.0 Find more info here
     */
     public function post(AddPostRequestBody $body, ?AddRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

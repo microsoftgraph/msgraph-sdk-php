@@ -128,14 +128,7 @@ class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsable
             'copiesPerJob' => fn(ParseNode $n) => $o->setCopiesPerJob($n->getIntegerValue()),
             'dpi' => fn(ParseNode $n) => $o->setDpi($n->getIntegerValue()),
             'duplexMode' => fn(ParseNode $n) => $o->setDuplexMode($n->getEnumValue(PrintDuplexMode::class)),
-            'finishings' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setFinishings($val);
-            },
+            'finishings' => fn(ParseNode $n) => $o->setFinishings($n->getCollectionOfEnumValues(PrintFinishing::class)),
             'fitPdfToPage' => fn(ParseNode $n) => $o->setFitPdfToPage($n->getBooleanValue()),
             'inputBin' => fn(ParseNode $n) => $o->setInputBin($n->getStringValue()),
             'mediaColor' => fn(ParseNode $n) => $o->setMediaColor($n->getStringValue()),
@@ -153,13 +146,13 @@ class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @return array<string>|null
+     * @return array<PrintFinishing>|null
     */
     public function getFinishings(): ?array {
         $val = $this->getBackingStore()->get('finishings');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, PrintFinishing::class);
+            /** @var array<PrintFinishing>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'finishings'");
@@ -319,7 +312,7 @@ class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeIntegerValue('copiesPerJob', $this->getCopiesPerJob());
         $writer->writeIntegerValue('dpi', $this->getDpi());
         $writer->writeEnumValue('duplexMode', $this->getDuplexMode());
-        $writer->writeCollectionOfPrimitiveValues('finishings', $this->getFinishings());
+        $writer->writeCollectionOfEnumValues('finishings', $this->getFinishings());
         $writer->writeBooleanValue('fitPdfToPage', $this->getFitPdfToPage());
         $writer->writeStringValue('inputBin', $this->getInputBin());
         $writer->writeStringValue('mediaColor', $this->getMediaColor());
@@ -393,7 +386,7 @@ class PrinterDefaults implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the finishings property value. The default set of finishings to apply to print jobs. Valid values are described in the following table.
-     * @param array<string>|null $value Value to set for the finishings property.
+     * @param array<PrintFinishing>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value): void {
         $this->getBackingStore()->set('finishings', $value);

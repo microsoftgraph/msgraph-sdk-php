@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PublicKeyInfrastructureRoot extends Entity implements Parsable 
 {
@@ -25,12 +26,27 @@ class PublicKeyInfrastructureRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
+     * @return array<CertificateBasedAuthPki>|null
+    */
+    public function getCertificateBasedAuthConfigurations(): ?array {
+        $val = $this->getBackingStore()->get('certificateBasedAuthConfigurations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CertificateBasedAuthPki::class);
+            /** @var array<CertificateBasedAuthPki>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateBasedAuthConfigurations'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'certificateBasedAuthConfigurations' => fn(ParseNode $n) => $o->setCertificateBasedAuthConfigurations($n->getCollectionOfObjectValues([CertificateBasedAuthPki::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -40,6 +56,15 @@ class PublicKeyInfrastructureRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('certificateBasedAuthConfigurations', $this->getCertificateBasedAuthConfigurations());
+    }
+
+    /**
+     * Sets the certificateBasedAuthConfigurations property value. The collection of public key infrastructure instances for the certificate-based authentication feature for users.
+     * @param array<CertificateBasedAuthPki>|null $value Value to set for the certificateBasedAuthConfigurations property.
+    */
+    public function setCertificateBasedAuthConfigurations(?array $value): void {
+        $this->getBackingStore()->set('certificateBasedAuthConfigurations', $value);
     }
 
 }

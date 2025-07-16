@@ -34,6 +34,7 @@ class AdditionalAccessRequestBuilder extends BaseRequestBuilder
      * @param AdditionalAccessRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AdditionalAccessGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accesspackageassignment-additionalaccess?view=graph-rest-1.0 Find more info here
     */
     public function get(?AdditionalAccessRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

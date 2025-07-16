@@ -79,7 +79,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator.
      * @return Fido2KeyRestrictions|null
     */
     public function getKeyRestrictions(): ?Fido2KeyRestrictions {
@@ -127,7 +127,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator.
      * @param Fido2KeyRestrictions|null $value Value to set for the keyRestrictions property.
     */
     public function setKeyRestrictions(?Fido2KeyRestrictions $value): void {

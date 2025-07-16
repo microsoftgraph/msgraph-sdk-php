@@ -35,6 +35,7 @@ class GetByIdsRequestBuilder extends BaseRequestBuilder
      * @param GetByIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetByIdsPostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0 Find more info here
     */
     public function post(GetByIdsPostRequestBody $body, ?GetByIdsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

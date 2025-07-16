@@ -36,6 +36,7 @@ class ClockInRequestBuilder extends BaseRequestBuilder
      * @param ClockInRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TimeCard|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/timecard-clockin?view=graph-rest-1.0 Find more info here
     */
     public function post(ClockInPostRequestBody $body, ?ClockInRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

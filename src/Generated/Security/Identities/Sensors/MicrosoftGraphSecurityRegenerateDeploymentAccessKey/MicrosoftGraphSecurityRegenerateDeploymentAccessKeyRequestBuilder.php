@@ -35,6 +35,7 @@ class MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder extends 
      * @param MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeploymentAccessKeyType|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-sensor-regeneratedeploymentaccesskey?view=graph-rest-1.0 Find more info here
     */
     public function post(?MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

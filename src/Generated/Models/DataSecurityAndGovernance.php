@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DataSecurityAndGovernance extends Entity implements Parsable 
 {
@@ -39,7 +40,22 @@ class DataSecurityAndGovernance extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'sensitivityLabels' => fn(ParseNode $n) => $o->setSensitivityLabels($n->getCollectionOfObjectValues([SensitivityLabel::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * @return array<SensitivityLabel>|null
+    */
+    public function getSensitivityLabels(): ?array {
+        $val = $this->getBackingStore()->get('sensitivityLabels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SensitivityLabel::class);
+            /** @var array<SensitivityLabel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivityLabels'");
     }
 
     /**
@@ -48,6 +64,15 @@ class DataSecurityAndGovernance extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('sensitivityLabels', $this->getSensitivityLabels());
+    }
+
+    /**
+     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * @param array<SensitivityLabel>|null $value Value to set for the sensitivityLabels property.
+    */
+    public function setSensitivityLabels(?array $value): void {
+        $this->getBackingStore()->set('sensitivityLabels', $value);
     }
 
 }

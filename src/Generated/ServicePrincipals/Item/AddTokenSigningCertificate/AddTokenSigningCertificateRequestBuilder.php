@@ -36,6 +36,7 @@ class AddTokenSigningCertificateRequestBuilder extends BaseRequestBuilder
      * @param AddTokenSigningCertificateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SelfSignedCertificate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/serviceprincipal-addtokensigningcertificate?view=graph-rest-1.0 Find more info here
     */
     public function post(AddTokenSigningCertificatePostRequestBody $body, ?AddTokenSigningCertificateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

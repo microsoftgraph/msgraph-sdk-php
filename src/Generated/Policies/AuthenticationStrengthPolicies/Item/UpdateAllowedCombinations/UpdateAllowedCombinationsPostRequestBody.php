@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies\Item\UpdateAllowedCombinations;
 
+use Microsoft\Graph\Generated\Models\AuthenticationMethodModes;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -50,13 +51,13 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
 
     /**
      * Gets the allowedCombinations property value. The allowedCombinations property
-     * @return array<string>|null
+     * @return array<AuthenticationMethodModes>|null
     */
     public function getAllowedCombinations(): ?array {
         $val = $this->getBackingStore()->get('allowedCombinations');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodModes::class);
+            /** @var array<AuthenticationMethodModes>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedCombinations'");
@@ -77,14 +78,7 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'allowedCombinations' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setAllowedCombinations($val);
-            },
+            'allowedCombinations' => fn(ParseNode $n) => $o->setAllowedCombinations($n->getCollectionOfEnumValues(AuthenticationMethodModes::class)),
         ];
     }
 
@@ -93,7 +87,7 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeCollectionOfPrimitiveValues('allowedCombinations', $this->getAllowedCombinations());
+        $writer->writeCollectionOfEnumValues('allowedCombinations', $this->getAllowedCombinations());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -107,7 +101,7 @@ class UpdateAllowedCombinationsPostRequestBody implements AdditionalDataHolder, 
 
     /**
      * Sets the allowedCombinations property value. The allowedCombinations property
-     * @param array<string>|null $value Value to set for the allowedCombinations property.
+     * @param array<AuthenticationMethodModes>|null $value Value to set for the allowedCombinations property.
     */
     public function setAllowedCombinations(?array $value): void {
         $this->getBackingStore()->set('allowedCombinations', $value);

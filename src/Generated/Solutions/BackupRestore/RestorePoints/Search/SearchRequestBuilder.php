@@ -36,6 +36,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
      * @param SearchRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RestorePointSearchResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/restorepoint-search?view=graph-rest-1.0 Find more info here
     */
     public function post(SearchPostRequestBody $body, ?SearchRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
