@@ -13,6 +13,7 @@ class UserEvidence extends AlertEvidence implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.security.userEvidence');
     }
 
     /**
@@ -31,7 +32,33 @@ class UserEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'stream' => fn(ParseNode $n) => $o->setStream($n->getObjectValue([Stream::class, 'createFromDiscriminatorValue'])),
+            'userAccount' => fn(ParseNode $n) => $o->setUserAccount($n->getObjectValue([UserAccount::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the stream property value. The stream property
+     * @return Stream|null
+    */
+    public function getStream(): ?Stream {
+        $val = $this->getBackingStore()->get('stream');
+        if (is_null($val) || $val instanceof Stream) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stream'");
+    }
+
+    /**
+     * Gets the userAccount property value. The user account details.
+     * @return UserAccount|null
+    */
+    public function getUserAccount(): ?UserAccount {
+        $val = $this->getBackingStore()->get('userAccount');
+        if (is_null($val) || $val instanceof UserAccount) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAccount'");
     }
 
     /**
@@ -40,6 +67,24 @@ class UserEvidence extends AlertEvidence implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('stream', $this->getStream());
+        $writer->writeObjectValue('userAccount', $this->getUserAccount());
+    }
+
+    /**
+     * Sets the stream property value. The stream property
+     * @param Stream|null $value Value to set for the stream property.
+    */
+    public function setStream(?Stream $value): void {
+        $this->getBackingStore()->set('stream', $value);
+    }
+
+    /**
+     * Sets the userAccount property value. The user account details.
+     * @param UserAccount|null $value Value to set for the userAccount property.
+    */
+    public function setUserAccount(?UserAccount $value): void {
+        $this->getBackingStore()->set('userAccount', $value);
     }
 
 }

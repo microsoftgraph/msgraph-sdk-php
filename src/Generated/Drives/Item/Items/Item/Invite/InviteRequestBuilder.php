@@ -35,6 +35,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InvitePostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0 Find more info here
     */
     public function post(InvitePostRequestBody $body, ?InviteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

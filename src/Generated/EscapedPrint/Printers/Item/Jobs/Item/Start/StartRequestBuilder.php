@@ -35,6 +35,7 @@ class StartRequestBuilder extends BaseRequestBuilder
      * @param StartRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrintJobStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/printjob-start?view=graph-rest-1.0 Find more info here
     */
     public function post(?StartRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

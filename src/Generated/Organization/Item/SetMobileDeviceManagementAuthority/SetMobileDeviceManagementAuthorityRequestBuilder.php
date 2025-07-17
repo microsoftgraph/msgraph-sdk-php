@@ -34,6 +34,7 @@ class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseRequestBuilde
      * @param SetMobileDeviceManagementAuthorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SetMobileDeviceManagementAuthorityPostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0 Find more info here
     */
     public function post(?SetMobileDeviceManagementAuthorityRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

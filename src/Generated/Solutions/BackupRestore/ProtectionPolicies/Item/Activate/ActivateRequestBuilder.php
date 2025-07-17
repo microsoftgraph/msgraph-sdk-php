@@ -35,6 +35,7 @@ class ActivateRequestBuilder extends BaseRequestBuilder
      * @param ActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProtectionPolicyBase|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/protectionpolicybase-activate?view=graph-rest-1.0 Find more info here
     */
     public function post(?ActivateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

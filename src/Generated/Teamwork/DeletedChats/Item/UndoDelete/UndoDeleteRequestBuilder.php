@@ -34,6 +34,7 @@ class UndoDeleteRequestBuilder extends BaseRequestBuilder
      * @param UndoDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/deletedchat-undodelete?view=graph-rest-1.0 Find more info here
     */
     public function post(?UndoDeleteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

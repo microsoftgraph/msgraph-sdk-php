@@ -25,13 +25,39 @@ class AppScope extends Entity implements Parsable
     }
 
     /**
+     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
+     * @return string|null
+    */
+    public function getDisplayName(): ?string {
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Read-only.
+     * @return string|null
+    */
+    public function getType(): ?string {
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -40,6 +66,24 @@ class AppScope extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('type', $this->getType());
+    }
+
+    /**
+     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
+     * @param string|null $value Value to set for the displayName property.
+    */
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Read-only.
+     * @param string|null $value Value to set for the type property.
+    */
+    public function setType(?string $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

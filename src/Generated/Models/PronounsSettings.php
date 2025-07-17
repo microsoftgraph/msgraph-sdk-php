@@ -31,7 +31,20 @@ class PronounsSettings extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'isEnabledInOrganization' => fn(ParseNode $n) => $o->setIsEnabledInOrganization($n->getBooleanValue()),
         ]);
+    }
+
+    /**
+     * Gets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
+     * @return bool|null
+    */
+    public function getIsEnabledInOrganization(): ?bool {
+        $val = $this->getBackingStore()->get('isEnabledInOrganization');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabledInOrganization'");
     }
 
     /**
@@ -40,6 +53,15 @@ class PronounsSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeBooleanValue('isEnabledInOrganization', $this->getIsEnabledInOrganization());
+    }
+
+    /**
+     * Sets the isEnabledInOrganization property value. true to enable pronouns in the organization; otherwise, false. The default value is false, and pronouns are disabled.
+     * @param bool|null $value Value to set for the isEnabledInOrganization property.
+    */
+    public function setIsEnabledInOrganization(?bool $value): void {
+        $this->getBackingStore()->set('isEnabledInOrganization', $value);
     }
 
 }

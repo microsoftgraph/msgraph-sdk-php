@@ -36,6 +36,7 @@ class InstantiateRequestBuilder extends BaseRequestBuilder
      * @param InstantiateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApplicationServicePrincipal|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0 Find more info here
     */
     public function post(InstantiatePostRequestBody $body, ?InstantiateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

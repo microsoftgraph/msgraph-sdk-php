@@ -38,6 +38,7 @@ class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends BaseRequ
      * @param FindTenantInformationByTenantIdWithTenantIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantInformation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantrelationship-findtenantinformationbytenantid?view=graph-rest-1.0 Find more info here
     */
     public function get(?FindTenantInformationByTenantIdWithTenantIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

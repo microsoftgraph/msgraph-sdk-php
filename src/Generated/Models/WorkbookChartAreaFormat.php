@@ -31,7 +31,33 @@ class WorkbookChartAreaFormat extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'fill' => fn(ParseNode $n) => $o->setFill($n->getObjectValue([WorkbookChartFill::class, 'createFromDiscriminatorValue'])),
+            'font' => fn(ParseNode $n) => $o->setFont($n->getObjectValue([WorkbookChartFont::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
+     * @return WorkbookChartFill|null
+    */
+    public function getFill(): ?WorkbookChartFill {
+        $val = $this->getBackingStore()->get('fill');
+        if (is_null($val) || $val instanceof WorkbookChartFill) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fill'");
+    }
+
+    /**
+     * Gets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+     * @return WorkbookChartFont|null
+    */
+    public function getFont(): ?WorkbookChartFont {
+        $val = $this->getBackingStore()->get('font');
+        if (is_null($val) || $val instanceof WorkbookChartFont) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'font'");
     }
 
     /**
@@ -40,6 +66,24 @@ class WorkbookChartAreaFormat extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('fill', $this->getFill());
+        $writer->writeObjectValue('font', $this->getFont());
+    }
+
+    /**
+     * Sets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
+     * @param WorkbookChartFill|null $value Value to set for the fill property.
+    */
+    public function setFill(?WorkbookChartFill $value): void {
+        $this->getBackingStore()->set('fill', $value);
+    }
+
+    /**
+     * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
+     * @param WorkbookChartFont|null $value Value to set for the font property.
+    */
+    public function setFont(?WorkbookChartFont $value): void {
+        $this->getBackingStore()->set('font', $value);
     }
 
 }

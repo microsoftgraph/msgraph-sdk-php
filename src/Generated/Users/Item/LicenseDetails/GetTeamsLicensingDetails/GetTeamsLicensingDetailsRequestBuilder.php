@@ -35,6 +35,7 @@ class GetTeamsLicensingDetailsRequestBuilder extends BaseRequestBuilder
      * @param GetTeamsLicensingDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsLicensingDetails|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/licensedetails-getteamslicensingdetails?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetTeamsLicensingDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

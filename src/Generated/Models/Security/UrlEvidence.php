@@ -13,6 +13,7 @@ class UrlEvidence extends AlertEvidence implements Parsable
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.security.urlEvidence');
     }
 
     /**
@@ -31,7 +32,20 @@ class UrlEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'url' => fn(ParseNode $n) => $o->setUrl($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the url property value. The Unique Resource Locator (URL).
+     * @return string|null
+    */
+    public function getUrl(): ?string {
+        $val = $this->getBackingStore()->get('url');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'url'");
     }
 
     /**
@@ -40,6 +54,15 @@ class UrlEvidence extends AlertEvidence implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('url', $this->getUrl());
+    }
+
+    /**
+     * Sets the url property value. The Unique Resource Locator (URL).
+     * @param string|null $value Value to set for the url property.
+    */
+    public function setUrl(?string $value): void {
+        $this->getBackingStore()->set('url', $value);
     }
 
 }

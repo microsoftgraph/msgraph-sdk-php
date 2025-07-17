@@ -108,14 +108,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
             },
             'level' => fn(ParseNode $n) => $o->setLevel($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'operations' => function (ParseNode $n) {
-                $val = $n->getCollectionOfPrimitiveValues();
-                if (is_array($val)) {
-                    TypeUtils::validateCollectionValues($val, 'string');
-                }
-                /** @var array<string>|null $val */
-                $this->setOperations($val);
-            },
+            'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfEnumValues(UnifiedRoleManagementPolicyRuleTargetOperations::class)),
             'targetObjects' => fn(ParseNode $n) => $o->setTargetObjects($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -160,13 +153,13 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Gets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-     * @return array<string>|null
+     * @return array<UnifiedRoleManagementPolicyRuleTargetOperations>|null
     */
     public function getOperations(): ?array {
         $val = $this->getBackingStore()->get('operations');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, 'string');
-            /** @var array<string>|null $val */
+            TypeUtils::validateCollectionValues($val, UnifiedRoleManagementPolicyRuleTargetOperations::class);
+            /** @var array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
@@ -196,7 +189,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
         $writer->writeCollectionOfPrimitiveValues('inheritableSettings', $this->getInheritableSettings());
         $writer->writeStringValue('level', $this->getLevel());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
-        $writer->writeCollectionOfPrimitiveValues('operations', $this->getOperations());
+        $writer->writeCollectionOfEnumValues('operations', $this->getOperations());
         $writer->writeCollectionOfObjectValues('targetObjects', $this->getTargetObjects());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -259,7 +252,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-     * @param array<string>|null $value Value to set for the operations property.
+     * @param array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);

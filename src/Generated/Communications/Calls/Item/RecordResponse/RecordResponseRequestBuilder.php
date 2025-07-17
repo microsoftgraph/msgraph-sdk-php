@@ -36,6 +36,7 @@ class RecordResponseRequestBuilder extends BaseRequestBuilder
      * @param RecordResponseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RecordOperation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/call-record?view=graph-rest-1.0 Find more info here
     */
     public function post(RecordResponsePostRequestBody $body, ?RecordResponseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

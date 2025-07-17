@@ -46,6 +46,7 @@ class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder
      * @param ItemAtWithIndexRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTableRow|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tablerowcollection-itemat?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemAtWithIndexRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

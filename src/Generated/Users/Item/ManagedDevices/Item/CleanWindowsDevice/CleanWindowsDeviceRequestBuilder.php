@@ -35,6 +35,7 @@ class CleanWindowsDeviceRequestBuilder extends BaseRequestBuilder
      * @param CleanWindowsDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-cleanwindowsdevice?view=graph-rest-1.0 Find more info here
     */
     public function post(CleanWindowsDevicePostRequestBody $body, ?CleanWindowsDeviceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

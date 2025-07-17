@@ -36,6 +36,7 @@ class CreateSessionRequestBuilder extends BaseRequestBuilder
      * @param CreateSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookSessionInfo|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/workbook-createsession?view=graph-rest-1.0 Find more info here
     */
     public function post(CreateSessionPostRequestBody $body, ?CreateSessionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

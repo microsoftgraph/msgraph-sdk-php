@@ -38,6 +38,7 @@ class GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder e
      * @param GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessparticipantactivityusercounts?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

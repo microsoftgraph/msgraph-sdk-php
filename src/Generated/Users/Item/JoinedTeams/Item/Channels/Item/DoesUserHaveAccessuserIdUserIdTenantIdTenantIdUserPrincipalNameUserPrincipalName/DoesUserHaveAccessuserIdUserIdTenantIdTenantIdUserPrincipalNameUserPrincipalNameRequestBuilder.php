@@ -34,6 +34,7 @@ class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincip
      * @param DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/channel-doesuserhaveaccess?view=graph-rest-1.0 Find more info here
     */
     public function get(?DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

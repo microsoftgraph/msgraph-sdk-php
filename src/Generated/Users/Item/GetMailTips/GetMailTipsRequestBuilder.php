@@ -35,6 +35,7 @@ class GetMailTipsRequestBuilder extends BaseRequestBuilder
      * @param GetMailTipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetMailTipsPostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/user-getmailtips?view=graph-rest-1.0 Find more info here
     */
     public function post(GetMailTipsPostRequestBody $body, ?GetMailTipsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

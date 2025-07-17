@@ -34,6 +34,7 @@ class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
      * @param UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/application-unsetverifiedpublisher?view=graph-rest-1.0 Find more info here
     */
     public function post(?UnsetVerifiedPublisherRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

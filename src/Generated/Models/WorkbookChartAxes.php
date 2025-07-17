@@ -25,13 +25,52 @@ class WorkbookChartAxes extends Entity implements Parsable
     }
 
     /**
+     * Gets the categoryAxis property value. Represents the category axis in a chart. Read-only.
+     * @return WorkbookChartAxis|null
+    */
+    public function getCategoryAxis(): ?WorkbookChartAxis {
+        $val = $this->getBackingStore()->get('categoryAxis');
+        if (is_null($val) || $val instanceof WorkbookChartAxis) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'categoryAxis'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'categoryAxis' => fn(ParseNode $n) => $o->setCategoryAxis($n->getObjectValue([WorkbookChartAxis::class, 'createFromDiscriminatorValue'])),
+            'seriesAxis' => fn(ParseNode $n) => $o->setSeriesAxis($n->getObjectValue([WorkbookChartAxis::class, 'createFromDiscriminatorValue'])),
+            'valueAxis' => fn(ParseNode $n) => $o->setValueAxis($n->getObjectValue([WorkbookChartAxis::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
+     * @return WorkbookChartAxis|null
+    */
+    public function getSeriesAxis(): ?WorkbookChartAxis {
+        $val = $this->getBackingStore()->get('seriesAxis');
+        if (is_null($val) || $val instanceof WorkbookChartAxis) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'seriesAxis'");
+    }
+
+    /**
+     * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
+     * @return WorkbookChartAxis|null
+    */
+    public function getValueAxis(): ?WorkbookChartAxis {
+        $val = $this->getBackingStore()->get('valueAxis');
+        if (is_null($val) || $val instanceof WorkbookChartAxis) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueAxis'");
     }
 
     /**
@@ -40,6 +79,33 @@ class WorkbookChartAxes extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('categoryAxis', $this->getCategoryAxis());
+        $writer->writeObjectValue('seriesAxis', $this->getSeriesAxis());
+        $writer->writeObjectValue('valueAxis', $this->getValueAxis());
+    }
+
+    /**
+     * Sets the categoryAxis property value. Represents the category axis in a chart. Read-only.
+     * @param WorkbookChartAxis|null $value Value to set for the categoryAxis property.
+    */
+    public function setCategoryAxis(?WorkbookChartAxis $value): void {
+        $this->getBackingStore()->set('categoryAxis', $value);
+    }
+
+    /**
+     * Sets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
+     * @param WorkbookChartAxis|null $value Value to set for the seriesAxis property.
+    */
+    public function setSeriesAxis(?WorkbookChartAxis $value): void {
+        $this->getBackingStore()->set('seriesAxis', $value);
+    }
+
+    /**
+     * Sets the valueAxis property value. Represents the value axis in an axis. Read-only.
+     * @param WorkbookChartAxis|null $value Value to set for the valueAxis property.
+    */
+    public function setValueAxis(?WorkbookChartAxis $value): void {
+        $this->getBackingStore()->set('valueAxis', $value);
     }
 
 }
