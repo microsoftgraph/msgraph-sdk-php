@@ -66,11 +66,12 @@ class ExchangeRestoreSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to exchangeRestoreSessions for solutions
+     * Create a new exchangeRestoreSession object.
      * @param ExchangeRestoreSession $body The request body
      * @param ExchangeRestoreSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExchangeRestoreSession|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/backuprestoreroot-post-exchangerestoresessions?view=graph-rest-1.0 Find more info here
     */
     public function post(ExchangeRestoreSession $body, ?ExchangeRestoreSessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -102,7 +103,7 @@ class ExchangeRestoreSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to exchangeRestoreSessions for solutions
+     * Create a new exchangeRestoreSession object.
      * @param ExchangeRestoreSession $body The request body
      * @param ExchangeRestoreSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -31,6 +31,7 @@ class ConversationMember extends Entity implements Parsable
                 case '#microsoft.graph.anonymousGuestConversationMember': return new AnonymousGuestConversationMember();
                 case '#microsoft.graph.azureCommunicationServicesUserConversationMember': return new AzureCommunicationServicesUserConversationMember();
                 case '#microsoft.graph.microsoftAccountUserConversationMember': return new MicrosoftAccountUserConversationMember();
+                case '#microsoft.graph.phoneUserConversationMember': return new PhoneUserConversationMember();
                 case '#microsoft.graph.skypeForBusinessUserConversationMember': return new SkypeForBusinessUserConversationMember();
                 case '#microsoft.graph.skypeUserConversationMember': return new SkypeUserConversationMember();
             }

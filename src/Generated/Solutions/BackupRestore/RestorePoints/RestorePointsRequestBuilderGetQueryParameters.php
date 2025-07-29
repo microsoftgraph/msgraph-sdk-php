@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List of restore points in the tenant.
+ * Get a list of the restorePoint objects and their properties.
 */
 class RestorePointsRequestBuilderGetQueryParameters 
 {

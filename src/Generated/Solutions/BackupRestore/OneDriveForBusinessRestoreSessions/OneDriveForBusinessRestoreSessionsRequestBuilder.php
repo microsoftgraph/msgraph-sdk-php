@@ -66,11 +66,12 @@ class OneDriveForBusinessRestoreSessionsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Create new navigation property to oneDriveForBusinessRestoreSessions for solutions
+     * Create a new oneDriveForBusinessRestoreSession object.
      * @param OneDriveForBusinessRestoreSession $body The request body
      * @param OneDriveForBusinessRestoreSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessRestoreSession|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/backuprestoreroot-post-onedriveforbusinessrestoresessions?view=graph-rest-1.0 Find more info here
     */
     public function post(OneDriveForBusinessRestoreSession $body, ?OneDriveForBusinessRestoreSessionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -102,7 +103,7 @@ class OneDriveForBusinessRestoreSessionsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Create new navigation property to oneDriveForBusinessRestoreSessions for solutions
+     * Create a new oneDriveForBusinessRestoreSession object.
      * @param OneDriveForBusinessRestoreSession $body The request body
      * @param OneDriveForBusinessRestoreSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

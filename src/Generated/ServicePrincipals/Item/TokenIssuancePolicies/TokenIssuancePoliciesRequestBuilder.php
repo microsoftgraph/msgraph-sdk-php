@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenIssuancePolicyCollectionResponse;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -26,7 +27,14 @@ class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
+     * Provides operations to manage the collection of servicePrincipal entities.
+    */
+    public function ref(): RefRequestBuilder {
+        return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.tokenIssuancePolicies.item collection
      * @param string $tokenIssuancePolicyId The unique identifier of tokenIssuancePolicy
      * @return TokenIssuancePolicyItemRequestBuilder
     */

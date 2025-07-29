@@ -22,6 +22,13 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return ConditionalAccessPolicy
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ConditionalAccessPolicy {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.whatIfAnalysisResult': return new WhatIfAnalysisResult();
+            }
+        }
         return new ConditionalAccessPolicy();
     }
 
@@ -141,7 +148,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the templateId property value. The templateId property
+     * Gets the templateId property value. Specifies the unique identifier of a Conditional Access template. Inherited from entity.
      * @return string|null
     */
     public function getTemplateId(): ?string {
@@ -234,7 +241,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the templateId property value. The templateId property
+     * Sets the templateId property value. Specifies the unique identifier of a Conditional Access template. Inherited from entity.
      * @param string|null $value Value to set for the templateId property.
     */
     public function setTemplateId(?string $value): void {

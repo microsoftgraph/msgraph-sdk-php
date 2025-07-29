@@ -45,10 +45,11 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param TrainingLanguageDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TrainingLanguageDetail|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/traininglanguagedetail-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TrainingLanguageDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param TrainingLanguageDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

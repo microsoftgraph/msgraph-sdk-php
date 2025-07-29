@@ -263,6 +263,7 @@ class OnlineMeetingBase extends Entity implements Parsable
             'audioConferencing' => fn(ParseNode $n) => $o->setAudioConferencing($n->getObjectValue([AudioConferencing::class, 'createFromDiscriminatorValue'])),
             'chatInfo' => fn(ParseNode $n) => $o->setChatInfo($n->getObjectValue([ChatInfo::class, 'createFromDiscriminatorValue'])),
             'chatRestrictions' => fn(ParseNode $n) => $o->setChatRestrictions($n->getObjectValue([ChatRestrictions::class, 'createFromDiscriminatorValue'])),
+            'isEndToEndEncryptionEnabled' => fn(ParseNode $n) => $o->setIsEndToEndEncryptionEnabled($n->getBooleanValue()),
             'isEntryExitAnnounced' => fn(ParseNode $n) => $o->setIsEntryExitAnnounced($n->getBooleanValue()),
             'joinInformation' => fn(ParseNode $n) => $o->setJoinInformation($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'joinMeetingIdSettings' => fn(ParseNode $n) => $o->setJoinMeetingIdSettings($n->getObjectValue([JoinMeetingIdSettings::class, 'createFromDiscriminatorValue'])),
@@ -274,6 +275,18 @@ class OnlineMeetingBase extends Entity implements Parsable
             'videoTeleconferenceId' => fn(ParseNode $n) => $o->setVideoTeleconferenceId($n->getStringValue()),
             'watermarkProtection' => fn(ParseNode $n) => $o->setWatermarkProtection($n->getObjectValue([WatermarkProtectionValues::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * @return bool|null
+    */
+    public function getIsEndToEndEncryptionEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isEndToEndEncryptionEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEndToEndEncryptionEnabled'");
     }
 
     /**
@@ -419,6 +432,7 @@ class OnlineMeetingBase extends Entity implements Parsable
         $writer->writeObjectValue('audioConferencing', $this->getAudioConferencing());
         $writer->writeObjectValue('chatInfo', $this->getChatInfo());
         $writer->writeObjectValue('chatRestrictions', $this->getChatRestrictions());
+        $writer->writeBooleanValue('isEndToEndEncryptionEnabled', $this->getIsEndToEndEncryptionEnabled());
         $writer->writeBooleanValue('isEntryExitAnnounced', $this->getIsEntryExitAnnounced());
         $writer->writeObjectValue('joinInformation', $this->getJoinInformation());
         $writer->writeObjectValue('joinMeetingIdSettings', $this->getJoinMeetingIdSettings());
@@ -565,6 +579,14 @@ class OnlineMeetingBase extends Entity implements Parsable
     */
     public function setChatRestrictions(?ChatRestrictions $value): void {
         $this->getBackingStore()->set('chatRestrictions', $value);
+    }
+
+    /**
+     * Sets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * @param bool|null $value Value to set for the isEndToEndEncryptionEnabled property.
+    */
+    public function setIsEndToEndEncryptionEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEndToEndEncryptionEnabled', $value);
     }
 
     /**
