@@ -25,7 +25,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Gets the additionalDataOptions property value. The additionalDataOptions property
+     * Gets the additionalDataOptions property value. The options to add items to the review set. Possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder.
      * @return AdditionalDataOptions|null
     */
     public function getAdditionalDataOptions(): ?AdditionalDataOptions {
@@ -37,7 +37,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Gets the cloudAttachmentVersion property value. Specifies the number of most recent versions of cloud attachments to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return CloudAttachmentVersion|null
     */
     public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
@@ -49,7 +49,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Gets the documentVersion property value. The documentVersion property
+     * Gets the documentVersion property value. Specifies the number of most recent versions of SharePoint documents to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return DocumentVersion|null
     */
     public function getDocumentVersion(): ?DocumentVersion {
@@ -77,7 +77,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Gets the itemsToInclude property value. The itemsToInclude property
+     * Gets the itemsToInclude property value. The items to include in the review set. Possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @return ItemsToInclude|null
     */
     public function getItemsToInclude(): ?ItemsToInclude {
@@ -127,7 +127,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Sets the additionalDataOptions property value. The additionalDataOptions property
+     * Sets the additionalDataOptions property value. The options to add items to the review set. Possible values are: allVersions, linkedFiles, unknownFutureValue, advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: advancedIndexing, listAttachments, htmlTranscripts, messageConversationExpansion, locationsWithoutHits, allItemsInFolder.
      * @param AdditionalDataOptions|null $value Value to set for the additionalDataOptions property.
     */
     public function setAdditionalDataOptions(?AdditionalDataOptions $value): void {
@@ -135,7 +135,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Sets the cloudAttachmentVersion property value. Specifies the number of most recent versions of cloud attachments to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
     */
     public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
@@ -143,7 +143,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Sets the documentVersion property value. The documentVersion property
+     * Sets the documentVersion property value. Specifies the number of most recent versions of SharePoint documents to collect. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param DocumentVersion|null $value Value to set for the documentVersion property.
     */
     public function setDocumentVersion(?DocumentVersion $value): void {
@@ -151,7 +151,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     }
 
     /**
-     * Sets the itemsToInclude property value. The itemsToInclude property
+     * Sets the itemsToInclude property value. The items to include in the review set. Possible values are: searchHits, partiallyIndexed, unknownFutureValue.
      * @param ItemsToInclude|null $value Value to set for the itemsToInclude property.
     */
     public function setItemsToInclude(?ItemsToInclude $value): void {

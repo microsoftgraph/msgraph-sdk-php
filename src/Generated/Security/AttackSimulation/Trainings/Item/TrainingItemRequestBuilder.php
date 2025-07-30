@@ -53,10 +53,11 @@ class TrainingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents details about attack simulation trainings.
+     * Get an attack simulation training for a tenant.
      * @param TrainingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Training|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/training-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TrainingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class TrainingItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents details about attack simulation trainings.
+     * Get an attack simulation training for a tenant.
      * @param TrainingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

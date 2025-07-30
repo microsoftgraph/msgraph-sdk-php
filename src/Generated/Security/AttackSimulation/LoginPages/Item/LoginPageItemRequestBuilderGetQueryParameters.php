@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents an attack simulation training login page.
+ * Get a loginPage associated with an attack simulation campaign for a tenant. Login pages are shown to users in attack simulations that use credential harvest and link in attachment social engineering techniques.
 */
 class LoginPageItemRequestBuilderGetQueryParameters 
 {

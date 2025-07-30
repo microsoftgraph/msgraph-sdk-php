@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess;
 
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\AuthenticationContextClassReferencesRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\AuthenticationStrengthRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\Evaluate\EvaluateRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\PoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\TemplatesRequestBuilder;
@@ -27,6 +28,13 @@ class ConditionalAccessRequestBuilder extends BaseRequestBuilder
     */
     public function authenticationStrength(): AuthenticationStrengthRequestBuilder {
         return new AuthenticationStrengthRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the evaluate method.
+    */
+    public function evaluate(): EvaluateRequestBuilder {
+        return new EvaluateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

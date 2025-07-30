@@ -27,6 +27,20 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
+     * Gets the columns property value. The columns property
+     * @return array<ColumnDefinition>|null
+    */
+    public function getColumns(): ?array {
+        $val = $this->getBackingStore()->get('columns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnDefinition::class);
+            /** @var array<ColumnDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columns'");
+    }
+
+    /**
      * Gets the containerTypeId property value. Container type ID of the fileStorageContainer. For details about container types, see Container Types. Each container must have only one container type. Read-only.
      * @return string|null
     */
@@ -105,6 +119,7 @@ class FileStorageContainer extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'columns' => fn(ParseNode $n) => $o->setColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
             'containerTypeId' => fn(ParseNode $n) => $o->setContainerTypeId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customProperties' => fn(ParseNode $n) => $o->setCustomProperties($n->getObjectValue([FileStorageContainerCustomPropertyDictionary::class, 'createFromDiscriminatorValue'])),
@@ -200,6 +215,7 @@ class FileStorageContainer extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('columns', $this->getColumns());
         $writer->writeStringValue('containerTypeId', $this->getContainerTypeId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('customProperties', $this->getCustomProperties());
@@ -212,6 +228,14 @@ class FileStorageContainer extends Entity implements Parsable
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeObjectValue('viewpoint', $this->getViewpoint());
+    }
+
+    /**
+     * Sets the columns property value. The columns property
+     * @param array<ColumnDefinition>|null $value Value to set for the columns property.
+    */
+    public function setColumns(?array $value): void {
+        $this->getBackingStore()->set('columns', $value);
     }
 
     /**

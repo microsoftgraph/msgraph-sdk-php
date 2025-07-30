@@ -26,7 +26,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
+     * Gets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue, htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport.
      * @return AdditionalOptions|null
     */
     public function getAdditionalOptions(): ?AdditionalOptions {
@@ -38,7 +38,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Gets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return CloudAttachmentVersion|null
     */
     public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
@@ -74,7 +74,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the documentVersion property value. The documentVersion property
+     * Gets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return DocumentVersion|null
     */
     public function getDocumentVersion(): ?DocumentVersion {
@@ -112,7 +112,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
+     * Gets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml (deprecated), unknownFutureValue. The eml member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
      * @return ExportFormat|null
     */
     public function getExportFormat(): ?ExportFormat {
@@ -200,7 +200,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue.
+     * Sets the additionalOptions property value. The additional items to include in the export. The possible values are: none, teamsAndYammerConversations, cloudAttachments, allDocumentVersions, subfolderContents, listAttachments, unknownFutureValue, htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: htmlTranscripts, advancedIndexing, allItemsInFolder, includeFolderAndPath, condensePaths, friendlyName, splitSource, includeReport.
      * @param AdditionalOptions|null $value Value to set for the additionalOptions property.
     */
     public function setAdditionalOptions(?AdditionalOptions $value): void {
@@ -208,7 +208,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the cloudAttachmentVersion property value. The cloudAttachmentVersion property
+     * Sets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
     */
     public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
@@ -232,7 +232,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the documentVersion property value. The documentVersion property
+     * Sets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param DocumentVersion|null $value Value to set for the documentVersion property.
     */
     public function setDocumentVersion(?DocumentVersion $value): void {
@@ -256,7 +256,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml, unknownFutureValue.
+     * Sets the exportFormat property value. Format of the emails of the export. The possible values are: pst, msg, eml (deprecated), unknownFutureValue. The eml member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
      * @param ExportFormat|null $value Value to set for the exportFormat property.
     */
     public function setExportFormat(?ExportFormat $value): void {

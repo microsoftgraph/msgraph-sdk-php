@@ -30,11 +30,12 @@ class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke action addActivities
+     * Append additional instances of externalActivity objects on an externalItem.
      * @param AddActivitiesPostRequestBody $body The request body
      * @param MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AddActivitiesPostResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/externalconnectors-externalitem-addactivities?view=graph-rest-1.0 Find more info here
     */
     public function post(AddActivitiesPostRequestBody $body, ?MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -45,7 +46,7 @@ class MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke action addActivities
+     * Append additional instances of externalActivity objects on an externalItem.
      * @param AddActivitiesPostRequestBody $body The request body
      * @param MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

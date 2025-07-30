@@ -52,7 +52,7 @@ class ContainersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      * @param ContainersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerCollectionResponse|null>
      * @throws Exception
@@ -83,7 +83,7 @@ class ContainersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+     * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
      * @param ContainersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

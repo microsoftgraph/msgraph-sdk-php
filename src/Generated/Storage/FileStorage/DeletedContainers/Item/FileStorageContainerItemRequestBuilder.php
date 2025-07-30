@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\FileStorageContainer;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Activate\ActivateRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Lock\LockRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
@@ -29,6 +30,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     */
     public function activate(): ActivateRequestBuilder {
         return new ActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.fileStorageContainer entity.
+    */
+    public function columns(): ColumnsRequestBuilder {
+        return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

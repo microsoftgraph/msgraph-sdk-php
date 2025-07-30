@@ -52,7 +52,7 @@ class LanguageDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param LanguageDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TrainingLanguageDetailCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class LanguageDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Language specific details on a training.
+     * Get the language details about an attack simulation training for a tenant.
      * @param LanguageDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

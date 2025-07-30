@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenLifetimePolicyCollectionResponse;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -26,7 +27,14 @@ class TokenLifetimePoliciesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.servicePrincipal entity.
+     * Provides operations to manage the collection of servicePrincipal entities.
+    */
+    public function ref(): RefRequestBuilder {
+        return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.tokenLifetimePolicies.item collection
      * @param string $tokenLifetimePolicyId The unique identifier of tokenLifetimePolicy
      * @return TokenLifetimePolicyItemRequestBuilder
     */

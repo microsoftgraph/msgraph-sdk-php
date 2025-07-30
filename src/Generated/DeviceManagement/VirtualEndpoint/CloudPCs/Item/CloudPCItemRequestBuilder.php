@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\EndGracePeriod\EndGracePeriodRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Reboot\RebootRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Rename\RenameRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Resize\ResizeRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Troubleshoot\TroubleshootRequestBuilder;
 use Microsoft\Graph\Generated\Models\CloudPC;
@@ -40,6 +41,13 @@ class CloudPCItemRequestBuilder extends BaseRequestBuilder
     */
     public function rename(): RenameRequestBuilder {
         return new RenameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the resize method.
+    */
+    public function resize(): ResizeRequestBuilder {
+        return new ResizeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

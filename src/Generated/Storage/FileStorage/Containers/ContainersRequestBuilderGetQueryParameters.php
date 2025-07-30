@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of fileStorageContainer objects that are visible to the caller. The containerTypeId filter parameter is required.
+ * Get a list of fileStorageContainer objects that are accessible to a caller. The containerTypeId filter parameter is required.
 */
 class ContainersRequestBuilderGetQueryParameters 
 {
