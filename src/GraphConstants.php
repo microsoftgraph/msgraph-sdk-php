@@ -20,6 +20,6 @@ final class GraphConstants
 {
     const API_VERSION = "v1.0";
     // x-release-please-start-version
-    const SDK_VERSION = "2.43.0";
+    const SDK_VERSION = "2.44.0";
     // x-release-please-end
 }
