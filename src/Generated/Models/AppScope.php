@@ -25,7 +25,7 @@ class AppScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
+     * Gets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read-only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -71,7 +71,7 @@ class AppScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read only.
+     * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Read-only.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

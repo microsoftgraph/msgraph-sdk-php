@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\AllMembers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of all members in a channel. It supports all types of channels. In the case of shared channels, it includes all cross-tenant and cross-team members in a channel.
+ * Get a list of all members in a channel. This API supports all channel types, including shared channels. For shared channels, the response includes:
 */
 class AllMembersRequestBuilderGetQueryParameters 
 {

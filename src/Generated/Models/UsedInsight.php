@@ -39,7 +39,7 @@ class UsedInsight extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read-only.
      * @return UsageDetails|null
     */
     public function getLastUsed(): ?UsageDetails {
@@ -63,7 +63,7 @@ class UsedInsight extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
+     * Gets the resourceReference property value. Reference properties of the used document, such as the URL and type of the document. Read-only
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
@@ -97,7 +97,7 @@ class UsedInsight extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read-only.
      * @param UsageDetails|null $value Value to set for the lastUsed property.
     */
     public function setLastUsed(?UsageDetails $value): void {
@@ -113,7 +113,7 @@ class UsedInsight extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceReference property value. Reference properties of the used document, such as the url and type of the document. Read-only
+     * Sets the resourceReference property value. Reference properties of the used document, such as the URL and type of the document. Read-only
      * @param ResourceReference|null $value Value to set for the resourceReference property.
     */
     public function setResourceReference(?ResourceReference $value): void {

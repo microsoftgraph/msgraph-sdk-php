@@ -75,7 +75,7 @@ class TeamsTab extends Entity implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
+     * Gets the webUrl property value. Deep link URL of the tab instance. Read-only.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -123,7 +123,7 @@ class TeamsTab extends Entity implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. Deep link URL of the tab instance. Read only.
+     * Sets the webUrl property value. Deep link URL of the tab instance. Read-only.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

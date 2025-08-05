@@ -95,6 +95,8 @@ class RestoreSessionBase extends Entity implements Parsable
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'restoreJobType' => fn(ParseNode $n) => $o->setRestoreJobType($n->getEnumValue(RestoreJobType::class)),
+            'restoreSessionArtifactCount' => fn(ParseNode $n) => $o->setRestoreSessionArtifactCount($n->getObjectValue([RestoreSessionArtifactCount::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(RestoreSessionStatus::class)),
         ]);
     }
@@ -124,6 +126,30 @@ class RestoreSessionBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the restoreJobType property value. Indicates whether the restore session was created normally or by a bulk job.
+     * @return RestoreJobType|null
+    */
+    public function getRestoreJobType(): ?RestoreJobType {
+        $val = $this->getBackingStore()->get('restoreJobType');
+        if (is_null($val) || $val instanceof RestoreJobType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restoreJobType'");
+    }
+
+    /**
+     * Gets the restoreSessionArtifactCount property value. The number of metadata artifacts that belong to this restore session.
+     * @return RestoreSessionArtifactCount|null
+    */
+    public function getRestoreSessionArtifactCount(): ?RestoreSessionArtifactCount {
+        $val = $this->getBackingStore()->get('restoreSessionArtifactCount');
+        if (is_null($val) || $val instanceof RestoreSessionArtifactCount) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restoreSessionArtifactCount'");
+    }
+
+    /**
      * Gets the status property value. Status of the restore session. The value is an aggregated status of the restored artifacts. The possible values are: draft, activating, active, completedWithError, completed, unknownFutureValue, failed. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: failed.
      * @return RestoreSessionStatus|null
     */
@@ -147,6 +173,8 @@ class RestoreSessionBase extends Entity implements Parsable
         $writer->writeObjectValue('error', $this->getError());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeEnumValue('restoreJobType', $this->getRestoreJobType());
+        $writer->writeObjectValue('restoreSessionArtifactCount', $this->getRestoreSessionArtifactCount());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 
@@ -196,6 +224,22 @@ class RestoreSessionBase extends Entity implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the restoreJobType property value. Indicates whether the restore session was created normally or by a bulk job.
+     * @param RestoreJobType|null $value Value to set for the restoreJobType property.
+    */
+    public function setRestoreJobType(?RestoreJobType $value): void {
+        $this->getBackingStore()->set('restoreJobType', $value);
+    }
+
+    /**
+     * Sets the restoreSessionArtifactCount property value. The number of metadata artifacts that belong to this restore session.
+     * @param RestoreSessionArtifactCount|null $value Value to set for the restoreSessionArtifactCount property.
+    */
+    public function setRestoreSessionArtifactCount(?RestoreSessionArtifactCount $value): void {
+        $this->getBackingStore()->set('restoreSessionArtifactCount', $value);
     }
 
     /**
