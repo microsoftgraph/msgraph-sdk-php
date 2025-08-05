@@ -40,6 +40,7 @@ class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'restoredFolderId' => fn(ParseNode $n) => $o->setRestoredFolderId($n->getStringValue()),
             'restoredFolderName' => fn(ParseNode $n) => $o->setRestoredFolderName($n->getStringValue()),
+            'restoredItemCount' => fn(ParseNode $n) => $o->setRestoredItemCount($n->getIntegerValue()),
         ]);
     }
 
@@ -68,12 +69,25 @@ class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsable
     }
 
     /**
+     * Gets the restoredItemCount property value. The number of items that are being restored in the folder.
+     * @return int|null
+    */
+    public function getRestoredItemCount(): ?int {
+        $val = $this->getBackingStore()->get('restoredItemCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restoredItemCount'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('restoredFolderId', $this->getRestoredFolderId());
+        $writer->writeIntegerValue('restoredItemCount', $this->getRestoredItemCount());
     }
 
     /**
@@ -90,6 +104,14 @@ class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsable
     */
     public function setRestoredFolderName(?string $value): void {
         $this->getBackingStore()->set('restoredFolderName', $value);
+    }
+
+    /**
+     * Sets the restoredItemCount property value. The number of items that are being restored in the folder.
+     * @param int|null $value Value to set for the restoredItemCount property.
+    */
+    public function setRestoredItemCount(?int $value): void {
+        $this->getBackingStore()->set('restoredItemCount', $value);
     }
 
 }
