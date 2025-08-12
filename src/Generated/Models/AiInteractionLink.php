@@ -2,17 +2,27 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AiInteractionLink extends Entity implements Parsable 
+class AiInteractionLink implements AdditionalDataHolder, BackedModel, Parsable 
 {
+    /**
+     * @var BackingStore $backingStore Stores model information.
+    */
+    private BackingStore $backingStore;
+    
     /**
      * Instantiates a new AiInteractionLink and sets the default values.
     */
     public function __construct() {
-        parent::__construct();
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
+        $this->setAdditionalData([]);
     }
 
     /**
@@ -25,7 +35,28 @@ class AiInteractionLink extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name of the link.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return array<string, mixed>|null
+    */
+    public function getAdditionalData(): ?array {
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
+    }
+
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
+    }
+
+    /**
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -42,15 +73,16 @@ class AiInteractionLink extends Entity implements Parsable
     */
     public function getFieldDeserializers(): array {
         $o = $this;
-        return array_merge(parent::getFieldDeserializers(), [
+        return  [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'linkType' => fn(ParseNode $n) => $o->setLinkType($n->getStringValue()),
             'linkUrl' => fn(ParseNode $n) => $o->setLinkUrl($n->getStringValue()),
-        ]);
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+        ];
     }
 
     /**
-     * Gets the linkType property value. Information about a link in an app chat or Business Chat (BizChat) interaction.
+     * Gets the linkType property value. The linkType property
      * @return string|null
     */
     public function getLinkType(): ?string {
@@ -62,7 +94,7 @@ class AiInteractionLink extends Entity implements Parsable
     }
 
     /**
-     * Gets the linkUrl property value. The URL of the link.
+     * Gets the linkUrl property value. The linkUrl property
      * @return string|null
     */
     public function getLinkUrl(): ?string {
@@ -74,18 +106,47 @@ class AiInteractionLink extends Entity implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('linkType', $this->getLinkType());
         $writer->writeStringValue('linkUrl', $this->getLinkUrl());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the displayName property value. The name of the link.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+    */
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -93,7 +154,7 @@ class AiInteractionLink extends Entity implements Parsable
     }
 
     /**
-     * Sets the linkType property value. Information about a link in an app chat or Business Chat (BizChat) interaction.
+     * Sets the linkType property value. The linkType property
      * @param string|null $value Value to set for the linkType property.
     */
     public function setLinkType(?string $value): void {
@@ -101,11 +162,19 @@ class AiInteractionLink extends Entity implements Parsable
     }
 
     /**
-     * Sets the linkUrl property value. The URL of the link.
+     * Sets the linkUrl property value. The linkUrl property
      * @param string|null $value Value to set for the linkUrl property.
     */
     public function setLinkUrl(?string $value): void {
         $this->getBackingStore()->set('linkUrl', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the @odata.type property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
 }

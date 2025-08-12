@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
- * An abstract base class containing properties for all managed mobile line of business apps.
+ * An abstract base class containing properties for all managed mobile line-of-business apps.
 */
 class ManagedMobileLobApp extends ManagedApp implements Parsable 
 {

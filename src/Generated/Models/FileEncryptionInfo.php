@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Psr\Http\Message\StreamInterface;
 
 /**
- * Contains properties for file encryption information for the content version of a line of business app.
+ * Contains properties for file encryption information for the content version of a line-of-business app.
 */
 class FileEncryptionInfo implements AdditionalDataHolder, BackedModel, Parsable 
 {

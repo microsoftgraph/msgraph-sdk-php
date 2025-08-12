@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UserAccount implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -115,6 +116,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'resourceAccessEvents' => fn(ParseNode $n) => $o->setResourceAccessEvents($n->getCollectionOfObjectValues([ResourceAccessEvent::class, 'createFromDiscriminatorValue'])),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
             'userSid' => fn(ParseNode $n) => $o->setUserSid($n->getStringValue()),
         ];
@@ -130,6 +132,20 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
+     * Gets the resourceAccessEvents property value. Information on resource access attempts made by the user account.
+     * @return array<ResourceAccessEvent>|null
+    */
+    public function getResourceAccessEvents(): ?array {
+        $val = $this->getBackingStore()->get('resourceAccessEvents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ResourceAccessEvent::class);
+            /** @var array<ResourceAccessEvent>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceAccessEvents'");
     }
 
     /**
@@ -166,6 +182,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('domainName', $this->getDomainName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('resourceAccessEvents', $this->getResourceAccessEvents());
         $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
         $writer->writeStringValue('userSid', $this->getUserSid());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -225,6 +242,14 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the resourceAccessEvents property value. Information on resource access attempts made by the user account.
+     * @param array<ResourceAccessEvent>|null $value Value to set for the resourceAccessEvents property.
+    */
+    public function setResourceAccessEvents(?array $value): void {
+        $this->getBackingStore()->set('resourceAccessEvents', $value);
     }
 
     /**
