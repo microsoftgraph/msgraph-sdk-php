@@ -627,6 +627,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.mobileAppCategory': return new MobileAppCategory();
                 case '#microsoft.graph.mobileAppContent': return new MobileAppContent();
                 case '#microsoft.graph.mobileAppContentFile': return new MobileAppContentFile();
+                case '#microsoft.graph.mobileAppRelationship': return new MobileAppRelationship();
                 case '#microsoft.graph.mobileAppTroubleshootingEvent': return new MobileAppTroubleshootingEvent();
                 case '#microsoft.graph.mobileContainedApp': return new MobileContainedApp();
                 case '#microsoft.graph.mobileLobApp': return new MobileLobApp();
@@ -652,6 +653,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.onAuthenticationMethodLoadStartListener': return new OnAuthenticationMethodLoadStartListener();
                 case '#microsoft.graph.oneDriveForBusinessProtectionPolicy': return new OneDriveForBusinessProtectionPolicy();
                 case '#microsoft.graph.oneDriveForBusinessRestoreSession': return new OneDriveForBusinessRestoreSession();
+                case '#microsoft.graph.onEmailOtpSendListener': return new OnEmailOtpSendListener();
                 case '#microsoft.graph.onenote': return new Onenote();
                 case '#microsoft.graph.onenoteEntityBaseModel': return new OnenoteEntityBaseModel();
                 case '#microsoft.graph.onenoteEntityHierarchyModel': return new OnenoteEntityHierarchyModel();
@@ -663,6 +665,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.onInteractiveAuthFlowStartListener': return new OnInteractiveAuthFlowStartListener();
                 case '#microsoft.graph.onlineMeeting': return new OnlineMeeting();
                 case '#microsoft.graph.onlineMeetingBase': return new OnlineMeetingBase();
+                case '#microsoft.graph.onOtpSendCustomExtension': return new OnOtpSendCustomExtension();
                 case '#microsoft.graph.onPremisesConditionalAccessSettings': return new OnPremisesConditionalAccessSettings();
                 case '#microsoft.graph.onPremisesDirectorySynchronization': return new OnPremisesDirectorySynchronization();
                 case '#microsoft.graph.onTokenIssuanceStartCustomExtension': return new OnTokenIssuanceStartCustomExtension();

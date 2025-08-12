@@ -78,6 +78,7 @@ class DeviceAppManagement extends Entity implements Parsable
             'microsoftStoreForBusinessLastSuccessfulSyncDateTime' => fn(ParseNode $n) => $o->setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime($n->getDateTimeValue()),
             'mobileAppCategories' => fn(ParseNode $n) => $o->setMobileAppCategories($n->getCollectionOfObjectValues([MobileAppCategory::class, 'createFromDiscriminatorValue'])),
             'mobileAppConfigurations' => fn(ParseNode $n) => $o->setMobileAppConfigurations($n->getCollectionOfObjectValues([ManagedDeviceMobileAppConfiguration::class, 'createFromDiscriminatorValue'])),
+            'mobileAppRelationships' => fn(ParseNode $n) => $o->setMobileAppRelationships($n->getCollectionOfObjectValues([MobileAppRelationship::class, 'createFromDiscriminatorValue'])),
             'mobileApps' => fn(ParseNode $n) => $o->setMobileApps($n->getCollectionOfObjectValues([MobileApp::class, 'createFromDiscriminatorValue'])),
             'targetedManagedAppConfigurations' => fn(ParseNode $n) => $o->setTargetedManagedAppConfigurations($n->getCollectionOfObjectValues([TargetedManagedAppConfiguration::class, 'createFromDiscriminatorValue'])),
             'vppTokens' => fn(ParseNode $n) => $o->setVppTokens($n->getCollectionOfObjectValues([VppToken::class, 'createFromDiscriminatorValue'])),
@@ -246,6 +247,20 @@ class DeviceAppManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the mobileAppRelationships property value. The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
+     * @return array<MobileAppRelationship>|null
+    */
+    public function getMobileAppRelationships(): ?array {
+        $val = $this->getBackingStore()->get('mobileAppRelationships');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileAppRelationship::class);
+            /** @var array<MobileAppRelationship>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mobileAppRelationships'");
+    }
+
+    /**
      * Gets the mobileApps property value. The mobile apps.
      * @return array<MobileApp>|null
     */
@@ -321,6 +336,7 @@ class DeviceAppManagement extends Entity implements Parsable
         $writer->writeDateTimeValue('microsoftStoreForBusinessLastSuccessfulSyncDateTime', $this->getMicrosoftStoreForBusinessLastSuccessfulSyncDateTime());
         $writer->writeCollectionOfObjectValues('mobileAppCategories', $this->getMobileAppCategories());
         $writer->writeCollectionOfObjectValues('mobileAppConfigurations', $this->getMobileAppConfigurations());
+        $writer->writeCollectionOfObjectValues('mobileAppRelationships', $this->getMobileAppRelationships());
         $writer->writeCollectionOfObjectValues('mobileApps', $this->getMobileApps());
         $writer->writeCollectionOfObjectValues('targetedManagedAppConfigurations', $this->getTargetedManagedAppConfigurations());
         $writer->writeCollectionOfObjectValues('vppTokens', $this->getVppTokens());
@@ -437,6 +453,14 @@ class DeviceAppManagement extends Entity implements Parsable
     */
     public function setMobileAppConfigurations(?array $value): void {
         $this->getBackingStore()->set('mobileAppConfigurations', $value);
+    }
+
+    /**
+     * Sets the mobileAppRelationships property value. The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
+     * @param array<MobileAppRelationship>|null $value Value to set for the mobileAppRelationships property.
+    */
+    public function setMobileAppRelationships(?array $value): void {
+        $this->getBackingStore()->set('mobileAppRelationships', $value);
     }
 
     /**

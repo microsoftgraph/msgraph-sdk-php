@@ -56,6 +56,18 @@ class CustomExtensionOverwriteConfiguration implements AdditionalDataHolder, Bac
     }
 
     /**
+     * Gets the behaviorOnError property value. The behaviorOnError property
+     * @return CustomExtensionBehaviorOnError|null
+    */
+    public function getBehaviorOnError(): ?CustomExtensionBehaviorOnError {
+        $val = $this->getBackingStore()->get('behaviorOnError');
+        if (is_null($val) || $val instanceof CustomExtensionBehaviorOnError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'behaviorOnError'");
+    }
+
+    /**
      * Gets the clientConfiguration property value. Configuration regarding properties of the custom extension which can be overwritten per event listener. If no values are provided, the properties on the custom extension are used.
      * @return CustomExtensionClientConfiguration|null
     */
@@ -74,6 +86,7 @@ class CustomExtensionOverwriteConfiguration implements AdditionalDataHolder, Bac
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'behaviorOnError' => fn(ParseNode $n) => $o->setBehaviorOnError($n->getObjectValue([CustomExtensionBehaviorOnError::class, 'createFromDiscriminatorValue'])),
             'clientConfiguration' => fn(ParseNode $n) => $o->setClientConfiguration($n->getObjectValue([CustomExtensionClientConfiguration::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -96,6 +109,7 @@ class CustomExtensionOverwriteConfiguration implements AdditionalDataHolder, Bac
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('behaviorOnError', $this->getBehaviorOnError());
         $writer->writeObjectValue('clientConfiguration', $this->getClientConfiguration());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -115,6 +129,14 @@ class CustomExtensionOverwriteConfiguration implements AdditionalDataHolder, Bac
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the behaviorOnError property value. The behaviorOnError property
+     * @param CustomExtensionBehaviorOnError|null $value Value to set for the behaviorOnError property.
+    */
+    public function setBehaviorOnError(?CustomExtensionBehaviorOnError $value): void {
+        $this->getBackingStore()->set('behaviorOnError', $value);
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models\Security;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsable 
 {
@@ -71,6 +72,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
             'cloudAttachmentVersion' => fn(ParseNode $n) => $o->setCloudAttachmentVersion($n->getEnumValue(CloudAttachmentVersion::class)),
             'documentVersion' => fn(ParseNode $n) => $o->setDocumentVersion($n->getEnumValue(DocumentVersion::class)),
             'itemsToInclude' => fn(ParseNode $n) => $o->setItemsToInclude($n->getEnumValue(ItemsToInclude::class)),
+            'reportFileMetadata' => fn(ParseNode $n) => $o->setReportFileMetadata($n->getCollectionOfObjectValues([ReportFileMetadata::class, 'createFromDiscriminatorValue'])),
             'reviewSet' => fn(ParseNode $n) => $o->setReviewSet($n->getObjectValue([EdiscoveryReviewSet::class, 'createFromDiscriminatorValue'])),
             'search' => fn(ParseNode $n) => $o->setSearch($n->getObjectValue([EdiscoverySearch::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -86,6 +88,20 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'itemsToInclude'");
+    }
+
+    /**
+     * Gets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @return array<ReportFileMetadata>|null
+    */
+    public function getReportFileMetadata(): ?array {
+        $val = $this->getBackingStore()->get('reportFileMetadata');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ReportFileMetadata::class);
+            /** @var array<ReportFileMetadata>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reportFileMetadata'");
     }
 
     /**
@@ -122,6 +138,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
         $writer->writeEnumValue('cloudAttachmentVersion', $this->getCloudAttachmentVersion());
         $writer->writeEnumValue('documentVersion', $this->getDocumentVersion());
         $writer->writeEnumValue('itemsToInclude', $this->getItemsToInclude());
+        $writer->writeCollectionOfObjectValues('reportFileMetadata', $this->getReportFileMetadata());
         $writer->writeObjectValue('reviewSet', $this->getReviewSet());
         $writer->writeObjectValue('search', $this->getSearch());
     }
@@ -156,6 +173,14 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
     */
     public function setItemsToInclude(?ItemsToInclude $value): void {
         $this->getBackingStore()->set('itemsToInclude', $value);
+    }
+
+    /**
+     * Sets the reportFileMetadata property value. Contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @param array<ReportFileMetadata>|null $value Value to set for the reportFileMetadata property.
+    */
+    public function setReportFileMetadata(?array $value): void {
+        $this->getBackingStore()->set('reportFileMetadata', $value);
     }
 
     /**

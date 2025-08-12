@@ -7,9 +7,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
-/**
- * Singleton entity that acts as a container for all reports functionality.
-*/
 class DeviceManagementReports extends Entity implements Parsable 
 {
     /**

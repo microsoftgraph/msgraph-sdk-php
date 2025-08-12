@@ -37,7 +37,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
+     * Gets the availability property value. The base presence information for a user. Possible values are Available, availableIdle,  Away, beRightBack, Busy, busyIdle, DoNotDisturb, Offline, presenceUnknown.
      * @return string|null
     */
     public function getAvailability(): ?string {
@@ -64,7 +64,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Gets the outOfOfficeSettings property value. The outOfOfficeSettings property
+     * Gets the outOfOfficeSettings property value. The user's out-of-office settings.
      * @return OutOfOfficeSettings|null
     */
     public function getOutOfOfficeSettings(): ?OutOfOfficeSettings {
@@ -76,7 +76,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Gets the sequenceNumber property value. The sequenceNumber property
+     * Gets the sequenceNumber property value. The lexicographically sortable string stamp that represents the version of a presence object.
      * @return string|null
     */
     public function getSequenceNumber(): ?string {
@@ -120,7 +120,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Sets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
+     * Sets the availability property value. The base presence information for a user. Possible values are Available, availableIdle,  Away, beRightBack, Busy, busyIdle, DoNotDisturb, Offline, presenceUnknown.
      * @param string|null $value Value to set for the availability property.
     */
     public function setAvailability(?string $value): void {
@@ -128,7 +128,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Sets the outOfOfficeSettings property value. The outOfOfficeSettings property
+     * Sets the outOfOfficeSettings property value. The user's out-of-office settings.
      * @param OutOfOfficeSettings|null $value Value to set for the outOfOfficeSettings property.
     */
     public function setOutOfOfficeSettings(?OutOfOfficeSettings $value): void {
@@ -136,7 +136,7 @@ class Presence extends Entity implements Parsable
     }
 
     /**
-     * Sets the sequenceNumber property value. The sequenceNumber property
+     * Sets the sequenceNumber property value. The lexicographically sortable string stamp that represents the version of a presence object.
      * @param string|null $value Value to set for the sequenceNumber property.
     */
     public function setSequenceNumber(?string $value): void {
