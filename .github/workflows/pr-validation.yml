@@ -25,7 +25,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Validate composer file
       run: |
         composer validate
