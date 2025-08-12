@@ -18,4 +18,5 @@ class DeviceEnrollmentType extends Enum {
     public const WINDOWS_AZURE_A_D_JOIN_USING_DEVICE_AUTH = "windowsAzureADJoinUsingDeviceAuth";
     public const APPLE_USER_ENROLLMENT = "appleUserEnrollment";
     public const APPLE_USER_ENROLLMENT_WITH_SERVICE_ACCOUNT = "appleUserEnrollmentWithServiceAccount";
+    public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

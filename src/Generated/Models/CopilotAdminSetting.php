@@ -36,7 +36,7 @@ class CopilotAdminSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
+     * Gets the limitedMode property value. The limitedMode property
      * @return CopilotAdminLimitedMode|null
     */
     public function getLimitedMode(): ?CopilotAdminLimitedMode {
@@ -57,7 +57,7 @@ class CopilotAdminSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the limitedMode property value. Represents a setting that controls whether users of Microsoft 365 Copilot in Teams meetings can receive responses to sentiment-related prompts. Read-only. Nullable.
+     * Sets the limitedMode property value. The limitedMode property
      * @param CopilotAdminLimitedMode|null $value Value to set for the limitedMode property.
     */
     public function setLimitedMode(?CopilotAdminLimitedMode $value): void {

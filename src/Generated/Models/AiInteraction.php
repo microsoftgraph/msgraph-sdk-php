@@ -27,7 +27,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the appClass property value. The data source for Copilot data. For example, IPM.SkypeTeams.Message.Copilot.Excel or IPM.SkypeTeams.Message.Copilot.Loop.
+     * Gets the appClass property value. The appClass property
      * @return string|null
     */
     public function getAppClass(): ?string {
@@ -39,7 +39,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the attachments property value. The collection of documents attached to the interaction, such as cards and images.
+     * Gets the attachments property value. The attachments property
      * @return array<AiInteractionAttachment>|null
     */
     public function getAttachments(): ?array {
@@ -53,7 +53,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the body property value. The body of the message, including the text of the body and its body type.
+     * Gets the body property value. The body property
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
@@ -65,7 +65,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the contexts property value. The identifer that maps to all contexts associated with an interaction.
+     * Gets the contexts property value. The contexts property
      * @return array<AiInteractionContext>|null
     */
     public function getContexts(): ?array {
@@ -79,7 +79,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the conversationType property value. The type of the conversation. For example, appchat or bizchat.
+     * Gets the conversationType property value. The conversationType property
      * @return string|null
     */
     public function getConversationType(): ?string {
@@ -91,7 +91,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The time when the interaction was created.
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -103,7 +103,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the etag property value. The timestamp of when the interaction was last modified.
+     * Gets the etag property value. The etag property
      * @return string|null
     */
     public function getEtag(): ?string {
@@ -163,7 +163,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the links property value. The collection of links that appear in the interaction.
+     * Gets the links property value. The links property
      * @return array<AiInteractionLink>|null
     */
     public function getLinks(): ?array {
@@ -177,7 +177,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the locale property value. The locale of the sender.
+     * Gets the locale property value. The locale property
      * @return string|null
     */
     public function getLocale(): ?string {
@@ -189,7 +189,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the mentions property value. The collection of the entities that were mentioned in the interaction, including users, bots, and so on.
+     * Gets the mentions property value. The mentions property
      * @return array<AiInteractionMention>|null
     */
     public function getMentions(): ?array {
@@ -203,7 +203,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestId property value. The identifier that groups a user prompt with its Copilot response.
+     * Gets the requestId property value. The requestId property
      * @return string|null
     */
     public function getRequestId(): ?string {
@@ -215,7 +215,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Gets the sessionId property value. The thread ID or conversation identifier that maps to all Copilot sessions for the user.
+     * Gets the sessionId property value. The sessionId property
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -249,7 +249,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the appClass property value. The data source for Copilot data. For example, IPM.SkypeTeams.Message.Copilot.Excel or IPM.SkypeTeams.Message.Copilot.Loop.
+     * Sets the appClass property value. The appClass property
      * @param string|null $value Value to set for the appClass property.
     */
     public function setAppClass(?string $value): void {
@@ -257,7 +257,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the attachments property value. The collection of documents attached to the interaction, such as cards and images.
+     * Sets the attachments property value. The attachments property
      * @param array<AiInteractionAttachment>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value): void {
@@ -265,7 +265,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the body property value. The body of the message, including the text of the body and its body type.
+     * Sets the body property value. The body property
      * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
@@ -273,7 +273,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the contexts property value. The identifer that maps to all contexts associated with an interaction.
+     * Sets the contexts property value. The contexts property
      * @param array<AiInteractionContext>|null $value Value to set for the contexts property.
     */
     public function setContexts(?array $value): void {
@@ -281,7 +281,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the conversationType property value. The type of the conversation. For example, appchat or bizchat.
+     * Sets the conversationType property value. The conversationType property
      * @param string|null $value Value to set for the conversationType property.
     */
     public function setConversationType(?string $value): void {
@@ -289,7 +289,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The time when the interaction was created.
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -297,7 +297,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the etag property value. The timestamp of when the interaction was last modified.
+     * Sets the etag property value. The etag property
      * @param string|null $value Value to set for the etag property.
     */
     public function setEtag(?string $value): void {
@@ -321,7 +321,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the links property value. The collection of links that appear in the interaction.
+     * Sets the links property value. The links property
      * @param array<AiInteractionLink>|null $value Value to set for the links property.
     */
     public function setLinks(?array $value): void {
@@ -329,7 +329,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the locale property value. The locale of the sender.
+     * Sets the locale property value. The locale property
      * @param string|null $value Value to set for the locale property.
     */
     public function setLocale(?string $value): void {
@@ -337,7 +337,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the mentions property value. The collection of the entities that were mentioned in the interaction, including users, bots, and so on.
+     * Sets the mentions property value. The mentions property
      * @param array<AiInteractionMention>|null $value Value to set for the mentions property.
     */
     public function setMentions(?array $value): void {
@@ -345,7 +345,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestId property value. The identifier that groups a user prompt with its Copilot response.
+     * Sets the requestId property value. The requestId property
      * @param string|null $value Value to set for the requestId property.
     */
     public function setRequestId(?string $value): void {
@@ -353,7 +353,7 @@ class AiInteraction extends Entity implements Parsable
     }
 
     /**
-     * Sets the sessionId property value. The thread ID or conversation identifier that maps to all Copilot sessions for the user.
+     * Sets the sessionId property value. The sessionId property
      * @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value): void {

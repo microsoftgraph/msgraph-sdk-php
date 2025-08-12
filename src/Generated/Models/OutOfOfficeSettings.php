@@ -69,7 +69,7 @@ class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isOutOfOffice property value. The isOutOfOffice property
+     * Gets the isOutOfOffice property value. If true, either of the following is met:The current time falls within the out-of-office window configured in Outlook or Teams.An event marked as 'Show as Out of Office' appears on the user's calendar.Otherwise, false.
      * @return bool|null
     */
     public function getIsOutOfOffice(): ?bool {
@@ -81,7 +81,7 @@ class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. The out-of-office message configured by the user in the Outlook client (Automatic replies) or the Teams client (Schedule out of office).
      * @return string|null
     */
     public function getMessage(): ?string {
@@ -132,7 +132,7 @@ class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isOutOfOffice property value. The isOutOfOffice property
+     * Sets the isOutOfOffice property value. If true, either of the following is met:The current time falls within the out-of-office window configured in Outlook or Teams.An event marked as 'Show as Out of Office' appears on the user's calendar.Otherwise, false.
      * @param bool|null $value Value to set for the isOutOfOffice property.
     */
     public function setIsOutOfOffice(?bool $value): void {
@@ -140,7 +140,7 @@ class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. The out-of-office message configured by the user in the Outlook client (Automatic replies) or the Teams client (Schedule out of office).
      * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {

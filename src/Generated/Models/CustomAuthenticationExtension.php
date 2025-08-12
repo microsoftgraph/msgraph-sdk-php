@@ -28,10 +28,23 @@ class CustomAuthenticationExtension extends CustomCalloutExtension implements Pa
             switch ($mappingValue) {
                 case '#microsoft.graph.onAttributeCollectionStartCustomExtension': return new OnAttributeCollectionStartCustomExtension();
                 case '#microsoft.graph.onAttributeCollectionSubmitCustomExtension': return new OnAttributeCollectionSubmitCustomExtension();
+                case '#microsoft.graph.onOtpSendCustomExtension': return new OnOtpSendCustomExtension();
                 case '#microsoft.graph.onTokenIssuanceStartCustomExtension': return new OnTokenIssuanceStartCustomExtension();
             }
         }
         return new CustomAuthenticationExtension();
+    }
+
+    /**
+     * Gets the behaviorOnError property value. The behaviour on error for the custom authentication extension.
+     * @return CustomExtensionBehaviorOnError|null
+    */
+    public function getBehaviorOnError(): ?CustomExtensionBehaviorOnError {
+        $val = $this->getBackingStore()->get('behaviorOnError');
+        if (is_null($val) || $val instanceof CustomExtensionBehaviorOnError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'behaviorOnError'");
     }
 
     /**
@@ -41,6 +54,7 @@ class CustomAuthenticationExtension extends CustomCalloutExtension implements Pa
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'behaviorOnError' => fn(ParseNode $n) => $o->setBehaviorOnError($n->getObjectValue([CustomExtensionBehaviorOnError::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -50,6 +64,15 @@ class CustomAuthenticationExtension extends CustomCalloutExtension implements Pa
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('behaviorOnError', $this->getBehaviorOnError());
+    }
+
+    /**
+     * Sets the behaviorOnError property value. The behaviour on error for the custom authentication extension.
+     * @param CustomExtensionBehaviorOnError|null $value Value to set for the behaviorOnError property.
+    */
+    public function setBehaviorOnError(?CustomExtensionBehaviorOnError $value): void {
+        $this->getBackingStore()->set('behaviorOnError', $value);
     }
 
 }
