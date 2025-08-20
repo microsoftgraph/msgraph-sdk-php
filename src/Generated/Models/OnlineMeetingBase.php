@@ -278,7 +278,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * Gets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
      * @return bool|null
     */
     public function getIsEndToEndEncryptionEnabled(): ?bool {
@@ -582,7 +582,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the isEndToEndEncryptionEnabled property value. The isEndToEndEncryptionEnabled property
+     * Sets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
      * @param bool|null $value Value to set for the isEndToEndEncryptionEnabled property.
     */
     public function setIsEndToEndEncryptionEnabled(?bool $value): void {
