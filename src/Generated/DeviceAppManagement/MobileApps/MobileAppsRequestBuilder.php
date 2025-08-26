@@ -180,11 +180,11 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsWebApp objects.
+     * List properties and relationships of the windowsMicrosoftEdgeApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowswebapp-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -195,12 +195,12 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windowsMicrosoftEdgeApp object.
+     * Create a new win32LobApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-win32lobapp-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileApp $body, ?MobileAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -211,7 +211,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsWebApp objects.
+     * List properties and relationships of the windowsMicrosoftEdgeApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -232,7 +232,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windowsMicrosoftEdgeApp object.
+     * Create a new win32LobApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

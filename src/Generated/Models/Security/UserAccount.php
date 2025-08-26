@@ -48,6 +48,18 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the activeDirectoryObjectGuid property value. The activeDirectoryObjectGuid property
+     * @return string|null
+    */
+    public function getActiveDirectoryObjectGuid(): ?string {
+        $val = $this->getBackingStore()->get('activeDirectoryObjectGuid');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeDirectoryObjectGuid'");
+    }
+
+    /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return array<string, mixed>|null
     */
@@ -112,6 +124,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'accountName' => fn(ParseNode $n) => $o->setAccountName($n->getStringValue()),
+            'activeDirectoryObjectGuid' => fn(ParseNode $n) => $o->setActiveDirectoryObjectGuid($n->getStringValue()),
             'azureAdUserId' => fn(ParseNode $n) => $o->setAzureAdUserId($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
@@ -178,6 +191,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('accountName', $this->getAccountName());
+        $writer->writeStringValue('activeDirectoryObjectGuid', $this->getActiveDirectoryObjectGuid());
         $writer->writeStringValue('azureAdUserId', $this->getAzureAdUserId());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('domainName', $this->getDomainName());
@@ -194,6 +208,14 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setAccountName(?string $value): void {
         $this->getBackingStore()->set('accountName', $value);
+    }
+
+    /**
+     * Sets the activeDirectoryObjectGuid property value. The activeDirectoryObjectGuid property
+     * @param string|null $value Value to set for the activeDirectoryObjectGuid property.
+    */
+    public function setActiveDirectoryObjectGuid(?string $value): void {
+        $this->getBackingStore()->set('activeDirectoryObjectGuid', $value);
     }
 
     /**
