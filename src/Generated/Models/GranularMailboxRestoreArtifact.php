@@ -25,7 +25,7 @@ class GranularMailboxRestoreArtifact extends MailboxRestoreArtifact implements P
     }
 
     /**
-     * Gets the artifactCount property value. .
+     * Gets the artifactCount property value. This property will be deprecated soon. Don't use.
      * @return int|null
     */
     public function getArtifactCount(): ?int {
@@ -71,7 +71,7 @@ class GranularMailboxRestoreArtifact extends MailboxRestoreArtifact implements P
     }
 
     /**
-     * Sets the artifactCount property value. .
+     * Sets the artifactCount property value. This property will be deprecated soon. Don't use.
      * @param int|null $value Value to set for the artifactCount property.
     */
     public function setArtifactCount(?int $value): void {

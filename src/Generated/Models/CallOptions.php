@@ -73,6 +73,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
             'hideBotAfterEscalation' => fn(ParseNode $n) => $o->setHideBotAfterEscalation($n->getBooleanValue()),
             'isContentSharingNotificationEnabled' => fn(ParseNode $n) => $o->setIsContentSharingNotificationEnabled($n->getBooleanValue()),
             'isDeltaRosterEnabled' => fn(ParseNode $n) => $o->setIsDeltaRosterEnabled($n->getBooleanValue()),
+            'isInteractiveRosterEnabled' => fn(ParseNode $n) => $o->setIsInteractiveRosterEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -114,6 +115,18 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the isInteractiveRosterEnabled property value. Indicates whether delta roster filtering by participant interactivity is enabled.
+     * @return bool|null
+    */
+    public function getIsInteractiveRosterEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isInteractiveRosterEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isInteractiveRosterEnabled'");
+    }
+
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
@@ -133,6 +146,7 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeBooleanValue('hideBotAfterEscalation', $this->getHideBotAfterEscalation());
         $writer->writeBooleanValue('isContentSharingNotificationEnabled', $this->getIsContentSharingNotificationEnabled());
         $writer->writeBooleanValue('isDeltaRosterEnabled', $this->getIsDeltaRosterEnabled());
+        $writer->writeBooleanValue('isInteractiveRosterEnabled', $this->getIsInteractiveRosterEnabled());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -175,6 +189,14 @@ class CallOptions implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setIsDeltaRosterEnabled(?bool $value): void {
         $this->getBackingStore()->set('isDeltaRosterEnabled', $value);
+    }
+
+    /**
+     * Sets the isInteractiveRosterEnabled property value. Indicates whether delta roster filtering by participant interactivity is enabled.
+     * @param bool|null $value Value to set for the isInteractiveRosterEnabled property.
+    */
+    public function setIsInteractiveRosterEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isInteractiveRosterEnabled', $value);
     }
 
     /**

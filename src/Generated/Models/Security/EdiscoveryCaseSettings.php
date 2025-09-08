@@ -26,14 +26,28 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the caseType property value. The caseType property
+     * @return CaseType|null
+    */
+    public function getCaseType(): ?CaseType {
+        $val = $this->getBackingStore()->get('caseType');
+        if (is_null($val) || $val instanceof CaseType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'caseType'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'caseType' => fn(ParseNode $n) => $o->setCaseType($n->getEnumValue(CaseType::class)),
             'ocr' => fn(ParseNode $n) => $o->setOcr($n->getObjectValue([OcrSettings::class, 'createFromDiscriminatorValue'])),
             'redundancyDetection' => fn(ParseNode $n) => $o->setRedundancyDetection($n->getObjectValue([RedundancyDetectionSettings::class, 'createFromDiscriminatorValue'])),
+            'reviewSetSettings' => fn(ParseNode $n) => $o->setReviewSetSettings($n->getEnumValue(ReviewSetSettings::class)),
             'topicModeling' => fn(ParseNode $n) => $o->setTopicModeling($n->getObjectValue([TopicModelingSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -63,6 +77,18 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the reviewSetSettings property value. The reviewSetSettings property
+     * @return ReviewSetSettings|null
+    */
+    public function getReviewSetSettings(): ?ReviewSetSettings {
+        $val = $this->getBackingStore()->get('reviewSetSettings');
+        if (is_null($val) || $val instanceof ReviewSetSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewSetSettings'");
+    }
+
+    /**
      * Gets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
      * @return TopicModelingSettings|null
     */
@@ -80,9 +106,19 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeEnumValue('caseType', $this->getCaseType());
         $writer->writeObjectValue('ocr', $this->getOcr());
         $writer->writeObjectValue('redundancyDetection', $this->getRedundancyDetection());
+        $writer->writeEnumValue('reviewSetSettings', $this->getReviewSetSettings());
         $writer->writeObjectValue('topicModeling', $this->getTopicModeling());
+    }
+
+    /**
+     * Sets the caseType property value. The caseType property
+     * @param CaseType|null $value Value to set for the caseType property.
+    */
+    public function setCaseType(?CaseType $value): void {
+        $this->getBackingStore()->set('caseType', $value);
     }
 
     /**
@@ -99,6 +135,14 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     */
     public function setRedundancyDetection(?RedundancyDetectionSettings $value): void {
         $this->getBackingStore()->set('redundancyDetection', $value);
+    }
+
+    /**
+     * Sets the reviewSetSettings property value. The reviewSetSettings property
+     * @param ReviewSetSettings|null $value Value to set for the reviewSetSettings property.
+    */
+    public function setReviewSetSettings(?ReviewSetSettings $value): void {
+        $this->getBackingStore()->set('reviewSetSettings', $value);
     }
 
     /**
