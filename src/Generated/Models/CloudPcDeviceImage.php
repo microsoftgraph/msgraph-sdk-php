@@ -95,7 +95,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Gets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 10 Enterprise. Read-only.
+     * Gets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 11 Enterprise. Read-only.
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
@@ -217,7 +217,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Sets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 10 Enterprise. Read-only.
+     * Sets the operatingSystem property value. The operating system (OS) of the image. For example, Windows 11 Enterprise. Read-only.
      * @param string|null $value Value to set for the operatingSystem property.
     */
     public function setOperatingSystem(?string $value): void {
