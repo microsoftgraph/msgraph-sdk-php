@@ -45,7 +45,7 @@ class ReflectCheckInResponseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get reflectCheckInResponses from education
+     * Details of check-in responses.
      * @param ReflectCheckInResponseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReflectCheckInResponse|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class ReflectCheckInResponseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get reflectCheckInResponses from education
+     * Details of check-in responses.
      * @param ReflectCheckInResponseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

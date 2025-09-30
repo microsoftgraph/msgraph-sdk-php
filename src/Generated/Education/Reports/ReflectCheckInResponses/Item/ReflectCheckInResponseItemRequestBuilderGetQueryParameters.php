@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Reports\ReflectCheckInResponses\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get reflectCheckInResponses from education
+ * Details of check-in responses.
 */
 class ReflectCheckInResponseItemRequestBuilderGetQueryParameters 
 {

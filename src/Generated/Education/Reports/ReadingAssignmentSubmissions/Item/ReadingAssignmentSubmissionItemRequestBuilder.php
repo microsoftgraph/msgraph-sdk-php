@@ -45,7 +45,7 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      * @param ReadingAssignmentSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReadingAssignmentSubmission|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get readingAssignmentSubmissions from education
+     * Details of submitted reading assignments.
      * @param ReadingAssignmentSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

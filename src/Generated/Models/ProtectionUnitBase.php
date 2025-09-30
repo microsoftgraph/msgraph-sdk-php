@@ -35,7 +35,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The identity of person who created the protection unit.
+     * Gets the createdBy property value. The identity of the person who created the protection unit.
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -47,7 +47,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The time of creation of the protection unit.
+     * Gets the createdDateTime property value. The time of creation of the protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -100,7 +100,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit.
+     * Gets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -124,7 +124,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue.
+     * Gets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue, offboardRequested, offboarded, cancelOffboardRequested. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: offboardRequested, offboarded, cancelOffboardRequested.
      * @return ProtectionUnitStatus|null
     */
     public function getStatus(): ?ProtectionUnitStatus {
@@ -151,7 +151,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The identity of person who created the protection unit.
+     * Sets the createdBy property value. The identity of the person who created the protection unit.
      * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
@@ -159,7 +159,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The time of creation of the protection unit.
+     * Sets the createdDateTime property value. The time of creation of the protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -183,7 +183,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit.
+     * Sets the lastModifiedDateTime property value. Timestamp of the last modification of this protection unit. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -199,7 +199,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue.
+     * Sets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue, offboardRequested, offboarded, cancelOffboardRequested. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: offboardRequested, offboarded, cancelOffboardRequested.
      * @param ProtectionUnitStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ProtectionUnitStatus $value): void {

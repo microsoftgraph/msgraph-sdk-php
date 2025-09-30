@@ -52,11 +52,11 @@ class EndUserNotificationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of endUserNotification objects and their properties.
+     * Read the properties and relationships of an endUserNotification object.
      * @param EndUserNotificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EndUserNotificationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/attacksimulationroot-list-endusernotifications?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/endusernotification-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EndUserNotificationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +82,7 @@ class EndUserNotificationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of endUserNotification objects and their properties.
+     * Read the properties and relationships of an endUserNotification object.
      * @param EndUserNotificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
