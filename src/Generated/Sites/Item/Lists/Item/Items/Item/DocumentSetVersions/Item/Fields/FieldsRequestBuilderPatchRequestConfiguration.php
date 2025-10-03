@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Item\Fields;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Item\Fields;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Versions\Item\LastModifiedBy\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Versions\Item\LastModifiedBy\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats;
+namespace Microsoft\\Graph\\Generated\Chats;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

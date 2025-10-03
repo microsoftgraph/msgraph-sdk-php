@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\VppTokens\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\SyncLicenses\SyncLicensesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VppToken;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\VppTokens\Item\SyncLicenses\SyncLicensesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VppToken;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

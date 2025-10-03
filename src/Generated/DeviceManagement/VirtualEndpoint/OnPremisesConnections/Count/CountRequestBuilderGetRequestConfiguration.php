@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

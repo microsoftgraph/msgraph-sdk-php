@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Unpublish;
+namespace Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\Unpublish;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

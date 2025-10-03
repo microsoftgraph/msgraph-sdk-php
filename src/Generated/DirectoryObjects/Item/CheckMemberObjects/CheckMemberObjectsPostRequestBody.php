@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryObjects\Item\CheckMemberObjects;
+namespace Microsoft\\Graph\\Generated\DirectoryObjects\Item\CheckMemberObjects;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

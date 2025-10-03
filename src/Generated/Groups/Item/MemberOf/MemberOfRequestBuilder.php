@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MemberOf;
+namespace Microsoft\\Graph\\Generated\Groups\Item\MemberOf;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\MemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MemberOf\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\MemberOf\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MemberOf\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

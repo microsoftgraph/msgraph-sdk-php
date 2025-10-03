@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item;
+namespace Microsoft\\Graph\\Generated\Directory\DeletedItems\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphApplication\GraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphDevice\GraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObject;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

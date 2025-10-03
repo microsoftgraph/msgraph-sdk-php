@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\Settings\Quota\Services\Count;
+namespace Microsoft\\Graph\\Generated\Storage\Settings\Quota\Services\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

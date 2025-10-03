@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppPolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the managedAppProtection objects.
+ * List properties and relationships of the managedAppConfiguration objects.
 */
 class ManagedAppPoliciesRequestBuilderGetQueryParameters 
 {

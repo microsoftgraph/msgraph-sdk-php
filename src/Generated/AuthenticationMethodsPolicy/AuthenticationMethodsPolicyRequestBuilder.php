@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuthenticationMethodsPolicy;
+namespace Microsoft\\Graph\\Generated\AuthenticationMethodsPolicy;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\Models\AuthenticationMethodsPolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AuthenticationMethodsPolicy;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

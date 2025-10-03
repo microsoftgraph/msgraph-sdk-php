@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\RemoteAssistancePartners\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

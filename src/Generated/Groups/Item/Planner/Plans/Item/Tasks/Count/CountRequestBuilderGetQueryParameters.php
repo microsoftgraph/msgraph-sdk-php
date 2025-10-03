@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Tasks\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Planner\Plans\Item\Tasks\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

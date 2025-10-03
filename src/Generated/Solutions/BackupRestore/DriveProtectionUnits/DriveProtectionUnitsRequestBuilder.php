@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\DriveProtectionUnits;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\DriveProtectionUnits;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DriveProtectionUnit;
-use Microsoft\Graph\Generated\Models\DriveProtectionUnitCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\DriveProtectionUnits\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\DriveProtectionUnits\Item\DriveProtectionUnitItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DriveProtectionUnit;
+use Microsoft\\Graph\\Generated\Models\DriveProtectionUnitCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\DriveProtectionUnits\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\DriveProtectionUnits\Item\DriveProtectionUnitItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

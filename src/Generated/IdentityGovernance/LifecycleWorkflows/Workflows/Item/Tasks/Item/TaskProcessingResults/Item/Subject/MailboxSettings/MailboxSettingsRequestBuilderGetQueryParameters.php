@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Tasks\Item\TaskProcessingResults\Item\Subject\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Tasks\Item\TaskProcessingResults\Item\Subject\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\PermanentDelete;
+namespace Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\PermanentDelete;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Delta;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

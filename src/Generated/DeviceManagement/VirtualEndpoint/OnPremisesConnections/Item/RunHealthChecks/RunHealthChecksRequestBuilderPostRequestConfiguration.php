@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item\RunHealthChecks;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item\RunHealthChecks;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

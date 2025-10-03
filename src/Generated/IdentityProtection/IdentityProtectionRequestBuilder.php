@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection;
+namespace Microsoft\\Graph\\Generated\IdentityProtection;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskDetections\RiskDetectionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\RiskyServicePrincipalsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\RiskyUsersRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\ServicePrincipalRiskDetections\ServicePrincipalRiskDetectionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityProtectionRoot;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskDetections\RiskDetectionsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyServicePrincipals\RiskyServicePrincipalsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\RiskyUsersRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\ServicePrincipalRiskDetections\ServicePrincipalRiskDetectionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityProtectionRoot;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

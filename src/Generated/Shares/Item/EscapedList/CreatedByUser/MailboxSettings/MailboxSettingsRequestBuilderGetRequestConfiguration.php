@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\CreatedByUser\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\CreatedByUser\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

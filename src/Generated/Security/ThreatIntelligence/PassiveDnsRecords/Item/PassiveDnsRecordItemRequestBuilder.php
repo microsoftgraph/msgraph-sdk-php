@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\PassiveDnsRecord;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item\Artifact\ArtifactRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item\ParentHost\ParentHostRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\PassiveDnsRecord;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item\Artifact\ArtifactRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item\ParentHost\ParentHostRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

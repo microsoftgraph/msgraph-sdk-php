@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\UnsetReaction;
+namespace Microsoft\\Graph\\Generated\Users\Item\Chats\Item\Messages\Item\Replies\Item\UnsetReaction;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

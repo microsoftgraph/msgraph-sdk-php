@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AppCatalogs;
+namespace Microsoft\\Graph\\Generated\AppCatalogs;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\DefaultAppManagementPolicy;
+namespace Microsoft\\Graph\\Generated\Policies\DefaultAppManagementPolicy;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

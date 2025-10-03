@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\Messages\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

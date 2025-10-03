@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\IncidentReport;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Issues\Item\IncidentReport;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProviders\AvailableProviderTypes;
+namespace Microsoft\\Graph\\Generated\IdentityProviders\AvailableProviderTypes;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

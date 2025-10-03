@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Copy;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Copy;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Templates\Item\Schema\FilterOperators;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Templates\Item\Schema\FilterOperators;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

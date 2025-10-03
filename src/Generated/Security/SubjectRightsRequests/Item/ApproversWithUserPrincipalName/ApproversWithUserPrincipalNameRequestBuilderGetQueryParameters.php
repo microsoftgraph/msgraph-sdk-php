@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\ApproversWithUserPrincipalName;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\ApproversWithUserPrincipalName;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

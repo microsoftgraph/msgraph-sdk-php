@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\GetByUserRoleWithRole;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\GetByUserRoleWithRole;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

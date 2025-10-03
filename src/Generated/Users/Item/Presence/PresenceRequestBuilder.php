@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Presence;
+namespace Microsoft\\Graph\\Generated\Users\Item\Presence;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Presence;
-use Microsoft\Graph\Generated\Users\Item\Presence\ClearPresence\ClearPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\SetPresence\SetPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\SetStatusMessage\SetStatusMessageRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Presence;
+use Microsoft\\Graph\\Generated\Users\Item\Presence\ClearPresence\ClearPresenceRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Presence\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Presence\SetPresence\SetPresenceRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Presence\SetStatusMessage\SetStatusMessageRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Presence\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

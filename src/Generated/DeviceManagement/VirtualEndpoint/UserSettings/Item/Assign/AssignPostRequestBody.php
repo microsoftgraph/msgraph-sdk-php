@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assign;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assign;
 
-use Microsoft\Graph\Generated\Models\CloudPcUserSettingAssignment;
+use Microsoft\\Graph\\Generated\Models\CloudPcUserSettingAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

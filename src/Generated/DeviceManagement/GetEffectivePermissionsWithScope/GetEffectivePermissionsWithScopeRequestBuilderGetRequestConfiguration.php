@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

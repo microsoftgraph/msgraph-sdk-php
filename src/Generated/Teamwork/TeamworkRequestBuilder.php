@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork;
+namespace Microsoft\\Graph\\Generated\Teamwork;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Teamwork;
-use Microsoft\Graph\Generated\Teamwork\DeletedChats\DeletedChatsRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\DeletedTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\SendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\TeamsAppSettings\TeamsAppSettingsRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Teamwork;
+use Microsoft\\Graph\\Generated\Teamwork\DeletedChats\DeletedChatsRequestBuilder;
+use Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\DeletedTeamsRequestBuilder;
+use Microsoft\\Graph\\Generated\Teamwork\SendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
+use Microsoft\\Graph\\Generated\Teamwork\TeamsAppSettings\TeamsAppSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

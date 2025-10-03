@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\People\Pronouns;
+namespace Microsoft\\Graph\\Generated\Admin\People\Pronouns;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

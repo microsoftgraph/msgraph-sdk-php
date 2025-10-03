@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Delta;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Delta;
 
-use Microsoft\Graph\Generated\Models\BaseDeltaFunctionResponse;
-use Microsoft\Graph\Generated\Models\ListItem;
+use Microsoft\\Graph\\Generated\Models\BaseDeltaFunctionResponse;
+use Microsoft\\Graph\\Generated\Models\ListItem;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

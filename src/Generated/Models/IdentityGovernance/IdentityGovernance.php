@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
+namespace Microsoft\\Graph\\Generated\Models\IdentityGovernance;
 
-use Microsoft\Graph\Generated\Models\AccessReviewSet;
-use Microsoft\Graph\Generated\Models\AppConsentApprovalRoute;
-use Microsoft\Graph\Generated\Models\EntitlementManagement;
-use Microsoft\Graph\Generated\Models\PrivilegedAccessRoot;
-use Microsoft\Graph\Generated\Models\TermsOfUseContainer;
+use Microsoft\\Graph\\Generated\Models\AccessReviewSet;
+use Microsoft\\Graph\\Generated\Models\AppConsentApprovalRoute;
+use Microsoft\\Graph\\Generated\Models\EntitlementManagement;
+use Microsoft\\Graph\\Generated\Models\PrivilegedAccessRoot;
+use Microsoft\\Graph\\Generated\Models\TermsOfUseContainer;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

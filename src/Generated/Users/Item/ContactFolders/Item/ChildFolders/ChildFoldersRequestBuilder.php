@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders;
+namespace Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\ChildFolders;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ContactFolder;
-use Microsoft\Graph\Generated\Models\ContactFolderCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ContactFolder;
+use Microsoft\\Graph\\Generated\Models\ContactFolderCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\ChildFolders\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\ChildFolders\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

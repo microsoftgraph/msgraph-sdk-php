@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

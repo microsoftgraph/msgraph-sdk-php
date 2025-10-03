@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryObjects;
+namespace Microsoft\\Graph\\Generated\DirectoryObjects;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DirectoryObjects\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryObjects\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DirectoryObjects\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryObjects\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryObjects\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryObjects\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryObjects\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryObjects\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObject;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

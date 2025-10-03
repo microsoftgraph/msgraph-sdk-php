@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\SnoozeReminder;
+namespace Microsoft\\Graph\\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\SnoozeReminder;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

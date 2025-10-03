@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\UpdateRecordingStatus;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

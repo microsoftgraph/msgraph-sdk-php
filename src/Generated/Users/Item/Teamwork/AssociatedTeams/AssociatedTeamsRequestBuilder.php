@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams;
+namespace Microsoft\\Graph\\Generated\Users\Item\Teamwork\AssociatedTeams;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\AssociatedTeamInfo;
-use Microsoft\Graph\Generated\Models\AssociatedTeamInfoCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AssociatedTeamInfo;
+use Microsoft\\Graph\\Generated\Models\AssociatedTeamInfoCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Teamwork\AssociatedTeams\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

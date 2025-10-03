@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByInterval;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\GetActivitiesByInterval;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\ItemActivityStat;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ItemActivityStat;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

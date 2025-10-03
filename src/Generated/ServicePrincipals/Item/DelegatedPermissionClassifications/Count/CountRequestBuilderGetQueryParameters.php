@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Count;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\FindTenantInformationByDomainNameWithDomainName;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\FindTenantInformationByDomainNameWithDomainName;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TenantInformation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TenantInformation;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

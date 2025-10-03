@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\GraphAppRoleAssignment\Count;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\OwnedObjects\GraphAppRoleAssignment\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Participants_v2\Count;
+namespace Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Participants_v2\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item\BackgroundImage;
+namespace Microsoft\\Graph\\Generated\Organization\Item\Branding\Localizations\Item\BackgroundImage;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\AddCopyFromContentTypeHub;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\AddCopyFromContentTypeHub;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

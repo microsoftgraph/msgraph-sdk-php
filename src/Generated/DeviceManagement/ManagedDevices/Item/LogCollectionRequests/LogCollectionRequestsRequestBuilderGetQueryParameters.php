@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

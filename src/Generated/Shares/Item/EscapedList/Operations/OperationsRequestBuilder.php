@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Operations;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Operations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RichLongRunningOperation;
-use Microsoft\Graph\Generated\Models\RichLongRunningOperationCollectionResponse;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Operations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Operations\Item\RichLongRunningOperationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RichLongRunningOperation;
+use Microsoft\\Graph\\Generated\Models\RichLongRunningOperationCollectionResponse;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Operations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Operations\Item\RichLongRunningOperationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

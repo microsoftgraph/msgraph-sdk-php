@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\FilterOperators;
+namespace Microsoft\\Graph\\Generated\FilterOperators;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\FilterOperators\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\FilterOperators\Item\FilterOperatorSchemaItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\FilterOperatorSchema;
-use Microsoft\Graph\Generated\Models\FilterOperatorSchemaCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\FilterOperators\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\FilterOperators\Item\FilterOperatorSchemaItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\FilterOperatorSchema;
+use Microsoft\\Graph\\Generated\Models\FilterOperatorSchemaCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Channel;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\AllMembers\AllMembersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Archive\ArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Channel;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\AllMembers\AllMembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Archive\ArchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

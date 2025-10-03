@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\ChangeScreenSharingRole;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

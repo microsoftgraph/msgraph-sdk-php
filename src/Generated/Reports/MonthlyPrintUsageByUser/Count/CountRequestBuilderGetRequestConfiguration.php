@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Count;
+namespace Microsoft\\Graph\\Generated\Reports\MonthlyPrintUsageByUser\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

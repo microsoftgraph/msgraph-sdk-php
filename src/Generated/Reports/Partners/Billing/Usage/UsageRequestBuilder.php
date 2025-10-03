@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Usage;
+namespace Microsoft\\Graph\\Generated\Reports\Partners\Billing\Usage;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Partners\Billing\AzureUsage;
-use Microsoft\Graph\Generated\Reports\Partners\Billing\Usage\Billed\BilledRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Partners\Billing\Usage\Unbilled\UnbilledRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Partners\Billing\AzureUsage;
+use Microsoft\\Graph\\Generated\Reports\Partners\Billing\Usage\Billed\BilledRequestBuilder;
+use Microsoft\\Graph\\Generated\Reports\Partners\Billing\Usage\Unbilled\UnbilledRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

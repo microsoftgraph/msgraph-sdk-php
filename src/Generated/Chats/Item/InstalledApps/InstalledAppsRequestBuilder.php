@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\InstalledApps;
+namespace Microsoft\\Graph\\Generated\Chats\Item\InstalledApps;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
-use Microsoft\Graph\Generated\Models\TeamsAppInstallationCollectionResponse;
+use Microsoft\\Graph\\Generated\Chats\Item\InstalledApps\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TeamsAppInstallation;
+use Microsoft\\Graph\\Generated\Models\TeamsAppInstallationCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education;
+namespace Microsoft\\Graph\\Generated\Education;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Education\Classes\ClassesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\MeRequestBuilder;
-use Microsoft\Graph\Generated\Education\Reports\ReportsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Schools\SchoolsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Users\UsersRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationRoot;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Education\Classes\ClassesRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Me\MeRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Reports\ReportsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Schools\SchoolsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Users\UsersRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EducationRoot;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

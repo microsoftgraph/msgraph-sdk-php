@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\RejectedSenders;
+namespace Microsoft\\Graph\\Generated\Groups\Item\RejectedSenders;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\RejectedSenders\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\RejectedSenders\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -34,7 +34,7 @@ class RejectedSendersRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.groups.item.rejectedSenders.item collection
+     * Gets an item from the Microsoft//Graph//Generated.groups.item.rejectedSenders.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */

@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData;
+namespace Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData;
 
-use Microsoft\Graph\Generated\Models\Security\PurgeAreas;
-use Microsoft\Graph\Generated\Models\Security\PurgeType;
+use Microsoft\\Graph\\Generated\Models\Security\PurgeAreas;
+use Microsoft\\Graph\\Generated\Models\Security\PurgeType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

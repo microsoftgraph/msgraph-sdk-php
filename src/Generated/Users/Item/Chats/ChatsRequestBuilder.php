@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats;
+namespace Microsoft\\Graph\\Generated\Users\Item\Chats;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Chat;
-use Microsoft\Graph\Generated\Models\ChatCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Chats\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Chats\GetAllRetainedMessages\GetAllRetainedMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Chats\Item\ChatItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Chat;
+use Microsoft\\Graph\\Generated\Models\ChatCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Chats\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Chats\GetAllRetainedMessages\GetAllRetainedMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Chats\Item\ChatItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\SharedWithTeams\Item\AllowedMembers\Count;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\SharedWithTeams\Item\AllowedMembers\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

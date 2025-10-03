@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\Count;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\EngagementAsyncOperations\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

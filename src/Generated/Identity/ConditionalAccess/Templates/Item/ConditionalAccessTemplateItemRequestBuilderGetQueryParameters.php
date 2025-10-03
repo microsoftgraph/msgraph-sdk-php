@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\Item;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Templates\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

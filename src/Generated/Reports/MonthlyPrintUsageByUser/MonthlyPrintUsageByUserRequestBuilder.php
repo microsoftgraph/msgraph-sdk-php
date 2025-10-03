@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser;
+namespace Microsoft\\Graph\\Generated\Reports\MonthlyPrintUsageByUser;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PrintUsageByUser;
-use Microsoft\Graph\Generated\Models\PrintUsageByUserCollectionResponse;
-use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PrintUsageByUser;
+use Microsoft\\Graph\\Generated\Models\PrintUsageByUserCollectionResponse;
+use Microsoft\\Graph\\Generated\Reports\MonthlyPrintUsageByUser\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles\Item;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

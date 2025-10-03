@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\PermissionGrants\Count;
+namespace Microsoft\\Graph\\Generated\Chats\Item\PermissionGrants\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

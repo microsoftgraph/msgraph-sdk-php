@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

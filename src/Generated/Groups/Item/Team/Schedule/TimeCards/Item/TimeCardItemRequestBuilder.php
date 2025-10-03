@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\Item\ClockOut\ClockOutRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\Item\Confirm\ConfirmRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\Item\EndBreak\EndBreakRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\Item\StartBreak\StartBreakRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TimeCard;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\Item\ClockOut\ClockOutRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\Item\Confirm\ConfirmRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\Item\EndBreak\EndBreakRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\Item\StartBreak\StartBreakRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TimeCard;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

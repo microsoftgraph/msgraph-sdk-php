@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the iosManagedAppRegistration objects.
+ * List properties and relationships of the androidManagedAppRegistration objects.
 */
 class ManagedAppRegistrationsRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements\Item\Files\Count;
+namespace Microsoft\\Graph\\Generated\Agreements\Item\Files\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

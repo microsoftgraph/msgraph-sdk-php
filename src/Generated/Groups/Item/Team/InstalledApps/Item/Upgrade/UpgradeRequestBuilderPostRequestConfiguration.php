@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\Upgrade;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\InstalledApps\Item\Upgrade;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

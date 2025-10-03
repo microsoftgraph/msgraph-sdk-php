@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\DismissReminder;
+namespace Microsoft\\Graph\\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\DismissReminder;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CloudClipboard\Items;
+namespace Microsoft\\Graph\\Generated\Users\Item\CloudClipboard\Items;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\CloudClipboardItem;
-use Microsoft\Graph\Generated\Models\CloudClipboardItemCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\CloudClipboard\Items\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CloudClipboard\Items\Item\CloudClipboardItemItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudClipboardItem;
+use Microsoft\\Graph\\Generated\Models\CloudClipboardItemCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\CloudClipboard\Items\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CloudClipboard\Items\Item\CloudClipboardItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Reassign;
+namespace Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Submissions\Item\Reassign;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Reports\ReflectCheckInResponses\Item;
+namespace Microsoft\\Graph\\Generated\Education\Reports\ReflectCheckInResponses\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

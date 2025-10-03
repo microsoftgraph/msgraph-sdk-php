@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item;
+namespace Microsoft\\Graph\\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item;
 
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

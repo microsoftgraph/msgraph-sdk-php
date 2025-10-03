@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupSettingTemplates;
+namespace Microsoft\\Graph\\Generated\GroupSettingTemplates;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\GroupSettingTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\Item\GroupSettingTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\GroupSettingTemplate;
-use Microsoft\Graph\Generated\Models\GroupSettingTemplateCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\GroupSettingTemplates\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\GroupSettingTemplates\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\GroupSettingTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\GroupSettingTemplates\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\GroupSettingTemplates\Item\GroupSettingTemplateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\GroupSettingTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\GroupSettingTemplate;
+use Microsoft\\Graph\\Generated\Models\GroupSettingTemplateCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

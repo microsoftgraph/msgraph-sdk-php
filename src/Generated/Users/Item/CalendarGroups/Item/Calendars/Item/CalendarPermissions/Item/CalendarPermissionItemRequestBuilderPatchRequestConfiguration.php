@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

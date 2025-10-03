@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights\Trending;
+namespace Microsoft\\Graph\\Generated\Users\Item\Insights\Trending;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Trending;
-use Microsoft\Graph\Generated\Models\TrendingCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Trending;
+use Microsoft\\Graph\\Generated\Models\TrendingCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\Insights\Trending\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

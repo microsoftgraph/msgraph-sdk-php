@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\SubscribedSkus;
+namespace Microsoft\\Graph\\Generated\SubscribedSkus;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SubscribedSku;
-use Microsoft\Graph\Generated\Models\SubscribedSkuCollectionResponse;
-use Microsoft\Graph\Generated\SubscribedSkus\Item\SubscribedSkuItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SubscribedSku;
+use Microsoft\\Graph\\Generated\Models\SubscribedSkuCollectionResponse;
+use Microsoft\\Graph\\Generated\SubscribedSkus\Item\SubscribedSkuItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

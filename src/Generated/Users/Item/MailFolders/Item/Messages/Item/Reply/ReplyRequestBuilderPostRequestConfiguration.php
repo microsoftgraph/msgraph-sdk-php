@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Reply;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\Messages\Item\Reply;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

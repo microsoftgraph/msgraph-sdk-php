@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources;
+namespace Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\LinkedResource;
-use Microsoft\Graph\Generated\Models\LinkedResourceCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Item\LinkedResourceItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\LinkedResource;
+use Microsoft\\Graph\\Generated\Models\LinkedResourceCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\Item\LinkedResourceItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

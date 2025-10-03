@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByInterval;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByInterval;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

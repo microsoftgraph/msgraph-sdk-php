@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item\Promote;
+namespace Microsoft\\Graph\\Generated\Domains\Item\Promote;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ClearFilters\ClearFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ConvertToRange\ConvertToRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\DataBodyRange\DataBodyRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\HeaderRowRange\HeaderRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Range\RangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ReapplyFilters\ReapplyFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Rows\RowsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Sort\SortRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\TotalRowRange\TotalRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Worksheet\WorksheetRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WorkbookTable;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ClearFilters\ClearFiltersRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ConvertToRange\ConvertToRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\DataBodyRange\DataBodyRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\HeaderRowRange\HeaderRowRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Range\RangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ReapplyFilters\ReapplyFiltersRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Rows\RowsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Sort\SortRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\TotalRowRange\TotalRowRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Worksheet\WorksheetRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WorkbookTable;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

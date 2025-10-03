@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedIOSLobApp object.
+ * Read properties and relationships of the androidLobApp object.
 */
 class MobileAppItemRequestBuilderGetQueryParameters 
 {

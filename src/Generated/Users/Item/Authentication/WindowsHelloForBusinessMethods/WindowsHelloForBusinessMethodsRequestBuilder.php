@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WindowsHelloForBusinessAuthenticationMethodCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WindowsHelloForBusinessAuthenticationMethodCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

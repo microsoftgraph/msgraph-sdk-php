@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes;
+namespace Microsoft\\Graph\\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserProtectionScopeContainer;
-use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes\Compute\ComputeRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserProtectionScopeContainer;
+use Microsoft\\Graph\\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes\Compute\ComputeRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

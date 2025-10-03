@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\CreatedByUser\ServiceProvisioningErrors\Count;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Items\Item\CreatedByUser\ServiceProvisioningErrors\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

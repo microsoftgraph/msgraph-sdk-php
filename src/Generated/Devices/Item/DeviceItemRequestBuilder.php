@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item;
+namespace Microsoft\\Graph\\Generated\Devices\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Devices\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\RegisteredOwnersRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\RegisteredUsersRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Models\Device;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Devices\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\MemberOf\MemberOfRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredOwners\RegisteredOwnersRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\RegisteredUsersRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Device;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

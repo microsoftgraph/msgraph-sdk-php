@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\Root;
+namespace Microsoft\\Graph\\Generated\Shares\Item\Root;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DriveItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Shares\Item\Root\Content\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DriveItem;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Shares\Item\Root\Content\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

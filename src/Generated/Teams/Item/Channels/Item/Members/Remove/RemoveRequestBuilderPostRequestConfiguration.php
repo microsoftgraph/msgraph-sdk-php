@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Members\Remove;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Members\Remove;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

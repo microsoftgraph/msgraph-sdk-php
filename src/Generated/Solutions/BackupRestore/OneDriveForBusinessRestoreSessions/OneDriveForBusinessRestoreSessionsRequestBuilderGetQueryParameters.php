@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

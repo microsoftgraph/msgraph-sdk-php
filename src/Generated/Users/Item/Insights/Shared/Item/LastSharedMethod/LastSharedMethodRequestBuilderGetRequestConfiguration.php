@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\LastSharedMethod;
+namespace Microsoft\\Graph\\Generated\Users\Item\Insights\Shared\Item\LastSharedMethod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

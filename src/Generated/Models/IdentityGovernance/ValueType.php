@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
+namespace Microsoft\\Graph\\Generated\Models\IdentityGovernance;
 
 use Microsoft\Kiota\Abstractions\Enum;
 

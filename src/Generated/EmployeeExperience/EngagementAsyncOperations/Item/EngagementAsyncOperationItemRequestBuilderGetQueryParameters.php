@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\Item;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\EngagementAsyncOperations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

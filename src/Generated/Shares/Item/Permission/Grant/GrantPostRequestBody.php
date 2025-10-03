@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\Permission\Grant;
+namespace Microsoft\\Graph\\Generated\Shares\Item\Permission\Grant;
 
-use Microsoft\Graph\Generated\Models\DriveRecipient;
+use Microsoft\\Graph\\Generated\Models\DriveRecipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

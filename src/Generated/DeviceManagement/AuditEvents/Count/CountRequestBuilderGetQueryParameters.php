@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

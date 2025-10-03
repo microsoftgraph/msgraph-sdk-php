@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivities\Count;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivities\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

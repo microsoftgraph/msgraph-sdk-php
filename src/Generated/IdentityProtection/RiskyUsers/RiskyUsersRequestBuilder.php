@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers;
+namespace Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmSafe\ConfirmSafeRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss\DismissRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RiskyUser;
-use Microsoft\Graph\Generated\Models\RiskyUserCollectionResponse;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\ConfirmSafe\ConfirmSafeRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\Dismiss\DismissRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RiskyUser;
+use Microsoft\\Graph\\Generated\Models\RiskyUserCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

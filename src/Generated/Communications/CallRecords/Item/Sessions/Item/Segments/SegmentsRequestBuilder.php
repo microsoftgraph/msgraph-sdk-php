@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments;
+namespace Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Sessions\Item\Segments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Item\SegmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\CallRecords\Segment;
-use Microsoft\Graph\Generated\Models\CallRecords\SegmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Item\SegmentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CallRecords\Segment;
+use Microsoft\\Graph\\Generated\Models\CallRecords\SegmentCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

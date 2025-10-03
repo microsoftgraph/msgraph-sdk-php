@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\ApiConnectorConfiguration\PostFederationSignup\UploadClientCertificate;
+namespace Microsoft\\Graph\\Generated\Identity\B2xUserFlows\Item\ApiConnectorConfiguration\PostFederationSignup\UploadClientCertificate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

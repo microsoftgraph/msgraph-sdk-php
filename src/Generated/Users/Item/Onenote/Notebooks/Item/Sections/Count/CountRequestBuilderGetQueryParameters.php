@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

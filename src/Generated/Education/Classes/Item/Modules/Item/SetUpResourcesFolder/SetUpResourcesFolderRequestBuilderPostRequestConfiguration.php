@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Modules\Item\SetUpResourcesFolder;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\Modules\Item\SetUpResourcesFolder;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

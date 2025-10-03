@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Add;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\Add;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WorkbookTable;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WorkbookTable;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,12 +31,12 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Table.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookTable|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/workbook-post-tables?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/tablecollection-add?view=graph-rest-1.0 Find more info here
     */
     public function post(AddPostRequestBody $body, ?AddRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -47,7 +47,7 @@ class AddRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Use this API to create a new Table.
+     * Create a new table. The range source address determines the worksheet under which the table will be added. If the table can't be added (for example, because the address is invalid, or the table would overlap with another table), an error is generated.
      * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

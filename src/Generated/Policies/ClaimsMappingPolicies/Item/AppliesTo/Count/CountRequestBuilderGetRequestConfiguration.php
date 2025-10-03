@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Item\AppliesTo\Count;
+namespace Microsoft\\Graph\\Generated\Policies\ClaimsMappingPolicies\Item\AppliesTo\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

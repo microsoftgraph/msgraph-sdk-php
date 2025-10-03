@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Channels;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\GetAllMessages\GetAllMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\GetAllRetainedMessages\GetAllRetainedMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Channel;
-use Microsoft\Graph\Generated\Models\ChannelCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\GetAllRetainedMessages\GetAllRetainedMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\ChannelItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Channel;
+use Microsoft\\Graph\\Generated\Models\ChannelCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

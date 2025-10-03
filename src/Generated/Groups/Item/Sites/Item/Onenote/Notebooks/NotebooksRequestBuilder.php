@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Notebooks;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\GetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Notebook;
-use Microsoft\Graph\Generated\Models\NotebookCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\GetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Notebook;
+use Microsoft\\Graph\\Generated\Models\NotebookCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

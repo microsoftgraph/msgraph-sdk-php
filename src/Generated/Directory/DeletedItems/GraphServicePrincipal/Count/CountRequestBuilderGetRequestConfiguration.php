@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\GraphServicePrincipal\Count;
+namespace Microsoft\\Graph\\Generated\Directory\DeletedItems\GraphServicePrincipal\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

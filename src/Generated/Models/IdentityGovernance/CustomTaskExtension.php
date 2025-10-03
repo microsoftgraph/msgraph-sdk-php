@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
+namespace Microsoft\\Graph\\Generated\Models\IdentityGovernance;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\CustomCalloutExtension;
-use Microsoft\Graph\Generated\Models\CustomExtensionCallbackConfiguration;
-use Microsoft\Graph\Generated\Models\User;
+use Microsoft\\Graph\\Generated\Models\CustomCalloutExtension;
+use Microsoft\\Graph\\Generated\Models\CustomExtensionCallbackConfiguration;
+use Microsoft\\Graph\\Generated\Models\User;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

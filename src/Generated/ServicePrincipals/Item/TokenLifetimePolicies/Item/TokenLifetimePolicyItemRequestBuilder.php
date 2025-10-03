@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item;
 
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

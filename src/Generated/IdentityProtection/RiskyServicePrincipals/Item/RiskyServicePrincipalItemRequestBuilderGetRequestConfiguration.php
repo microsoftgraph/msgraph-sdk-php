@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\Item;
+namespace Microsoft\\Graph\\Generated\IdentityProtection\RiskyServicePrincipals\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

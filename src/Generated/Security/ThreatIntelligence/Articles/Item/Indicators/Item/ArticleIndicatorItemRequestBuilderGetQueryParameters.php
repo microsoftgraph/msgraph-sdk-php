@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Articles\Item\Indicators\Item;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Articles\Item\Indicators\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

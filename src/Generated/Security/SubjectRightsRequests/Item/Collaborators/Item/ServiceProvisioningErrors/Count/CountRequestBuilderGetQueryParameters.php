@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Collaborators\Item\ServiceProvisioningErrors\Count;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Collaborators\Item\ServiceProvisioningErrors\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

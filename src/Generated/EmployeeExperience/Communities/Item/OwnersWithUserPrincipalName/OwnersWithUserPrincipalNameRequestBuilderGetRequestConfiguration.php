@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\OwnersWithUserPrincipalName;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\OwnersWithUserPrincipalName;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

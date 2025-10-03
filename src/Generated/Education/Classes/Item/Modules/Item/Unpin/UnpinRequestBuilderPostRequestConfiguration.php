@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Modules\Item\Unpin;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\Modules\Item\Unpin;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

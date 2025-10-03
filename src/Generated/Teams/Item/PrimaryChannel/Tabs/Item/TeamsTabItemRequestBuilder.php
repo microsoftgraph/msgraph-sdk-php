@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\Item;
+namespace Microsoft\\Graph\\Generated\Teams\Item\PrimaryChannel\Tabs\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsTab;
-use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\Item\TeamsApp\TeamsAppRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TeamsTab;
+use Microsoft\\Graph\\Generated\Teams\Item\PrimaryChannel\Tabs\Item\TeamsApp\TeamsAppRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\EngagementAsyncOperations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\Item\EngagementAsyncOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\EngagementAsyncOperation;
-use Microsoft\Graph\Generated\Models\EngagementAsyncOperationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\EmployeeExperience\EngagementAsyncOperations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\EngagementAsyncOperations\Item\EngagementAsyncOperationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EngagementAsyncOperation;
+use Microsoft\\Graph\\Generated\Models\EngagementAsyncOperationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

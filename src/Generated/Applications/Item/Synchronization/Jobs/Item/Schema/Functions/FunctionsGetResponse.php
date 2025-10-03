@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\Schema\Functions;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\Schema\Functions;
 
-use Microsoft\Graph\Generated\Models\AttributeMappingFunctionSchema;
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\AttributeMappingFunctionSchema;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\FindTenantInformationByTenantIdWithTenantId;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\FindTenantInformationByTenantIdWithTenantId;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

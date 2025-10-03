@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\RecycleBin\CreatedByUser\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\RecycleBin\CreatedByUser\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\DayNotes\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\DayNotes\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item;
+namespace Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SiteInclusionRules\Count;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteInclusionRules\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

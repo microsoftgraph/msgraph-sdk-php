@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SwapShiftsChangeRequest;
-use Microsoft\Graph\Generated\Models\SwapShiftsChangeRequestCollectionResponse;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SwapShiftsChangeRequest;
+use Microsoft\\Graph\\Generated\Models\SwapShiftsChangeRequestCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

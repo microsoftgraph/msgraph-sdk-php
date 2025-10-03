@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies;
+namespace Microsoft\\Graph\\Generated\Policies\RoleManagementPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicy;
-use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\UnifiedRoleManagementPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UnifiedRoleManagementPolicy;
+use Microsoft\\Graph\\Generated\Models\UnifiedRoleManagementPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Policies\RoleManagementPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Policies\RoleManagementPolicies\Item\UnifiedRoleManagementPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

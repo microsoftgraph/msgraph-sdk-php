@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceEnrollmentLimitConfiguration objects.
+ * List properties and relationships of the deviceEnrollmentConfiguration objects.
 */
 class DeviceEnrollmentConfigurationsRequestBuilderGetQueryParameters 
 {

@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\AssignmentCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentDefaults\AssignmentDefaultsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings\AssignmentSettingsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions\GetRecentlyModifiedSubmissionsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Modules\ModulesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Schools\SchoolsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\TeachersRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationClass;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\AssignmentCategories\AssignmentCategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\AssignmentDefaults\AssignmentDefaultsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\AssignmentSettings\AssignmentSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions\GetRecentlyModifiedSubmissionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Group\GroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Members\MembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Modules\ModulesRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Schools\SchoolsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Teachers\TeachersRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EducationClass;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

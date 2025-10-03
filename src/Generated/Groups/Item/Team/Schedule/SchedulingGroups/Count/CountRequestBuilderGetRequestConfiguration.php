@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SchedulingGroups\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\SchedulingGroups\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

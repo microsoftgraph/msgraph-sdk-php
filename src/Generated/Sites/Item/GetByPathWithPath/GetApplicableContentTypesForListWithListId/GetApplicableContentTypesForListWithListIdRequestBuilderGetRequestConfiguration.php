@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetApplicableContentTypesForListWithListId;
+namespace Microsoft\\Graph\\Generated\Sites\Item\GetByPathWithPath\GetApplicableContentTypesForListWithListId;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

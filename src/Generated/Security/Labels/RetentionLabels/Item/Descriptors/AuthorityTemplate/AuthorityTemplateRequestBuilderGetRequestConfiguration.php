@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item\Descriptors\AuthorityTemplate;
+namespace Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item\Descriptors\AuthorityTemplate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

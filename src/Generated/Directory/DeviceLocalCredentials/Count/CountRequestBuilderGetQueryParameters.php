@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeviceLocalCredentials\Count;
+namespace Microsoft\\Graph\\Generated\Directory\DeviceLocalCredentials\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

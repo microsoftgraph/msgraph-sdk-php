@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

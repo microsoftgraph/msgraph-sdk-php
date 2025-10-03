@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Sessions\Item\AttendanceReports\Item;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Sessions\Item\AttendanceReports\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

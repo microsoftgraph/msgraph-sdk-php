@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement;
+namespace Microsoft\\Graph\\Generated\RoleManagement;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RoleManagement;
-use Microsoft\Graph\Generated\RoleManagement\Directory\DirectoryRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\EntitlementManagementRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RoleManagement;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\DirectoryRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\EntitlementManagement\EntitlementManagementRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

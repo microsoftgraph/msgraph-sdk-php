@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies;
+namespace Microsoft\\Graph\\Generated\Policies\ActivityBasedTimeoutPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ActivityBasedTimeoutPolicy;
-use Microsoft\Graph\Generated\Models\ActivityBasedTimeoutPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ActivityBasedTimeoutPolicy;
+use Microsoft\\Graph\\Generated\Models\ActivityBasedTimeoutPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Policies\ActivityBasedTimeoutPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

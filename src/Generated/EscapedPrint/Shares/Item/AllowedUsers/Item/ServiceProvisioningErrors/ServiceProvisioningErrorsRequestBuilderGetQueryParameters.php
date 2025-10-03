@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\ServiceProvisioningErrors;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\ServiceProvisioningErrors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised;
+namespace Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

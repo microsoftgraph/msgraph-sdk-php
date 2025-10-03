@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\RemoteLock;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\RemoteLock;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\CanvasLayoutRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\CreatedByUser\CreatedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\LastModifiedByUser\LastModifiedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\WebParts\WebPartsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SitePage;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\CanvasLayoutRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Item\GraphSitePage\WebParts\WebPartsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SitePage;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

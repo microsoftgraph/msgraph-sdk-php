@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Secrets\Count;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Secrets\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

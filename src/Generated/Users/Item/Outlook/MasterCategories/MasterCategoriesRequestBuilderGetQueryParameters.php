@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories;
+namespace Microsoft\\Graph\\Generated\Users\Item\Outlook\MasterCategories;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

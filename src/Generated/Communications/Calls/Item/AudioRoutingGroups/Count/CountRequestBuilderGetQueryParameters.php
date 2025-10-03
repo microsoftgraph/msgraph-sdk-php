@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Count;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\AudioRoutingGroups\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

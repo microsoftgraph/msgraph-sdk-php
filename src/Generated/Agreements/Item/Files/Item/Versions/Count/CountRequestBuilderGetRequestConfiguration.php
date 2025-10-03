@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements\Item\Files\Item\Versions\Count;
+namespace Microsoft\\Graph\\Generated\Agreements\Item\Files\Item\Versions\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

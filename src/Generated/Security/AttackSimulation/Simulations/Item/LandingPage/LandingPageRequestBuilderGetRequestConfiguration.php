@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\LandingPage;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\Simulations\Item\LandingPage;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

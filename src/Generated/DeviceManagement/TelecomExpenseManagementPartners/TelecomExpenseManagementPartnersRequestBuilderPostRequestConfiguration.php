@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TelecomExpenseManagementPartners;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

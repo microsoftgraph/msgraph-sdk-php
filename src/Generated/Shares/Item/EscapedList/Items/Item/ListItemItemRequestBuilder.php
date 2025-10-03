@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ListItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\CreateLink\CreateLinkRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\VersionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ListItem;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\CreateLink\CreateLinkRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Sponsors;
+namespace Microsoft\\Graph\\Generated\Users\Item\Sponsors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\FilePlanReferences;
+namespace Microsoft\\Graph\\Generated\Security\Labels\FilePlanReferences;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\FilePlanReferenceTemplate;
-use Microsoft\Graph\Generated\Models\Security\FilePlanReferenceTemplateCollectionResponse;
-use Microsoft\Graph\Generated\Security\Labels\FilePlanReferences\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\FilePlanReferences\Item\FilePlanReferenceTemplateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\FilePlanReferenceTemplate;
+use Microsoft\\Graph\\Generated\Models\Security\FilePlanReferenceTemplateCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\Labels\FilePlanReferences\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\FilePlanReferences\Item\FilePlanReferenceTemplateItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\GalleryImages\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\GalleryImages\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

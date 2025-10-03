@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Tabs;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\Tabs;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

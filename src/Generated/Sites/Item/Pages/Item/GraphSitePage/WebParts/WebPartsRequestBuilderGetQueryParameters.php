@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\WebParts;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Pages\Item\GraphSitePage\WebParts;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

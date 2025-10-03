@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\SearchWithQ;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\SearchWithQ;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\DriveItem;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\DriveItem;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

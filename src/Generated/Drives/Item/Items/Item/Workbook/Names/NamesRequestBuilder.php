@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Add\AddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\AddFormulaLocal\AddFormulaLocalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\WorkbookNamedItemItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WorkbookNamedItem;
-use Microsoft\Graph\Generated\Models\WorkbookNamedItemCollectionResponse;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names\Add\AddRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names\AddFormulaLocal\AddFormulaLocalRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names\Item\WorkbookNamedItemItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WorkbookNamedItem;
+use Microsoft\\Graph\\Generated\Models\WorkbookNamedItemCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

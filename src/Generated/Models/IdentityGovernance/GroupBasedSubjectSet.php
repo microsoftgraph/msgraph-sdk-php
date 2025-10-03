@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
+namespace Microsoft\\Graph\\Generated\Models\IdentityGovernance;
 
-use Microsoft\Graph\Generated\Models\Group;
-use Microsoft\Graph\Generated\Models\SubjectSet;
+use Microsoft\\Graph\\Generated\Models\Group;
+use Microsoft\\Graph\\Generated\Models\SubjectSet;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

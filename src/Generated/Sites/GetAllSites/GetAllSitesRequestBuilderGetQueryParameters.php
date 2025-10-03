@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\GetAllSites;
+namespace Microsoft\\Graph\\Generated\Sites\GetAllSites;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

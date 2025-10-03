@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Unpublish;
+namespace Microsoft\\Graph\\Generated\Sites\Item\ContentTypes\Item\Unpublish;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

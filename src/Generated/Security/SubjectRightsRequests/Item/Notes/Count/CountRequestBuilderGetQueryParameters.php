@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Notes\Count;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Notes\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

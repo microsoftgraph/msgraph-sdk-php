@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\PermissionGrants;
+namespace Microsoft\\Graph\\Generated\PermissionGrants;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
-use Microsoft\Graph\Generated\PermissionGrants\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\\Graph\\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
+use Microsoft\\Graph\\Generated\PermissionGrants\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
+use Microsoft\\Graph\\Generated\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

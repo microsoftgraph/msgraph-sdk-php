@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DriveItem\Content;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\DriveItem\Content;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationRepeatOffenders;
+namespace Microsoft\\Graph\\Generated\Reports\Security\GetAttackSimulationRepeatOffenders;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

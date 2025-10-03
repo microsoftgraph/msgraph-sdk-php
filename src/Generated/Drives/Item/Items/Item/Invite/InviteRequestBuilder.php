@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Invite;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Invite;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,7 +30,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Sends a sharing invitation for a driveItem.A sharing invitation provides permissions to the recipients and optionally sends them an email with a sharing link.
+     * Send a sharing invitation for a driveItem. A sharing invitation provides permissions to the recipients and, optionally, sends them an email to notify them that the item was shared.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InvitePostResponse|null>
@@ -46,7 +46,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Sends a sharing invitation for a driveItem.A sharing invitation provides permissions to the recipients and optionally sends them an email with a sharing link.
+     * Send a sharing invitation for a driveItem. A sharing invitation provides permissions to the recipients and, optionally, sends them an email to notify them that the item was shared.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

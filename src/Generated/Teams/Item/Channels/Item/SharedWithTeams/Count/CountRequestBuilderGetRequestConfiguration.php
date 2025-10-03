@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\SharedWithTeams\Count;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\SharedWithTeams\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

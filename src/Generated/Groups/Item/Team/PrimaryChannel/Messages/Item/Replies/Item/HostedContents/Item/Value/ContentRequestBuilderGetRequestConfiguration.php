@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Item\Value;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Item\Value;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

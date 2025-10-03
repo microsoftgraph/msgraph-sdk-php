@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\DeviceImages;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\DeviceImages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\GetSourceImages\GetSourceImagesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\Item\CloudPcDeviceImageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\CloudPcDeviceImage;
-use Microsoft\Graph\Generated\Models\CloudPcDeviceImageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\GetSourceImages\GetSourceImagesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\DeviceImages\Item\CloudPcDeviceImageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudPcDeviceImage;
+use Microsoft\\Graph\\Generated\Models\CloudPcDeviceImageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

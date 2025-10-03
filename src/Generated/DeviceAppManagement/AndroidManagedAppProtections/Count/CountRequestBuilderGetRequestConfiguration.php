@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Count;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\AndroidManagedAppProtections\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

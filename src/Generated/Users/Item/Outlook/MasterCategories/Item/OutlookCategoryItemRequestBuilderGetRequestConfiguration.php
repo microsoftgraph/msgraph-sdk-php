@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Outlook\MasterCategories\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

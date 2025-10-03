@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Owners;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\Owners;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Owners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Owners\Item\UserItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserCollectionResponse;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\Owners\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\Owners\Item\UserItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Delta;
+namespace Microsoft\\Graph\\Generated\DirectoryRoleTemplates\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

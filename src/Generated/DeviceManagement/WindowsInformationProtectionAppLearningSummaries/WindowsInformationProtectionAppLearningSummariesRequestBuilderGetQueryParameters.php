@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

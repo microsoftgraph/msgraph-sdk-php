@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item;
+namespace Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnPremisesDirectorySynchronization;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnPremisesDirectorySynchronization;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

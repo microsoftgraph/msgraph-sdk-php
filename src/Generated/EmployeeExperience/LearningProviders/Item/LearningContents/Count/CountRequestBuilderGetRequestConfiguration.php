@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningContents\Count;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\LearningProviders\Item\LearningContents\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

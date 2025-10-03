@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Reputation;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Reputation;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

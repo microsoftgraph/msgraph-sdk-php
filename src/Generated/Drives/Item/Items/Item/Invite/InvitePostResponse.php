@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Invite;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Invite;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\Permission;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

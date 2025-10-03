@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Authentication;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Authentication\EmailMethods\EmailMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Fido2MethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\Methods\MethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthenticatorMethods\MicrosoftAuthenticatorMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\PasswordMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\PhoneMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PlatformCredentialMethods\PlatformCredentialMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\SoftwareOathMethods\SoftwareOathMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\TemporaryAccessPassMethods\TemporaryAccessPassMethodsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Authentication;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\EmailMethods\EmailMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\Fido2Methods\Fido2MethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\Methods\MethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\MicrosoftAuthenticatorMethods\MicrosoftAuthenticatorMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\Operations\OperationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PasswordMethods\PasswordMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\PhoneMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PlatformCredentialMethods\PlatformCredentialMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\SoftwareOathMethods\SoftwareOathMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\TemporaryAccessPassMethods\TemporaryAccessPassMethodsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

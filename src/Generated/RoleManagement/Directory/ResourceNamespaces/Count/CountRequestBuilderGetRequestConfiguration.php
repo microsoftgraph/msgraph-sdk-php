@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\Count;
+namespace Microsoft\\Graph\\Generated\RoleManagement\Directory\ResourceNamespaces\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

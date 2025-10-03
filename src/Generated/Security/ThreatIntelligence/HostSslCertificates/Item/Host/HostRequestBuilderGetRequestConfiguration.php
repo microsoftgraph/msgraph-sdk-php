@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostSslCertificates\Item\Host;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\HostSslCertificates\Item\Host;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

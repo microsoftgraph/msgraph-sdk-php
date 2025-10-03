@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\ProvisionOnDemand;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\ProvisionOnDemand;
 
-use Microsoft\Graph\Generated\Models\SynchronizationJobApplicationParameters;
+use Microsoft\\Graph\\Generated\Models\SynchronizationJobApplicationParameters;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

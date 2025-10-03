@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\GetByUserRoleWithRole;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\GetByUserRoleWithRole;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

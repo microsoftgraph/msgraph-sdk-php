@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item\SetStatusMessage;
+namespace Microsoft\\Graph\\Generated\Communications\Presences\Item\SetStatusMessage;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

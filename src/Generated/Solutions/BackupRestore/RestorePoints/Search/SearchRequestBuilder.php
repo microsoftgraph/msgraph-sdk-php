@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints\Search;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestorePoints\Search;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RestorePointSearchResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RestorePointSearchResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

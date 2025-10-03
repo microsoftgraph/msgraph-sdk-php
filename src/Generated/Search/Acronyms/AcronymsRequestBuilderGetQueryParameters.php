@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Acronyms;
+namespace Microsoft\\Graph\\Generated\Search\Acronyms;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

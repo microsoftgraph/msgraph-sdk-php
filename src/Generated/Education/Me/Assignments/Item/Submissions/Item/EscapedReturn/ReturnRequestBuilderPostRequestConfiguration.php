@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn;
+namespace Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

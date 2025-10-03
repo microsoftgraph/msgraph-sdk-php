@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Templates;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\Item\ConditionalAccessTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConditionalAccessTemplateCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Templates\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Templates\Item\ConditionalAccessTemplateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ConditionalAccessTemplateCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

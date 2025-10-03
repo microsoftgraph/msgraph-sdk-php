@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Item\Cancel;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Item\Cancel;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

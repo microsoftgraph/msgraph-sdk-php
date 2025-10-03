@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Ref;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Ref;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

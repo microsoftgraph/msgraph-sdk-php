@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions;
+namespace Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\CustomQuestions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\BookingCustomQuestion;
-use Microsoft\Graph\Generated\Models\BookingCustomQuestionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\BookingCustomQuestion;
+use Microsoft\\Graph\\Generated\Models\BookingCustomQuestionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

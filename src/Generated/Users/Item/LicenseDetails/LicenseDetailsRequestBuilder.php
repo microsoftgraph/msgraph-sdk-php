@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\LicenseDetails;
+namespace Microsoft\\Graph\\Generated\Users\Item\LicenseDetails;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\LicenseDetails;
-use Microsoft\Graph\Generated\Models\LicenseDetailsCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\LicenseDetails\GetTeamsLicensingDetails\GetTeamsLicensingDetailsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\LicenseDetails;
+use Microsoft\\Graph\\Generated\Models\LicenseDetailsCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\LicenseDetails\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\LicenseDetails\GetTeamsLicensingDetails\GetTeamsLicensingDetailsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

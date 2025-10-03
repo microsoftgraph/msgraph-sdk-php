@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\TermsOfUse\Agreements\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve all files related to an agreement. This includes the default file and all localized files.
+ * Retrieve the properties and relationships of an agreement object.
 */
 class AgreementItemRequestBuilderGetQueryParameters 
 {

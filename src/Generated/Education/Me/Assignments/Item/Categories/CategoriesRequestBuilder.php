@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories;
+namespace Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Categories;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationCategory;
-use Microsoft\Graph\Generated\Models\EducationCategoryCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Categories\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Categories\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Categories\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EducationCategory;
+use Microsoft\\Graph\\Generated\Models\EducationCategoryCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -43,7 +43,7 @@ class CategoriesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.education.me.assignments.item.categories.item collection
+     * Gets an item from the Microsoft//Graph//Generated.education.me.assignments.item.categories.item collection
      * @param string $educationCategoryId The unique identifier of educationCategory
      * @return EducationCategoryItemRequestBuilder
     */

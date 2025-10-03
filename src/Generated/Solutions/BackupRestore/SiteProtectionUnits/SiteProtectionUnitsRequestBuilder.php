@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnits;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteProtectionUnits;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SiteProtectionUnit;
-use Microsoft\Graph\Generated\Models\SiteProtectionUnitCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnits\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnits\Item\SiteProtectionUnitItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SiteProtectionUnit;
+use Microsoft\\Graph\\Generated\Models\SiteProtectionUnitCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteProtectionUnits\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteProtectionUnits\Item\SiteProtectionUnitItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Events\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Events\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Event;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Accept\AcceptRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Calendar\CalendarRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Cancel\CancelRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Decline\DeclineRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\DismissReminder\DismissReminderRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\PermanentDelete\PermanentDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Event;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Accept\AcceptRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Calendar\CalendarRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Cancel\CancelRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Decline\DeclineRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\DismissReminder\DismissReminderRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Forward\ForwardRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\Instances\InstancesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\PermanentDelete\PermanentDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

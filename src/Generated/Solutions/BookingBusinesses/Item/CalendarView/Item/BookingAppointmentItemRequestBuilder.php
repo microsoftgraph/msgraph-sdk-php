@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item;
+namespace Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\BookingAppointment;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\Cancel\CancelRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\BookingAppointment;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

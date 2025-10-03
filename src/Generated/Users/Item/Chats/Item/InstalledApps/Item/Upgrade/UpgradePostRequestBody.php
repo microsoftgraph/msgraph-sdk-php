@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\Item\Upgrade;
+namespace Microsoft\\Graph\\Generated\Users\Item\Chats\Item\InstalledApps\Item\Upgrade;
 
-use Microsoft\Graph\Generated\Models\TeamsAppPermissionSet;
+use Microsoft\\Graph\\Generated\Models\TeamsAppPermissionSet;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item\AttendanceRecords;
+namespace Microsoft\\Graph\\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item\AttendanceRecords;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

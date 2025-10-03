@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Threads;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\ConversationThreadItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConversationThread;
-use Microsoft\Graph\Generated\Models\ConversationThreadCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Threads\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\ConversationThreadItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ConversationThread;
+use Microsoft\\Graph\\Generated\Models\ConversationThreadCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

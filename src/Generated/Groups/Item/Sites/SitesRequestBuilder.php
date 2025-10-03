@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Add\AddRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\GetAllSites\GetAllSitesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\SiteItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Remove\RemoveRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Add\AddRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\GetAllSites\GetAllSitesRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\SiteItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Remove\RemoveRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SiteCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Collaborators\Item;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Collaborators\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

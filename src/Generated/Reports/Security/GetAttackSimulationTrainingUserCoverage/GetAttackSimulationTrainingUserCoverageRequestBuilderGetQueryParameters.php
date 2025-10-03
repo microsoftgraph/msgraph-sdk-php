@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationTrainingUserCoverage;
+namespace Microsoft\\Graph\\Generated\Reports\Security\GetAttackSimulationTrainingUserCoverage;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\AssignUserToDevice;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\AssignUserToDevice;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

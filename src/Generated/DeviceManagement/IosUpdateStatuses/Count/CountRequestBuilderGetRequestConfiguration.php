@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\IosUpdateStatuses\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

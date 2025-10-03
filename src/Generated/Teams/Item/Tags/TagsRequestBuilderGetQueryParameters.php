@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Tags;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Tags;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

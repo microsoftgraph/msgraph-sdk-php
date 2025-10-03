@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\DeviceManagementTroubleshootingEvents;
+namespace Microsoft\\Graph\\Generated\Users\Item\DeviceManagementTroubleshootingEvents;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

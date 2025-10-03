@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item;
+namespace Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SensitivityLabel;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Rights\RightsRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\SublabelsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SensitivityLabel;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Rights\RightsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\SublabelsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

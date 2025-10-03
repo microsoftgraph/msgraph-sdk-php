@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\AudioRoutingGroups;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AudioRoutingGroup;
-use Microsoft\Graph\Generated\Models\AudioRoutingGroupCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\AudioRoutingGroups\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AudioRoutingGroup;
+use Microsoft\\Graph\\Generated\Models\AudioRoutingGroupCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

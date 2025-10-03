@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Conditions\Applications\IncludeApplications\Count;
+namespace Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\Item\Conditions\Applications\IncludeApplications\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

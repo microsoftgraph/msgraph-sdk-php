@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Count;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Owners\Item\ServiceProvisioningErrors\Count;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\Owners\Item\ServiceProvisioningErrors\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

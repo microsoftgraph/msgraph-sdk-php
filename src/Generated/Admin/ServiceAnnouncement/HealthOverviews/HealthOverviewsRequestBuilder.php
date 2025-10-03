@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\HealthOverviews;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\ServiceHealthItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServiceHealth;
-use Microsoft\Graph\Generated\Models\ServiceHealthCollectionResponse;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\HealthOverviews\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\ServiceHealthItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ServiceHealth;
+use Microsoft\\Graph\\Generated\Models\ServiceHealthCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

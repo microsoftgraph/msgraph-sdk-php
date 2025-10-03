@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item\SetStatusMessage;
+namespace Microsoft\\Graph\\Generated\Communications\Presences\Item\SetStatusMessage;
 
-use Microsoft\Graph\Generated\Models\PresenceStatusMessage;
+use Microsoft\\Graph\\Generated\Models\PresenceStatusMessage;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

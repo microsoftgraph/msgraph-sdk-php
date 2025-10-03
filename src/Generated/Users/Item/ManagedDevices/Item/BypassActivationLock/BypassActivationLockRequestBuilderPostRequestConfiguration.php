@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\BypassActivationLock;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\BypassActivationLock;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\Sharepoint\Settings;
+namespace Microsoft\\Graph\\Generated\Admin\Sharepoint\Settings;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SharepointSettings;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SharepointSettings;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

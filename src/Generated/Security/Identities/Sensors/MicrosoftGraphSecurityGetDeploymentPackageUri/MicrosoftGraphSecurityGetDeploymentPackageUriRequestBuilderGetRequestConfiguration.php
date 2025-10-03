@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityGetDeploymentPackageUri;
+namespace Microsoft\\Graph\\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityGetDeploymentPackageUri;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

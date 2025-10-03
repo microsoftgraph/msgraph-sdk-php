@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\Participants;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Invite\InviteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Participant;
-use Microsoft\Graph\Generated\Models\ParticipantCollectionResponse;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\Participants\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\Participants\Invite\InviteRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Participant;
+use Microsoft\\Graph\\Generated\Models\ParticipantCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Operations\Item;
+namespace Microsoft\\Graph\\Generated\Reports\Partners\Billing\Operations\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Partners\Billing\Operation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Partners\Billing\Operation;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

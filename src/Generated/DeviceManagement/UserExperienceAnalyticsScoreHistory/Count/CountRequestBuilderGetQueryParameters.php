@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsScoreHistory\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsScoreHistory\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

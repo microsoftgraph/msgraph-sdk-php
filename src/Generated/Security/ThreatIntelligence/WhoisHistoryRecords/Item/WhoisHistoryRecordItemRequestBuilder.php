@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\WhoisHistoryRecords\Item;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\WhoisHistoryRecords\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\WhoisHistoryRecord;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\WhoisHistoryRecords\Item\Host\HostRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\WhoisHistoryRecord;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\WhoisHistoryRecords\Item\Host\HostRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

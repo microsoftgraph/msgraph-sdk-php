@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserDetailWithDate;
+namespace Microsoft\\Graph\\Generated\Reports\GetYammerDeviceUsageUserDetailWithDate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

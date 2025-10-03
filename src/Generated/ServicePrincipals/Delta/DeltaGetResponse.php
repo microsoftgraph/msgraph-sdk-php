@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Delta;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Delta;
 
-use Microsoft\Graph\Generated\Models\BaseDeltaFunctionResponse;
-use Microsoft\Graph\Generated\Models\ServicePrincipal;
+use Microsoft\\Graph\\Generated\Models\BaseDeltaFunctionResponse;
+use Microsoft\\Graph\\Generated\Models\ServicePrincipal;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

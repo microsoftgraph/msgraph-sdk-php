@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders;
+namespace Microsoft\\Graph\\Generated\Identity\B2xUserFlows\Item\IdentityProviders;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityProviderCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\B2xUserFlows\Item\IdentityProviders\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\B2xUserFlows\Item\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityProviderCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

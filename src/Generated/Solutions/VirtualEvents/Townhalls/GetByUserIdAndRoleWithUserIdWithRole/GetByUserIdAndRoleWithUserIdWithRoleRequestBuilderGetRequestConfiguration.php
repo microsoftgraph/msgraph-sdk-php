@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\GetByUserIdAndRoleWithUserIdWithRole;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\GetByUserIdAndRoleWithUserIdWithRole;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

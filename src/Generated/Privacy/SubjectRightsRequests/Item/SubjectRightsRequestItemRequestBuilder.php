@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item;
+namespace Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Approvers\ApproversRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\ApproversWithUserPrincipalName\ApproversWithUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Collaborators\CollaboratorsRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\CollaboratorsWithUserPrincipalName\CollaboratorsWithUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SubjectRightsRequest;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\Approvers\ApproversRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\ApproversWithUserPrincipalName\ApproversWithUserPrincipalNameRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\Collaborators\CollaboratorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\CollaboratorsWithUserPrincipalName\CollaboratorsWithUserPrincipalNameRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

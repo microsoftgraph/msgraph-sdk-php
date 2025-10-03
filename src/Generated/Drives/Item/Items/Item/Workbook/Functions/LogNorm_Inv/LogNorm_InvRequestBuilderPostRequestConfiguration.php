@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\LogNorm_Inv;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\LogNorm_Inv;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

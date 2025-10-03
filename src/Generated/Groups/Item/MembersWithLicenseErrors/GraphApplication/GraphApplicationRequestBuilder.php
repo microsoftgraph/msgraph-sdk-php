@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\GraphApplication;
+namespace Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\GraphApplication;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\GraphApplication\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ApplicationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\GraphApplication\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ApplicationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

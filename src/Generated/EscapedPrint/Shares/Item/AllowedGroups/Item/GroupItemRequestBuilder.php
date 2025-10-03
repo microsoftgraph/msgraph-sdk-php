@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item;
 
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

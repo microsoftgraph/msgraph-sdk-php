@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies;
+namespace Microsoft\\Graph\\Generated\Applications\Item\HomeRealmDiscoveryPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\HomeRealmDiscoveryPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\HomeRealmDiscoveryPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

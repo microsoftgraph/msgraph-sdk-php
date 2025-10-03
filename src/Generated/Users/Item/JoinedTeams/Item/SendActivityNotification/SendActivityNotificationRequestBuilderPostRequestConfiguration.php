@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\SendActivityNotification;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\SendActivityNotification;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

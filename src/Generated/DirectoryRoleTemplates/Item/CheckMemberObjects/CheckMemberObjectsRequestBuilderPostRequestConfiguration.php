@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\CheckMemberObjects;
+namespace Microsoft\\Graph\\Generated\DirectoryRoleTemplates\Item\CheckMemberObjects;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DomainDnsRecords\Count;
+namespace Microsoft\\Graph\\Generated\DomainDnsRecords\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

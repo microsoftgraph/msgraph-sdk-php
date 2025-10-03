@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\CollaboratorsWithUserPrincipalName;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\CollaboratorsWithUserPrincipalName;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

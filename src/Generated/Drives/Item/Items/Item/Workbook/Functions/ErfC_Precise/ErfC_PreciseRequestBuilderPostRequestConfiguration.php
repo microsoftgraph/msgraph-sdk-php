@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\ErfC_Precise;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\ErfC_Precise;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

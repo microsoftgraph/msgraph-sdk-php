@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
-use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtension;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\CustomTaskExtension;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

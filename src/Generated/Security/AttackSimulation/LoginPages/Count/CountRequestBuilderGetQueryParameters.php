@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages\Count;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\LoginPages\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

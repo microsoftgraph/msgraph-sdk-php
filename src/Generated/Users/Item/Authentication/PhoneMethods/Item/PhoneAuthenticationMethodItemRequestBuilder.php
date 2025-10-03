@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethod;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\DisableSmsSignIn\DisableSmsSignInRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\EnableSmsSignIn\EnableSmsSignInRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PhoneAuthenticationMethod;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\Item\DisableSmsSignIn\DisableSmsSignInRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\Item\EnableSmsSignIn\EnableSmsSignInRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

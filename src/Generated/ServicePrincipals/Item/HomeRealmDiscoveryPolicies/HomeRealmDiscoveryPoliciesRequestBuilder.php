@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\HomeRealmDiscoveryPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\HomeRealmDiscoveryPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -34,7 +34,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
+     * Gets an item from the Microsoft//Graph//Generated.servicePrincipals.item.homeRealmDiscoveryPolicies.item collection
      * @param string $homeRealmDiscoveryPolicyId The unique identifier of homeRealmDiscoveryPolicy
      * @return HomeRealmDiscoveryPolicyItemRequestBuilder
     */

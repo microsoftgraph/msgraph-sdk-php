@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\IntelProfiles\Item\Indicators\Item;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\IntelProfiles\Item\Indicators\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

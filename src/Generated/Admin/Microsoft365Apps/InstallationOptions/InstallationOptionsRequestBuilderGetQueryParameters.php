@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\Microsoft365Apps\InstallationOptions;
+namespace Microsoft\\Graph\\Generated\Admin\Microsoft365Apps\InstallationOptions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

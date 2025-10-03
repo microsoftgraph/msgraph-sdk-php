@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnitsBulkAdditionJobs;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteProtectionUnitsBulkAdditionJobs;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SiteProtectionUnitsBulkAdditionJob;
-use Microsoft\Graph\Generated\Models\SiteProtectionUnitsBulkAdditionJobCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnitsBulkAdditionJobs\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\SiteProtectionUnitsBulkAdditionJobs\Item\SiteProtectionUnitsBulkAdditionJobItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SiteProtectionUnitsBulkAdditionJob;
+use Microsoft\\Graph\\Generated\Models\SiteProtectionUnitsBulkAdditionJobCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteProtectionUnitsBulkAdditionJobs\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteProtectionUnitsBulkAdditionJobs\Item\SiteProtectionUnitsBulkAdditionJobItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

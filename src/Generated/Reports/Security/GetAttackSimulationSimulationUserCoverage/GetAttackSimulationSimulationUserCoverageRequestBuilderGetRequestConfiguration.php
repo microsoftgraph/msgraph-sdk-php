@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationSimulationUserCoverage;
+namespace Microsoft\\Graph\\Generated\Reports\Security\GetAttackSimulationSimulationUserCoverage;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

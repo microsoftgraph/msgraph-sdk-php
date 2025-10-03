@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\Restart;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\Restart;
 
-use Microsoft\Graph\Generated\Models\SynchronizationJobRestartCriteria;
+use Microsoft\\Graph\\Generated\Models\SynchronizationJobRestartCriteria;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

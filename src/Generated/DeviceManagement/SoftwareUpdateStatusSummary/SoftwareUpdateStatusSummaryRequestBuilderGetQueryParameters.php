@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\SoftwareUpdateStatusSummary;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

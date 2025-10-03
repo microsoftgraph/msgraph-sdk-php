@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCompliancePolicyStates\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\DeviceCompliancePolicyStates\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item;
 
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphApplication\GraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphDevice\GraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphOrgContact\GraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

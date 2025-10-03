@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows;
+namespace Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\GraphExternalUsersSelfServiceSignUpEventsFlow\GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\AuthenticationEventsFlowItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AuthenticationEventsFlow;
-use Microsoft\Graph\Generated\Models\AuthenticationEventsFlowCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\GraphExternalUsersSelfServiceSignUpEventsFlow\GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\Item\AuthenticationEventsFlowItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AuthenticationEventsFlow;
+use Microsoft\\Graph\\Generated\Models\AuthenticationEventsFlowCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

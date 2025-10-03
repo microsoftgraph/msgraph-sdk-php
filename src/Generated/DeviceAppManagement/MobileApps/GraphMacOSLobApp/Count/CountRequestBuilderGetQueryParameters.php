@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphMacOSLobApp\Count;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphMacOSLobApp\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

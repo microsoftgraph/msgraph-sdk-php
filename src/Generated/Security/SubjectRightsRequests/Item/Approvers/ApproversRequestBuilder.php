@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Approvers;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Approvers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserCollectionResponse;
-use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Approvers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Approvers\Item\UserItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Approvers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Approvers\Item\UserItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

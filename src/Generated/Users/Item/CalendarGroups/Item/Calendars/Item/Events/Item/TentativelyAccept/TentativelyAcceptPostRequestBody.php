@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\TentativelyAccept;
+namespace Microsoft\\Graph\\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\TentativelyAccept;
 
-use Microsoft\Graph\Generated\Models\TimeSlot;
+use Microsoft\\Graph\\Generated\Models\TimeSlot;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

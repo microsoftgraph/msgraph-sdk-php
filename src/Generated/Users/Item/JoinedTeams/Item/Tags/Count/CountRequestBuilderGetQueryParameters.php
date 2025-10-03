@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Tags\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

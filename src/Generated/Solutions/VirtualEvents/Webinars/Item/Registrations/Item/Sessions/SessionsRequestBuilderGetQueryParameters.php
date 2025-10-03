@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Item\Sessions;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Item\Sessions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

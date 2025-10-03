@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Presenters\Count;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Presenters\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\Item\TeamsAppDefinition;
+namespace Microsoft\\Graph\\Generated\Users\Item\Chats\Item\InstalledApps\Item\TeamsAppDefinition;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

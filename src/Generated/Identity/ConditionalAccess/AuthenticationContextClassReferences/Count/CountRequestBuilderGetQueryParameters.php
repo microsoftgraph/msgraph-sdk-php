@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\Count;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

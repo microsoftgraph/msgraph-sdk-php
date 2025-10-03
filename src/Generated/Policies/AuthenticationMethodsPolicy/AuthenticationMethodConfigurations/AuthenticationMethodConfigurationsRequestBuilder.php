@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations;
+namespace Microsoft\\Graph\\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\AuthenticationMethodConfiguration;
-use Microsoft\Graph\Generated\Models\AuthenticationMethodConfigurationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Item\AuthenticationMethodConfigurationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AuthenticationMethodConfiguration;
+use Microsoft\\Graph\\Generated\Models\AuthenticationMethodConfigurationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodConfigurations\Item\AuthenticationMethodConfigurationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

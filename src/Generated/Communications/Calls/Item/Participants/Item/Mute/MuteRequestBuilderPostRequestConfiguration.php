@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\Mute;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\Participants\Item\Mute;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

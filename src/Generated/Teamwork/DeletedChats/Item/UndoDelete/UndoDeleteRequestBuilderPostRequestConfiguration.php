@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedChats\Item\UndoDelete;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedChats\Item\UndoDelete;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

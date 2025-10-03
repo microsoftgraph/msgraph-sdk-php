@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\People\ProfileCardProperties\Count;
+namespace Microsoft\\Graph\\Generated\Admin\People\ProfileCardProperties\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

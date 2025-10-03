@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\InstalledApps\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,88 +1,88 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\User;
-use Microsoft\Graph\Generated\Users\Item\Activities\ActivitiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\AssignLicense\AssignLicenseRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\AuthenticationRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Calendar\CalendarRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\CalendarGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Calendars\CalendarsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarView\CalendarViewRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ChangePassword\ChangePasswordRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Chats\ChatsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CloudClipboard\CloudClipboardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\ContactFoldersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Contacts\ContactsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CreatedObjects\CreatedObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\DataSecurityAndGovernanceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\DeviceManagementTroubleshootingEvents\DeviceManagementTroubleshootingEventsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\DirectReports\DirectReportsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Drives\DrivesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\EmployeeExperienceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ExportDeviceAndAppManagementData\ExportDeviceAndAppManagementDataRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ExportDeviceAndAppManagementDataWithSkipWithTop\ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ExportPersonalData\ExportPersonalDataRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\FindMeetingTimes\FindMeetingTimesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\FollowedSites\FollowedSitesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\GetMailTips\GetMailTipsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\GetManagedAppDiagnosticStatuses\GetManagedAppDiagnosticStatusesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\GetManagedAppPolicies\GetManagedAppPoliciesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\GetManagedDevicesWithAppFailures\GetManagedDevicesWithAppFailuresRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\InferenceClassification\InferenceClassificationRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\InsightsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\JoinedTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\LicenseDetails\LicenseDetailsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailboxSettings\MailboxSettingsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\MailFoldersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedAppRegistrations\ManagedAppRegistrationsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Manager\ManagerRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\OnenoteRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\OnlineMeetingsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\OutlookRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OwnedDevices\OwnedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OwnedObjects\OwnedObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\People\PeopleRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\PermissionGrants\PermissionGrantsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Photo\PhotoRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Photos\PhotosRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Planner\PlannerRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\PresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\RegisteredDevices\RegisteredDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ReminderViewWithStartDateTimeWithEndDateTime\ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\RemoveAllDevicesFromManagement\RemoveAllDevicesFromManagementRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ReprocessLicenseAssignment\ReprocessLicenseAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\RetryServiceProvisioning\RetryServiceProvisioningRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\RevokeSignInSessions\RevokeSignInSessionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ScopedRoleMemberOf\ScopedRoleMemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\SendMail\SendMailRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Settings\SettingsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Solutions\SolutionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Sponsors\SponsorsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Teamwork\TeamworkRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\TodoRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\TranslateExchangeIds\TranslateExchangeIdsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\WipeManagedAppRegistrationsByDeviceTag\WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\User;
+use Microsoft\\Graph\\Generated\Users\Item\Activities\ActivitiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\AssignLicense\AssignLicenseRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\AuthenticationRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Calendar\CalendarRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CalendarGroups\CalendarGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Calendars\CalendarsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ChangePassword\ChangePasswordRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Chats\ChatsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CloudClipboard\CloudClipboardRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ContactFolders\ContactFoldersRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Contacts\ContactsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CreatedObjects\CreatedObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\DataSecurityAndGovernance\DataSecurityAndGovernanceRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\DeviceManagementTroubleshootingEvents\DeviceManagementTroubleshootingEventsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\DirectReports\DirectReportsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Drive\DriveRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Drives\DrivesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\EmployeeExperience\EmployeeExperienceRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Events\EventsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ExportDeviceAndAppManagementData\ExportDeviceAndAppManagementDataRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ExportDeviceAndAppManagementDataWithSkipWithTop\ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ExportPersonalData\ExportPersonalDataRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\FindMeetingTimes\FindMeetingTimesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\FollowedSites\FollowedSitesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\GetMailTips\GetMailTipsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\GetManagedAppDiagnosticStatuses\GetManagedAppDiagnosticStatusesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\GetManagedAppPolicies\GetManagedAppPoliciesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\GetManagedDevicesWithAppFailures\GetManagedDevicesWithAppFailuresRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\InferenceClassification\InferenceClassificationRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Insights\InsightsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\JoinedTeamsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\LicenseDetails\LicenseDetailsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\MailFoldersRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ManagedAppRegistrations\ManagedAppRegistrationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Manager\ManagerRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MemberOf\MemberOfRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Messages\MessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Onenote\OnenoteRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\OnlineMeetingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Outlook\OutlookRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OwnedDevices\OwnedDevicesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OwnedObjects\OwnedObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\People\PeopleRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\PermissionGrants\PermissionGrantsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Photo\PhotoRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Photos\PhotosRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Planner\PlannerRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Presence\PresenceRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\RegisteredDevices\RegisteredDevicesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ReminderViewWithStartDateTimeWithEndDateTime\ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\RemoveAllDevicesFromManagement\RemoveAllDevicesFromManagementRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ReprocessLicenseAssignment\ReprocessLicenseAssignmentRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\RetryServiceProvisioning\RetryServiceProvisioningRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\RevokeSignInSessions\RevokeSignInSessionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ScopedRoleMemberOf\ScopedRoleMemberOfRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\SendMail\SendMailRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Settings\SettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Solutions\SolutionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Sponsors\SponsorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Teamwork\TeamworkRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\TodoRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\TranslateExchangeIds\TranslateExchangeIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\WipeManagedAppRegistrationsByDeviceTag\WipeManagedAppRegistrationsByDeviceTagRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -633,11 +633,11 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user object.   When deleted, user resources, including their mailbox and license assignments, are moved to a temporary container and if the user is restored within 30 days, these objects are restored to them. The user is also restored to any groups they were a member of. After 30 days and if not restored, the user object is permanently deleted and their assigned resources freed. To manage the deleted user object, see deletedItems.
+     * Deletes a user.
      * @param UserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-mam-user-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -662,7 +662,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
      * @param UserItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-mam-user-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -678,7 +678,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
      * @param UserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-user-update?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-mam-user-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(User $body, ?UserItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -699,7 +699,7 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a user object.   When deleted, user resources, including their mailbox and license assignments, are moved to a temporary container and if the user is restored within 30 days, these objects are restored to them. The user is also restored to any groups they were a member of. After 30 days and if not restored, the user object is permanently deleted and their assigned resources freed. To manage the deleted user object, see deletedItems.
+     * Deletes a user.
      * @param UserItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

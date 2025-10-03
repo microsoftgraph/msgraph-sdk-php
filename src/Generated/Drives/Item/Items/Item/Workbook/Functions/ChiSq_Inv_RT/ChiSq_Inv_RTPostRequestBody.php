@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\ChiSq_Inv_RT;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\ChiSq_Inv_RT;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

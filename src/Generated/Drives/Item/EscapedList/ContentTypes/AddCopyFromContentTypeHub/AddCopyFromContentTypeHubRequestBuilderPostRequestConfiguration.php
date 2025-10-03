@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

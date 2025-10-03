@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Cases;
+namespace Microsoft\\Graph\\Generated\Security\Cases;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\CasesRoot;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\EdiscoveryCasesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\CasesRoot;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\EdiscoveryCasesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

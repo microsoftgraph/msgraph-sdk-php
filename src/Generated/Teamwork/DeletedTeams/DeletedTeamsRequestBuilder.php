@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedTeams;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DeletedTeam;
-use Microsoft\Graph\Generated\Models\DeletedTeamCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\DeletedTeamItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeletedTeam;
+use Microsoft\\Graph\\Generated\Models\DeletedTeamCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Item\DeletedTeamItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

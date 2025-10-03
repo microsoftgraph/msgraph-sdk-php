@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Attachments\CreateUploadSession;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Calendar\Events\Item\Attachments\CreateUploadSession;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\MemberOf\GraphAdministrativeUnit;
+namespace Microsoft\\Graph\\Generated\Devices\Item\MemberOf\GraphAdministrativeUnit;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Devices\Item\MemberOf\GraphAdministrativeUnit\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\AdministrativeUnitCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Devices\Item\MemberOf\GraphAdministrativeUnit\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AdministrativeUnitCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

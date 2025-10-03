@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\Item\StartBreak;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\Item\StartBreak;
 
-use Microsoft\Graph\Generated\Models\ItemBody;
+use Microsoft\\Graph\\Generated\Models\ItemBody;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\CopyToSectionGroup;
+namespace Microsoft\\Graph\\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\CopyToSectionGroup;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

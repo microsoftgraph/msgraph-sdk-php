@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\Count;
+namespace Microsoft\\Graph\\Generated\Directory\FederationConfigurations\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

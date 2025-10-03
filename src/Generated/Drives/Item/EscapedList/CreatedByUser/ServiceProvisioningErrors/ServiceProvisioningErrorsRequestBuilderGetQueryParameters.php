@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\CreatedByUser\ServiceProvisioningErrors;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList\CreatedByUser\ServiceProvisioningErrors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Identities;
+namespace Microsoft\\Graph\\Generated\Security\Identities;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\IdentityContainer;
-use Microsoft\Graph\Generated\Security\Identities\HealthIssues\HealthIssuesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Identities\Sensors\SensorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\IdentityContainer;
+use Microsoft\\Graph\\Generated\Security\Identities\HealthIssues\HealthIssuesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Identities\Sensors\SensorsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

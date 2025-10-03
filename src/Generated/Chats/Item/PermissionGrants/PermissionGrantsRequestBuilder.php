@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\PermissionGrants;
+namespace Microsoft\\Graph\\Generated\Chats\Item\PermissionGrants;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Chats\Item\PermissionGrants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
+use Microsoft\\Graph\\Generated\Chats\Item\PermissionGrants\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\\Graph\\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

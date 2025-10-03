@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Permissions\Count;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Permissions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

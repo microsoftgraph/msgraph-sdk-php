@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\Policies;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationStrength\Policies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

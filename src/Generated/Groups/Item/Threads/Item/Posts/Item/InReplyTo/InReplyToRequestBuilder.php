@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Post;
+use Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\AttachmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Forward\ForwardRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Reply\ReplyRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Post;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

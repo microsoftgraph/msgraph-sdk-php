@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\LifecycleWorkflowsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\PrivilegedAccessRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityGovernance\IdentityGovernance;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\LifecycleWorkflowsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess\PrivilegedAccessRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\IdentityGovernance;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\Terminate;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceManagementPartners\Item\Terminate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

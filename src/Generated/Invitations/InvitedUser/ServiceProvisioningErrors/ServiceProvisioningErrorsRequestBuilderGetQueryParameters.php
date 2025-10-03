@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Invitations\InvitedUser\ServiceProvisioningErrors;
+namespace Microsoft\\Graph\\Generated\Invitations\InvitedUser\ServiceProvisioningErrors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

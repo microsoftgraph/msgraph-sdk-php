@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmSafe;
+namespace Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\ConfirmSafe;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

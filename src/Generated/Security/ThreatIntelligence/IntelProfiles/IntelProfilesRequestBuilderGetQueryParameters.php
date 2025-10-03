@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\IntelProfiles;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\IntelProfiles;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

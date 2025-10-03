@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphApplication\GraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphDevice\GraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphOrgContact\GraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObject;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

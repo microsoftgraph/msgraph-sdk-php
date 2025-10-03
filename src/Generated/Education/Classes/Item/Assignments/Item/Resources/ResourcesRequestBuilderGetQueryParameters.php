@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Resources;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\Assignments\Item\Resources;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

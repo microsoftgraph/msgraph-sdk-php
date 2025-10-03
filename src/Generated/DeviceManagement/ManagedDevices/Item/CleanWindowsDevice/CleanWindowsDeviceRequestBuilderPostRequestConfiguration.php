@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\CleanWindowsDevice;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\CleanWindowsDevice;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

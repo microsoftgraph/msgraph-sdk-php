@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VirtualEventWebinar;
-use Microsoft\Graph\Generated\Models\VirtualEventWebinarCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\GetByUserIdAndRoleWithUserIdWithRole\GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\GetByUserRoleWithRole\GetByUserRoleWithRoleRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\VirtualEventWebinarItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VirtualEventWebinar;
+use Microsoft\\Graph\\Generated\Models\VirtualEventWebinarCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\GetByUserIdAndRoleWithUserIdWithRole\GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\GetByUserRoleWithRole\GetByUserRoleWithRoleRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\VirtualEventWebinarItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

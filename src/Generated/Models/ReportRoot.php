@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
-use Microsoft\Graph\Generated\Models\Partners\Partners;
+use Microsoft\\Graph\\Generated\Models\Partners\Partners;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

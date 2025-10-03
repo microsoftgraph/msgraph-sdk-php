@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZones;
+namespace Microsoft\\Graph\\Generated\Users\Item\Outlook\SupportedTimeZones;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

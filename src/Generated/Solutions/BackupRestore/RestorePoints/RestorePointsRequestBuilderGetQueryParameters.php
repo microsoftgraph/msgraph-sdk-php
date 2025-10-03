@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestorePoints;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

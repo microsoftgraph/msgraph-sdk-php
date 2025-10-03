@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\LoginPages;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

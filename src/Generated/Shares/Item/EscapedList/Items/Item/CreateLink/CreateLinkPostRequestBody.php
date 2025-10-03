@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\CreateLink;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\CreateLink;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\DriveRecipient;
+use Microsoft\\Graph\\Generated\Models\DriveRecipient;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

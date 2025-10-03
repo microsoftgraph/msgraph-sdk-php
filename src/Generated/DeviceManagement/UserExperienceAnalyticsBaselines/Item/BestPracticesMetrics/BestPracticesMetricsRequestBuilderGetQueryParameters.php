@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsBaselines\Item\BestPracticesMetrics;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsBaselines\Item\BestPracticesMetrics;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

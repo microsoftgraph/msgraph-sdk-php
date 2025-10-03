@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item;
+namespace Microsoft\\Graph\\Generated\Communications\OnlineMeetings\Item\AttendanceReports\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

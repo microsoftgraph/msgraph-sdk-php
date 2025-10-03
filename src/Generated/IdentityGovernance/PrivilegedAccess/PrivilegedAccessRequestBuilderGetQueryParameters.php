@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

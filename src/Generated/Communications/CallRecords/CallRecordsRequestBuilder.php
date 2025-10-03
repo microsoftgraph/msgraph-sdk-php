@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords;
+namespace Microsoft\\Graph\\Generated\Communications\CallRecords;
 
 use DateTime;
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\CallRecords\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
-use Microsoft\Graph\Generated\Models\CallRecords\CallRecordCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CallRecords\CallRecord;
+use Microsoft\\Graph\\Generated\Models\CallRecords\CallRecordCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

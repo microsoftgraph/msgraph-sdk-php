@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Attachments\CreateUploadSession;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Attachments\CreateUploadSession;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

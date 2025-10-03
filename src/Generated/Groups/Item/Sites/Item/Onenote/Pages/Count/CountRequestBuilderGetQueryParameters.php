@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Pages\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Pages\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

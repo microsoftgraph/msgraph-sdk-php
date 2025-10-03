@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\NetworkDays_Intl;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\NetworkDays_Intl;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

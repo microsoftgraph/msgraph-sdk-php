@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Manifests\Item;
+namespace Microsoft\\Graph\\Generated\Reports\Partners\Billing\Manifests\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

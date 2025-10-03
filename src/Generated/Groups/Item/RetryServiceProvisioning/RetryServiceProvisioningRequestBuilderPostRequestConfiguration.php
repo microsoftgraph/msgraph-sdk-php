@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\RetryServiceProvisioning;
+namespace Microsoft\\Graph\\Generated\Groups\Item\RetryServiceProvisioning;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

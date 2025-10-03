@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserDetailWithPeriod;
+namespace Microsoft\\Graph\\Generated\Reports\GetSkypeForBusinessDeviceUsageUserDetailWithPeriod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

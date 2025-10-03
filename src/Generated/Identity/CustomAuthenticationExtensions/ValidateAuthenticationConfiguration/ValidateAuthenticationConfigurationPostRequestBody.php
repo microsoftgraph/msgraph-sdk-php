@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\CustomAuthenticationExtensions\ValidateAuthenticationConfiguration;
+namespace Microsoft\\Graph\\Generated\Identity\CustomAuthenticationExtensions\ValidateAuthenticationConfiguration;
 
-use Microsoft\Graph\Generated\Models\CustomExtensionAuthenticationConfiguration;
-use Microsoft\Graph\Generated\Models\CustomExtensionEndpointConfiguration;
+use Microsoft\\Graph\\Generated\Models\CustomExtensionAuthenticationConfiguration;
+use Microsoft\\Graph\\Generated\Models\CustomExtensionEndpointConfiguration;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

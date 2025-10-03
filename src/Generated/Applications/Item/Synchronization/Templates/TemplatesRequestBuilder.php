@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Templates;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates\Item\SynchronizationTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SynchronizationTemplate;
-use Microsoft\Graph\Generated\Models\SynchronizationTemplateCollectionResponse;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Templates\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Templates\Item\SynchronizationTemplateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SynchronizationTemplate;
+use Microsoft\\Graph\\Generated\Models\SynchronizationTemplateCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

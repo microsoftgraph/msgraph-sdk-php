@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ApplicationsWithAppId;
+namespace Microsoft\\Graph\\Generated\ApplicationsWithAppId;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

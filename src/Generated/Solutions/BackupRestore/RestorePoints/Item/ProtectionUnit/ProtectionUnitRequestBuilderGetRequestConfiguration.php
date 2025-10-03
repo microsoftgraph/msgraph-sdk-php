@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints\Item\ProtectionUnit;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestorePoints\Item\ProtectionUnit;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

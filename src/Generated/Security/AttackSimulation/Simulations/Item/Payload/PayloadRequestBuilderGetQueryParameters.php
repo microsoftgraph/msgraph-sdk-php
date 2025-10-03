@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\Payload;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\Simulations\Item\Payload;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

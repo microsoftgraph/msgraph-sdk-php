@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Item\Members;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Tags\Item\Members;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

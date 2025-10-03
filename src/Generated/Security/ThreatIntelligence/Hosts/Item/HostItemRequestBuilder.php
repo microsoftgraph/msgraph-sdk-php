@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\Host;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\ChildHostPairs\ChildHostPairsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Components\ComponentsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Cookies\CookiesRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\HostPairs\HostPairsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\ParentHostPairs\ParentHostPairsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDns\PassiveDnsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDnsReverse\PassiveDnsReverseRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Ports\PortsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Reputation\ReputationRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\SslCertificates\SslCertificatesRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Subdomains\SubdomainsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Trackers\TrackersRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Whois\WhoisRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\Host;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\ChildHostPairs\ChildHostPairsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Components\ComponentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Cookies\CookiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\HostPairs\HostPairsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\ParentHostPairs\ParentHostPairsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDns\PassiveDnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\PassiveDnsReverse\PassiveDnsReverseRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Ports\PortsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Reputation\ReputationRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\SslCertificates\SslCertificatesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Subdomains\SubdomainsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Trackers\TrackersRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Whois\WhoisRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

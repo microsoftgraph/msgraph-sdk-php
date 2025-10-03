@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsTab;
-use Microsoft\Graph\Generated\Models\TeamsTabCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Item\TeamsTabItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TeamsTab;
+use Microsoft\\Graph\\Generated\Models\TeamsTabCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

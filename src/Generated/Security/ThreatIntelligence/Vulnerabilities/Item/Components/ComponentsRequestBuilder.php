@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Components;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Components;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\VulnerabilityComponent;
-use Microsoft\Graph\Generated\Models\Security\VulnerabilityComponentCollectionResponse;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Components\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Components\Item\VulnerabilityComponentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\VulnerabilityComponent;
+use Microsoft\\Graph\\Generated\Models\Security\VulnerabilityComponentCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Components\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Components\Item\VulnerabilityComponentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

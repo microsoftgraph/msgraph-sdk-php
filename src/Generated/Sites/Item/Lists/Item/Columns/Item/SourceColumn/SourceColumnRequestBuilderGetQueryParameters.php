@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Columns\Item\SourceColumn;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\Columns\Item\SourceColumn;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

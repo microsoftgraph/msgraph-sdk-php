@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\Content;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\Content;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnenotePage;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnenotePage;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

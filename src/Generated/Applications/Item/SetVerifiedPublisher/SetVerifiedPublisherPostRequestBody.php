@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\SetVerifiedPublisher;
+namespace Microsoft\\Graph\\Generated\Applications\Item\SetVerifiedPublisher;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

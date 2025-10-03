@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\Policies\Item\UpdateAllowedCombinations;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationStrength\Policies\Item\UpdateAllowedCombinations;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

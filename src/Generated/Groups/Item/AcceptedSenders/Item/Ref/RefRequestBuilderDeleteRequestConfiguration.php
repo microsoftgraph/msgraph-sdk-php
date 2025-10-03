@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\Ref;
+namespace Microsoft\\Graph\\Generated\Groups\Item\AcceptedSenders\Item\Ref;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

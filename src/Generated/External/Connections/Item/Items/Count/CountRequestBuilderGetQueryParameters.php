@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External\Connections\Item\Items\Count;
+namespace Microsoft\\Graph\\Generated\External\Connections\Item\Items\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\DirectReports;
+namespace Microsoft\\Graph\\Generated\Contacts\Item\DirectReports;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Contacts\Item\DirectReports\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\DirectReports\GraphOrgContact\GraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\DirectReports\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Contacts\Item\DirectReports\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Contacts\Item\DirectReports\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\\Graph\\Generated\Contacts\Item\DirectReports\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Contacts\Item\DirectReports\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

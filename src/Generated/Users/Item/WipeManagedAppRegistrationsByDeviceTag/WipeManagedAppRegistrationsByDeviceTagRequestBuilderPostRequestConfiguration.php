@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\WipeManagedAppRegistrationsByDeviceTag;
+namespace Microsoft\\Graph\\Generated\Users\Item\WipeManagedAppRegistrationsByDeviceTag;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

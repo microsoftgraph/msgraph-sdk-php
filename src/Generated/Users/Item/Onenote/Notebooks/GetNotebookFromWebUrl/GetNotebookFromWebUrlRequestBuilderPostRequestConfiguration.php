@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\GetNotebookFromWebUrl;
+namespace Microsoft\\Graph\\Generated\Users\Item\Onenote\Notebooks\GetNotebookFromWebUrl;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

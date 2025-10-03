@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\FileStorageContainer;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Activate\ActivateRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Lock\LockRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\RecycleBinRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Unlock\UnlockRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\FileStorageContainer;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Activate\ActivateRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Drive\DriveRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Lock\LockRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\RecycleBinRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Unlock\UnlockRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

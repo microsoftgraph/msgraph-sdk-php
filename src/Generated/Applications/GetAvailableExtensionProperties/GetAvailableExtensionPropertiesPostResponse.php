@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\GetAvailableExtensionProperties;
+namespace Microsoft\\Graph\\Generated\Applications\GetAvailableExtensionProperties;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\ExtensionProperty;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ExtensionProperty;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

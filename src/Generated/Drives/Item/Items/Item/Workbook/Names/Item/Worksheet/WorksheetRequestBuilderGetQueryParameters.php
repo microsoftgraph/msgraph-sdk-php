@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\Worksheet;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names\Item\Worksheet;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

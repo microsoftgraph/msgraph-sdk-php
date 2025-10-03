@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\GetAllRetainedMessages;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\GetAllRetainedMessages;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

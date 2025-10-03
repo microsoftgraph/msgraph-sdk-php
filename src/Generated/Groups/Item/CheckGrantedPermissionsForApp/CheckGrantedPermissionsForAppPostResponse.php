@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\CheckGrantedPermissionsForApp;
+namespace Microsoft\\Graph\\Generated\Groups\Item\CheckGrantedPermissionsForApp;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetOffice365ServicesUserCountsWithPeriod;
+namespace Microsoft\\Graph\\Generated\Reports\GetOffice365ServicesUserCountsWithPeriod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

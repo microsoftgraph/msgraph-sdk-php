@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\Rules\Item;
+namespace Microsoft\\Graph\\Generated\Policies\RoleManagementPolicies\Item\Rules\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

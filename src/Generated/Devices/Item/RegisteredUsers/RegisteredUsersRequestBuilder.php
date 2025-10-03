@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\RegisteredUsers;
+namespace Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\GraphEndpoint\GraphEndpointRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\GraphEndpoint\GraphEndpointRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\RegisteredUsers\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -66,7 +66,7 @@ class RegisteredUsersRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.devices.item.registeredUsers.item collection
+     * Gets an item from the Microsoft//Graph//Generated.devices.item.registeredUsers.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */

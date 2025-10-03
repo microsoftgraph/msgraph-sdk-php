@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\AssignSensitivityLabel;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\AssignSensitivityLabel;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

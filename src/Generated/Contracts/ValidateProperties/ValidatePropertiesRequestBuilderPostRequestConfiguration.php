@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contracts\ValidateProperties;
+namespace Microsoft\\Graph\\Generated\Contracts\ValidateProperties;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

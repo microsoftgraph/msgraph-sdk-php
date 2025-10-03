@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SharedWithChannelTeamInfo;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item\AllowedMembers\AllowedMembersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item\Team\TeamRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SharedWithChannelTeamInfo;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item\AllowedMembers\AllowedMembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item\Team\TeamRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

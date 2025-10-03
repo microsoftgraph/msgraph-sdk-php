@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ApiConnectors;
+namespace Microsoft\\Graph\\Generated\Identity\ApiConnectors;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\ApiConnectors\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\IdentityApiConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityApiConnector;
-use Microsoft\Graph\Generated\Models\IdentityApiConnectorCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\ApiConnectors\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ApiConnectors\Item\IdentityApiConnectorItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityApiConnector;
+use Microsoft\\Graph\\Generated\Models\IdentityApiConnectorCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

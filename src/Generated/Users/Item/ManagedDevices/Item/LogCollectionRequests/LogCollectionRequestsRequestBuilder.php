@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DeviceLogCollectionResponse;
-use Microsoft\Graph\Generated\Models\DeviceLogCollectionResponseCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests\Item\DeviceLogCollectionResponseItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceLogCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\DeviceLogCollectionResponseCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\LogCollectionRequests\Item\DeviceLogCollectionResponseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

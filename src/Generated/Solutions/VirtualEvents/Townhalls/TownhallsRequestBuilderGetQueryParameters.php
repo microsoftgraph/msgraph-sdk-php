@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

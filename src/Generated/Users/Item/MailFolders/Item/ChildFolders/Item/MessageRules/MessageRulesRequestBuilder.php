@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\MessageRule;
-use Microsoft\Graph\Generated\Models\MessageRuleCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\MessageRule;
+use Microsoft\\Graph\\Generated\Models\MessageRuleCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

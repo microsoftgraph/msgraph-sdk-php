@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeleteUserFromSharedAppleDevice;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\DeleteUserFromSharedAppleDevice;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

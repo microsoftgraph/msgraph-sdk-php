@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item;
+namespace Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

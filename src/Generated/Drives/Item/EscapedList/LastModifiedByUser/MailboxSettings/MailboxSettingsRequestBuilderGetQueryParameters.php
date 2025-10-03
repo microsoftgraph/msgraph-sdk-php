@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\LastModifiedByUser\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList\LastModifiedByUser\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

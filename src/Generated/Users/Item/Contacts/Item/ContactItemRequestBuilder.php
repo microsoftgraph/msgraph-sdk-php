@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Contacts\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Contacts\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Contact;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Contacts\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Contacts\Item\PermanentDelete\PermanentDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Contacts\Item\Photo\PhotoRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Contact;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Contacts\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Contacts\Item\PermanentDelete\PermanentDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Contacts\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

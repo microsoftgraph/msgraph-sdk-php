@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationStrength;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\AuthenticationMethodModes\AuthenticationMethodModesRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\Policies\PoliciesRequestBuilder;
-use Microsoft\Graph\Generated\Models\AuthenticationStrengthRoot;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationStrength\AuthenticationMethodModes\AuthenticationMethodModesRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationStrength\Policies\PoliciesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AuthenticationStrengthRoot;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

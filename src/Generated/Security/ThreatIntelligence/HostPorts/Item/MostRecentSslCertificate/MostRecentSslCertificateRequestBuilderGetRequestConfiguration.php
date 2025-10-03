@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostPorts\Item\MostRecentSslCertificate;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\HostPorts\Item\MostRecentSslCertificate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

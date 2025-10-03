@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels;
+namespace Microsoft\\Graph\\Generated\Security\Labels;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\LabelsRoot;
-use Microsoft\Graph\Generated\Security\Labels\Authorities\AuthoritiesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\Citations\CitationsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\Departments\DepartmentsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\FilePlanReferences\FilePlanReferencesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\RetentionLabels\RetentionLabelsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\LabelsRoot;
+use Microsoft\\Graph\\Generated\Security\Labels\Authorities\AuthoritiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\Categories\CategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\Citations\CitationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\Departments\DepartmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\FilePlanReferences\FilePlanReferencesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\RetentionLabelsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

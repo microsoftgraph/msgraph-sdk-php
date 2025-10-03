@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeCards\ClockIn;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\TimeCards\ClockIn;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

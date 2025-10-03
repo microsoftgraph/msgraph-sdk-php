@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\Range\LastRow;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Names\Item\Range\LastRow;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

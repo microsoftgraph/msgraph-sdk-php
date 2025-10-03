@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Plans\Item\Buckets\Count;
+namespace Microsoft\\Graph\\Generated\Planner\Plans\Item\Buckets\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

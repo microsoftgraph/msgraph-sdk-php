@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Tags\Item\Members\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Tags\Item\Members\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

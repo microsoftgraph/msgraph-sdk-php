@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\Item;
+namespace Microsoft\\Graph\\Generated\Contacts\Item\TransitiveMemberOf\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

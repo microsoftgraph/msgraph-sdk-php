@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\IsPublished;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\IsPublished;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

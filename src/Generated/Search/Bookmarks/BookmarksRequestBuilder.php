@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Bookmarks;
+namespace Microsoft\\Graph\\Generated\Search\Bookmarks;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Search\Bookmark;
-use Microsoft\Graph\Generated\Models\Search\BookmarkCollectionResponse;
-use Microsoft\Graph\Generated\Search\Bookmarks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Search\Bookmarks\Item\BookmarkItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Search\Bookmark;
+use Microsoft\\Graph\\Generated\Models\Search\BookmarkCollectionResponse;
+use Microsoft\\Graph\\Generated\Search\Bookmarks\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Search\Bookmarks\Item\BookmarkItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

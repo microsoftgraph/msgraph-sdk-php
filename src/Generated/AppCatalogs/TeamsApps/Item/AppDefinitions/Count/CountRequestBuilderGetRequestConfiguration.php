@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\Count;
+namespace Microsoft\\Graph\\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

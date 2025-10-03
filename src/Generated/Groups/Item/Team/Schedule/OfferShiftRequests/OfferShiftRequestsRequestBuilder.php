@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\OfferShiftRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OfferShiftRequest;
-use Microsoft\Graph\Generated\Models\OfferShiftRequestCollectionResponse;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OfferShiftRequest;
+use Microsoft\\Graph\\Generated\Models\OfferShiftRequestCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

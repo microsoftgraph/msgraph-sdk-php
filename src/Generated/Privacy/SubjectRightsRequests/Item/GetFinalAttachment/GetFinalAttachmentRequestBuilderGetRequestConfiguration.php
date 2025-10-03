@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment;
+namespace Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

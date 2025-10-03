@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Count;
+namespace Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

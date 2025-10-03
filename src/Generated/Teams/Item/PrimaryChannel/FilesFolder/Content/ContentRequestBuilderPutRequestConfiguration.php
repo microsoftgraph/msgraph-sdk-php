@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\FilesFolder\Content;
+namespace Microsoft\\Graph\\Generated\Teams\Item\PrimaryChannel\FilesFolder\Content;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

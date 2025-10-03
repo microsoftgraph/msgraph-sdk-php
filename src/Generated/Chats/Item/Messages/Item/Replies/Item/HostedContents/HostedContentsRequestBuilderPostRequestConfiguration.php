@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\Item\HostedContents;
+namespace Microsoft\\Graph\\Generated\Chats\Item\Messages\Item\Replies\Item\HostedContents;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

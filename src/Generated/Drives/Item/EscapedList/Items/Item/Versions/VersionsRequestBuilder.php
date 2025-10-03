@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Versions;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Items\Item\Versions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Versions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ListItemVersion;
-use Microsoft\Graph\Generated\Models\ListItemVersionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Items\Item\Versions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ListItemVersion;
+use Microsoft\\Graph\\Generated\Models\ListItemVersionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

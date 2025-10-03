@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Count;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

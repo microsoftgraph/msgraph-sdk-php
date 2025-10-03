@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByInterval;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\GetActivitiesByInterval;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

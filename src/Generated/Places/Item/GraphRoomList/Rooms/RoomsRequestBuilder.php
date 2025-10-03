@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms;
+namespace Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\Rooms;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Room;
-use Microsoft\Graph\Generated\Models\RoomCollectionResponse;
-use Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\Item\RoomItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Room;
+use Microsoft\\Graph\\Generated\Models\RoomCollectionResponse;
+use Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\Rooms\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\Rooms\Item\RoomItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

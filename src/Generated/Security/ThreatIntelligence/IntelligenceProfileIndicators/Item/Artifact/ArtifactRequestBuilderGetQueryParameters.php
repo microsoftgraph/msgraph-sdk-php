@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\IntelligenceProfileIndicators\Item\Artifact;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\IntelligenceProfileIndicators\Item\Artifact;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

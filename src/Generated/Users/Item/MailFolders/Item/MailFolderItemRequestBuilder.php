@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\MailFolder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\ChildFoldersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MessageRules\MessageRulesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Move\MoveRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\PermanentDelete\PermanentDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\MailFolder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\ChildFoldersRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\Copy\CopyRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\MessageRules\MessageRulesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\Messages\MessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\Move\MoveRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

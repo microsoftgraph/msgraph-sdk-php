@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Organizer_v2;
+namespace Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Organizer_v2;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

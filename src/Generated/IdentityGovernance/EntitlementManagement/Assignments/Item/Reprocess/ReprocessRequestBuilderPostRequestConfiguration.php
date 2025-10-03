@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Reprocess;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Reprocess;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

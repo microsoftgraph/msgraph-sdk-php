@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Qnas;
+namespace Microsoft\\Graph\\Generated\Search\Qnas;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Search\Qna;
-use Microsoft\Graph\Generated\Models\Search\QnaCollectionResponse;
-use Microsoft\Graph\Generated\Search\Qnas\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Search\Qnas\Item\QnaItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Search\Qna;
+use Microsoft\\Graph\\Generated\Models\Search\QnaCollectionResponse;
+use Microsoft\\Graph\\Generated\Search\Qnas\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Search\Qnas\Item\QnaItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

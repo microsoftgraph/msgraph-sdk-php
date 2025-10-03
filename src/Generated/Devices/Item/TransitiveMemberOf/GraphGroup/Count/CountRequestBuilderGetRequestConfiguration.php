@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\GraphGroup\Count;
+namespace Microsoft\\Graph\\Generated\Devices\Item\TransitiveMemberOf\GraphGroup\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

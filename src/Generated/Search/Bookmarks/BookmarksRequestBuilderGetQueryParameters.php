@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Bookmarks;
+namespace Microsoft\\Graph\\Generated\Search\Bookmarks;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

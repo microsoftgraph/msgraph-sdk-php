@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\AddLargeGalleryView;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\AddLargeGalleryView;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,24 +1,24 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Message;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateForward\CreateForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateReply\CreateReplyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateReplyAll\CreateReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Forward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Move\MoveRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\PermanentDelete\PermanentDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Send\SendRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Value\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Message;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Copy\CopyRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateForward\CreateForwardRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateReply\CreateReplyRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\CreateReplyAll\CreateReplyAllRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Forward\ForwardRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Move\MoveRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\PermanentDelete\PermanentDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Reply\ReplyRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Send\SendRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\Messages\Item\Value\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VirtualEventTownhall;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\Presenters\PresentersRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\Sessions\SessionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VirtualEventTownhall;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\Item\Presenters\PresentersRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\Item\Sessions\SessionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

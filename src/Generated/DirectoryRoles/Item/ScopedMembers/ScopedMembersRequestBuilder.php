@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\ScopedMembers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ScopedRoleMembership;
-use Microsoft\Graph\Generated\Models\ScopedRoleMembershipCollectionResponse;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\ScopedMembers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ScopedRoleMembership;
+use Microsoft\\Graph\\Generated\Models\ScopedRoleMembershipCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

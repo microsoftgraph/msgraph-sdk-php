@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights;
+namespace Microsoft\\Graph\\Generated\Users\Item\Insights;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ItemInsights;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Insights\Shared\SharedRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Trending\TrendingRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Used\UsedRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ItemInsights;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Insights\Shared\SharedRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Insights\Trending\TrendingRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Insights\Used\UsedRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
