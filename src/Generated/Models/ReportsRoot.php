@@ -38,7 +38,7 @@ class ReportsRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the readingAssignmentSubmissions property value. The readingAssignmentSubmissions property
+     * Gets the readingAssignmentSubmissions property value. Details of submitted reading assignments.
      * @return array<ReadingAssignmentSubmission>|null
     */
     public function getReadingAssignmentSubmissions(): ?array {
@@ -52,7 +52,7 @@ class ReportsRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the reflectCheckInResponses property value. The reflectCheckInResponses property
+     * Gets the reflectCheckInResponses property value. Details of check-in responses.
      * @return array<ReflectCheckInResponse>|null
     */
     public function getReflectCheckInResponses(): ?array {
@@ -76,7 +76,7 @@ class ReportsRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the readingAssignmentSubmissions property value. The readingAssignmentSubmissions property
+     * Sets the readingAssignmentSubmissions property value. Details of submitted reading assignments.
      * @param array<ReadingAssignmentSubmission>|null $value Value to set for the readingAssignmentSubmissions property.
     */
     public function setReadingAssignmentSubmissions(?array $value): void {
@@ -84,7 +84,7 @@ class ReportsRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the reflectCheckInResponses property value. The reflectCheckInResponses property
+     * Sets the reflectCheckInResponses property value. Details of check-in responses.
      * @param array<ReflectCheckInResponse>|null $value Value to set for the reflectCheckInResponses property.
     */
     public function setReflectCheckInResponses(?array $value): void {
