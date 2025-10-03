@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Teamwork\SendActivityNotification;
+namespace Microsoft\\Graph\\Generated\Users\Item\Teamwork\SendActivityNotification;
 
-use Microsoft\Graph\Generated\Models\ItemBody;
-use Microsoft\Graph\Generated\Models\KeyValuePair;
-use Microsoft\Graph\Generated\Models\TeamworkActivityTopic;
+use Microsoft\\Graph\\Generated\Models\ItemBody;
+use Microsoft\\Graph\\Generated\Models\KeyValuePair;
+use Microsoft\\Graph\\Generated\Models\TeamworkActivityTopic;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

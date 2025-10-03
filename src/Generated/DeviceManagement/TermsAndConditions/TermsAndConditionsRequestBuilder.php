@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\TermsAndConditionsItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermsAndConditions;
-use Microsoft\Graph\Generated\Models\TermsAndConditionsCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions\Item\TermsAndConditionsItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TermsAndConditions;
+use Microsoft\\Graph\\Generated\Models\TermsAndConditionsCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

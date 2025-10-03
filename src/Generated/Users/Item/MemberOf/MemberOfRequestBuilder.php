@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MemberOf;
+namespace Microsoft\\Graph\\Generated\Users\Item\MemberOf;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\MemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MemberOf\GraphDirectoryRole\GraphDirectoryRoleRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MemberOf\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\MemberOf\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MemberOf\GraphDirectoryRole\GraphDirectoryRoleRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MemberOf\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

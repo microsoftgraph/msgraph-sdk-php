@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\UndoSoftDelete;
+namespace Microsoft\\Graph\\Generated\Chats\Item\Messages\Item\UndoSoftDelete;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

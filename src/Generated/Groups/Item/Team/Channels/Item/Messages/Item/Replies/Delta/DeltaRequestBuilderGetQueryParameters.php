@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Delta;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

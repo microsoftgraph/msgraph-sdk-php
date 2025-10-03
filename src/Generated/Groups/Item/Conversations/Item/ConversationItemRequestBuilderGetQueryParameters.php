@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Conversations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The group's conversations.
+ * Retrieve the properties and relationships of conversation object.
 */
 class ConversationItemRequestBuilderGetQueryParameters 
 {

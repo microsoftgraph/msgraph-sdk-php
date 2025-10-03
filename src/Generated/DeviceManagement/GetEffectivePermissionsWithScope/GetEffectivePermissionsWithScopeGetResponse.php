@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\RolePermission;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\RolePermission;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

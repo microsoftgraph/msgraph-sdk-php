@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TelecomExpenseManagementPartners;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Item\TelecomExpenseManagementPartnerItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TelecomExpenseManagementPartner;
-use Microsoft\Graph\Generated\Models\TelecomExpenseManagementPartnerCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceManagement\TelecomExpenseManagementPartners\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\TelecomExpenseManagementPartners\Item\TelecomExpenseManagementPartnerItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TelecomExpenseManagementPartner;
+use Microsoft\\Graph\\Generated\Models\TelecomExpenseManagementPartnerCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\LoginPages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\LoginPage;
-use Microsoft\Graph\Generated\Models\LoginPageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages\Item\LoginPageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\LoginPage;
+use Microsoft\\Graph\\Generated\Models\LoginPageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\LoginPages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\LoginPages\Item\LoginPageItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

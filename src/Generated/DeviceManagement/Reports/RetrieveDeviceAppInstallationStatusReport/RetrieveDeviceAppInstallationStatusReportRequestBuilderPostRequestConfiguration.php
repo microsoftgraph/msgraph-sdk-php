@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\RetrieveDeviceAppInstallationStatusReport;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\RetrieveDeviceAppInstallationStatusReport;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

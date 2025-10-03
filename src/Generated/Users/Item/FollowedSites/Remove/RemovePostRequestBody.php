@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\FollowedSites\Remove;
+namespace Microsoft\\Graph\\Generated\Users\Item\FollowedSites\Remove;
 
-use Microsoft\Graph\Generated\Models\Site;
+use Microsoft\\Graph\\Generated\Models\Site;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

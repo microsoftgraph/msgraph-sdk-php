@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Pages\Item\CopyToSection;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Pages\Item\CopyToSection;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

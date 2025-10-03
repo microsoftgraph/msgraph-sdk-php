@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems;
+namespace Microsoft\\Graph\\Generated\Users\Item\Activities\Item\HistoryItems;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

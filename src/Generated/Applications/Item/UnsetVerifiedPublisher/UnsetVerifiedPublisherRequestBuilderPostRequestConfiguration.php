@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\UnsetVerifiedPublisher;
+namespace Microsoft\\Graph\\Generated\Applications\Item\UnsetVerifiedPublisher;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ProtectionUnitBaseCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphDriveProtectionUnit\GraphDriveProtectionUnitRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphMailboxProtectionUnit\GraphMailboxProtectionUnitRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphSiteProtectionUnit\GraphSiteProtectionUnitRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\ProtectionUnitBaseItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ProtectionUnitBaseCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\GraphDriveProtectionUnit\GraphDriveProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\GraphMailboxProtectionUnit\GraphMailboxProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\GraphSiteProtectionUnit\GraphSiteProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\ProtectionUnitBaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,30 +1,30 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphAndroidLobApp\GraphAndroidLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphAndroidStoreApp\GraphAndroidStoreAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphIosLobApp\GraphIosLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphIosStoreApp\GraphIosStoreAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphIosVppApp\GraphIosVppAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphMacOSDmgApp\GraphMacOSDmgAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphMacOSLobApp\GraphMacOSLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedAndroidLobApp\GraphManagedAndroidLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedIOSLobApp\GraphManagedIOSLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedMobileLobApp\GraphManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphMicrosoftStoreForBusinessApp\GraphMicrosoftStoreForBusinessAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWin32LobApp\GraphWin32LobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsAppX\GraphWindowsAppXRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI\GraphWindowsMobileMSIRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsUniversalAppX\GraphWindowsUniversalAppXRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsWebApp\GraphWindowsWebAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MobileAppItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\MobileApp;
-use Microsoft\Graph\Generated\Models\MobileAppCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphAndroidLobApp\GraphAndroidLobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphAndroidStoreApp\GraphAndroidStoreAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphIosLobApp\GraphIosLobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphIosStoreApp\GraphIosStoreAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphIosVppApp\GraphIosVppAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphMacOSDmgApp\GraphMacOSDmgAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphMacOSLobApp\GraphMacOSLobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphManagedAndroidLobApp\GraphManagedAndroidLobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphManagedIOSLobApp\GraphManagedIOSLobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphManagedMobileLobApp\GraphManagedMobileLobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphMicrosoftStoreForBusinessApp\GraphMicrosoftStoreForBusinessAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWin32LobApp\GraphWin32LobAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsAppX\GraphWindowsAppXRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI\GraphWindowsMobileMSIRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsUniversalAppX\GraphWindowsUniversalAppXRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsWebApp\GraphWindowsWebAppRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\MobileAppItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\MobileApp;
+use Microsoft\\Graph\\Generated\Models\MobileAppCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -180,11 +180,11 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsMicrosoftEdgeApp objects.
+     * List properties and relationships of the androidLobApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-windowsmicrosoftedgeapp-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -195,12 +195,12 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new microsoftStoreForBusinessApp object.
+     * Create a new androidLobApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-microsoftstoreforbusinessapp-create?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-apps-androidlobapp-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileApp $body, ?MobileAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -211,7 +211,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the windowsMicrosoftEdgeApp objects.
+     * List properties and relationships of the androidLobApp objects.
      * @param MobileAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -232,7 +232,7 @@ class MobileAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new microsoftStoreForBusinessApp object.
+     * Create a new androidLobApp object.
      * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

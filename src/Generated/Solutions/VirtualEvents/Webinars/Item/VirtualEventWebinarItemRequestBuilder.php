@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VirtualEventWebinar;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Presenters\PresentersRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\RegistrationConfiguration\RegistrationConfigurationRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\RegistrationsRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\RegistrationsWithEmail\RegistrationsWithEmailRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\RegistrationsWithUserId\RegistrationsWithUserIdRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Sessions\SessionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VirtualEventWebinar;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Presenters\PresentersRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\RegistrationConfiguration\RegistrationConfigurationRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\RegistrationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\RegistrationsWithEmail\RegistrationsWithEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\RegistrationsWithUserId\RegistrationsWithUserIdRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Sessions\SessionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

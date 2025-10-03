@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Partners\Billing;
+namespace Microsoft\\Graph\\Generated\Models\Partners\Billing;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

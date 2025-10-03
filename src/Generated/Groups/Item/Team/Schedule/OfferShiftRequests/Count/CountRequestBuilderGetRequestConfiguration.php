@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

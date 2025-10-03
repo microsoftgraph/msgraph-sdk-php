@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\Settings\Quota;
+namespace Microsoft\\Graph\\Generated\Storage\Settings\Quota;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

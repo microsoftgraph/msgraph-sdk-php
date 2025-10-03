@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\AcquireAccessToken;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\AcquireAccessToken;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

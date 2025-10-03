@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\MailboxInclusionRules\Count;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\MailboxInclusionRules\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\Operations;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\Operations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\LongRunningOperation;
-use Microsoft\Graph\Generated\Models\LongRunningOperationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\Item\LongRunningOperationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\LongRunningOperation;
+use Microsoft\\Graph\\Generated\Models\LongRunningOperationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\Operations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\Operations\Item\LongRunningOperationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RoleDefinition;
-use Microsoft\Graph\Generated\Models\RoleDefinitionCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions\Item\RoleDefinitionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RoleDefinition;
+use Microsoft\\Graph\\Generated\Models\RoleDefinitionCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,11 @@ class RoleDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the roleDefinition objects.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @param RoleDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleDefinitionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roledefinition-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-rbac-deviceandappmanagementroledefinition-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleDefinitionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -83,7 +83,7 @@ class RoleDefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the roleDefinition objects.
+     * List properties and relationships of the deviceAndAppManagementRoleDefinition objects.
      * @param RoleDefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

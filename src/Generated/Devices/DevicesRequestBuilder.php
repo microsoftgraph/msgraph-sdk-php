@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Devices;
+namespace Microsoft\\Graph\\Generated\Devices;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Devices\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Devices\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Devices\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\DeviceItemRequestBuilder;
-use Microsoft\Graph\Generated\Devices\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Device;
-use Microsoft\Graph\Generated\Models\DeviceCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Devices\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\Item\DeviceItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Devices\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Device;
+use Microsoft\\Graph\\Generated\Models\DeviceCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

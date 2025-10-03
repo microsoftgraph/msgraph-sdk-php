@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item\DomainNameReferences;
+namespace Microsoft\\Graph\\Generated\Domains\Item\DomainNameReferences;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Domains\Item\DomainNameReferences\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\DomainNameReferences\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

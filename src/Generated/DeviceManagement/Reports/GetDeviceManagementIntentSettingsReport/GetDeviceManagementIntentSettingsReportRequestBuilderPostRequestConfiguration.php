@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

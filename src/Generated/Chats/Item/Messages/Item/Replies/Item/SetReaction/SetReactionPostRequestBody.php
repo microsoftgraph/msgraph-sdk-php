@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\Item\SetReaction;
+namespace Microsoft\\Graph\\Generated\Chats\Item\Messages\Item\Replies\Item\SetReaction;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

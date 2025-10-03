@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Subdomains\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Subdomains\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

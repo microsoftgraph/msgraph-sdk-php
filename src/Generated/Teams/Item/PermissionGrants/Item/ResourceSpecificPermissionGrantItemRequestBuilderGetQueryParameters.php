@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PermissionGrants\Item;
+namespace Microsoft\\Graph\\Generated\Teams\Item\PermissionGrants\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

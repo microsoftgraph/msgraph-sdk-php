@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign;
 
-use Microsoft\Graph\Generated\Models\ManagedEBookAssignment;
+use Microsoft\\Graph\\Generated\Models\ManagedEBookAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

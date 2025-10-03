@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\VppTokens;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

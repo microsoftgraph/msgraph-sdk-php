@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\Item\Fields;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\Item\Fields;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnenotePage;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\ParentSection\ParentSectionRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\Preview\PreviewRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnenotePage;
+use Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\Content\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\ParentSection\ParentSectionRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Onenote\Pages\Item\Preview\PreviewRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

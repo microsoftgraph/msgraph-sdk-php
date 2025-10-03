@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ContentType;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Base\EscapedBaseRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ContentType;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\Base\EscapedBaseRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

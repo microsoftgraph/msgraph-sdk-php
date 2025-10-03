@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assignments;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assignments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assignments\Item\CloudPcUserSettingAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\CloudPcUserSettingAssignment;
-use Microsoft\Graph\Generated\Models\CloudPcUserSettingAssignmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\UserSettings\Item\Assignments\Item\CloudPcUserSettingAssignmentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudPcUserSettingAssignment;
+use Microsoft\\Graph\\Generated\Models\CloudPcUserSettingAssignmentCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

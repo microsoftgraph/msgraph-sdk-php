@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\FilterOperators;
+namespace Microsoft\\Graph\\Generated\FilterOperators;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

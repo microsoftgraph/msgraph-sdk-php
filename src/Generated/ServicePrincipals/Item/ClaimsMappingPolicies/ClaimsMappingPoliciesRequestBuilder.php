@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\ClaimsMappingPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ClaimsMappingPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ClaimsMappingPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -34,7 +34,7 @@ class ClaimsMappingPoliciesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.claimsMappingPolicies.item collection
+     * Gets an item from the Microsoft//Graph//Generated.servicePrincipals.item.claimsMappingPolicies.item collection
      * @param string $claimsMappingPolicyId The unique identifier of claimsMappingPolicy
      * @return ClaimsMappingPolicyItemRequestBuilder
     */

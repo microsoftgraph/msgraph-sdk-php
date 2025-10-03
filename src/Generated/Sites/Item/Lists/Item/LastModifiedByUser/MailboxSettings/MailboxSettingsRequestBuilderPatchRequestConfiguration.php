@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\LastModifiedByUser\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\LastModifiedByUser\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

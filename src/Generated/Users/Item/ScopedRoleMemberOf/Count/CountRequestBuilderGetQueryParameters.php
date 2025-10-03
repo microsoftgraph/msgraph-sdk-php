@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ScopedRoleMemberOf\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\ScopedRoleMemberOf\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

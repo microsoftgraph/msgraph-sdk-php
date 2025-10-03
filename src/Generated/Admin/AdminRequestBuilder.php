@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin;
+namespace Microsoft\\Graph\\Generated\Admin;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\Edge\EdgeRequestBuilder;
-use Microsoft\Graph\Generated\Admin\Microsoft365Apps\Microsoft365AppsRequestBuilder;
-use Microsoft\Graph\Generated\Admin\People\PeopleRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ReportSettings\ReportSettingsRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
-use Microsoft\Graph\Generated\Admin\Sharepoint\SharepointRequestBuilder;
-use Microsoft\Graph\Generated\Models\Admin;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Admin\Edge\EdgeRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\Microsoft365Apps\Microsoft365AppsRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\People\PeopleRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ReportSettings\ReportSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\Sharepoint\SharepointRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Admin;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

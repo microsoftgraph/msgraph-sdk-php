@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions;
+namespace Microsoft\\Graph\\Generated\Solutions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SolutionsRoot;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\BackupRestoreRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\VirtualEventsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SolutionsRoot;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\BackupRestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\VirtualEventsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

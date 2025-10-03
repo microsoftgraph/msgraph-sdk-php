@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Conditions\Applications;
+namespace Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\Item\Conditions\Applications;
 
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Conditions\Applications\IncludeApplications\IncludeApplicationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\Item\Conditions\Applications\IncludeApplications\IncludeApplicationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

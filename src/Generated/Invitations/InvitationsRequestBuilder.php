@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Invitations;
+namespace Microsoft\\Graph\\Generated\Invitations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Invitations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Invitations\InvitedUser\InvitedUserRequestBuilder;
-use Microsoft\Graph\Generated\Invitations\InvitedUserSponsors\InvitedUserSponsorsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Invitation;
-use Microsoft\Graph\Generated\Models\InvitationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Invitations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Invitations\InvitedUser\InvitedUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Invitations\InvitedUserSponsors\InvitedUserSponsorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Invitation;
+use Microsoft\\Graph\\Generated\Models\InvitationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

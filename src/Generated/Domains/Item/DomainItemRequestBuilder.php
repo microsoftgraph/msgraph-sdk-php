@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Item;
+namespace Microsoft\\Graph\\Generated\Domains\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\DomainNameReferencesRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\Promote\PromoteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\RootDomain\RootDomainRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\Verify\VerifyRequestBuilder;
-use Microsoft\Graph\Generated\Models\Domain;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Domains\Item\DomainNameReferences\DomainNameReferencesRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\Promote\PromoteRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\RootDomain\RootDomainRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
+use Microsoft\\Graph\\Generated\Domains\Item\Verify\VerifyRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Domain;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

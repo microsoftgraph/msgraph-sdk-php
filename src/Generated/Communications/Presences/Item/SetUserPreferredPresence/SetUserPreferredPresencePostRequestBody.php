@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item\SetUserPreferredPresence;
+namespace Microsoft\\Graph\\Generated\Communications\Presences\Item\SetUserPreferredPresence;
 
 use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

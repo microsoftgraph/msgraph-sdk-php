@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Cookies;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Cookies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\Citations\Count;
+namespace Microsoft\\Graph\\Generated\Security\Labels\Citations\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

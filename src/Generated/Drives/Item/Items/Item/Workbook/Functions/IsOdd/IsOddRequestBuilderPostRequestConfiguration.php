@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\IsOdd;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\IsOdd;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

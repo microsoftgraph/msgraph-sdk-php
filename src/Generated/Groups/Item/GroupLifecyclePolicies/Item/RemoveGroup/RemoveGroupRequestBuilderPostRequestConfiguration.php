@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies\Item\RemoveGroup;
+namespace Microsoft\\Graph\\Generated\Groups\Item\GroupLifecyclePolicies\Item\RemoveGroup;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

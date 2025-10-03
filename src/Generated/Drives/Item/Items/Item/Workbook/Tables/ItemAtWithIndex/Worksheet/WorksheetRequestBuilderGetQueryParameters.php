@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Worksheet;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\Worksheet;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
