@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Tasks\Item\TaskProcessingResults\Item\Subject;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Tasks\Item\TaskProcessingResults\Item\Subject;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

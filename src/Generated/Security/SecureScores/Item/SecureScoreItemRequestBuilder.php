@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SecureScores\Item;
+namespace Microsoft\\Graph\\Generated\Security\SecureScores\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SecureScore;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SecureScore;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\ProtectedAppLockerFiles\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\ProtectedAppLockerFiles\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

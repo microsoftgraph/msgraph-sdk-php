@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Articles\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Vulnerabilities\Item\Articles\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

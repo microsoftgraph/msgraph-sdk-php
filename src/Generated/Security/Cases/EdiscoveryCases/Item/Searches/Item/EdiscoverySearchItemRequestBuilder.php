@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item;
+namespace Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\EdiscoverySearch;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\AdditionalSourcesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AddToReviewSetOperation\AddToReviewSetOperationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\CustodianSourcesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\LastEstimateStatisticsOperation\LastEstimateStatisticsOperationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityEstimateStatistics\MicrosoftGraphSecurityEstimateStatisticsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityExportReport\MicrosoftGraphSecurityExportReportRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityExportResult\MicrosoftGraphSecurityExportResultRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData\MicrosoftGraphSecurityPurgeDataRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\NoncustodialSourcesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\EdiscoverySearch;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\AdditionalSourcesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AddToReviewSetOperation\AddToReviewSetOperationRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\CustodianSourcesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\LastEstimateStatisticsOperation\LastEstimateStatisticsOperationRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityEstimateStatistics\MicrosoftGraphSecurityEstimateStatisticsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityExportReport\MicrosoftGraphSecurityExportReportRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityExportResult\MicrosoftGraphSecurityExportResultRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData\MicrosoftGraphSecurityPurgeDataRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\NoncustodialSourcesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

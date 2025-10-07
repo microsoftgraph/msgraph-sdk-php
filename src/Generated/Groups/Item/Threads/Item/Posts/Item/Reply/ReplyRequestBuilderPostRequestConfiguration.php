@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Reply;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\Reply;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

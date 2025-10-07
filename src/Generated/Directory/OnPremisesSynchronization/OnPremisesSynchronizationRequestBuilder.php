@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\OnPremisesSynchronization;
+namespace Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item\OnPremisesDirectorySynchronizationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnPremisesDirectorySynchronization;
-use Microsoft\Graph\Generated\Models\OnPremisesDirectorySynchronizationCollectionResponse;
+use Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization\Item\OnPremisesDirectorySynchronizationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnPremisesDirectorySynchronization;
+use Microsoft\\Graph\\Generated\Models\OnPremisesDirectorySynchronizationCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

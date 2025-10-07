@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\Item;
+namespace Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

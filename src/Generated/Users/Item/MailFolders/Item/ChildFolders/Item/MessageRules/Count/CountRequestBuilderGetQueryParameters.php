@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Item\ChildFolders\Item\MessageRules\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMacOSLobApp\ContentVersions\Item\Files\Item\Commit;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphMacOSLobApp\ContentVersions\Item\Files\Item\Commit;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

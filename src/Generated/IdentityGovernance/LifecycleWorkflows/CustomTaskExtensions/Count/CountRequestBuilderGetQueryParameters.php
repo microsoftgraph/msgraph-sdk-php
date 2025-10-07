@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\CustomTaskExtensions\Count;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\CustomTaskExtensions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

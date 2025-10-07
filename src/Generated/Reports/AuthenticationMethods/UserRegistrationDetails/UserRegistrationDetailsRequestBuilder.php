@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrationDetails;
+namespace Microsoft\\Graph\\Generated\Reports\AuthenticationMethods\UserRegistrationDetails;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserRegistrationDetails;
-use Microsoft\Graph\Generated\Models\UserRegistrationDetailsCollectionResponse;
-use Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrationDetails\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Reports\AuthenticationMethods\UserRegistrationDetails\Item\UserRegistrationDetailsItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserRegistrationDetails;
+use Microsoft\\Graph\\Generated\Models\UserRegistrationDetailsCollectionResponse;
+use Microsoft\\Graph\\Generated\Reports\AuthenticationMethods\UserRegistrationDetails\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Reports\AuthenticationMethods\UserRegistrationDetails\Item\UserRegistrationDetailsItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

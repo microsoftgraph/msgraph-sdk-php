@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoleTemplates;
+namespace Microsoft\\Graph\\Generated\DirectoryRoleTemplates;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\DirectoryRoleTemplateItemRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryRoleTemplate;
-use Microsoft\Graph\Generated\Models\DirectoryRoleTemplateCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DirectoryRoleTemplates\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoleTemplates\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoleTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoleTemplates\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoleTemplates\Item\DirectoryRoleTemplateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\DirectoryRoleTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryRoleTemplate;
+use Microsoft\\Graph\\Generated\Models\DirectoryRoleTemplateCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

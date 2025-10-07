@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\BulkUpload;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\BulkUpload;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\BulkUpload\Value\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Models\BulkUpload;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\BulkUpload\Value\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\BulkUpload;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

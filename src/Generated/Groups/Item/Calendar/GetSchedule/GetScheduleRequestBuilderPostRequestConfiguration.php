@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Calendar\GetSchedule;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Calendar\GetSchedule;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

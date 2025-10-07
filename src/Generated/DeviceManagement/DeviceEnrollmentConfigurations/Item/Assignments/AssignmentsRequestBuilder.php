@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\EnrollmentConfigurationAssignment;
-use Microsoft\Graph\Generated\Models\EnrollmentConfigurationAssignmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EnrollmentConfigurationAssignment;
+use Microsoft\\Graph\\Generated\Models\EnrollmentConfigurationAssignmentCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

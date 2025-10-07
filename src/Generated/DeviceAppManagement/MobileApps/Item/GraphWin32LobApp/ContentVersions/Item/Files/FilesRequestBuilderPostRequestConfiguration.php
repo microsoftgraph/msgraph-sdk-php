@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWin32LobApp\ContentVersions\Item\Files;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphWin32LobApp\ContentVersions\Item\Files;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

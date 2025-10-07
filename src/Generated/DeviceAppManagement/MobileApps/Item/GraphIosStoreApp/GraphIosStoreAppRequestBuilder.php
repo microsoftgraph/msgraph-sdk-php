@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Models\IosStoreApp;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Assignments\AssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Categories\CategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IosStoreApp;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

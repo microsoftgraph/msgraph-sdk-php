@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Forward;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\Forward;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

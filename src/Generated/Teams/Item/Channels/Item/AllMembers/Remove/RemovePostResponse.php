@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\AllMembers\Remove;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\AllMembers\Remove;
 
-use Microsoft\Graph\Generated\Models\ActionResultPart;
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ActionResultPart;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

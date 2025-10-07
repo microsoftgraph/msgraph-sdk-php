@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\FilterByCurrentUserWithOn;
+namespace Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\FilterByCurrentUserWithOn;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleInstance;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\UnifiedRoleAssignmentScheduleInstance;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

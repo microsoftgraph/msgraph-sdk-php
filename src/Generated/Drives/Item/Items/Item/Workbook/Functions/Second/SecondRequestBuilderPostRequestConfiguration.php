@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Second;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\Second;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

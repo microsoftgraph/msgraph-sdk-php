@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\Cancel;
+namespace Microsoft\\Graph\\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\Cancel;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

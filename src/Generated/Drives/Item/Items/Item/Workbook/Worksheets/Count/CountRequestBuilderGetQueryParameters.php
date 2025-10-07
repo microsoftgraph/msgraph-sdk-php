@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Count;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

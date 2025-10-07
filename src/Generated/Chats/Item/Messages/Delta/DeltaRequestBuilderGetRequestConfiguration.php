@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\Messages\Delta;
+namespace Microsoft\\Graph\\Generated\Chats\Item\Messages\Delta;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

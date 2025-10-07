@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Query;
+namespace Microsoft\\Graph\\Generated\Search\Query;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\SearchResponse;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\SearchResponse;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

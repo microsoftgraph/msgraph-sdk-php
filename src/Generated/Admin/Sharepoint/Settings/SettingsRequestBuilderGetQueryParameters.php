@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\Sharepoint\Settings;
+namespace Microsoft\\Graph\\Generated\Admin\Sharepoint\Settings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

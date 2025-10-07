@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\ImCsch;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\ImCsch;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

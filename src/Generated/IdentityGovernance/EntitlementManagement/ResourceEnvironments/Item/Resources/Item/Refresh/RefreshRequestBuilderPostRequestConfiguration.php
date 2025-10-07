@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Refresh;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Refresh;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

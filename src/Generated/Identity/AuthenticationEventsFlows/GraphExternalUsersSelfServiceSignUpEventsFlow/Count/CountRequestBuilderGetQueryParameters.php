@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\GraphExternalUsersSelfServiceSignUpEventsFlow\Count;
+namespace Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\GraphExternalUsersSelfServiceSignUpEventsFlow\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

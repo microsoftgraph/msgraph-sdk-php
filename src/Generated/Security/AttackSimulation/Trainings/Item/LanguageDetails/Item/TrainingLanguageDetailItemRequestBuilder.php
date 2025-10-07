@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\Trainings\Item\LanguageDetails\Item;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\Trainings\Item\LanguageDetails\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TrainingLanguageDetail;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TrainingLanguageDetail;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

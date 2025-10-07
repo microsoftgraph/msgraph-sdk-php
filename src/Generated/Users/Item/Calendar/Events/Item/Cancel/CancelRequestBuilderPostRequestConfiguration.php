@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item\Cancel;
+namespace Microsoft\\Graph\\Generated\Users\Item\Calendar\Events\Item\Cancel;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

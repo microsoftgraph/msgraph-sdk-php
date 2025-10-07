@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityRegenerateDeploymentAccessKey;
+namespace Microsoft\\Graph\\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityRegenerateDeploymentAccessKey;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

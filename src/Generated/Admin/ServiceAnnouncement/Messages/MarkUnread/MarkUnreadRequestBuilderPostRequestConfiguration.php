@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

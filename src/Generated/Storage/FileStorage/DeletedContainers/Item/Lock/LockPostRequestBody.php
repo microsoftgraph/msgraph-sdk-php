@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Lock;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Lock;
 
-use Microsoft\Graph\Generated\Models\SiteLockState;
+use Microsoft\\Graph\\Generated\Models\SiteLockState;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

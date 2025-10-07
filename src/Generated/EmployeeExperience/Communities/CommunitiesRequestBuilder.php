@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Communities;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Communities;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EmployeeExperience\Communities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\CommunityItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\Community;
-use Microsoft\Graph\Generated\Models\CommunityCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\CommunityItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Community;
+use Microsoft\\Graph\\Generated\Models\CommunityCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

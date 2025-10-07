@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\CallRecords;
+namespace Microsoft\\Graph\\Generated\Models\CallRecords;
 
 use Microsoft\Kiota\Abstractions\Enum;
 

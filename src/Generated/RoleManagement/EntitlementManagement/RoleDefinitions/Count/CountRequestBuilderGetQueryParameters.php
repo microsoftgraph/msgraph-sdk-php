@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Count;
+namespace Microsoft\\Graph\\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

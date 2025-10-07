@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item\RetentionEventType;
+namespace Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item\RetentionEventType;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\RetentionEventType;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\RetentionEventType;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

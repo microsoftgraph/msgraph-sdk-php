@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivitiesWithExternalcourseActivityId;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\LearningProviders\Item\LearningCourseActivitiesWithExternalcourseActivityId;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

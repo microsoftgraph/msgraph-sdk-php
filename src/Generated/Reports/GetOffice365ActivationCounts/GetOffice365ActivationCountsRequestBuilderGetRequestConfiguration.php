@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetOffice365ActivationCounts;
+namespace Microsoft\\Graph\\Generated\Reports\GetOffice365ActivationCounts;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

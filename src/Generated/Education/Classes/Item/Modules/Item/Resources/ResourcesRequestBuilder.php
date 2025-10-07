@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Modules\Item\Resources;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\Modules\Item\Resources;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Education\Classes\Item\Modules\Item\Resources\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Modules\Item\Resources\Item\EducationModuleResourceItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\EducationModuleResource;
-use Microsoft\Graph\Generated\Models\EducationModuleResourceCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Modules\Item\Resources\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Classes\Item\Modules\Item\Resources\Item\EducationModuleResourceItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EducationModuleResource;
+use Microsoft\\Graph\\Generated\Models\EducationModuleResourceCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

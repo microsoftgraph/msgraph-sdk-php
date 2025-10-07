@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization;
+namespace Microsoft\\Graph\\Generated\Organization;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Organization;
-use Microsoft\Graph\Generated\Models\OrganizationCollectionResponse;
-use Microsoft\Graph\Generated\Organization\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Organization\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Organization\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\OrganizationItemRequestBuilder;
-use Microsoft\Graph\Generated\Organization\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Organization;
+use Microsoft\\Graph\\Generated\Models\OrganizationCollectionResponse;
+use Microsoft\\Graph\\Generated\Organization\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\OrganizationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -84,11 +84,11 @@ class OrganizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      * @param OrganizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OrganizationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/organization-list?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/intune-onboarding-organization-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OrganizationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -114,7 +114,7 @@ class OrganizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of organization objects. There's only one organization object in the collection.
+     * List properties and relationships of the organization objects.
      * @param OrganizationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

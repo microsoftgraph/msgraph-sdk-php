@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\PlayPrompt;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PlayPromptOperation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PlayPromptOperation;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

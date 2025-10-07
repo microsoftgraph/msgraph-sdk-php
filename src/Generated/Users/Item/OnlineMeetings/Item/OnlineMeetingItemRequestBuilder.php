@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnlineMeeting;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Recordings\RecordingsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\SendVirtualAppointmentReminderSms\SendVirtualAppointmentReminderSmsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\SendVirtualAppointmentSms\SendVirtualAppointmentSmsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Transcripts\TranscriptsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnlineMeeting;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\Recordings\RecordingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\SendVirtualAppointmentReminderSms\SendVirtualAppointmentReminderSmsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\SendVirtualAppointmentSms\SendVirtualAppointmentSmsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\Transcripts\TranscriptsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\HostedContentsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\SetReaction\SetReactionRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\SoftDelete\SoftDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\UndoSoftDelete\UndoSoftDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\UnsetReaction\UnsetReactionRequestBuilder;
-use Microsoft\Graph\Generated\Models\ChatMessage;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\HostedContentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\SetReaction\SetReactionRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\SoftDelete\SoftDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\UndoSoftDelete\UndoSoftDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\Replies\Item\UnsetReaction\UnsetReactionRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ChatMessage;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

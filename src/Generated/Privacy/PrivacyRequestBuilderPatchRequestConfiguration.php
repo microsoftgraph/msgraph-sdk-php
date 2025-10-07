@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy;
+namespace Microsoft\\Graph\\Generated\Privacy;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

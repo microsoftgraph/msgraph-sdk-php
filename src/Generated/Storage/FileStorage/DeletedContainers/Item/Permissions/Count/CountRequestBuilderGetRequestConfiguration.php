@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Permissions\Count;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Permissions\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

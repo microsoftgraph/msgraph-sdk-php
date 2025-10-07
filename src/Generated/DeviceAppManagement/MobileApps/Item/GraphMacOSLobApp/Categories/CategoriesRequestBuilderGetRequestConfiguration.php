@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMacOSLobApp\Categories;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphMacOSLobApp\Categories;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

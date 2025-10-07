@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\FilterByCurrentUserWithOn;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\FilterByCurrentUserWithOn;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

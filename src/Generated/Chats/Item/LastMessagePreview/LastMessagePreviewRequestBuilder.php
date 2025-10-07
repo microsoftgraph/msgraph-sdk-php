@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\LastMessagePreview;
+namespace Microsoft\\Graph\\Generated\Chats\Item\LastMessagePreview;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ChatMessageInfo;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ChatMessageInfo;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

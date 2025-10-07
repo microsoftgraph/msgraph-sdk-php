@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Template;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Template;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsTemplate;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TeamsTemplate;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

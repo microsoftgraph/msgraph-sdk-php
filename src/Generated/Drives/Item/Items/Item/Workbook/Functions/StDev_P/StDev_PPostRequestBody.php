@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\StDev_P;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\StDev_P;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedChats\Count;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedChats\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\BulkUpload;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\BulkUpload;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

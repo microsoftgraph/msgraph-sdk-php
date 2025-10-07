@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeRightsAndInheritance;
+namespace Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeRightsAndInheritance;
 
-use Microsoft\Graph\Generated\Models\ProtectedContent;
+use Microsoft\\Graph\\Generated\Models\ProtectedContent;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

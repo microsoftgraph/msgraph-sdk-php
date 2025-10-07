@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\Count;
+namespace Microsoft\\Graph\\Generated\Directory\DeletedItems\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

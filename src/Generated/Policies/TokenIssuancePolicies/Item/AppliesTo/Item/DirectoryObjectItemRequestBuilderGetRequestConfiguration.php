@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item\AppliesTo\Item;
+namespace Microsoft\\Graph\\Generated\Policies\TokenIssuancePolicies\Item\AppliesTo\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

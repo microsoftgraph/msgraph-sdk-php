@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ClearFilters\ClearFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ConvertToRange\ConvertToRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\DataBodyRange\DataBodyRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\HeaderRowRange\HeaderRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Range\RangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ReapplyFilters\ReapplyFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\RowsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\SortRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\TotalRowRange\TotalRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Worksheet\WorksheetRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WorkbookTable;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ClearFilters\ClearFiltersRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ConvertToRange\ConvertToRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\DataBodyRange\DataBodyRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\HeaderRowRange\HeaderRowRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Range\RangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ReapplyFilters\ReapplyFiltersRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\RowsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\SortRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\TotalRowRange\TotalRowRangeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Worksheet\WorksheetRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WorkbookTable;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

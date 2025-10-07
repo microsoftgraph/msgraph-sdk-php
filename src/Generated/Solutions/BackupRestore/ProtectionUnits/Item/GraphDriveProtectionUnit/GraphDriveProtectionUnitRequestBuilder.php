@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphDriveProtectionUnit;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphDriveProtectionUnit;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DriveProtectionUnit;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\DriveProtectionUnit;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

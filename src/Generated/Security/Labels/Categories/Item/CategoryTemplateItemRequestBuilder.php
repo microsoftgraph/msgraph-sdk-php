@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\Categories\Item;
+namespace Microsoft\\Graph\\Generated\Security\Labels\Categories\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\CategoryTemplate;
-use Microsoft\Graph\Generated\Security\Labels\Categories\Item\Subcategories\SubcategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\CategoryTemplate;
+use Microsoft\\Graph\\Generated\Security\Labels\Categories\Item\Subcategories\SubcategoriesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

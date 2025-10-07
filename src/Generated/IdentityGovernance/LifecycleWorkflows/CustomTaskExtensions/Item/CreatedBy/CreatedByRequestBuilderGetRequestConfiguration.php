@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\CustomTaskExtensions\Item\CreatedBy;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\CustomTaskExtensions\Item\CreatedBy;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

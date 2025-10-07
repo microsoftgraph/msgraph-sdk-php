@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessProtectionPolicies\Count;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\OneDriveForBusinessProtectionPolicies\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

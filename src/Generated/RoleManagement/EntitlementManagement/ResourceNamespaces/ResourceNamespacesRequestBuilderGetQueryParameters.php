@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\ResourceNamespaces;
+namespace Microsoft\\Graph\\Generated\RoleManagement\EntitlementManagement\ResourceNamespaces;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

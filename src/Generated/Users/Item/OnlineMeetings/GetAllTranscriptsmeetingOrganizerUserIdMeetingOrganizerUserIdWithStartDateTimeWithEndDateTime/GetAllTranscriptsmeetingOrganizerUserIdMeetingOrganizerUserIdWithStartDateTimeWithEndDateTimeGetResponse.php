@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime;
+namespace Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\CallTranscript;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\CallTranscript;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

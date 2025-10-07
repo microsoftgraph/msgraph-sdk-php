@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Identities\Sensors\Item\HealthIssues\Count;
+namespace Microsoft\\Graph\\Generated\Security\Identities\Sensors\Item\HealthIssues\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

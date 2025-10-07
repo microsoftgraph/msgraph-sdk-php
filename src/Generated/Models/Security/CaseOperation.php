@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Security;
+namespace Microsoft\\Graph\\Generated\Models\Security;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\Entity;
-use Microsoft\Graph\Generated\Models\IdentitySet;
-use Microsoft\Graph\Generated\Models\ResultInfo;
+use Microsoft\\Graph\\Generated\Models\Entity;
+use Microsoft\\Graph\\Generated\Models\IdentitySet;
+use Microsoft\\Graph\\Generated\Models\ResultInfo;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -33,6 +33,7 @@ class CaseOperation extends Entity implements Parsable
                 case '#microsoft.graph.security.ediscoveryEstimateOperation': return new EdiscoveryEstimateOperation();
                 case '#microsoft.graph.security.ediscoveryExportOperation': return new EdiscoveryExportOperation();
                 case '#microsoft.graph.security.ediscoveryHoldOperation': return new EdiscoveryHoldOperation();
+                case '#microsoft.graph.security.ediscoveryHoldPolicySyncOperation': return new EdiscoveryHoldPolicySyncOperation();
                 case '#microsoft.graph.security.ediscoveryIndexOperation': return new EdiscoveryIndexOperation();
                 case '#microsoft.graph.security.ediscoveryPurgeDataOperation': return new EdiscoveryPurgeDataOperation();
                 case '#microsoft.graph.security.ediscoverySearchExportOperation': return new EdiscoverySearchExportOperation();

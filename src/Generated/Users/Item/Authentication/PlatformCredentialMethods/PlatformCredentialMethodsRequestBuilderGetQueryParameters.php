@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\PlatformCredentialMethods;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\PlatformCredentialMethods;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Group;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Group;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Group\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Group;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Group\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Group;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

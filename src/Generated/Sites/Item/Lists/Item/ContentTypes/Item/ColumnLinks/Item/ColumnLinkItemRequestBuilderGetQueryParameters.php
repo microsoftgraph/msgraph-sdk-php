@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\Item;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

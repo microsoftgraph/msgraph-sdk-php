@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Count;
+namespace Microsoft\\Graph\\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

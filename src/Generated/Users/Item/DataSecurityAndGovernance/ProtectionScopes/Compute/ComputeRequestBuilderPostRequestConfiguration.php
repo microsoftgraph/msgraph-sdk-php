@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes\Compute;
+namespace Microsoft\\Graph\\Generated\Users\Item\DataSecurityAndGovernance\ProtectionScopes\Compute;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

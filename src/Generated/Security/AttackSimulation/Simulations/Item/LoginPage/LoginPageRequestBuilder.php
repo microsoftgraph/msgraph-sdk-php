@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\LoginPage;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\Simulations\Item\LoginPage;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\LoginPage;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\LoginPage;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

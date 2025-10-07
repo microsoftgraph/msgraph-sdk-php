@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\Tenants;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\MultiTenantOrganization\Tenants;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\MultiTenantOrganizationMember;
-use Microsoft\Graph\Generated\Models\MultiTenantOrganizationMemberCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\Tenants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\Tenants\Item\MultiTenantOrganizationMemberItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\MultiTenantOrganizationMember;
+use Microsoft\\Graph\\Generated\Models\MultiTenantOrganizationMemberCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\TenantRelationships\MultiTenantOrganization\Tenants\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\TenantRelationships\MultiTenantOrganization\Tenants\Item\MultiTenantOrganizationMemberItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

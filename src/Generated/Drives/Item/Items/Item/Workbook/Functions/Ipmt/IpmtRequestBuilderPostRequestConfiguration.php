@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Ipmt;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\Ipmt;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

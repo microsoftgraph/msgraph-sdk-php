@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\Count;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

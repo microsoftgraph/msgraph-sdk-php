@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccess\AdditionalAccessRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackageAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageAssignment;
-use Microsoft\Graph\Generated\Models\AccessPackageAssignmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccess\AdditionalAccessRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackageAssignmentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AccessPackageAssignment;
+use Microsoft\\Graph\\Generated\Models\AccessPackageAssignmentCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

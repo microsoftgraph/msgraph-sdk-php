@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\SendVirtualAppointmentSms;
+namespace Microsoft\\Graph\\Generated\Communications\OnlineMeetings\Item\SendVirtualAppointmentSms;
 
-use Microsoft\Graph\Generated\Models\AttendeeNotificationInfo;
-use Microsoft\Graph\Generated\Models\VirtualAppointmentMessageType;
+use Microsoft\\Graph\\Generated\Models\AttendeeNotificationInfo;
+use Microsoft\\Graph\\Generated\Models\VirtualAppointmentMessageType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

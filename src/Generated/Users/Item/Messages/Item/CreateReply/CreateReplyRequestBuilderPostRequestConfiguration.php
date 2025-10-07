@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\CreateReply;
+namespace Microsoft\\Graph\\Generated\Users\Item\Messages\Item\CreateReply;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

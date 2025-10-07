@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes\Count;
+namespace Microsoft\\Graph\\Generated\Security\TriggerTypes\RetentionEventTypes\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Attachments\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Attachments\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

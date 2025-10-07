@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipalsWithAppId;
+namespace Microsoft\\Graph\\Generated\ServicePrincipalsWithAppId;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServicePrincipal;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ServicePrincipal;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

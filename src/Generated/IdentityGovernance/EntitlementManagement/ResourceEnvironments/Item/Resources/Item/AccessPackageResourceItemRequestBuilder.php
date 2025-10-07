@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Environment\EnvironmentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Refresh\RefreshRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Roles\RolesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Scopes\ScopesRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageResource;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Environment\EnvironmentRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Refresh\RefreshRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Roles\RolesRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\Item\Resources\Item\Scopes\ScopesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AccessPackageResource;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

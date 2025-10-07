@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TimeOffReason;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TimeOffReason;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

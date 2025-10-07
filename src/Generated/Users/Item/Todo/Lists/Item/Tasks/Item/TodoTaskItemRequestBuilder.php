@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TodoTask;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\AttachmentSessions\AttachmentSessionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems\ChecklistItemsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\LinkedResourcesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TodoTask;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\AttachmentSessions\AttachmentSessionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems\ChecklistItemsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\LinkedResources\LinkedResourcesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

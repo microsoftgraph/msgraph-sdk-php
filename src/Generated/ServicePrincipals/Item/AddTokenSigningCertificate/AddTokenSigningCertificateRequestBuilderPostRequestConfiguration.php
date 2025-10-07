@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AddTokenSigningCertificate;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\AddTokenSigningCertificate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

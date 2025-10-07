@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Relations\Count;
+namespace Microsoft\\Graph\\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Relations\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

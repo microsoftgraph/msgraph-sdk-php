@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendars\Item\Events\Item\PermanentDelete;
+namespace Microsoft\\Graph\\Generated\Users\Item\Calendars\Item\Events\Item\PermanentDelete;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

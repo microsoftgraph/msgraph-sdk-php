@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assign;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\Assign;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationAssignment;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\DeviceConfigurationAssignment;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

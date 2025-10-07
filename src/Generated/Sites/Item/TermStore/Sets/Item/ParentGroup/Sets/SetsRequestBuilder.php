@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets;
+namespace Microsoft\\Graph\\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermStore\Set;
-use Microsoft\Graph\Generated\Models\TermStore\SetCollectionResponse;
-use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\SetItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TermStore\Set;
+use Microsoft\\Graph\\Generated\Models\TermStore\SetCollectionResponse;
+use Microsoft\\Graph\\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\SetItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

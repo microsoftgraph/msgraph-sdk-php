@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\EnableSmsSignIn;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\Item\EnableSmsSignIn;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

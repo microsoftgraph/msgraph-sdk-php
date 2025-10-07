@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\Fido2Methods;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

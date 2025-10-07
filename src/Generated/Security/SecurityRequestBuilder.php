@@ -1,26 +1,26 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security;
+namespace Microsoft\\Graph\\Generated\Security;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\Security;
-use Microsoft\Graph\Generated\Security\Alerts_v2\Alerts_v2RequestBuilder;
-use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\DataSecurityAndGovernanceRequestBuilder;
-use Microsoft\Graph\Generated\Security\Identities\IdentitiesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\LabelsRequestBuilder;
-use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
-use Microsoft\Graph\Generated\Security\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\ThreatIntelligenceRequestBuilder;
-use Microsoft\Graph\Generated\Security\Triggers\TriggersRequestBuilder;
-use Microsoft\Graph\Generated\Security\TriggerTypes\TriggerTypesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\Security;
+use Microsoft\\Graph\\Generated\Security\Alerts_v2\Alerts_v2RequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Alerts\AlertsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Cases\CasesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\DataSecurityAndGovernanceRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Identities\IdentitiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Incidents\IncidentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\LabelsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\SecureScores\SecureScoresRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\ThreatIntelligenceRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Triggers\TriggersRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\TriggerTypes\TriggerTypesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

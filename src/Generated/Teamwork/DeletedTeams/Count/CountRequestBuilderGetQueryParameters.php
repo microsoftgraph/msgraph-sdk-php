@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Count;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

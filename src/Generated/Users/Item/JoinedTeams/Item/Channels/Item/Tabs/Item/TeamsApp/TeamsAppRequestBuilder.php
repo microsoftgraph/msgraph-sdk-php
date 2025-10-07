@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Item\TeamsApp;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Item\TeamsApp;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsApp;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TeamsApp;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

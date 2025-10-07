@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contracts\GetByIds;
+namespace Microsoft\\Graph\\Generated\Contracts\GetByIds;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

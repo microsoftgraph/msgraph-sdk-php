@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\FederationConfigurations\AvailableProviderTypes;
+namespace Microsoft\\Graph\\Generated\Directory\FederationConfigurations\AvailableProviderTypes;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

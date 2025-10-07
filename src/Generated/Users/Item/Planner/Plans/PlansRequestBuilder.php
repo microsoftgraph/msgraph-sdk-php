@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Planner\Plans;
+namespace Microsoft\\Graph\\Generated\Users\Item\Planner\Plans;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PlannerPlan;
-use Microsoft\Graph\Generated\Models\PlannerPlanCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Planner\Plans\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PlannerPlan;
+use Microsoft\\Graph\\Generated\Models\PlannerPlanCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\Planner\Plans\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

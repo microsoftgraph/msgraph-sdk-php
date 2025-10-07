@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Security;
+namespace Microsoft\\Graph\\Generated\Models\Security;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

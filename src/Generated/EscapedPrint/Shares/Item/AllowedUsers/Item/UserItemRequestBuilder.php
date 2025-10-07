@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item;
 
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\MailboxSettings\MailboxSettingsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

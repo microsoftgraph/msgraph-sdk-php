@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization;
+namespace Microsoft\\Graph\\Generated\Organization;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of organization objects. There's only one organization object in the collection.
+ * List properties and relationships of the organization objects.
 */
 class OrganizationRequestBuilderGetQueryParameters 
 {

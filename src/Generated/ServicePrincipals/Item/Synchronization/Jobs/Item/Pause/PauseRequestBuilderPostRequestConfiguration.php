@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\Item\Pause;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Jobs\Item\Pause;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

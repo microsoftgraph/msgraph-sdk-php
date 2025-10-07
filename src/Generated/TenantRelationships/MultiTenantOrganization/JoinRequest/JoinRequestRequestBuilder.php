@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\JoinRequest;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\MultiTenantOrganization\JoinRequest;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\MultiTenantOrganizationJoinRequestRecord;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\MultiTenantOrganizationJoinRequestRecord;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

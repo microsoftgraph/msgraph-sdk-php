@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetActivitiesByInterval;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\GetActivitiesByInterval;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

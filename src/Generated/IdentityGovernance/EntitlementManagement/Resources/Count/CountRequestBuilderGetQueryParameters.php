@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\Count;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Resources\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

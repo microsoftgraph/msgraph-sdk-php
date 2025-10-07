@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Answer;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\Answer;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

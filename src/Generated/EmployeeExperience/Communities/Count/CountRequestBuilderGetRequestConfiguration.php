@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Communities\Count;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

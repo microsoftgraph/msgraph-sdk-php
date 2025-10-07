@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\AttributeSets\Count;
+namespace Microsoft\\Graph\\Generated\Directory\AttributeSets\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\AudioRoutingGroups;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

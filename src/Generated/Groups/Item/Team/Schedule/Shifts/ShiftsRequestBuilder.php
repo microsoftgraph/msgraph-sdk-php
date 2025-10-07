@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\Shifts;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\Shifts;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\Shifts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\Shifts\Item\ShiftItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Shift;
-use Microsoft\Graph\Generated\Models\ShiftCollectionResponse;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\Shifts\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Schedule\Shifts\Item\ShiftItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Shift;
+use Microsoft\\Graph\\Generated\Models\ShiftCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

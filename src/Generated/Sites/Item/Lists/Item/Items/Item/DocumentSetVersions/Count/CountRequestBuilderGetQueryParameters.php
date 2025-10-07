@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Count;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

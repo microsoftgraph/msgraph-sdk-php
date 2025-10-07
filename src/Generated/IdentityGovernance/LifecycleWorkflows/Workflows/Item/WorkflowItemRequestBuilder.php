@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\CreatedBy\CreatedByRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\ExecutionScope\ExecutionScopeRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\LastModifiedBy\LastModifiedByRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivate\MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceCreateNewVersion\MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceRestore\MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Runs\RunsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\TaskReports\TaskReportsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Tasks\TasksRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\UserProcessingResults\UserProcessingResultsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityGovernance\Workflow;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\CreatedBy\CreatedByRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\ExecutionScope\ExecutionScopeRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\LastModifiedBy\LastModifiedByRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivate\MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceCreateNewVersion\MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceRestore\MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Runs\RunsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\TaskReports\TaskReportsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Tasks\TasksRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\UserProcessingResults\UserProcessingResultsRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Versions\VersionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\Workflow;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

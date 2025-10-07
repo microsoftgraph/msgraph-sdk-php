@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Restore;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Restore;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\FileStorageContainer;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\FileStorageContainer;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

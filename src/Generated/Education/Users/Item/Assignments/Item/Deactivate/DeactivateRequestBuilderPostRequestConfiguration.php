@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Deactivate;
+namespace Microsoft\\Graph\\Generated\Education\Users\Item\Assignments\Item\Deactivate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

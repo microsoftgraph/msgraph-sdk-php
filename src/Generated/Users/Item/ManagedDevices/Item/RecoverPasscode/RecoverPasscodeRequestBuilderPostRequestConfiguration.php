@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\RecoverPasscode;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\RecoverPasscode;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\GetAvailableExtensionProperties;
+namespace Microsoft\\Graph\\Generated\Directory\DeletedItems\GetAvailableExtensionProperties;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

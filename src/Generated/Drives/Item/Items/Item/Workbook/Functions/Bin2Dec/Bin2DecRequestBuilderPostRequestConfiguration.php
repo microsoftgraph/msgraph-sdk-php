@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Bin2Dec;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\Bin2Dec;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

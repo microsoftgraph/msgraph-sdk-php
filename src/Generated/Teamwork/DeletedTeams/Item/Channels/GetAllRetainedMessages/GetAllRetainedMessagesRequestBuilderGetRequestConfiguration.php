@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\GetAllRetainedMessages;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Item\Channels\GetAllRetainedMessages;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

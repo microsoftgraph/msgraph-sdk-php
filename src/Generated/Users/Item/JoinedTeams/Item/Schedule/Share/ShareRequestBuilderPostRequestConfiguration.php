@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Share;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\Share;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

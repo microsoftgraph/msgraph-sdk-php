@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Jobs\Item\Redirect;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\Jobs\Item\Redirect;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PrintJob;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PrintJob;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

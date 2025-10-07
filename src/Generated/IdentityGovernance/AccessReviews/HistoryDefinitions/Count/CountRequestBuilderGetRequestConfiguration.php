@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Count;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

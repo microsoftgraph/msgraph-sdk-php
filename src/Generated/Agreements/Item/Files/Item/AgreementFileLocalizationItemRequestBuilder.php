@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Agreements\Item\Files\Item;
+namespace Microsoft\\Graph\\Generated\Agreements\Item\Files\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Agreements\Item\Files\Item\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\AgreementFileLocalization;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Agreements\Item\Files\Item\Versions\VersionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AgreementFileLocalization;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

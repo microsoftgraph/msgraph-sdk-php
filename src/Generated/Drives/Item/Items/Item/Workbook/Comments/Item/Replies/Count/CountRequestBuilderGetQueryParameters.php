@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Count;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

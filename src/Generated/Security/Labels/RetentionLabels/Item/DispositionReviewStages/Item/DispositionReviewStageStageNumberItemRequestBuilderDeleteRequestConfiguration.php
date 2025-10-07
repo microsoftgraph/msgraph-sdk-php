@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages\Item;
+namespace Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

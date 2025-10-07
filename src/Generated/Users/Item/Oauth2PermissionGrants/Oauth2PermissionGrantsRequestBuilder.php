@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Oauth2PermissionGrants;
+namespace Microsoft\\Graph\\Generated\Users\Item\Oauth2PermissionGrants;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\OAuth2PermissionGrantCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Oauth2PermissionGrants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\OAuth2PermissionGrantCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Oauth2PermissionGrants\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

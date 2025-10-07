@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToNotebook;
+namespace Microsoft\\Graph\\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToNotebook;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnenoteOperation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnenoteOperation;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

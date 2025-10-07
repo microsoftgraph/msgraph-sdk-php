@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\WhoisHistoryRecords\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\WhoisHistoryRecords\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
