@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\GroupSettingTemplates\GetAvailableExtensionProperties;
+namespace Microsoft\\Graph\\Generated\GroupSettingTemplates\GetAvailableExtensionProperties;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

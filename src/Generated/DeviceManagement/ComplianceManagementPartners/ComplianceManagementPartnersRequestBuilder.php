@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ComplianceManagementPartners;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Item\ComplianceManagementPartnerItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ComplianceManagementPartner;
-use Microsoft\Graph\Generated\Models\ComplianceManagementPartnerCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\ComplianceManagementPartners\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ComplianceManagementPartners\Item\ComplianceManagementPartnerItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ComplianceManagementPartner;
+use Microsoft\\Graph\\Generated\Models\ComplianceManagementPartnerCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the complianceManagementPartner objects.
+     * The list of Compliance Management Partners configured by the tenant.
      * @param ComplianceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartnerCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ComplianceManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new complianceManagementPartner object.
+     * Create new navigation property to complianceManagementPartners for deviceManagement
      * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartner|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-compliancemanagementpartner-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ComplianceManagementPartner $body, ?ComplianceManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the complianceManagementPartner objects.
+     * The list of Compliance Management Partners configured by the tenant.
      * @param ComplianceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new complianceManagementPartner object.
+     * Create new navigation property to complianceManagementPartners for deviceManagement
      * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

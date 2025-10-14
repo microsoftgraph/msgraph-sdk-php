@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation;
+namespace Microsoft\\Graph\\Generated\Reports\Partners\Billing\Reconciliation;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

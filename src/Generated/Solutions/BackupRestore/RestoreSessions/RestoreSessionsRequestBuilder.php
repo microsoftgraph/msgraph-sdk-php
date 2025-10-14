@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\RestoreSessions;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestoreSessions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RestoreSessionBase;
-use Microsoft\Graph\Generated\Models\RestoreSessionBaseCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\RestoreSessions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\RestoreSessions\Item\RestoreSessionBaseItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RestoreSessionBase;
+use Microsoft\\Graph\\Generated\Models\RestoreSessionBaseCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestoreSessions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestoreSessions\Item\RestoreSessionBaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

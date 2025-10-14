@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Items\Count;
+namespace Microsoft\\Graph\\Generated\Connections\Item\Items\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

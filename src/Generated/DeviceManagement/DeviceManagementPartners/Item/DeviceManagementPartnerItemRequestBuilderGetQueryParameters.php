@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceManagementPartners\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceManagementPartner object.
+ * The list of Device Management Partners configured by the tenant.
 */
 class DeviceManagementPartnerItemRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\PinnedMessages\Item;
+namespace Microsoft\\Graph\\Generated\Chats\Item\PinnedMessages\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

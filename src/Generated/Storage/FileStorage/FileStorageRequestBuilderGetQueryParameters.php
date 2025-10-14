@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotifications\Item\Details\Item;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\EndUserNotifications\Item\Details\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Organizer_v2;
+namespace Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Organizer_v2;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\CallRecords\Organizer;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\CallRecords\Organizer;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Collaborators\Count;
+namespace Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\Collaborators\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

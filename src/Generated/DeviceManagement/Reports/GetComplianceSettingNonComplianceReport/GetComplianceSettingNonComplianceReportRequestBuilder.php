@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetComplianceSettingNonComplianceReport;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetComplianceSettingNonComplianceReport;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,12 +31,11 @@ class GetComplianceSettingNonComplianceReportRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Not yet documented
+     * Invoke action getComplianceSettingNonComplianceReport
      * @param GetComplianceSettingNonComplianceReportPostRequestBody $body The request body
      * @param GetComplianceSettingNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getcompliancesettingnoncompliancereport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetComplianceSettingNonComplianceReportPostRequestBody $body, ?GetComplianceSettingNonComplianceReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -49,7 +48,7 @@ class GetComplianceSettingNonComplianceReportRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Not yet documented
+     * Invoke action getComplianceSettingNonComplianceReport
      * @param GetComplianceSettingNonComplianceReportPostRequestBody $body The request body
      * @param GetComplianceSettingNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork;
+namespace Microsoft\\Graph\\Generated\Teamwork;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

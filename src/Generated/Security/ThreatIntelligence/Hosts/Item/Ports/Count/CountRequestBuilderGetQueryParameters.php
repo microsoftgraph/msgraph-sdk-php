@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\Ports\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\Ports\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

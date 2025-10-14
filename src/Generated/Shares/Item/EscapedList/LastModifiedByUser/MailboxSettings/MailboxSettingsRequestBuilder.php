@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\LastModifiedByUser\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\LastModifiedByUser\MailboxSettings;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\MailboxSettings;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\MailboxSettings;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

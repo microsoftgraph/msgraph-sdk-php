@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\RestoreVersion;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\RestoreVersion;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

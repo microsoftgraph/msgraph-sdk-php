@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

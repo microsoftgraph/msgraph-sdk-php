@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\Drive;
+namespace Microsoft\\Graph\\Generated\Sites\Item\GetByPathWithPath\Drive;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

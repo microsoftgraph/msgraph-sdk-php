@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions;
+namespace Microsoft\\Graph\\Generated\Directory\CustomSecurityAttributeDefinitions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions\Item\CustomSecurityAttributeDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\CustomSecurityAttributeDefinition;
-use Microsoft\Graph\Generated\Models\CustomSecurityAttributeDefinitionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Directory\CustomSecurityAttributeDefinitions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\CustomSecurityAttributeDefinitions\Item\CustomSecurityAttributeDefinitionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CustomSecurityAttributeDefinition;
+use Microsoft\\Graph\\Generated\Models\CustomSecurityAttributeDefinitionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

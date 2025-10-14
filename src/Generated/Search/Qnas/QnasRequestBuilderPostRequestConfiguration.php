@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Qnas;
+namespace Microsoft\\Graph\\Generated\Search\Qnas;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

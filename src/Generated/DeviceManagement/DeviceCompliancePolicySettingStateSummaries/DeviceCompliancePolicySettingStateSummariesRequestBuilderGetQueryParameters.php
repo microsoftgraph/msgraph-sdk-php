@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceCompliancePolicySettingStateSummary objects.
+ * The summary states of compliance policy settings for this account.
 */
 class DeviceCompliancePolicySettingStateSummariesRequestBuilderGetQueryParameters 
 {

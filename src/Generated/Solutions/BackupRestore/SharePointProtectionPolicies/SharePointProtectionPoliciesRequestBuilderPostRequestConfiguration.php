@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointProtectionPolicies;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\SharePointProtectionPolicies;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

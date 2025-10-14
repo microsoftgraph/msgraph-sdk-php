@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\GetAllMessages;
+namespace Microsoft\\Graph\\Generated\Chats\GetAllMessages;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\ChatMessage;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ChatMessage;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

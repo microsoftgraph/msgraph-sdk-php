@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceComplianceScheduledActionForRule object.
+ * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
 */
 class DeviceComplianceScheduledActionForRuleItemRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions;
+namespace Microsoft\\Graph\\Generated\Solutions\BookingBusinesses\Item\CustomQuestions;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

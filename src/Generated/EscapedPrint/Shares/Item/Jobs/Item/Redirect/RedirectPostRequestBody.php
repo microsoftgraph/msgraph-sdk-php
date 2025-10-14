@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Jobs\Item\Redirect;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\Jobs\Item\Redirect;
 
-use Microsoft\Graph\Generated\Models\PrintJobConfiguration;
+use Microsoft\\Graph\\Generated\Models\PrintJobConfiguration;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

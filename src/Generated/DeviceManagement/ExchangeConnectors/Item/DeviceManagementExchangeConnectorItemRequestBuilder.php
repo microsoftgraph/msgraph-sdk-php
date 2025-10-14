@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ExchangeConnectors\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\Sync\SyncRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceManagementExchangeConnector;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\ExchangeConnectors\Item\Sync\SyncRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceManagementExchangeConnector;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -39,11 +39,10 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Deletes a deviceManagementExchangeConnector.
+     * Delete navigation property exchangeConnectors for deviceManagement
      * @param DeviceManagementExchangeConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceManagementExchangeConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      * @param DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExchangeConnector|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the properties of a deviceManagementExchangeConnector object.
+     * Update the navigation property exchangeConnectors in deviceManagement
      * @param DeviceManagementExchangeConnector $body The request body
      * @param DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExchangeConnector|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementexchangeconnector-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagementExchangeConnector $body, ?DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Deletes a deviceManagementExchangeConnector.
+     * Delete navigation property exchangeConnectors for deviceManagement
      * @param DeviceManagementExchangeConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Read properties and relationships of the deviceManagementExchangeConnector object.
+     * The list of Exchange Connectors configured by the tenant.
      * @param DeviceManagementExchangeConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the properties of a deviceManagementExchangeConnector object.
+     * Update the navigation property exchangeConnectors in deviceManagement
      * @param DeviceManagementExchangeConnector $body The request body
      * @param DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

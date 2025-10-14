@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\ExecutionScope\Item;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\ExecutionScope\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+ * The list of users that meet the workflowExecutionConditions of a workflow.
 */
 class UserProcessingResultItemRequestBuilderGetQueryParameters 
 {

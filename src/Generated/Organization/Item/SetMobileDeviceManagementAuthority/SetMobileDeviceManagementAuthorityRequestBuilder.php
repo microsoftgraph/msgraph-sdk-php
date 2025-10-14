@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\SetMobileDeviceManagementAuthority;
+namespace Microsoft\\Graph\\Generated\Organization\Item\SetMobileDeviceManagementAuthority;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -34,7 +34,6 @@ class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseRequestBuilde
      * @param SetMobileDeviceManagementAuthorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SetMobileDeviceManagementAuthorityPostResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-organization-setmobiledevicemanagementauthority?view=graph-rest-1.0 Find more info here
     */
     public function post(?SetMobileDeviceManagementAuthorityRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

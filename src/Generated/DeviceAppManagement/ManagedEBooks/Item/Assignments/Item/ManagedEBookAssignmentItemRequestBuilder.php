@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ManagedEBookAssignment;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ManagedEBookAssignment;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,11 +31,10 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a managedEBookAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-managedebookassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosVppEBookAssignment object.
+     * The list of assignments for this eBook.
      * @param ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a iosVppEBookAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param ManagedEBookAssignment $body The request body
      * @param ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebookassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedEBookAssignment $body, ?ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a managedEBookAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param ManagedEBookAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the iosVppEBookAssignment object.
+     * The list of assignments for this eBook.
      * @param ManagedEBookAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a iosVppEBookAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param ManagedEBookAssignment $body The request body
      * @param ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

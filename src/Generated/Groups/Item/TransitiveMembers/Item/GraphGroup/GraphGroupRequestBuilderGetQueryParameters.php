@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\GraphGroup;
+namespace Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\Item\GraphGroup;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\AttachmentBase;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item\Value\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AttachmentBase;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item\Value\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

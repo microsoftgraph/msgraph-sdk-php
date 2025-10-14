@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Reboot;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Reboot;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

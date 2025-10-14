@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions\Item;
+namespace Microsoft\\Graph\\Generated\Directory\CustomSecurityAttributeDefinitions\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the termsAndConditions object.
+ * The terms and conditions associated with device management of the company.
 */
 class TermsAndConditionsItemRequestBuilderGetQueryParameters 
 {

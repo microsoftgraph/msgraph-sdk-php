@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RoleAssignments;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\RoleAssignments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceAndAppManagementRoleAssignment objects.
+ * The Role Assignments.
 */
 class RoleAssignmentsRequestBuilderGetQueryParameters 
 {

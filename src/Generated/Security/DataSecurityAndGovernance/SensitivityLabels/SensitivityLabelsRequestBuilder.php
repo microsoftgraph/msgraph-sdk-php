@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels;
+namespace Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SensitivityLabel;
-use Microsoft\Graph\Generated\Models\SensitivityLabelCollectionResponse;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormats\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeRightsAndInheritance\ComputeRightsAndInheritanceRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\SensitivityLabelItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SensitivityLabel;
+use Microsoft\\Graph\\Generated\Models\SensitivityLabelCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormats\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeRightsAndInheritance\ComputeRightsAndInheritanceRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\SensitivityLabelItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

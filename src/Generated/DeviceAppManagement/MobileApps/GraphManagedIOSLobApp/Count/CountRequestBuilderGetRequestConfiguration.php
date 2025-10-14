@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedIOSLobApp\Count;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphManagedIOSLobApp\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserCountsWithPeriod;
+namespace Microsoft\\Graph\\Generated\Reports\GetYammerDeviceUsageUserCountsWithPeriod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphOrgContact;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphOrgContact;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OrgContact;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OrgContact;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

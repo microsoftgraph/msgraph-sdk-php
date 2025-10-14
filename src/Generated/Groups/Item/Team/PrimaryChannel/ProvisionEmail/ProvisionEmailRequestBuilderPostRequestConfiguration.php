@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\ProvisionEmail;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\ProvisionEmail;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

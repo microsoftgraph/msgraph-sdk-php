@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\ServiceProvisioningErrors;
+namespace Microsoft\\Graph\\Generated\Contacts\Item\ServiceProvisioningErrors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

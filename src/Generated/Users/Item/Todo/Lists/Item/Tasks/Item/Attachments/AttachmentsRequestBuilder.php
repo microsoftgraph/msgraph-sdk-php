@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments;
+namespace Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\AttachmentBase;
-use Microsoft\Graph\Generated\Models\AttachmentBaseCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item\AttachmentBaseItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AttachmentBase;
+use Microsoft\\Graph\\Generated\Models\AttachmentBaseCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item\AttachmentBaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

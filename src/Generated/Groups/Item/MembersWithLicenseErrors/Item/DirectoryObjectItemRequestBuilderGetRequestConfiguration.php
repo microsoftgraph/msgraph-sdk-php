@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\MembersWithLicenseErrors\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

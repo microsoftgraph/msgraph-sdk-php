@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\GalleryImages\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\GalleryImages\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

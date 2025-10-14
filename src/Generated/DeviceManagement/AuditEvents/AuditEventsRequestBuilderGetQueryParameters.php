@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the auditEvent objects.
+ * The Audit Events
 */
 class AuditEventsRequestBuilderGetQueryParameters 
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments\Item\RoleAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RoleAssignment;
-use Microsoft\Graph\Generated\Models\RoleAssignmentCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions\Item\RoleAssignments\Item\RoleAssignmentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RoleAssignment;
+use Microsoft\\Graph\\Generated\Models\RoleAssignmentCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the roleAssignment objects.
+     * List of Role assignments for this role definition.
      * @param RoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleAssignmentCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new roleAssignment object.
+     * Create new navigation property to roleAssignments for deviceManagement
      * @param RoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-create?view=graph-rest-1.0 Find more info here
     */
     public function post(RoleAssignment $body, ?RoleAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the roleAssignment objects.
+     * List of Role assignments for this role definition.
      * @param RoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class RoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new roleAssignment object.
+     * Create new navigation property to roleAssignments for deviceManagement
      * @param RoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

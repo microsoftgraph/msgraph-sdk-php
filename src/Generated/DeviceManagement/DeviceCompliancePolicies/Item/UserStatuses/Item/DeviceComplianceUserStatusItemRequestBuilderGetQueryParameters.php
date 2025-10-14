@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceComplianceUserStatus object.
+ * List of DeviceComplianceUserStatus.
 */
 class DeviceComplianceUserStatusItemRequestBuilderGetQueryParameters 
 {

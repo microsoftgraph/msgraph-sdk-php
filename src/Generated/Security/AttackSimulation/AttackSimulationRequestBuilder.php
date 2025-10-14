@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotifications\EndUserNotificationsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\LandingPages\LandingPagesRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\LoginPages\LoginPagesRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\Payloads\PayloadsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\SimulationAutomationsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\SimulationsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\Trainings\TrainingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AttackSimulationRoot;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\EndUserNotifications\EndUserNotificationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\LandingPages\LandingPagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\LoginPages\LoginPagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\Operations\OperationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\Payloads\PayloadsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\SimulationAutomations\SimulationAutomationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\Simulations\SimulationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\Trainings\TrainingsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

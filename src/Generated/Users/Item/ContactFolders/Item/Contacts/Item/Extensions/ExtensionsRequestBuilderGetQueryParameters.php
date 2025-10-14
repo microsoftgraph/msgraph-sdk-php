@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Extensions;
+namespace Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Extensions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

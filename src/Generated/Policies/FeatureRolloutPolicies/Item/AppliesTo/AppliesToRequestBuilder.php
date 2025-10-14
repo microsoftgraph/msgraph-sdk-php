@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo;
+namespace Microsoft\\Graph\\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObject;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -35,7 +35,7 @@ class AppliesToRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.policies.featureRolloutPolicies.item.appliesTo.item collection
+     * Gets an item from the Microsoft//Graph//Generated.policies.featureRolloutPolicies.item.appliesTo.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */

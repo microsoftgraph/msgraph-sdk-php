@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\DeviceCategory\Ref;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\DeviceCategory\Ref;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

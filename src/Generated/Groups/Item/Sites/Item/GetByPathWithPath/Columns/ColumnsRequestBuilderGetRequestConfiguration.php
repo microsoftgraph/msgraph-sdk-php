@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Columns;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Columns;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

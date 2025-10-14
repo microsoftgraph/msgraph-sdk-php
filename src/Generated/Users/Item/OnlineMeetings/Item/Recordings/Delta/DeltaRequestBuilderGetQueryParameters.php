@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\Recordings\Delta;
+namespace Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\Recordings\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

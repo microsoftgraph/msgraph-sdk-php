@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Members;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Members;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

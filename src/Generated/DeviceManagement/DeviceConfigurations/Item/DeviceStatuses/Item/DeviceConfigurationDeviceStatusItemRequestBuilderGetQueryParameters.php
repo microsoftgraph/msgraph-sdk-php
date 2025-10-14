@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+ * Device configuration installation status by device.
 */
 class DeviceConfigurationDeviceStatusItemRequestBuilderGetQueryParameters 
 {

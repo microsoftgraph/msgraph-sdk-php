@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the windowsInformationProtectionPolicy objects.
+ * Windows information protection for apps running on devices which are not MDM enrolled.
 */
 class WindowsInformationProtectionPoliciesRequestBuilderGetQueryParameters 
 {

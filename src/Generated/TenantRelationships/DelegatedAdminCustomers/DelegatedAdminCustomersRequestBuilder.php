@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\DelegatedAdminCustomers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DelegatedAdminCustomer;
-use Microsoft\Graph\Generated\Models\DelegatedAdminCustomerCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Item\DelegatedAdminCustomerItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DelegatedAdminCustomer;
+use Microsoft\\Graph\\Generated\Models\DelegatedAdminCustomerCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\TenantRelationships\DelegatedAdminCustomers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\TenantRelationships\DelegatedAdminCustomers\Item\DelegatedAdminCustomerItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

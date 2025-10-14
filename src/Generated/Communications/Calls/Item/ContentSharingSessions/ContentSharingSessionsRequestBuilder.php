@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\ContentSharingSessions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Item\ContentSharingSessionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ContentSharingSession;
-use Microsoft\Graph\Generated\Models\ContentSharingSessionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\ContentSharingSessions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\ContentSharingSessions\Item\ContentSharingSessionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ContentSharingSession;
+use Microsoft\\Graph\\Generated\Models\ContentSharingSessionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

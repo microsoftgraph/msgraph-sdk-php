@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item\Instances;
+namespace Microsoft\\Graph\\Generated\Users\Item\Calendar\Events\Item\Instances;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

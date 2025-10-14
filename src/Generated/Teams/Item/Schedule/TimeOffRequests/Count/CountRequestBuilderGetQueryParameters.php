@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\TimeOffRequests\Count;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Schedule\TimeOffRequests\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

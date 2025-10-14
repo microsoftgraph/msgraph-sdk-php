@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\AllTime;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Analytics\AllTime;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

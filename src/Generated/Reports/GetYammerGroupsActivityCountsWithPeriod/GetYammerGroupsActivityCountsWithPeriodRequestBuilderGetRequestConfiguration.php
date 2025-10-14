@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityCountsWithPeriod;
+namespace Microsoft\\Graph\\Generated\Reports\GetYammerGroupsActivityCountsWithPeriod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AuditLogs\SignIns\ConfirmSafe;
+namespace Microsoft\\Graph\\Generated\AuditLogs\SignIns\ConfirmSafe;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

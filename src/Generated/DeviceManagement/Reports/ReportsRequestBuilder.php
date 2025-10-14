@@ -1,31 +1,31 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\ExportJobsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetCachedReport\GetCachedReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetCompliancePolicyNonComplianceReport\GetCompliancePolicyNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetCompliancePolicyNonComplianceSummaryReport\GetCompliancePolicyNonComplianceSummaryReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetComplianceSettingNonComplianceReport\GetComplianceSettingNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceReport\GetConfigurationPolicyNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceSummaryReport\GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationSettingNonComplianceReport\GetConfigurationSettingNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceManagementIntentPerSettingContributingProfiles\GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport\GetDeviceManagementIntentSettingsReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceNonComplianceReport\GetDeviceNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDevicesWithoutCompliancePolicyReport\GetDevicesWithoutCompliancePolicyReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetHistoricalReport\GetHistoricalReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetNoncompliantDevicesAndSettingsReport\GetNoncompliantDevicesAndSettingsReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata\GetPolicyNonComplianceMetadataRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceReport\GetPolicyNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceSummaryReport\GetPolicyNonComplianceSummaryReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetReportFilters\GetReportFiltersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\GetSettingNonComplianceReport\GetSettingNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\RetrieveDeviceAppInstallationStatusReport\RetrieveDeviceAppInstallationStatusReportRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceManagementReports;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\ExportJobs\ExportJobsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetCachedReport\GetCachedReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetCompliancePolicyNonComplianceReport\GetCompliancePolicyNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetCompliancePolicyNonComplianceSummaryReport\GetCompliancePolicyNonComplianceSummaryReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetComplianceSettingNonComplianceReport\GetComplianceSettingNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceReport\GetConfigurationPolicyNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceSummaryReport\GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetConfigurationSettingNonComplianceReport\GetConfigurationSettingNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetDeviceManagementIntentPerSettingContributingProfiles\GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport\GetDeviceManagementIntentSettingsReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetDeviceNonComplianceReport\GetDeviceNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetDevicesWithoutCompliancePolicyReport\GetDevicesWithoutCompliancePolicyReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetHistoricalReport\GetHistoricalReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetNoncompliantDevicesAndSettingsReport\GetNoncompliantDevicesAndSettingsReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata\GetPolicyNonComplianceMetadataRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetPolicyNonComplianceReport\GetPolicyNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetPolicyNonComplianceSummaryReport\GetPolicyNonComplianceSummaryReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetReportFilters\GetReportFiltersRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetSettingNonComplianceReport\GetSettingNonComplianceReportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\RetrieveDeviceAppInstallationStatusReport\RetrieveDeviceAppInstallationStatusReportRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceManagementReports;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -205,11 +205,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagementReports object.
+     * Get reports from deviceManagement
      * @param ReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementReports|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ReportsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -220,12 +219,11 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagementReports object.
+     * Update the navigation property reports in deviceManagement
      * @param DeviceManagementReports $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementReports|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagementReports $body, ?ReportsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -254,7 +252,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagementReports object.
+     * Get reports from deviceManagement
      * @param ReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -275,7 +273,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagementReports object.
+     * Update the navigation property reports in deviceManagement
      * @param DeviceManagementReports $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

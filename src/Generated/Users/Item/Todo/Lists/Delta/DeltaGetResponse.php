@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Delta;
+namespace Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Delta;
 
-use Microsoft\Graph\Generated\Models\BaseDeltaFunctionResponse;
-use Microsoft\Graph\Generated\Models\TodoTaskList;
+use Microsoft\\Graph\\Generated\Models\BaseDeltaFunctionResponse;
+use Microsoft\\Graph\\Generated\Models\TodoTaskList;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

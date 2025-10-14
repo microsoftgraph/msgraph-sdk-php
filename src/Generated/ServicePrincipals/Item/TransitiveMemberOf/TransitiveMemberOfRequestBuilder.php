@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphDirectoryRole\GraphDirectoryRoleRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphDirectoryRole\GraphDirectoryRoleRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

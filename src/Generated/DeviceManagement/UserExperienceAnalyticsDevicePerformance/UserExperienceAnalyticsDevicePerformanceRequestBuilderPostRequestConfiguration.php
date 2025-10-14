@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

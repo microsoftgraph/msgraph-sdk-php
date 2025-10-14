@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Ref;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedUsers\Ref;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

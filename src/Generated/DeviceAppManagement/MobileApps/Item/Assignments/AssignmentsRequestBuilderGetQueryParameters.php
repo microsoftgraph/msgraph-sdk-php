@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\Assignments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the mobileAppAssignment objects.
+ * The list of group assignments for this mobile app.
 */
 class AssignmentsRequestBuilderGetQueryParameters 
 {

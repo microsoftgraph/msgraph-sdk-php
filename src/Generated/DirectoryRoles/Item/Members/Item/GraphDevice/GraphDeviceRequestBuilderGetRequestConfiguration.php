@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\GraphDevice;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\Item\GraphDevice;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the targetedManagedAppConfiguration object.
+ * Targeted managed app configurations.
 */
 class TargetedManagedAppConfigurationItemRequestBuilderGetQueryParameters 
 {

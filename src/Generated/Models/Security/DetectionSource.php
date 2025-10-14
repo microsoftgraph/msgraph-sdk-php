@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Security;
+namespace Microsoft\\Graph\\Generated\Models\Security;
 
 use Microsoft\Kiota\Abstractions\Enum;
 
@@ -41,5 +41,7 @@ class DetectionSource extends Enum {
     public const BUILT_IN_ML = "builtInMl";
     public const MICROSOFT_INSIDER_RISK_MANAGEMENT = "microsoftInsiderRiskManagement";
     public const MICROSOFT_THREAT_INTELLIGENCE = "microsoftThreatIntelligence";
+    public const MICROSOFT_DEFENDER_FOR_A_I_SERVICES = "microsoftDefenderForAIServices";
+    public const SECURITY_COPILOT = "securityCopilot";
     public const MICROSOFT_SENTINEL = "microsoftSentinel";
 }

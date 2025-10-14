@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement;
+namespace Microsoft\\Graph\\Generated\DeviceManagement;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceManagement object.
+ * Get deviceManagement
 */
 class DeviceManagementRequestBuilderGetQueryParameters 
 {

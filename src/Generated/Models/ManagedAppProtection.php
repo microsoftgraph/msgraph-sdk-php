@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -212,7 +212,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
     }
 
     /**
-     * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. Valid values 1 to 65535
      * @return int|null
     */
     public function getMaximumPinRetries(): ?int {
@@ -527,7 +527,7 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
     }
 
     /**
-     * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. Valid values 1 to 65535
      * @param int|null $value Value to set for the maximumPinRetries property.
     */
     public function setMaximumPinRetries(?int $value): void {

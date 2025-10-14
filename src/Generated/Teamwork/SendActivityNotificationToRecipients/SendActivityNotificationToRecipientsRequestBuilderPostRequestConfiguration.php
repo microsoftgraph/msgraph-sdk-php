@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\SendActivityNotificationToRecipients;
+namespace Microsoft\\Graph\\Generated\Teamwork\SendActivityNotificationToRecipients;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

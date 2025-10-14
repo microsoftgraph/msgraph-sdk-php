@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item\ClearPresence;
+namespace Microsoft\\Graph\\Generated\Communications\Presences\Item\ClearPresence;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

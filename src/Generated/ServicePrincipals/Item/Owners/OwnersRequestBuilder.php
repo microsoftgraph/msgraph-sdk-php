@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Owners;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphEndpoint\GraphEndpointRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\GraphEndpoint\GraphEndpointRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Owners\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -66,7 +66,7 @@ class OwnersRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.servicePrincipals.item.owners.item collection
+     * Gets an item from the Microsoft//Graph//Generated.servicePrincipals.item.owners.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */

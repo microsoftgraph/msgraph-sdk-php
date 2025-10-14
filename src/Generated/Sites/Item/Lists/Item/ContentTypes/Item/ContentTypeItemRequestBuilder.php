@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ContentType;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Base\EscapedBaseRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ContentType;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Base\EscapedBaseRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Publish\PublishRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

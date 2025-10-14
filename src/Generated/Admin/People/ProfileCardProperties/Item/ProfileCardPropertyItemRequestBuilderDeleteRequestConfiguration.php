@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\People\ProfileCardProperties\Item;
+namespace Microsoft\\Graph\\Generated\Admin\People\ProfileCardProperties\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\MobileThreatDefenseConnectors;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\MobileThreatDefenseConnector;
-use Microsoft\Graph\Generated\Models\MobileThreatDefenseConnectorCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\MobileThreatDefenseConnectors\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\MobileThreatDefenseConnector;
+use Microsoft\\Graph\\Generated\Models\MobileThreatDefenseConnectorCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
+     * The list of Mobile threat Defense connectors configured by the tenant.
      * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileThreatDefenseConnectorCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new mobileThreatDefenseConnector object.
+     * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileThreatDefenseConnector|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-create?view=graph-rest-1.0 Find more info here
     */
     public function post(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the mobileThreatDefenseConnector objects.
+     * The list of Mobile threat Defense connectors configured by the tenant.
      * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new mobileThreatDefenseConnector object.
+     * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

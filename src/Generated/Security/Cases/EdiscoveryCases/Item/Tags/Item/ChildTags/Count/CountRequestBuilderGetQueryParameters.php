@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Count;
+namespace Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

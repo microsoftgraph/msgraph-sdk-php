@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles\Item\AccessPackageResourceRoleItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageResourceRole;
-use Microsoft\Graph\Generated\Models\AccessPackageResourceRoleCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Resources\Item\Roles\Item\AccessPackageResourceRoleItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AccessPackageResourceRole;
+use Microsoft\\Graph\\Generated\Models\AccessPackageResourceRoleCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the appLogCollectionRequest object.
+ * Indicates collection of App Log Upload Request.
 */
 class AppLogCollectionRequestItemRequestBuilderGetQueryParameters 
 {

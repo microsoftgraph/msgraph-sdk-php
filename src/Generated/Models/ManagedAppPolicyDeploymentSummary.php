@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -30,7 +30,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the configurationDeployedUserCount property value. Not yet documented
+     * Gets the configurationDeployedUserCount property value. The configurationDeployedUserCount property
      * @return int|null
     */
     public function getConfigurationDeployedUserCount(): ?int {
@@ -42,7 +42,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the configurationDeploymentSummaryPerApp property value. Not yet documented
+     * Gets the configurationDeploymentSummaryPerApp property value. The configurationDeploymentSummaryPerApp property
      * @return array<ManagedAppPolicyDeploymentSummaryPerApp>|null
     */
     public function getConfigurationDeploymentSummaryPerApp(): ?array {
@@ -56,7 +56,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Not yet documented
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -83,7 +83,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastRefreshTime property value. Not yet documented
+     * Gets the lastRefreshTime property value. The lastRefreshTime property
      * @return DateTime|null
     */
     public function getLastRefreshTime(): ?DateTime {
@@ -120,7 +120,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the configurationDeployedUserCount property value. Not yet documented
+     * Sets the configurationDeployedUserCount property value. The configurationDeployedUserCount property
      * @param int|null $value Value to set for the configurationDeployedUserCount property.
     */
     public function setConfigurationDeployedUserCount(?int $value): void {
@@ -128,7 +128,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the configurationDeploymentSummaryPerApp property value. Not yet documented
+     * Sets the configurationDeploymentSummaryPerApp property value. The configurationDeploymentSummaryPerApp property
      * @param array<ManagedAppPolicyDeploymentSummaryPerApp>|null $value Value to set for the configurationDeploymentSummaryPerApp property.
     */
     public function setConfigurationDeploymentSummaryPerApp(?array $value): void {
@@ -136,7 +136,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Not yet documented
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -144,7 +144,7 @@ class ManagedAppPolicyDeploymentSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastRefreshTime property value. Not yet documented
+     * Sets the lastRefreshTime property value. The lastRefreshTime property
      * @param DateTime|null $value Value to set for the lastRefreshTime property.
     */
     public function setLastRefreshTime(?DateTime $value): void {

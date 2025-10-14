@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatusOverview;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DeviceComplianceUserOverview;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\DeviceComplianceUserOverview;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -45,11 +45,10 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceComplianceUserOverview object.
+     * Device compliance users status overview
      * @param UserStatusOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceUserOverview|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuseroverview-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserStatusOverviewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceComplianceUserOverview object.
+     * Update the navigation property userStatusOverview in deviceManagement
      * @param DeviceComplianceUserOverview $body The request body
      * @param UserStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceUserOverview|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-devicecomplianceuseroverview-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceComplianceUserOverview $body, ?UserStatusOverviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceComplianceUserOverview object.
+     * Device compliance users status overview
      * @param UserStatusOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class UserStatusOverviewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceComplianceUserOverview object.
+     * Update the navigation property userStatusOverview in deviceManagement
      * @param DeviceComplianceUserOverview $body The request body
      * @param UserStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

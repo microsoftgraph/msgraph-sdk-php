@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint;
+namespace Microsoft\\Graph\\Generated\EscapedPrint;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EscapedPrint\Connectors\ConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\PrintersRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Services\ServicesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\SharesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\TaskDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\EscapedPrint;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\EscapedPrint\Connectors\ConnectorsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Operations\OperationsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\PrintersRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Services\ServicesRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Shares\SharesRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\TaskDefinitions\TaskDefinitionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EscapedPrint;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

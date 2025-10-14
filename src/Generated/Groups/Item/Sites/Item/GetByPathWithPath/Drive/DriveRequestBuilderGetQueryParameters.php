@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Drive;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\GetByPathWithPath\Drive;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

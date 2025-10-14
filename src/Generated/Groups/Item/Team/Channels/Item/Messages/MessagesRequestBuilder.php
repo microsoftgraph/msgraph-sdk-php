@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\Messages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\ChatMessageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ChatMessage;
-use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\Messages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\Messages\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\Channels\Item\Messages\Item\ChatMessageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ChatMessage;
+use Microsoft\\Graph\\Generated\Models\ChatMessageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

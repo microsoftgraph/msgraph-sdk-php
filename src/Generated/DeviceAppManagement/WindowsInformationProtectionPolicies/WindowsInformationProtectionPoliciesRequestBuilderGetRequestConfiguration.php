@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

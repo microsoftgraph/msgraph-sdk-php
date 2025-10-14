@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Item\DeviceConfigurationUserStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationUserStatus;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationUserStatusCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Item\DeviceConfigurationUserStatusItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceConfigurationUserStatus;
+use Microsoft\\Graph\\Generated\Models\DeviceConfigurationUserStatusCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceConfigurationUserStatus objects.
+     * Device configuration installation status by user.
      * @param UserStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationUserStatusCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceConfigurationUserStatus object.
+     * Create new navigation property to userStatuses for deviceManagement
      * @param DeviceConfigurationUserStatus $body The request body
      * @param UserStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationUserStatus|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceConfigurationUserStatus $body, ?UserStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceConfigurationUserStatus objects.
+     * Device configuration installation status by user.
      * @param UserStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceConfigurationUserStatus object.
+     * Create new navigation property to userStatuses for deviceManagement
      * @param DeviceConfigurationUserStatus $body The request body
      * @param UserStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DetectedApps\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\Models\DetectedApp;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DetectedApp;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -39,11 +39,10 @@ class DetectedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a detectedApp.
+     * Delete navigation property detectedApps for deviceManagement
      * @param DetectedAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-detectedapp-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DetectedAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class DetectedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the detectedApp object.
+     * The list of detected apps associated with a device.
      * @param DetectedAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DetectedApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-detectedapp-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DetectedAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class DetectedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a detectedApp object.
+     * Update the navigation property detectedApps in deviceManagement
      * @param DetectedApp $body The request body
      * @param DetectedAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DetectedApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-detectedapp-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DetectedApp $body, ?DetectedAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class DetectedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a detectedApp.
+     * Delete navigation property detectedApps for deviceManagement
      * @param DetectedAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class DetectedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the detectedApp object.
+     * The list of detected apps associated with a device.
      * @param DetectedAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class DetectedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a detectedApp object.
+     * Update the navigation property detectedApps in deviceManagement
      * @param DetectedApp $body The request body
      * @param DetectedAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

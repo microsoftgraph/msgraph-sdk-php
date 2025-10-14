@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppPolicies\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item\TargetApps\TargetAppsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppPolicies\Item\TargetApps\TargetAppsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedAppPolicy;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -53,11 +53,10 @@ class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsInformationProtection object.
+     * Managed app policies.
      * @param ManagedAppPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotection-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -101,7 +100,7 @@ class ManagedAppPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the windowsInformationProtection object.
+     * Managed app policies.
      * @param ManagedAppPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

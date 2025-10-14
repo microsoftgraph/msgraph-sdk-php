@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess;
 
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\AuthenticationContextClassReferencesRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\AuthenticationStrengthRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\Evaluate\EvaluateRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\PoliciesRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\Templates\TemplatesRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\AuthenticationContextClassReferencesRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\AuthenticationStrength\AuthenticationStrengthRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Evaluate\EvaluateRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Policies\PoliciesRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Templates\TemplatesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

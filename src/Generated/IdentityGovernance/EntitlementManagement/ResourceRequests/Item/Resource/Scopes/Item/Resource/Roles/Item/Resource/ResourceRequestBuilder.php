@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\Item\Resource\Scopes\Item\Resource\Roles\Item\Resource;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\Item\Resource\Scopes\Item\Resource\Roles\Item\Resource;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\Item\Resource\Scopes\Item\Resource\Roles\Item\Resource\Environment\EnvironmentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\Item\Resource\Scopes\Item\Resource\Roles\Item\Resource\Refresh\RefreshRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessPackageResource;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\Item\Resource\Scopes\Item\Resource\Roles\Item\Resource\Environment\EnvironmentRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\Item\Resource\Scopes\Item\Resource\Roles\Item\Resource\Refresh\RefreshRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AccessPackageResource;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

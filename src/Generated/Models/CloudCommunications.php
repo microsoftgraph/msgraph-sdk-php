@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
-use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
+use Microsoft\\Graph\\Generated\Models\CallRecords\CallRecord;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -12,6 +12,9 @@ use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a container that exposes navigation properties for cloud communications resources.
+*/
 class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -95,6 +98,7 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
             'callRecords' => fn(ParseNode $n) => $o->setCallRecords($n->getCollectionOfObjectValues([CallRecord::class, 'createFromDiscriminatorValue'])),
             'calls' => fn(ParseNode $n) => $o->setCalls($n->getCollectionOfObjectValues([Call::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'onlineMeetingConversations' => fn(ParseNode $n) => $o->setOnlineMeetingConversations($n->getCollectionOfObjectValues([OnlineMeetingEngagementConversation::class, 'createFromDiscriminatorValue'])),
             'onlineMeetings' => fn(ParseNode $n) => $o->setOnlineMeetings($n->getCollectionOfObjectValues([OnlineMeeting::class, 'createFromDiscriminatorValue'])),
             'presences' => fn(ParseNode $n) => $o->setPresences($n->getCollectionOfObjectValues([Presence::class, 'createFromDiscriminatorValue'])),
         ];
@@ -110,6 +114,20 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
+     * Gets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&A) threads in Teams directly associated with online meetings.
+     * @return array<OnlineMeetingEngagementConversation>|null
+    */
+    public function getOnlineMeetingConversations(): ?array {
+        $val = $this->getBackingStore()->get('onlineMeetingConversations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnlineMeetingEngagementConversation::class);
+            /** @var array<OnlineMeetingEngagementConversation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onlineMeetingConversations'");
     }
 
     /**
@@ -148,6 +166,7 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeCollectionOfObjectValues('callRecords', $this->getCallRecords());
         $writer->writeCollectionOfObjectValues('calls', $this->getCalls());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('onlineMeetingConversations', $this->getOnlineMeetingConversations());
         $writer->writeCollectionOfObjectValues('onlineMeetings', $this->getOnlineMeetings());
         $writer->writeCollectionOfObjectValues('presences', $this->getPresences());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -191,6 +210,14 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&A) threads in Teams directly associated with online meetings.
+     * @param array<OnlineMeetingEngagementConversation>|null $value Value to set for the onlineMeetingConversations property.
+    */
+    public function setOnlineMeetingConversations(?array $value): void {
+        $this->getBackingStore()->set('onlineMeetingConversations', $value);
     }
 
     /**

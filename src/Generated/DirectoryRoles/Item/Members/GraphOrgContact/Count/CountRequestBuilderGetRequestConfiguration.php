@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\GraphOrgContact\Count;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\GraphOrgContact\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

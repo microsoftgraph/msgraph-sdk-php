@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\TermsOfUse\Agreements\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\AcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\FileRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\FilesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Agreement;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\AcceptancesRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\FileRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\FilesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Agreement;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -70,11 +70,11 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve all files related to an agreement. This includes the default file and all localized files.
+     * Retrieve the properties and relationships of an agreement object.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Agreement|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/agreement-list-files?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AgreementItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -119,7 +119,7 @@ class AgreementItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve all files related to an agreement. This includes the default file and all localized files.
+     * Retrieve the properties and relationships of an agreement object.
      * @param AgreementItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

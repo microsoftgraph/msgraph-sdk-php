@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedAndroidLobApp;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphManagedAndroidLobApp;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

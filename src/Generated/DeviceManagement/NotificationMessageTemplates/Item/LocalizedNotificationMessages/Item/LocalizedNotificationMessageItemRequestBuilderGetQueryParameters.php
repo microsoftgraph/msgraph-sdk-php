@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the localizedNotificationMessage object.
+ * The list of localized messages for this Notification Message Template.
 */
 class LocalizedNotificationMessageItemRequestBuilderGetQueryParameters 
 {

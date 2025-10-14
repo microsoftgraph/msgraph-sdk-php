@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

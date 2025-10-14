@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Item\UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformance;
-use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Item\UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformance;
+use Microsoft\\Graph\\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

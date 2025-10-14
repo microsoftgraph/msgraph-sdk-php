@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the iosMobileAppConfiguration objects.
+ * The Managed Device Mobile Application Configurations.
 */
 class MobileAppConfigurationsRequestBuilderGetQueryParameters 
 {

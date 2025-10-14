@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\HorizontalSections\Item\Columns;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\HorizontalSections\Item\Columns;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\HorizontalSectionColumn;
-use Microsoft\Graph\Generated\Models\HorizontalSectionColumnCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\HorizontalSections\Item\Columns\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\HorizontalSections\Item\Columns\Item\HorizontalSectionColumnItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\HorizontalSectionColumn;
+use Microsoft\\Graph\\Generated\Models\HorizontalSectionColumnCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\HorizontalSections\Item\Columns\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Pages\Item\GraphSitePage\CanvasLayout\HorizontalSections\Item\Columns\Item\HorizontalSectionColumnItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsWebApp\Count;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsWebApp\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

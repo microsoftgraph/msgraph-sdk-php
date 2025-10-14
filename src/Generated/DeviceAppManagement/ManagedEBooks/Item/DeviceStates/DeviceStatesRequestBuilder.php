@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceInstallState;
-use Microsoft\Graph\Generated\Models\DeviceInstallStateCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceInstallState;
+use Microsoft\\Graph\\Generated\Models\DeviceInstallStateCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      * @param DeviceStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceInstallStateCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceInstallState object.
+     * Create new navigation property to deviceStates for deviceAppManagement
      * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceInstallState|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceInstallState $body, ?DeviceStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceInstallState objects.
+     * The list of installation states for this eBook.
      * @param DeviceStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class DeviceStatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceInstallState object.
+     * Create new navigation property to deviceStates for deviceAppManagement
      * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

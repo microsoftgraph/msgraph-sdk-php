@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

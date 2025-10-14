@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\GraphSitePage\GraphSitePageRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Pages\Item\BaseSitePageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\BaseSitePage;
-use Microsoft\Graph\Generated\Models\BaseSitePageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\GraphSitePage\GraphSitePageRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Pages\Item\BaseSitePageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\BaseSitePage;
+use Microsoft\\Graph\\Generated\Models\BaseSitePageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

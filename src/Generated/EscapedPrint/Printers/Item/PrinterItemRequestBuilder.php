@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\JobsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Printer;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\JobsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Printer;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

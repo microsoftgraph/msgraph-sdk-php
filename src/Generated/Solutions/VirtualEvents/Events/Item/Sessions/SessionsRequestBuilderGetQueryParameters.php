@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\Item\Sessions;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Events\Item\Sessions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

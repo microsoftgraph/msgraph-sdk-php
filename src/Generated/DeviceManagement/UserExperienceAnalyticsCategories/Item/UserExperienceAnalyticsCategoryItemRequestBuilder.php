@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsCategories\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsCategories\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsCategories\Item\MetricValues\MetricValuesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsCategory;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsCategories\Item\MetricValues\MetricValuesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserExperienceAnalyticsCategory;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Search;
+namespace Microsoft\\Graph\\Generated\Models\Search;
 
-use Microsoft\Graph\Generated\Models\DevicePlatformType;
+use Microsoft\\Graph\\Generated\Models\DevicePlatformType;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Presences\Item\SetPresence;
+namespace Microsoft\\Graph\\Generated\Communications\Presences\Item\SetPresence;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

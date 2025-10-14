@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints\Search;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\RestorePoints\Search;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

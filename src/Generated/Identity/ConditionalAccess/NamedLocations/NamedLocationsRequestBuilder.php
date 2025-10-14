@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\NamedLocations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\Item\NamedLocationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\NamedLocation;
-use Microsoft\Graph\Generated\Models\NamedLocationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\NamedLocations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\NamedLocations\Item\NamedLocationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\NamedLocation;
+use Microsoft\\Graph\\Generated\Models\NamedLocationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

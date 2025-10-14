@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Tasks\Item\AssignedToTaskBoardFormat;
+namespace Microsoft\\Graph\\Generated\Planner\Tasks\Item\AssignedToTaskBoardFormat;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;
