@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditActivityTypesWithCategory\GetAuditActivityTypesWithCategoryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditCategories\GetAuditCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Item\AuditEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AuditEvent;
-use Microsoft\Graph\Generated\Models\AuditEventCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\GetAuditActivityTypesWithCategory\GetAuditActivityTypesWithCategoryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\GetAuditCategories\GetAuditCategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\Item\AuditEventItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AuditEvent;
+use Microsoft\\Graph\\Generated\Models\AuditEventCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -61,11 +61,10 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @param AuditEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuditEventCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuditEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,12 +84,11 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuditEvent|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-auditing-auditevent-create?view=graph-rest-1.0 Find more info here
     */
     public function post(AuditEvent $body, ?AuditEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -101,7 +99,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the auditEvent objects.
+     * The Audit Events
      * @param AuditEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +120,7 @@ class AuditEventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new auditEvent object.
+     * Create new navigation property to auditEvents for deviceManagement
      * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

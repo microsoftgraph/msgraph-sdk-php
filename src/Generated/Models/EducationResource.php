@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
@@ -44,6 +44,7 @@ class EducationResource implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.educationLinkResource': return new EducationLinkResource();
                 case '#microsoft.graph.educationMediaResource': return new EducationMediaResource();
                 case '#microsoft.graph.educationPowerPointResource': return new EducationPowerPointResource();
+                case '#microsoft.graph.educationSpeakerProgressResource': return new EducationSpeakerProgressResource();
                 case '#microsoft.graph.educationTeamsAppResource': return new EducationTeamsAppResource();
                 case '#microsoft.graph.educationWordResource': return new EducationWordResource();
             }

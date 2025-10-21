@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Triggers\RetentionEvents\Item\RetentionEventType;
+namespace Microsoft\\Graph\\Generated\Security\Triggers\RetentionEvents\Item\RetentionEventType;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\Item;
+namespace Microsoft\\Graph\\Generated\Policies\CrossTenantAccessPolicy\Partners\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,14 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ProtectionUnitBase;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphDriveProtectionUnit\GraphDriveProtectionUnitRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphMailboxProtectionUnit\GraphMailboxProtectionUnitRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphSiteProtectionUnit\GraphSiteProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ProtectionUnitBase;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\CancelOffboard\CancelOffboardRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphDriveProtectionUnit\GraphDriveProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphMailboxProtectionUnit\GraphMailboxProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\GraphSiteProtectionUnit\GraphSiteProtectionUnitRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\Offboard\OffboardRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -19,6 +21,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ProtectionUnitBaseItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the cancelOffboard method.
+    */
+    public function cancelOffboard(): CancelOffboardRequestBuilder {
+        return new CancelOffboardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Casts the previous resource to driveProtectionUnit.
     */
@@ -38,6 +47,13 @@ class ProtectionUnitBaseItemRequestBuilder extends BaseRequestBuilder
     */
     public function graphSiteProtectionUnit(): GraphSiteProtectionUnitRequestBuilder {
         return new GraphSiteProtectionUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the offboard method.
+    */
+    public function offboard(): OffboardRequestBuilder {
+        return new OffboardRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

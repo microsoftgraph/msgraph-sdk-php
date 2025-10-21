@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -209,7 +209,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     }
 
     /**
-     * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Gets the securityBlockJailbrokenDevices property value. Indicates the device should not be jailbroken. When TRUE, if the device is detected as jailbroken it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device jailbroken state. Default is FALSE.
      * @return bool|null
     */
     public function getSecurityBlockJailbrokenDevices(): ?bool {
@@ -347,7 +347,7 @@ class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable
     }
 
     /**
-     * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Sets the securityBlockJailbrokenDevices property value. Indicates the device should not be jailbroken. When TRUE, if the device is detected as jailbroken it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device jailbroken state. Default is FALSE.
      * @param bool|null $value Value to set for the securityBlockJailbrokenDevices property.
     */
     public function setSecurityBlockJailbrokenDevices(?bool $value): void {

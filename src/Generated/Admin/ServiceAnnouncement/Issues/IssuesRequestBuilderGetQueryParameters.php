@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Issues;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\AllMembers\AllMembersRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Archive\ArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Unarchive\UnarchiveRequestBuilder;
-use Microsoft\Graph\Generated\Models\Channel;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\AllMembers\AllMembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Archive\ArchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Members\MembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Messages\MessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Tabs\TabsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Channel;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps;
+namespace Microsoft\\Graph\\Generated\AppCatalogs\TeamsApps;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\TeamsAppItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TeamsApp;
-use Microsoft\Graph\Generated\Models\TeamsAppCollectionResponse;
+use Microsoft\\Graph\\Generated\AppCatalogs\TeamsApps\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\AppCatalogs\TeamsApps\Item\TeamsAppItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TeamsApp;
+use Microsoft\\Graph\\Generated\Models\TeamsAppCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

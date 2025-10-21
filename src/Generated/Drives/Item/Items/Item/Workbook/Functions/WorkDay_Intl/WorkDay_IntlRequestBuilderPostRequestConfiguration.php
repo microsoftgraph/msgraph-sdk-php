@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\WorkDay_Intl;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\WorkDay_Intl;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

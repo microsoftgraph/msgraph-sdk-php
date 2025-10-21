@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\F_Dist_RT;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Functions\F_Dist_RT;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

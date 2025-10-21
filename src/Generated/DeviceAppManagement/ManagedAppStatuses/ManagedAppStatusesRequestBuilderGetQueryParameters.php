@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppStatuses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the managedAppStatusRaw objects.
+ * The managed app statuses.
 */
 class ManagedAppStatusesRequestBuilderGetQueryParameters 
 {

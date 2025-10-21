@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Operations;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\Operations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\CommsOperation;
-use Microsoft\Graph\Generated\Models\CommsOperationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\Operations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CommsOperation;
+use Microsoft\\Graph\\Generated\Models\CommsOperationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

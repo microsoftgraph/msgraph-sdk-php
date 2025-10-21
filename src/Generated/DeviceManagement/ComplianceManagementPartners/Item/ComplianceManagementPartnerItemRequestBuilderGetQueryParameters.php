@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ComplianceManagementPartners\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the complianceManagementPartner object.
+ * The list of Compliance Management Partners configured by the tenant.
 */
 class ComplianceManagementPartnerItemRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Solutions\WorkingTimeSchedule;
+namespace Microsoft\\Graph\\Generated\Users\Item\Solutions\WorkingTimeSchedule;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

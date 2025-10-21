@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Domains\Count;
+namespace Microsoft\\Graph\\Generated\Domains\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

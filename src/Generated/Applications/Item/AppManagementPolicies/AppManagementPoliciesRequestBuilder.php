@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies;
+namespace Microsoft\\Graph\\Generated\Applications\Item\AppManagementPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Item\AppManagementPolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Models\AppManagementPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Applications\Item\AppManagementPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\AppManagementPolicies\Item\AppManagementPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\AppManagementPolicies\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AppManagementPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -34,7 +34,7 @@ class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.applications.item.appManagementPolicies.item collection
+     * Gets an item from the Microsoft//Graph//Generated.applications.item.appManagementPolicies.item collection
      * @param string $appManagementPolicyId The unique identifier of appManagementPolicy
      * @return AppManagementPolicyItemRequestBuilder
     */

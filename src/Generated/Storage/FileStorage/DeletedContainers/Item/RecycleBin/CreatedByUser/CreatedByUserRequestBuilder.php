@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\User;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser\MailboxSettings\MailboxSettingsRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\User;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item;
+namespace Microsoft\\Graph\\Generated\Chats\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Chats\Item\HideForUser\HideForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MarkChatReadForUser\MarkChatReadForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\PermissionGrants\PermissionGrantsRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
-use Microsoft\Graph\Generated\Models\Chat;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Chats\Item\HideForUser\HideForUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\MarkChatReadForUser\MarkChatReadForUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\Members\MembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\PermissionGrants\PermissionGrantsRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\\Graph\\Generated\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Chat;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

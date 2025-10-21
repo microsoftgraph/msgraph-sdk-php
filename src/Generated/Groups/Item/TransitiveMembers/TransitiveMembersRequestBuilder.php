@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\TransitiveMembers;
+namespace Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\GraphApplication\GraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\GraphDevice\GraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\GraphOrgContact\GraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

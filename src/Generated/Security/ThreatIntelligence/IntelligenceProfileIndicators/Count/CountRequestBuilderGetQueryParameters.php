@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\IntelligenceProfileIndicators\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\IntelligenceProfileIndicators\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

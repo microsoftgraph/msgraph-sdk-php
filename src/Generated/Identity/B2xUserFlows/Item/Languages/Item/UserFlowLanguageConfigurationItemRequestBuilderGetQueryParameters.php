@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item;
+namespace Microsoft\\Graph\\Generated\Identity\B2xUserFlows\Item\Languages\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

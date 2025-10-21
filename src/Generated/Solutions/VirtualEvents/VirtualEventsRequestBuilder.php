@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VirtualEventsRoot;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\TownhallsRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\WebinarsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VirtualEventsRoot;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Events\EventsRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\TownhallsRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\WebinarsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

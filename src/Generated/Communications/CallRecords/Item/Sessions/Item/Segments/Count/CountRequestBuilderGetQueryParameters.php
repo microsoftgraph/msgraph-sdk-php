@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Count;
+namespace Microsoft\\Graph\\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

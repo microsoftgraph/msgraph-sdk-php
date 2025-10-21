@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\PasswordMethods;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PasswordAuthenticationMethod;
-use Microsoft\Graph\Generated\Models\PasswordAuthenticationMethodCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\Item\PasswordAuthenticationMethodItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PasswordAuthenticationMethod;
+use Microsoft\\Graph\\Generated\Models\PasswordAuthenticationMethodCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PasswordMethods\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PasswordMethods\Item\PasswordAuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

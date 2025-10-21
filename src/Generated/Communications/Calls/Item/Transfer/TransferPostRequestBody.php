@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\Transfer;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\Transfer;
 
-use Microsoft\Graph\Generated\Models\InvitationParticipantInfo;
-use Microsoft\Graph\Generated\Models\ParticipantInfo;
+use Microsoft\\Graph\\Generated\Models\InvitationParticipantInfo;
+use Microsoft\\Graph\\Generated\Models\ParticipantInfo;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

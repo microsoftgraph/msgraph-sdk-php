@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the managedEBookAssignment objects.
+ * The list of assignments for this eBook.
 */
 class AssignmentsRequestBuilderGetQueryParameters 
 {

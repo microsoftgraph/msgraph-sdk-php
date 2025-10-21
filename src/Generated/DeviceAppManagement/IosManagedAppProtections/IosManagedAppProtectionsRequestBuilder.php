@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\IosManagedAppProtectionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\IosManagedAppProtection;
-use Microsoft\Graph\Generated\Models\IosManagedAppProtectionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item\IosManagedAppProtectionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IosManagedAppProtection;
+use Microsoft\\Graph\\Generated\Models\IosManagedAppProtectionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosManagedAppProtection objects.
+     * iOS managed app policies.
      * @param IosManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?IosManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosManagedAppProtection object.
+     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
      * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtection|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-iosmanagedappprotection-create?view=graph-rest-1.0 Find more info here
     */
     public function post(IosManagedAppProtection $body, ?IosManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosManagedAppProtection objects.
+     * iOS managed app policies.
      * @param IosManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosManagedAppProtection object.
+     * Create new navigation property to iosManagedAppProtections for deviceAppManagement
      * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

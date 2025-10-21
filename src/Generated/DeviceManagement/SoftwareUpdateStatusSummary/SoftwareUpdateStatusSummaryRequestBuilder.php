@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\SoftwareUpdateStatusSummary;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SoftwareUpdateStatusSummary;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SoftwareUpdateStatusSummary;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,11 +31,10 @@ class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the softwareUpdateStatusSummary object.
+     * The software update status summary.
      * @param SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SoftwareUpdateStatusSummary|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-softwareupdatestatussummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -46,7 +45,7 @@ class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the softwareUpdateStatusSummary object.
+     * The software update status summary.
      * @param SoftwareUpdateStatusSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

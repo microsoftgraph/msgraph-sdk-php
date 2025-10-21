@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems;
+namespace Microsoft\\Graph\\Generated\Users\Item\Activities\Item\HistoryItems;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ActivityHistoryItem;
-use Microsoft\Graph\Generated\Models\ActivityHistoryItemCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ActivityHistoryItem;
+use Microsoft\\Graph\\Generated\Models\ActivityHistoryItemCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\Activities\Item\HistoryItems\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

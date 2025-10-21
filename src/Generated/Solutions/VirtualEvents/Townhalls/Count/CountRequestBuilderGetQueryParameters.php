@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Count;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Townhalls\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

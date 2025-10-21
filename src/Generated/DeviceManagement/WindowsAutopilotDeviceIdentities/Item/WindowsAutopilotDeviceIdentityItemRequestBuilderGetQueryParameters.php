@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the windowsAutopilotDeviceIdentity object.
+ * The Windows autopilot device identities contained collection.
 */
 class WindowsAutopilotDeviceIdentityItemRequestBuilderGetQueryParameters 
 {

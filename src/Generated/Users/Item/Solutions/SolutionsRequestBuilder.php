@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Solutions;
+namespace Microsoft\\Graph\\Generated\Users\Item\Solutions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserSolutionRoot;
-use Microsoft\Graph\Generated\Users\Item\Solutions\WorkingTimeSchedule\WorkingTimeScheduleRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserSolutionRoot;
+use Microsoft\\Graph\\Generated\Users\Item\Solutions\WorkingTimeSchedule\WorkingTimeScheduleRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

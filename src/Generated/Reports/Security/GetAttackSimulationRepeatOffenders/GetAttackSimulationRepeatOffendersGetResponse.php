@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationRepeatOffenders;
+namespace Microsoft\\Graph\\Generated\Reports\Security\GetAttackSimulationRepeatOffenders;
 
-use Microsoft\Graph\Generated\Models\AttackSimulationRepeatOffender;
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\AttackSimulationRepeatOffender;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

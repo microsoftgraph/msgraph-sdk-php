@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Assignments;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Assignments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the targetedManagedAppPolicyAssignment objects.
+ * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
 */
 class AssignmentsRequestBuilderGetQueryParameters 
 {

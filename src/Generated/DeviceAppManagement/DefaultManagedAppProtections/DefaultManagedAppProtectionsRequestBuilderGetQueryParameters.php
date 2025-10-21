@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\DefaultManagedAppProtections;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the defaultManagedAppProtection objects.
+ * Default managed app policies.
 */
 class DefaultManagedAppProtectionsRequestBuilderGetQueryParameters 
 {

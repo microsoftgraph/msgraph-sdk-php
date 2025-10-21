@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests;
+namespace Microsoft\\Graph\\Generated\InformationProtection\ThreatAssessmentRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ThreatAssessmentRequest;
-use Microsoft\Graph\Generated\Models\ThreatAssessmentRequestCollectionResponse;
+use Microsoft\\Graph\\Generated\InformationProtection\ThreatAssessmentRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ThreatAssessmentRequest;
+use Microsoft\\Graph\\Generated\Models\ThreatAssessmentRequestCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

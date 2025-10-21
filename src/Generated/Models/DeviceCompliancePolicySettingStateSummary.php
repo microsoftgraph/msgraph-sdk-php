@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -53,7 +53,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
     }
 
     /**
-     * Gets the deviceComplianceSettingStates property value. Not yet documented
+     * Gets the deviceComplianceSettingStates property value. The deviceComplianceSettingStates property
      * @return array<DeviceComplianceSettingState>|null
     */
     public function getDeviceComplianceSettingStates(): ?array {
@@ -219,7 +219,7 @@ class DeviceCompliancePolicySettingStateSummary extends Entity implements Parsab
     }
 
     /**
-     * Sets the deviceComplianceSettingStates property value. Not yet documented
+     * Sets the deviceComplianceSettingStates property value. The deviceComplianceSettingStates property
      * @param array<DeviceComplianceSettingState>|null $value Value to set for the deviceComplianceSettingStates property.
     */
     public function setDeviceComplianceSettingStates(?array $value): void {

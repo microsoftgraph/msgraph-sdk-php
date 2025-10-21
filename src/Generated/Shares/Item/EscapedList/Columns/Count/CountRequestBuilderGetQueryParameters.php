@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Columns\Count;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Columns\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

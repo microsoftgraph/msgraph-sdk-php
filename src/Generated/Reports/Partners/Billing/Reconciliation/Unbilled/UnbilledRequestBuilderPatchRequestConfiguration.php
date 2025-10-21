@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\Unbilled;
+namespace Microsoft\\Graph\\Generated\Reports\Partners\Billing\Reconciliation\Unbilled;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

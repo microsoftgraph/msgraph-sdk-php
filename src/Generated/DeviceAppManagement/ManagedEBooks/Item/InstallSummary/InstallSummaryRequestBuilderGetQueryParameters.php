@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the eBookInstallSummary object.
+ * Mobile App Install Summary.
 */
 class InstallSummaryRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\ContentSharingSessions;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

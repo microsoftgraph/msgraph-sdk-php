@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedDeviceMobileAppConfigurationUserStatus object.
+ * List of ManagedDeviceMobileAppConfigurationUserStatus.
 */
 class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilderGetQueryParameters 
 {

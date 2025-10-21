@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Count;
+namespace Microsoft\\Graph\\Generated\Communications\Calls\Item\ContentSharingSessions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

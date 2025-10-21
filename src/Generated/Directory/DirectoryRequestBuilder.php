@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory;
+namespace Microsoft\\Graph\\Generated\Directory;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\AdministrativeUnitsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AttributeSets\AttributeSetsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions\CustomSecurityAttributeDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeviceLocalCredentials\DeviceLocalCredentialsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\PublicKeyInfrastructure\PublicKeyInfrastructureRequestBuilder;
-use Microsoft\Graph\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
-use Microsoft\Graph\Generated\Models\Directory;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Directory\AdministrativeUnits\AdministrativeUnitsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\AttributeSets\AttributeSetsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\CustomSecurityAttributeDefinitions\CustomSecurityAttributeDefinitionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\DeviceLocalCredentials\DeviceLocalCredentialsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\PublicKeyInfrastructure\PublicKeyInfrastructureRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Directory;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

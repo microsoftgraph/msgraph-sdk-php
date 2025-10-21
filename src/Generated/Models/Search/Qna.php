@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Search;
+namespace Microsoft\\Graph\\Generated\Models\Search;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\DevicePlatformType;
+use Microsoft\\Graph\\Generated\Models\DevicePlatformType;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item\RunHealthChecks\RunHealthChecksRequestBuilder;
-use Microsoft\Graph\Generated\Models\CloudPcOnPremisesConnection;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item\RunHealthChecks\RunHealthChecksRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudPcOnPremisesConnection;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

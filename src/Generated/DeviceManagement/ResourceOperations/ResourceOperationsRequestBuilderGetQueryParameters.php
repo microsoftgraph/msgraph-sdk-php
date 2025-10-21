@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ResourceOperations;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ResourceOperations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the resourceOperation objects.
+ * The Resource Operations.
 */
 class ResourceOperationsRequestBuilderGetQueryParameters 
 {

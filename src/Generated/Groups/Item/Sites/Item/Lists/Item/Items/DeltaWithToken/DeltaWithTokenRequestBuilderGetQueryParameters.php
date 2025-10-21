@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\DeltaWithToken;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\DeltaWithToken;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

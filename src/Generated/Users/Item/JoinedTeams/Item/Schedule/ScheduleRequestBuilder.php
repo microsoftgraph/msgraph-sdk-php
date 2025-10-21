@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Schedule;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\DayNotes\DayNotesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\OpenShiftChangeRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\OpenShiftsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\SchedulingGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Share\ShareRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts\ShiftsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\SwapShiftsChangeRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\TimeCardsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\TimeOffReasonsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffRequests\TimeOffRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimesOff\TimesOffRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Schedule;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\DayNotes\DayNotesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\OpenShiftChangeRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\OpenShifts\OpenShiftsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\SchedulingGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\Share\ShareRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts\ShiftsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\SwapShiftsChangeRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\TimeCardsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffReasons\TimeOffReasonsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeOffRequests\TimeOffRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimesOff\TimesOffRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

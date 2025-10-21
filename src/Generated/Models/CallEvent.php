@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -46,7 +46,7 @@ class CallEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. The date and time when the event occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
@@ -71,7 +71,7 @@ class CallEvent extends Entity implements Parsable
     }
 
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. Participants collection for the call event.
      * @return array<Participant>|null
     */
     public function getParticipants(): ?array {
@@ -104,7 +104,7 @@ class CallEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. The date and time when the event occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value): void {
@@ -112,7 +112,7 @@ class CallEvent extends Entity implements Parsable
     }
 
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. Participants collection for the call event.
      * @param array<Participant>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {

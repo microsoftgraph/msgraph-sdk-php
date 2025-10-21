@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contacts\Item\DirectReports\GraphOrgContact;
+namespace Microsoft\\Graph\\Generated\Contacts\Item\DirectReports\GraphOrgContact;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

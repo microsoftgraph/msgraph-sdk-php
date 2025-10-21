@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\Analytics;
+namespace Microsoft\\Graph\\Generated\Sites\Item\GetByPathWithPath\Analytics;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

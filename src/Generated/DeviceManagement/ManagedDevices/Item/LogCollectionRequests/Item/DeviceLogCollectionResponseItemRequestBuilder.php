@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests\Item\CreateDownloadUrl\CreateDownloadUrlRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceLogCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests\Item\CreateDownloadUrl\CreateDownloadUrlRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceLogCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

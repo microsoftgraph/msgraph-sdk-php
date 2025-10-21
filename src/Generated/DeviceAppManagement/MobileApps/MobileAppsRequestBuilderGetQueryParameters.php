@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the windowsMicrosoftEdgeApp objects.
+ * The mobile apps.
 */
 class MobileAppsRequestBuilderGetQueryParameters 
 {

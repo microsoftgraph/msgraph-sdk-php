@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Assignments;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions\Item\Assignments;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the termsAndConditionsAssignment objects.
+ * The list of assignments for this T&C policy.
 */
 class AssignmentsRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -25,7 +25,7 @@ class EmergencyCallEvent extends CallEvent implements Parsable
     }
 
     /**
-     * Gets the callerInfo property value. The callerInfo property
+     * Gets the callerInfo property value. The information of the emergency caller.
      * @return EmergencyCallerInfo|null
     */
     public function getCallerInfo(): ?EmergencyCallerInfo {
@@ -37,7 +37,7 @@ class EmergencyCallEvent extends CallEvent implements Parsable
     }
 
     /**
-     * Gets the emergencyNumberDialed property value. The emergencyNumberDialed property
+     * Gets the emergencyNumberDialed property value. The emergency number dialed.
      * @return string|null
     */
     public function getEmergencyNumberDialed(): ?string {
@@ -62,7 +62,7 @@ class EmergencyCallEvent extends CallEvent implements Parsable
     }
 
     /**
-     * Gets the policyName property value. The policyName property
+     * Gets the policyName property value. The policy name for the emergency call event.
      * @return string|null
     */
     public function getPolicyName(): ?string {
@@ -85,7 +85,7 @@ class EmergencyCallEvent extends CallEvent implements Parsable
     }
 
     /**
-     * Sets the callerInfo property value. The callerInfo property
+     * Sets the callerInfo property value. The information of the emergency caller.
      * @param EmergencyCallerInfo|null $value Value to set for the callerInfo property.
     */
     public function setCallerInfo(?EmergencyCallerInfo $value): void {
@@ -93,7 +93,7 @@ class EmergencyCallEvent extends CallEvent implements Parsable
     }
 
     /**
-     * Sets the emergencyNumberDialed property value. The emergencyNumberDialed property
+     * Sets the emergencyNumberDialed property value. The emergency number dialed.
      * @param string|null $value Value to set for the emergencyNumberDialed property.
     */
     public function setEmergencyNumberDialed(?string $value): void {
@@ -101,7 +101,7 @@ class EmergencyCallEvent extends CallEvent implements Parsable
     }
 
     /**
-     * Sets the policyName property value. The policyName property
+     * Sets the policyName property value. The policy name for the emergency call event.
      * @param string|null $value Value to set for the policyName property.
     */
     public function setPolicyName(?string $value): void {

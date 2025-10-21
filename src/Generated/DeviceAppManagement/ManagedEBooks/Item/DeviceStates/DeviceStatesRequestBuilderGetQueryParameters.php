@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceInstallState objects.
+ * The list of installation states for this eBook.
 */
 class DeviceStatesRequestBuilderGetQueryParameters 
 {

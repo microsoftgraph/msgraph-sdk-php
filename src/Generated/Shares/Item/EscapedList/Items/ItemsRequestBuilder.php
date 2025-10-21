@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ListItem;
-use Microsoft\Graph\Generated\Models\ListItemCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\DeltaWithToken\DeltaWithTokenRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\ListItemItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ListItem;
+use Microsoft\\Graph\\Generated\Models\ListItemCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\DeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\Item\ListItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\LandingPages\Item;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\LandingPages\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\LandingPage;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Security\AttackSimulation\LandingPages\Item\Details\DetailsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\LandingPage;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\LandingPages\Item\Details\DetailsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

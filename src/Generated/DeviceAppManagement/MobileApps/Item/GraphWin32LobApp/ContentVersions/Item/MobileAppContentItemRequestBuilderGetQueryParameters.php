@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWin32LobApp\ContentVersions\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphWin32LobApp\ContentVersions\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of content versions for this app.
+ * The list of content versions for this app. This property is read-only.
 */
 class MobileAppContentItemRequestBuilderGetQueryParameters 
 {

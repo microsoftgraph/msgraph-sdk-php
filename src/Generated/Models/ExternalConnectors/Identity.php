@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\ExternalConnectors;
+namespace Microsoft\\Graph\\Generated\Models\ExternalConnectors;
 
-use Microsoft\Graph\Generated\Models\Entity;
+use Microsoft\\Graph\\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

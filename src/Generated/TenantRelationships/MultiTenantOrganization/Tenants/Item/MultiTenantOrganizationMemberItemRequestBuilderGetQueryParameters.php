@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\Tenants\Item;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\MultiTenantOrganization\Tenants\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

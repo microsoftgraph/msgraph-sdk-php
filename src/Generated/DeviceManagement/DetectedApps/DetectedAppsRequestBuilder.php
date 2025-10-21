@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DetectedApps;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\DetectedAppItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DetectedApp;
-use Microsoft\Graph\Generated\Models\DetectedAppCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\DetectedApps\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DetectedApps\Item\DetectedAppItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DetectedApp;
+use Microsoft\\Graph\\Generated\Models\DetectedAppCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @param DetectedAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DetectedAppCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-detectedapp-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DetectedAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param DetectedApp $body The request body
      * @param DetectedAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DetectedApp|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-detectedapp-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DetectedApp $body, ?DetectedAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the detectedApp objects.
+     * The list of detected apps associated with a device.
      * @param DetectedAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class DetectedAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new detectedApp object.
+     * Create new navigation property to detectedApps for deviceManagement
      * @param DetectedApp $body The request body
      * @param DetectedAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

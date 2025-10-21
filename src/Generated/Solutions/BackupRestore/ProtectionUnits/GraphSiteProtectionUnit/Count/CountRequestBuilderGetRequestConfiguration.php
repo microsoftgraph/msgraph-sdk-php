@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\GraphSiteProtectionUnit\Count;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\GraphSiteProtectionUnit\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

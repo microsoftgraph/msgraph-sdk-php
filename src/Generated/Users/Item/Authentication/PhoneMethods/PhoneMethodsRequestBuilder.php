@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethod;
-use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethodCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\PhoneAuthenticationMethodItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PhoneAuthenticationMethod;
+use Microsoft\\Graph\\Generated\Models\PhoneAuthenticationMethodCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Authentication\PhoneMethods\Item\PhoneAuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

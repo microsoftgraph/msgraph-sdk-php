@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Members;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Members;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Members\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\GraphApplication\GraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\GraphDevice\GraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\GraphOrgContact\GraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -82,7 +82,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.groups.item.members.item collection
+     * Gets an item from the Microsoft//Graph//Generated.groups.item.members.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */

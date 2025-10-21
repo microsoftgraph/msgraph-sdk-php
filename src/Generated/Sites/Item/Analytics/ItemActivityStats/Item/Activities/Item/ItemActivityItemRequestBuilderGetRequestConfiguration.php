@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Analytics\ItemActivityStats\Item\Activities\Item;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Analytics\ItemActivityStats\Item\Activities\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

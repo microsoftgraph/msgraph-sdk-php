@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServicePrincipal;
-use Microsoft\Graph\Generated\Models\ServicePrincipalCollectionResponse;
-use Microsoft\Graph\Generated\ServicePrincipals\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\ServicePrincipalItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ServicePrincipal;
+use Microsoft\\Graph\\Generated\Models\ServicePrincipalCollectionResponse;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\ServicePrincipalItemRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SiteInclusionRules;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\SiteInclusionRules;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

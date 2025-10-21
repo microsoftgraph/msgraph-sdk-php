@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Authentication\EmailMethods\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\Authentication\EmailMethods\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
