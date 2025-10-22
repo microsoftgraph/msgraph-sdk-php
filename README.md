@@ -146,6 +146,9 @@ try {
 
 * [Microsoft Graph website](https://aka.ms/graph)
 
+## Update Schedule
+
+The Microsoft Graph PHP SDK is scheduled to be updated during the week of the second and fourth Tuesday of each month.
 ## Upgrading
 
 For detailed information on breaking changes, bug fixes and new functionality introduced during major upgrades, check out our [Upgrade Guide](UPGRADING.md)
