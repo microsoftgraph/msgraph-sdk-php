@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\ExportJobs\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceManagementExportJob object.
+ * Entity representing a job to export a report.
 */
 class DeviceManagementExportJobItemRequestBuilderGetQueryParameters 
 {

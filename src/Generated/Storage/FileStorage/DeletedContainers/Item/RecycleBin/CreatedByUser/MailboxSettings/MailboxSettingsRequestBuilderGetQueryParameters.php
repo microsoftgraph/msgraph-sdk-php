@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\CreatedByUser\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

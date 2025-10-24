@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\Categories\Item\Subcategories;
+namespace Microsoft\\Graph\\Generated\Security\Labels\Categories\Item\Subcategories;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

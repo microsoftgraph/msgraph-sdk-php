@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels;
+namespace Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SensitivityLabel;
-use Microsoft\Graph\Generated\Models\SensitivityLabelCollectionResponse;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormats\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\ComputeRightsAndInheritance\ComputeRightsAndInheritanceRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\Item\SensitivityLabelItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SensitivityLabel;
+use Microsoft\\Graph\\Generated\Models\SensitivityLabelCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormats\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\ComputeRightsAndInheritance\ComputeRightsAndInheritanceRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\Sublabels\Item\SensitivityLabelItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

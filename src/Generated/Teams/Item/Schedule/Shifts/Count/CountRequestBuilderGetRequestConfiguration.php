@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Schedule\Shifts\Count;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Schedule\Shifts\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

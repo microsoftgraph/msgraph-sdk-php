@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -66,7 +66,7 @@ class AndroidStoreApp extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the packageId property value. The package identifier.
+     * Gets the packageId property value. The package identifier. This property is read-only.
      * @return string|null
     */
     public function getPackageId(): ?string {
@@ -104,7 +104,7 @@ class AndroidStoreApp extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the packageId property value. The package identifier.
+     * Sets the packageId property value. The package identifier. This property is read-only.
      * @param string|null $value Value to set for the packageId property.
     */
     public function setPackageId(?string $value): void {

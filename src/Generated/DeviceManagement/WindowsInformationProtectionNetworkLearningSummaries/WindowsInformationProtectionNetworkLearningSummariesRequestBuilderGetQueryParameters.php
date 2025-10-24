@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the windowsInformationProtectionNetworkLearningSummary objects.
+ * The windows information protection network learning summaries.
 */
 class WindowsInformationProtectionNetworkLearningSummariesRequestBuilderGetQueryParameters 
 {

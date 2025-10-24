@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCategories;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceCategories;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceCategory objects.
+ * The list of device categories with the tenant.
 */
 class DeviceCategoriesRequestBuilderGetQueryParameters 
 {

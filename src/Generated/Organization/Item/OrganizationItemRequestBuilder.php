@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item;
+namespace Microsoft\\Graph\\Generated\Organization\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Organization;
-use Microsoft\Graph\Generated\Organization\Item\Branding\BrandingRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\SetMobileDeviceManagementAuthority\SetMobileDeviceManagementAuthorityRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Organization;
+use Microsoft\\Graph\\Generated\Organization\Item\Branding\BrandingRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\SetMobileDeviceManagementAuthority\SetMobileDeviceManagementAuthorityRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -117,11 +117,11 @@ class OrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the organization object.
+     * Get the properties and relationships of the currently authenticated organization. Since the organization resource supports extensions, you can also use the GET operation to get custom properties and extension data in an organization instance.
      * @param OrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Organization|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-organization-get?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/organization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OrganizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -166,7 +166,7 @@ class OrganizationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the organization object.
+     * Get the properties and relationships of the currently authenticated organization. Since the organization resource supports extensions, you can also use the GET operation to get custom properties and extension data in an organization instance.
      * @param OrganizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

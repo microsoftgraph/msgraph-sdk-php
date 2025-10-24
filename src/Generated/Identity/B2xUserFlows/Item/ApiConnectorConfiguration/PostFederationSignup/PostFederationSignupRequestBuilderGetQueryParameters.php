@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\ApiConnectorConfiguration\PostFederationSignup;
+namespace Microsoft\\Graph\\Generated\Identity\B2xUserFlows\Item\ApiConnectorConfiguration\PostFederationSignup;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

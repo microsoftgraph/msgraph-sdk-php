@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\Item\Range\ColumnsBefore;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\Item\Range\ColumnsBefore;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

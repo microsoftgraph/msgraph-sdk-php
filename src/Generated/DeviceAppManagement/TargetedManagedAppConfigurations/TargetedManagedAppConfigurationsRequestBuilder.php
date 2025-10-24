@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\TargetedManagedAppConfigurations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetedManagedAppConfigurationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TargetedManagedAppConfiguration;
-use Microsoft\Graph\Generated\Models\TargetedManagedAppConfigurationCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetedManagedAppConfigurationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TargetedManagedAppConfiguration;
+use Microsoft\\Graph\\Generated\Models\TargetedManagedAppConfigurationCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
+     * Targeted managed app configurations.
      * @param TargetedManagedAppConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppConfigurationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TargetedManagedAppConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new targetedManagedAppConfiguration object.
+     * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param TargetedManagedAppConfiguration $body The request body
      * @param TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppConfiguration|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedappconfiguration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(TargetedManagedAppConfiguration $body, ?TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the targetedManagedAppConfiguration objects.
+     * Targeted managed app configurations.
      * @param TargetedManagedAppConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new targetedManagedAppConfiguration object.
+     * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param TargetedManagedAppConfiguration $body The request body
      * @param TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

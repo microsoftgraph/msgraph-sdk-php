@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\WindowsInformationProtectionPolicyItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WindowsInformationProtectionPolicy;
-use Microsoft\Graph\Generated\Models\WindowsInformationProtectionPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\WindowsInformationProtectionPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WindowsInformationProtectionPolicy;
+use Microsoft\\Graph\\Generated\Models\WindowsInformationProtectionPolicyCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * List properties and relationships of the windowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are not MDM enrolled.
      * @param WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionPolicyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Create a new windowsInformationProtectionPolicy object.
+     * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
      * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionPolicy|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-create?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * List properties and relationships of the windowsInformationProtectionPolicy objects.
+     * Windows information protection for apps running on devices which are not MDM enrolled.
      * @param WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Create a new windowsInformationProtectionPolicy object.
+     * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
      * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

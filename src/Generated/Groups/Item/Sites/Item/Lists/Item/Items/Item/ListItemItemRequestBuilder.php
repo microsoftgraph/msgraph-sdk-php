@@ -1,21 +1,21 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\CreateLink\CreateLinkRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DriveItem\DriveItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Versions\VersionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ListItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\CreateLink\CreateLinkRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DriveItem\DriveItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Fields\FieldsRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Versions\VersionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ListItem;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

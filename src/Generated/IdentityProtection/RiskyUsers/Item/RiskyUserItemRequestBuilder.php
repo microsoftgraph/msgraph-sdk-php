@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item;
+namespace Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\HistoryRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RiskyUser;
+use Microsoft\\Graph\\Generated\IdentityProtection\RiskyUsers\Item\History\HistoryRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RiskyUser;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

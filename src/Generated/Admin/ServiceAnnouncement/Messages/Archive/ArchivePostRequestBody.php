@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Archive;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Archive;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

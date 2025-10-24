@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory;
+namespace Microsoft\\Graph\\Generated\RoleManagement\Directory;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\RbacApplication;
-use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\ResourceNamespacesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\RoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\RoleAssignmentScheduleInstancesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\RoleAssignmentScheduleRequestsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\RoleAssignmentSchedulesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\RoleDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleInstances\RoleEligibilityScheduleInstancesRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\RoleEligibilityScheduleRequestsRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\RoleEligibilitySchedulesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\RbacApplication;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\ResourceNamespaces\ResourceNamespacesRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleAssignments\RoleAssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\RoleAssignmentScheduleInstancesRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\RoleAssignmentScheduleRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleAssignmentSchedules\RoleAssignmentSchedulesRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleDefinitions\RoleDefinitionsRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleEligibilityScheduleInstances\RoleEligibilityScheduleInstancesRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\RoleEligibilityScheduleRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleEligibilitySchedules\RoleEligibilitySchedulesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

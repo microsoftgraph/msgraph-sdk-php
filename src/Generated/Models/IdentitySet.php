@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -40,6 +40,7 @@ class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.chatMessageMentionedIdentitySet': return new ChatMessageMentionedIdentitySet();
                 case '#microsoft.graph.chatMessageReactionIdentitySet': return new ChatMessageReactionIdentitySet();
                 case '#microsoft.graph.communicationsIdentitySet': return new CommunicationsIdentitySet();
+                case '#microsoft.graph.engagementIdentitySet': return new EngagementIdentitySet();
                 case '#microsoft.graph.sharePointIdentitySet': return new SharePointIdentitySet();
             }
         }

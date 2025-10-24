@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\DeltaWithToken;
+namespace Microsoft\\Graph\\Generated\Shares\Item\EscapedList\Items\DeltaWithToken;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -54,7 +54,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * Gets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @return array<MobileContainedApp>|null
     */
     public function getCommittedContainedApps(): ?array {
@@ -87,7 +87,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the identityName property value. The Identity Name.
+     * Gets the identityName property value. The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
      * @return string|null
     */
     public function getIdentityName(): ?string {
@@ -99,7 +99,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the identityPublisherHash property value. The Identity Publisher Hash.
+     * Gets the identityPublisherHash property value. The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
      * @return string|null
     */
     public function getIdentityPublisherHash(): ?string {
@@ -111,7 +111,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
+     * Gets the identityResourceIdentifier property value. The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
      * @return string|null
     */
     public function getIdentityResourceIdentifier(): ?string {
@@ -123,7 +123,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the identityVersion property value. The identity version.
+     * Gets the identityVersion property value. The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
      * @return string|null
     */
     public function getIdentityVersion(): ?string {
@@ -135,7 +135,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the isBundle property value. Whether or not the app is a bundle.
+     * Gets the isBundle property value. Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      * @return bool|null
     */
     public function getIsBundle(): ?bool {
@@ -192,7 +192,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * Sets the committedContainedApps property value. The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param array<MobileContainedApp>|null $value Value to set for the committedContainedApps property.
     */
     public function setCommittedContainedApps(?array $value): void {
@@ -200,7 +200,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the identityName property value. The Identity Name.
+     * Sets the identityName property value. The Identity Name of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'Contoso.DemoApp'.
      * @param string|null $value Value to set for the identityName property.
     */
     public function setIdentityName(?string $value): void {
@@ -208,7 +208,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the identityPublisherHash property value. The Identity Publisher Hash.
+     * Sets the identityPublisherHash property value. The Identity Publisher Hash of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'AB82CD0XYZ'.
      * @param string|null $value Value to set for the identityPublisherHash property.
     */
     public function setIdentityPublisherHash(?string $value): void {
@@ -216,7 +216,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
+     * Sets the identityResourceIdentifier property value. The Identity Resource Identifier of the app, parsed from the appx file when it is uploaded through the Intune MEM console. For example: 'TestResourceId'.
      * @param string|null $value Value to set for the identityResourceIdentifier property.
     */
     public function setIdentityResourceIdentifier(?string $value): void {
@@ -224,7 +224,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the identityVersion property value. The identity version.
+     * Sets the identityVersion property value. The Identity Version of the app, parsed from the appx file when it is uploaded through the Intune MEM console.  For example: '1.0.0.0'.
      * @param string|null $value Value to set for the identityVersion property.
     */
     public function setIdentityVersion(?string $value): void {
@@ -232,7 +232,7 @@ class WindowsUniversalAppX extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the isBundle property value. Whether or not the app is a bundle.
+     * Sets the isBundle property value. Whether or not the app is a bundle. If TRUE, app is a bundle; if FALSE, app is not a bundle.
      * @param bool|null $value Value to set for the isBundle property.
     */
     public function setIsBundle(?bool $value): void {

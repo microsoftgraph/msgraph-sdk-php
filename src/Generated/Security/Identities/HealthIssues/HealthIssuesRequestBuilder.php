@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Identities\HealthIssues;
+namespace Microsoft\\Graph\\Generated\Security\Identities\HealthIssues;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\HealthIssue;
-use Microsoft\Graph\Generated\Models\Security\HealthIssueCollectionResponse;
-use Microsoft\Graph\Generated\Security\Identities\HealthIssues\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\Identities\HealthIssues\Item\HealthIssueItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\HealthIssue;
+use Microsoft\\Graph\\Generated\Models\Security\HealthIssueCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\Identities\HealthIssues\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Identities\HealthIssues\Item\HealthIssueItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

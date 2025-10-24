@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Categories;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphIosStoreApp\Categories;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

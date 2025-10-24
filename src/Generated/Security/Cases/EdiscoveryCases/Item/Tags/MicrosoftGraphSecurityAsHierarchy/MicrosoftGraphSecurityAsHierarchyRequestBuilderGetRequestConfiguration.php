@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\MicrosoftGraphSecurityAsHierarchy;
+namespace Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Tags\MicrosoftGraphSecurityAsHierarchy;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

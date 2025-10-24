@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Solutions\WorkingTimeSchedule\StartWorkingTime;
+namespace Microsoft\\Graph\\Generated\Users\Item\Solutions\WorkingTimeSchedule\StartWorkingTime;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

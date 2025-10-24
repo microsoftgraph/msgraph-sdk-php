@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\Items\Item\LastModifiedByUser;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\Items\Item\LastModifiedByUser;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

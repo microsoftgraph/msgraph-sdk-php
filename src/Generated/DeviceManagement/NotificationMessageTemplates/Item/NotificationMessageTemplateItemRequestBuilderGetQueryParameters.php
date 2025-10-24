@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the notificationMessageTemplate object.
+ * The Notification Message Templates.
 */
 class NotificationMessageTemplateItemRequestBuilderGetQueryParameters 
 {

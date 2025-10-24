@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Messages\Item\Replies\Count;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Messages\Item\Replies\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppStatuses\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ManagedAppStatus;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ManagedAppStatus;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -45,11 +45,10 @@ class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedAppStatusRaw object.
+     * The managed app statuses.
      * @param ManagedAppStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppStatus|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappstatusraw-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +92,7 @@ class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedAppStatusRaw object.
+     * The managed app statuses.
      * @param ManagedAppStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

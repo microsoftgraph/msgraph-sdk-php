@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages;
+namespace Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\DispositionReviewStage;
-use Microsoft\Graph\Generated\Models\Security\DispositionReviewStageCollectionResponse;
-use Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages\Item\DispositionReviewStageStageNumberItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\DispositionReviewStage;
+use Microsoft\\Graph\\Generated\Models\Security\DispositionReviewStageCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Labels\RetentionLabels\Item\DispositionReviewStages\Item\DispositionReviewStageStageNumberItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

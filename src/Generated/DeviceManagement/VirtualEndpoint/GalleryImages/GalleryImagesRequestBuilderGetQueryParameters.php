@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\GalleryImages;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\GalleryImages;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

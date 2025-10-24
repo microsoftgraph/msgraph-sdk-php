@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\Count;
+namespace Microsoft\\Graph\\Generated\Policies\CrossTenantAccessPolicy\Partners\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

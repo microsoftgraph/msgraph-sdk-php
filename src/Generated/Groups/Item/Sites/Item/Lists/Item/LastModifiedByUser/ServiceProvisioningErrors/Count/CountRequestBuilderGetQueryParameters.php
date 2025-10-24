@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\LastModifiedByUser\ServiceProvisioningErrors\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Lists\Item\LastModifiedByUser\ServiceProvisioningErrors\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Alerts_v2\Item\Comments;
+namespace Microsoft\\Graph\\Generated\Security\Alerts_v2\Item\Comments;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

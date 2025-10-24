@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\PermanentDelete;
+namespace Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\PermanentDelete;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

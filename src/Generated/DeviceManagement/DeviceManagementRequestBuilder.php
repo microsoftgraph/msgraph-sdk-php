@@ -1,72 +1,71 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement;
+namespace Microsoft\\Graph\\Generated\DeviceManagement;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\ApplePushNotificationCertificateRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\AuditEventsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\ComplianceManagementPartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ConditionalAccessSettings\ConditionalAccessSettingsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\DetectedAppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\DeviceCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\DeviceCompliancePoliciesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary\DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\DeviceCompliancePolicySettingStateSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurationDeviceStateSummaries\DeviceConfigurationDeviceStateSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\DeviceConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\DeviceEnrollmentConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\DeviceManagementPartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\ExchangeConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\IosUpdateStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEvents\MobileAppTroubleshootingEventsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\NotificationMessageTemplatesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\RemoteAssistancePartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\ReportsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\ResourceOperationsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary\SoftwareUpdateStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\TelecomExpenseManagementPartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformance\UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion\UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDeviceModelPerformance\UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformanceDetails\UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthOSVersionPerformance\UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthOverview\UserExperienceAnalyticsAppHealthOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsBaselines\UserExperienceAnalyticsBaselinesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsCategories\UserExperienceAnalyticsCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance\UserExperienceAnalyticsDevicePerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceScores\UserExperienceAnalyticsDeviceScoresRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupHistory\UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses\UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcessPerformance\UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsMetricHistory\UserExperienceAnalyticsMetricHistoryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsModelScores\UserExperienceAnalyticsModelScoresRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsOverview\UserExperienceAnalyticsOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsScoreHistory\UserExperienceAnalyticsScoreHistoryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsSummarizeWorkFromAnywhereDevices\UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsWorkFromAnywhereMetrics\UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsWorkFromAnywhereModelPerformance\UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\VirtualEndpointRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\WindowsAutopilotDeviceIdentitiesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\WindowsInformationProtectionAppLearningSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsMalwareInformation\WindowsMalwareInformationRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceManagement;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\ApplePushNotificationCertificate\ApplePushNotificationCertificateRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\AuditEventsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ComplianceManagementPartners\ComplianceManagementPartnersRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ConditionalAccessSettings\ConditionalAccessSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DetectedApps\DetectedAppsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceCategories\DeviceCategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicies\DeviceCompliancePoliciesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary\DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\DeviceCompliancePolicySettingStateSummariesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurationDeviceStateSummaries\DeviceConfigurationDeviceStateSummariesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\DeviceConfigurationsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations\DeviceEnrollmentConfigurationsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceManagementPartners\DeviceManagementPartnersRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ExchangeConnectors\ExchangeConnectorsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\GetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\IosUpdateStatuses\IosUpdateStatusesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\MobileAppTroubleshootingEvents\MobileAppTroubleshootingEventsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\NotificationMessageTemplatesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\RemoteAssistancePartners\RemoteAssistancePartnersRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\Reports\ReportsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ResourceOperations\ResourceOperationsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\SoftwareUpdateStatusSummary\SoftwareUpdateStatusSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformance\UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId\UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion\UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDeviceModelPerformance\UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformanceDetails\UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthOSVersionPerformance\UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthOverview\UserExperienceAnalyticsAppHealthOverviewRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsBaselines\UserExperienceAnalyticsBaselinesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsCategories\UserExperienceAnalyticsCategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDevicePerformance\UserExperienceAnalyticsDevicePerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceScores\UserExperienceAnalyticsDeviceScoresRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupHistory\UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses\UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcessPerformance\UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsMetricHistory\UserExperienceAnalyticsMetricHistoryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsModelScores\UserExperienceAnalyticsModelScoresRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsOverview\UserExperienceAnalyticsOverviewRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsScoreHistory\UserExperienceAnalyticsScoreHistoryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsSummarizeWorkFromAnywhereDevices\UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric\UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsWorkFromAnywhereMetrics\UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsWorkFromAnywhereModelPerformance\UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\VirtualEndpointRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\WindowsAutopilotDeviceIdentitiesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\WindowsInformationProtectionAppLearningSummariesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\WindowsMalwareInformation\WindowsMalwareInformationRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceManagement;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -264,13 +263,6 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     */
     public function softwareUpdateStatusSummary(): SoftwareUpdateStatusSummaryRequestBuilder {
         return new SoftwareUpdateStatusSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-    */
-    public function telecomExpenseManagementPartners(): TelecomExpenseManagementPartnersRequestBuilder {
-        return new TelecomExpenseManagementPartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -505,11 +497,10 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @param DeviceManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagement|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-remoteassistance-devicemanagement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -529,12 +520,11 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagement|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-tem-devicemanagement-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagement $body, ?DeviceManagementRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -545,7 +535,7 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @param DeviceManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -566,7 +556,7 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

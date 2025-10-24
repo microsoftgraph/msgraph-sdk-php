@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\AcquireAccessToken\AcquireAccessTokenRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\JobsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\Secrets\SecretsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates\TemplatesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Synchronization;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\AcquireAccessToken\AcquireAccessTokenRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\JobsRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Secrets\SecretsRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Templates\TemplatesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Synchronization;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

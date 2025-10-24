@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\GetByUserIdAndRoleWithUserIdWithRole;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\GetByUserIdAndRoleWithUserIdWithRole;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\VirtualEventWebinar;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\VirtualEventWebinar;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

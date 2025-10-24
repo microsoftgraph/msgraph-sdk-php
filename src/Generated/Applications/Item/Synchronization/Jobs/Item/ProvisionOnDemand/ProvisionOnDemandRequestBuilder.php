@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Jobs\Item\ProvisionOnDemand;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Jobs\Item\ProvisionOnDemand;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\StringKeyStringValuePair;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\StringKeyStringValuePair;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

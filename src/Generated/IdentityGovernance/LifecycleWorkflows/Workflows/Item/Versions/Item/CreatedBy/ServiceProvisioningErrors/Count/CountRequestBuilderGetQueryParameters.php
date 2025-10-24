@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Versions\Item\CreatedBy\ServiceProvisioningErrors\Count;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Versions\Item\CreatedBy\ServiceProvisioningErrors\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps;
+namespace Microsoft\\Graph\\Generated\Users\Item\Teamwork\InstalledApps;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

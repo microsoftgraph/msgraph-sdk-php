@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceManagementPartners;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceManagementPartner;
-use Microsoft\Graph\Generated\Models\DeviceManagementPartnerCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceManagementPartners\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceManagementPartner;
+use Microsoft\\Graph\\Generated\Models\DeviceManagementPartnerCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @param DeviceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementPartnerCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementPartner|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceManagementPartner $body, ?DeviceManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementPartner objects.
+     * The list of Device Management Partners configured by the tenant.
      * @param DeviceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class DeviceManagementPartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementPartner object.
+     * Create new navigation property to deviceManagementPartners for deviceManagement
      * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

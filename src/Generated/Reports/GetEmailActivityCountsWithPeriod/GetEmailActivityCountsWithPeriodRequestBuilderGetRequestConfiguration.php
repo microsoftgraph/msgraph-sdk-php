@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetEmailActivityCountsWithPeriod;
+namespace Microsoft\\Graph\\Generated\Reports\GetEmailActivityCountsWithPeriod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

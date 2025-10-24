@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ManagedAppOperation;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ManagedAppOperation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,11 +31,10 @@ class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a managedAppOperation.
+     * Delete navigation property operations for deviceAppManagement
      * @param ManagedAppOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ManagedAppOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedAppOperation object.
+     * Zero or more long running operations triggered on the app registration.
      * @param ManagedAppOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a managedAppOperation object.
+     * Update the navigation property operations in deviceAppManagement
      * @param ManagedAppOperation $body The request body
      * @param ManagedAppOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedAppOperation $body, ?ManagedAppOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a managedAppOperation.
+     * Delete navigation property operations for deviceAppManagement
      * @param ManagedAppOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the managedAppOperation object.
+     * Zero or more long running operations triggered on the app registration.
      * @param ManagedAppOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a managedAppOperation object.
+     * Update the navigation property operations in deviceAppManagement
      * @param ManagedAppOperation $body The request body
      * @param ManagedAppOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

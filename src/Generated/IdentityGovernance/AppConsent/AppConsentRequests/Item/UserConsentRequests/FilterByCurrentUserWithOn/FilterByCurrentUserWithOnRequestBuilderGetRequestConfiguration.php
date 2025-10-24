@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\FilterByCurrentUserWithOn;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\FilterByCurrentUserWithOn;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

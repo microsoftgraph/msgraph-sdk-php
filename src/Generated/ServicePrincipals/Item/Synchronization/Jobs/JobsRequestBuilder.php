@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Jobs;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SynchronizationJob;
-use Microsoft\Graph\Generated\Models\SynchronizationJobCollectionResponse;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\Item\SynchronizationJobItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\ValidateCredentials\ValidateCredentialsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SynchronizationJob;
+use Microsoft\\Graph\\Generated\Models\SynchronizationJobCollectionResponse;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Jobs\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Jobs\Item\SynchronizationJobItemRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Jobs\ValidateCredentials\ValidateCredentialsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

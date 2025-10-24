@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ChatMessage;
-use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ChatMessage;
+use Microsoft\\Graph\\Generated\Models\ChatMessageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\Departments\Count;
+namespace Microsoft\\Graph\\Generated\Security\Labels\Departments\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

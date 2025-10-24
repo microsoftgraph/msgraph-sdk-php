@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CloudClipboard\Items\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\CloudClipboard\Items\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

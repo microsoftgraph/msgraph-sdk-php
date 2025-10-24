@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Item\ManagedAppOperationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedAppOperation;
-use Microsoft\Graph\Generated\Models\ManagedAppOperationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\Operations\Item\ManagedAppOperationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedAppOperation;
+use Microsoft\\Graph\\Generated\Models\ManagedAppOperationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedAppOperation objects.
+     * Zero or more long running operations triggered on the app registration.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppOperationCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?OperationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedAppOperation object.
+     * Create new navigation property to operations for deviceAppManagement
      * @param ManagedAppOperation $body The request body
      * @param OperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppOperation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappoperation-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedAppOperation $body, ?OperationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedAppOperation objects.
+     * Zero or more long running operations triggered on the app registration.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedAppOperation object.
+     * Create new navigation property to operations for deviceAppManagement
      * @param ManagedAppOperation $body The request body
      * @param OperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

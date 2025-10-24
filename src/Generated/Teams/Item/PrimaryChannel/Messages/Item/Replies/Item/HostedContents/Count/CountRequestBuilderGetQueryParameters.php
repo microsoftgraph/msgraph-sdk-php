@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Count;
+namespace Microsoft\\Graph\\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

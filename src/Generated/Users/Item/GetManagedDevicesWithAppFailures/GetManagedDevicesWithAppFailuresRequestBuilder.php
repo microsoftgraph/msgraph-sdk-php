@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\GetManagedDevicesWithAppFailures;
+namespace Microsoft\\Graph\\Generated\Users\Item\GetManagedDevicesWithAppFailures;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -34,7 +34,6 @@ class GetManagedDevicesWithAppFailuresRequestBuilder extends BaseRequestBuilder
      * @param GetManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetManagedDevicesWithAppFailuresGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-troubleshooting-user-getmanageddeviceswithappfailures?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetManagedDevicesWithAppFailuresRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,12 +30,11 @@ class SetPriorityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action setPriority
      * @param SetPriorityPostRequestBody $body The request body
      * @param SetPriorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-deviceenrollmentconfiguration-setpriority?view=graph-rest-1.0 Find more info here
     */
     public function post(SetPriorityPostRequestBody $body, ?SetPriorityRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -46,7 +45,7 @@ class SetPriorityRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action setPriority
      * @param SetPriorityPostRequestBody $body The request body
      * @param SetPriorityRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SecureScoreControlProfiles;
+namespace Microsoft\\Graph\\Generated\Security\SecureScoreControlProfiles;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

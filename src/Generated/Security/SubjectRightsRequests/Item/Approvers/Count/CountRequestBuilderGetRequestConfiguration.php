@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\SubjectRightsRequests\Item\Approvers\Count;
+namespace Microsoft\\Graph\\Generated\Security\SubjectRightsRequests\Item\Approvers\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

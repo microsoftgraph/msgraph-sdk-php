@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\UnsetReaction;
+namespace Microsoft\\Graph\\Generated\Teams\Item\PrimaryChannel\Messages\Item\UnsetReaction;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

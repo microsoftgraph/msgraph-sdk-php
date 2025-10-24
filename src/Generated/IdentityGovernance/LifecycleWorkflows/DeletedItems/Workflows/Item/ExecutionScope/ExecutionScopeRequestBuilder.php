@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\ExecutionScope;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\ExecutionScope;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\ExecutionScope\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\ExecutionScope\Item\UserProcessingResultItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityGovernance\UserProcessingResultCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\ExecutionScope\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\ExecutionScope\Item\UserProcessingResultItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\UserProcessingResultCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -51,7 +51,7 @@ class ExecutionScopeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param ExecutionScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserProcessingResultCollectionResponse|null>
      * @throws Exception
@@ -65,7 +65,7 @@ class ExecutionScopeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param ExecutionScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

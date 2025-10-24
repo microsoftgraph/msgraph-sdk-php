@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DomainDnsRecords;
+namespace Microsoft\\Graph\\Generated\DomainDnsRecords;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

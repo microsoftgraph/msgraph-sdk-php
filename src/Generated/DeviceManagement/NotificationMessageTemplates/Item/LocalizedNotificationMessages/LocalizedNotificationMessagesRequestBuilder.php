@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item\LocalizedNotificationMessageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\LocalizedNotificationMessage;
-use Microsoft\Graph\Generated\Models\LocalizedNotificationMessageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item\LocalizedNotificationMessageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\LocalizedNotificationMessage;
+use Microsoft\\Graph\\Generated\Models\LocalizedNotificationMessageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @param LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LocalizedNotificationMessageCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LocalizedNotificationMessage|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-notification-localizednotificationmessage-create?view=graph-rest-1.0 Find more info here
     */
     public function post(LocalizedNotificationMessage $body, ?LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the localizedNotificationMessage objects.
+     * The list of localized messages for this Notification Message Template.
      * @param LocalizedNotificationMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class LocalizedNotificationMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new localizedNotificationMessage object.
+     * Create new navigation property to localizedNotificationMessages for deviceManagement
      * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

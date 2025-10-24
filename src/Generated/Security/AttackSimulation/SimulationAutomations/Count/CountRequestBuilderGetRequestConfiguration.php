@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\Count;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\SimulationAutomations\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

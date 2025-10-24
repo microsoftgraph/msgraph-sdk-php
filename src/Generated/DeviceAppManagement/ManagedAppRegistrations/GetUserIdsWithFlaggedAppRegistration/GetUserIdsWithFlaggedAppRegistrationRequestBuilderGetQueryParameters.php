@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Not yet documented
+ * Invoke function getUserIdsWithFlaggedAppRegistration
 */
 class GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters 
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\IosUpdateStatuses\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the iosUpdateDeviceStatus object.
+ * The IOS software update installation statuses for this account.
 */
 class IosUpdateDeviceStatusItemRequestBuilderGetQueryParameters 
 {

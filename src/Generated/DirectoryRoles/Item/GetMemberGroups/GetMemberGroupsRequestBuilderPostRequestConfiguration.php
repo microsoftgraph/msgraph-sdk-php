@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberGroups;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\GetMemberGroups;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

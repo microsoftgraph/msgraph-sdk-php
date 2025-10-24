@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -30,7 +30,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. Time that the exported report expires
+     * Gets the expirationDateTime property value. Time that the exported report expires.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -69,7 +69,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the filter property value. Filters applied on the report
+     * Gets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
      * @return string|null
     */
     public function getFilter(): ?string {
@@ -105,7 +105,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the reportName property value. Name of the report
+     * Gets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
      * @return string|null
     */
     public function getReportName(): ?string {
@@ -117,7 +117,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestDateTime property value. Time that the exported report was requested
+     * Gets the requestDateTime property value. Time that the exported report was requested.
      * @return DateTime|null
     */
     public function getRequestDateTime(): ?DateTime {
@@ -129,7 +129,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the select property value. Columns selected from the report
+     * Gets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
      * @return array<string>|null
     */
     public function getSelect(): ?array {
@@ -143,7 +143,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+     * Gets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
      * @return string|null
     */
     public function getSnapshotId(): ?string {
@@ -167,7 +167,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the url property value. Temporary location of the exported report
+     * Gets the url property value. Temporary location of the exported report.
      * @return string|null
     */
     public function getUrl(): ?string {
@@ -197,7 +197,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. Time that the exported report expires
+     * Sets the expirationDateTime property value. Time that the exported report expires.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -205,7 +205,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the filter property value. Filters applied on the report
+     * Sets the filter property value. Filters applied on the report. The maximum length allowed for this property is 2000 characters.
      * @param string|null $value Value to set for the filter property.
     */
     public function setFilter(?string $value): void {
@@ -229,7 +229,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the reportName property value. Name of the report
+     * Sets the reportName property value. Name of the report. The maximum length allowed for this property is 2000 characters.
      * @param string|null $value Value to set for the reportName property.
     */
     public function setReportName(?string $value): void {
@@ -237,7 +237,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestDateTime property value. Time that the exported report was requested
+     * Sets the requestDateTime property value. Time that the exported report was requested.
      * @param DateTime|null $value Value to set for the requestDateTime property.
     */
     public function setRequestDateTime(?DateTime $value): void {
@@ -245,7 +245,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the select property value. Columns selected from the report
+     * Sets the select property value. Columns selected from the report. The maximum number of allowed columns names is 256. The maximum length allowed for each column name in this property is 1000 characters.
      * @param array<string>|null $value Value to set for the select property.
     */
     public function setSelect(?array $value): void {
@@ -253,7 +253,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id.
+     * Sets the snapshotId property value. A snapshot is an identifiable subset of the dataset represented by the ReportName. A sessionId or CachedReportConfiguration id can be used here. If a sessionId is specified, Filter, Select, and OrderBy are applied to the data represented by the sessionId. Filter, Select, and OrderBy cannot be specified together with a CachedReportConfiguration id. The maximum length allowed for this property is 128 characters.
      * @param string|null $value Value to set for the snapshotId property.
     */
     public function setSnapshotId(?string $value): void {
@@ -269,7 +269,7 @@ class DeviceManagementExportJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the url property value. Temporary location of the exported report
+     * Sets the url property value. Temporary location of the exported report.
      * @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ExchangeConnectors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the deviceManagementExchangeConnector objects.
+ * The list of Exchange Connectors configured by the tenant.
 */
 class ExchangeConnectorsRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -53,7 +53,7 @@ class MobileAppCategory extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
+     * Gets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified. This property is read-only.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -82,7 +82,7 @@ class MobileAppCategory extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
+     * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified. This property is read-only.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

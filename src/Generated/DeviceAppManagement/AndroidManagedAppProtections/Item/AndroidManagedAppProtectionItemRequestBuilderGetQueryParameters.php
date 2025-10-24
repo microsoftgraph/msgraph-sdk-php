@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the androidManagedAppProtection object.
+ * Android managed app policies.
 */
 class AndroidManagedAppProtectionItemRequestBuilderGetQueryParameters 
 {

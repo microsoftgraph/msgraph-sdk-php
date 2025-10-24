@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies\Item\UpdateAllowedCombinations;
+namespace Microsoft\\Graph\\Generated\Policies\AuthenticationStrengthPolicies\Item\UpdateAllowedCombinations;
 
-use Microsoft\Graph\Generated\Models\AuthenticationMethodModes;
+use Microsoft\\Graph\\Generated\Models\AuthenticationMethodModes;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

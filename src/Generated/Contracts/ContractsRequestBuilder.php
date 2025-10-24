@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Contracts;
+namespace Microsoft\\Graph\\Generated\Contracts;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Contracts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\Item\ContractItemRequestBuilder;
-use Microsoft\Graph\Generated\Contracts\ValidateProperties\ValidatePropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Models\Contract;
-use Microsoft\Graph\Generated\Models\ContractCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Contracts\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Contracts\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Contracts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Contracts\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\Contracts\Item\ContractItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Contracts\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Contract;
+use Microsoft\\Graph\\Generated\Models\ContractCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

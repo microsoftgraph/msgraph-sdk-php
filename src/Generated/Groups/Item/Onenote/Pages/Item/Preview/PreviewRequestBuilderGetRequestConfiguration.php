@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Onenote\Pages\Item\Preview;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Onenote\Pages\Item\Preview;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

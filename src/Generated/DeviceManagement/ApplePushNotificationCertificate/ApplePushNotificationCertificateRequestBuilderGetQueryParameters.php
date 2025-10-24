@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ApplePushNotificationCertificate;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the applePushNotificationCertificate object.
+ * Apple push notification certificate.
 */
 class ApplePushNotificationCertificateRequestBuilderGetQueryParameters 
 {

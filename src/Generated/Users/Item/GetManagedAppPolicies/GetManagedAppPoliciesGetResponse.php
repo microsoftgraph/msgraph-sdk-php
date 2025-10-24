@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\GetManagedAppPolicies;
+namespace Microsoft\\Graph\\Generated\Users\Item\GetManagedAppPolicies;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ManagedAppPolicy;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\FollowedSites;
+namespace Microsoft\\Graph\\Generated\Users\Item\FollowedSites;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\FollowedSites\Add\AddRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\FollowedSites\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\FollowedSites\Item\SiteItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\FollowedSites\Remove\RemoveRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SiteCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\FollowedSites\Add\AddRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\FollowedSites\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\FollowedSites\Item\SiteItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\FollowedSites\Remove\RemoveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

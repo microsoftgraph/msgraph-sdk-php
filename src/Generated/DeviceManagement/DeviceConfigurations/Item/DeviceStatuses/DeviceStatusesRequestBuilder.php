@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationDeviceStatus;
-use Microsoft\Graph\Generated\Models\DeviceConfigurationDeviceStatusCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceConfigurationDeviceStatus;
+use Microsoft\\Graph\\Generated\Models\DeviceConfigurationDeviceStatusCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
+     * Device configuration installation status by device.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationDeviceStatusCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceConfigurationDeviceStatus object.
+     * Create new navigation property to deviceStatuses for deviceManagement
      * @param DeviceConfigurationDeviceStatus $body The request body
      * @param DeviceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationDeviceStatus|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatus-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceConfigurationDeviceStatus $body, ?DeviceStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceConfigurationDeviceStatus objects.
+     * Device configuration installation status by device.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceConfigurationDeviceStatus object.
+     * Create new navigation property to deviceStatuses for deviceManagement
      * @param DeviceConfigurationDeviceStatus $body The request body
      * @param DeviceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

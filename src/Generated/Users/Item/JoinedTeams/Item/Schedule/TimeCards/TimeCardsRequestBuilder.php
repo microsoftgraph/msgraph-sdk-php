@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TimeCard;
-use Microsoft\Graph\Generated\Models\TimeCardCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\ClockIn\ClockInRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\Item\TimeCardItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TimeCard;
+use Microsoft\\Graph\\Generated\Models\TimeCardCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\ClockIn\ClockInRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Schedule\TimeCards\Item\TimeCardItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests\Item\AppLogCollectionRequestItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AppLogCollectionRequest;
-use Microsoft\Graph\Generated\Models\AppLogCollectionRequestCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\MobileAppTroubleshootingEvents\Item\AppLogCollectionRequests\Item\AppLogCollectionRequestItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AppLogCollectionRequest;
+use Microsoft\\Graph\\Generated\Models\AppLogCollectionRequestCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the appLogCollectionRequest objects.
+     * Indicates collection of App Log Upload Request.
      * @param AppLogCollectionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppLogCollectionRequestCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppLogCollectionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new appLogCollectionRequest object.
+     * Create new navigation property to appLogCollectionRequests for deviceManagement
      * @param AppLogCollectionRequest $body The request body
      * @param AppLogCollectionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppLogCollectionRequest|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-applogcollectionrequest-create?view=graph-rest-1.0 Find more info here
     */
     public function post(AppLogCollectionRequest $body, ?AppLogCollectionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the appLogCollectionRequest objects.
+     * Indicates collection of App Log Upload Request.
      * @param AppLogCollectionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new appLogCollectionRequest object.
+     * Create new navigation property to appLogCollectionRequests for deviceManagement
      * @param AppLogCollectionRequest $body The request body
      * @param AppLogCollectionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

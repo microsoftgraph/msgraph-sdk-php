@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\GetMemberObjects;
+namespace Microsoft\\Graph\\Generated\Applications\Item\GetMemberObjects;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\MarkChatUnreadForUser;
+namespace Microsoft\\Graph\\Generated\Chats\Item\MarkChatUnreadForUser;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\TeamworkUserIdentity;
+use Microsoft\\Graph\\Generated\Models\TeamworkUserIdentity;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

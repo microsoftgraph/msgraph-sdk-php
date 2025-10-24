@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphDirectoryRole\Count;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\TransitiveMemberOf\GraphDirectoryRole\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

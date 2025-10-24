@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\CallRecords;
+namespace Microsoft\\Graph\\Generated\Models\CallRecords;
 
-use Microsoft\Graph\Generated\Models\Identity;
-use Microsoft\Graph\Generated\Models\IdentitySet;
+use Microsoft\\Graph\\Generated\Models\Identity;
+use Microsoft\\Graph\\Generated\Models\IdentitySet;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

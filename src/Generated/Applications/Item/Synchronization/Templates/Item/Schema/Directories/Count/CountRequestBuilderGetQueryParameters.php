@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Synchronization\Templates\Item\Schema\Directories\Count;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Synchronization\Templates\Item\Schema\Directories\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

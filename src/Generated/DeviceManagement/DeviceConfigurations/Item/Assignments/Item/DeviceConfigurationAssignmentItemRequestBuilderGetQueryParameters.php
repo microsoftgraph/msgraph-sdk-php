@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assignments\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceConfigurations\Item\Assignments\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceConfigurationAssignment object.
+ * The list of assignments for the device configuration profile.
 */
 class DeviceConfigurationAssignmentItemRequestBuilderGetQueryParameters 
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\Definitions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\AccessReviewScheduleDefinitionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
-use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinitionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\Definitions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\Definitions\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\AccessReviews\Definitions\Item\AccessReviewScheduleDefinitionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AccessReviewScheduleDefinition;
+use Microsoft\\Graph\\Generated\Models\AccessReviewScheduleDefinitionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

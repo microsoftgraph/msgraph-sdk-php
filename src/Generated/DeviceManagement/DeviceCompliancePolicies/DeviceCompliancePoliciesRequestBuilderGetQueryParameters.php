@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceCompliancePolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the iosCompliancePolicy objects.
+ * The device compliance policies.
 */
 class DeviceCompliancePoliciesRequestBuilderGetQueryParameters 
 {

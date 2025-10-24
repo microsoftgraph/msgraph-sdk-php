@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\AppRoleAssignments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\AppRoleAssignment;
-use Microsoft\Graph\Generated\Models\AppRoleAssignmentCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\AppRoleAssignment;
+use Microsoft\\Graph\\Generated\Models\AppRoleAssignmentCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\AppRoleAssignments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\ServicePrincipals\Item\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

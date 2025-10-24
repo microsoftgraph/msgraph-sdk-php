@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks;
+namespace Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TodoTask;
-use Microsoft\Graph\Generated\Models\TodoTaskCollectionResponse;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\TodoTaskItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TodoTask;
+use Microsoft\\Graph\\Generated\Models\TodoTaskCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\TodoTaskItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

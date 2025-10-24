@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\Owners;
+namespace Microsoft\\Graph\\Generated\Applications\Item\Owners;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\Owners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\GraphEndpoint\GraphEndpointRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\GraphEndpoint\GraphEndpointRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\Owners\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DirectoryObjectCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -66,7 +66,7 @@ class OwnersRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.applications.item.owners.item collection
+     * Gets an item from the Microsoft//Graph//Generated.applications.item.owners.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */

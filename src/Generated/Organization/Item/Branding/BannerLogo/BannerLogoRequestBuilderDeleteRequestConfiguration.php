@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\Branding\BannerLogo;
+namespace Microsoft\\Graph\\Generated\Organization\Item\Branding\BannerLogo;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

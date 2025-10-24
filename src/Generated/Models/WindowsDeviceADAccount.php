@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -26,7 +26,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
     }
 
     /**
-     * Gets the domainName property value. Not yet documented
+     * Gets the domainName property value. The domainName property
      * @return string|null
     */
     public function getDomainName(): ?string {
@@ -50,7 +50,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
     }
 
     /**
-     * Gets the userName property value. Not yet documented
+     * Gets the userName property value. The userName property
      * @return string|null
     */
     public function getUserName(): ?string {
@@ -72,7 +72,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
     }
 
     /**
-     * Sets the domainName property value. Not yet documented
+     * Sets the domainName property value. The domainName property
      * @param string|null $value Value to set for the domainName property.
     */
     public function setDomainName(?string $value): void {
@@ -80,7 +80,7 @@ class WindowsDeviceADAccount extends WindowsDeviceAccount implements Parsable
     }
 
     /**
-     * Sets the userName property value. Not yet documented
+     * Sets the userName property value. The userName property
      * @param string|null $value Value to set for the userName property.
     */
     public function setUserName(?string $value): void {

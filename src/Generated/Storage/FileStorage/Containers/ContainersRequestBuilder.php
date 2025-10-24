@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\Containers;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\FileStorageContainer;
-use Microsoft\Graph\Generated\Models\FileStorageContainerCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\FileStorageContainerItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\FileStorageContainer;
+use Microsoft\\Graph\\Generated\Models\FileStorageContainerCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\FileStorageContainerItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

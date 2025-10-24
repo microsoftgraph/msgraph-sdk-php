@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\FilterByCurrentUserWithOn;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\EntitlementManagement\Assignments\FilterByCurrentUserWithOn;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

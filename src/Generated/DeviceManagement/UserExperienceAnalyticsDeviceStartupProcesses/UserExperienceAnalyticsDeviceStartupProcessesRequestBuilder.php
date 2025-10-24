@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses\Item\UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsDeviceStartupProcess;
-use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsDeviceStartupProcessCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsDeviceStartupProcesses\Item\UserExperienceAnalyticsDeviceStartupProcessItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserExperienceAnalyticsDeviceStartupProcess;
+use Microsoft\\Graph\\Generated\Models\UserExperienceAnalyticsDeviceStartupProcessCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

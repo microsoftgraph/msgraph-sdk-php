@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\CleanWindowsDevice;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\CleanWindowsDevice;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -35,7 +35,6 @@ class CleanWindowsDeviceRequestBuilder extends BaseRequestBuilder
      * @param CleanWindowsDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-cleanwindowsdevice?view=graph-rest-1.0 Find more info here
     */
     public function post(CleanWindowsDevicePostRequestBody $body, ?CleanWindowsDeviceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

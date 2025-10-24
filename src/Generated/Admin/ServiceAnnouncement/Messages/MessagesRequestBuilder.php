@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Archive\ArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Favorite\FavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\ServiceUpdateMessageItemRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkRead\MarkReadRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread\MarkUnreadRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unarchive\UnarchiveRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unfavorite\UnfavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServiceUpdateMessage;
-use Microsoft\Graph\Generated\Models\ServiceUpdateMessageCollectionResponse;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Archive\ArchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Favorite\FavoriteRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Item\ServiceUpdateMessageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\MarkRead\MarkReadRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread\MarkUnreadRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Unfavorite\UnfavoriteRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ServiceUpdateMessage;
+use Microsoft\\Graph\\Generated\Models\ServiceUpdateMessageCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

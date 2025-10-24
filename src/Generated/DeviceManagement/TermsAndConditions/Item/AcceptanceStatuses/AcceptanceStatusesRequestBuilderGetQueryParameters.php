@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the termsAndConditionsAcceptanceStatus objects.
+ * The list of acceptance statuses for this T&C policy.
 */
 class AcceptanceStatusesRequestBuilderGetQueryParameters 
 {

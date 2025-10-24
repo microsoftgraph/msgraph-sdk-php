@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\GetEffectivePermissionsWithScope;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -37,7 +37,6 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
      * @param GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetEffectivePermissionsWithScopeGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-devicemanagement-geteffectivepermissions?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

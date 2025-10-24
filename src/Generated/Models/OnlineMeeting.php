@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -9,6 +9,9 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Represents a Microsoft online meeting.
+*/
 class OnlineMeeting extends OnlineMeetingBase implements Parsable 
 {
     /**

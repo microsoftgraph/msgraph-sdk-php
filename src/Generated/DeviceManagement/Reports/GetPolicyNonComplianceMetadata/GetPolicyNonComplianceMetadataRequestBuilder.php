@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,12 +31,11 @@ class GetPolicyNonComplianceMetadataRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action getPolicyNonComplianceMetadata
      * @param GetPolicyNonComplianceMetadataPostRequestBody $body The request body
      * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getpolicynoncompliancemetadata?view=graph-rest-1.0 Find more info here
     */
     public function post(GetPolicyNonComplianceMetadataPostRequestBody $body, ?GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -49,7 +48,7 @@ class GetPolicyNonComplianceMetadataRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action getPolicyNonComplianceMetadata
      * @param GetPolicyNonComplianceMetadataPostRequestBody $body The request body
      * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

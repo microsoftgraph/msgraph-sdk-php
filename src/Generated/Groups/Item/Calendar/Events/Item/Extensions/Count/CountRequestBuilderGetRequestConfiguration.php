@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Extensions\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Calendar\Events\Item\Extensions\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

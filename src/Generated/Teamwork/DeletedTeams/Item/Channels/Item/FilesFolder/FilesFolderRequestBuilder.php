@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\FilesFolder;
+namespace Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Item\Channels\Item\FilesFolder;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DriveItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\FilesFolder\Content\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DriveItem;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Teamwork\DeletedTeams\Item\Channels\Item\FilesFolder\Content\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

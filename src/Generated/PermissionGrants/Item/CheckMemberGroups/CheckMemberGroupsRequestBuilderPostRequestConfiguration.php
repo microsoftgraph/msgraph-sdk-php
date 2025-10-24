@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\PermissionGrants\Item\CheckMemberGroups;
+namespace Microsoft\\Graph\\Generated\PermissionGrants\Item\CheckMemberGroups;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

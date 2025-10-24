@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\DeltaWithToken;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Lists\Item\Items\DeltaWithToken;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

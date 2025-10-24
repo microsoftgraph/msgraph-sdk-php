@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists;
+namespace Microsoft\\Graph\\Generated\Admin\Edge\InternetExplorerMode\SiteLists;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\BrowserSiteListItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\BrowserSiteList;
-use Microsoft\Graph\Generated\Models\BrowserSiteListCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\BrowserSiteListItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\BrowserSiteList;
+use Microsoft\\Graph\\Generated\Models\BrowserSiteListCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

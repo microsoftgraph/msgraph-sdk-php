@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Delta;
+namespace Microsoft\\Graph\\Generated\Users\Item\MailFolders\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

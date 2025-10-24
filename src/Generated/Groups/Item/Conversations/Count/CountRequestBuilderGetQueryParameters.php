@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Count;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Conversations\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\DelegatedAdminRelationships;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

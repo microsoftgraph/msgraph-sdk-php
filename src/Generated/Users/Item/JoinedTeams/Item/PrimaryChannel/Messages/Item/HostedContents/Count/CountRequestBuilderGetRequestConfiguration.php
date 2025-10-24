@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\HostedContents\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\HostedContents\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

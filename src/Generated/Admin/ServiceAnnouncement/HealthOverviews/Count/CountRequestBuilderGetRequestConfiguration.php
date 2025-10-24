@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Count;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\HealthOverviews\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

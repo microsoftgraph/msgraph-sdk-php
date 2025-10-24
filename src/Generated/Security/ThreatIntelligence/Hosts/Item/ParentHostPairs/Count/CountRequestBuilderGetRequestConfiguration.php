@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\Hosts\Item\ParentHostPairs\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\Hosts\Item\ParentHostPairs\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

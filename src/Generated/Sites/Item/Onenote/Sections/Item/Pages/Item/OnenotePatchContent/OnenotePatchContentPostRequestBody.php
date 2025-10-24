@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\Pages\Item\OnenotePatchContent;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Onenote\Sections\Item\Pages\Item\OnenotePatchContent;
 
-use Microsoft\Graph\Generated\Models\OnenotePatchContentCommand;
+use Microsoft\\Graph\\Generated\Models\OnenotePatchContentCommand;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
