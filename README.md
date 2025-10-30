@@ -148,7 +148,7 @@ try {
 
 ## Update Schedule
 
-The Microsoft Graph PHP SDK is scheduled to be updated during the week of the second and fourth Tuesday of each month.
+The Microsoft Graph PHP SDK is scheduled to be updated during the second and fourth week of each month
 
 ## Upgrading
 
