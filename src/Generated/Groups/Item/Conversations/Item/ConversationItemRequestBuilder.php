@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Conversations\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Conversation;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Conversation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -43,7 +43,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
      * @param ConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConversationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +54,11 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Conversation|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/group-get-conversation?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/conversation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConversationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -87,7 +87,7 @@ class ConversationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The group's conversations.
+     * Retrieve the properties and relationships of conversation object.
      * @param ConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

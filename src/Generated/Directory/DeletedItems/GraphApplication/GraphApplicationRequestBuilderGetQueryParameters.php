@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Directory\DeletedItems\GraphApplication;
+namespace Microsoft\\Graph\\Generated\Directory\DeletedItems\GraphApplication;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

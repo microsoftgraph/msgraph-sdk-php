@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\CertificateBasedAuthConfiguration;
+namespace Microsoft\\Graph\\Generated\CertificateBasedAuthConfiguration;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

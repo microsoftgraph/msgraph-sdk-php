@@ -1,22 +1,22 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item;
+namespace Microsoft\\Graph\\Generated\Drives\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\Bundles\BundlesRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\CreatedByUser\CreatedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ListRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Following\FollowingRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Recent\RecentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Root\RootRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\SearchWithQ\SearchWithQRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\SharedWithMe\SharedWithMeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Special\SpecialRequestBuilder;
-use Microsoft\Graph\Generated\Models\Drive;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Drives\Item\Bundles\BundlesRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\ListRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Following\FollowingRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\ItemsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Recent\RecentRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Root\RootRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\SharedWithMe\SharedWithMeRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Special\SpecialRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Drive;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

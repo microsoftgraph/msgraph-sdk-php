@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Count;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\DelegatedAdminCustomers\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

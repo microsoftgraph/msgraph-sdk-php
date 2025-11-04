@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\DefaultManagedAppProtections;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\DefaultManagedAppProtectionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DefaultManagedAppProtection;
-use Microsoft\Graph\Generated\Models\DefaultManagedAppProtectionCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\DefaultManagedAppProtections\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\DefaultManagedAppProtectionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DefaultManagedAppProtection;
+use Microsoft\\Graph\\Generated\Models\DefaultManagedAppProtectionCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -52,11 +52,10 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the defaultManagedAppProtection objects.
+     * Default managed app policies.
      * @param DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DefaultManagedAppProtectionCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new defaultManagedAppProtection object.
+     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DefaultManagedAppProtection|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the defaultManagedAppProtection objects.
+     * Default managed app policies.
      * @param DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new defaultManagedAppProtection object.
+     * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

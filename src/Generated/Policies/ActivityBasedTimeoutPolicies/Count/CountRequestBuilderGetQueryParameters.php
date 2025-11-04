@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Count;
+namespace Microsoft\\Graph\\Generated\Policies\ActivityBasedTimeoutPolicies\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

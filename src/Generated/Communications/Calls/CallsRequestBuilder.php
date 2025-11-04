@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\Calls;
+namespace Microsoft\\Graph\\Generated\Communications\Calls;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\Calls\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\LogTeleconferenceDeviceQuality\LogTeleconferenceDeviceQualityRequestBuilder;
-use Microsoft\Graph\Generated\Models\Call;
-use Microsoft\Graph\Generated\Models\CallCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\Calls\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\Item\CallItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\LogTeleconferenceDeviceQuality\LogTeleconferenceDeviceQualityRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Call;
+use Microsoft\\Graph\\Generated\Models\CallCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\SslCertificates\Count;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\SslCertificates\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

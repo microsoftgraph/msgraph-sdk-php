@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\Item\Sessions;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Events\Item\Sessions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VirtualEventSession;
-use Microsoft\Graph\Generated\Models\VirtualEventSessionCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\Item\Sessions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Events\Item\Sessions\Item\VirtualEventSessionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VirtualEventSession;
+use Microsoft\\Graph\\Generated\Models\VirtualEventSessionCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Events\Item\Sessions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Events\Item\Sessions\Item\VirtualEventSessionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

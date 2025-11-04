@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

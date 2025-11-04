@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\Members\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

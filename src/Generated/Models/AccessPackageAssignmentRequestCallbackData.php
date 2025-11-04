@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -22,6 +22,13 @@ class AccessPackageAssignmentRequestCallbackData extends CustomExtensionData imp
      * @return AccessPackageAssignmentRequestCallbackData
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageAssignmentRequestCallbackData {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.assignmentRequestApprovalStageCallbackData': return new AssignmentRequestApprovalStageCallbackData();
+            }
+        }
         return new AccessPackageAssignmentRequestCallbackData();
     }
 

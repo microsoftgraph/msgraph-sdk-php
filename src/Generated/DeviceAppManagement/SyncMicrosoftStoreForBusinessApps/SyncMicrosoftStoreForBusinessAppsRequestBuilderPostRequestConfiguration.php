@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

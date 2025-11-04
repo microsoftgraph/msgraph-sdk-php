@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsMetricHistory;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsMetricHistory;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

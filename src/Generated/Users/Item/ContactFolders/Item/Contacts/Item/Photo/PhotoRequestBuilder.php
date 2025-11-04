@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Photo;
+namespace Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Photo;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ProfilePhoto;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Photo\Value\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ProfilePhoto;
+use Microsoft\\Graph\\Generated\Users\Item\ContactFolders\Item\Contacts\Item\Photo\Value\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

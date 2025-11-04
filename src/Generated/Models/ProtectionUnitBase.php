@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -82,7 +82,9 @@ class ProtectionUnitBase extends Entity implements Parsable
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'offboardRequestedDateTime' => fn(ParseNode $n) => $o->setOffboardRequestedDateTime($n->getDateTimeValue()),
             'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
+            'protectionSources' => fn(ParseNode $n) => $o->setProtectionSources($n->getEnumValue(ProtectionSource::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProtectionUnitStatus::class)),
         ]);
     }
@@ -112,6 +114,18 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the offboardRequestedDateTime property value. The date and time when protection unit offboard was requested. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getOffboardRequestedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('offboardRequestedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'offboardRequestedDateTime'");
+    }
+
+    /**
      * Gets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.
      * @return string|null
     */
@@ -121,6 +135,18 @@ class ProtectionUnitBase extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'policyId'");
+    }
+
+    /**
+     * Gets the protectionSources property value. The protectionSources property
+     * @return ProtectionSource|null
+    */
+    public function getProtectionSources(): ?ProtectionSource {
+        $val = $this->getBackingStore()->get('protectionSources');
+        if (is_null($val) || $val instanceof ProtectionSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protectionSources'");
     }
 
     /**
@@ -146,7 +172,9 @@ class ProtectionUnitBase extends Entity implements Parsable
         $writer->writeObjectValue('error', $this->getError());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeDateTimeValue('offboardRequestedDateTime', $this->getOffboardRequestedDateTime());
         $writer->writeStringValue('policyId', $this->getPolicyId());
+        $writer->writeEnumValue('protectionSources', $this->getProtectionSources());
         $writer->writeEnumValue('status', $this->getStatus());
     }
 
@@ -191,11 +219,27 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
+     * Sets the offboardRequestedDateTime property value. The date and time when protection unit offboard was requested. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the offboardRequestedDateTime property.
+    */
+    public function setOffboardRequestedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('offboardRequestedDateTime', $value);
+    }
+
+    /**
      * Sets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.
      * @param string|null $value Value to set for the policyId property.
     */
     public function setPolicyId(?string $value): void {
         $this->getBackingStore()->set('policyId', $value);
+    }
+
+    /**
+     * Sets the protectionSources property value. The protectionSources property
+     * @param ProtectionSource|null $value Value to set for the protectionSources property.
+    */
+    public function setProtectionSources(?ProtectionSource $value): void {
+        $this->getBackingStore()->set('protectionSources', $value);
     }
 
     /**

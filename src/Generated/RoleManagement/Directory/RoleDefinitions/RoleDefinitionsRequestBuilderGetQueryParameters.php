@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions;
+namespace Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleDefinitions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

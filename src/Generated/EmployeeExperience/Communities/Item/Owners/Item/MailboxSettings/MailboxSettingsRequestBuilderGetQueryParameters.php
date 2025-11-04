@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\Owners\Item\MailboxSettings;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Communities\Item\Owners\Item\MailboxSettings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

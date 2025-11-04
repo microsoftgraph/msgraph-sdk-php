@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\MobileThreatDefenseConnectors;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the mobileThreatDefenseConnector objects.
+ * The list of Mobile threat Defense connectors configured by the tenant.
 */
 class MobileThreatDefenseConnectorsRequestBuilderGetQueryParameters 
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Labels\FilePlanReferences\Count;
+namespace Microsoft\\Graph\\Generated\Security\Labels\FilePlanReferences\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

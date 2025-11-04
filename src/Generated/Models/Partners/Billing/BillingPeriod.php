@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Partners\Billing;
+namespace Microsoft\\Graph\\Generated\Models\Partners\Billing;
 
 use Microsoft\Kiota\Abstractions\Enum;
 

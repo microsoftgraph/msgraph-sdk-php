@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedDeviceMobileAppConfigurationAssignment object.
+ * The list of group assignemenets for app configration.
 */
 class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetQueryParameters 
 {

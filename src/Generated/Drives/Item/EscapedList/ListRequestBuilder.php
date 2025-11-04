@@ -1,19 +1,19 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\EscapedList;
+namespace Microsoft\\Graph\\Generated\Drives\Item\EscapedList;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\ContentTypesRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\CreatedByUser\CreatedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\LastModifiedByUser\LastModifiedByUserRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
-use Microsoft\Graph\Generated\Models\EscapedList;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\CreatedByUser\CreatedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Drive\DriveRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Items\ItemsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Operations\OperationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EscapedList;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

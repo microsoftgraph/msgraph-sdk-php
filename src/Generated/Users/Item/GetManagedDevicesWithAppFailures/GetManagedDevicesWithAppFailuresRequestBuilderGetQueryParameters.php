@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\GetManagedDevicesWithAppFailures;
+namespace Microsoft\\Graph\\Generated\Users\Item\GetManagedDevicesWithAppFailures;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

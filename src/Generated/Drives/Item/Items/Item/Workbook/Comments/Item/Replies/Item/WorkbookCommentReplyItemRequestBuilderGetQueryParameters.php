@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Item;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

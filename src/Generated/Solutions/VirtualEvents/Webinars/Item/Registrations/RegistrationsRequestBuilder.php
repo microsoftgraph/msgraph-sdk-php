@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations;
+namespace Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VirtualEventRegistration;
-use Microsoft\Graph\Generated\Models\VirtualEventRegistrationCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Item\VirtualEventRegistrationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VirtualEventRegistration;
+use Microsoft\\Graph\\Generated\Models\VirtualEventRegistrationCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\VirtualEvents\Webinars\Item\Registrations\Item\VirtualEventRegistrationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

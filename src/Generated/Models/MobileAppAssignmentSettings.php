@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -38,7 +38,6 @@ class MobileAppAssignmentSettings implements AdditionalDataHolder, BackedModel, 
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.iosDdmLobAppAssignmentSettings': return new IosDdmLobAppAssignmentSettings();
                 case '#microsoft.graph.iosLobAppAssignmentSettings': return new IosLobAppAssignmentSettings();
                 case '#microsoft.graph.iosStoreAppAssignmentSettings': return new IosStoreAppAssignmentSettings();
                 case '#microsoft.graph.iosVppAppAssignmentSettings': return new IosVppAppAssignmentSettings();

@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import\ImportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Item\ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
-use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import\ImportRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Item\ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
+use Microsoft\\Graph\\Generated\Models\ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -60,11 +60,10 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
+     * Collection of imported Windows autopilot devices.
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentityCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,12 +74,11 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * Create a new importedWindowsAutopilotDeviceIdentity object.
+     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentity|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -91,7 +89,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
+     * Collection of imported Windows autopilot devices.
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +110,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     }
 
     /**
-     * Create a new importedWindowsAutopilotDeviceIdentity object.
+     * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

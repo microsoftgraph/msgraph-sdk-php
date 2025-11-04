@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Tabs\Count;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Tabs\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

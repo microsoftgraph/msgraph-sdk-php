@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditCategories;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\AuditEvents\GetAuditCategories;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Not yet documented
+ * Invoke function getAuditCategories
 */
 class GetAuditCategoriesRequestBuilderGetQueryParameters 
 {

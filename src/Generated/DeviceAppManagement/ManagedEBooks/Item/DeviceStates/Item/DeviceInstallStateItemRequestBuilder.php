@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\DeviceInstallState;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\DeviceInstallState;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,11 +31,10 @@ class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceInstallState.
+     * Delete navigation property deviceStates for deviceAppManagement
      * @param DeviceInstallStateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceInstallStateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceInstallState object.
+     * The list of installation states for this eBook.
      * @param DeviceInstallStateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceInstallState|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceInstallStateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceInstallState object.
+     * Update the navigation property deviceStates in deviceAppManagement
      * @param DeviceInstallState $body The request body
      * @param DeviceInstallStateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceInstallState|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-deviceinstallstate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceInstallState $body, ?DeviceInstallStateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceInstallState.
+     * Delete navigation property deviceStates for deviceAppManagement
      * @param DeviceInstallStateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceInstallState object.
+     * The list of installation states for this eBook.
      * @param DeviceInstallStateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class DeviceInstallStateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceInstallState object.
+     * Update the navigation property deviceStates in deviceAppManagement
      * @param DeviceInstallState $body The request body
      * @param DeviceInstallStateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -392,6 +392,7 @@ class ManagedDevice extends Entity implements Parsable
             'managedDeviceOwnerType' => fn(ParseNode $n) => $o->setManagedDeviceOwnerType($n->getEnumValue(ManagedDeviceOwnerType::class)),
             'managementAgent' => fn(ParseNode $n) => $o->setManagementAgent($n->getEnumValue(ManagementAgentType::class)),
             'managementCertificateExpirationDate' => fn(ParseNode $n) => $o->setManagementCertificateExpirationDate($n->getDateTimeValue()),
+            'managementState' => fn(ParseNode $n) => $o->setManagementState($n->getEnumValue(ManagementState::class)),
             'manufacturer' => fn(ParseNode $n) => $o->setManufacturer($n->getStringValue()),
             'meid' => fn(ParseNode $n) => $o->setMeid($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
@@ -561,6 +562,18 @@ class ManagedDevice extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'managementCertificateExpirationDate'");
+    }
+
+    /**
+     * Gets the managementState property value. Management state of device in Microsoft Intune.
+     * @return ManagementState|null
+    */
+    public function getManagementState(): ?ManagementState {
+        $val = $this->getBackingStore()->get('managementState');
+        if (is_null($val) || $val instanceof ManagementState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managementState'");
     }
 
     /**
@@ -847,6 +860,7 @@ class ManagedDevice extends Entity implements Parsable
         $writer->writeStringValue('managedDeviceName', $this->getManagedDeviceName());
         $writer->writeEnumValue('managedDeviceOwnerType', $this->getManagedDeviceOwnerType());
         $writer->writeEnumValue('managementAgent', $this->getManagementAgent());
+        $writer->writeEnumValue('managementState', $this->getManagementState());
         $writer->writeStringValue('notes', $this->getNotes());
         $writer->writeEnumValue('partnerReportedThreatState', $this->getPartnerReportedThreatState());
         $writer->writeCollectionOfObjectValues('users', $this->getUsers());
@@ -1155,6 +1169,14 @@ class ManagedDevice extends Entity implements Parsable
     */
     public function setManagementCertificateExpirationDate(?DateTime $value): void {
         $this->getBackingStore()->set('managementCertificateExpirationDate', $value);
+    }
+
+    /**
+     * Sets the managementState property value. Management state of device in Microsoft Intune.
+     * @param ManagementState|null $value Value to set for the managementState property.
+    */
+    public function setManagementState(?ManagementState $value): void {
+        $this->getBackingStore()->set('managementState', $value);
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\Item\Bot;
+namespace Microsoft\\Graph\\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\Item\Bot;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

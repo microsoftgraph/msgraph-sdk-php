@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphMacOSDmgApp;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphMacOSDmgApp;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

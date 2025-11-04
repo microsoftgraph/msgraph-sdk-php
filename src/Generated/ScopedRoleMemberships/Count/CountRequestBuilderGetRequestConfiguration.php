@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ScopedRoleMemberships\Count;
+namespace Microsoft\\Graph\\Generated\ScopedRoleMemberships\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

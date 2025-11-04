@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DataPolicyOperations\Item;
+namespace Microsoft\\Graph\\Generated\DataPolicyOperations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

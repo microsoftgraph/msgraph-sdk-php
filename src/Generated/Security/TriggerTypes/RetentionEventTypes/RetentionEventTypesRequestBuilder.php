@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes;
+namespace Microsoft\\Graph\\Generated\Security\TriggerTypes\RetentionEventTypes;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\RetentionEventType;
-use Microsoft\Graph\Generated\Models\Security\RetentionEventTypeCollectionResponse;
-use Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes\Item\RetentionEventTypeItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\RetentionEventType;
+use Microsoft\\Graph\\Generated\Models\Security\RetentionEventTypeCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\TriggerTypes\RetentionEventTypes\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\TriggerTypes\RetentionEventTypes\Item\RetentionEventTypeItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

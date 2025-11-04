@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Count;
+namespace Microsoft\\Graph\\Generated\Identity\ApiConnectors\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

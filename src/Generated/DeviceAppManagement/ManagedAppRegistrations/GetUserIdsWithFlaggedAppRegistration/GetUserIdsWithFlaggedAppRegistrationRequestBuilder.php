@@ -1,10 +1,10 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,11 +30,10 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Not yet documented
+     * Invoke function getUserIdsWithFlaggedAppRegistration
      * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetUserIdsWithFlaggedAppRegistrationGetResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappregistration-getuseridswithflaggedappregistration?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +44,7 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Not yet documented
+     * Invoke function getUserIdsWithFlaggedAppRegistration
      * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

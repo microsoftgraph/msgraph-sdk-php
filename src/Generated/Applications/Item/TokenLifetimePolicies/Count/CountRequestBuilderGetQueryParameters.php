@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Count;
+namespace Microsoft\\Graph\\Generated\Applications\Item\TokenLifetimePolicies\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

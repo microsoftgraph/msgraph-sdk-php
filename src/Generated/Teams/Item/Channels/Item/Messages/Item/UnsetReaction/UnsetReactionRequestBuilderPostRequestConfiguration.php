@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\Item\UnsetReaction;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Messages\Item\UnsetReaction;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

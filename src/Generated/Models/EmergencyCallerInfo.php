@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -56,7 +56,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the emergency caller.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -84,7 +84,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. The location of the emergency caller.
      * @return Location|null
     */
     public function getLocation(): ?Location {
@@ -108,7 +108,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the phoneNumber property value. The phoneNumber property
+     * Gets the phoneNumber property value. The phone number of the emergency caller.
      * @return string|null
     */
     public function getPhoneNumber(): ?string {
@@ -120,7 +120,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The tenant ID of the emergency caller.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -132,7 +132,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the upn property value. The upn property
+     * Gets the upn property value. The user principal name of the emergency caller.
      * @return string|null
     */
     public function getUpn(): ?string {
@@ -174,7 +174,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the emergency caller.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -182,7 +182,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. The location of the emergency caller.
      * @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value): void {
@@ -198,7 +198,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the phoneNumber property value. The phoneNumber property
+     * Sets the phoneNumber property value. The phone number of the emergency caller.
      * @param string|null $value Value to set for the phoneNumber property.
     */
     public function setPhoneNumber(?string $value): void {
@@ -206,7 +206,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The tenant ID of the emergency caller.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -214,7 +214,7 @@ class EmergencyCallerInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the upn property value. The upn property
+     * Sets the upn property value. The user principal name of the emergency caller.
      * @param string|null $value Value to set for the upn property.
     */
     public function setUpn(?string $value): void {

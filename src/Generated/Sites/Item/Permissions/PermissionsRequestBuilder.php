@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\Permissions;
+namespace Microsoft\\Graph\\Generated\Sites\Item\Permissions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Permission;
-use Microsoft\Graph\Generated\Models\PermissionCollectionResponse;
-use Microsoft\Graph\Generated\Sites\Item\Permissions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Permission;
+use Microsoft\\Graph\\Generated\Models\PermissionCollectionResponse;
+use Microsoft\\Graph\\Generated\Sites\Item\Permissions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

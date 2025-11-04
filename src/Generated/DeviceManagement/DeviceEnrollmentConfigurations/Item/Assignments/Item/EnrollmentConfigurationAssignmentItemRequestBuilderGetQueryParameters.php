@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the enrollmentConfigurationAssignment object.
+ * The list of group assignments for the device configuration profile
 */
 class EnrollmentConfigurationAssignmentItemRequestBuilderGetQueryParameters 
 {

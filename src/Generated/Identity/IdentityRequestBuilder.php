@@ -1,19 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity;
+namespace Microsoft\\Graph\\Generated\Identity;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventListeners\AuthenticationEventListenersRequestBuilder;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\AuthenticationEventsFlowsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
-use Microsoft\Graph\Generated\Identity\CustomAuthenticationExtensions\CustomAuthenticationExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
-use Microsoft\Graph\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityContainer;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\AuthenticationEventListeners\AuthenticationEventListenersRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\AuthenticationEventsFlows\AuthenticationEventsFlowsRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\CustomAuthenticationExtensions\CustomAuthenticationExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\RiskPrevention\RiskPreventionRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityContainer;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -71,6 +72,13 @@ class IdentityRequestBuilder extends BaseRequestBuilder
     */
     public function identityProviders(): IdentityProvidersRequestBuilder {
         return new IdentityProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the riskPrevention property of the microsoft.graph.identityContainer entity.
+    */
+    public function riskPrevention(): RiskPreventionRequestBuilder {
+        return new RiskPreventionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\MobileAppTroubleshootingEvents;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\MobileAppTroubleshootingEvents;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the mobileAppTroubleshootingEvent objects.
+ * The collection property of MobileAppTroubleshootingEvent.
 */
 class MobileAppTroubleshootingEventsRequestBuilderGetQueryParameters 
 {

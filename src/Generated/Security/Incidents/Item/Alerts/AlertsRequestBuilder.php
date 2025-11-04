@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Incidents\Item\Alerts;
+namespace Microsoft\\Graph\\Generated\Security\Incidents\Item\Alerts;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\AlertCollectionResponse;
-use Microsoft\Graph\Generated\Security\Incidents\Item\Alerts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\Incidents\Item\Alerts\Item\AlertItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\AlertCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\Incidents\Item\Alerts\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\Incidents\Item\Alerts\Item\AlertItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

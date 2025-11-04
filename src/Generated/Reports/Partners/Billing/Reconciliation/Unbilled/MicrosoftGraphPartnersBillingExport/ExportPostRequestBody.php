@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\Unbilled\MicrosoftGraphPartnersBillingExport;
+namespace Microsoft\\Graph\\Generated\Reports\Partners\Billing\Reconciliation\Unbilled\MicrosoftGraphPartnersBillingExport;
 
-use Microsoft\Graph\Generated\Models\Partners\Billing\AttributeSet;
-use Microsoft\Graph\Generated\Models\Partners\Billing\BillingPeriod;
+use Microsoft\\Graph\\Generated\Models\Partners\Billing\AttributeSet;
+use Microsoft\\Graph\\Generated\Models\Partners\Billing\BillingPeriod;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

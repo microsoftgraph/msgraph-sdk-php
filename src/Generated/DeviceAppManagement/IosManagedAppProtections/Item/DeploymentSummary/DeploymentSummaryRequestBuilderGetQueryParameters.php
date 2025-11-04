@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\DeploymentSummary;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item\DeploymentSummary;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the managedAppPolicyDeploymentSummary object.
+ * Navigation property to deployment summary of the configuration.
 */
 class DeploymentSummaryRequestBuilderGetQueryParameters 
 {

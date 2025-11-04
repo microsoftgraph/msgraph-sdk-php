@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Insights\Trending\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\Insights\Trending\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

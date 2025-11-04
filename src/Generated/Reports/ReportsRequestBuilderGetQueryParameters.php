@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports;
+namespace Microsoft\\Graph\\Generated\Reports;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the reportRoot object.
+ * Get reports
 */
 class ReportsRequestBuilderGetQueryParameters 
 {

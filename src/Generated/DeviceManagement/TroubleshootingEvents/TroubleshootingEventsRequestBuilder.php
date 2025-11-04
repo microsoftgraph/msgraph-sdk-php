@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\TroubleshootingEvents;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DeviceManagementTroubleshootingEvent;
-use Microsoft\Graph\Generated\Models\DeviceManagementTroubleshootingEventCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\TroubleshootingEvents\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\TroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DeviceManagementTroubleshootingEvent;
+use Microsoft\\Graph\\Generated\Models\DeviceManagementTroubleshootingEventCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
