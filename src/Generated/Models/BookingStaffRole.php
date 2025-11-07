@@ -11,5 +11,5 @@ class BookingStaffRole extends Enum {
     public const EXTERNAL_GUEST = "externalGuest";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     public const SCHEDULER = "scheduler";
-    public const TEAM_MEMBER = "teamMember";
+    public const TEAM_MEMBER = "member";
 }
