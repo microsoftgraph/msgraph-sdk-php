@@ -30,7 +30,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the azureStorageUri property value. The Azure Storage URI.
+     * Gets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only. This property is read-only.
      * @return string|null
     */
     public function getAzureStorageUri(): ?string {
@@ -42,7 +42,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
+     * Gets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @return DateTime|null
     */
     public function getAzureStorageUriExpirationDateTime(): ?DateTime {
@@ -54,7 +54,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The time the file was created.
+     * Gets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -86,7 +86,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the isCommitted property value. A value indicating whether the file is committed.
+     * Gets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only. This property is read-only.
      * @return bool|null
     */
     public function getIsCommitted(): ?bool {
@@ -110,7 +110,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the manifest property value. The manifest information.
+     * Gets the manifest property value. Indicates the manifest information, containing file metadata.
      * @return StreamInterface|null
     */
     public function getManifest(): ?StreamInterface {
@@ -122,7 +122,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. the file name.
+     * Gets the name property value. Indicates the name of the file.
      * @return string|null
     */
     public function getName(): ?string {
@@ -134,7 +134,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the size property value. The size of the file prior to encryption.
+     * Gets the size property value. Indicates the original size of the file, in bytes.
      * @return int|null
     */
     public function getSize(): ?int {
@@ -146,7 +146,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Gets the sizeEncrypted property value. The size of the file after encryption.
+     * Gets the sizeEncrypted property value. Indicates the size of the file after encryption, in bytes.
      * @return int|null
     */
     public function getSizeEncrypted(): ?int {
@@ -184,7 +184,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the azureStorageUri property value. The Azure Storage URI.
+     * Sets the azureStorageUri property value. Indicates the Azure Storage URI that the file is uploaded to. Created by the service upon receiving a valid mobileAppContentFile. Read-only. This property is read-only.
      * @param string|null $value Value to set for the azureStorageUri property.
     */
     public function setAzureStorageUri(?string $value): void {
@@ -192,7 +192,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
+     * Sets the azureStorageUriExpirationDateTime property value. Indicates the date and time when the Azure storage URI expires, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @param DateTime|null $value Value to set for the azureStorageUriExpirationDateTime property.
     */
     public function setAzureStorageUriExpirationDateTime(?DateTime $value): void {
@@ -200,7 +200,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The time the file was created.
+     * Sets the createdDateTime property value. Indicates created date and time associated with app content file, in ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only. This property is read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -208,7 +208,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the isCommitted property value. A value indicating whether the file is committed.
+     * Sets the isCommitted property value. A value indicating whether the file is committed. A committed app content file has been fully uploaded and validated by the Intune service. TRUE means that app content file is committed, FALSE means that app content file is not committed. Defaults to FALSE. Read-only. This property is read-only.
      * @param bool|null $value Value to set for the isCommitted property.
     */
     public function setIsCommitted(?bool $value): void {
@@ -224,7 +224,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the manifest property value. The manifest information.
+     * Sets the manifest property value. Indicates the manifest information, containing file metadata.
      * @param StreamInterface|null $value Value to set for the manifest property.
     */
     public function setManifest(?StreamInterface $value): void {
@@ -232,7 +232,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. the file name.
+     * Sets the name property value. Indicates the name of the file.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -240,7 +240,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the size property value. The size of the file prior to encryption.
+     * Sets the size property value. Indicates the original size of the file, in bytes.
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
@@ -248,7 +248,7 @@ class MobileAppContentFile extends Entity implements Parsable
     }
 
     /**
-     * Sets the sizeEncrypted property value. The size of the file after encryption.
+     * Sets the sizeEncrypted property value. Indicates the size of the file after encryption, in bytes.
      * @param int|null $value Value to set for the sizeEncrypted property.
     */
     public function setSizeEncrypted(?int $value): void {

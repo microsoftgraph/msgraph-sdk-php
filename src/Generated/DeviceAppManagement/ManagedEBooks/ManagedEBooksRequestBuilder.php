@@ -52,11 +52,10 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosVppEBook objects.
+     * The Managed eBook.
      * @param ManagedEBooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBookCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebook-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedEBooksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosVppEBook object.
+     * Create new navigation property to managedEBooks for deviceAppManagement
      * @param ManagedEBook $body The request body
      * @param ManagedEBooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedEBook|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-iosvppebook-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedEBook $body, ?ManagedEBooksRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the iosVppEBook objects.
+     * The Managed eBook.
      * @param ManagedEBooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ManagedEBooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new iosVppEBook object.
+     * Create new navigation property to managedEBooks for deviceAppManagement
      * @param ManagedEBook $body The request body
      * @param ManagedEBooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Virtual endpoint
+ * Get virtualEndpoint from deviceManagement
 */
 class VirtualEndpointRequestBuilderGetQueryParameters 
 {

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Place extends Entity implements Parsable 
 {
@@ -45,6 +46,20 @@ class Place extends Entity implements Parsable
     }
 
     /**
+     * Gets the checkIns property value. The checkIns property
+     * @return array<CheckInClaim>|null
+    */
+    public function getCheckIns(): ?array {
+        $val = $this->getBackingStore()->get('checkIns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CheckInClaim::class);
+            /** @var array<CheckInClaim>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'checkIns'");
+    }
+
+    /**
      * Gets the displayName property value. The name associated with the place.
      * @return string|null
     */
@@ -64,6 +79,7 @@ class Place extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'address' => fn(ParseNode $n) => $o->setAddress($n->getObjectValue([PhysicalAddress::class, 'createFromDiscriminatorValue'])),
+            'checkIns' => fn(ParseNode $n) => $o->setCheckIns($n->getCollectionOfObjectValues([CheckInClaim::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'geoCoordinates' => fn(ParseNode $n) => $o->setGeoCoordinates($n->getObjectValue([OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'])),
             'phone' => fn(ParseNode $n) => $o->setPhone($n->getStringValue()),
@@ -101,6 +117,7 @@ class Place extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('address', $this->getAddress());
+        $writer->writeCollectionOfObjectValues('checkIns', $this->getCheckIns());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('geoCoordinates', $this->getGeoCoordinates());
         $writer->writeStringValue('phone', $this->getPhone());
@@ -112,6 +129,14 @@ class Place extends Entity implements Parsable
     */
     public function setAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('address', $value);
+    }
+
+    /**
+     * Sets the checkIns property value. The checkIns property
+     * @param array<CheckInClaim>|null $value Value to set for the checkIns property.
+    */
+    public function setCheckIns(?array $value): void {
+        $this->getBackingStore()->set('checkIns', $value);
     }
 
     /**

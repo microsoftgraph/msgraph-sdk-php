@@ -264,7 +264,6 @@ class DeviceManagement extends Entity implements Parsable
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([DeviceManagementSettings::class, 'createFromDiscriminatorValue'])),
             'softwareUpdateStatusSummary' => fn(ParseNode $n) => $o->setSoftwareUpdateStatusSummary($n->getObjectValue([SoftwareUpdateStatusSummary::class, 'createFromDiscriminatorValue'])),
             'subscriptionState' => fn(ParseNode $n) => $o->setSubscriptionState($n->getEnumValue(DeviceManagementSubscriptionState::class)),
-            'telecomExpenseManagementPartners' => fn(ParseNode $n) => $o->setTelecomExpenseManagementPartners($n->getCollectionOfObjectValues([TelecomExpenseManagementPartner::class, 'createFromDiscriminatorValue'])),
             'termsAndConditions' => fn(ParseNode $n) => $o->setTermsAndConditions($n->getCollectionOfObjectValues([TermsAndConditions::class, 'createFromDiscriminatorValue'])),
             'troubleshootingEvents' => fn(ParseNode $n) => $o->setTroubleshootingEvents($n->getCollectionOfObjectValues([DeviceManagementTroubleshootingEvent::class, 'createFromDiscriminatorValue'])),
             'userExperienceAnalyticsAppHealthApplicationPerformance' => fn(ParseNode $n) => $o->setUserExperienceAnalyticsAppHealthApplicationPerformance($n->getCollectionOfObjectValues([UserExperienceAnalyticsAppHealthApplicationPerformance::class, 'createFromDiscriminatorValue'])),
@@ -435,7 +434,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the reports property value. Reports singleton
+     * Gets the reports property value. The reports property
      * @return DeviceManagementReports|null
     */
     public function getReports(): ?DeviceManagementReports {
@@ -522,20 +521,6 @@ class DeviceManagement extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'subscriptionState'");
-    }
-
-    /**
-     * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @return array<TelecomExpenseManagementPartner>|null
-    */
-    public function getTelecomExpenseManagementPartners(): ?array {
-        $val = $this->getBackingStore()->get('telecomExpenseManagementPartners');
-        if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, TelecomExpenseManagementPartner::class);
-            /** @var array<TelecomExpenseManagementPartner>|null $val */
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'telecomExpenseManagementPartners'");
     }
 
     /**
@@ -895,7 +880,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Gets the virtualEndpoint property value. Virtual endpoint
+     * Gets the virtualEndpoint property value. The virtualEndpoint property
      * @return VirtualEndpoint|null
     */
     public function getVirtualEndpoint(): ?VirtualEndpoint {
@@ -1012,7 +997,6 @@ class DeviceManagement extends Entity implements Parsable
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeObjectValue('softwareUpdateStatusSummary', $this->getSoftwareUpdateStatusSummary());
         $writer->writeEnumValue('subscriptionState', $this->getSubscriptionState());
-        $writer->writeCollectionOfObjectValues('telecomExpenseManagementPartners', $this->getTelecomExpenseManagementPartners());
         $writer->writeCollectionOfObjectValues('termsAndConditions', $this->getTermsAndConditions());
         $writer->writeCollectionOfObjectValues('troubleshootingEvents', $this->getTroubleshootingEvents());
         $writer->writeCollectionOfObjectValues('userExperienceAnalyticsAppHealthApplicationPerformance', $this->getUserExperienceAnalyticsAppHealthApplicationPerformance());
@@ -1248,7 +1232,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the reports property value. Reports singleton
+     * Sets the reports property value. The reports property
      * @param DeviceManagementReports|null $value Value to set for the reports property.
     */
     public function setReports(?DeviceManagementReports $value): void {
@@ -1301,14 +1285,6 @@ class DeviceManagement extends Entity implements Parsable
     */
     public function setSubscriptionState(?DeviceManagementSubscriptionState $value): void {
         $this->getBackingStore()->set('subscriptionState', $value);
-    }
-
-    /**
-     * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @param array<TelecomExpenseManagementPartner>|null $value Value to set for the telecomExpenseManagementPartners property.
-    */
-    public function setTelecomExpenseManagementPartners(?array $value): void {
-        $this->getBackingStore()->set('telecomExpenseManagementPartners', $value);
     }
 
     /**
@@ -1520,7 +1496,7 @@ class DeviceManagement extends Entity implements Parsable
     }
 
     /**
-     * Sets the virtualEndpoint property value. Virtual endpoint
+     * Sets the virtualEndpoint property value. The virtualEndpoint property
      * @param VirtualEndpoint|null $value Value to set for the virtualEndpoint property.
     */
     public function setVirtualEndpoint(?VirtualEndpoint $value): void {

@@ -45,11 +45,10 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationDeviceStateSummary|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the properties of a deviceConfigurationDeviceStateSummary object.
+     * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
      * @param DeviceConfigurationDeviceStateSummary $body The request body
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceConfigurationDeviceStateSummary|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationdevicestatesummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceConfigurationDeviceStateSummary $body, ?DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read properties and relationships of the deviceConfigurationDeviceStateSummary object.
+     * The device configuration device state summary for this account.
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the properties of a deviceConfigurationDeviceStateSummary object.
+     * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
      * @param DeviceConfigurationDeviceStateSummary $body The request body
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

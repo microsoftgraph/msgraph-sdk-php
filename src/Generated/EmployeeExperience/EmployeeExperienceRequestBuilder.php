@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\Engag
 use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\LearningProvidersRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\Roles\RolesRequestBuilder;
 use Microsoft\Graph\Generated\Models\EmployeeExperience;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -47,6 +48,13 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
     */
     public function learningProviders(): LearningProvidersRequestBuilder {
         return new LearningProvidersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the roles property of the microsoft.graph.employeeExperience entity.
+    */
+    public function roles(): RolesRequestBuilder {
+        return new RolesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -56,7 +56,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the calendarSyncEnabled property value. Not yet documented
+     * Gets the calendarSyncEnabled property value. The calendarSyncEnabled property
      * @return bool|null
     */
     public function getCalendarSyncEnabled(): ?bool {
@@ -68,7 +68,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the deviceAccount property value. Not yet documented
+     * Gets the deviceAccount property value. The deviceAccount property
      * @return WindowsDeviceAccount|null
     */
     public function getDeviceAccount(): ?WindowsDeviceAccount {
@@ -80,7 +80,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the deviceAccountEmail property value. Not yet documented
+     * Gets the deviceAccountEmail property value. The deviceAccountEmail property
      * @return string|null
     */
     public function getDeviceAccountEmail(): ?string {
@@ -92,7 +92,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the exchangeServer property value. Not yet documented
+     * Gets the exchangeServer property value. The exchangeServer property
      * @return string|null
     */
     public function getExchangeServer(): ?string {
@@ -133,7 +133,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the passwordRotationEnabled property value. Not yet documented
+     * Gets the passwordRotationEnabled property value. The passwordRotationEnabled property
      * @return bool|null
     */
     public function getPasswordRotationEnabled(): ?bool {
@@ -145,7 +145,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the sessionInitiationProtocalAddress property value. Not yet documented
+     * Gets the sessionInitiationProtocalAddress property value. The sessionInitiationProtocalAddress property
      * @return string|null
     */
     public function getSessionInitiationProtocalAddress(): ?string {
@@ -188,7 +188,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the calendarSyncEnabled property value. Not yet documented
+     * Sets the calendarSyncEnabled property value. The calendarSyncEnabled property
      * @param bool|null $value Value to set for the calendarSyncEnabled property.
     */
     public function setCalendarSyncEnabled(?bool $value): void {
@@ -196,7 +196,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the deviceAccount property value. Not yet documented
+     * Sets the deviceAccount property value. The deviceAccount property
      * @param WindowsDeviceAccount|null $value Value to set for the deviceAccount property.
     */
     public function setDeviceAccount(?WindowsDeviceAccount $value): void {
@@ -204,7 +204,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the deviceAccountEmail property value. Not yet documented
+     * Sets the deviceAccountEmail property value. The deviceAccountEmail property
      * @param string|null $value Value to set for the deviceAccountEmail property.
     */
     public function setDeviceAccountEmail(?string $value): void {
@@ -212,7 +212,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the exchangeServer property value. Not yet documented
+     * Sets the exchangeServer property value. The exchangeServer property
      * @param string|null $value Value to set for the exchangeServer property.
     */
     public function setExchangeServer(?string $value): void {
@@ -228,7 +228,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the passwordRotationEnabled property value. Not yet documented
+     * Sets the passwordRotationEnabled property value. The passwordRotationEnabled property
      * @param bool|null $value Value to set for the passwordRotationEnabled property.
     */
     public function setPasswordRotationEnabled(?bool $value): void {
@@ -236,7 +236,7 @@ class UpdateWindowsDeviceAccountActionParameter implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the sessionInitiationProtocalAddress property value. Not yet documented
+     * Sets the sessionInitiationProtocalAddress property value. The sessionInitiationProtocalAddress property
      * @param string|null $value Value to set for the sessionInitiationProtocalAddress property.
     */
     public function setSessionInitiationProtocalAddress(?string $value): void {

@@ -121,6 +121,7 @@ class IdentityContainer extends Entity implements Parsable
             'conditionalAccess' => fn(ParseNode $n) => $o->setConditionalAccess($n->getObjectValue([ConditionalAccessRoot::class, 'createFromDiscriminatorValue'])),
             'customAuthenticationExtensions' => fn(ParseNode $n) => $o->setCustomAuthenticationExtensions($n->getCollectionOfObjectValues([CustomAuthenticationExtension::class, 'createFromDiscriminatorValue'])),
             'identityProviders' => fn(ParseNode $n) => $o->setIdentityProviders($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
+            'riskPrevention' => fn(ParseNode $n) => $o->setRiskPrevention($n->getObjectValue([RiskPreventionContainer::class, 'createFromDiscriminatorValue'])),
             'userFlowAttributes' => fn(ParseNode $n) => $o->setUserFlowAttributes($n->getCollectionOfObjectValues([IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -137,6 +138,18 @@ class IdentityContainer extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'identityProviders'");
+    }
+
+    /**
+     * Gets the riskPrevention property value. Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
+     * @return RiskPreventionContainer|null
+    */
+    public function getRiskPrevention(): ?RiskPreventionContainer {
+        $val = $this->getBackingStore()->get('riskPrevention');
+        if (is_null($val) || $val instanceof RiskPreventionContainer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskPrevention'");
     }
 
     /**
@@ -166,6 +179,7 @@ class IdentityContainer extends Entity implements Parsable
         $writer->writeObjectValue('conditionalAccess', $this->getConditionalAccess());
         $writer->writeCollectionOfObjectValues('customAuthenticationExtensions', $this->getCustomAuthenticationExtensions());
         $writer->writeCollectionOfObjectValues('identityProviders', $this->getIdentityProviders());
+        $writer->writeObjectValue('riskPrevention', $this->getRiskPrevention());
         $writer->writeCollectionOfObjectValues('userFlowAttributes', $this->getUserFlowAttributes());
     }
 
@@ -223,6 +237,14 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setIdentityProviders(?array $value): void {
         $this->getBackingStore()->set('identityProviders', $value);
+    }
+
+    /**
+     * Sets the riskPrevention property value. Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
+     * @param RiskPreventionContainer|null $value Value to set for the riskPrevention property.
+    */
+    public function setRiskPrevention(?RiskPreventionContainer $value): void {
+        $this->getBackingStore()->set('riskPrevention', $value);
     }
 
     /**

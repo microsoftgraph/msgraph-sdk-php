@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of a namedLocation object.
+ * Retrieve the properties and relationships of a countryNamedLocation object.
 */
 class NamedLocationItemRequestBuilderGetQueryParameters 
 {

@@ -26,7 +26,7 @@ class DeviceManagementReports extends Entity implements Parsable
     }
 
     /**
-     * Gets the exportJobs property value. Entity representing a job to export a report
+     * Gets the exportJobs property value. Entity representing a job to export a report.
      * @return array<DeviceManagementExportJob>|null
     */
     public function getExportJobs(): ?array {
@@ -60,7 +60,7 @@ class DeviceManagementReports extends Entity implements Parsable
     }
 
     /**
-     * Sets the exportJobs property value. Entity representing a job to export a report
+     * Sets the exportJobs property value. Entity representing a job to export a report.
      * @param array<DeviceManagementExportJob>|null $value Value to set for the exportJobs property.
     */
     public function setExportJobs(?array $value): void {

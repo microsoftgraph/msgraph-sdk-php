@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the managedDeviceMobileAppConfigurationAssignment objects.
+ * The list of group assignemenets for app configration.
 */
 class AssignmentsRequestBuilderGetQueryParameters 
 {

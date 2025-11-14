@@ -52,7 +52,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
+     * Gets the tenantId property value. The tenant ID of the Microsoft Entra user.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -76,7 +76,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Gets the userId property value. The guid of the user.
+     * Gets the userId property value. The user ID of the Microsoft Entra user.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -108,7 +108,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. TenantId which the Microsoft Entra user belongs to.
+     * Sets the tenantId property value. The tenant ID of the Microsoft Entra user.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -124,7 +124,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Sets the userId property value. The guid of the user.
+     * Sets the userId property value. The user ID of the Microsoft Entra user.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

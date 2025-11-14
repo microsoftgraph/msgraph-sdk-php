@@ -39,11 +39,10 @@ class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceManagementPartner.
+     * Delete navigation property deviceManagementPartners for deviceManagement
      * @param DeviceManagementPartnerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceManagementPartnerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagementPartner object.
+     * The list of Device Management Partners configured by the tenant.
      * @param DeviceManagementPartnerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementPartner|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementPartnerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagementPartner object.
+     * Update the navigation property deviceManagementPartners in deviceManagement
      * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementPartner|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-onboarding-devicemanagementpartner-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagementPartner $body, ?DeviceManagementPartnerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a deviceManagementPartner.
+     * Delete navigation property deviceManagementPartners for deviceManagement
      * @param DeviceManagementPartnerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagementPartner object.
+     * The list of Device Management Partners configured by the tenant.
      * @param DeviceManagementPartnerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagementPartner object.
+     * Update the navigation property deviceManagementPartners in deviceManagement
      * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

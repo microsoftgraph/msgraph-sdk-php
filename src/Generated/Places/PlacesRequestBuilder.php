@@ -2,15 +2,21 @@
 
 namespace Microsoft\Graph\Generated\Places;
 
+use Exception;
+use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\Place;
 use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Places\GraphRoom\GraphRoomRequestBuilder;
 use Microsoft\Graph\Generated\Places\GraphRoomList\GraphRoomListRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\PlaceItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
+use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
+use Microsoft\Kiota\Abstractions\RequestInformation;
 
 /**
- * Builds and executes requests for operations under /places
+ * Provides operations to manage the collection of place entities.
 */
 class PlacesRequestBuilder extends BaseRequestBuilder 
 {
@@ -58,6 +64,50 @@ class PlacesRequestBuilder extends BaseRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
+    }
+
+    /**
+     * Add new entity to places
+     * @param Place $body The request body
+     * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<Place|null>
+     * @throws Exception
+    */
+    public function post(Place $body, ?PlacesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [Place::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Add new entity to places
+     * @param Place $body The request body
+     * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPostRequestInformation(Place $body, ?PlacesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::POST;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return PlacesRequestBuilder
+    */
+    public function withUrl(string $rawUrl): PlacesRequestBuilder {
+        return new PlacesRequestBuilder($rawUrl, $this->requestAdapter);
     }
 
 }

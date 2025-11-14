@@ -52,7 +52,7 @@ class ContentVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of content versions for this app.
+     * The list of content versions for this app. This property is read-only.
      * @param ContentVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppContentCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class ContentVersionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of content versions for this app.
+     * The list of content versions for this app. This property is read-only.
      * @param ContentVersionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

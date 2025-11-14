@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtec
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the windowsInformationProtectionPolicy object.
+ * Windows information protection for apps running on devices which are not MDM enrolled.
 */
 class WindowsInformationProtectionPolicyItemRequestBuilderGetQueryParameters 
 {

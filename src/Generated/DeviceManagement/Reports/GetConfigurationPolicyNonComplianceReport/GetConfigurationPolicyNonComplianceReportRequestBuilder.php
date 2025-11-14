@@ -31,12 +31,11 @@ class GetConfigurationPolicyNonComplianceReportRequestBuilder extends BaseReques
     }
 
     /**
-     * Not yet documented
+     * Invoke action getConfigurationPolicyNonComplianceReport
      * @param GetConfigurationPolicyNonComplianceReportPostRequestBody $body The request body
      * @param GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getconfigurationpolicynoncompliancereport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetConfigurationPolicyNonComplianceReportPostRequestBody $body, ?GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -49,7 +48,7 @@ class GetConfigurationPolicyNonComplianceReportRequestBuilder extends BaseReques
     }
 
     /**
-     * Not yet documented
+     * Invoke action getConfigurationPolicyNonComplianceReport
      * @param GetConfigurationPolicyNonComplianceReportPostRequestBody $body The request body
      * @param GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

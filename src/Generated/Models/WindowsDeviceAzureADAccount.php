@@ -37,7 +37,7 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsab
     }
 
     /**
-     * Gets the userPrincipalName property value. Not yet documented
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -58,7 +58,7 @@ class WindowsDeviceAzureADAccount extends WindowsDeviceAccount implements Parsab
     }
 
     /**
-     * Sets the userPrincipalName property value. Not yet documented
+     * Sets the userPrincipalName property value. The userPrincipalName property
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

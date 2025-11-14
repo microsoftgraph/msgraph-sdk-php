@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the termsAndConditions objects.
+ * The terms and conditions associated with device management of the company.
 */
 class TermsAndConditionsRequestBuilderGetQueryParameters 
 {

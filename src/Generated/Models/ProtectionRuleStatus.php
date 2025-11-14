@@ -10,4 +10,6 @@ class ProtectionRuleStatus extends Enum {
     public const COMPLETED = "completed";
     public const COMPLETED_WITH_ERRORS = "completedWithErrors";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const UPDATE_REQUESTED = "updateRequested";
+    public const DELETE_REQUESTED = "deleteRequested";
 }

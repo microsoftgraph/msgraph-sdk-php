@@ -47,7 +47,7 @@ class SubjectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the AAD user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
      * @param SubjectRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
@@ -61,7 +61,7 @@ class SubjectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the AAD user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
      * @param SubjectRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

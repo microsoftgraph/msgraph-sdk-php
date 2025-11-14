@@ -205,11 +205,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagementReports object.
+     * Get reports from deviceManagement
      * @param ReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementReports|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ReportsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -220,12 +219,11 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagementReports object.
+     * Update the navigation property reports in deviceManagement
      * @param DeviceManagementReports $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementReports|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagementReports $body, ?ReportsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -254,7 +252,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagementReports object.
+     * Get reports from deviceManagement
      * @param ReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -275,7 +273,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagementReports object.
+     * Update the navigation property reports in deviceManagement
      * @param DeviceManagementReports $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -31,7 +31,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserProcessingResult|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
+     * The list of users that meet the workflowExecutionConditions of a workflow.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

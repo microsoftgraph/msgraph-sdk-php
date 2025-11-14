@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Not yet documented
+ * Invoke function getUserIdsWithFlaggedAppRegistration
 */
 class GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetQueryParameters 
 {

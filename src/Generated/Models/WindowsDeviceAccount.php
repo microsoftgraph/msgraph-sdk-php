@@ -88,7 +88,7 @@ class WindowsDeviceAccount implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the password property value. Not yet documented
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -134,7 +134,7 @@ class WindowsDeviceAccount implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the password property value. Not yet documented
+     * Sets the password property value. The password property
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {

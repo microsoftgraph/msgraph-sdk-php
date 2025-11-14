@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Place;
+use Microsoft\Graph\Generated\Places\Item\CheckIns\CheckInsRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\GraphRoom\GraphRoomRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\GraphRoomList\GraphRoomListRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class PlaceItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the checkIns property of the microsoft.graph.place entity.
+    */
+    public function checkIns(): CheckInsRequestBuilder {
+        return new CheckInsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Casts the previous resource to room.
     */

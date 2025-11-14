@@ -61,7 +61,7 @@ class MobileAppContentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of content versions for this app.
+     * The list of content versions for this app. This property is read-only.
      * @param MobileAppContentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppContent|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class MobileAppContentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of content versions for this app.
+     * The list of content versions for this app. This property is read-only.
      * @param MobileAppContentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

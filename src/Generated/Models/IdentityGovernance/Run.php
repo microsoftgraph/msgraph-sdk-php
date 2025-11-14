@@ -28,6 +28,18 @@ class Run extends Entity implements Parsable
     }
 
     /**
+     * Gets the activatedOnScope property value. The scope for which the workflow runs.
+     * @return ActivationScope|null
+    */
+    public function getActivatedOnScope(): ?ActivationScope {
+        $val = $this->getBackingStore()->get('activatedOnScope');
+        if (is_null($val) || $val instanceof ActivationScope) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activatedOnScope'");
+    }
+
+    /**
      * Gets the completedDateTime property value. The date time that the run completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return DateTime|null
     */
@@ -70,11 +82,13 @@ class Run extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'activatedOnScope' => fn(ParseNode $n) => $o->setActivatedOnScope($n->getObjectValue([ActivationScope::class, 'createFromDiscriminatorValue'])),
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'failedTasksCount' => fn(ParseNode $n) => $o->setFailedTasksCount($n->getIntegerValue()),
             'failedUsersCount' => fn(ParseNode $n) => $o->setFailedUsersCount($n->getIntegerValue()),
             'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'processingStatus' => fn(ParseNode $n) => $o->setProcessingStatus($n->getEnumValue(LifecycleWorkflowProcessingStatus::class)),
+            'reprocessedRuns' => fn(ParseNode $n) => $o->setReprocessedRuns($n->getCollectionOfObjectValues([Run::class, 'createFromDiscriminatorValue'])),
             'scheduledDateTime' => fn(ParseNode $n) => $o->setScheduledDateTime($n->getDateTimeValue()),
             'startedDateTime' => fn(ParseNode $n) => $o->setStartedDateTime($n->getDateTimeValue()),
             'successfulUsersCount' => fn(ParseNode $n) => $o->setSuccessfulUsersCount($n->getIntegerValue()),
@@ -109,6 +123,20 @@ class Run extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'processingStatus'");
+    }
+
+    /**
+     * Gets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @return array<Run>|null
+    */
+    public function getReprocessedRuns(): ?array {
+        $val = $this->getBackingStore()->get('reprocessedRuns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Run::class);
+            /** @var array<Run>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reprocessedRuns'");
     }
 
     /**
@@ -229,11 +257,13 @@ class Run extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('activatedOnScope', $this->getActivatedOnScope());
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeIntegerValue('failedTasksCount', $this->getFailedTasksCount());
         $writer->writeIntegerValue('failedUsersCount', $this->getFailedUsersCount());
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeEnumValue('processingStatus', $this->getProcessingStatus());
+        $writer->writeCollectionOfObjectValues('reprocessedRuns', $this->getReprocessedRuns());
         $writer->writeDateTimeValue('scheduledDateTime', $this->getScheduledDateTime());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());
         $writer->writeIntegerValue('successfulUsersCount', $this->getSuccessfulUsersCount());
@@ -243,6 +273,14 @@ class Run extends Entity implements Parsable
         $writer->writeIntegerValue('totalUsersCount', $this->getTotalUsersCount());
         $writer->writeCollectionOfObjectValues('userProcessingResults', $this->getUserProcessingResults());
         $writer->writeEnumValue('workflowExecutionType', $this->getWorkflowExecutionType());
+    }
+
+    /**
+     * Sets the activatedOnScope property value. The scope for which the workflow runs.
+     * @param ActivationScope|null $value Value to set for the activatedOnScope property.
+    */
+    public function setActivatedOnScope(?ActivationScope $value): void {
+        $this->getBackingStore()->set('activatedOnScope', $value);
     }
 
     /**
@@ -283,6 +321,14 @@ class Run extends Entity implements Parsable
     */
     public function setProcessingStatus(?LifecycleWorkflowProcessingStatus $value): void {
         $this->getBackingStore()->set('processingStatus', $value);
+    }
+
+    /**
+     * Sets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @param array<Run>|null $value Value to set for the reprocessedRuns property.
+    */
+    public function setReprocessedRuns(?array $value): void {
+        $this->getBackingStore()->set('reprocessedRuns', $value);
     }
 
     /**
