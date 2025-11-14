@@ -32,7 +32,6 @@ use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\ResourceOperat
 use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary\SoftwareUpdateStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\TelecomExpenseManagementPartnersRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformance\UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
@@ -267,13 +266,6 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-    */
-    public function telecomExpenseManagementPartners(): TelecomExpenseManagementPartnersRequestBuilder {
-        return new TelecomExpenseManagementPartnersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
     */
     public function termsAndConditions(): TermsAndConditionsRequestBuilder {
@@ -505,11 +497,10 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @param DeviceManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagement|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-remoteassistance-devicemanagement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -529,12 +520,11 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagement|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-tem-devicemanagement-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagement $body, ?DeviceManagementRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -545,7 +535,7 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the deviceManagement object.
+     * Get deviceManagement
      * @param DeviceManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -566,7 +556,7 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a deviceManagement object.
+     * Update deviceManagement
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

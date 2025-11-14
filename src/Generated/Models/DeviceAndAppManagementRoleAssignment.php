@@ -47,7 +47,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
     }
 
     /**
-     * Gets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     * Gets the members property value. Indicates the list of role member security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @return array<string>|null
     */
     public function getMembers(): ?array {
@@ -70,7 +70,7 @@ class DeviceAndAppManagementRoleAssignment extends RoleAssignment implements Par
     }
 
     /**
-     * Sets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     * Sets the members property value. Indicates the list of role member security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @param array<string>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {

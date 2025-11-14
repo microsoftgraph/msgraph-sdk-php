@@ -31,11 +31,10 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Deletes a targetedManagedAppPolicyAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -46,11 +45,10 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppPolicyAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,12 +59,11 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of a targetedManagedAppPolicyAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param TargetedManagedAppPolicyAssignment $body The request body
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppPolicyAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TargetedManagedAppPolicyAssignment $body, ?TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -77,7 +74,7 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Deletes a targetedManagedAppPolicyAssignment.
+     * Delete navigation property assignments for deviceAppManagement
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -95,7 +92,7 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Read properties and relationships of the targetedManagedAppPolicyAssignment object.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -116,7 +113,7 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the properties of a targetedManagedAppPolicyAssignment object.
+     * Update the navigation property assignments in deviceAppManagement
      * @param TargetedManagedAppPolicyAssignment $body The request body
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

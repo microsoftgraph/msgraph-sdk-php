@@ -52,11 +52,10 @@ class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedAppProtection objects.
+     * Managed app policies.
      * @param ManagedAppPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppPolicyCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-managedappprotection-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedAppPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class ManagedAppPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedAppProtection objects.
+     * Managed app policies.
      * @param ManagedAppPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

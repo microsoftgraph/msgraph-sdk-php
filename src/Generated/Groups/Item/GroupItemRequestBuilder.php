@@ -26,6 +26,7 @@ use Microsoft\Graph\Generated\Groups\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\MembersWithLicenseErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\OnenoteRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\OnPremisesSyncBehavior\OnPremisesSyncBehaviorRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Owners\OwnersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Photo\PhotoRequestBuilder;
@@ -214,6 +215,13 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the onPremisesSyncBehavior property of the microsoft.graph.group entity.
+    */
+    public function onPremisesSyncBehavior(): OnPremisesSyncBehaviorRequestBuilder {
+        return new OnPremisesSyncBehaviorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the owners property of the microsoft.graph.group entity.
     */
     public function owners(): OwnersRequestBuilder {
@@ -375,7 +383,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
+     * Delete a group. When deleted, both Microsoft 365 and security groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This doesn't apply to Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param GroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -421,7 +429,7 @@ class GroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a group. When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This isn't applicable to Security groups and Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
+     * Delete a group. When deleted, both Microsoft 365 and security groups are moved to a temporary container and can be restored within 30 days. After that time, they're permanently deleted. This doesn't apply to Distribution groups which are permanently deleted immediately. To learn more, see deletedItems.
      * @param GroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

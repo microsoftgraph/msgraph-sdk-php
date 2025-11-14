@@ -52,11 +52,10 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfigurationUserStatus objects.
+     * List of ManagedDeviceMobileAppConfigurationUserStatus.
      * @param UserStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedDeviceMobileAppConfigurationUserStatus object.
+     * Create new navigation property to userStatuses for deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationUserStatus $body The request body
      * @param UserStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationUserStatus|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationuserstatus-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedDeviceMobileAppConfigurationUserStatus $body, ?UserStatusesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the managedDeviceMobileAppConfigurationUserStatus objects.
+     * List of ManagedDeviceMobileAppConfigurationUserStatus.
      * @param UserStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class UserStatusesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedDeviceMobileAppConfigurationUserStatus object.
+     * Create new navigation property to userStatuses for deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationUserStatus $body The request body
      * @param UserStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

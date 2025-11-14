@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWin
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+ * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
 */
 class MobileContainedAppItemRequestBuilderGetQueryParameters 
 {

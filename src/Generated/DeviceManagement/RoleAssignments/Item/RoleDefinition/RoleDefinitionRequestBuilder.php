@@ -31,7 +31,7 @@ class RoleDefinitionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      * @param RoleDefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleDefinition|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class RoleDefinitionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Role definition this assignment is part of.
+     * Indicates the role definition for this role assignment.
      * @param RoleDefinitionRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

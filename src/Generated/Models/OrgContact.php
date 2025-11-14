@@ -111,6 +111,7 @@ class OrgContact extends DirectoryObject implements Parsable
             'memberOf' => fn(ParseNode $n) => $o->setMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'onPremisesLastSyncDateTime' => fn(ParseNode $n) => $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()),
             'onPremisesProvisioningErrors' => fn(ParseNode $n) => $o->setOnPremisesProvisioningErrors($n->getCollectionOfObjectValues([OnPremisesProvisioningError::class, 'createFromDiscriminatorValue'])),
+            'onPremisesSyncBehavior' => fn(ParseNode $n) => $o->setOnPremisesSyncBehavior($n->getObjectValue([OnPremisesSyncBehavior::class, 'createFromDiscriminatorValue'])),
             'onPremisesSyncEnabled' => fn(ParseNode $n) => $o->setOnPremisesSyncEnabled($n->getBooleanValue()),
             'phones' => fn(ParseNode $n) => $o->setPhones($n->getCollectionOfObjectValues([Phone::class, 'createFromDiscriminatorValue'])),
             'proxyAddresses' => function (ParseNode $n) {
@@ -228,6 +229,18 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the onPremisesSyncBehavior property value. The onPremisesSyncBehavior property
+     * @return OnPremisesSyncBehavior|null
+    */
+    public function getOnPremisesSyncBehavior(): ?OnPremisesSyncBehavior {
+        $val = $this->getBackingStore()->get('onPremisesSyncBehavior');
+        if (is_null($val) || $val instanceof OnPremisesSyncBehavior) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesSyncBehavior'");
+    }
+
+    /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).   Supports $filter (eq, ne, not, in, and eq for null values).
      * @return bool|null
     */
@@ -326,6 +339,7 @@ class OrgContact extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('memberOf', $this->getMemberOf());
         $writer->writeDateTimeValue('onPremisesLastSyncDateTime', $this->getOnPremisesLastSyncDateTime());
         $writer->writeCollectionOfObjectValues('onPremisesProvisioningErrors', $this->getOnPremisesProvisioningErrors());
+        $writer->writeObjectValue('onPremisesSyncBehavior', $this->getOnPremisesSyncBehavior());
         $writer->writeBooleanValue('onPremisesSyncEnabled', $this->getOnPremisesSyncEnabled());
         $writer->writeCollectionOfObjectValues('phones', $this->getPhones());
         $writer->writeCollectionOfPrimitiveValues('proxyAddresses', $this->getProxyAddresses());
@@ -436,6 +450,14 @@ class OrgContact extends DirectoryObject implements Parsable
     */
     public function setOnPremisesProvisioningErrors(?array $value): void {
         $this->getBackingStore()->set('onPremisesProvisioningErrors', $value);
+    }
+
+    /**
+     * Sets the onPremisesSyncBehavior property value. The onPremisesSyncBehavior property
+     * @param OnPremisesSyncBehavior|null $value Value to set for the onPremisesSyncBehavior property.
+    */
+    public function setOnPremisesSyncBehavior(?OnPremisesSyncBehavior $value): void {
+        $this->getBackingStore()->set('onPremisesSyncBehavior', $value);
     }
 
     /**

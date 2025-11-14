@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartner
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the complianceManagementPartner object.
+ * The list of Compliance Management Partners configured by the tenant.
 */
 class ComplianceManagementPartnerItemRequestBuilderGetQueryParameters 
 {

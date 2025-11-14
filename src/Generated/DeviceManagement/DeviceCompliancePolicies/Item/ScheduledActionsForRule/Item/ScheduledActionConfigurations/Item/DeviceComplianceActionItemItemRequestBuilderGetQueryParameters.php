@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceComplianceActionItem object.
+ * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
 */
 class DeviceComplianceActionItemItemRequestBuilderGetQueryParameters 
 {

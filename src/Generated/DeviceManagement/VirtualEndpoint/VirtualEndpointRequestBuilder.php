@@ -101,7 +101,7 @@ class VirtualEndpointRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      * @param VirtualEndpointRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEndpoint|null>
      * @throws Exception
@@ -148,7 +148,7 @@ class VirtualEndpointRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Virtual endpoint
+     * Get virtualEndpoint from deviceManagement
      * @param VirtualEndpointRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List properties and relationships of the iosUpdateDeviceStatus objects.
+ * The IOS software update installation statuses for this account.
 */
 class IosUpdateStatusesRequestBuilderGetQueryParameters 
 {

@@ -38,6 +38,7 @@ class CustomExtensionData implements AdditionalDataHolder, BackedModel, Parsable
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
                 case '#microsoft.graph.accessPackageAssignmentRequestCallbackData': return new AccessPackageAssignmentRequestCallbackData();
+                case '#microsoft.graph.assignmentRequestApprovalStageCallbackData': return new AssignmentRequestApprovalStageCallbackData();
                 case '#microsoft.graph.identityGovernance.customTaskExtensionCallbackData': return new CustomTaskExtensionCallbackData();
                 case '#microsoft.graph.identityGovernance.customTaskExtensionCalloutData': return new CustomTaskExtensionCalloutData();
             }

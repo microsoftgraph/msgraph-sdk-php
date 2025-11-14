@@ -31,12 +31,11 @@ class GetDeviceNonComplianceReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action getDeviceNonComplianceReport
      * @param GetDeviceNonComplianceReportPostRequestBody $body The request body
      * @param GetDeviceNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementreports-getdevicenoncompliancereport?view=graph-rest-1.0 Find more info here
     */
     public function post(GetDeviceNonComplianceReportPostRequestBody $body, ?GetDeviceNonComplianceReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -49,7 +48,7 @@ class GetDeviceNonComplianceReportRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Not yet documented
+     * Invoke action getDeviceNonComplianceReport
      * @param GetDeviceNonComplianceReportPostRequestBody $body The request body
      * @param GetDeviceNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

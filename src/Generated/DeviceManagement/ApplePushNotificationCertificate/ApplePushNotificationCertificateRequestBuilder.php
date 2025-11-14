@@ -53,11 +53,10 @@ class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the applePushNotificationCertificate object.
+     * Apple push notification certificate.
      * @param ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApplePushNotificationCertificate|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,12 +67,11 @@ class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a applePushNotificationCertificate object.
+     * Update the navigation property applePushNotificationCertificate in deviceManagement
      * @param ApplePushNotificationCertificate $body The request body
      * @param ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApplePushNotificationCertificate|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-applepushnotificationcertificate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ApplePushNotificationCertificate $body, ?ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -102,7 +100,7 @@ class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the applePushNotificationCertificate object.
+     * Apple push notification certificate.
      * @param ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -123,7 +121,7 @@ class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a applePushNotificationCertificate object.
+     * Update the navigation property applePushNotificationCertificate in deviceManagement
      * @param ApplePushNotificationCertificate $body The request body
      * @param ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

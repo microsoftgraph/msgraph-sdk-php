@@ -5,7 +5,9 @@ namespace Microsoft\Graph\Generated\Education\Reports;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Education\Reports\ReadingAssignmentSubmissions\ReadingAssignmentSubmissionsRequestBuilder;
+use Microsoft\Graph\Generated\Education\Reports\ReadingCoachPassages\ReadingCoachPassagesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Reports\ReflectCheckInResponses\ReflectCheckInResponsesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Reports\SpeakerAssignmentSubmissions\SpeakerAssignmentSubmissionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ReportsRoot;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -26,10 +28,24 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the readingCoachPassages property of the microsoft.graph.reportsRoot entity.
+    */
+    public function readingCoachPassages(): ReadingCoachPassagesRequestBuilder {
+        return new ReadingCoachPassagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the reflectCheckInResponses property of the microsoft.graph.reportsRoot entity.
     */
     public function reflectCheckInResponses(): ReflectCheckInResponsesRequestBuilder {
         return new ReflectCheckInResponsesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the speakerAssignmentSubmissions property of the microsoft.graph.reportsRoot entity.
+    */
+    public function speakerAssignmentSubmissions(): SpeakerAssignmentSubmissionsRequestBuilder {
+        return new SpeakerAssignmentSubmissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

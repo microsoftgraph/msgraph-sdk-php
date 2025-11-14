@@ -66,12 +66,11 @@ class ManagedDevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedDevice object.
+     * Create new navigation property to managedDevices for deviceManagement
      * @param ManagedDevice $body The request body
      * @param ManagedDevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDevice|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ManagedDevice $body, ?ManagedDevicesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -103,7 +102,7 @@ class ManagedDevicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new managedDevice object.
+     * Create new navigation property to managedDevices for deviceManagement
      * @param ManagedDevice $body The request body
      * @param ManagedDevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

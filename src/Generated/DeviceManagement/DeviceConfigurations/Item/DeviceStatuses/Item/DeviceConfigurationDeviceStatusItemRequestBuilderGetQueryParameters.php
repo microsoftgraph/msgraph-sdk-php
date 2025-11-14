@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\D
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the deviceConfigurationDeviceStatus object.
+ * Device configuration installation status by device.
 */
 class DeviceConfigurationDeviceStatusItemRequestBuilderGetQueryParameters 
 {

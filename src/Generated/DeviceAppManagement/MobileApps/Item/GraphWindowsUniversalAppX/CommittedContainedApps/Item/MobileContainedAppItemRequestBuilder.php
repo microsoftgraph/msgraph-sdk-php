@@ -45,7 +45,7 @@ class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param MobileContainedAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileContainedApp|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class MobileContainedAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app.
+     * The collection of contained apps in the committed mobileAppContent of a windowsUniversalAppX app. This property is read-only.
      * @param MobileContainedAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

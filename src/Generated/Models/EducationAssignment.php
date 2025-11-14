@@ -232,7 +232,9 @@ class EducationAssignment extends Entity implements Parsable
             'feedbackResourcesFolderUrl' => fn(ParseNode $n) => $o->setFeedbackResourcesFolderUrl($n->getStringValue()),
             'grading' => fn(ParseNode $n) => $o->setGrading($n->getObjectValue([EducationAssignmentGradeType::class, 'createFromDiscriminatorValue'])),
             'gradingCategory' => fn(ParseNode $n) => $o->setGradingCategory($n->getObjectValue([EducationGradingCategory::class, 'createFromDiscriminatorValue'])),
+            'gradingScheme' => fn(ParseNode $n) => $o->setGradingScheme($n->getObjectValue([EducationGradingScheme::class, 'createFromDiscriminatorValue'])),
             'instructions' => fn(ParseNode $n) => $o->setInstructions($n->getObjectValue([EducationItemBody::class, 'createFromDiscriminatorValue'])),
+            'languageTag' => fn(ParseNode $n) => $o->setLanguageTag($n->getStringValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'moduleUrl' => fn(ParseNode $n) => $o->setModuleUrl($n->getStringValue()),
@@ -271,6 +273,18 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
+     * Gets the gradingScheme property value. When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
+     * @return EducationGradingScheme|null
+    */
+    public function getGradingScheme(): ?EducationGradingScheme {
+        $val = $this->getBackingStore()->get('gradingScheme');
+        if (is_null($val) || $val instanceof EducationGradingScheme) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gradingScheme'");
+    }
+
+    /**
      * Gets the instructions property value. Instructions for the assignment. The instructions and the display name tell the student what to do.
      * @return EducationItemBody|null
     */
@@ -280,6 +294,18 @@ class EducationAssignment extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'instructions'");
+    }
+
+    /**
+     * Gets the languageTag property value. Specifies the language in which UI notifications for the assignment are displayed. If languageTag isn't provided, the default language is en-US. Optional.
+     * @return string|null
+    */
+    public function getLanguageTag(): ?string {
+        $val = $this->getBackingStore()->get('languageTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'languageTag'");
     }
 
     /**
@@ -424,7 +450,9 @@ class EducationAssignment extends Entity implements Parsable
         $writer->writeDateTimeValue('dueDateTime', $this->getDueDateTime());
         $writer->writeObjectValue('grading', $this->getGrading());
         $writer->writeObjectValue('gradingCategory', $this->getGradingCategory());
+        $writer->writeObjectValue('gradingScheme', $this->getGradingScheme());
         $writer->writeObjectValue('instructions', $this->getInstructions());
+        $writer->writeStringValue('languageTag', $this->getLanguageTag());
         $writer->writeStringValue('moduleUrl', $this->getModuleUrl());
         $writer->writeStringValue('notificationChannelUrl', $this->getNotificationChannelUrl());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
@@ -569,11 +597,27 @@ class EducationAssignment extends Entity implements Parsable
     }
 
     /**
+     * Sets the gradingScheme property value. When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
+     * @param EducationGradingScheme|null $value Value to set for the gradingScheme property.
+    */
+    public function setGradingScheme(?EducationGradingScheme $value): void {
+        $this->getBackingStore()->set('gradingScheme', $value);
+    }
+
+    /**
      * Sets the instructions property value. Instructions for the assignment. The instructions and the display name tell the student what to do.
      * @param EducationItemBody|null $value Value to set for the instructions property.
     */
     public function setInstructions(?EducationItemBody $value): void {
         $this->getBackingStore()->set('instructions', $value);
+    }
+
+    /**
+     * Sets the languageTag property value. Specifies the language in which UI notifications for the assignment are displayed. If languageTag isn't provided, the default language is en-US. Optional.
+     * @param string|null $value Value to set for the languageTag property.
+    */
+    public function setLanguageTag(?string $value): void {
+        $this->getBackingStore()->set('languageTag', $value);
     }
 
     /**

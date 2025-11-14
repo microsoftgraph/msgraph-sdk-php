@@ -26,13 +26,27 @@ class EducationAssignmentSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the defaultGradingScheme property value. The default grading scheme for assignments created in this class.
+     * @return EducationGradingScheme|null
+    */
+    public function getDefaultGradingScheme(): ?EducationGradingScheme {
+        $val = $this->getBackingStore()->get('defaultGradingScheme');
+        if (is_null($val) || $val instanceof EducationGradingScheme) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultGradingScheme'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'defaultGradingScheme' => fn(ParseNode $n) => $o->setDefaultGradingScheme($n->getObjectValue([EducationGradingScheme::class, 'createFromDiscriminatorValue'])),
             'gradingCategories' => fn(ParseNode $n) => $o->setGradingCategories($n->getCollectionOfObjectValues([EducationGradingCategory::class, 'createFromDiscriminatorValue'])),
+            'gradingSchemes' => fn(ParseNode $n) => $o->setGradingSchemes($n->getCollectionOfObjectValues([EducationGradingScheme::class, 'createFromDiscriminatorValue'])),
             'submissionAnimationDisabled' => fn(ParseNode $n) => $o->setSubmissionAnimationDisabled($n->getBooleanValue()),
         ]);
     }
@@ -49,6 +63,20 @@ class EducationAssignmentSettings extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'gradingCategories'");
+    }
+
+    /**
+     * Gets the gradingSchemes property value. The grading schemes that can be attached to assignments created in this class.
+     * @return array<EducationGradingScheme>|null
+    */
+    public function getGradingSchemes(): ?array {
+        $val = $this->getBackingStore()->get('gradingSchemes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationGradingScheme::class);
+            /** @var array<EducationGradingScheme>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gradingSchemes'");
     }
 
     /**
@@ -69,8 +97,18 @@ class EducationAssignmentSettings extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('defaultGradingScheme', $this->getDefaultGradingScheme());
         $writer->writeCollectionOfObjectValues('gradingCategories', $this->getGradingCategories());
+        $writer->writeCollectionOfObjectValues('gradingSchemes', $this->getGradingSchemes());
         $writer->writeBooleanValue('submissionAnimationDisabled', $this->getSubmissionAnimationDisabled());
+    }
+
+    /**
+     * Sets the defaultGradingScheme property value. The default grading scheme for assignments created in this class.
+     * @param EducationGradingScheme|null $value Value to set for the defaultGradingScheme property.
+    */
+    public function setDefaultGradingScheme(?EducationGradingScheme $value): void {
+        $this->getBackingStore()->set('defaultGradingScheme', $value);
     }
 
     /**
@@ -79,6 +117,14 @@ class EducationAssignmentSettings extends Entity implements Parsable
     */
     public function setGradingCategories(?array $value): void {
         $this->getBackingStore()->set('gradingCategories', $value);
+    }
+
+    /**
+     * Sets the gradingSchemes property value. The grading schemes that can be attached to assignments created in this class.
+     * @param array<EducationGradingScheme>|null $value Value to set for the gradingSchemes property.
+    */
+    public function setGradingSchemes(?array $value): void {
+        $this->getBackingStore()->set('gradingSchemes', $value);
     }
 
     /**

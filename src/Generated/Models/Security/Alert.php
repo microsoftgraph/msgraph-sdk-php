@@ -236,6 +236,7 @@ class Alert extends Entity implements Parsable
             'firstActivityDateTime' => fn(ParseNode $n) => $o->setFirstActivityDateTime($n->getDateTimeValue()),
             'incidentId' => fn(ParseNode $n) => $o->setIncidentId($n->getStringValue()),
             'incidentWebUrl' => fn(ParseNode $n) => $o->setIncidentWebUrl($n->getStringValue()),
+            'investigationState' => fn(ParseNode $n) => $o->setInvestigationState($n->getEnumValue(InvestigationState::class)),
             'lastActivityDateTime' => fn(ParseNode $n) => $o->setLastActivityDateTime($n->getDateTimeValue()),
             'lastUpdateDateTime' => fn(ParseNode $n) => $o->setLastUpdateDateTime($n->getDateTimeValue()),
             'mitreTechniques' => function (ParseNode $n) {
@@ -302,6 +303,18 @@ class Alert extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'incidentWebUrl'");
+    }
+
+    /**
+     * Gets the investigationState property value. Information on the current status of the investigation. Possible values are: unknown, terminated, successfullyRemediated, benign, failed, partiallyRemediated, running, pendingApproval, pendingResource, queued, innerFailure, preexistingAlert, unsupportedOs, unsupportedAlertType, suppressedAlert, partiallyInvestigated, terminatedByUser, terminatedBySystem, unknownFutureValue.
+     * @return InvestigationState|null
+    */
+    public function getInvestigationState(): ?InvestigationState {
+        $val = $this->getBackingStore()->get('investigationState');
+        if (is_null($val) || $val instanceof InvestigationState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'investigationState'");
     }
 
     /**
@@ -512,6 +525,7 @@ class Alert extends Entity implements Parsable
         $writer->writeDateTimeValue('firstActivityDateTime', $this->getFirstActivityDateTime());
         $writer->writeStringValue('incidentId', $this->getIncidentId());
         $writer->writeStringValue('incidentWebUrl', $this->getIncidentWebUrl());
+        $writer->writeEnumValue('investigationState', $this->getInvestigationState());
         $writer->writeDateTimeValue('lastActivityDateTime', $this->getLastActivityDateTime());
         $writer->writeDateTimeValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
         $writer->writeCollectionOfPrimitiveValues('mitreTechniques', $this->getMitreTechniques());
@@ -671,6 +685,14 @@ class Alert extends Entity implements Parsable
     */
     public function setIncidentWebUrl(?string $value): void {
         $this->getBackingStore()->set('incidentWebUrl', $value);
+    }
+
+    /**
+     * Sets the investigationState property value. Information on the current status of the investigation. Possible values are: unknown, terminated, successfullyRemediated, benign, failed, partiallyRemediated, running, pendingApproval, pendingResource, queued, innerFailure, preexistingAlert, unsupportedOs, unsupportedAlertType, suppressedAlert, partiallyInvestigated, terminatedByUser, terminatedBySystem, unknownFutureValue.
+     * @param InvestigationState|null $value Value to set for the investigationState property.
+    */
+    public function setInvestigationState(?InvestigationState $value): void {
+        $this->getBackingStore()->set('investigationState', $value);
     }
 
     /**

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\EmployeeExperienceUser;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\AssignedRoles\AssignedRolesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class EmployeeExperienceRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the assignedRoles property of the microsoft.graph.employeeExperienceUser entity.
+    */
+    public function assignedRoles(): AssignedRolesRequestBuilder {
+        return new AssignedRolesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
     */

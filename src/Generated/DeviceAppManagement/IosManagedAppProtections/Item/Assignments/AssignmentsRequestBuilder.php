@@ -52,11 +52,10 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the targetedManagedAppPolicyAssignment objects.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param AssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppPolicyAssignmentCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-mam-targetedmanagedapppolicyassignment-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -82,7 +81,7 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the targetedManagedAppPolicyAssignment objects.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      * @param AssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -60,7 +60,7 @@ class Report implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the content property value. Not yet documented
+     * Gets the content property value. The http content that has the data
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -122,7 +122,7 @@ class Report implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the content property value. Not yet documented
+     * Sets the content property value. The http content that has the data
      * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {

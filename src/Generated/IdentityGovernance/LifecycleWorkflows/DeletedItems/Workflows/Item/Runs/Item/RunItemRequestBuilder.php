@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\ReprocessedRuns\ReprocessedRunsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\TaskProcessingResults\TaskProcessingResultsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\UserProcessingResults\UserProcessingResultsRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\Run;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class RunItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the reprocessedRuns property of the microsoft.graph.identityGovernance.run entity.
+    */
+    public function reprocessedRuns(): ReprocessedRunsRequestBuilder {
+        return new ReprocessedRunsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.run entity.
     */

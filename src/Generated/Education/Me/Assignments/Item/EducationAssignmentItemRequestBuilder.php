@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Activate\ActivateReq
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Deactivate\DeactivateRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\GradingCategory\GradingCategoryRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\GradingScheme\GradingSchemeRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
@@ -52,6 +53,13 @@ class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder
     */
     public function gradingCategory(): GradingCategoryRequestBuilder {
         return new GradingCategoryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the gradingScheme property of the microsoft.graph.educationAssignment entity.
+    */
+    public function gradingScheme(): GradingSchemeRequestBuilder {
+        return new GradingSchemeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

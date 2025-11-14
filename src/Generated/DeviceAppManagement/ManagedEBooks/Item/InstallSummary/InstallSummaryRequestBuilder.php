@@ -45,11 +45,10 @@ class InstallSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the eBookInstallSummary object.
+     * Mobile App Install Summary.
      * @param InstallSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EBookInstallSummary|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-ebookinstallsummary-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?InstallSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -60,12 +59,11 @@ class InstallSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a eBookInstallSummary object.
+     * Update the navigation property installSummary in deviceAppManagement
      * @param EBookInstallSummary $body The request body
      * @param InstallSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EBookInstallSummary|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-books-ebookinstallsummary-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EBookInstallSummary $body, ?InstallSummaryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -94,7 +92,7 @@ class InstallSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the eBookInstallSummary object.
+     * Mobile App Install Summary.
      * @param InstallSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -115,7 +113,7 @@ class InstallSummaryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a eBookInstallSummary object.
+     * Update the navigation property installSummary in deviceAppManagement
      * @param EBookInstallSummary $body The request body
      * @param InstallSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

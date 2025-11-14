@@ -99,6 +99,7 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
             'learningCourseActivities' => fn(ParseNode $n) => $o->setLearningCourseActivities($n->getCollectionOfObjectValues([LearningCourseActivity::class, 'createFromDiscriminatorValue'])),
             'learningProviders' => fn(ParseNode $n) => $o->setLearningProviders($n->getCollectionOfObjectValues([LearningProvider::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfObjectValues([EngagementRole::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -143,6 +144,20 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the roles property value. A collection of roles in Viva Engage.
+     * @return array<EngagementRole>|null
+    */
+    public function getRoles(): ?array {
+        $val = $this->getBackingStore()->get('roles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EngagementRole::class);
+            /** @var array<EngagementRole>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roles'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -152,6 +167,7 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeCollectionOfObjectValues('learningCourseActivities', $this->getLearningCourseActivities());
         $writer->writeCollectionOfObjectValues('learningProviders', $this->getLearningProviders());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('roles', $this->getRoles());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -209,6 +225,14 @@ class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the roles property value. A collection of roles in Viva Engage.
+     * @param array<EngagementRole>|null $value Value to set for the roles property.
+    */
+    public function setRoles(?array $value): void {
+        $this->getBackingStore()->set('roles', $value);
     }
 
 }

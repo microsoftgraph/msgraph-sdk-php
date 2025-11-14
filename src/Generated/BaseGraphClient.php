@@ -418,7 +418,7 @@ class BaseGraphClient extends BaseRequestBuilder
     }
     
     /**
-     * The places property
+     * Provides operations to manage the collection of place entities.
     */
     public function places(): PlacesRequestBuilder {
         return new PlacesRequestBuilder($this->pathParameters, $this->requestAdapter);

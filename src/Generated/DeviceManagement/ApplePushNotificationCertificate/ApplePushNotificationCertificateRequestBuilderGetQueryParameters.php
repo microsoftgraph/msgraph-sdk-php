@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertif
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the applePushNotificationCertificate object.
+ * Apple push notification certificate.
 */
 class ApplePushNotificationCertificateRequestBuilderGetQueryParameters 
 {

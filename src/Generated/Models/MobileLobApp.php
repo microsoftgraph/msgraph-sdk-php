@@ -56,7 +56,7 @@ class MobileLobApp extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the contentVersions property value. The list of content versions for this app.
+     * Gets the contentVersions property value. The list of content versions for this app. This property is read-only.
      * @return array<MobileAppContent>|null
     */
     public function getContentVersions(): ?array {
@@ -96,7 +96,7 @@ class MobileLobApp extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the size property value. The total size, including all uploaded files.
+     * Gets the size property value. The total size, including all uploaded files. This property is read-only.
      * @return int|null
     */
     public function getSize(): ?int {
@@ -127,7 +127,7 @@ class MobileLobApp extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the contentVersions property value. The list of content versions for this app.
+     * Sets the contentVersions property value. The list of content versions for this app. This property is read-only.
      * @param array<MobileAppContent>|null $value Value to set for the contentVersions property.
     */
     public function setContentVersions(?array $value): void {
@@ -143,7 +143,7 @@ class MobileLobApp extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the size property value. The total size, including all uploaded files.
+     * Sets the size property value. The total size, including all uploaded files. This property is read-only.
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
