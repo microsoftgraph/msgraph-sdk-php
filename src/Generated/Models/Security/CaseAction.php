@@ -16,4 +16,5 @@ class CaseAction extends Enum {
     public const PURGE_DATA = "purgeData";
     public const EXPORT_REPORT = "exportReport";
     public const EXPORT_RESULT = "exportResult";
+    public const HOLD_POLICY_SYNC = "holdPolicySync";
 }

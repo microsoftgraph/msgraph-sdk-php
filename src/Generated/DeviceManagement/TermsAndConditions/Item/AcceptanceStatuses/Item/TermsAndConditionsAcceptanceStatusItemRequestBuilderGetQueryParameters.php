@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the termsAndConditionsAcceptanceStatus object.
+ * The list of acceptance statuses for this T&C policy.
 */
 class TermsAndConditionsAcceptanceStatusItemRequestBuilderGetQueryParameters 
 {

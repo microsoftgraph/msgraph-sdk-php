@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The unique identifier of the AAD user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
+ * The unique identifier of the user targeted for the taskProcessingResult.Supports $filter(eq, ne) and $expand.
 */
 class SubjectRequestBuilderGetQueryParameters 
 {

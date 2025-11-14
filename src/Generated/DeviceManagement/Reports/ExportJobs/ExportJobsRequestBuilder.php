@@ -52,11 +52,10 @@ class ExportJobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementExportJob objects.
+     * Entity representing a job to export a report.
      * @param ExportJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExportJobCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExportJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +66,11 @@ class ExportJobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementExportJob object.
+     * Create new navigation property to exportJobs for deviceManagement
      * @param DeviceManagementExportJob $body The request body
      * @param ExportJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExportJob|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-reporting-devicemanagementexportjob-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceManagementExportJob $body, ?ExportJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +81,7 @@ class ExportJobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the deviceManagementExportJob objects.
+     * Entity representing a job to export a report.
      * @param ExportJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +102,7 @@ class ExportJobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new deviceManagementExportJob object.
+     * Create new navigation property to exportJobs for deviceManagement
      * @param DeviceManagementExportJob $body The request body
      * @param ExportJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -8,4 +8,5 @@ class WorkflowExecutionType extends Enum {
     public const SCHEDULED = "scheduled";
     public const ON_DEMAND = "onDemand";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const ACTIVATED_WITH_SCOPE = "activatedWithScope";
 }

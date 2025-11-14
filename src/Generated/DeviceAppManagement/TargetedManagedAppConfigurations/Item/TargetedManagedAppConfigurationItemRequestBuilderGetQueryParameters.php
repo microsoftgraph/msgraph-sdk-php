@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfig
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the targetedManagedAppConfiguration object.
+ * Targeted managed app configurations.
 */
 class TargetedManagedAppConfigurationItemRequestBuilderGetQueryParameters 
 {

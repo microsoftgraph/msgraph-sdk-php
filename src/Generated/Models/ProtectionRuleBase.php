@@ -88,7 +88,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the isAutoApplyEnabled property value. The isAutoApplyEnabled property
+     * Gets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it's static.
      * @return bool|null
     */
     public function getIsAutoApplyEnabled(): ?bool {
@@ -124,7 +124,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue. The draft member is currently unsupported.
+     * Gets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue, updateRequested, deleteRequested. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: updateRequested , deleteRequested. The draft member is currently unsupported.
      * @return ProtectionRuleStatus|null
     */
     public function getStatus(): ?ProtectionRuleStatus {
@@ -175,7 +175,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the isAutoApplyEnabled property value. The isAutoApplyEnabled property
+     * Sets the isAutoApplyEnabled property value. true indicates that the protection rule is dynamic; false that it's static.
      * @param bool|null $value Value to set for the isAutoApplyEnabled property.
     */
     public function setIsAutoApplyEnabled(?bool $value): void {
@@ -199,7 +199,7 @@ class ProtectionRuleBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue. The draft member is currently unsupported.
+     * Sets the status property value. The status of the protection rule. The possible values are: draft, active, completed, completedWithErrors, unknownFutureValue, updateRequested, deleteRequested. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: updateRequested , deleteRequested. The draft member is currently unsupported.
      * @param ProtectionRuleStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ProtectionRuleStatus $value): void {

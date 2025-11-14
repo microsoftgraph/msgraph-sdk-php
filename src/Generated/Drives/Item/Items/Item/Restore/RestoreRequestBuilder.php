@@ -31,7 +31,7 @@ class RestoreRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a deleted driveItem that is currently in the recycle bin.
      * @param RestorePostRequestBody $body The request body
      * @param RestoreRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveItem|null>
@@ -47,7 +47,7 @@ class RestoreRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a deleted driveItem that is currently in the recycle bin.
      * @param RestorePostRequestBody $body The request body
      * @param RestoreRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

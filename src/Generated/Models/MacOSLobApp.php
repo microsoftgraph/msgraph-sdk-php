@@ -94,7 +94,7 @@ class MacOSLobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      * @return bool|null
     */
     public function getIgnoreVersionDetection(): ?bool {
@@ -106,7 +106,7 @@ class MacOSLobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
+     * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. The default value is FALSE.
      * @return bool|null
     */
     public function getInstallAsManaged(): ?bool {
@@ -209,7 +209,7 @@ class MacOSLobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
+     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      * @param bool|null $value Value to set for the ignoreVersionDetection property.
     */
     public function setIgnoreVersionDetection(?bool $value): void {
@@ -217,7 +217,7 @@ class MacOSLobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
+     * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. The default value is FALSE.
      * @param bool|null $value Value to set for the installAsManaged property.
     */
     public function setInstallAsManaged(?bool $value): void {

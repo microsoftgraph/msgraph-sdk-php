@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationAssignmentResource extends Entity implements Parsable 
 {
@@ -22,6 +23,20 @@ class EducationAssignmentResource extends Entity implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): EducationAssignmentResource {
         return new EducationAssignmentResource();
+    }
+
+    /**
+     * Gets the dependentResources property value. A collection of assignment resources that depend on the parent educationAssignmentResource.
+     * @return array<EducationAssignmentResource>|null
+    */
+    public function getDependentResources(): ?array {
+        $val = $this->getBackingStore()->get('dependentResources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationAssignmentResource::class);
+            /** @var array<EducationAssignmentResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dependentResources'");
     }
 
     /**
@@ -43,6 +58,7 @@ class EducationAssignmentResource extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'dependentResources' => fn(ParseNode $n) => $o->setDependentResources($n->getCollectionOfObjectValues([EducationAssignmentResource::class, 'createFromDiscriminatorValue'])),
             'distributeForStudentWork' => fn(ParseNode $n) => $o->setDistributeForStudentWork($n->getBooleanValue()),
             'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([EducationResource::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -66,8 +82,17 @@ class EducationAssignmentResource extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('dependentResources', $this->getDependentResources());
         $writer->writeBooleanValue('distributeForStudentWork', $this->getDistributeForStudentWork());
         $writer->writeObjectValue('resource', $this->getResource());
+    }
+
+    /**
+     * Sets the dependentResources property value. A collection of assignment resources that depend on the parent educationAssignmentResource.
+     * @param array<EducationAssignmentResource>|null $value Value to set for the dependentResources property.
+    */
+    public function setDependentResources(?array $value): void {
+        $this->getBackingStore()->set('dependentResources', $value);
     }
 
     /**

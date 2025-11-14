@@ -29,7 +29,7 @@ class VppToken extends Entity implements Parsable
     }
 
     /**
-     * Gets the appleId property value. The Apple ID associated with the given Apple Volume Purchase Program Token.
+     * Gets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
      * @return string|null
     */
     public function getAppleId(): ?string {
@@ -53,7 +53,7 @@ class VppToken extends Entity implements Parsable
     }
 
     /**
-     * Gets the countryOrRegion property value. The country or region associated with the Apple Volume Purchase Program Token.
+     * Gets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
@@ -201,7 +201,7 @@ class VppToken extends Entity implements Parsable
     }
 
     /**
-     * Sets the appleId property value. The Apple ID associated with the given Apple Volume Purchase Program Token.
+     * Sets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
      * @param string|null $value Value to set for the appleId property.
     */
     public function setAppleId(?string $value): void {
@@ -217,7 +217,7 @@ class VppToken extends Entity implements Parsable
     }
 
     /**
-     * Sets the countryOrRegion property value. The country or region associated with the Apple Volume Purchase Program Token.
+     * Sets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
      * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {

@@ -279,6 +279,20 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the cloudPCs property value. The user's Cloud PCs. Read-only. Nullable.
+     * @return array<CloudPC>|null
+    */
+    public function getCloudPCs(): ?array {
+        $val = $this->getBackingStore()->get('cloudPCs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudPC::class);
+            /** @var array<CloudPC>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudPCs'");
+    }
+
+    /**
      * Gets the companyName property value. The name of the company that the user is associated with. This property can be useful for describing the company that a guest comes from. The maximum length is 64 characters.Returned only on $select. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return string|null
     */
@@ -675,6 +689,7 @@ class User extends DirectoryObject implements Parsable
             'chats' => fn(ParseNode $n) => $o->setChats($n->getCollectionOfObjectValues([Chat::class, 'createFromDiscriminatorValue'])),
             'city' => fn(ParseNode $n) => $o->setCity($n->getStringValue()),
             'cloudClipboard' => fn(ParseNode $n) => $o->setCloudClipboard($n->getObjectValue([CloudClipboardRoot::class, 'createFromDiscriminatorValue'])),
+            'cloudPCs' => fn(ParseNode $n) => $o->setCloudPCs($n->getCollectionOfObjectValues([CloudPC::class, 'createFromDiscriminatorValue'])),
             'companyName' => fn(ParseNode $n) => $o->setCompanyName($n->getStringValue()),
             'consentProvidedForMinor' => fn(ParseNode $n) => $o->setConsentProvidedForMinor($n->getStringValue()),
             'contactFolders' => fn(ParseNode $n) => $o->setContactFolders($n->getCollectionOfObjectValues([ContactFolder::class, 'createFromDiscriminatorValue'])),
@@ -1918,6 +1933,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('chats', $this->getChats());
         $writer->writeStringValue('city', $this->getCity());
         $writer->writeObjectValue('cloudClipboard', $this->getCloudClipboard());
+        $writer->writeCollectionOfObjectValues('cloudPCs', $this->getCloudPCs());
         $writer->writeStringValue('companyName', $this->getCompanyName());
         $writer->writeStringValue('consentProvidedForMinor', $this->getConsentProvidedForMinor());
         $writer->writeCollectionOfObjectValues('contactFolders', $this->getContactFolders());
@@ -2181,6 +2197,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setCloudClipboard(?CloudClipboardRoot $value): void {
         $this->getBackingStore()->set('cloudClipboard', $value);
+    }
+
+    /**
+     * Sets the cloudPCs property value. The user's Cloud PCs. Read-only. Nullable.
+     * @param array<CloudPC>|null $value Value to set for the cloudPCs property.
+    */
+    public function setCloudPCs(?array $value): void {
+        $this->getBackingStore()->set('cloudPCs', $value);
     }
 
     /**

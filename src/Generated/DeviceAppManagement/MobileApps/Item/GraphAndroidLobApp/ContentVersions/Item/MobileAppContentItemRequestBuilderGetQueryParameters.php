@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphAnd
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of content versions for this app.
+ * The list of content versions for this app. This property is read-only.
 */
 class MobileAppContentItemRequestBuilderGetQueryParameters 
 {

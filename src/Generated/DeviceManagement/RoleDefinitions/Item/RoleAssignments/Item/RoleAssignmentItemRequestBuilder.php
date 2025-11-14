@@ -39,11 +39,10 @@ class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a roleAssignment.
+     * Delete navigation property roleAssignments for deviceManagement
      * @param RoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RoleAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -54,11 +53,10 @@ class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the roleAssignment object.
+     * List of Role assignments for this role definition.
      * @param RoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,12 +67,11 @@ class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a roleAssignment object.
+     * Update the navigation property roleAssignments in deviceManagement
      * @param RoleAssignment $body The request body
      * @param RoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-rbac-roleassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(RoleAssignment $body, ?RoleAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -85,7 +82,7 @@ class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deletes a roleAssignment.
+     * Delete navigation property roleAssignments for deviceManagement
      * @param RoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -103,7 +100,7 @@ class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read properties and relationships of the roleAssignment object.
+     * List of Role assignments for this role definition.
      * @param RoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -124,7 +121,7 @@ class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a roleAssignment object.
+     * Update the navigation property roleAssignments in deviceManagement
      * @param RoleAssignment $body The request body
      * @param RoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

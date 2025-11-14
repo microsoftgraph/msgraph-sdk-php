@@ -30,6 +30,7 @@ class AuthenticationEventListener extends Entity implements Parsable
                 case '#microsoft.graph.onAttributeCollectionSubmitListener': return new OnAttributeCollectionSubmitListener();
                 case '#microsoft.graph.onAuthenticationMethodLoadStartListener': return new OnAuthenticationMethodLoadStartListener();
                 case '#microsoft.graph.onEmailOtpSendListener': return new OnEmailOtpSendListener();
+                case '#microsoft.graph.onFraudProtectionLoadStartListener': return new OnFraudProtectionLoadStartListener();
                 case '#microsoft.graph.onInteractiveAuthFlowStartListener': return new OnInteractiveAuthFlowStartListener();
                 case '#microsoft.graph.onTokenIssuanceStartListener': return new OnTokenIssuanceStartListener();
                 case '#microsoft.graph.onUserCreateStartListener': return new OnUserCreateStartListener();
@@ -63,6 +64,18 @@ class AuthenticationEventListener extends Entity implements Parsable
     }
 
     /**
+     * Gets the displayName property value. The display name of the listener.
+     * @return string|null
+    */
+    public function getDisplayName(): ?string {
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -71,6 +84,7 @@ class AuthenticationEventListener extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationEventsFlowId' => fn(ParseNode $n) => $o->setAuthenticationEventsFlowId($n->getStringValue()),
             'conditions' => fn(ParseNode $n) => $o->setConditions($n->getObjectValue([AuthenticationConditions::class, 'createFromDiscriminatorValue'])),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
         ]);
     }
 
@@ -82,6 +96,7 @@ class AuthenticationEventListener extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('authenticationEventsFlowId', $this->getAuthenticationEventsFlowId());
         $writer->writeObjectValue('conditions', $this->getConditions());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
     }
 
     /**
@@ -98,6 +113,14 @@ class AuthenticationEventListener extends Entity implements Parsable
     */
     public function setConditions(?AuthenticationConditions $value): void {
         $this->getBackingStore()->set('conditions', $value);
+    }
+
+    /**
+     * Sets the displayName property value. The display name of the listener.
+     * @param string|null $value Value to set for the displayName property.
+    */
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
 }

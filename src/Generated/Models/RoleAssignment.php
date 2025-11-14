@@ -36,7 +36,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Description of the Role Assignment.
+     * Gets the description property value. Indicates the description of the role assignment. For example: 'All administrators, employees and scope tags associated with the Houston office.' Max length is 1024 characters.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -48,7 +48,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display or friendly name of the role Assignment.
+     * Gets the displayName property value. Indicates the display name of the role assignment. For example: 'Houston administrators and users'. Max length is 128 characters.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -81,7 +81,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceScopes property value. List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
+     * Gets the resourceScopes property value. Indicates the list of resource scope security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @return array<string>|null
     */
     public function getResourceScopes(): ?array {
@@ -95,7 +95,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleDefinition property value. Role definition this assignment is part of.
+     * Gets the roleDefinition property value. Indicates the role definition for this role assignment.
      * @return RoleDefinition|null
     */
     public function getRoleDefinition(): ?RoleDefinition {
@@ -119,7 +119,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. Description of the Role Assignment.
+     * Sets the description property value. Indicates the description of the role assignment. For example: 'All administrators, employees and scope tags associated with the Houston office.' Max length is 1024 characters.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -127,7 +127,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display or friendly name of the role Assignment.
+     * Sets the displayName property value. Indicates the display name of the role assignment. For example: 'Houston administrators and users'. Max length is 128 characters.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -135,7 +135,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceScopes property value. List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
+     * Sets the resourceScopes property value. Indicates the list of resource scope security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @param array<string>|null $value Value to set for the resourceScopes property.
     */
     public function setResourceScopes(?array $value): void {
@@ -143,7 +143,7 @@ class RoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleDefinition property value. Role definition this assignment is part of.
+     * Sets the roleDefinition property value. Indicates the role definition for this role assignment.
      * @param RoleDefinition|null $value Value to set for the roleDefinition property.
     */
     public function setRoleDefinition(?RoleDefinition $value): void {

@@ -62,6 +62,7 @@ class UserProcessingResult extends Entity implements Parsable
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'failedTasksCount' => fn(ParseNode $n) => $o->setFailedTasksCount($n->getIntegerValue()),
             'processingStatus' => fn(ParseNode $n) => $o->setProcessingStatus($n->getEnumValue(LifecycleWorkflowProcessingStatus::class)),
+            'reprocessedRuns' => fn(ParseNode $n) => $o->setReprocessedRuns($n->getCollectionOfObjectValues([Run::class, 'createFromDiscriminatorValue'])),
             'scheduledDateTime' => fn(ParseNode $n) => $o->setScheduledDateTime($n->getDateTimeValue()),
             'startedDateTime' => fn(ParseNode $n) => $o->setStartedDateTime($n->getDateTimeValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
@@ -86,6 +87,20 @@ class UserProcessingResult extends Entity implements Parsable
     }
 
     /**
+     * Gets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @return array<Run>|null
+    */
+    public function getReprocessedRuns(): ?array {
+        $val = $this->getBackingStore()->get('reprocessedRuns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Run::class);
+            /** @var array<Run>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reprocessedRuns'");
+    }
+
+    /**
      * Gets the scheduledDateTime property value. The date time that the workflow is scheduled to be executed for a user.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return DateTime|null
     */
@@ -98,7 +113,7 @@ class UserProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution hasn't started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
@@ -192,6 +207,7 @@ class UserProcessingResult extends Entity implements Parsable
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeIntegerValue('failedTasksCount', $this->getFailedTasksCount());
         $writer->writeEnumValue('processingStatus', $this->getProcessingStatus());
+        $writer->writeCollectionOfObjectValues('reprocessedRuns', $this->getReprocessedRuns());
         $writer->writeDateTimeValue('scheduledDateTime', $this->getScheduledDateTime());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());
         $writer->writeObjectValue('subject', $this->getSubject());
@@ -227,6 +243,14 @@ class UserProcessingResult extends Entity implements Parsable
     }
 
     /**
+     * Sets the reprocessedRuns property value. The related reprocessed workflow run.
+     * @param array<Run>|null $value Value to set for the reprocessedRuns property.
+    */
+    public function setReprocessedRuns(?array $value): void {
+        $this->getBackingStore()->set('reprocessedRuns', $value);
+    }
+
+    /**
      * Sets the scheduledDateTime property value. The date time that the workflow is scheduled to be executed for a user.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param DateTime|null $value Value to set for the scheduledDateTime property.
     */
@@ -235,7 +259,7 @@ class UserProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Sets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution hasn't started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param DateTime|null $value Value to set for the startedDateTime property.
     */
     public function setStartedDateTime(?DateTime $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read properties and relationships of the resourceOperation object.
+ * The Resource Operations.
 */
 class ResourceOperationItemRequestBuilderGetQueryParameters 
 {

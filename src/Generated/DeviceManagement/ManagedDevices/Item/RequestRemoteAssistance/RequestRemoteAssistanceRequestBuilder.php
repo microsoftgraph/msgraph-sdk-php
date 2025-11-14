@@ -34,7 +34,6 @@ class RequestRemoteAssistanceRequestBuilder extends BaseRequestBuilder
      * @param RequestRemoteAssistanceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/intune-devices-manageddevice-requestremoteassistance?view=graph-rest-1.0 Find more info here
     */
     public function post(?RequestRemoteAssistanceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

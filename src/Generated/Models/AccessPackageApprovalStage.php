@@ -33,6 +33,13 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @return AccessPackageApprovalStage
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageApprovalStage {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.accessPackageDynamicApprovalStage': return new AccessPackageDynamicApprovalStage();
+            }
+        }
         return new AccessPackageApprovalStage();
     }
 
