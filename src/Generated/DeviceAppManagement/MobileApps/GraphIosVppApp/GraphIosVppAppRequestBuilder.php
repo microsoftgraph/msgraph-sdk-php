@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphIosVppApp;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphIosVppApp;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphIosVppApp\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\IosVppAppCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphIosVppApp\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IosVppAppCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications;
+namespace Microsoft\\Graph\\Generated\Communications;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\GetAllOnlineMeetingMessages\GetAllOnlineMeetingMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\OnlineMeetingConversationsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\PresencesRequestBuilder;
-use Microsoft\Graph\Generated\Models\CloudCommunications;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\CallRecords\CallRecordsRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Calls\CallsRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\GetAllOnlineMeetingMessages\GetAllOnlineMeetingMessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\OnlineMeetingConversationsRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\Presences\PresencesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudCommunications;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

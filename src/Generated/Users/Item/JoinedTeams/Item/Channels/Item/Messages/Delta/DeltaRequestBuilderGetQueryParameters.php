@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages\Delta;
+namespace Microsoft\\Graph\\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages\Delta;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

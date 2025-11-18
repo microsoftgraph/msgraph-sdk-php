@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item;
+namespace Microsoft\\Graph\\Generated\InformationProtection\ThreatAssessmentRequests\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

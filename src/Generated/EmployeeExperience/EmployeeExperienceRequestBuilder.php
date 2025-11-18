@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EmployeeExperience\Communities\CommunitiesRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\EngagementAsyncOperationsRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\LearningProvidersRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\Roles\RolesRequestBuilder;
-use Microsoft\Graph\Generated\Models\EmployeeExperience;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Communities\CommunitiesRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\EngagementAsyncOperations\EngagementAsyncOperationsRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\LearningProviders\LearningProvidersRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Roles\RolesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EmployeeExperience;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedAppRegistrations\Item;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedAppRegistrations\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ManagedAppRegistration;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ManagedAppRegistration;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

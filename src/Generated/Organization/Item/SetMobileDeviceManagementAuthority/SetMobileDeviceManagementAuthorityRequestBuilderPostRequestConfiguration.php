@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\SetMobileDeviceManagementAuthority;
+namespace Microsoft\\Graph\\Generated\Organization\Item\SetMobileDeviceManagementAuthority;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

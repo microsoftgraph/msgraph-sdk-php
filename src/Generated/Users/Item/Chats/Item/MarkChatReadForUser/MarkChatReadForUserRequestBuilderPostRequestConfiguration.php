@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\MarkChatReadForUser;
+namespace Microsoft\\Graph\\Generated\Users\Item\Chats\Item\MarkChatReadForUser;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

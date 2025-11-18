@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Count;
+namespace Microsoft\\Graph\\Generated\Organization\Item\Branding\Localizations\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsWebApp;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsWebApp;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

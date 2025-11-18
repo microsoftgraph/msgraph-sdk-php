@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Settings;
+namespace Microsoft\\Graph\\Generated\Users\Item\Settings;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserSettings;
-use Microsoft\Graph\Generated\Users\Item\Settings\ItemInsights\ItemInsightsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Settings\ShiftPreferences\ShiftPreferencesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Settings\Storage\StorageRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Settings\Windows\WindowsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserSettings;
+use Microsoft\\Graph\\Generated\Users\Item\Settings\ItemInsights\ItemInsightsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Settings\ShiftPreferences\ShiftPreferencesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Settings\Storage\StorageRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Settings\Windows\WindowsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

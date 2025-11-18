@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Resources\Item\DependentResources\Item;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\Assignments\Item\Resources\Item\DependentResources\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\EducationAssignmentResource;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\EducationAssignmentResource;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

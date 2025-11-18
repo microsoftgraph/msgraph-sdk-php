@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\AllMembers\Add;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Team\PrimaryChannel\AllMembers\Add;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

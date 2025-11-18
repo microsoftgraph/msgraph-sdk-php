@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Security;
+namespace Microsoft\\Graph\\Generated\Models\Security;
 
 use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;

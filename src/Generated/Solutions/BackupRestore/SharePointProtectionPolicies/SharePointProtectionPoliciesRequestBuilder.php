@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointProtectionPolicies;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\SharePointProtectionPolicies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SharePointProtectionPolicy;
-use Microsoft\Graph\Generated\Models\SharePointProtectionPolicyCollectionResponse;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointProtectionPolicies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointProtectionPolicies\Item\SharePointProtectionPolicyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SharePointProtectionPolicy;
+use Microsoft\\Graph\\Generated\Models\SharePointProtectionPolicyCollectionResponse;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\SharePointProtectionPolicies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\SharePointProtectionPolicies\Item\SharePointProtectionPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

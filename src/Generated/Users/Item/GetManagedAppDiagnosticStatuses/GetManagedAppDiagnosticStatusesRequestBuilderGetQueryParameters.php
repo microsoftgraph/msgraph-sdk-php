@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\GetManagedAppDiagnosticStatuses;
+namespace Microsoft\\Graph\\Generated\Users\Item\GetManagedAppDiagnosticStatuses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

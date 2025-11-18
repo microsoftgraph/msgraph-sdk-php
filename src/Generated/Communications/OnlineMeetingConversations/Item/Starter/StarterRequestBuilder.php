@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Starter;
+namespace Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Starter;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Starter\Conversation\ConversationRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Starter\Reactions\ReactionsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Starter\Replies\RepliesRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Starter\ReplyTo\ReplyToRequestBuilder;
-use Microsoft\Graph\Generated\Models\EngagementConversationMessage;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Starter\Conversation\ConversationRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Starter\Reactions\ReactionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Starter\Replies\RepliesRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Starter\ReplyTo\ReplyToRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EngagementConversationMessage;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

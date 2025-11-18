@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetSharePointActivityUserDetailWithDate;
+namespace Microsoft\\Graph\\Generated\Reports\GetSharePointActivityUserDetailWithDate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

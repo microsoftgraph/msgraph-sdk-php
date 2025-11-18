@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\\Graph\\Generated\Models;
 
 use DateInterval;
-use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtensionCallbackConfiguration;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\CustomTaskExtensionCallbackConfiguration;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

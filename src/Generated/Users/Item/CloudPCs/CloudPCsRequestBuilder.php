@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CloudPCs;
+namespace Microsoft\\Graph\\Generated\Users\Item\CloudPCs;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\CloudPC;
-use Microsoft\Graph\Generated\Models\CloudPCCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\CloudPCs\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CloudPCs\Item\CloudPCItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudPC;
+use Microsoft\\Graph\\Generated\Models\CloudPCCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Users\Item\CloudPCs\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\CloudPCs\Item\CloudPCItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

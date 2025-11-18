@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

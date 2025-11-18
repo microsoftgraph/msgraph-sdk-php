@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\HostCookies;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\HostCookies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\HostCookie;
-use Microsoft\Graph\Generated\Models\Security\HostCookieCollectionResponse;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostCookies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\HostCookies\Item\HostCookieItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\HostCookie;
+use Microsoft\\Graph\\Generated\Models\Security\HostCookieCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\HostCookies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\HostCookies\Item\HostCookieItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

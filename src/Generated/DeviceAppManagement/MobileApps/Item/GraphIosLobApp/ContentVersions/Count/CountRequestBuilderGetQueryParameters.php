@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphIosLobApp\ContentVersions\Count;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphIosLobApp\ContentVersions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

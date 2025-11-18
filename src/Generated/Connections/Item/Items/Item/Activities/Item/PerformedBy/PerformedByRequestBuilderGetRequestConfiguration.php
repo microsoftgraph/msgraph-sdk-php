@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Items\Item\Activities\Item\PerformedBy;
+namespace Microsoft\\Graph\\Generated\Connections\Item\Items\Item\Activities\Item\PerformedBy;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

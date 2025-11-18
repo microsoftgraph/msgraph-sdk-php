@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Messages\Item\Reactions\Count;
+namespace Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Messages\Item\Reactions\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

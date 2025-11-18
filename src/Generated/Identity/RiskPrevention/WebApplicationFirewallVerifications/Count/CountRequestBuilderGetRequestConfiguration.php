@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\RiskPrevention\WebApplicationFirewallVerifications\Count;
+namespace Microsoft\\Graph\\Generated\Identity\RiskPrevention\WebApplicationFirewallVerifications\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

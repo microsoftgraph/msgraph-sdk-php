@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetActivitiesByInterval;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetActivitiesByInterval;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

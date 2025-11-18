@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\GetNotebookFromWebUrl;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\GetNotebookFromWebUrl;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

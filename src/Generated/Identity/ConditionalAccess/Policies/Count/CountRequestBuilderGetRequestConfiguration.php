@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\Count;
+namespace Microsoft\\Graph\\Generated\Identity\ConditionalAccess\Policies\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

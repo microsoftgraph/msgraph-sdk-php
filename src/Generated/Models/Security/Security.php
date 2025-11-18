@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models\Security;
+namespace Microsoft\\Graph\\Generated\Models\Security;
 
-use Microsoft\Graph\Generated\Models\Alert;
-use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
-use Microsoft\Graph\Generated\Models\Entity;
-use Microsoft\Graph\Generated\Models\SecureScore;
-use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
-use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Models\TenantDataSecurityAndGovernance;
+use Microsoft\\Graph\\Generated\Models\Alert;
+use Microsoft\\Graph\\Generated\Models\AttackSimulationRoot;
+use Microsoft\\Graph\\Generated\Models\Entity;
+use Microsoft\\Graph\\Generated\Models\SecureScore;
+use Microsoft\\Graph\\Generated\Models\SecureScoreControlProfile;
+use Microsoft\\Graph\\Generated\Models\SubjectRightsRequest;
+use Microsoft\\Graph\\Generated\Models\TenantDataSecurityAndGovernance;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

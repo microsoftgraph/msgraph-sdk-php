@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\Item;
+namespace Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\Rooms\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Room;
-use Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\Item\CheckIns\CheckInsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Room;
+use Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\Rooms\Item\CheckIns\CheckInsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

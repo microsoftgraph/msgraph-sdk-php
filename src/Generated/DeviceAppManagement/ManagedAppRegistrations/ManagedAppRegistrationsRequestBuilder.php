@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration\GetUserIdsWithFlaggedAppRegistrationRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedAppRegistration;
-use Microsoft\Graph\Generated\Models\ManagedAppRegistrationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration\GetUserIdsWithFlaggedAppRegistrationRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedAppRegistration;
+use Microsoft\\Graph\\Generated\Models\ManagedAppRegistrationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\DependentResources\Item;
+namespace Microsoft\\Graph\\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\DependentResources\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

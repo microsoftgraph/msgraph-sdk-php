@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Reports\SpeakerAssignmentSubmissions;
+namespace Microsoft\\Graph\\Generated\Education\Reports\SpeakerAssignmentSubmissions;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

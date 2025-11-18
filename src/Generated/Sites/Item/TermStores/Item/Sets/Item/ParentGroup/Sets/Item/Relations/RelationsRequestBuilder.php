@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Relations;
+namespace Microsoft\\Graph\\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Relations;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermStore\Relation;
-use Microsoft\Graph\Generated\Models\TermStore\RelationCollectionResponse;
-use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Relations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Relations\Item\RelationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TermStore\Relation;
+use Microsoft\\Graph\\Generated\Models\TermStore\RelationCollectionResponse;
+use Microsoft\\Graph\\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Relations\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Relations\Item\RelationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

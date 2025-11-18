@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Items\Item\MicrosoftGraphExternalConnectorsAddActivities;
+namespace Microsoft\\Graph\\Generated\Connections\Item\Items\Item\MicrosoftGraphExternalConnectorsAddActivities;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalActivityResult;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\ExternalConnectors\ExternalActivityResult;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

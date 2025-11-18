@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Messages;
+namespace Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Messages;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Messages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetingConversations\Item\Messages\Item\EngagementConversationMessageItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\EngagementConversationMessage;
-use Microsoft\Graph\Generated\Models\EngagementConversationMessageCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Messages\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Communications\OnlineMeetingConversations\Item\Messages\Item\EngagementConversationMessageItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EngagementConversationMessage;
+use Microsoft\\Graph\\Generated\Models\EngagementConversationMessageCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

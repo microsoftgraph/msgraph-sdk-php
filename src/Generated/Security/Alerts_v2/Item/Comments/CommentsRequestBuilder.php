@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Alerts_v2\Item\Comments;
+namespace Microsoft\\Graph\\Generated\Security\Alerts_v2\Item\Comments;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\AlertComment;
-use Microsoft\Graph\Generated\Security\Alerts_v2\Item\Comments\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\AlertComment;
+use Microsoft\\Graph\\Generated\Security\Alerts_v2\Item\Comments\Count\CountRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Shares\Item\AllowedGroups;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

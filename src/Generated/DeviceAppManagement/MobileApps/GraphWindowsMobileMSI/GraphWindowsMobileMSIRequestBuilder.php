@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WindowsMobileMSICollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\GraphWindowsMobileMSI\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WindowsMobileMSICollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

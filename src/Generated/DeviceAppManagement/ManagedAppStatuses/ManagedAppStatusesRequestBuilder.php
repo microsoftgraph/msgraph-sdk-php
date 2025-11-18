@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppStatuses;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Item\ManagedAppStatusItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedAppStatus;
-use Microsoft\Graph\Generated\Models\ManagedAppStatusCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppStatuses\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedAppStatuses\Item\ManagedAppStatusItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedAppStatus;
+use Microsoft\\Graph\\Generated\Models\ManagedAppStatusCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

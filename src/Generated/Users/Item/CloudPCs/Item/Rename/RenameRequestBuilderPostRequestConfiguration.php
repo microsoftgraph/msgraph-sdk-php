@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CloudPCs\Item\Rename;
+namespace Microsoft\\Graph\\Generated\Users\Item\CloudPCs\Item\Rename;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

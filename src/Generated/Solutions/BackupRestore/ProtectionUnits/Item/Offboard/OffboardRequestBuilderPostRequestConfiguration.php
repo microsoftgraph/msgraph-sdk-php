@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Item\Offboard;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\ProtectionUnits\Item\Offboard;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

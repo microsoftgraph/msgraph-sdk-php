@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Sites;
+namespace Microsoft\\Graph\\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Sites;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

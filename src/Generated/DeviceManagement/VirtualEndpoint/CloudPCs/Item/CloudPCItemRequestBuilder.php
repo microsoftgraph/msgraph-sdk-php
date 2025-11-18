@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\EndGracePeriod\EndGracePeriodRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Reboot\RebootRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Rename\RenameRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Resize\ResizeRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Troubleshoot\TroubleshootRequestBuilder;
-use Microsoft\Graph\Generated\Models\CloudPC;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\EndGracePeriod\EndGracePeriodRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Reboot\RebootRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Rename\RenameRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Resize\ResizeRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceManagement\VirtualEndpoint\CloudPCs\Item\Troubleshoot\TroubleshootRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CloudPC;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

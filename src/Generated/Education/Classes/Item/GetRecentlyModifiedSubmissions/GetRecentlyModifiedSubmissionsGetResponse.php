@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions;
 
-use Microsoft\Graph\Generated\Models\BaseCollectionPaginationCountResponse;
-use Microsoft\Graph\Generated\Models\EducationSubmission;
+use Microsoft\\Graph\\Generated\Models\BaseCollectionPaginationCountResponse;
+use Microsoft\\Graph\\Generated\Models\EducationSubmission;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

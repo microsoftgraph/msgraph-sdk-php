@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Organization\Item;
+namespace Microsoft\\Graph\\Generated\Organization\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Organization;
-use Microsoft\Graph\Generated\Organization\Item\Branding\BrandingRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\SetMobileDeviceManagementAuthority\SetMobileDeviceManagementAuthorityRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Organization;
+use Microsoft\\Graph\\Generated\Organization\Item\Branding\BrandingRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\Extensions\ExtensionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Organization\Item\SetMobileDeviceManagementAuthority\SetMobileDeviceManagementAuthorityRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

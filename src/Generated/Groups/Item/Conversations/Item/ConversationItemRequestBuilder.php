@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Conversations\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
-use Microsoft\Graph\Generated\Models\Conversation;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Conversation;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

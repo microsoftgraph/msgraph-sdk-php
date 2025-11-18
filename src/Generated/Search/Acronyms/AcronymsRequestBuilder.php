@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Search\Acronyms;
+namespace Microsoft\\Graph\\Generated\Search\Acronyms;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Search\Acronym;
-use Microsoft\Graph\Generated\Models\Search\AcronymCollectionResponse;
-use Microsoft\Graph\Generated\Search\Acronyms\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Search\Acronyms\Item\AcronymItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Search\Acronym;
+use Microsoft\\Graph\\Generated\Models\Search\AcronymCollectionResponse;
+use Microsoft\\Graph\\Generated\Search\Acronyms\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Search\Acronyms\Item\AcronymItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

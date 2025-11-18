@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsModelScores\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\UserExperienceAnalyticsModelScores\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

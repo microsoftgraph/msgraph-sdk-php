@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EmployeeExperience\Roles;
+namespace Microsoft\\Graph\\Generated\EmployeeExperience\Roles;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EmployeeExperience\Roles\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\Roles\Item\EngagementRoleItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\EngagementRole;
-use Microsoft\Graph\Generated\Models\EngagementRoleCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Roles\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\EmployeeExperience\Roles\Item\EngagementRoleItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EngagementRole;
+use Microsoft\\Graph\\Generated\Models\EngagementRoleCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

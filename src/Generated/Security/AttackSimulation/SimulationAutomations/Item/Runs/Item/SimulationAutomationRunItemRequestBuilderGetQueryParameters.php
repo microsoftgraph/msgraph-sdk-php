@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\Item\Runs\Item;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\SimulationAutomations\Item\Runs\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

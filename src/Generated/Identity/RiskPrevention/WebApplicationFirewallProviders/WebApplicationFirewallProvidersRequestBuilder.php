@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Identity\RiskPrevention\WebApplicationFirewallProviders;
+namespace Microsoft\\Graph\\Generated\Identity\RiskPrevention\WebApplicationFirewallProviders;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\RiskPrevention\WebApplicationFirewallProviders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\RiskPrevention\WebApplicationFirewallProviders\Item\WebApplicationFirewallProviderItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WebApplicationFirewallProvider;
-use Microsoft\Graph\Generated\Models\WebApplicationFirewallProviderCollectionResponse;
+use Microsoft\\Graph\\Generated\Identity\RiskPrevention\WebApplicationFirewallProviders\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Identity\RiskPrevention\WebApplicationFirewallProviders\Item\WebApplicationFirewallProviderItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WebApplicationFirewallProvider;
+use Microsoft\\Graph\\Generated\Models\WebApplicationFirewallProviderCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

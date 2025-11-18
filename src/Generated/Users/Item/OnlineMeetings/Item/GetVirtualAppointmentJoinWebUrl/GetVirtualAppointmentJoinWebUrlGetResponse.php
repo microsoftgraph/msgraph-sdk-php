@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl;
+namespace Microsoft\\Graph\\Generated\Users\Item\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

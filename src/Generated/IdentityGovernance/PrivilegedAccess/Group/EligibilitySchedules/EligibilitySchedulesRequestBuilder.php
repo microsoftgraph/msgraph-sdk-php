@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\Item\PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilitySchedule;
-use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleCollectionResponse;
+use Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\Item\PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PrivilegedAccessGroupEligibilitySchedule;
+use Microsoft\\Graph\\Generated\Models\PrivilegedAccessGroupEligibilityScheduleCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

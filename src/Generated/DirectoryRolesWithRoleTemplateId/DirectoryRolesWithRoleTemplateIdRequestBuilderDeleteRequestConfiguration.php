@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRolesWithRoleTemplateId;
+namespace Microsoft\\Graph\\Generated\DirectoryRolesWithRoleTemplateId;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

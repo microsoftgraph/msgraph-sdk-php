@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Reports\ReadingCoachPassages;
+namespace Microsoft\\Graph\\Generated\Education\Reports\ReadingCoachPassages;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

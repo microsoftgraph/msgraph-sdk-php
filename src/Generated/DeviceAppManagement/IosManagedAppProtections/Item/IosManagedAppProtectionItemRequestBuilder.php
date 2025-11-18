@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps\AppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\IosManagedAppProtection;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps\AppsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\IosManagedAppProtections\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IosManagedAppProtection;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

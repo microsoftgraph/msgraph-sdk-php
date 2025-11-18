@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Reports\ReadingCoachPassages\Count;
+namespace Microsoft\\Graph\\Generated\Education\Reports\ReadingCoachPassages\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

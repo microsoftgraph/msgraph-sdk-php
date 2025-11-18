@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Photo;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Photo;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ProfilePhoto;
-use Microsoft\Graph\Generated\Teams\Item\Photo\Value\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ProfilePhoto;
+use Microsoft\\Graph\\Generated\Teams\Item\Photo\Value\ContentRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

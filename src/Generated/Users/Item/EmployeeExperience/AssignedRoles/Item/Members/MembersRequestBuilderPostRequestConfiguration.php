@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\EmployeeExperience\AssignedRoles\Item\Members;
+namespace Microsoft\\Graph\\Generated\Users\Item\EmployeeExperience\AssignedRoles\Item\Members;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

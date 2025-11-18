@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests\Item\CreateDownloadUrl;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\ManagedDevices\Item\LogCollectionRequests\Item\CreateDownloadUrl;
 
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;

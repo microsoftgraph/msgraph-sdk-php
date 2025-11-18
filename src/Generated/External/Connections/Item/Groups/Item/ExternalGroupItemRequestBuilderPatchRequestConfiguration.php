@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\External\Connections\Item\Groups\Item;
+namespace Microsoft\\Graph\\Generated\External\Connections\Item\Groups\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

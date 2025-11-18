@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Me\User;
+namespace Microsoft\\Graph\\Generated\Education\Me\User;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Education\Me\User\MailboxSettings\MailboxSettingsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\User\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\User;
+use Microsoft\\Graph\\Generated\Education\Me\User\MailboxSettings\MailboxSettingsRequestBuilder;
+use Microsoft\\Graph\\Generated\Education\Me\User\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\User;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

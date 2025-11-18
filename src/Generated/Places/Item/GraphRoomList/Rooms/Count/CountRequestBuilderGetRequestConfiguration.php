@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\Count;
+namespace Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\Rooms\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

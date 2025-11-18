@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places;
+namespace Microsoft\\Graph\\Generated\Places;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

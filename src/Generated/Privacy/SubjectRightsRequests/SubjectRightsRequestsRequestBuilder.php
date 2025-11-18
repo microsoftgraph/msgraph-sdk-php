@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Privacy\SubjectRightsRequests;
+namespace Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Models\SubjectRightsRequestCollectionResponse;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\SubjectRightsRequestItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\SubjectRightsRequest;
+use Microsoft\\Graph\\Generated\Models\SubjectRightsRequestCollectionResponse;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Privacy\SubjectRightsRequests\Item\SubjectRightsRequestItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

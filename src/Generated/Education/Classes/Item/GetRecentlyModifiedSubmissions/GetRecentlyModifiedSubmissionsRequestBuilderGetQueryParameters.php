@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions;
+namespace Microsoft\\Graph\\Generated\Education\Classes\Item\GetRecentlyModifiedSubmissions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

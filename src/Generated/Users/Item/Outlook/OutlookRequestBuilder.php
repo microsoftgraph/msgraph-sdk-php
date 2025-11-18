@@ -1,15 +1,15 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Outlook;
+namespace Microsoft\\Graph\\Generated\Users\Item\Outlook;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OutlookUser;
-use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OutlookUser;
+use Microsoft\\Graph\\Generated\Users\Item\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Chats\Item\PinnedMessages;
+namespace Microsoft\\Graph\\Generated\Chats\Item\PinnedMessages;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

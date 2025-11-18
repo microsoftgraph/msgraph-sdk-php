@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item;
+namespace Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Abort\AbortRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Cancel\CancelRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Documents\DocumentsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Redirect\RedirectRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Start\StartRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\Item\Tasks\TasksRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\PrintJob;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item\Abort\AbortRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item\Cancel\CancelRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item\Documents\DocumentsRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item\Redirect\RedirectRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item\Start\StartRequestBuilder;
+use Microsoft\\Graph\\Generated\EscapedPrint\Printers\Item\Jobs\Item\Tasks\TasksRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\PrintJob;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

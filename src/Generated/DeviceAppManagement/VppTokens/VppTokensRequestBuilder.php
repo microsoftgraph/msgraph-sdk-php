@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\VppTokens;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\VppTokenItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\VppToken;
-use Microsoft\Graph\Generated\Models\VppTokenCollectionResponse;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\VppTokens\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\VppTokens\Item\VppTokenItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\VppToken;
+use Microsoft\\Graph\\Generated\Models\VppTokenCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

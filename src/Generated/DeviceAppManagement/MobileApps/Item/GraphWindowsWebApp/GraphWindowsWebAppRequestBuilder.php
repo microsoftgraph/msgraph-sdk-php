@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WindowsWebApp;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp\Assignments\AssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileApps\Item\GraphWindowsWebApp\Categories\CategoriesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WindowsWebApp;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

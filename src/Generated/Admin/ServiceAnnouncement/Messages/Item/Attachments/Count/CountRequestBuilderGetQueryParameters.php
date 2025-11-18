@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\Count;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

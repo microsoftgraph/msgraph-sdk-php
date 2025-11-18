@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Applications\Item\ExtensionProperties;
+namespace Microsoft\\Graph\\Generated\Applications\Item\ExtensionProperties;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Item\ExtensionPropertyItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ExtensionProperty;
-use Microsoft\Graph\Generated\Models\ExtensionPropertyCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Applications\Item\ExtensionProperties\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Applications\Item\ExtensionProperties\Item\ExtensionPropertyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ExtensionProperty;
+use Microsoft\\Graph\\Generated\Models\ExtensionPropertyCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

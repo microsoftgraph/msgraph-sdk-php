@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Analytics\ItemActivityStats\Item\Activities\Item\DriveItem;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Analytics\ItemActivityStats\Item\Activities\Item\DriveItem;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Analytics\ItemActivityStats\Item\Activities\Item\DriveItem\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Models\DriveItem;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Analytics\ItemActivityStats\Item\Activities\Item\DriveItem\Content\ContentRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DriveItem;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

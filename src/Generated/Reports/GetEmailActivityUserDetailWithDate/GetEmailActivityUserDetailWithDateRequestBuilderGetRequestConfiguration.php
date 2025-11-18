@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetEmailActivityUserDetailWithDate;
+namespace Microsoft\\Graph\\Generated\Reports\GetEmailActivityUserDetailWithDate;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Subscriptions;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Subscriptions;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Subscriptions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Subscription;
-use Microsoft\Graph\Generated\Models\SubscriptionCollectionResponse;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Subscriptions\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Subscription;
+use Microsoft\\Graph\\Generated\Models\SubscriptionCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

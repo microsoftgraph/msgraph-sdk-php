@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\InformationProtection;
+namespace Microsoft\\Graph\\Generated\InformationProtection;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\InformationProtection\Bitlocker\BitlockerRequestBuilder;
-use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\ThreatAssessmentRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Models\InformationProtection;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\InformationProtection\Bitlocker\BitlockerRequestBuilder;
+use Microsoft\\Graph\\Generated\InformationProtection\ThreatAssessmentRequests\ThreatAssessmentRequestsRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\InformationProtection;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

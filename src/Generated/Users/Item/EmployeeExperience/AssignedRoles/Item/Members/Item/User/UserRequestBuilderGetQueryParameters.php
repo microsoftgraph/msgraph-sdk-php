@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\EmployeeExperience\AssignedRoles\Item\Members\Item\User;
+namespace Microsoft\\Graph\\Generated\Users\Item\EmployeeExperience\AssignedRoles\Item\Members\Item\User;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

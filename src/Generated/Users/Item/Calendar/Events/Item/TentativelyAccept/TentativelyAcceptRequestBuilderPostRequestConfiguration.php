@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item\TentativelyAccept;
+namespace Microsoft\\Graph\\Generated\Users\Item\Calendar\Events\Item\TentativelyAccept;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

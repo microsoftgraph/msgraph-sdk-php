@@ -1,17 +1,17 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary\DeviceStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatusSummary\UserStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfiguration;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assign\AssignRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary\DeviceStatusSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatusSummary\UserStatusSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedDeviceMobileAppConfiguration;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\FilterByCurrentUserWithOn;
+namespace Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleEligibilitySchedules\FilterByCurrentUserWithOn;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

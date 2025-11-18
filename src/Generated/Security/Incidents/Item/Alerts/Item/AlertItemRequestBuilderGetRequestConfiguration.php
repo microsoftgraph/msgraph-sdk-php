@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Incidents\Item\Alerts\Item;
+namespace Microsoft\\Graph\\Generated\Security\Incidents\Item\Alerts\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

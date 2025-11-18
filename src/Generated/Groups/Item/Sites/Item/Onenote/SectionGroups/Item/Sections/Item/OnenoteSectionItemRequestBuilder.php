@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\OnenoteSection;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\OnenoteSection;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,18 +1,18 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users;
+namespace Microsoft\\Graph\\Generated\Users;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\User;
-use Microsoft\Graph\Generated\Models\UserCollectionResponse;
-use Microsoft\Graph\Generated\Users\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Users\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\User;
+use Microsoft\\Graph\\Generated\Models\UserCollectionResponse;
+use Microsoft\\Graph\\Generated\Users\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Delta\DeltaRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\Item\UserItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Users\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

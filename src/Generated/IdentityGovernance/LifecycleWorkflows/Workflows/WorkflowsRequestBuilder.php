@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows;
+namespace Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\WorkflowItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityGovernance\Workflow;
-use Microsoft\Graph\Generated\Models\IdentityGovernance\WorkflowCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\WorkflowItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\Workflow;
+use Microsoft\\Graph\\Generated\Models\IdentityGovernance\WorkflowCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

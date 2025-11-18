@@ -1,23 +1,23 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item;
+namespace Microsoft\\Graph\\Generated\Teams\Item\Channels\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\Channel;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\AllMembers\AllMembersRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Archive\ArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\FilesFolder\FilesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\ProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\RemoveEmail\RemoveEmailRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\SharedWithTeams\SharedWithTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\Item\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\Channel;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\AllMembers\AllMembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Archive\ArchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\FilesFolder\FilesFolderRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Members\MembersRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Messages\MessagesRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\ProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\SharedWithTeams\SharedWithTeamsRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Tabs\TabsRequestBuilder;
+use Microsoft\\Graph\\Generated\Teams\Item\Channels\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

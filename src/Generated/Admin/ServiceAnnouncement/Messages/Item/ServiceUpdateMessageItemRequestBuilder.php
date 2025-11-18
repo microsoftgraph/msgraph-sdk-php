@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item;
+namespace Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\AttachmentsArchive\AttachmentsArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\ServiceUpdateMessage;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\AttachmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\Admin\ServiceAnnouncement\Messages\Item\AttachmentsArchive\AttachmentsArchiveRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ServiceUpdateMessage;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

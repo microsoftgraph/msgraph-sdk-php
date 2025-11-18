@@ -1,8 +1,8 @@
 <?php
 
-namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\ValidateCredentials;
+namespace Microsoft\\Graph\\Generated\ServicePrincipals\Item\Synchronization\Jobs\ValidateCredentials;
 
-use Microsoft\Graph\Generated\Models\SynchronizationSecretKeyStringValuePair;
+use Microsoft\\Graph\\Generated\Models\SynchronizationSecretKeyStringValuePair;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;

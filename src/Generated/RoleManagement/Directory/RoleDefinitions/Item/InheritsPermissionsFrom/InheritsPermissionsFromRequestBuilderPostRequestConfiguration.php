@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom;
+namespace Microsoft\\Graph\\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

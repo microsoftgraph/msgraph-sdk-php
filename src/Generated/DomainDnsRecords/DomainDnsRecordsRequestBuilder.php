@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DomainDnsRecords;
+namespace Microsoft\\Graph\\Generated\DomainDnsRecords;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DomainDnsRecords\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DomainDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\DomainDnsRecord;
-use Microsoft\Graph\Generated\Models\DomainDnsRecordCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DomainDnsRecords\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DomainDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\DomainDnsRecord;
+use Microsoft\\Graph\\Generated\Models\DomainDnsRecordCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

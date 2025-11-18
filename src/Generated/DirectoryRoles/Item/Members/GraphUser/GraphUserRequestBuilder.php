@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\GraphUser;
+namespace Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\GraphUser;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\GraphUser\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\UserCollectionResponse;
+use Microsoft\\Graph\\Generated\DirectoryRoles\Item\Members\GraphUser\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\UserCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

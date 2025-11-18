@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Item\WorkbookCommentReplyItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\WorkbookCommentReply;
-use Microsoft\Graph\Generated\Models\WorkbookCommentReplyCollectionResponse;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\Replies\Item\WorkbookCommentReplyItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\WorkbookCommentReply;
+use Microsoft\\Graph\\Generated\Models\WorkbookCommentReplyCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\Operations\Count;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\DelegatedAdminRelationships\Item\Operations\Count;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

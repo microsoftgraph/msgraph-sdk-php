@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Planner\Plans\Item\Buckets\Item\Tasks\Item\ProgressTaskBoardFormat;
+namespace Microsoft\\Graph\\Generated\Planner\Plans\Item\Buckets\Item\Tasks\Item\ProgressTaskBoardFormat;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

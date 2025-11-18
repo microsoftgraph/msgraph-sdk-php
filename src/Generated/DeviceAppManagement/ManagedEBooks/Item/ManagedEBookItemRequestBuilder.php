@@ -1,16 +1,16 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\DeviceStatesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedEBook;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign\AssignRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\DeviceStatesRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedEBook;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

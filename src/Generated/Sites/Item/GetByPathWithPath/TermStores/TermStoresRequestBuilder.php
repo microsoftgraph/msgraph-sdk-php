@@ -1,12 +1,12 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\TermStores;
+namespace Microsoft\\Graph\\Generated\Sites\Item\GetByPathWithPath\TermStores;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\TermStore\Store;
-use Microsoft\Graph\Generated\Models\TermStore\StoreCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\TermStore\Store;
+use Microsoft\\Graph\\Generated\Models\TermStore\StoreCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

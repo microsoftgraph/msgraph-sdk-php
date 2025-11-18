@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Item;
+namespace Microsoft\\Graph\\Generated\DeviceManagement\Reports\ExportJobs\Item;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

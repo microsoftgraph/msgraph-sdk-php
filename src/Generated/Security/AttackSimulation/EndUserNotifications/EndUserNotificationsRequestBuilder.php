@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotifications;
+namespace Microsoft\\Graph\\Generated\Security\AttackSimulation\EndUserNotifications;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\EndUserNotification;
-use Microsoft\Graph\Generated\Models\EndUserNotificationCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotifications\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\EndUserNotifications\Item\EndUserNotificationItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\EndUserNotification;
+use Microsoft\\Graph\\Generated\Models\EndUserNotificationCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\EndUserNotifications\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\AttackSimulation\EndUserNotifications\Item\EndUserNotificationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

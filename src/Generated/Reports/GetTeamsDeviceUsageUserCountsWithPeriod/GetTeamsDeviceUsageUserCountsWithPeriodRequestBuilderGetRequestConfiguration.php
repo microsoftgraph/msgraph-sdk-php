@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserCountsWithPeriod;
+namespace Microsoft\\Graph\\Generated\Reports\GetTeamsDeviceUsageUserCountsWithPeriod;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

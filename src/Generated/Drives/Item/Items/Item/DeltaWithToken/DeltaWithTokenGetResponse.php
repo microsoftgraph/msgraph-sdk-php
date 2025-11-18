@@ -1,9 +1,9 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\DeltaWithToken;
+namespace Microsoft\\Graph\\Generated\Drives\Item\Items\Item\DeltaWithToken;
 
-use Microsoft\Graph\Generated\Models\BaseDeltaFunctionResponse;
-use Microsoft\Graph\Generated\Models\DriveItem;
+use Microsoft\\Graph\\Generated\Models\BaseDeltaFunctionResponse;
+use Microsoft\\Graph\\Generated\Models\DriveItem;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;

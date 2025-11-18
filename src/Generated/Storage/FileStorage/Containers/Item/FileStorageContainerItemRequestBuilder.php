@@ -1,20 +1,20 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\FileStorageContainer;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Activate\ActivateRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Drive\DriveRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Lock\LockRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\RecycleBin\RecycleBinRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Unlock\UnlockRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\FileStorageContainer;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Activate\ActivateRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Columns\ColumnsRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Drive\DriveRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Lock\LockRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\RecycleBin\RecycleBinRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Restore\RestoreRequestBuilder;
+use Microsoft\\Graph\\Generated\Storage\FileStorage\Containers\Item\Unlock\UnlockRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

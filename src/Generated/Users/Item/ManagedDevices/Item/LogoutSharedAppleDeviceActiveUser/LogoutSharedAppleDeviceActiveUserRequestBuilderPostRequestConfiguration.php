@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser;
+namespace Microsoft\\Graph\\Generated\Users\Item\ManagedDevices\Item\LogoutSharedAppleDeviceActiveUser;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

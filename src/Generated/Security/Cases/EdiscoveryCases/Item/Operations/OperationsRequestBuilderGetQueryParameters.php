@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Operations;
+namespace Microsoft\\Graph\\Generated\Security\Cases\EdiscoveryCases\Item\Operations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

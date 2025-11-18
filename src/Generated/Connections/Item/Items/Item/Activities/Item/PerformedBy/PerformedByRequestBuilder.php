@@ -1,11 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Connections\Item\Items\Item\Activities\Item\PerformedBy;
+namespace Microsoft\\Graph\\Generated\Connections\Item\Items\Item\Activities\Item\PerformedBy;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ExternalConnectors\Identity;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\ExternalConnectors\Identity;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

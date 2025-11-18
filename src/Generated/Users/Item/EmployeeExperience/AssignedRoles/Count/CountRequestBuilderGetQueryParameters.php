@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\EmployeeExperience\AssignedRoles\Count;
+namespace Microsoft\\Graph\\Generated\Users\Item\EmployeeExperience\AssignedRoles\Count;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

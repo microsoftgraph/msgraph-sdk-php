@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks;
+namespace Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\ManagedEBookItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ManagedEBook;
-use Microsoft\Graph\Generated\Models\ManagedEBookCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\DeviceAppManagement\ManagedEBooks\Item\ManagedEBookItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ManagedEBook;
+use Microsoft\\Graph\\Generated\Models\ManagedEBookCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

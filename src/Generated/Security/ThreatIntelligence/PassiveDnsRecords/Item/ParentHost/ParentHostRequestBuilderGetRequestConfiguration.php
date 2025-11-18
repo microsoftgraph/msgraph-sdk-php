@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item\ParentHost;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\PassiveDnsRecords\Item\ParentHost;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

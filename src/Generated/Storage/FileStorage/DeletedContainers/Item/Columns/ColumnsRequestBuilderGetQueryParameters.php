@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Columns;
+namespace Microsoft\\Graph\\Generated\Storage\FileStorage\DeletedContainers\Item\Columns;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

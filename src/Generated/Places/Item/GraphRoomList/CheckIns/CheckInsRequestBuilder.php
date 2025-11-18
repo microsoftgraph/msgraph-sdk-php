@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Places\Item\GraphRoomList\CheckIns;
+namespace Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\CheckIns;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\CheckInClaim;
-use Microsoft\Graph\Generated\Models\CheckInClaimCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Places\Item\GraphRoomList\CheckIns\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Places\Item\GraphRoomList\CheckIns\Item\CheckInClaimCalendarEventItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\CheckInClaim;
+use Microsoft\\Graph\\Generated\Models\CheckInClaimCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\CheckIns\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Places\Item\GraphRoomList\CheckIns\Item\CheckInClaimCalendarEventItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

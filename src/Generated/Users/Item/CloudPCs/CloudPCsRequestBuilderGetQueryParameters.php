@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\CloudPCs;
+namespace Microsoft\\Graph\\Generated\Users\Item\CloudPCs;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

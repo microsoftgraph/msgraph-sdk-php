@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Security\ThreatIntelligence\SslCertificates;
+namespace Microsoft\\Graph\\Generated\Security\ThreatIntelligence\SslCertificates;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Models\Security\SslCertificate;
-use Microsoft\Graph\Generated\Models\Security\SslCertificateCollectionResponse;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\SslCertificates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\ThreatIntelligence\SslCertificates\Item\SslCertificateItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Models\Security\SslCertificate;
+use Microsoft\\Graph\\Generated\Models\Security\SslCertificateCollectionResponse;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\SslCertificates\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Security\ThreatIntelligence\SslCertificates\Item\SslCertificateItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;

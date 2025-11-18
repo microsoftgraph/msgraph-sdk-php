@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\TenantRelationships\MultiTenantOrganization\JoinRequest;
+namespace Microsoft\\Graph\\Generated\TenantRelationships\MultiTenantOrganization\JoinRequest;
 
 use Microsoft\Kiota\Abstractions\BaseRequestConfiguration;
 use Microsoft\Kiota\Abstractions\RequestOption;

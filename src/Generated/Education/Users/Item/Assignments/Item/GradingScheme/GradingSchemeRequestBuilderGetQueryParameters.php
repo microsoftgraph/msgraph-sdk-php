@@ -1,6 +1,6 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\GradingScheme;
+namespace Microsoft\\Graph\\Generated\Education\Users\Item\Assignments\Item\GradingScheme;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 

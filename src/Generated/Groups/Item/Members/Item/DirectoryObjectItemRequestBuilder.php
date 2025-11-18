@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Members\Item;
+namespace Microsoft\\Graph\\Generated\Groups\Item\Members\Item;
 
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\GraphApplication\GraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\GraphDevice\GraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\GraphGroup\GraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\GraphOrgContact\GraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\GraphUser\GraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Members\Item\Ref\RefRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\GraphUser\GraphUserRequestBuilder;
+use Microsoft\\Graph\\Generated\Groups\Item\Members\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 

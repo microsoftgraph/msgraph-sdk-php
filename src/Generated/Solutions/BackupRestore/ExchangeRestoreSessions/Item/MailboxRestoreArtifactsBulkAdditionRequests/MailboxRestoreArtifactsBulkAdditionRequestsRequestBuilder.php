@@ -1,14 +1,14 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests;
+namespace Microsoft\\Graph\\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Models\MailboxRestoreArtifactsBulkAdditionRequest;
-use Microsoft\Graph\Generated\Models\MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse;
-use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests\Item\MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder;
+use Microsoft\\Graph\\Generated\Models\MailboxRestoreArtifactsBulkAdditionRequest;
+use Microsoft\\Graph\\Generated\Models\MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse;
+use Microsoft\\Graph\\Generated\Models\ODataErrors\ODataError;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests\Count\CountRequestBuilder;
+use Microsoft\\Graph\\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Item\MailboxRestoreArtifactsBulkAdditionRequests\Item\MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
