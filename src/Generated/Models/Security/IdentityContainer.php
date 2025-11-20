@@ -34,6 +34,8 @@ class IdentityContainer extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'healthIssues' => fn(ParseNode $n) => $o->setHealthIssues($n->getCollectionOfObjectValues([HealthIssue::class, 'createFromDiscriminatorValue'])),
+            'sensorCandidateActivationConfiguration' => fn(ParseNode $n) => $o->setSensorCandidateActivationConfiguration($n->getObjectValue([SensorCandidateActivationConfiguration::class, 'createFromDiscriminatorValue'])),
+            'sensorCandidates' => fn(ParseNode $n) => $o->setSensorCandidates($n->getCollectionOfObjectValues([SensorCandidate::class, 'createFromDiscriminatorValue'])),
             'sensors' => fn(ParseNode $n) => $o->setSensors($n->getCollectionOfObjectValues([Sensor::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -50,6 +52,32 @@ class IdentityContainer extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'healthIssues'");
+    }
+
+    /**
+     * Gets the sensorCandidateActivationConfiguration property value. The sensorCandidateActivationConfiguration property
+     * @return SensorCandidateActivationConfiguration|null
+    */
+    public function getSensorCandidateActivationConfiguration(): ?SensorCandidateActivationConfiguration {
+        $val = $this->getBackingStore()->get('sensorCandidateActivationConfiguration');
+        if (is_null($val) || $val instanceof SensorCandidateActivationConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensorCandidateActivationConfiguration'");
+    }
+
+    /**
+     * Gets the sensorCandidates property value. Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * @return array<SensorCandidate>|null
+    */
+    public function getSensorCandidates(): ?array {
+        $val = $this->getBackingStore()->get('sensorCandidates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SensorCandidate::class);
+            /** @var array<SensorCandidate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensorCandidates'");
     }
 
     /**
@@ -73,6 +101,8 @@ class IdentityContainer extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('healthIssues', $this->getHealthIssues());
+        $writer->writeObjectValue('sensorCandidateActivationConfiguration', $this->getSensorCandidateActivationConfiguration());
+        $writer->writeCollectionOfObjectValues('sensorCandidates', $this->getSensorCandidates());
         $writer->writeCollectionOfObjectValues('sensors', $this->getSensors());
     }
 
@@ -82,6 +112,22 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setHealthIssues(?array $value): void {
         $this->getBackingStore()->set('healthIssues', $value);
+    }
+
+    /**
+     * Sets the sensorCandidateActivationConfiguration property value. The sensorCandidateActivationConfiguration property
+     * @param SensorCandidateActivationConfiguration|null $value Value to set for the sensorCandidateActivationConfiguration property.
+    */
+    public function setSensorCandidateActivationConfiguration(?SensorCandidateActivationConfiguration $value): void {
+        $this->getBackingStore()->set('sensorCandidateActivationConfiguration', $value);
+    }
+
+    /**
+     * Sets the sensorCandidates property value. Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * @param array<SensorCandidate>|null $value Value to set for the sensorCandidates property.
+    */
+    public function setSensorCandidates(?array $value): void {
+        $this->getBackingStore()->set('sensorCandidates', $value);
     }
 
     /**
