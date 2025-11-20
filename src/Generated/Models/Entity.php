@@ -104,6 +104,8 @@ use Microsoft\Graph\Generated\Models\Security\RetentionLabel;
 use Microsoft\Graph\Generated\Models\Security\Search;
 use Microsoft\Graph\Generated\Models\Security\Security;
 use Microsoft\Graph\Generated\Models\Security\Sensor;
+use Microsoft\Graph\Generated\Models\Security\SensorCandidate;
+use Microsoft\Graph\Generated\Models\Security\SensorCandidateActivationConfiguration;
 use Microsoft\Graph\Generated\Models\Security\SiteSource;
 use Microsoft\Graph\Generated\Models\Security\SslCertificate;
 use Microsoft\Graph\Generated\Models\Security\SubcategoryTemplate;
@@ -887,6 +889,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.retentionLabel': return new RetentionLabel();
                 case '#microsoft.graph.security.search': return new Search();
                 case '#microsoft.graph.security.sensor': return new Sensor();
+                case '#microsoft.graph.security.sensorCandidate': return new SensorCandidate();
+                case '#microsoft.graph.security.sensorCandidateActivationConfiguration': return new SensorCandidateActivationConfiguration();
                 case '#microsoft.graph.security.siteSource': return new SiteSource();
                 case '#microsoft.graph.security.sslCertificate': return new SslCertificate();
                 case '#microsoft.graph.security.subcategoryTemplate': return new SubcategoryTemplate();
