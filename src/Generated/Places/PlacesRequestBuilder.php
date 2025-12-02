@@ -7,8 +7,13 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Place;
 use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Places\GraphBuilding\GraphBuildingRequestBuilder;
+use Microsoft\Graph\Generated\Places\GraphDesk\GraphDeskRequestBuilder;
+use Microsoft\Graph\Generated\Places\GraphFloor\GraphFloorRequestBuilder;
 use Microsoft\Graph\Generated\Places\GraphRoom\GraphRoomRequestBuilder;
 use Microsoft\Graph\Generated\Places\GraphRoomList\GraphRoomListRequestBuilder;
+use Microsoft\Graph\Generated\Places\GraphSection\GraphSectionRequestBuilder;
+use Microsoft\Graph\Generated\Places\GraphWorkspace\GraphWorkspaceRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\PlaceItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -28,6 +33,27 @@ class PlacesRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Casts the previous resource to building.
+    */
+    public function graphBuilding(): GraphBuildingRequestBuilder {
+        return new GraphBuildingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to desk.
+    */
+    public function graphDesk(): GraphDeskRequestBuilder {
+        return new GraphDeskRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to floor.
+    */
+    public function graphFloor(): GraphFloorRequestBuilder {
+        return new GraphFloorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to room.
     */
     public function graphRoom(): GraphRoomRequestBuilder {
@@ -39,6 +65,20 @@ class PlacesRequestBuilder extends BaseRequestBuilder
     */
     public function graphRoomList(): GraphRoomListRequestBuilder {
         return new GraphRoomListRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to section.
+    */
+    public function graphSection(): GraphSectionRequestBuilder {
+        return new GraphSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to workspace.
+    */
+    public function graphWorkspace(): GraphWorkspaceRequestBuilder {
+        return new GraphWorkspaceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

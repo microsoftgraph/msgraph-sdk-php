@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RoomList;
 use Microsoft\Graph\Generated\Places\Item\GraphRoomList\CheckIns\CheckInsRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\RoomsRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphRoomList\Workspaces\WorkspacesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,6 +31,13 @@ class GraphRoomListRequestBuilder extends BaseRequestBuilder
     */
     public function rooms(): RoomsRequestBuilder {
         return new RoomsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the workspaces property of the microsoft.graph.roomList entity.
+    */
+    public function workspaces(): WorkspacesRequestBuilder {
+        return new WorkspacesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

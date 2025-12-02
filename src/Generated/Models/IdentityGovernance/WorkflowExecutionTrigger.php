@@ -38,6 +38,7 @@ class WorkflowExecutionTrigger implements AdditionalDataHolder, BackedModel, Par
                 case '#microsoft.graph.identityGovernance.attributeChangeTrigger': return new AttributeChangeTrigger();
                 case '#microsoft.graph.identityGovernance.membershipChangeTrigger': return new MembershipChangeTrigger();
                 case '#microsoft.graph.identityGovernance.timeBasedAttributeTrigger': return new TimeBasedAttributeTrigger();
+                case '#microsoft.graph.identityGovernance.userInactivityTrigger': return new UserInactivityTrigger();
             }
         }
         return new WorkflowExecutionTrigger();

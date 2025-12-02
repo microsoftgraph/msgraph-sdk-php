@@ -34,6 +34,7 @@ class IdentityContainer extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'healthIssues' => fn(ParseNode $n) => $o->setHealthIssues($n->getCollectionOfObjectValues([HealthIssue::class, 'createFromDiscriminatorValue'])),
+            'identityAccounts' => fn(ParseNode $n) => $o->setIdentityAccounts($n->getCollectionOfObjectValues([IdentityAccounts::class, 'createFromDiscriminatorValue'])),
             'sensorCandidateActivationConfiguration' => fn(ParseNode $n) => $o->setSensorCandidateActivationConfiguration($n->getObjectValue([SensorCandidateActivationConfiguration::class, 'createFromDiscriminatorValue'])),
             'sensorCandidates' => fn(ParseNode $n) => $o->setSensorCandidates($n->getCollectionOfObjectValues([SensorCandidate::class, 'createFromDiscriminatorValue'])),
             'sensors' => fn(ParseNode $n) => $o->setSensors($n->getCollectionOfObjectValues([Sensor::class, 'createFromDiscriminatorValue'])),
@@ -52,6 +53,20 @@ class IdentityContainer extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'healthIssues'");
+    }
+
+    /**
+     * Gets the identityAccounts property value. Represents an identity's details in the context of Microsoft Defender for Identity.
+     * @return array<IdentityAccounts>|null
+    */
+    public function getIdentityAccounts(): ?array {
+        $val = $this->getBackingStore()->get('identityAccounts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentityAccounts::class);
+            /** @var array<IdentityAccounts>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identityAccounts'");
     }
 
     /**
@@ -101,6 +116,7 @@ class IdentityContainer extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('healthIssues', $this->getHealthIssues());
+        $writer->writeCollectionOfObjectValues('identityAccounts', $this->getIdentityAccounts());
         $writer->writeObjectValue('sensorCandidateActivationConfiguration', $this->getSensorCandidateActivationConfiguration());
         $writer->writeCollectionOfObjectValues('sensorCandidates', $this->getSensorCandidates());
         $writer->writeCollectionOfObjectValues('sensors', $this->getSensors());
@@ -112,6 +128,14 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setHealthIssues(?array $value): void {
         $this->getBackingStore()->set('healthIssues', $value);
+    }
+
+    /**
+     * Sets the identityAccounts property value. Represents an identity's details in the context of Microsoft Defender for Identity.
+     * @param array<IdentityAccounts>|null $value Value to set for the identityAccounts property.
+    */
+    public function setIdentityAccounts(?array $value): void {
+        $this->getBackingStore()->set('identityAccounts', $value);
     }
 
     /**

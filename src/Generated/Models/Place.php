@@ -26,8 +26,13 @@ class Place extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.building': return new Building();
+                case '#microsoft.graph.desk': return new Desk();
+                case '#microsoft.graph.floor': return new Floor();
                 case '#microsoft.graph.room': return new Room();
                 case '#microsoft.graph.roomList': return new RoomList();
+                case '#microsoft.graph.section': return new Section();
+                case '#microsoft.graph.workspace': return new Workspace();
             }
         }
         return new Place();
@@ -82,7 +87,18 @@ class Place extends Entity implements Parsable
             'checkIns' => fn(ParseNode $n) => $o->setCheckIns($n->getCollectionOfObjectValues([CheckInClaim::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'geoCoordinates' => fn(ParseNode $n) => $o->setGeoCoordinates($n->getObjectValue([OutlookGeoCoordinates::class, 'createFromDiscriminatorValue'])),
+            'isWheelChairAccessible' => fn(ParseNode $n) => $o->setIsWheelChairAccessible($n->getBooleanValue()),
+            'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
+            'parentId' => fn(ParseNode $n) => $o->setParentId($n->getStringValue()),
             'phone' => fn(ParseNode $n) => $o->setPhone($n->getStringValue()),
+            'tags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTags($val);
+            },
         ]);
     }
 
@@ -99,6 +115,42 @@ class Place extends Entity implements Parsable
     }
 
     /**
+     * Gets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * @return bool|null
+    */
+    public function getIsWheelChairAccessible(): ?bool {
+        $val = $this->getBackingStore()->get('isWheelChairAccessible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isWheelChairAccessible'");
+    }
+
+    /**
+     * Gets the label property value. The label property
+     * @return string|null
+    */
+    public function getLabel(): ?string {
+        $val = $this->getBackingStore()->get('label');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'label'");
+    }
+
+    /**
+     * Gets the parentId property value. The parentId property
+     * @return string|null
+    */
+    public function getParentId(): ?string {
+        $val = $this->getBackingStore()->get('parentId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentId'");
+    }
+
+    /**
      * Gets the phone property value. The phone number of the place.
      * @return string|null
     */
@@ -111,6 +163,20 @@ class Place extends Entity implements Parsable
     }
 
     /**
+     * Gets the tags property value. The tags property
+     * @return array<string>|null
+    */
+    public function getTags(): ?array {
+        $val = $this->getBackingStore()->get('tags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tags'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -120,7 +186,11 @@ class Place extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('checkIns', $this->getCheckIns());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('geoCoordinates', $this->getGeoCoordinates());
+        $writer->writeBooleanValue('isWheelChairAccessible', $this->getIsWheelChairAccessible());
+        $writer->writeStringValue('label', $this->getLabel());
+        $writer->writeStringValue('parentId', $this->getParentId());
         $writer->writeStringValue('phone', $this->getPhone());
+        $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
     }
 
     /**
@@ -156,11 +226,43 @@ class Place extends Entity implements Parsable
     }
 
     /**
+     * Sets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * @param bool|null $value Value to set for the isWheelChairAccessible property.
+    */
+    public function setIsWheelChairAccessible(?bool $value): void {
+        $this->getBackingStore()->set('isWheelChairAccessible', $value);
+    }
+
+    /**
+     * Sets the label property value. The label property
+     * @param string|null $value Value to set for the label property.
+    */
+    public function setLabel(?string $value): void {
+        $this->getBackingStore()->set('label', $value);
+    }
+
+    /**
+     * Sets the parentId property value. The parentId property
+     * @param string|null $value Value to set for the parentId property.
+    */
+    public function setParentId(?string $value): void {
+        $this->getBackingStore()->set('parentId', $value);
+    }
+
+    /**
      * Sets the phone property value. The phone number of the place.
      * @param string|null $value Value to set for the phone property.
     */
     public function setPhone(?string $value): void {
         $this->getBackingStore()->set('phone', $value);
+    }
+
+    /**
+     * Sets the tags property value. The tags property
+     * @param array<string>|null $value Value to set for the tags property.
+    */
+    public function setTags(?array $value): void {
+        $this->getBackingStore()->set('tags', $value);
     }
 
 }

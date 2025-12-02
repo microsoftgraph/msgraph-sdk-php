@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Users\Item\Chats\Item\Members\MembersRequestBuilde
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\PermissionGrants\PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\RemoveAllAccessForUser\RemoveAllAccessForUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
@@ -89,6 +90,13 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     */
     public function pinnedMessages(): PinnedMessagesRequestBuilder {
         return new PinnedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the removeAllAccessForUser method.
+    */
+    public function removeAllAccessForUser(): RemoveAllAccessForUserRequestBuilder {
+        return new RemoveAllAccessForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -47,6 +47,7 @@ class RoomList extends Place implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'rooms' => fn(ParseNode $n) => $o->setRooms($n->getCollectionOfObjectValues([Room::class, 'createFromDiscriminatorValue'])),
+            'workspaces' => fn(ParseNode $n) => $o->setWorkspaces($n->getCollectionOfObjectValues([Workspace::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -65,6 +66,20 @@ class RoomList extends Place implements Parsable
     }
 
     /**
+     * Gets the workspaces property value. The workspaces property
+     * @return array<Workspace>|null
+    */
+    public function getWorkspaces(): ?array {
+        $val = $this->getBackingStore()->get('workspaces');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Workspace::class);
+            /** @var array<Workspace>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workspaces'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -72,6 +87,7 @@ class RoomList extends Place implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeCollectionOfObjectValues('rooms', $this->getRooms());
+        $writer->writeCollectionOfObjectValues('workspaces', $this->getWorkspaces());
     }
 
     /**
@@ -88,6 +104,14 @@ class RoomList extends Place implements Parsable
     */
     public function setRooms(?array $value): void {
         $this->getBackingStore()->set('rooms', $value);
+    }
+
+    /**
+     * Sets the workspaces property value. The workspaces property
+     * @param array<Workspace>|null $value Value to set for the workspaces property.
+    */
+    public function setWorkspaces(?array $value): void {
+        $this->getBackingStore()->set('workspaces', $value);
     }
 
 }
