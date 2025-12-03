@@ -127,6 +127,7 @@ class FileStorageContainer extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
             'lockState' => fn(ParseNode $n) => $o->setLockState($n->getEnumValue(SiteLockState::class)),
+            'migrationJobs' => fn(ParseNode $n) => $o->setMigrationJobs($n->getCollectionOfObjectValues([SharePointMigrationJob::class, 'createFromDiscriminatorValue'])),
             'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfObjectValues([Permission::class, 'createFromDiscriminatorValue'])),
             'recycleBin' => fn(ParseNode $n) => $o->setRecycleBin($n->getObjectValue([RecycleBin::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([FileStorageContainerSettings::class, 'createFromDiscriminatorValue'])),
@@ -145,6 +146,20 @@ class FileStorageContainer extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lockState'");
+    }
+
+    /**
+     * Gets the migrationJobs property value. The collection of sharePointMigrationJob objects local to the container. Read-write.
+     * @return array<SharePointMigrationJob>|null
+    */
+    public function getMigrationJobs(): ?array {
+        $val = $this->getBackingStore()->get('migrationJobs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SharePointMigrationJob::class);
+            /** @var array<SharePointMigrationJob>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'migrationJobs'");
     }
 
     /**
@@ -223,6 +238,7 @@ class FileStorageContainer extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('drive', $this->getDrive());
         $writer->writeEnumValue('lockState', $this->getLockState());
+        $writer->writeCollectionOfObjectValues('migrationJobs', $this->getMigrationJobs());
         $writer->writeCollectionOfObjectValues('permissions', $this->getPermissions());
         $writer->writeObjectValue('recycleBin', $this->getRecycleBin());
         $writer->writeObjectValue('settings', $this->getSettings());
@@ -292,6 +308,14 @@ class FileStorageContainer extends Entity implements Parsable
     */
     public function setLockState(?SiteLockState $value): void {
         $this->getBackingStore()->set('lockState', $value);
+    }
+
+    /**
+     * Sets the migrationJobs property value. The collection of sharePointMigrationJob objects local to the container. Read-write.
+     * @param array<SharePointMigrationJob>|null $value Value to set for the migrationJobs property.
+    */
+    public function setMigrationJobs(?array $value): void {
+        $this->getBackingStore()->set('migrationJobs', $value);
     }
 
     /**

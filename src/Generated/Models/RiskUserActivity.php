@@ -57,7 +57,7 @@ class RiskUserActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the detail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. For more information about each value, see Risk types and detection.
+     * Gets the detail property value. For more information, see riskDetail.
      * @return RiskDetail|null
     */
     public function getDetail(): ?RiskDetail {
@@ -142,7 +142,7 @@ class RiskUserActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the detail property value. Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. For more information about each value, see Risk types and detection.
+     * Sets the detail property value. For more information, see riskDetail.
      * @param RiskDetail|null $value Value to set for the detail property.
     */
     public function setDetail(?RiskDetail $value): void {

@@ -26,12 +26,25 @@ class CommunicationsGuestIdentity extends Identity implements Parsable
     }
 
     /**
+     * Gets the email property value. The email of the guest user.
+     * @return string|null
+    */
+    public function getEmail(): ?string {
+        $val = $this->getBackingStore()->get('email');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'email'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
         ]);
     }
 
@@ -41,6 +54,15 @@ class CommunicationsGuestIdentity extends Identity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('email', $this->getEmail());
+    }
+
+    /**
+     * Sets the email property value. The email of the guest user.
+     * @param string|null $value Value to set for the email property.
+    */
+    public function setEmail(?string $value): void {
+        $this->getBackingStore()->set('email', $value);
     }
 
 }

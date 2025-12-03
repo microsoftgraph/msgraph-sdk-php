@@ -7,8 +7,14 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Place;
 use Microsoft\Graph\Generated\Places\Item\CheckIns\CheckInsRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\Descendants\DescendantsRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphBuilding\GraphBuildingRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphDesk\GraphDeskRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphFloor\GraphFloorRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\GraphRoom\GraphRoomRequestBuilder;
 use Microsoft\Graph\Generated\Places\Item\GraphRoomList\GraphRoomListRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphSection\GraphSectionRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphWorkspace\GraphWorkspaceRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -27,6 +33,34 @@ class PlaceItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to call the descendants method.
+    */
+    public function descendants(): DescendantsRequestBuilder {
+        return new DescendantsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to building.
+    */
+    public function graphBuilding(): GraphBuildingRequestBuilder {
+        return new GraphBuildingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to desk.
+    */
+    public function graphDesk(): GraphDeskRequestBuilder {
+        return new GraphDeskRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to floor.
+    */
+    public function graphFloor(): GraphFloorRequestBuilder {
+        return new GraphFloorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to room.
     */
     public function graphRoom(): GraphRoomRequestBuilder {
@@ -38,6 +72,20 @@ class PlaceItemRequestBuilder extends BaseRequestBuilder
     */
     public function graphRoomList(): GraphRoomListRequestBuilder {
         return new GraphRoomListRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to section.
+    */
+    public function graphSection(): GraphSectionRequestBuilder {
+        return new GraphSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to workspace.
+    */
+    public function graphWorkspace(): GraphWorkspaceRequestBuilder {
+        return new GraphWorkspaceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

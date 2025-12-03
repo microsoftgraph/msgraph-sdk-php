@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\RetentionLabel;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Information about retention label and settings enforced on the driveItem. Read-write.
+ * Get metadata information for a retention label applied on a driveItem. For information about retention labels from an administrator's perspective, see Use retention labels to manage the lifecycle of documents stored in SharePoint.
 */
 class RetentionLabelRequestBuilderGetQueryParameters 
 {

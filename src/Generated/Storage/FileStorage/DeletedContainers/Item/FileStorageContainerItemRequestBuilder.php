@@ -10,8 +10,10 @@ use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Activat
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Lock\LockRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\MigrationJobs\MigrationJobsRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\PermanentDelete\PermanentDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Permissions\PermissionsRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\ProvisionMigrationContainers\ProvisionMigrationContainersRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\RecycleBinRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Unlock\UnlockRequestBuilder;
@@ -54,6 +56,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the migrationJobs property of the microsoft.graph.fileStorageContainer entity.
+    */
+    public function migrationJobs(): MigrationJobsRequestBuilder {
+        return new MigrationJobsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the permanentDelete method.
     */
     public function permanentDelete(): PermanentDeleteRequestBuilder {
@@ -65,6 +74,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     */
     public function permissions(): PermissionsRequestBuilder {
         return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the provisionMigrationContainers method.
+    */
+    public function provisionMigrationContainers(): ProvisionMigrationContainersRequestBuilder {
+        return new ProvisionMigrationContainersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

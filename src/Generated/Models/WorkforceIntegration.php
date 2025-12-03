@@ -50,7 +50,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * Gets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: timeOffReason.
      * @return EligibilityFilteringEnabledEntities|null
     */
     public function getEligibilityFilteringEnabledEntities(): ?EligibilityFilteringEnabledEntities {
@@ -158,7 +158,7 @@ class WorkforceIntegration extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: timeOffReason.
+     * Sets the eligibilityFilteringEnabledEntities property value. Support to view eligibility-filtered results. Possible values are: none, swapRequest, offerShiftRequest, unknownFutureValue, timeOffReason. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: timeOffReason.
      * @param EligibilityFilteringEnabledEntities|null $value Value to set for the eligibilityFilteringEnabledEntities property.
     */
     public function setEligibilityFilteringEnabledEntities(?EligibilityFilteringEnabledEntities $value): void {
