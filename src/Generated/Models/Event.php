@@ -525,7 +525,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the sensitivity property value. Possible values are: normal, personal, private, and confidential.
+     * Gets the sensitivity property value. The possible values are: normal, personal, private, and confidential.
      * @return Sensitivity|null
     */
     public function getSensitivity(): ?Sensitivity {
@@ -549,7 +549,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the showAs property value. The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the showAs property value. The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return FreeBusyStatus|null
     */
     public function getShowAs(): ?FreeBusyStatus {
@@ -611,7 +611,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the type property value. The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
+     * Gets the type property value. The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
      * @return EventType|null
     */
     public function getType(): ?EventType {
@@ -967,7 +967,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the sensitivity property value. Possible values are: normal, personal, private, and confidential.
+     * Sets the sensitivity property value. The possible values are: normal, personal, private, and confidential.
      * @param Sensitivity|null $value Value to set for the sensitivity property.
     */
     public function setSensitivity(?Sensitivity $value): void {
@@ -983,7 +983,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the showAs property value. The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the showAs property value. The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param FreeBusyStatus|null $value Value to set for the showAs property.
     */
     public function setShowAs(?FreeBusyStatus $value): void {
@@ -1023,7 +1023,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the type property value. The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
+     * Sets the type property value. The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only
      * @param EventType|null $value Value to set for the type property.
     */
     public function setType(?EventType $value): void {

@@ -71,7 +71,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the enforcementType property value. Enforcement type. Possible values are: allow, block.
+     * Gets the enforcementType property value. Enforcement type. The possible values are: allow, block.
      * @return Fido2RestrictionEnforcementType|null
     */
     public function getEnforcementType(): ?Fido2RestrictionEnforcementType {
@@ -164,7 +164,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the enforcementType property value. Enforcement type. Possible values are: allow, block.
+     * Sets the enforcementType property value. Enforcement type. The possible values are: allow, block.
      * @param Fido2RestrictionEnforcementType|null $value Value to set for the enforcementType property.
     */
     public function setEnforcementType(?Fido2RestrictionEnforcementType $value): void {

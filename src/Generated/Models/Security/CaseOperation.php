@@ -44,7 +44,7 @@ class CaseOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the action property value. The type of action the operation represents. Possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult, holdPolicySync. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult, holdPolicySync.
+     * Gets the action property value. The type of action the operation represents. The possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult, holdPolicySync. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult, holdPolicySync.
      * @return CaseAction|null
     */
     public function getAction(): ?CaseAction {
@@ -133,7 +133,7 @@ class CaseOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed, unknownFutureValue.
+     * Gets the status property value. The status of the case operation. The possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed, unknownFutureValue.
      * @return CaseOperationStatus|null
     */
     public function getStatus(): ?CaseOperationStatus {
@@ -160,7 +160,7 @@ class CaseOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the action property value. The type of action the operation represents. Possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult, holdPolicySync. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult, holdPolicySync.
+     * Sets the action property value. The type of action the operation represents. The possible values are: contentExport,  applyTags, convertToPdf, index, estimateStatistics, addToReviewSet, holdUpdate, unknownFutureValue, purgeData, exportReport, exportResult, holdPolicySync. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: purgeData, exportReport, exportResult, holdPolicySync.
      * @param CaseAction|null $value Value to set for the action property.
     */
     public function setAction(?CaseAction $value): void {
@@ -208,7 +208,7 @@ class CaseOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed, unknownFutureValue.
+     * Sets the status property value. The status of the case operation. The possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed, unknownFutureValue.
      * @param CaseOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?CaseOperationStatus $value): void {

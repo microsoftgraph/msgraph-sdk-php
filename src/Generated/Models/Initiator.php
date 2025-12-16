@@ -37,7 +37,7 @@ class Initiator extends Identity implements Parsable
     }
 
     /**
-     * Gets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
+     * Gets the initiatorType property value. Type of initiator. The possible values are: user, application, system, unknownFutureValue.
      * @return InitiatorType|null
     */
     public function getInitiatorType(): ?InitiatorType {
@@ -58,7 +58,7 @@ class Initiator extends Identity implements Parsable
     }
 
     /**
-     * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
+     * Sets the initiatorType property value. Type of initiator. The possible values are: user, application, system, unknownFutureValue.
      * @param InitiatorType|null $value Value to set for the initiatorType property.
     */
     public function setInitiatorType(?InitiatorType $value): void {

@@ -103,10 +103,11 @@ class PlaceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete entity from places
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @param PlaceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/place-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PlaceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -117,7 +118,7 @@ class PlaceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of place object, which can be a room or roomList. You can identify the room or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param Place $body The request body
      * @param PlaceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Place|null>
@@ -133,7 +134,7 @@ class PlaceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete entity from places
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @param PlaceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -151,7 +152,7 @@ class PlaceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of place object, which can be a room or roomList. You can identify the room or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param Place $body The request body
      * @param PlaceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

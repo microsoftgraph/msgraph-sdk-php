@@ -37,7 +37,7 @@ class SectionMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier of the section to which this sectionMap belongs.
      * @return string|null
     */
     public function getPlaceId(): ?string {
@@ -58,7 +58,7 @@ class SectionMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier of the section to which this sectionMap belongs.
      * @param string|null $value Value to set for the placeId property.
     */
     public function setPlaceId(?string $value): void {

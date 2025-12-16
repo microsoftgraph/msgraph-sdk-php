@@ -77,7 +77,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Gets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
+     * Gets the permissionType property value. The type of permission. The possible values are: Application, Delegated. Read-only.
      * @return string|null
     */
     public function getPermissionType(): ?string {
@@ -138,7 +138,7 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
     }
 
     /**
-     * Sets the permissionType property value. The type of permission. Possible values are: Application, Delegated. Read-only.
+     * Sets the permissionType property value. The type of permission. The possible values are: Application, Delegated. Read-only.
      * @param string|null $value Value to set for the permissionType property.
     */
     public function setPermissionType(?string $value): void {

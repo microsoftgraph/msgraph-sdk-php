@@ -78,7 +78,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
+     * Gets the notificationPreference property value. Notification preference. The possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @return EndUserNotificationPreference|null
     */
     public function getNotificationPreference(): ?EndUserNotificationPreference {
@@ -114,7 +114,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
+     * Gets the settingType property value. End user notification type. The possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @return EndUserNotificationSettingType|null
     */
     public function getSettingType(): ?EndUserNotificationSettingType {
@@ -154,7 +154,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
+     * Sets the notificationPreference property value. Notification preference. The possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @param EndUserNotificationPreference|null $value Value to set for the notificationPreference property.
     */
     public function setNotificationPreference(?EndUserNotificationPreference $value): void {
@@ -178,7 +178,7 @@ class EndUserNotificationSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
+     * Sets the settingType property value. End user notification type. The possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @param EndUserNotificationSettingType|null $value Value to set for the settingType property.
     */
     public function setSettingType(?EndUserNotificationSettingType $value): void {

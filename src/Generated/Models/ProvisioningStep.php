@@ -120,7 +120,7 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
+     * Gets the provisioningStepType property value. Type of step. The possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @return ProvisioningStepType|null
     */
     public function getProvisioningStepType(): ?ProvisioningStepType {
@@ -132,7 +132,7 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
+     * Gets the status property value. Status of the step. The possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @return ProvisioningResult|null
     */
     public function getStatus(): ?ProvisioningResult {
@@ -206,7 +206,7 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the provisioningStepType property value. Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
+     * Sets the provisioningStepType property value. Type of step. The possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      * @param ProvisioningStepType|null $value Value to set for the provisioningStepType property.
     */
     public function setProvisioningStepType(?ProvisioningStepType $value): void {
@@ -214,7 +214,7 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the status property value. Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
+     * Sets the status property value. Status of the step. The possible values are: success, warning,  failure, skipped, unknownFutureValue.
      * @param ProvisioningResult|null $value Value to set for the status property.
     */
     public function setStatus(?ProvisioningResult $value): void {

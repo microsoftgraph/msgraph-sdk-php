@@ -69,7 +69,7 @@ class LevelMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @param LevelMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LevelMap|null>
      * @throws Exception
@@ -116,7 +116,7 @@ class LevelMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get levels from places
+     * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @param LevelMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

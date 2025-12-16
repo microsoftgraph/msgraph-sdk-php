@@ -37,7 +37,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the assignedTo property value. Indicates who the request is assigned to. Possible values are: sender, recipient, manager, system, unknownFutureValue.
+     * Gets the assignedTo property value. Indicates who the request is assigned to. The possible values are: sender, recipient, manager, system, unknownFutureValue.
      * @return ScheduleChangeRequestActor|null
     */
     public function getAssignedTo(): ?ScheduleChangeRequestActor {
@@ -139,7 +139,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state of the scheduleChangeRequest. Possible values are: pending, approved, declined, unknownFutureValue.
+     * Gets the state property value. The state of the scheduleChangeRequest. The possible values are: pending, approved, declined, unknownFutureValue.
      * @return ScheduleChangeState|null
     */
     public function getState(): ?ScheduleChangeState {
@@ -163,7 +163,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the assignedTo property value. Indicates who the request is assigned to. Possible values are: sender, recipient, manager, system, unknownFutureValue.
+     * Sets the assignedTo property value. Indicates who the request is assigned to. The possible values are: sender, recipient, manager, system, unknownFutureValue.
      * @param ScheduleChangeRequestActor|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?ScheduleChangeRequestActor $value): void {
@@ -219,7 +219,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state of the scheduleChangeRequest. Possible values are: pending, approved, declined, unknownFutureValue.
+     * Sets the state property value. The state of the scheduleChangeRequest. The possible values are: pending, approved, declined, unknownFutureValue.
      * @param ScheduleChangeState|null $value Value to set for the state property.
     */
     public function setState(?ScheduleChangeState $value): void {

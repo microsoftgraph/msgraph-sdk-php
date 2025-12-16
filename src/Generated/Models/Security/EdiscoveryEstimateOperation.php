@@ -119,7 +119,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the statisticsOptions property value. The options to generate statistics. Possible values are: includeRefiners, includeQueryStats, includeUnindexedStats, advancedIndexing, locationsWithoutHits, unknownFutureValue.
+     * Gets the statisticsOptions property value. The options to generate statistics. The possible values are: includeRefiners, includeQueryStats, includeUnindexedStats, advancedIndexing, locationsWithoutHits, unknownFutureValue.
      * @return StatisticsOptions|null
     */
     public function getStatisticsOptions(): ?StatisticsOptions {
@@ -220,7 +220,7 @@ class EdiscoveryEstimateOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the statisticsOptions property value. The options to generate statistics. Possible values are: includeRefiners, includeQueryStats, includeUnindexedStats, advancedIndexing, locationsWithoutHits, unknownFutureValue.
+     * Sets the statisticsOptions property value. The options to generate statistics. The possible values are: includeRefiners, includeQueryStats, includeUnindexedStats, advancedIndexing, locationsWithoutHits, unknownFutureValue.
      * @param StatisticsOptions|null $value Value to set for the statisticsOptions property.
     */
     public function setStatisticsOptions(?StatisticsOptions $value): void {

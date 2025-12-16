@@ -107,7 +107,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+     * Gets the postType property value. The post type of the service issue historical post. The possible values are: regular, quick, strategic, unknownFutureValue.
      * @return PostType|null
     */
     public function getPostType(): ?PostType {
@@ -171,7 +171,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+     * Sets the postType property value. The post type of the service issue historical post. The possible values are: regular, quick, strategic, unknownFutureValue.
      * @param PostType|null $value Value to set for the postType property.
     */
     public function setPostType(?PostType $value): void {

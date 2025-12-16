@@ -174,7 +174,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+     * Gets the state property value. Indicates the current state of the connection. The possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @return ConnectionState|null
     */
     public function getState(): ?ConnectionState {
@@ -284,7 +284,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
+     * Sets the state property value. Indicates the current state of the connection. The possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @param ConnectionState|null $value Value to set for the state property.
     */
     public function setState(?ConnectionState $value): void {

@@ -48,7 +48,7 @@ class CallMediaState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
+     * Gets the audio property value. The audio media state. The possible values are: active, inactive, unknownFutureValue.
      * @return MediaState|null
     */
     public function getAudio(): ?MediaState {
@@ -110,7 +110,7 @@ class CallMediaState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the audio property value. The audio media state. Possible values are: active, inactive, unknownFutureValue.
+     * Sets the audio property value. The audio media state. The possible values are: active, inactive, unknownFutureValue.
      * @param MediaState|null $value Value to set for the audio property.
     */
     public function setAudio(?MediaState $value): void {

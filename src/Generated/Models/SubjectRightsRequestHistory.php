@@ -109,7 +109,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Gets the stage property value. The stage when the entity was changed.
      * @return SubjectRightsRequestStage|null
     */
     public function getStage(): ?SubjectRightsRequestStage {
@@ -121,7 +121,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Gets the stageStatus property value. The status of the stage when the entity was changed. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @return SubjectRightsRequestStageStatus|null
     */
     public function getStageStatus(): ?SubjectRightsRequestStageStatus {
@@ -199,7 +199,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Sets the stage property value. The stage when the entity was changed.
      * @param SubjectRightsRequestStage|null $value Value to set for the stage property.
     */
     public function setStage(?SubjectRightsRequestStage $value): void {
@@ -207,7 +207,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Sets the stageStatus property value. The status of the stage when the entity was changed. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param SubjectRightsRequestStageStatus|null $value Value to set for the stageStatus property.
     */
     public function setStageStatus(?SubjectRightsRequestStageStatus $value): void {

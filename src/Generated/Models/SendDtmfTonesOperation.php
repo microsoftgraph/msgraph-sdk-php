@@ -25,7 +25,7 @@ class SendDtmfTonesOperation extends CommsOperation implements Parsable
     }
 
     /**
-     * Gets the completionReason property value. The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
+     * Gets the completionReason property value. The results of the action. The possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
      * @return SendDtmfCompletionReason|null
     */
     public function getCompletionReason(): ?SendDtmfCompletionReason {
@@ -57,7 +57,7 @@ class SendDtmfTonesOperation extends CommsOperation implements Parsable
     }
 
     /**
-     * Sets the completionReason property value. The results of the action. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
+     * Sets the completionReason property value. The results of the action. The possible values are: unknown, completedSuccessfully, mediaOperationCanceled, unknownfutureValue.
      * @param SendDtmfCompletionReason|null $value Value to set for the completionReason property.
     */
     public function setCompletionReason(?SendDtmfCompletionReason $value): void {

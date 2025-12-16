@@ -120,7 +120,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Gets the trainingStatus property value. The status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return TrainingStatus|null
     */
     public function getTrainingStatus(): ?TrainingStatus {
@@ -193,7 +193,7 @@ class UserTrainingStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Sets the trainingStatus property value. The status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param TrainingStatus|null $value Value to set for the trainingStatus property.
     */
     public function setTrainingStatus(?TrainingStatus $value): void {

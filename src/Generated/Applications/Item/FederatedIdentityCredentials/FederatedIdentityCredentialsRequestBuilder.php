@@ -52,11 +52,11 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredentialCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,7 +72,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/federatedidentitycredential-post?view=graph-rest-1.0 Find more info here
     */
     public function post(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +83,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the federatedIdentityCredential objects and their properties.
+     * Get a list of the federatedIdentityCredential objects and their properties assigned to an application.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

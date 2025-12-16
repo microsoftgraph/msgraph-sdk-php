@@ -69,7 +69,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
+     * Gets the key property value. The possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @return ObjectDefinitionMetadata|null
     */
     public function getKey(): ?ObjectDefinitionMetadata {
@@ -132,7 +132,7 @@ class ObjectDefinitionMetadataEntry implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the key property value. Possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
+     * Sets the key property value. The possible values are: PropertyNameAccountEnabled, PropertyNameSoftDeleted, IsSoftDeletionSupported, IsSynchronizeAllSupported, ConnectorDataStorageRequired, Extensions, LinkTypeName.
      * @param ObjectDefinitionMetadata|null $value Value to set for the key property.
     */
     public function setKey(?ObjectDefinitionMetadata $value): void {

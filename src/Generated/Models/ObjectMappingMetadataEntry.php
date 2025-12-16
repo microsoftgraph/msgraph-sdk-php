@@ -69,7 +69,7 @@ class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
+     * Gets the key property value. The possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
      * @return ObjectMappingMetadata|null
     */
     public function getKey(): ?ObjectMappingMetadata {
@@ -132,7 +132,7 @@ class ObjectMappingMetadataEntry implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the key property value. Possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
+     * Sets the key property value. The possible values are: EscrowBehavior, DisableMonitoringForChanges, OriginalJoiningProperty, Disposition, IsCustomerDefined, ExcludeFromReporting, Unsynchronized.
      * @param ObjectMappingMetadata|null $value Value to set for the key property.
     */
     public function setKey(?ObjectMappingMetadata $value): void {

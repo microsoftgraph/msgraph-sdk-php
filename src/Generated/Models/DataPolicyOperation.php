@@ -66,7 +66,7 @@ class DataPolicyOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+     * Gets the status property value. The possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @return DataPolicyOperationStatus|null
     */
     public function getStatus(): ?DataPolicyOperationStatus {
@@ -144,7 +144,7 @@ class DataPolicyOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+     * Sets the status property value. The possible values are: notStarted, running, complete, failed, unknownFutureValue.
      * @param DataPolicyOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DataPolicyOperationStatus $value): void {

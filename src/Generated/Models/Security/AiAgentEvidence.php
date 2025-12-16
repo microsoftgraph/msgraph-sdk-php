@@ -64,7 +64,7 @@ class AiAgentEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the hostingPlatformType property value. Type of the platform the agent runs on. Possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
+     * Gets the hostingPlatformType property value. Type of the platform the agent runs on. The possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
      * @return AiAgentPlatform|null
     */
     public function getHostingPlatformType(): ?AiAgentPlatform {
@@ -116,7 +116,7 @@ class AiAgentEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the hostingPlatformType property value. Type of the platform the agent runs on. Possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
+     * Sets the hostingPlatformType property value. Type of the platform the agent runs on. The possible values are: unknown, azureAIFoundry, copilotStudio, copilot, unknownFutureValue.
      * @param AiAgentPlatform|null $value Value to set for the hostingPlatformType property.
     */
     public function setHostingPlatformType(?AiAgentPlatform $value): void {

@@ -133,7 +133,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
+     * Gets the protocol property value. The protocol name. The possible values are: udp, tcp, sctp, unknownFutureValue.
      * @return ContainerPortProtocol|null
     */
     public function getProtocol(): ?ContainerPortProtocol {
@@ -228,7 +228,7 @@ class KubernetesServicePort implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the protocol property value. The protocol name. Possible values are: udp, tcp, sctp, unknownFutureValue.
+     * Sets the protocol property value. The protocol name. The possible values are: udp, tcp, sctp, unknownFutureValue.
      * @param ContainerPortProtocol|null $value Value to set for the protocol property.
     */
     public function setProtocol(?ContainerPortProtocol $value): void {

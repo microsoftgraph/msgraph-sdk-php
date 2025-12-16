@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item\Fi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get fixtures from places
+ * Get a list of the fixtureMap objects and their properties.
 */
 class FixturesRequestBuilderGetQueryParameters 
 {

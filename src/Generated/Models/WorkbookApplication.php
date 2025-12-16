@@ -25,7 +25,7 @@ class WorkbookApplication extends Entity implements Parsable
     }
 
     /**
-     * Gets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
+     * Gets the calculationMode property value. Returns the calculation mode used in the workbook. The possible values are: Automatic, AutomaticExceptTables, Manual.
      * @return string|null
     */
     public function getCalculationMode(): ?string {
@@ -57,7 +57,7 @@ class WorkbookApplication extends Entity implements Parsable
     }
 
     /**
-     * Sets the calculationMode property value. Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
+     * Sets the calculationMode property value. Returns the calculation mode used in the workbook. The possible values are: Automatic, AutomaticExceptTables, Manual.
      * @param string|null $value Value to set for the calculationMode property.
     */
     public function setCalculationMode(?string $value): void {

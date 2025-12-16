@@ -145,7 +145,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+     * Gets the state property value. The state of the agreement acceptance. The possible values are: accepted, declined. Supports $filter (eq).
      * @return AgreementAcceptanceState|null
     */
     public function getState(): ?AgreementAcceptanceState {
@@ -290,7 +290,7 @@ class AgreementAcceptance extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state of the agreement acceptance. Possible values are: accepted, declined. Supports $filter (eq).
+     * Sets the state property value. The state of the agreement acceptance. The possible values are: accepted, declined. Supports $filter (eq).
      * @param AgreementAcceptanceState|null $value Value to set for the state property.
     */
     public function setState(?AgreementAcceptanceState $value): void {

@@ -105,7 +105,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
+     * Gets the role property value. Role of the attendee. The possible values are: None, Attendee, Presenter, and Organizer.
      * @return string|null
     */
     public function getRole(): ?string {
@@ -184,7 +184,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
+     * Sets the role property value. Role of the attendee. The possible values are: None, Attendee, Presenter, and Organizer.
      * @param string|null $value Value to set for the role property.
     */
     public function setRole(?string $value): void {

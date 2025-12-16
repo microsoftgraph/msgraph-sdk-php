@@ -77,7 +77,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
+     * Gets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. The possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
      * @return ConditionalAccessStatus|null
     */
     public function getConditionalAccessStatus(): ?ConditionalAccessStatus {
@@ -412,7 +412,7 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
-     * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
+     * Sets the conditionalAccessStatus property value. Reports status of an activated conditional access policy. The possible values are: success, failure, notApplied, and unknownFutureValue.  Supports $filter (eq).
      * @param ConditionalAccessStatus|null $value Value to set for the conditionalAccessStatus property.
     */
     public function setConditionalAccessStatus(?ConditionalAccessStatus $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphSection;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the item of type microsoft.graph.place as microsoft.graph.section
+ * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
 */
 class GraphSectionRequestBuilderGetQueryParameters 
 {

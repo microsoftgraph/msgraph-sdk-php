@@ -31,10 +31,11 @@ class FixtureMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property fixtures for places
+     * Delete a fixture on a specified floor.
      * @param FixtureMapItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/fixturemap-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?FixtureMapItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class FixtureMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @param FixtureMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FixtureMap|null>
      * @throws Exception
@@ -59,11 +60,12 @@ class FixtureMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property fixtures in places
+     * Update the properties of an existing fixtureMap object in IMDF format on a specified floor, or create one if it doesn't exist.
      * @param FixtureMap $body The request body
      * @param FixtureMapItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FixtureMap|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/fixturemap-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(FixtureMap $body, ?FixtureMapItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +76,7 @@ class FixtureMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property fixtures for places
+     * Delete a fixture on a specified floor.
      * @param FixtureMapItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class FixtureMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get fixtures from places
+     * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @param FixtureMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class FixtureMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property fixtures in places
+     * Update the properties of an existing fixtureMap object in IMDF format on a specified floor, or create one if it doesn't exist.
      * @param FixtureMap $body The request body
      * @param FixtureMapItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

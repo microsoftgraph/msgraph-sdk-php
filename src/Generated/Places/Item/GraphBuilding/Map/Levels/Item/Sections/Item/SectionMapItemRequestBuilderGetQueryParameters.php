@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item\Se
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get sections from places
+ * Collection of sections (such as zones or partitions) on this level. Supports upsert.
 */
 class SectionMapItemRequestBuilderGetQueryParameters 
 {

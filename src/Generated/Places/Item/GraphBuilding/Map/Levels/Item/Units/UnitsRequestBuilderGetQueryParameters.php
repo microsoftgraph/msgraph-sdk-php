@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item\Un
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get units from places
+ * Get a list of the unitMap objects and their properties.
 */
 class UnitsRequestBuilderGetQueryParameters 
 {

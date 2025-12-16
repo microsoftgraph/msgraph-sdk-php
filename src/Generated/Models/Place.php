@@ -39,7 +39,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the address property value. The street address of the place.
+     * Gets the address property value. The physical address of the place, including the street, city, state, country or region, and postal code.
      * @return PhysicalAddress|null
     */
     public function getAddress(): ?PhysicalAddress {
@@ -51,7 +51,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the checkIns property value. The checkIns property
+     * Gets the checkIns property value. A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @return array<CheckInClaim>|null
     */
     public function getCheckIns(): ?array {
@@ -65,7 +65,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name associated with the place.
+     * Gets the displayName property value. The name that is associated with the place.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -115,7 +115,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * Gets the isWheelChairAccessible property value. Indicates whether the place is wheelchair accessible.
      * @return bool|null
     */
     public function getIsWheelChairAccessible(): ?bool {
@@ -127,7 +127,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the label property value. The label property
+     * Gets the label property value. User-defined description of the place.
      * @return string|null
     */
     public function getLabel(): ?string {
@@ -139,7 +139,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the parentId property value. The parentId property
+     * Gets the parentId property value. The ID of a parent place.
      * @return string|null
     */
     public function getParentId(): ?string {
@@ -163,7 +163,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Gets the tags property value. The tags property
+     * Gets the tags property value. Custom tags that are associated with the place for categorization or filtering.
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -194,7 +194,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the address property value. The street address of the place.
+     * Sets the address property value. The physical address of the place, including the street, city, state, country or region, and postal code.
      * @param PhysicalAddress|null $value Value to set for the address property.
     */
     public function setAddress(?PhysicalAddress $value): void {
@@ -202,7 +202,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the checkIns property value. The checkIns property
+     * Sets the checkIns property value. A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @param array<CheckInClaim>|null $value Value to set for the checkIns property.
     */
     public function setCheckIns(?array $value): void {
@@ -210,7 +210,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The name associated with the place.
+     * Sets the displayName property value. The name that is associated with the place.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -226,7 +226,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the isWheelChairAccessible property value. The isWheelChairAccessible property
+     * Sets the isWheelChairAccessible property value. Indicates whether the place is wheelchair accessible.
      * @param bool|null $value Value to set for the isWheelChairAccessible property.
     */
     public function setIsWheelChairAccessible(?bool $value): void {
@@ -234,7 +234,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the label property value. The label property
+     * Sets the label property value. User-defined description of the place.
      * @param string|null $value Value to set for the label property.
     */
     public function setLabel(?string $value): void {
@@ -242,7 +242,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the parentId property value. The parentId property
+     * Sets the parentId property value. The ID of a parent place.
      * @param string|null $value Value to set for the parentId property.
     */
     public function setParentId(?string $value): void {
@@ -258,7 +258,7 @@ class Place extends Entity implements Parsable
     }
 
     /**
-     * Sets the tags property value. The tags property
+     * Sets the tags property value. Custom tags that are associated with the place for categorization or filtering.
      * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {

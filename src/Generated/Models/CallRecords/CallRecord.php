@@ -87,7 +87,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Gets the modalities property value. List of all the modalities used in the call. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @return array<Modality>|null
     */
     public function getModalities(): ?array {
@@ -247,7 +247,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Sets the modalities property value. List of all the modalities used in the call. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param array<Modality>|null $value Value to set for the modalities property.
     */
     public function setModalities(?array $value): void {

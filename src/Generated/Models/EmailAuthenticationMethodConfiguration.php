@@ -27,7 +27,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
+     * Gets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. The possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
      * @return ExternalEmailOtpState|null
     */
     public function getAllowExternalIdToUseEmailOtp(): ?ExternalEmailOtpState {
@@ -75,7 +75,7 @@ class EmailAuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. Possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
+     * Sets the allowExternalIdToUseEmailOtp property value. Determines whether email OTP is usable by external users for authentication. The possible values are: default, enabled, disabled, unknownFutureValue. Tenants in the default state who didn't use public preview have email OTP enabled beginning in October 2021.
      * @param ExternalEmailOtpState|null $value Value to set for the allowExternalIdToUseEmailOtp property.
     */
     public function setAllowExternalIdToUseEmailOtp(?ExternalEmailOtpState $value): void {

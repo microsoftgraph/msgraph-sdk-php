@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item\Un
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get units from places
+ * Collection of units (such as rooms or offices) on this level. Supports upsert.
 */
 class UnitMapItemRequestBuilderGetQueryParameters 
 {

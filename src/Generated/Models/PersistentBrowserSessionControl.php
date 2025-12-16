@@ -37,7 +37,7 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
     }
 
     /**
-     * Gets the mode property value. Possible values are: always, never.
+     * Gets the mode property value. The possible values are: always, never.
      * @return PersistentBrowserSessionMode|null
     */
     public function getMode(): ?PersistentBrowserSessionMode {
@@ -58,7 +58,7 @@ class PersistentBrowserSessionControl extends ConditionalAccessSessionControl im
     }
 
     /**
-     * Sets the mode property value. Possible values are: always, never.
+     * Sets the mode property value. The possible values are: always, never.
      * @param PersistentBrowserSessionMode|null $value Value to set for the mode property.
     */
     public function setMode(?PersistentBrowserSessionMode $value): void {

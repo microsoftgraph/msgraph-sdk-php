@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\CheckIns;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get checkIns from places
+ * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
 */
 class CheckInsRequestBuilderGetQueryParameters 
 {

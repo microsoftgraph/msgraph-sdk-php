@@ -27,7 +27,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
+     * Gets the assignedTo property value. A user collection that specifies to whom the training should be assigned. The possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @return array<TrainingAssignedTo>|null
     */
     public function getAssignedTo(): ?array {
@@ -117,7 +117,7 @@ class CustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. Possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
+     * Sets the assignedTo property value. A user collection that specifies to whom the training should be assigned. The possible values are: none, allUsers, clickedPayload, compromised, reportedPhish, readButNotClicked, didNothing, unknownFutureValue.
      * @param array<TrainingAssignedTo>|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?array $value): void {

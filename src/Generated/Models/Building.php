@@ -39,7 +39,7 @@ class Building extends Place implements Parsable
     }
 
     /**
-     * Gets the map property value. The map property
+     * Gets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
      * @return BuildingMap|null
     */
     public function getMap(): ?BuildingMap {
@@ -51,7 +51,7 @@ class Building extends Place implements Parsable
     }
 
     /**
-     * Gets the resourceLinks property value. The resourceLinks property
+     * Gets the resourceLinks property value. A set of links to external resources that are associated with the building. Inherited from place.
      * @return array<ResourceLink>|null
     */
     public function getResourceLinks(): ?array {
@@ -75,7 +75,7 @@ class Building extends Place implements Parsable
     }
 
     /**
-     * Sets the map property value. The map property
+     * Sets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
      * @param BuildingMap|null $value Value to set for the map property.
     */
     public function setMap(?BuildingMap $value): void {
@@ -83,7 +83,7 @@ class Building extends Place implements Parsable
     }
 
     /**
-     * Sets the resourceLinks property value. The resourceLinks property
+     * Sets the resourceLinks property value. A set of links to external resources that are associated with the building. Inherited from place.
      * @param array<ResourceLink>|null $value Value to set for the resourceLinks property.
     */
     public function setResourceLinks(?array $value): void {

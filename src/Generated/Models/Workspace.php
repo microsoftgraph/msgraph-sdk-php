@@ -26,7 +26,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Gets the capacity property value. The capacity property
+     * Gets the capacity property value. The maximum number of individual desks within a workspace.
      * @return int|null
     */
     public function getCapacity(): ?int {
@@ -38,7 +38,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Gets the displayDeviceName property value. The displayDeviceName property
+     * Gets the displayDeviceName property value. The name of the display device (for example, monitor or projector) that is available in the workspace.
      * @return string|null
     */
     public function getDisplayDeviceName(): ?string {
@@ -50,7 +50,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Gets the emailAddress property value. The emailAddress property
+     * Gets the emailAddress property value. The email address that is associated with the workspace. This email address is used for booking.
      * @return string|null
     */
     public function getEmailAddress(): ?string {
@@ -77,7 +77,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Gets the mode property value. The mode property
+     * Gets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms Pro management portal.
      * @return PlaceMode|null
     */
     public function getMode(): ?PlaceMode {
@@ -89,7 +89,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Gets the nickname property value. The nickname property
+     * Gets the nickname property value. A short, friendly name for the workspace, often used for easier identification or display in the UI.
      * @return string|null
     */
     public function getNickname(): ?string {
@@ -114,7 +114,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Sets the capacity property value. The capacity property
+     * Sets the capacity property value. The maximum number of individual desks within a workspace.
      * @param int|null $value Value to set for the capacity property.
     */
     public function setCapacity(?int $value): void {
@@ -122,7 +122,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Sets the displayDeviceName property value. The displayDeviceName property
+     * Sets the displayDeviceName property value. The name of the display device (for example, monitor or projector) that is available in the workspace.
      * @param string|null $value Value to set for the displayDeviceName property.
     */
     public function setDisplayDeviceName(?string $value): void {
@@ -130,7 +130,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Sets the emailAddress property value. The emailAddress property
+     * Sets the emailAddress property value. The email address that is associated with the workspace. This email address is used for booking.
      * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
@@ -138,7 +138,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Sets the mode property value. The mode property
+     * Sets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms Pro management portal.
      * @param PlaceMode|null $value Value to set for the mode property.
     */
     public function setMode(?PlaceMode $value): void {
@@ -146,7 +146,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Sets the nickname property value. The nickname property
+     * Sets the nickname property value. A short, friendly name for the workspace, often used for easier identification or display in the UI.
      * @param string|null $value Value to set for the nickname property.
     */
     public function setNickname(?string $value): void {

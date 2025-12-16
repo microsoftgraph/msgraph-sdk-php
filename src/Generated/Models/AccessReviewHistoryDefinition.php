@@ -51,7 +51,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
+     * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. The possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      * @return array<AccessReviewHistoryDecisionFilter>|null
     */
     public function getDecisions(): ?array {
@@ -207,7 +207,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
+     * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. The possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      * @param array<AccessReviewHistoryDecisionFilter>|null $value Value to set for the decisions property.
     */
     public function setDecisions(?array $value): void {
