@@ -93,7 +93,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
+     * Gets the emailRole property value. For email-related alerts - user account's email 'role'. The possible values are: unknown, sender, recipient.
      * @return EmailRole|null
     */
     public function getEmailRole(): ?EmailRole {
@@ -190,7 +190,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * Gets the logonType property value. Method of user sign in. The possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @return LogonType|null
     */
     public function getLogonType(): ?LogonType {
@@ -238,7 +238,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * Gets the userAccountType property value. User account type (group membership), per Windows definition. The possible values are: unknown, standard, power, administrator.
      * @return UserAccountSecurityType|null
     */
     public function getUserAccountType(): ?UserAccountSecurityType {
@@ -325,7 +325,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the emailRole property value. For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
+     * Sets the emailRole property value. For email-related alerts - user account's email 'role'. The possible values are: unknown, sender, recipient.
      * @param EmailRole|null $value Value to set for the emailRole property.
     */
     public function setEmailRole(?EmailRole $value): void {
@@ -373,7 +373,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the logonType property value. Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * Sets the logonType property value. Method of user sign in. The possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param LogonType|null $value Value to set for the logonType property.
     */
     public function setLogonType(?LogonType $value): void {
@@ -405,7 +405,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userAccountType property value. User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * Sets the userAccountType property value. User account type (group membership), per Windows definition. The possible values are: unknown, standard, power, administrator.
      * @param UserAccountSecurityType|null $value Value to set for the userAccountType property.
     */
     public function setUserAccountType(?UserAccountSecurityType $value): void {

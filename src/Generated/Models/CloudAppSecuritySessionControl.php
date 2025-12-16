@@ -26,7 +26,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
     }
 
     /**
-     * Gets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
+     * Gets the cloudAppSecurityType property value. The possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      * @return CloudAppSecuritySessionControlType|null
     */
     public function getCloudAppSecurityType(): ?CloudAppSecuritySessionControlType {
@@ -58,7 +58,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
     }
 
     /**
-     * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
+     * Sets the cloudAppSecurityType property value. The possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
      * @param CloudAppSecuritySessionControlType|null $value Value to set for the cloudAppSecurityType property.
     */
     public function setCloudAppSecurityType(?CloudAppSecuritySessionControlType $value): void {

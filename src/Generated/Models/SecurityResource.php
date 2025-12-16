@@ -93,7 +93,7 @@ class SecurityResource implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
+     * Gets the resourceType property value. Represents type of security resources related to an alert. The possible values are: attacked, related.
      * @return SecurityResourceType|null
     */
     public function getResourceType(): ?SecurityResourceType {
@@ -148,7 +148,7 @@ class SecurityResource implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the resourceType property value. Represents type of security resources related to an alert. Possible values are: attacked, related.
+     * Sets the resourceType property value. Represents type of security resources related to an alert. The possible values are: attacked, related.
      * @param SecurityResourceType|null $value Value to set for the resourceType property.
     */
     public function setResourceType(?SecurityResourceType $value): void {

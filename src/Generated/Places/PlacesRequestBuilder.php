@@ -107,11 +107,12 @@ class PlacesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add new entity to places
+     * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.
      * @param Place $body The request body
      * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Place|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/place-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Place $body, ?PlacesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -122,7 +123,7 @@ class PlacesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add new entity to places
+     * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.
      * @param Place $body The request body
      * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

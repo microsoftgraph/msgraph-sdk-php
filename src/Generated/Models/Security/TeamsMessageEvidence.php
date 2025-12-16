@@ -52,7 +52,7 @@ class TeamsMessageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the deliveryAction property value. The delivery action of this Teams message. Possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
+     * Gets the deliveryAction property value. The delivery action of this Teams message. The possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
      * @return TeamsMessageDeliveryAction|null
     */
     public function getDeliveryAction(): ?TeamsMessageDeliveryAction {
@@ -64,7 +64,7 @@ class TeamsMessageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the deliveryLocation property value. The delivery location of this Teams message. Possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
+     * Gets the deliveryLocation property value. The delivery location of this Teams message. The possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
      * @return TeamsDeliveryLocation|null
     */
     public function getDeliveryLocation(): ?TeamsDeliveryLocation {
@@ -420,7 +420,7 @@ class TeamsMessageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the deliveryAction property value. The delivery action of this Teams message. Possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
+     * Sets the deliveryAction property value. The delivery action of this Teams message. The possible values are: unknown, deliveredAsSpam, delivered, blocked, replaced, unknownFutureValue.
      * @param TeamsMessageDeliveryAction|null $value Value to set for the deliveryAction property.
     */
     public function setDeliveryAction(?TeamsMessageDeliveryAction $value): void {
@@ -428,7 +428,7 @@ class TeamsMessageEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the deliveryLocation property value. The delivery location of this Teams message. Possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
+     * Sets the deliveryLocation property value. The delivery location of this Teams message. The possible values are: unknown, teams, quarantine, failed, unknownFutureValue.
      * @param TeamsDeliveryLocation|null $value Value to set for the deliveryLocation property.
     */
     public function setDeliveryLocation(?TeamsDeliveryLocation $value): void {

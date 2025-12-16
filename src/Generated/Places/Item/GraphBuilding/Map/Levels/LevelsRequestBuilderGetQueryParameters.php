@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get levels from places
+ * Get a list of the levelMap objects and their properties.
 */
 class LevelsRequestBuilderGetQueryParameters 
 {

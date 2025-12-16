@@ -128,7 +128,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
+     * Gets the integrityLevel property value. The integrity level of the process. The possible values are: unknown, untrusted, low, medium, high, system.
      * @return ProcessIntegrityLevel|null
     */
     public function getIntegrityLevel(): ?ProcessIntegrityLevel {
@@ -305,7 +305,7 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the integrityLevel property value. The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
+     * Sets the integrityLevel property value. The integrity level of the process. The possible values are: unknown, untrusted, low, medium, high, system.
      * @param ProcessIntegrityLevel|null $value Value to set for the integrityLevel property.
     */
     public function setIntegrityLevel(?ProcessIntegrityLevel $value): void {

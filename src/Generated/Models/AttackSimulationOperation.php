@@ -65,7 +65,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
+     * Gets the type property value. The attack simulation operation type. The possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @return AttackSimulationOperationType|null
     */
     public function getType(): ?AttackSimulationOperationType {
@@ -104,7 +104,7 @@ class AttackSimulationOperation extends LongRunningOperation implements Parsable
     }
 
     /**
-     * Sets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
+     * Sets the type property value. The attack simulation operation type. The possible values are: createSimulation, updateSimulation, unknownFutureValue.
      * @param AttackSimulationOperationType|null $value Value to set for the type property.
     */
     public function setType(?AttackSimulationOperationType $value): void {

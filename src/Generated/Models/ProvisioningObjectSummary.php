@@ -139,7 +139,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
     }
 
     /**
-     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
+     * Gets the provisioningAction property value. Indicates the activity name or the operation name. The possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @return ProvisioningAction|null
     */
     public function getProvisioningAction(): ?ProvisioningAction {
@@ -329,7 +329,7 @@ class ProvisioningObjectSummary extends Entity implements Parsable
     }
 
     /**
-     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
+     * Sets the provisioningAction property value. Indicates the activity name or the operation name. The possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @param ProvisioningAction|null $value Value to set for the provisioningAction property.
     */
     public function setProvisioningAction(?ProvisioningAction $value): void {

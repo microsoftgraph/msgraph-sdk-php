@@ -54,7 +54,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
+     * Gets the classification property value. The specification for the incident. The possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @return AlertClassification|null
     */
     public function getClassification(): ?AlertClassification {
@@ -118,7 +118,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
+     * Gets the determination property value. Specifies the determination of the incident. The possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @return AlertDetermination|null
     */
     public function getDetermination(): ?AlertDetermination {
@@ -350,7 +350,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the classification property value. The specification for the incident. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
+     * Sets the classification property value. The specification for the incident. The possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      * @param AlertClassification|null $value Value to set for the classification property.
     */
     public function setClassification(?AlertClassification $value): void {
@@ -390,7 +390,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the determination property value. Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
+     * Sets the determination property value. Specifies the determination of the incident. The possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      * @param AlertDetermination|null $value Value to set for the determination property.
     */
     public function setDetermination(?AlertDetermination $value): void {

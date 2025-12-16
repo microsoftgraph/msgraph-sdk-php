@@ -111,7 +111,7 @@ class DataSourceContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
+     * Gets the status property value. Latest status of the dataSourceContainer. The possible values are: Active, Released.
      * @return DataSourceContainerStatus|null
     */
     public function getStatus(): ?DataSourceContainerStatus {
@@ -177,7 +177,7 @@ class DataSourceContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Latest status of the dataSourceContainer. Possible values are: Active, Released.
+     * Sets the status property value. Latest status of the dataSourceContainer. The possible values are: Active, Released.
      * @param DataSourceContainerStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DataSourceContainerStatus $value): void {

@@ -48,7 +48,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
+     * Gets the appScope property value. App scope. The possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @return OAuthAppScope|null
     */
     public function getAppScope(): ?OAuthAppScope {
@@ -138,7 +138,7 @@ class OAuthConsentAppDetail implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
+     * Sets the appScope property value. App scope. The possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param OAuthAppScope|null $value Value to set for the appScope property.
     */
     public function setAppScope(?OAuthAppScope $value): void {

@@ -27,7 +27,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: servicePrincipal.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to.
      * @return ActivityType|null
     */
     public function getActivity(): ?ActivityType {
@@ -334,7 +334,7 @@ class ServicePrincipalRiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: servicePrincipal.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to.
      * @param ActivityType|null $value Value to set for the activity property.
     */
     public function setActivity(?ActivityType $value): void {

@@ -51,7 +51,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
+     * Gets the phoneType property value. The type of this phone. The possible values are: mobile, alternateMobile, or office.
      * @return AuthenticationPhoneType|null
     */
     public function getPhoneType(): ?AuthenticationPhoneType {
@@ -63,7 +63,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
+     * Gets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. The possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @return AuthenticationMethodSignInState|null
     */
     public function getSmsSignInState(): ?AuthenticationMethodSignInState {
@@ -94,7 +94,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Sets the phoneType property value. The type of this phone. Possible values are: mobile, alternateMobile, or office.
+     * Sets the phoneType property value. The type of this phone. The possible values are: mobile, alternateMobile, or office.
      * @param AuthenticationPhoneType|null $value Value to set for the phoneType property.
     */
     public function setPhoneType(?AuthenticationPhoneType $value): void {
@@ -102,7 +102,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
+     * Sets the smsSignInState property value. Whether a phone is ready to be used for SMS sign-in or not. The possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      * @param AuthenticationMethodSignInState|null $value Value to set for the smsSignInState property.
     */
     public function setSmsSignInState(?AuthenticationMethodSignInState $value): void {

@@ -51,7 +51,7 @@ class UserSource extends DataSource implements Parsable
     }
 
     /**
-     * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
+     * Gets the includedSources property value. Specifies which sources are included in this group. The possible values are: mailbox, site.
      * @return SourceType|null
     */
     public function getIncludedSources(): ?SourceType {
@@ -94,7 +94,7 @@ class UserSource extends DataSource implements Parsable
     }
 
     /**
-     * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
+     * Sets the includedSources property value. Specifies which sources are included in this group. The possible values are: mailbox, site.
      * @param SourceType|null $value Value to set for the includedSources property.
     */
     public function setIncludedSources(?SourceType $value): void {

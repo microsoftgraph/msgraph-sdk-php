@@ -52,10 +52,11 @@ class UnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get units from places
+     * Get a list of the unitMap objects and their properties.
      * @param UnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnitMapCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/levelmap-list-units?view=graph-rest-1.0 Find more info here
     */
     public function get(?UnitsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class UnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get units from places
+     * Get a list of the unitMap objects and their properties.
      * @param UnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

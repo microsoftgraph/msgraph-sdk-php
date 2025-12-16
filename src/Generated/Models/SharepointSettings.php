@@ -166,7 +166,7 @@ class SharepointSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
+     * Gets the imageTaggingOption property value. Specifies the image tagging option for the tenant. The possible values are: disabled, basic, enhanced.
      * @return ImageTaggingChoice|null
     */
     public function getImageTaggingOption(): ?ImageTaggingChoice {
@@ -398,7 +398,7 @@ class SharepointSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
+     * Gets the sharingCapability property value. Sharing capability for the tenant. The possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @return SharingCapabilities|null
     */
     public function getSharingCapability(): ?SharingCapabilities {
@@ -410,7 +410,7 @@ class SharepointSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
+     * Gets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. The possible values are: none, allowList, blockList.
      * @return SharingDomainRestrictionMode|null
     */
     public function getSharingDomainRestrictionMode(): ?SharingDomainRestrictionMode {
@@ -535,7 +535,7 @@ class SharepointSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
+     * Sets the imageTaggingOption property value. Specifies the image tagging option for the tenant. The possible values are: disabled, basic, enhanced.
      * @param ImageTaggingChoice|null $value Value to set for the imageTaggingOption property.
     */
     public function setImageTaggingOption(?ImageTaggingChoice $value): void {
@@ -687,7 +687,7 @@ class SharepointSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the sharingCapability property value. Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
+     * Sets the sharingCapability property value. Sharing capability for the tenant. The possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
      * @param SharingCapabilities|null $value Value to set for the sharingCapability property.
     */
     public function setSharingCapability(?SharingCapabilities $value): void {
@@ -695,7 +695,7 @@ class SharepointSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
+     * Sets the sharingDomainRestrictionMode property value. Specifies the external sharing mode for domains. The possible values are: none, allowList, blockList.
      * @param SharingDomainRestrictionMode|null $value Value to set for the sharingDomainRestrictionMode property.
     */
     public function setSharingDomainRestrictionMode(?SharingDomainRestrictionMode $value): void {

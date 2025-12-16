@@ -48,7 +48,7 @@ class BaseMapFeature extends Entity implements Parsable
     }
 
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. Concatenated key-value pair of all properties of a GeoJSON file for this baseMapFeature.
      * @return string|null
     */
     public function getProperties(): ?string {
@@ -69,7 +69,7 @@ class BaseMapFeature extends Entity implements Parsable
     }
 
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. Concatenated key-value pair of all properties of a GeoJSON file for this baseMapFeature.
      * @param string|null $value Value to set for the properties property.
     */
     public function setProperties(?string $value): void {

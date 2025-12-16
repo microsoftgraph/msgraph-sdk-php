@@ -81,7 +81,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
+     * Gets the protocol property value. The possible values are: sharedSecret, unknownFutureValue.
      * @return WorkforceIntegrationEncryptionProtocol|null
     */
     public function getProtocol(): ?WorkforceIntegrationEncryptionProtocol {
@@ -140,7 +140,7 @@ class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
+     * Sets the protocol property value. The possible values are: sharedSecret, unknownFutureValue.
      * @param WorkforceIntegrationEncryptionProtocol|null $value Value to set for the protocol property.
     */
     public function setProtocol(?WorkforceIntegrationEncryptionProtocol $value): void {

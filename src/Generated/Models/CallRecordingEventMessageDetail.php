@@ -63,7 +63,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
     }
 
     /**
-     * Gets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
+     * Gets the callRecordingStatus property value. Status of the call recording. The possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @return CallRecordingStatus|null
     */
     public function getCallRecordingStatus(): ?CallRecordingStatus {
@@ -167,7 +167,7 @@ class CallRecordingEventMessageDetail extends EventMessageDetail implements Pars
     }
 
     /**
-     * Sets the callRecordingStatus property value. Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
+     * Sets the callRecordingStatus property value. Status of the call recording. The possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      * @param CallRecordingStatus|null $value Value to set for the callRecordingStatus property.
     */
     public function setCallRecordingStatus(?CallRecordingStatus $value): void {

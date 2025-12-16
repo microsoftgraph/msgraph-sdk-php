@@ -26,7 +26,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Gets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @return SimulationAttackTechnique|null
     */
     public function getAttackTechnique(): ?SimulationAttackTechnique {
@@ -38,7 +38,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * Gets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return SimulationAttackType|null
     */
     public function getAttackType(): ?SimulationAttackType {
@@ -300,7 +300,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * Gets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. The possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return PayloadDeliveryPlatform|null
     */
     public function getPayloadDeliveryPlatform(): ?PayloadDeliveryPlatform {
@@ -324,7 +324,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
+     * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      * @return SimulationStatus|null
     */
     public function getStatus(): ?SimulationStatus {
@@ -380,7 +380,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param SimulationAttackTechnique|null $value Value to set for the attackTechnique property.
     */
     public function setAttackTechnique(?SimulationAttackTechnique $value): void {
@@ -388,7 +388,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param SimulationAttackType|null $value Value to set for the attackType property.
     */
     public function setAttackType(?SimulationAttackType $value): void {
@@ -540,7 +540,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. The possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param PayloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
     */
     public function setPayloadDeliveryPlatform(?PayloadDeliveryPlatform $value): void {
@@ -556,7 +556,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
+     * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
      * @param SimulationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationStatus $value): void {

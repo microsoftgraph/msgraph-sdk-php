@@ -57,7 +57,7 @@ class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the calendarEventId property value. The calendarEventId property
+     * Gets the calendarEventId property value. The unique identifier for an Outlook calendar event associated with the checkInClaim object. For more information, see the iCalUId property in event.
      * @return string|null
     */
     public function getCalendarEventId(): ?string {
@@ -81,7 +81,7 @@ class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the checkInClaim object was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -147,7 +147,7 @@ class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the calendarEventId property value. The calendarEventId property
+     * Sets the calendarEventId property value. The unique identifier for an Outlook calendar event associated with the checkInClaim object. For more information, see the iCalUId property in event.
      * @param string|null $value Value to set for the calendarEventId property.
     */
     public function setCalendarEventId(?string $value): void {
@@ -163,7 +163,7 @@ class CheckInClaim implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the checkInClaim object was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {

@@ -26,7 +26,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     }
 
     /**
-     * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+     * Gets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. The possible values are: none, assignIfOpen.
      * @return EducationAddedStudentAction|null
     */
     public function getAddedStudentAction(): ?EducationAddedStudentAction {
@@ -100,7 +100,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
     }
 
     /**
-     * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+     * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. The possible values are: none, assignIfOpen.
      * @param EducationAddedStudentAction|null $value Value to set for the addedStudentAction property.
     */
     public function setAddedStudentAction(?EducationAddedStudentAction $value): void {

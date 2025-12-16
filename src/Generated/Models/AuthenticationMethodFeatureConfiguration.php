@@ -106,7 +106,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * Gets the state property value. Enable or disable the feature. The possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @return AdvancedConfigState|null
     */
     public function getState(): ?AdvancedConfigState {
@@ -170,7 +170,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * Sets the state property value. Enable or disable the feature. The possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @param AdvancedConfigState|null $value Value to set for the state property.
     */
     public function setState(?AdvancedConfigState $value): void {

@@ -50,7 +50,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
+     * Gets the audioCodec property value. Codec name used to encode audio for transmission on the network. The possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
      * @return AudioCodec|null
     */
     public function getAudioCodec(): ?AudioCodec {
@@ -447,7 +447,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
+     * Gets the videoCodec property value. Codec name used to encode video for transmission on the network. The possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
      * @return VideoCodec|null
     */
     public function getVideoCodec(): ?VideoCodec {
@@ -518,7 +518,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the audioCodec property value. Codec name used to encode audio for transmission on the network. Possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
+     * Sets the audioCodec property value. Codec name used to encode audio for transmission on the network. The possible values are: unknown, invalid, cn, pcma, pcmu, amrWide, g722, g7221, g7221c, g729, multiChannelAudio, muchv2, opus, satin, satinFullband, rtAudio8, rtAudio16, silk, silkNarrow, silkWide, siren, xmsRta, unknownFutureValue.
      * @param AudioCodec|null $value Value to set for the audioCodec property.
     */
     public function setAudioCodec(?AudioCodec $value): void {
@@ -758,7 +758,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the videoCodec property value. Codec name used to encode video for transmission on the network. Possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
+     * Sets the videoCodec property value. Codec name used to encode video for transmission on the network. The possible values are: unknown, invalid, av1, h263, h264, h264s, h264uc, h265, rtvc1, rtVideo, xrtvc1, unknownFutureValue.
      * @param VideoCodec|null $value Value to set for the videoCodec property.
     */
     public function setVideoCodec(?VideoCodec $value): void {

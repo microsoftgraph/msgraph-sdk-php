@@ -77,7 +77,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the reviewSetSettings property value. The settings of the review set for the case. Possible values are: none, disableGrouping, unknownFutureValue.
+     * Gets the reviewSetSettings property value. The settings of the review set for the case. The possible values are: none, disableGrouping, unknownFutureValue.
      * @return ReviewSetSettings|null
     */
     public function getReviewSetSettings(): ?ReviewSetSettings {
@@ -138,7 +138,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the reviewSetSettings property value. The settings of the review set for the case. Possible values are: none, disableGrouping, unknownFutureValue.
+     * Sets the reviewSetSettings property value. The settings of the review set for the case. The possible values are: none, disableGrouping, unknownFutureValue.
      * @param ReviewSetSettings|null $value Value to set for the reviewSetSettings property.
     */
     public function setReviewSetSettings(?ReviewSetSettings $value): void {

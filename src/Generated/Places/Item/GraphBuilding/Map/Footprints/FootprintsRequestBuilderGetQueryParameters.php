@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Footprints;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get footprints from places
+ * Get a list of footprintMap objects for building footprints and their properties.
 */
 class FootprintsRequestBuilderGetQueryParameters 
 {

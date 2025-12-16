@@ -200,7 +200,7 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     * Gets the recipientScope property value. The scope of the recipient. The possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @return RecipientScopeType|null
     */
     public function getRecipientScope(): ?RecipientScopeType {
@@ -355,7 +355,7 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the recipientScope property value. The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
+     * Sets the recipientScope property value. The scope of the recipient. The possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      * @param RecipientScopeType|null $value Value to set for the recipientScope property.
     */
     public function setRecipientScope(?RecipientScopeType $value): void {

@@ -47,10 +47,11 @@ class GraphBuildingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.building
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      * @param GraphBuildingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Building|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/place-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?GraphBuildingRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -61,7 +62,7 @@ class GraphBuildingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.building
+     * Get a collection of the specified type of place objects defined in a tenant. You can do the following for a given tenant:- List all buildings.- List all floors.- List all sections.- List all desks.- List all rooms.- List all workspaces.- List all room lists.- List rooms in a specific room list.- List workspaces in a specific room list.
      * @param GraphBuildingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

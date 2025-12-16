@@ -26,7 +26,7 @@ class PositiveReinforcementNotification extends BaseEndUserNotification implemen
     }
 
     /**
-     * Gets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
+     * Gets the deliveryPreference property value. Delivery preference. The possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @return NotificationDeliveryPreference|null
     */
     public function getDeliveryPreference(): ?NotificationDeliveryPreference {
@@ -58,7 +58,7 @@ class PositiveReinforcementNotification extends BaseEndUserNotification implemen
     }
 
     /**
-     * Sets the deliveryPreference property value. Delivery preference. Possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
+     * Sets the deliveryPreference property value. Delivery preference. The possible values are: unknown, deliverImmedietly, deliverAfterCampaignEnd, unknownFutureValue.
      * @param NotificationDeliveryPreference|null $value Value to set for the deliveryPreference property.
     */
     public function setDeliveryPreference(?NotificationDeliveryPreference $value): void {

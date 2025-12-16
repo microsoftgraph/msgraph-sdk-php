@@ -26,7 +26,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to.
      * @return ActivityType|null
     */
     public function getActivity(): ?ActivityType {
@@ -86,7 +86,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @return RiskDetectionTimingType|null
     */
     public function getDetectionTimingType(): ?RiskDetectionTimingType {
@@ -199,7 +199,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Gets the riskLevel property value. Level of the detected risk. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @return RiskLevel|null
     */
     public function getRiskLevel(): ?RiskLevel {
@@ -211,7 +211,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Gets the riskState property value. The state of a detected risky user or sign-in. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @return RiskState|null
     */
     public function getRiskState(): ?RiskState {
@@ -235,7 +235,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+     * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      * @return TokenIssuerType|null
     */
     public function getTokenIssuerType(): ?TokenIssuerType {
@@ -310,7 +310,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to. Possible values are: signin, user, unknownFutureValue.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to.
      * @param ActivityType|null $value Value to set for the activity property.
     */
     public function setActivity(?ActivityType $value): void {
@@ -350,7 +350,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Sets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param RiskDetectionTimingType|null $value Value to set for the detectionTimingType property.
     */
     public function setDetectionTimingType(?RiskDetectionTimingType $value): void {
@@ -406,7 +406,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskLevel property value. Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Sets the riskLevel property value. Level of the detected risk. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
      * @param RiskLevel|null $value Value to set for the riskLevel property.
     */
     public function setRiskLevel(?RiskLevel $value): void {
@@ -414,7 +414,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the riskState property value. The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * Sets the riskState property value. The state of a detected risky user or sign-in. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      * @param RiskState|null $value Value to set for the riskState property.
     */
     public function setRiskState(?RiskState $value): void {
@@ -430,7 +430,7 @@ class RiskDetection extends Entity implements Parsable
     }
 
     /**
-     * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+     * Sets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      * @param TokenIssuerType|null $value Value to set for the tokenIssuerType property.
     */
     public function setTokenIssuerType(?TokenIssuerType $value): void {

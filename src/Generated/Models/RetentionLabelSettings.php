@@ -57,7 +57,7 @@ class RetentionLabelSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
+     * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @return BehaviorDuringRetentionPeriod|null
     */
     public function getBehaviorDuringRetentionPeriod(): ?BehaviorDuringRetentionPeriod {
@@ -189,7 +189,7 @@ class RetentionLabelSettings implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
+     * Sets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      * @param BehaviorDuringRetentionPeriod|null $value Value to set for the behaviorDuringRetentionPeriod property.
     */
     public function setBehaviorDuringRetentionPeriod(?BehaviorDuringRetentionPeriod $value): void {

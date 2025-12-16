@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get levels from places
+ * Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
 */
 class LevelMapItemRequestBuilderGetQueryParameters 
 {

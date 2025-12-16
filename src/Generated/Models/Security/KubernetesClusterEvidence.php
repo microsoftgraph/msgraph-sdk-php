@@ -77,7 +77,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
+     * Gets the platform property value. The platform the cluster runs on. The possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @return KubernetesPlatform|null
     */
     public function getPlatform(): ?KubernetesPlatform {
@@ -138,7 +138,7 @@ class KubernetesClusterEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the platform property value. The platform the cluster runs on. Possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
+     * Sets the platform property value. The platform the cluster runs on. The possible values are: unknown, aks, eks, gke, arc, unknownFutureValue.
      * @param KubernetesPlatform|null $value Value to set for the platform property.
     */
     public function setPlatform(?KubernetesPlatform $value): void {

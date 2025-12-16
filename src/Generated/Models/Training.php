@@ -27,7 +27,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
+     * Gets the availabilityStatus property value. Training availability status. The possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @return TrainingAvailabilityStatus|null
     */
     public function getAvailabilityStatus(): ?TrainingAvailabilityStatus {
@@ -187,7 +187,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Gets the source property value. Training content source. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @return SimulationContentSource|null
     */
     public function getSource(): ?SimulationContentSource {
@@ -227,7 +227,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
+     * Gets the type property value. The type of training. The possible values are: unknown, phishing, unknownFutureValue.
      * @return TrainingType|null
     */
     public function getType(): ?TrainingType {
@@ -261,7 +261,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the availabilityStatus property value. Training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
+     * Sets the availabilityStatus property value. Training availability status. The possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @param TrainingAvailabilityStatus|null $value Value to set for the availabilityStatus property.
     */
     public function setAvailabilityStatus(?TrainingAvailabilityStatus $value): void {
@@ -341,7 +341,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. Training content source. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Sets the source property value. Training content source. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @param SimulationContentSource|null $value Value to set for the source property.
     */
     public function setSource(?SimulationContentSource $value): void {
@@ -365,7 +365,7 @@ class Training extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
+     * Sets the type property value. The type of training. The possible values are: unknown, phishing, unknownFutureValue.
      * @param TrainingType|null $value Value to set for the type property.
     */
     public function setType(?TrainingType $value): void {

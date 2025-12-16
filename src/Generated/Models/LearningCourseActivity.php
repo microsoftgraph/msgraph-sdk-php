@@ -123,7 +123,7 @@ class LearningCourseActivity extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
+     * Gets the status property value. The status of the course activity. The possible values are: notStarted, inProgress, completed. Required.
      * @return CourseStatus|null
     */
     public function getStatus(): ?CourseStatus {
@@ -198,7 +198,7 @@ class LearningCourseActivity extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the course activity. Possible values are: notStarted, inProgress, completed. Required.
+     * Sets the status property value. The status of the course activity. The possible values are: notStarted, inProgress, completed. Required.
      * @param CourseStatus|null $value Value to set for the status property.
     */
     public function setStatus(?CourseStatus $value): void {

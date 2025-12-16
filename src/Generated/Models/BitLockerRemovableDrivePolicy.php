@@ -71,7 +71,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Gets the encryptionMethod property value. Select the encryption method for removable  drives. The possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @return BitLockerEncryptionMethod|null
     */
     public function getEncryptionMethod(): ?BitLockerEncryptionMethod {
@@ -157,7 +157,7 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the encryptionMethod property value. Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Sets the encryptionMethod property value. Select the encryption method for removable  drives. The possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param BitLockerEncryptionMethod|null $value Value to set for the encryptionMethod property.
     */
     public function setEncryptionMethod(?BitLockerEncryptionMethod $value): void {

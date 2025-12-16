@@ -27,7 +27,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Gets the audience property value. To whom the webinar is visible. Possible values are: everyone, organization, and unknownFutureValue.
+     * Gets the audience property value. To whom the webinar is visible. The possible values are: everyone, organization, and unknownFutureValue.
      * @return MeetingAudience|null
     */
     public function getAudience(): ?MeetingAudience {
@@ -105,7 +105,7 @@ class VirtualEventWebinar extends VirtualEvent implements Parsable
     }
 
     /**
-     * Sets the audience property value. To whom the webinar is visible. Possible values are: everyone, organization, and unknownFutureValue.
+     * Sets the audience property value. To whom the webinar is visible. The possible values are: everyone, organization, and unknownFutureValue.
      * @param MeetingAudience|null $value Value to set for the audience property.
     */
     public function setAudience(?MeetingAudience $value): void {

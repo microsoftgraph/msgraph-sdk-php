@@ -45,10 +45,11 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get checkIns from places
+     * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
      * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckInClaim|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/checkinclaim-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get checkIns from places
+     * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
      * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

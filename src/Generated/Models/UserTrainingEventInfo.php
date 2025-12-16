@@ -84,7 +84,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return TrainingStatus|null
     */
     public function getLatestTrainingStatus(): ?TrainingStatus {
@@ -182,7 +182,7 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Sets the latestTrainingStatus property value. Latest status of the training assigned to the user. The possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param TrainingStatus|null $value Value to set for the latestTrainingStatus property.
     */
     public function setLatestTrainingStatus(?TrainingStatus $value): void {

@@ -47,10 +47,11 @@ class MapRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property map for places
+     * Delete the map of a specific building.
      * @param MapRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/buildingmap-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MapRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -61,10 +62,11 @@ class MapRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get map from places
+     * Get the map of a building in IMDF format.
      * @param MapRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BuildingMap|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/buildingmap-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MapRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +92,7 @@ class MapRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property map for places
+     * Delete the map of a specific building.
      * @param MapRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -108,7 +110,7 @@ class MapRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get map from places
+     * Get the map of a building in IMDF format.
      * @param MapRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

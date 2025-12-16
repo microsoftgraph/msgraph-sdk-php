@@ -67,7 +67,7 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
+     * Gets the locationType property value. The type of location. The possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @return GoogleCloudLocationType|null
     */
     public function getLocationType(): ?GoogleCloudLocationType {
@@ -158,7 +158,7 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the locationType property value. The type of location. Possible values are: unknown, regional, zonal, global, unknownFutureValue.
+     * Sets the locationType property value. The type of location. The possible values are: unknown, regional, zonal, global, unknownFutureValue.
      * @param GoogleCloudLocationType|null $value Value to set for the locationType property.
     */
     public function setLocationType(?GoogleCloudLocationType $value): void {

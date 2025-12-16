@@ -52,7 +52,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, tags, unknownFutureValue, splitSource, includeFolderAndPath, friendlyName, condensePaths. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: splitSource, includeFolderAndPath, friendlyName, condensePaths.
+     * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. The possible values are: originalFiles, text, pdfReplacement, tags, unknownFutureValue, splitSource, includeFolderAndPath, friendlyName, condensePaths. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: splitSource, includeFolderAndPath, friendlyName, condensePaths.
      * @return ExportOptions|null
     */
     public function getExportOptions(): ?ExportOptions {
@@ -64,7 +64,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the exportStructure property value. The options that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory (deprecated), pst, unknownFutureValue, msg. Use the Prefer: include-unknown-enum-members request header to get the following members from this evolvable enum: msg. The directory member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
+     * Gets the exportStructure property value. The options that specify the structure of the export. For more information, see reviewSet: export. The possible values are: none, directory (deprecated), pst, unknownFutureValue, msg. Use the Prefer: include-unknown-enum-members request header to get the following members from this evolvable enum: msg. The directory member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
      * @return ExportFileStructure|null
     */
     public function getExportStructure(): ?ExportFileStructure {
@@ -160,7 +160,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, tags, unknownFutureValue, splitSource, includeFolderAndPath, friendlyName, condensePaths. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: splitSource, includeFolderAndPath, friendlyName, condensePaths.
+     * Sets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. The possible values are: originalFiles, text, pdfReplacement, tags, unknownFutureValue, splitSource, includeFolderAndPath, friendlyName, condensePaths. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: splitSource, includeFolderAndPath, friendlyName, condensePaths.
      * @param ExportOptions|null $value Value to set for the exportOptions property.
     */
     public function setExportOptions(?ExportOptions $value): void {
@@ -168,7 +168,7 @@ class EdiscoveryExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the exportStructure property value. The options that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory (deprecated), pst, unknownFutureValue, msg. Use the Prefer: include-unknown-enum-members request header to get the following members from this evolvable enum: msg. The directory member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
+     * Sets the exportStructure property value. The options that specify the structure of the export. For more information, see reviewSet: export. The possible values are: none, directory (deprecated), pst, unknownFutureValue, msg. Use the Prefer: include-unknown-enum-members request header to get the following members from this evolvable enum: msg. The directory member is deprecated. It remains in v1.0 for backward compatibility. Going forward, use either pst or msg.
      * @param ExportFileStructure|null $value Value to set for the exportStructure property.
     */
     public function setExportStructure(?ExportFileStructure $value): void {
