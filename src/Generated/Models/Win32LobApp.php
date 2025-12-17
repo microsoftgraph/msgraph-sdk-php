@@ -30,7 +30,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. Possible values are: null, x86, x64, arm64. Possible values are: none, x86, x64, arm, neutral.
+     * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral.
      * @return WindowsArchitecture|null
     */
     public function getAllowedArchitectures(): ?WindowsArchitecture {
@@ -188,7 +188,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Gets the rules property value. Indicates the detection and requirement rules for this app. Possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
+     * Gets the rules property value. Indicates the detection and requirement rules for this app. The possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
      * @return array<Win32LobAppRule>|null
     */
     public function getRules(): ?array {
@@ -248,7 +248,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. Possible values are: null, x86, x64, arm64. Possible values are: none, x86, x64, arm, neutral.
+     * Sets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral.
      * @param WindowsArchitecture|null $value Value to set for the allowedArchitectures property.
     */
     public function setAllowedArchitectures(?WindowsArchitecture $value): void {
@@ -336,7 +336,7 @@ class Win32LobApp extends MobileLobApp implements Parsable
     }
 
     /**
-     * Sets the rules property value. Indicates the detection and requirement rules for this app. Possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
+     * Sets the rules property value. Indicates the detection and requirement rules for this app. The possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
      * @param array<Win32LobAppRule>|null $value Value to set for the rules property.
     */
     public function setRules(?array $value): void {

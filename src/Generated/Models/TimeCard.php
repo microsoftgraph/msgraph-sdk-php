@@ -65,7 +65,7 @@ class TimeCard extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are: none, user, manager, unknownFutureValue.
+     * Gets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. The possible values are: none, user, manager, unknownFutureValue.
      * @return ConfirmedBy|null
     */
     public function getConfirmedBy(): ?ConfirmedBy {
@@ -183,7 +183,7 @@ class TimeCard extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. Possible values are: none, user, manager, unknownFutureValue.
+     * Sets the confirmedBy property value. Indicates whether this timeCard entry is confirmed. The possible values are: none, user, manager, unknownFutureValue.
      * @param ConfirmedBy|null $value Value to set for the confirmedBy property.
     */
     public function setConfirmedBy(?ConfirmedBy $value): void {

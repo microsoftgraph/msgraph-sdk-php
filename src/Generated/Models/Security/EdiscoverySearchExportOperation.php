@@ -38,7 +38,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Gets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return CloudAttachmentVersion|null
     */
     public function getCloudAttachmentVersion(): ?CloudAttachmentVersion {
@@ -74,7 +74,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Gets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Gets the documentVersion property value. The versions of files in SharePoint to include. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @return DocumentVersion|null
     */
     public function getDocumentVersion(): ?DocumentVersion {
@@ -208,7 +208,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Sets the cloudAttachmentVersion property value. The versions of cloud attachments to include in messages. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param CloudAttachmentVersion|null $value Value to set for the cloudAttachmentVersion property.
     */
     public function setCloudAttachmentVersion(?CloudAttachmentVersion $value): void {
@@ -232,7 +232,7 @@ class EdiscoverySearchExportOperation extends CaseOperation implements Parsable
     }
 
     /**
-     * Sets the documentVersion property value. The versions of files in SharePoint to include. Possible values are: latest, recent10, recent100, all, unknownFutureValue.
+     * Sets the documentVersion property value. The versions of files in SharePoint to include. The possible values are: latest, recent10, recent100, all, unknownFutureValue.
      * @param DocumentVersion|null $value Value to set for the documentVersion property.
     */
     public function setDocumentVersion(?DocumentVersion $value): void {

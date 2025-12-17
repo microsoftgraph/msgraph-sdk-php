@@ -56,7 +56,7 @@ class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the emailAddress property value. The emailAddress property
+     * Gets the emailAddress property value. The primary SMTP address associated with the mailbox.
      * @return string|null
     */
     public function getEmailAddress(): ?string {
@@ -68,7 +68,7 @@ class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Gets the externalDirectoryObjectId property value. The unique identifier of the mailbox in the external directory (such as Microsoft Entra).
      * @return string|null
     */
     public function getExternalDirectoryObjectId(): ?string {
@@ -132,7 +132,7 @@ class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the emailAddress property value. The emailAddress property
+     * Sets the emailAddress property value. The primary SMTP address associated with the mailbox.
      * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
@@ -140,7 +140,7 @@ class MailboxDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Sets the externalDirectoryObjectId property value. The unique identifier of the mailbox in the external directory (such as Microsoft Entra).
      * @param string|null $value Value to set for the externalDirectoryObjectId property.
     */
     public function setExternalDirectoryObjectId(?string $value): void {

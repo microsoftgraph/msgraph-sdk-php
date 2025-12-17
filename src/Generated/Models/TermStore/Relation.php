@@ -52,7 +52,7 @@ class Relation extends Entity implements Parsable
     }
 
     /**
-     * Gets the relationship property value. The type of relation. Possible values are: pin, reuse.
+     * Gets the relationship property value. The type of relation. The possible values are: pin, reuse.
      * @return RelationType|null
     */
     public function getRelationship(): ?RelationType {
@@ -108,7 +108,7 @@ class Relation extends Entity implements Parsable
     }
 
     /**
-     * Sets the relationship property value. The type of relation. Possible values are: pin, reuse.
+     * Sets the relationship property value. The type of relation. The possible values are: pin, reuse.
      * @param RelationType|null $value Value to set for the relationship property.
     */
     public function setRelationship(?RelationType $value): void {

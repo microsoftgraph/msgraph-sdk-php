@@ -141,7 +141,7 @@ class EndUserNotification extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
+     * Gets the notificationType property value. Type of notification. The possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      * @return EndUserNotificationType|null
     */
     public function getNotificationType(): ?EndUserNotificationType {
@@ -153,7 +153,7 @@ class EndUserNotification extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Gets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @return SimulationContentSource|null
     */
     public function getSource(): ?SimulationContentSource {
@@ -165,7 +165,7 @@ class EndUserNotification extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Gets the status property value. The status of the notification. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return SimulationContentStatus|null
     */
     public function getStatus(): ?SimulationContentStatus {
@@ -266,7 +266,7 @@ class EndUserNotification extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationType property value. Type of notification. Possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
+     * Sets the notificationType property value. Type of notification. The possible values are: unknown, positiveReinforcement, noTraining, trainingAssignment, trainingReminder, unknownFutureValue.
      * @param EndUserNotificationType|null $value Value to set for the notificationType property.
     */
     public function setNotificationType(?EndUserNotificationType $value): void {
@@ -274,7 +274,7 @@ class EndUserNotification extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Sets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @param SimulationContentSource|null $value Value to set for the source property.
     */
     public function setSource(?SimulationContentSource $value): void {
@@ -282,7 +282,7 @@ class EndUserNotification extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the notification. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Sets the status property value. The status of the notification. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param SimulationContentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationContentStatus $value): void {

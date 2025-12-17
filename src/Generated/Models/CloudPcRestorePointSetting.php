@@ -69,7 +69,7 @@ class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
+     * Gets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. The possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
      * @return CloudPcRestorePointFrequencyType|null
     */
     public function getFrequencyType(): ?CloudPcRestorePointFrequencyType {
@@ -132,7 +132,7 @@ class CloudPcRestorePointSetting implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
+     * Sets the frequencyType property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. The possible values are: default, fourHours, sixHours, twelveHours, sixteenHours, twentyFourHours, unknownFutureValue. The default value is default that indicates that the time interval for automatic capturing of restore point snapshots is set to 12 hours.
      * @param CloudPcRestorePointFrequencyType|null $value Value to set for the frequencyType property.
     */
     public function setFrequencyType(?CloudPcRestorePointFrequencyType $value): void {

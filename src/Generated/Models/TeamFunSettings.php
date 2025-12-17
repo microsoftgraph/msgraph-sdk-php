@@ -107,7 +107,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
+     * Gets the giphyContentRating property value. Giphy content rating. The possible values are: moderate, strict.
      * @return GiphyRatingType|null
     */
     public function getGiphyContentRating(): ?GiphyRatingType {
@@ -184,7 +184,7 @@ class TeamFunSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the giphyContentRating property value. Giphy content rating. Possible values are: moderate, strict.
+     * Sets the giphyContentRating property value. Giphy content rating. The possible values are: moderate, strict.
      * @param GiphyRatingType|null $value Value to set for the giphyContentRating property.
     */
     public function setGiphyContentRating(?GiphyRatingType $value): void {

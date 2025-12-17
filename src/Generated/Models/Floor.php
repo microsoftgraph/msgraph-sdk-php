@@ -37,7 +37,7 @@ class Floor extends Place implements Parsable
     }
 
     /**
-     * Gets the sortOrder property value. The sortOrder property
+     * Gets the sortOrder property value. Specifies the sort order of the floor. For example, a floor might be named 'Lobby' with a sort order of 0 to show this floor first in ordered lists.
      * @return int|null
     */
     public function getSortOrder(): ?int {
@@ -58,7 +58,7 @@ class Floor extends Place implements Parsable
     }
 
     /**
-     * Sets the sortOrder property value. The sortOrder property
+     * Sets the sortOrder property value. Specifies the sort order of the floor. For example, a floor might be named 'Lobby' with a sort order of 0 to show this floor first in ordered lists.
      * @param int|null $value Value to set for the sortOrder property.
     */
     public function setSortOrder(?int $value): void {

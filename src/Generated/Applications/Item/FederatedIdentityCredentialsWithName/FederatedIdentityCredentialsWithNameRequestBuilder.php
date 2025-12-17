@@ -49,7 +49,7 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
@@ -98,7 +98,7 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application.
      * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

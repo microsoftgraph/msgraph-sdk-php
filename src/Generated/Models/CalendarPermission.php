@@ -26,7 +26,7 @@ class CalendarPermission extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. The possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      * @return array<CalendarRoleType>|null
     */
     public function getAllowedRoles(): ?array {
@@ -116,7 +116,7 @@ class CalendarPermission extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     * Sets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. The possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      * @param array<CalendarRoleType>|null $value Value to set for the allowedRoles property.
     */
     public function setAllowedRoles(?array $value): void {

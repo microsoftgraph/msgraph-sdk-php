@@ -133,7 +133,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
     }
 
     /**
-     * Gets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     * Gets the userRole property value. The possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      * @return OnenoteUserRole|null
     */
     public function getUserRole(): ?OnenoteUserRole {
@@ -217,7 +217,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
     }
 
     /**
-     * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     * Sets the userRole property value. The possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      * @param OnenoteUserRole|null $value Value to set for the userRole property.
     */
     public function setUserRole(?OnenoteUserRole $value): void {

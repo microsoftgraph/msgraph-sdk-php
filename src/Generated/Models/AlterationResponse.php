@@ -106,7 +106,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
+     * Gets the queryAlterationType property value. Defines the type of the spelling correction. The possible values are: suggestion, modification.
      * @return SearchAlterationType|null
     */
     public function getQueryAlterationType(): ?SearchAlterationType {
@@ -170,7 +170,7 @@ class AlterationResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are: suggestion, modification.
+     * Sets the queryAlterationType property value. Defines the type of the spelling correction. The possible values are: suggestion, modification.
      * @param SearchAlterationType|null $value Value to set for the queryAlterationType property.
     */
     public function setQueryAlterationType(?SearchAlterationType $value): void {

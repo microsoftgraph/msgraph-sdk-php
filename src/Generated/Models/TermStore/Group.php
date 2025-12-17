@@ -92,7 +92,7 @@ class Group extends Entity implements Parsable
     }
 
     /**
-     * Gets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
+     * Gets the scope property value. Returns the type of the group. The possible values are: global, system, and siteCollection.
      * @return TermGroupScope|null
     */
     public function getScope(): ?TermGroupScope {
@@ -164,7 +164,7 @@ class Group extends Entity implements Parsable
     }
 
     /**
-     * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
+     * Sets the scope property value. Returns the type of the group. The possible values are: global, system, and siteCollection.
      * @param TermGroupScope|null $value Value to set for the scope property.
     */
     public function setScope(?TermGroupScope $value): void {

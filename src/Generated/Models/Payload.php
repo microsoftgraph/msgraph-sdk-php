@@ -27,7 +27,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * Gets the brand property value. The branch of a payload. The possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @return PayloadBrand|null
     */
     public function getBrand(): ?PayloadBrand {
@@ -39,7 +39,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
+     * Gets the complexity property value. The complexity of a payload. The possible values are: unknown, low, medium, high, unknownFutureValue.
      * @return PayloadComplexity|null
     */
     public function getComplexity(): ?PayloadComplexity {
@@ -150,7 +150,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     * Gets the industry property value. Industry of a payload. The possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @return PayloadIndustry|null
     */
     public function getIndustry(): ?PayloadIndustry {
@@ -248,7 +248,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * Gets the platform property value. The payload delivery platform for a simulation. The possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @return PayloadDeliveryPlatform|null
     */
     public function getPlatform(): ?PayloadDeliveryPlatform {
@@ -272,7 +272,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * Gets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @return SimulationAttackType|null
     */
     public function getSimulationAttackType(): ?SimulationAttackType {
@@ -296,7 +296,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Gets the status property value. Simulation content status. Supports $filter and $orderby. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return SimulationContentStatus|null
     */
     public function getStatus(): ?SimulationContentStatus {
@@ -308,7 +308,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @return SimulationAttackTechnique|null
     */
     public function getTechnique(): ?SimulationAttackTechnique {
@@ -320,7 +320,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Gets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * Gets the theme property value. The theme of a payload. The possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @return PayloadTheme|null
     */
     public function getTheme(): ?PayloadTheme {
@@ -362,7 +362,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the brand property value. The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * Sets the brand property value. The branch of a payload. The possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      * @param PayloadBrand|null $value Value to set for the brand property.
     */
     public function setBrand(?PayloadBrand $value): void {
@@ -370,7 +370,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the complexity property value. The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
+     * Sets the complexity property value. The complexity of a payload. The possible values are: unknown, low, medium, high, unknownFutureValue.
      * @param PayloadComplexity|null $value Value to set for the complexity property.
     */
     public function setComplexity(?PayloadComplexity $value): void {
@@ -418,7 +418,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the industry property value. Industry of a payload. Possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
+     * Sets the industry property value. Industry of a payload. The possible values are: unknown, other, banking, businessServices, consumerServices, education, energy, construction, consulting, financialServices, government, hospitality, insurance, legal, courierServices, IT, healthcare, manufacturing, retail, telecom, realEstate, unknownFutureValue.
      * @param PayloadIndustry|null $value Value to set for the industry property.
     */
     public function setIndustry(?PayloadIndustry $value): void {
@@ -482,7 +482,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the platform property value. The payload delivery platform for a simulation. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * Sets the platform property value. The payload delivery platform for a simulation. The possible values are: unknown, sms, email, teams, unknownFutureValue.
      * @param PayloadDeliveryPlatform|null $value Value to set for the platform property.
     */
     public function setPlatform(?PayloadDeliveryPlatform $value): void {
@@ -498,7 +498,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * Sets the simulationAttackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
      * @param SimulationAttackType|null $value Value to set for the simulationAttackType property.
     */
     public function setSimulationAttackType(?SimulationAttackType $value): void {
@@ -514,7 +514,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Sets the status property value. Simulation content status. Supports $filter and $orderby. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param SimulationContentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationContentStatus $value): void {
@@ -522,7 +522,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      * @param SimulationAttackTechnique|null $value Value to set for the technique property.
     */
     public function setTechnique(?SimulationAttackTechnique $value): void {
@@ -530,7 +530,7 @@ class Payload extends Entity implements Parsable
     }
 
     /**
-     * Sets the theme property value. The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * Sets the theme property value. The theme of a payload. The possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      * @param PayloadTheme|null $value Value to set for the theme property.
     */
     public function setTheme(?PayloadTheme $value): void {

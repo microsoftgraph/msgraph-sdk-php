@@ -94,7 +94,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Gets the stage property value. The stage of the subject rights request.
      * @return SubjectRightsRequestStage|null
     */
     public function getStage(): ?SubjectRightsRequestStage {
@@ -106,7 +106,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Gets the status property value. Status of the current stage. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @return SubjectRightsRequestStageStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStageStatus {
@@ -162,7 +162,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the stage property value. The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: approval.
+     * Sets the stage property value. The stage of the subject rights request.
      * @param SubjectRightsRequestStage|null $value Value to set for the stage property.
     */
     public function setStage(?SubjectRightsRequestStage $value): void {
@@ -170,7 +170,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the status property value. Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
+     * Sets the status property value. Status of the current stage. The possible values are: notStarted, current, completed, failed, unknownFutureValue.
      * @param SubjectRightsRequestStageStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SubjectRightsRequestStageStatus $value): void {

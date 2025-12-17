@@ -93,7 +93,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Gets the status property value. The possible values are: success, warning, failure, skipped, unknownFutureValue.
      * @return ProvisioningResult|null
     */
     public function getStatus(): ?ProvisioningResult {
@@ -148,7 +148,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue.
+     * Sets the status property value. The possible values are: success, warning, failure, skipped, unknownFutureValue.
      * @param ProvisioningResult|null $value Value to set for the status property.
     */
     public function setStatus(?ProvisioningResult $value): void {

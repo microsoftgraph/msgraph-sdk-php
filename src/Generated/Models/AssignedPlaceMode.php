@@ -26,7 +26,7 @@ class AssignedPlaceMode extends PlaceMode implements Parsable
     }
 
     /**
-     * Gets the assignedUserEmailAddress property value. The assignedUserEmailAddress property
+     * Gets the assignedUserEmailAddress property value. The email address of the user to whom the desk is assigned.
      * @return string|null
     */
     public function getAssignedUserEmailAddress(): ?string {
@@ -38,7 +38,7 @@ class AssignedPlaceMode extends PlaceMode implements Parsable
     }
 
     /**
-     * Gets the assignedUserId property value. The assignedUserId property
+     * Gets the assignedUserId property value. The user ID of the user to whom the desk is assigned.
      * @return string|null
     */
     public function getAssignedUserId(): ?string {
@@ -72,7 +72,7 @@ class AssignedPlaceMode extends PlaceMode implements Parsable
     }
 
     /**
-     * Sets the assignedUserEmailAddress property value. The assignedUserEmailAddress property
+     * Sets the assignedUserEmailAddress property value. The email address of the user to whom the desk is assigned.
      * @param string|null $value Value to set for the assignedUserEmailAddress property.
     */
     public function setAssignedUserEmailAddress(?string $value): void {
@@ -80,7 +80,7 @@ class AssignedPlaceMode extends PlaceMode implements Parsable
     }
 
     /**
-     * Sets the assignedUserId property value. The assignedUserId property
+     * Sets the assignedUserId property value. The user ID of the user to whom the desk is assigned.
      * @param string|null $value Value to set for the assignedUserId property.
     */
     public function setAssignedUserId(?string $value): void {

@@ -45,7 +45,7 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckInClaim|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get checkIns from places
+     * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
      * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

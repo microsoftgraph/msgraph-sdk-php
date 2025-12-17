@@ -169,7 +169,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
+     * Gets the status property value. The status of the invitation. The possible values are: PendingAcceptance, Completed, InProgress, and Error.
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -280,7 +280,7 @@ class Invitation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
+     * Sets the status property value. The status of the invitation. The possible values are: PendingAcceptance, Completed, InProgress, and Error.
      * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {

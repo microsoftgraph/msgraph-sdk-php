@@ -26,7 +26,7 @@ class Contract extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+     * Gets the contractType property value. Type of contract. The possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
      * @return string|null
     */
     public function getContractType(): ?string {
@@ -100,7 +100,7 @@ class Contract extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the contractType property value. Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
+     * Sets the contractType property value. Type of contract. The possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.
      * @param string|null $value Value to set for the contractType property.
     */
     public function setContractType(?string $value): void {

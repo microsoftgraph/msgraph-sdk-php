@@ -157,7 +157,7 @@ class EducationModule extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
+     * Gets the status property value. Status of the module. You can't use a PATCH operation to update this value. The possible values are: draft and published.
      * @return EducationModuleStatus|null
     */
     public function getStatus(): ?EducationModuleStatus {
@@ -253,7 +253,7 @@ class EducationModule extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
+     * Sets the status property value. Status of the module. You can't use a PATCH operation to update this value. The possible values are: draft and published.
      * @param EducationModuleStatus|null $value Value to set for the status property.
     */
     public function setStatus(?EducationModuleStatus $value): void {

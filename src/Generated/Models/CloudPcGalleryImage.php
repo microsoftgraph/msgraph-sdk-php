@@ -141,7 +141,7 @@ class CloudPcGalleryImage extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
+     * Gets the status property value. The status of the gallery image on the Cloud PC. The possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
      * @return CloudPcGalleryImageStatus|null
     */
     public function getStatus(): ?CloudPcGalleryImageStatus {
@@ -234,7 +234,7 @@ class CloudPcGalleryImage extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
+     * Sets the status property value. The status of the gallery image on the Cloud PC. The possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. The default value is supported. Read-only.
      * @param CloudPcGalleryImageStatus|null $value Value to set for the status property.
     */
     public function setStatus(?CloudPcGalleryImageStatus $value): void {

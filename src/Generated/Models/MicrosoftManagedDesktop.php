@@ -69,7 +69,7 @@ class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
+     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
      * @return MicrosoftManagedDesktopType|null
     */
     public function getManagedType(): ?MicrosoftManagedDesktopType {
@@ -132,7 +132,7 @@ class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
+     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default is notManaged.
      * @param MicrosoftManagedDesktopType|null $value Value to set for the managedType property.
     */
     public function setManagedType(?MicrosoftManagedDesktopType $value): void {

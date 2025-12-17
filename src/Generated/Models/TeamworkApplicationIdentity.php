@@ -26,7 +26,7 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
+     * Gets the applicationIdentityType property value. Type of application that is referenced. The possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @return TeamworkApplicationIdentityType|null
     */
     public function getApplicationIdentityType(): ?TeamworkApplicationIdentityType {
@@ -58,7 +58,7 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the applicationIdentityType property value. Type of application that is referenced. Possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
+     * Sets the applicationIdentityType property value. Type of application that is referenced. The possible values are: aadApplication, bot, tenantBot, office365Connector, outgoingWebhook, and unknownFutureValue.
      * @param TeamworkApplicationIdentityType|null $value Value to set for the applicationIdentityType property.
     */
     public function setApplicationIdentityType(?TeamworkApplicationIdentityType $value): void {

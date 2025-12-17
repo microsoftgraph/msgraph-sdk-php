@@ -106,7 +106,7 @@ class Session extends Entity implements Parsable
     }
 
     /**
-     * Gets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Gets the modalities property value. List of modalities present in the session. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @return array<Modality>|null
     */
     public function getModalities(): ?array {
@@ -202,7 +202,7 @@ class Session extends Entity implements Parsable
     }
 
     /**
-     * Sets the modalities property value. List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * Sets the modalities property value. List of modalities present in the session. The possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      * @param array<Modality>|null $value Value to set for the modalities property.
     */
     public function setModalities(?array $value): void {

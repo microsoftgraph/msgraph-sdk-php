@@ -91,7 +91,7 @@ class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
+     * Gets the settingType property value. Type of setting. The possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
      * @return TrainingSettingType|null
     */
     public function getSettingType(): ?TrainingSettingType {
@@ -137,7 +137,7 @@ class TrainingSetting implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the settingType property value. Type of setting. Possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
+     * Sets the settingType property value. Type of setting. The possible values are: microsoftCustom, microsoftManaged, noTraining, custom, unknownFutureValue.
      * @param TrainingSettingType|null $value Value to set for the settingType property.
     */
     public function setSettingType(?TrainingSettingType $value): void {

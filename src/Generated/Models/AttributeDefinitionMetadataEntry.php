@@ -69,7 +69,7 @@ class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
+     * Gets the key property value. The possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @return AttributeDefinitionMetadata|null
     */
     public function getKey(): ?AttributeDefinitionMetadata {
@@ -132,7 +132,7 @@ class AttributeDefinitionMetadataEntry implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the key property value. Possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
+     * Sets the key property value. The possible values are: BaseAttributeName, ComplexObjectDefinition, IsContainer, IsCustomerDefined, IsDomainQualified, LinkPropertyNames, LinkTypeName, MaximumLength, ReferencedProperty.
      * @param AttributeDefinitionMetadata|null $value Value to set for the key property.
     */
     public function setKey(?AttributeDefinitionMetadata $value): void {

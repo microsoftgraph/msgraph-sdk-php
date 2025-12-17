@@ -93,7 +93,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
+     * Gets the clientAppTypes property value. Client application types included in the policy. The possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @return array<ConditionalAccessClientApp>|null
     */
     public function getClientAppTypes(): ?array {
@@ -190,7 +190,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Gets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. The possible values are: low, medium, high, none, unknownFutureValue.
      * @return array<RiskLevel>|null
     */
     public function getServicePrincipalRiskLevels(): ?array {
@@ -204,7 +204,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Gets the signInRiskLevels property value. Sign-in risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @return array<RiskLevel>|null
     */
     public function getSignInRiskLevels(): ?array {
@@ -218,7 +218,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Gets the userRiskLevels property value. User risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @return array<RiskLevel>|null
     */
     public function getUserRiskLevels(): ?array {
@@ -305,7 +305,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the clientAppTypes property value. Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
+     * Sets the clientAppTypes property value. Client application types included in the policy. The possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.  The easUnsupported enumeration member will be deprecated in favor of exchangeActiveSync, which includes EAS supported and unsupported platforms.
      * @param array<ConditionalAccessClientApp>|null $value Value to set for the clientAppTypes property.
     */
     public function setClientAppTypes(?array $value): void {
@@ -353,7 +353,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. Possible values are: low, medium, high, none, unknownFutureValue.
+     * Sets the servicePrincipalRiskLevels property value. Service principal risk levels included in the policy. The possible values are: low, medium, high, none, unknownFutureValue.
      * @param array<RiskLevel>|null $value Value to set for the servicePrincipalRiskLevels property.
     */
     public function setServicePrincipalRiskLevels(?array $value): void {
@@ -361,7 +361,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Sets the signInRiskLevels property value. Sign-in risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @param array<RiskLevel>|null $value Value to set for the signInRiskLevels property.
     */
     public function setSignInRiskLevels(?array $value): void {
@@ -369,7 +369,7 @@ class ConditionalAccessConditionSet implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the userRiskLevels property value. User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
+     * Sets the userRiskLevels property value. User risk levels included in the policy. The possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      * @param array<RiskLevel>|null $value Value to set for the userRiskLevels property.
     */
     public function setUserRiskLevels(?array $value): void {

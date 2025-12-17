@@ -26,7 +26,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Gets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @return array<OnlineMeetingProviderType>|null
     */
     public function getAllowedOnlineMeetingProviders(): ?array {
@@ -128,7 +128,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Gets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @return OnlineMeetingProviderType|null
     */
     public function getDefaultOnlineMeetingProvider(): ?OnlineMeetingProviderType {
@@ -308,7 +308,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param array<OnlineMeetingProviderType>|null $value Value to set for the allowedOnlineMeetingProviders property.
     */
     public function setAllowedOnlineMeetingProviders(?array $value): void {
@@ -372,7 +372,7 @@ class Calendar extends Entity implements Parsable
     }
 
     /**
-     * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. The possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      * @param OnlineMeetingProviderType|null $value Value to set for the defaultOnlineMeetingProvider property.
     */
     public function setDefaultOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {

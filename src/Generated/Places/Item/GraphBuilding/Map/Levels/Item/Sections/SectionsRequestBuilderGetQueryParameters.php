@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item\Se
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get sections from places
+ * Get a list of the sectionMap objects and their properties.
 */
 class SectionsRequestBuilderGetQueryParameters 
 {

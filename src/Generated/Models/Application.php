@@ -179,7 +179,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
+     * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. The possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
      * @return string|null
     */
     public function getDisabledByMicrosoftStatus(): ?string {
@@ -857,7 +857,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
+     * Sets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. The possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
      * @param string|null $value Value to set for the disabledByMicrosoftStatus property.
     */
     public function setDisabledByMicrosoftStatus(?string $value): void {

@@ -52,10 +52,11 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sections from places
+     * Get a list of the sectionMap objects and their properties.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SectionMapCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/levelmap-list-sections?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sections from places
+     * Get a list of the sectionMap objects and their properties.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

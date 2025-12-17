@@ -50,7 +50,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Gets the responseType property value. Specifies the type of response to a meeting request. Possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
+     * Gets the responseType property value. Specifies the type of response to a meeting request. The possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
      * @return ResponseType|null
     */
     public function getResponseType(): ?ResponseType {
@@ -80,7 +80,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Sets the responseType property value. Specifies the type of response to a meeting request. Possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
+     * Sets the responseType property value. Specifies the type of response to a meeting request. The possible values are: tentativelyAccepted, accepted, declined. For the eventMessageResponse type, none, organizer, and notResponded are not supported. Read-only. Not filterable.
      * @param ResponseType|null $value Value to set for the responseType property.
     */
     public function setResponseType(?ResponseType $value): void {

@@ -64,7 +64,7 @@ class InvitationRedemptionIdentityProviderConfiguration implements AdditionalDat
     }
 
     /**
-     * Gets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
+     * Gets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. The possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
      * @return B2bIdentityProvidersType|null
     */
     public function getFallbackIdentityProvider(): ?B2bIdentityProvidersType {
@@ -101,7 +101,7 @@ class InvitationRedemptionIdentityProviderConfiguration implements AdditionalDat
     }
 
     /**
-     * Gets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
+     * Gets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. The possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
      * @return array<B2bIdentityProvidersType>|null
     */
     public function getPrimaryIdentityProviderPrecedenceOrder(): ?array {
@@ -142,7 +142,7 @@ class InvitationRedemptionIdentityProviderConfiguration implements AdditionalDat
     }
 
     /**
-     * Sets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
+     * Sets the fallbackIdentityProvider property value. The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. The possible values are: defaultConfiguredIdp, emailOneTimePasscode, or microsoftAccount.
      * @param B2bIdentityProvidersType|null $value Value to set for the fallbackIdentityProvider property.
     */
     public function setFallbackIdentityProvider(?B2bIdentityProvidersType $value): void {
@@ -158,7 +158,7 @@ class InvitationRedemptionIdentityProviderConfiguration implements AdditionalDat
     }
 
     /**
-     * Sets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
+     * Sets the primaryIdentityProviderPrecedenceOrder property value. Collection of identity providers in priority order of preference to be used for guest invitation redemption. The possible values are: azureActiveDirectory, externalFederation, or socialIdentityProviders.
      * @param array<B2bIdentityProvidersType>|null $value Value to set for the primaryIdentityProviderPrecedenceOrder property.
     */
     public function setPrimaryIdentityProviderPrecedenceOrder(?array $value): void {

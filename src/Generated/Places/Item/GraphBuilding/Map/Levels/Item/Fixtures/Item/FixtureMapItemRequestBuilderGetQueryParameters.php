@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Levels\Item\Fi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get fixtures from places
+ * Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
 */
 class FixtureMapItemRequestBuilderGetQueryParameters 
 {
