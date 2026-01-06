@@ -53,6 +53,20 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the adhocCalls property value. The adhocCalls property
+     * @return array<AdhocCall>|null
+    */
+    public function getAdhocCalls(): ?array {
+        $val = $this->getBackingStore()->get('adhocCalls');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AdhocCall::class);
+            /** @var array<AdhocCall>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'adhocCalls'");
+    }
+
+    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -95,6 +109,7 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'adhocCalls' => fn(ParseNode $n) => $o->setAdhocCalls($n->getCollectionOfObjectValues([AdhocCall::class, 'createFromDiscriminatorValue'])),
             'callRecords' => fn(ParseNode $n) => $o->setCallRecords($n->getCollectionOfObjectValues([CallRecord::class, 'createFromDiscriminatorValue'])),
             'calls' => fn(ParseNode $n) => $o->setCalls($n->getCollectionOfObjectValues([Call::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -163,6 +178,7 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeCollectionOfObjectValues('adhocCalls', $this->getAdhocCalls());
         $writer->writeCollectionOfObjectValues('callRecords', $this->getCallRecords());
         $writer->writeCollectionOfObjectValues('calls', $this->getCalls());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -178,6 +194,14 @@ class CloudCommunications implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the adhocCalls property value. The adhocCalls property
+     * @param array<AdhocCall>|null $value Value to set for the adhocCalls property.
+    */
+    public function setAdhocCalls(?array $value): void {
+        $this->getBackingStore()->set('adhocCalls', $value);
     }
 
     /**

@@ -60,6 +60,7 @@ class Presence extends Entity implements Parsable
             'outOfOfficeSettings' => fn(ParseNode $n) => $o->setOutOfOfficeSettings($n->getObjectValue([OutOfOfficeSettings::class, 'createFromDiscriminatorValue'])),
             'sequenceNumber' => fn(ParseNode $n) => $o->setSequenceNumber($n->getStringValue()),
             'statusMessage' => fn(ParseNode $n) => $o->setStatusMessage($n->getObjectValue([PresenceStatusMessage::class, 'createFromDiscriminatorValue'])),
+            'workLocation' => fn(ParseNode $n) => $o->setWorkLocation($n->getObjectValue([UserWorkLocation::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -100,6 +101,18 @@ class Presence extends Entity implements Parsable
     }
 
     /**
+     * Gets the workLocation property value. Represents the user’s aggregated work location state.
+     * @return UserWorkLocation|null
+    */
+    public function getWorkLocation(): ?UserWorkLocation {
+        $val = $this->getBackingStore()->get('workLocation');
+        if (is_null($val) || $val instanceof UserWorkLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workLocation'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -109,6 +122,7 @@ class Presence extends Entity implements Parsable
         $writer->writeStringValue('availability', $this->getAvailability());
         $writer->writeObjectValue('outOfOfficeSettings', $this->getOutOfOfficeSettings());
         $writer->writeObjectValue('statusMessage', $this->getStatusMessage());
+        $writer->writeObjectValue('workLocation', $this->getWorkLocation());
     }
 
     /**
@@ -149,6 +163,14 @@ class Presence extends Entity implements Parsable
     */
     public function setStatusMessage(?PresenceStatusMessage $value): void {
         $this->getBackingStore()->set('statusMessage', $value);
+    }
+
+    /**
+     * Sets the workLocation property value. Represents the user’s aggregated work location state.
+     * @param UserWorkLocation|null $value Value to set for the workLocation property.
+    */
+    public function setWorkLocation(?UserWorkLocation $value): void {
+        $this->getBackingStore()->set('workLocation', $value);
     }
 
 }

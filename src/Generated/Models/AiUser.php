@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AiUser extends Entity implements Parsable 
 {
@@ -32,6 +33,7 @@ class AiUser extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'interactionHistory' => fn(ParseNode $n) => $o->setInteractionHistory($n->getObjectValue([AiInteractionHistory::class, 'createFromDiscriminatorValue'])),
+            'onlineMeetings' => fn(ParseNode $n) => $o->setOnlineMeetings($n->getCollectionOfObjectValues([AiOnlineMeeting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -48,12 +50,27 @@ class AiUser extends Entity implements Parsable
     }
 
     /**
+     * Gets the onlineMeetings property value. The onlineMeetings property
+     * @return array<AiOnlineMeeting>|null
+    */
+    public function getOnlineMeetings(): ?array {
+        $val = $this->getBackingStore()->get('onlineMeetings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AiOnlineMeeting::class);
+            /** @var array<AiOnlineMeeting>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onlineMeetings'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('interactionHistory', $this->getInteractionHistory());
+        $writer->writeCollectionOfObjectValues('onlineMeetings', $this->getOnlineMeetings());
     }
 
     /**
@@ -62,6 +79,14 @@ class AiUser extends Entity implements Parsable
     */
     public function setInteractionHistory(?AiInteractionHistory $value): void {
         $this->getBackingStore()->set('interactionHistory', $value);
+    }
+
+    /**
+     * Sets the onlineMeetings property value. The onlineMeetings property
+     * @param array<AiOnlineMeeting>|null $value Value to set for the onlineMeetings property.
+    */
+    public function setOnlineMeetings(?array $value): void {
+        $this->getBackingStore()->set('onlineMeetings', $value);
     }
 
 }

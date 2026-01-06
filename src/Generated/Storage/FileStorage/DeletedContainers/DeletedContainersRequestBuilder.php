@@ -52,7 +52,7 @@ class DeletedContainersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @param DeletedContainersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class DeletedContainersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deletedContainers from storage
+     * The collection of deleted fileStorageContainer resources.
      * @param DeletedContainersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

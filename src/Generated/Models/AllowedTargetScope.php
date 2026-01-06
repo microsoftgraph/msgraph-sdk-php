@@ -14,5 +14,6 @@ class AllowedTargetScope extends Enum {
     public const ALL_DIRECTORY_SERVICE_PRINCIPALS = "allDirectoryServicePrincipals";
     public const ALL_CONFIGURED_CONNECTED_ORGANIZATION_USERS = "allConfiguredConnectedOrganizationUsers";
     public const ALL_EXTERNAL_USERS = "allExternalUsers";
+    public const ALL_DIRECTORY_AGENT_IDENTITIES = "allDirectoryAgentIdentities";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

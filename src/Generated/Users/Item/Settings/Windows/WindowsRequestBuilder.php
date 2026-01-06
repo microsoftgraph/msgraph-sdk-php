@@ -52,7 +52,7 @@ class WindowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @param WindowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsSettingCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class WindowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get windows from users
+     * The Windows settings of the user stored in the cloud.
      * @param WindowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

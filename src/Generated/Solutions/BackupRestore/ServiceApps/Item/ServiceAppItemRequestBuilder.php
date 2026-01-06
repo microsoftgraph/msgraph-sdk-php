@@ -47,7 +47,7 @@ class ServiceAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a serviceApp.
+     * Delete a serviceApp. When this API is called via Microsoft Graph PowerShell, it returns a 403 Forbidden response code.
      * @param ServiceAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class ServiceAppItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a serviceApp.
+     * Delete a serviceApp. When this API is called via Microsoft Graph PowerShell, it returns a 403 Forbidden response code.
      * @param ServiceAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
