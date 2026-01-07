@@ -84,6 +84,7 @@ class SensitivityLabel extends Entity implements Parsable
             'autoTooltip' => fn(ParseNode $n) => $o->setAutoTooltip($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'hasProtection' => fn(ParseNode $n) => $o->setHasProtection($n->getBooleanValue()),
             'isDefault' => fn(ParseNode $n) => $o->setIsDefault($n->getBooleanValue()),
             'isEndpointProtectionEnabled' => fn(ParseNode $n) => $o->setIsEndpointProtectionEnabled($n->getBooleanValue()),
             'isScopedToUser' => fn(ParseNode $n) => $o->setIsScopedToUser($n->getBooleanValue()),
@@ -94,6 +95,18 @@ class SensitivityLabel extends Entity implements Parsable
             'sublabels' => fn(ParseNode $n) => $o->setSublabels($n->getCollectionOfObjectValues([SensitivityLabel::class, 'createFromDiscriminatorValue'])),
             'toolTip' => fn(ParseNode $n) => $o->setToolTip($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the hasProtection property value. The hasProtection property
+     * @return bool|null
+    */
+    public function getHasProtection(): ?bool {
+        $val = $this->getBackingStore()->get('hasProtection');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasProtection'");
     }
 
     /**
@@ -216,6 +229,7 @@ class SensitivityLabel extends Entity implements Parsable
         $writer->writeStringValue('autoTooltip', $this->getAutoTooltip());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('hasProtection', $this->getHasProtection());
         $writer->writeBooleanValue('isDefault', $this->getIsDefault());
         $writer->writeBooleanValue('isEndpointProtectionEnabled', $this->getIsEndpointProtectionEnabled());
         $writer->writeBooleanValue('isScopedToUser', $this->getIsScopedToUser());
@@ -257,6 +271,14 @@ class SensitivityLabel extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the hasProtection property value. The hasProtection property
+     * @param bool|null $value Value to set for the hasProtection property.
+    */
+    public function setHasProtection(?bool $value): void {
+        $this->getBackingStore()->set('hasProtection', $value);
     }
 
     /**

@@ -80,6 +80,7 @@ class VirtualEndpoint extends Entity implements Parsable
             'galleryImages' => fn(ParseNode $n) => $o->setGalleryImages($n->getCollectionOfObjectValues([CloudPcGalleryImage::class, 'createFromDiscriminatorValue'])),
             'onPremisesConnections' => fn(ParseNode $n) => $o->setOnPremisesConnections($n->getCollectionOfObjectValues([CloudPcOnPremisesConnection::class, 'createFromDiscriminatorValue'])),
             'provisioningPolicies' => fn(ParseNode $n) => $o->setProvisioningPolicies($n->getCollectionOfObjectValues([CloudPcProvisioningPolicy::class, 'createFromDiscriminatorValue'])),
+            'report' => fn(ParseNode $n) => $o->setReport($n->getObjectValue([CloudPcReport::class, 'createFromDiscriminatorValue'])),
             'userSettings' => fn(ParseNode $n) => $o->setUserSettings($n->getCollectionOfObjectValues([CloudPcUserSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -127,6 +128,18 @@ class VirtualEndpoint extends Entity implements Parsable
     }
 
     /**
+     * Gets the report property value. Cloud PC-related reports. Read-only.
+     * @return CloudPcReport|null
+    */
+    public function getReport(): ?CloudPcReport {
+        $val = $this->getBackingStore()->get('report');
+        if (is_null($val) || $val instanceof CloudPcReport) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'report'");
+    }
+
+    /**
      * Gets the userSettings property value. A collection of Cloud PC user settings.
      * @return array<CloudPcUserSetting>|null
     */
@@ -152,6 +165,7 @@ class VirtualEndpoint extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('galleryImages', $this->getGalleryImages());
         $writer->writeCollectionOfObjectValues('onPremisesConnections', $this->getOnPremisesConnections());
         $writer->writeCollectionOfObjectValues('provisioningPolicies', $this->getProvisioningPolicies());
+        $writer->writeObjectValue('report', $this->getReport());
         $writer->writeCollectionOfObjectValues('userSettings', $this->getUserSettings());
     }
 
@@ -201,6 +215,14 @@ class VirtualEndpoint extends Entity implements Parsable
     */
     public function setProvisioningPolicies(?array $value): void {
         $this->getBackingStore()->set('provisioningPolicies', $value);
+    }
+
+    /**
+     * Sets the report property value. Cloud PC-related reports. Read-only.
+     * @param CloudPcReport|null $value Value to set for the report property.
+    */
+    public function setReport(?CloudPcReport $value): void {
+        $this->getBackingStore()->set('report', $value);
     }
 
     /**

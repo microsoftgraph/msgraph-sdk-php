@@ -73,11 +73,12 @@ class Workspace extends Place implements Parsable
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'mode' => fn(ParseNode $n) => $o->setMode($n->getObjectValue([PlaceMode::class, 'createFromDiscriminatorValue'])),
             'nickname' => fn(ParseNode $n) => $o->setNickname($n->getStringValue()),
+            'placeId' => fn(ParseNode $n) => $o->setPlaceId($n->getStringValue()),
         ]);
     }
 
     /**
-     * Gets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms Pro management portal.
+     * Gets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms pro management portal.unavailablePlaceMode - Workspaces that are taken down for maintenance or marked as not reservable.
      * @return PlaceMode|null
     */
     public function getMode(): ?PlaceMode {
@@ -101,6 +102,18 @@ class Workspace extends Place implements Parsable
     }
 
     /**
+     * Gets the placeId property value. An alternative immutable unique identifier of the workspace. Read-only.
+     * @return string|null
+    */
+    public function getPlaceId(): ?string {
+        $val = $this->getBackingStore()->get('placeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'placeId'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -111,6 +124,7 @@ class Workspace extends Place implements Parsable
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeObjectValue('mode', $this->getMode());
         $writer->writeStringValue('nickname', $this->getNickname());
+        $writer->writeStringValue('placeId', $this->getPlaceId());
     }
 
     /**
@@ -138,7 +152,7 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Sets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms Pro management portal.
+     * Sets the mode property value. The mode for a workspace. The supported modes are:reservablePlaceMode - Workspaces that can be booked in advance using desk pool reservation tools.dropInPlaceMode - First come, first served desks. When you plug into a peripheral on one of these desks in the workspace, the desk is booked for you, assuming that the peripheral has been associated with the desk in the Microsoft Teams Rooms pro management portal.unavailablePlaceMode - Workspaces that are taken down for maintenance or marked as not reservable.
      * @param PlaceMode|null $value Value to set for the mode property.
     */
     public function setMode(?PlaceMode $value): void {
@@ -151,6 +165,14 @@ class Workspace extends Place implements Parsable
     */
     public function setNickname(?string $value): void {
         $this->getBackingStore()->set('nickname', $value);
+    }
+
+    /**
+     * Sets the placeId property value. An alternative immutable unique identifier of the workspace. Read-only.
+     * @param string|null $value Value to set for the placeId property.
+    */
+    public function setPlaceId(?string $value): void {
+        $this->getBackingStore()->set('placeId', $value);
     }
 
 }

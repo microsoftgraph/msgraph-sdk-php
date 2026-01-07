@@ -26,7 +26,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the configurationId property value. The configurationId property
+     * Gets the configurationId property value. The unique identifier of the mailbox configuration.
      * @return string|null
     */
     public function getConfigurationId(): ?string {
@@ -38,7 +38,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the configurationType property value. The configurationType property
+     * Gets the configurationType property value. The type of mailbox configuration. The possible values are: mailForwardingRule, owaSettings, ewsSettings, mailDelegation, userInboxRule, unknownFutureValue.
      * @return MailboxConfigurationType|null
     */
     public function getConfigurationType(): ?MailboxConfigurationType {
@@ -50,7 +50,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the mailbox.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -62,7 +62,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Gets the externalDirectoryObjectId property value. The external directory object identifier of the mailbox.
      * @return string|null
     */
     public function getExternalDirectoryObjectId(): ?string {
@@ -90,7 +90,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the mailboxPrimaryAddress property value. The mailboxPrimaryAddress property
+     * Gets the mailboxPrimaryAddress property value. The primary email address of the mailbox.
      * @return string|null
     */
     public function getMailboxPrimaryAddress(): ?string {
@@ -102,7 +102,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the upn property value. The upn property
+     * Gets the upn property value. The user principal name (UPN) of the mailbox.
      * @return string|null
     */
     public function getUpn(): ?string {
@@ -128,7 +128,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the configurationId property value. The configurationId property
+     * Sets the configurationId property value. The unique identifier of the mailbox configuration.
      * @param string|null $value Value to set for the configurationId property.
     */
     public function setConfigurationId(?string $value): void {
@@ -136,7 +136,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the configurationType property value. The configurationType property
+     * Sets the configurationType property value. The type of mailbox configuration. The possible values are: mailForwardingRule, owaSettings, ewsSettings, mailDelegation, userInboxRule, unknownFutureValue.
      * @param MailboxConfigurationType|null $value Value to set for the configurationType property.
     */
     public function setConfigurationType(?MailboxConfigurationType $value): void {
@@ -144,7 +144,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the mailbox.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -152,7 +152,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the externalDirectoryObjectId property value. The externalDirectoryObjectId property
+     * Sets the externalDirectoryObjectId property value. The external directory object identifier of the mailbox.
      * @param string|null $value Value to set for the externalDirectoryObjectId property.
     */
     public function setExternalDirectoryObjectId(?string $value): void {
@@ -160,7 +160,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the mailboxPrimaryAddress property value. The mailboxPrimaryAddress property
+     * Sets the mailboxPrimaryAddress property value. The primary email address of the mailbox.
      * @param string|null $value Value to set for the mailboxPrimaryAddress property.
     */
     public function setMailboxPrimaryAddress(?string $value): void {
@@ -168,7 +168,7 @@ class MailboxConfigurationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the upn property value. The upn property
+     * Sets the upn property value. The user principal name (UPN) of the mailbox.
      * @param string|null $value Value to set for the upn property.
     */
     public function setUpn(?string $value): void {

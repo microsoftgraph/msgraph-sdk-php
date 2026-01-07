@@ -47,6 +47,7 @@ class SubjectSet implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.requestorManager': return new RequestorManager();
                 case '#microsoft.graph.singleServicePrincipal': return new SingleServicePrincipal();
                 case '#microsoft.graph.singleUser': return new SingleUser();
+                case '#microsoft.graph.targetAgentIdentitySponsorsOrOwners': return new TargetAgentIdentitySponsorsOrOwners();
                 case '#microsoft.graph.targetApplicationOwners': return new TargetApplicationOwners();
                 case '#microsoft.graph.targetManager': return new TargetManager();
                 case '#microsoft.graph.targetUserSponsors': return new TargetUserSponsors();

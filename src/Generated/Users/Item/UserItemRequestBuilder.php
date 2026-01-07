@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Graph\Generated\Users\Item\Activities\ActivitiesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\AdhocCalls\AdhocCallsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\AgreementAcceptances\AgreementAcceptancesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\AssignLicense\AssignLicenseRequestBuilder;
@@ -57,6 +58,7 @@ use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\OnlineMeetingsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OnPremisesSyncBehavior\OnPremisesSyncBehaviorRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\OutlookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedDevices\OwnedDevicesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedObjects\OwnedObjectsRequestBuilder;
@@ -99,6 +101,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     */
     public function activities(): ActivitiesRequestBuilder {
         return new ActivitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the adhocCalls property of the microsoft.graph.user entity.
+    */
+    public function adhocCalls(): AdhocCallsRequestBuilder {
+        return new AdhocCallsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -442,6 +451,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     */
     public function onlineMeetings(): OnlineMeetingsRequestBuilder {
         return new OnlineMeetingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the onPremisesSyncBehavior property of the microsoft.graph.user entity.
+    */
+    public function onPremisesSyncBehavior(): OnPremisesSyncBehaviorRequestBuilder {
+        return new OnPremisesSyncBehaviorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

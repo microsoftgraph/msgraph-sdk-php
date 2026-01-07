@@ -40,7 +40,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
+     * Gets the defenderAvStatus property value. State of the Defender anti-malware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @return DefenderAvStatus|null
     */
     public function getDefenderAvStatus(): ?DefenderAvStatus {
@@ -107,6 +107,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             'osPlatform' => fn(ParseNode $n) => $o->setOsPlatform($n->getStringValue()),
             'rbacGroupId' => fn(ParseNode $n) => $o->setRbacGroupId($n->getIntegerValue()),
             'rbacGroupName' => fn(ParseNode $n) => $o->setRbacGroupName($n->getStringValue()),
+            'resourceAccessEvents' => fn(ParseNode $n) => $o->setResourceAccessEvents($n->getCollectionOfObjectValues([ResourceAccessEvent::class, 'createFromDiscriminatorValue'])),
             'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getEnumValue(DeviceRiskScore::class)),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
             'vmMetadata' => fn(ParseNode $n) => $o->setVmMetadata($n->getObjectValue([VmMetadata::class, 'createFromDiscriminatorValue'])),
@@ -286,6 +287,20 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
+     * Gets the resourceAccessEvents property value. Information on resource access attempts made by the user account.
+     * @return array<ResourceAccessEvent>|null
+    */
+    public function getResourceAccessEvents(): ?array {
+        $val = $this->getBackingStore()->get('resourceAccessEvents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ResourceAccessEvent::class);
+            /** @var array<ResourceAccessEvent>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceAccessEvents'");
+    }
+
+    /**
      * Gets the riskScore property value. Risk score as evaluated by Microsoft Defender for Endpoint. The possible values are: none, informational, low, medium, high, unknownFutureValue.
      * @return DeviceRiskScore|null
     */
@@ -345,6 +360,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('osPlatform', $this->getOsPlatform());
         $writer->writeIntegerValue('rbacGroupId', $this->getRbacGroupId());
         $writer->writeStringValue('rbacGroupName', $this->getRbacGroupName());
+        $writer->writeCollectionOfObjectValues('resourceAccessEvents', $this->getResourceAccessEvents());
         $writer->writeEnumValue('riskScore', $this->getRiskScore());
         $writer->writeStringValue('version', $this->getVersion());
         $writer->writeObjectValue('vmMetadata', $this->getVmMetadata());
@@ -359,7 +375,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the defenderAvStatus property value. State of the Defender AntiMalware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
+     * Sets the defenderAvStatus property value. State of the Defender anti-malware engine. The possible values are: notReporting, disabled, notUpdated, updated, unknown, notSupported, unknownFutureValue.
      * @param DefenderAvStatus|null $value Value to set for the defenderAvStatus property.
     */
     public function setDefenderAvStatus(?DefenderAvStatus $value): void {
@@ -492,6 +508,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     */
     public function setRbacGroupName(?string $value): void {
         $this->getBackingStore()->set('rbacGroupName', $value);
+    }
+
+    /**
+     * Sets the resourceAccessEvents property value. Information on resource access attempts made by the user account.
+     * @param array<ResourceAccessEvent>|null $value Value to set for the resourceAccessEvents property.
+    */
+    public function setResourceAccessEvents(?array $value): void {
+        $this->getBackingStore()->set('resourceAccessEvents', $value);
     }
 
     /**

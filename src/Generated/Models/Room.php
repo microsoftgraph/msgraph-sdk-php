@@ -113,6 +113,8 @@ class Room extends Place implements Parsable
             'floorLabel' => fn(ParseNode $n) => $o->setFloorLabel($n->getStringValue()),
             'floorNumber' => fn(ParseNode $n) => $o->setFloorNumber($n->getIntegerValue()),
             'nickname' => fn(ParseNode $n) => $o->setNickname($n->getStringValue()),
+            'placeId' => fn(ParseNode $n) => $o->setPlaceId($n->getStringValue()),
+            'teamsEnabledState' => fn(ParseNode $n) => $o->setTeamsEnabledState($n->getEnumValue(PlaceFeatureEnablement::class)),
             'videoDeviceName' => fn(ParseNode $n) => $o->setVideoDeviceName($n->getStringValue()),
         ]);
     }
@@ -154,6 +156,30 @@ class Room extends Place implements Parsable
     }
 
     /**
+     * Gets the placeId property value. An alternative immutable unique identifier of the room. Read-only.
+     * @return string|null
+    */
+    public function getPlaceId(): ?string {
+        $val = $this->getBackingStore()->get('placeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'placeId'");
+    }
+
+    /**
+     * Gets the teamsEnabledState property value. The teamsEnabledState property
+     * @return PlaceFeatureEnablement|null
+    */
+    public function getTeamsEnabledState(): ?PlaceFeatureEnablement {
+        $val = $this->getBackingStore()->get('teamsEnabledState');
+        if (is_null($val) || $val instanceof PlaceFeatureEnablement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsEnabledState'");
+    }
+
+    /**
      * Gets the videoDeviceName property value. Specifies the name of the video device in the room.
      * @return string|null
     */
@@ -180,6 +206,8 @@ class Room extends Place implements Parsable
         $writer->writeStringValue('floorLabel', $this->getFloorLabel());
         $writer->writeIntegerValue('floorNumber', $this->getFloorNumber());
         $writer->writeStringValue('nickname', $this->getNickname());
+        $writer->writeStringValue('placeId', $this->getPlaceId());
+        $writer->writeEnumValue('teamsEnabledState', $this->getTeamsEnabledState());
         $writer->writeStringValue('videoDeviceName', $this->getVideoDeviceName());
     }
 
@@ -253,6 +281,22 @@ class Room extends Place implements Parsable
     */
     public function setNickname(?string $value): void {
         $this->getBackingStore()->set('nickname', $value);
+    }
+
+    /**
+     * Sets the placeId property value. An alternative immutable unique identifier of the room. Read-only.
+     * @param string|null $value Value to set for the placeId property.
+    */
+    public function setPlaceId(?string $value): void {
+        $this->getBackingStore()->set('placeId', $value);
+    }
+
+    /**
+     * Sets the teamsEnabledState property value. The teamsEnabledState property
+     * @param PlaceFeatureEnablement|null $value Value to set for the teamsEnabledState property.
+    */
+    public function setTeamsEnabledState(?PlaceFeatureEnablement $value): void {
+        $this->getBackingStore()->set('teamsEnabledState', $value);
     }
 
     /**

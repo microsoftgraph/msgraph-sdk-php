@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCase;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\CaseMembers\CaseMembersRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\CustodiansRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityClose\MicrosoftGraphSecurityCloseRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityReopen\MicrosoftGraphSecurityReopenRequestBuilder;
@@ -25,6 +26,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the caseMembers property of the microsoft.graph.security.ediscoveryCase entity.
+    */
+    public function caseMembers(): CaseMembersRequestBuilder {
+        return new CaseMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
     */

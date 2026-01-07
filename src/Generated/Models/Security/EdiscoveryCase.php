@@ -29,6 +29,20 @@ class EdiscoveryCase extends EscapedCase implements Parsable
     }
 
     /**
+     * Gets the caseMembers property value. Represents members of an eDiscovery case.
+     * @return array<EdiscoveryCaseMember>|null
+    */
+    public function getCaseMembers(): ?array {
+        $val = $this->getBackingStore()->get('caseMembers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EdiscoveryCaseMember::class);
+            /** @var array<EdiscoveryCaseMember>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'caseMembers'");
+    }
+
+    /**
      * Gets the closedBy property value. The user who closed the case.
      * @return IdentitySet|null
     */
@@ -85,6 +99,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'caseMembers' => fn(ParseNode $n) => $o->setCaseMembers($n->getCollectionOfObjectValues([EdiscoveryCaseMember::class, 'createFromDiscriminatorValue'])),
             'closedBy' => fn(ParseNode $n) => $o->setClosedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'closedDateTime' => fn(ParseNode $n) => $o->setClosedDateTime($n->getDateTimeValue()),
             'custodians' => fn(ParseNode $n) => $o->setCustodians($n->getCollectionOfObjectValues([EdiscoveryCustodian::class, 'createFromDiscriminatorValue'])),
@@ -186,6 +201,7 @@ class EdiscoveryCase extends EscapedCase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('caseMembers', $this->getCaseMembers());
         $writer->writeObjectValue('closedBy', $this->getClosedBy());
         $writer->writeDateTimeValue('closedDateTime', $this->getClosedDateTime());
         $writer->writeCollectionOfObjectValues('custodians', $this->getCustodians());
@@ -196,6 +212,14 @@ class EdiscoveryCase extends EscapedCase implements Parsable
         $writer->writeCollectionOfObjectValues('searches', $this->getSearches());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeCollectionOfObjectValues('tags', $this->getTags());
+    }
+
+    /**
+     * Sets the caseMembers property value. Represents members of an eDiscovery case.
+     * @param array<EdiscoveryCaseMember>|null $value Value to set for the caseMembers property.
+    */
+    public function setCaseMembers(?array $value): void {
+        $this->getBackingStore()->set('caseMembers', $value);
     }
 
     /**
