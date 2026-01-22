@@ -167,6 +167,7 @@ class Incident extends Entity implements Parsable
             'incidentWebUrl' => fn(ParseNode $n) => $o->setIncidentWebUrl($n->getStringValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getStringValue()),
             'lastUpdateDateTime' => fn(ParseNode $n) => $o->setLastUpdateDateTime($n->getDateTimeValue()),
+            'priorityScore' => fn(ParseNode $n) => $o->setPriorityScore($n->getIntegerValue()),
             'redirectIncidentId' => fn(ParseNode $n) => $o->setRedirectIncidentId($n->getStringValue()),
             'resolvingComment' => fn(ParseNode $n) => $o->setResolvingComment($n->getStringValue()),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(AlertSeverity::class)),
@@ -218,6 +219,18 @@ class Incident extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdateDateTime'");
+    }
+
+    /**
+     * Gets the priorityScore property value. The priorityScore property
+     * @return int|null
+    */
+    public function getPriorityScore(): ?int {
+        $val = $this->getBackingStore()->get('priorityScore');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'priorityScore'");
     }
 
     /**
@@ -324,6 +337,7 @@ class Incident extends Entity implements Parsable
         $writer->writeStringValue('incidentWebUrl', $this->getIncidentWebUrl());
         $writer->writeStringValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastUpdateDateTime', $this->getLastUpdateDateTime());
+        $writer->writeIntegerValue('priorityScore', $this->getPriorityScore());
         $writer->writeStringValue('redirectIncidentId', $this->getRedirectIncidentId());
         $writer->writeStringValue('resolvingComment', $this->getResolvingComment());
         $writer->writeEnumValue('severity', $this->getSeverity());
@@ -427,6 +441,14 @@ class Incident extends Entity implements Parsable
     */
     public function setLastUpdateDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastUpdateDateTime', $value);
+    }
+
+    /**
+     * Sets the priorityScore property value. The priorityScore property
+     * @param int|null $value Value to set for the priorityScore property.
+    */
+    public function setPriorityScore(?int $value): void {
+        $this->getBackingStore()->set('priorityScore', $value);
     }
 
     /**

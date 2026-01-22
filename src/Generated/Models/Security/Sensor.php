@@ -90,6 +90,7 @@ class Sensor extends Entity implements Parsable
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(SensorHealthStatus::class)),
             'openHealthIssuesCount' => fn(ParseNode $n) => $o->setOpenHealthIssuesCount($n->getIntegerValue()),
             'sensorType' => fn(ParseNode $n) => $o->setSensorType($n->getEnumValue(SensorType::class)),
+            'serviceStatus' => fn(ParseNode $n) => $o->setServiceStatus($n->getEnumValue(ServiceStatus::class)),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([SensorSettings::class, 'createFromDiscriminatorValue'])),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
         ]);
@@ -146,6 +147,18 @@ class Sensor extends Entity implements Parsable
     }
 
     /**
+     * Gets the serviceStatus property value. The serviceStatus property
+     * @return ServiceStatus|null
+    */
+    public function getServiceStatus(): ?ServiceStatus {
+        $val = $this->getBackingStore()->get('serviceStatus');
+        if (is_null($val) || $val instanceof ServiceStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceStatus'");
+    }
+
+    /**
      * Gets the settings property value. The settings property
      * @return SensorSettings|null
     */
@@ -183,6 +196,7 @@ class Sensor extends Entity implements Parsable
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
         $writer->writeIntegerValue('openHealthIssuesCount', $this->getOpenHealthIssuesCount());
         $writer->writeEnumValue('sensorType', $this->getSensorType());
+        $writer->writeEnumValue('serviceStatus', $this->getServiceStatus());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeStringValue('version', $this->getVersion());
     }
@@ -249,6 +263,14 @@ class Sensor extends Entity implements Parsable
     */
     public function setSensorType(?SensorType $value): void {
         $this->getBackingStore()->set('sensorType', $value);
+    }
+
+    /**
+     * Sets the serviceStatus property value. The serviceStatus property
+     * @param ServiceStatus|null $value Value to set for the serviceStatus property.
+    */
+    public function setServiceStatus(?ServiceStatus $value): void {
+        $this->getBackingStore()->set('serviceStatus', $value);
     }
 
     /**
