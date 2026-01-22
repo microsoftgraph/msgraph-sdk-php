@@ -81,11 +81,25 @@ class ProtectionPolicyBase extends Entity implements Parsable
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'protectionPolicyArtifactCount' => fn(ParseNode $n) => $o->setProtectionPolicyArtifactCount($n->getObjectValue([ProtectionPolicyArtifactCount::class, 'createFromDiscriminatorValue'])),
             'retentionSettings' => fn(ParseNode $n) => $o->setRetentionSettings($n->getCollectionOfObjectValues([RetentionSetting::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProtectionPolicyStatus::class)),
         ]);
+    }
+
+    /**
+     * Gets the isEnabled property value. The isEnabled property
+     * @return bool|null
+    */
+    public function getIsEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -110,6 +124,18 @@ class ProtectionPolicyBase extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
+    }
+
+    /**
+     * Gets the protectionPolicyArtifactCount property value. The protectionPolicyArtifactCount property
+     * @return ProtectionPolicyArtifactCount|null
+    */
+    public function getProtectionPolicyArtifactCount(): ?ProtectionPolicyArtifactCount {
+        $val = $this->getBackingStore()->get('protectionPolicyArtifactCount');
+        if (is_null($val) || $val instanceof ProtectionPolicyArtifactCount) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protectionPolicyArtifactCount'");
     }
 
     /**
@@ -147,8 +173,10 @@ class ProtectionPolicyBase extends Entity implements Parsable
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeObjectValue('protectionPolicyArtifactCount', $this->getProtectionPolicyArtifactCount());
         $writer->writeCollectionOfObjectValues('retentionSettings', $this->getRetentionSettings());
         $writer->writeEnumValue('status', $this->getStatus());
     }
@@ -178,6 +206,14 @@ class ProtectionPolicyBase extends Entity implements Parsable
     }
 
     /**
+     * Sets the isEnabled property value. The isEnabled property
+     * @param bool|null $value Value to set for the isEnabled property.
+    */
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
+    }
+
+    /**
      * Sets the lastModifiedBy property value. The identity of the person who last modified the policy.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
@@ -191,6 +227,14 @@ class ProtectionPolicyBase extends Entity implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the protectionPolicyArtifactCount property value. The protectionPolicyArtifactCount property
+     * @param ProtectionPolicyArtifactCount|null $value Value to set for the protectionPolicyArtifactCount property.
+    */
+    public function setProtectionPolicyArtifactCount(?ProtectionPolicyArtifactCount $value): void {
+        $this->getBackingStore()->set('protectionPolicyArtifactCount', $value);
     }
 
     /**

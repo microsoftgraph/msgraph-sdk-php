@@ -39,6 +39,18 @@ class SensorCandidate extends Entity implements Parsable
     }
 
     /**
+     * Gets the domainName property value. The domain name of the sensor.
+     * @return string|null
+    */
+    public function getDomainName(): ?string {
+        $val = $this->getBackingStore()->get('domainName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'domainName'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -46,6 +58,7 @@ class SensorCandidate extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'computerDnsName' => fn(ParseNode $n) => $o->setComputerDnsName($n->getStringValue()),
+            'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
             'lastSeenDateTime' => fn(ParseNode $n) => $o->setLastSeenDateTime($n->getDateTimeValue()),
             'senseClientVersion' => fn(ParseNode $n) => $o->setSenseClientVersion($n->getStringValue()),
         ]);
@@ -82,6 +95,7 @@ class SensorCandidate extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('computerDnsName', $this->getComputerDnsName());
+        $writer->writeStringValue('domainName', $this->getDomainName());
         $writer->writeDateTimeValue('lastSeenDateTime', $this->getLastSeenDateTime());
         $writer->writeStringValue('senseClientVersion', $this->getSenseClientVersion());
     }
@@ -92,6 +106,14 @@ class SensorCandidate extends Entity implements Parsable
     */
     public function setComputerDnsName(?string $value): void {
         $this->getBackingStore()->set('computerDnsName', $value);
+    }
+
+    /**
+     * Sets the domainName property value. The domain name of the sensor.
+     * @param string|null $value Value to set for the domainName property.
+    */
+    public function setDomainName(?string $value): void {
+        $this->getBackingStore()->set('domainName', $value);
     }
 
     /**
