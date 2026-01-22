@@ -69,7 +69,7 @@ class FileHash implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
+     * Gets the hashType property value. File hash type. The possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      * @return FileHashType|null
     */
     public function getHashType(): ?FileHashType {
@@ -132,7 +132,7 @@ class FileHash implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the hashType property value. File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
+     * Sets the hashType property value. File hash type. The possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      * @param FileHashType|null $value Value to set for the hashType property.
     */
     public function setHashType(?FileHashType $value): void {

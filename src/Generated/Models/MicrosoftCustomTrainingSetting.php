@@ -67,7 +67,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
+     * Gets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @return TrainingCompletionDuration|null
     */
     public function getTrainingCompletionDuration(): ?TrainingCompletionDuration {
@@ -106,7 +106,7 @@ class MicrosoftCustomTrainingSetting extends TrainingSetting implements Parsable
     }
 
     /**
-     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. Possible values are: week, fortnite, month, unknownFutureValue.
+     * Sets the trainingCompletionDuration property value. The training completion duration that needs to be provided before scheduling the training. The possible values are: week, fortnite, month, unknownFutureValue.
      * @param TrainingCompletionDuration|null $value Value to set for the trainingCompletionDuration property.
     */
     public function setTrainingCompletionDuration(?TrainingCompletionDuration $value): void {

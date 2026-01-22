@@ -129,7 +129,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
+     * Gets the direction property value. Network connection direction. The possible values are: unknown, inbound, outbound.
      * @return ConnectionDirection|null
     */
     public function getDirection(): ?ConnectionDirection {
@@ -256,7 +256,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+     * Gets the protocol property value. Network protocol. The possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
      * @return SecurityNetworkProtocol|null
     */
     public function getProtocol(): ?SecurityNetworkProtocol {
@@ -316,7 +316,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+     * Gets the status property value. Network connection status. The possible values are: unknown, attempted, succeeded, blocked, failed.
      * @return ConnectionStatus|null
     */
     public function getStatus(): ?ConnectionStatus {
@@ -433,7 +433,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the direction property value. Network connection direction. Possible values are: unknown, inbound, outbound.
+     * Sets the direction property value. Network connection direction. The possible values are: unknown, inbound, outbound.
      * @param ConnectionDirection|null $value Value to set for the direction property.
     */
     public function setDirection(?ConnectionDirection $value): void {
@@ -497,7 +497,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the protocol property value. Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+     * Sets the protocol property value. Network protocol. The possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
      * @param SecurityNetworkProtocol|null $value Value to set for the protocol property.
     */
     public function setProtocol(?SecurityNetworkProtocol $value): void {
@@ -537,7 +537,7 @@ class NetworkConnection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the status property value. Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+     * Sets the status property value. Network connection status. The possible values are: unknown, attempted, succeeded, blocked, failed.
      * @param ConnectionStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ConnectionStatus $value): void {

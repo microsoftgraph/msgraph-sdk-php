@@ -31,10 +31,11 @@ class UnitMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property units for places
+     * Delete a unitMap object.
      * @param UnitMapItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/unitmap-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UnitMapItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class UnitMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @param UnitMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnitMap|null>
      * @throws Exception
@@ -59,11 +60,12 @@ class UnitMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property units in places
+     * Update the properties of an existing unitMap object in IMDF format on a specified floor, or create one if it doesn't exist.
      * @param UnitMap $body The request body
      * @param UnitMapItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnitMap|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/unitmap-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(UnitMap $body, ?UnitMapItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +76,7 @@ class UnitMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property units for places
+     * Delete a unitMap object.
      * @param UnitMapItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class UnitMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get units from places
+     * Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @param UnitMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class UnitMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property units in places
+     * Update the properties of an existing unitMap object in IMDF format on a specified floor, or create one if it doesn't exist.
      * @param UnitMap $body The request body
      * @param UnitMapItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

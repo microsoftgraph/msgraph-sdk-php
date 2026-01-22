@@ -45,7 +45,7 @@ class FootprintMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get footprints from places
+     * Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
      * @param FootprintMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FootprintMap|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class FootprintMapItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get footprints from places
+     * Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
      * @param FootprintMapItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

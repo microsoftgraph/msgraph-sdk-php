@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get containers from storage
+ * The collection of active fileStorageContainer resources.
 */
 class FileStorageContainerItemRequestBuilderGetQueryParameters 
 {

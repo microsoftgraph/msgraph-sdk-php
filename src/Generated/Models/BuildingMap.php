@@ -40,7 +40,7 @@ class BuildingMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the footprints property value. The footprints property
+     * Gets the footprints property value. Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
      * @return array<FootprintMap>|null
     */
     public function getFootprints(): ?array {
@@ -54,7 +54,7 @@ class BuildingMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the levels property value. The levels property
+     * Gets the levels property value. Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @return array<LevelMap>|null
     */
     public function getLevels(): ?array {
@@ -68,7 +68,7 @@ class BuildingMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier for the building to which this buildingMap belongs.
      * @return string|null
     */
     public function getPlaceId(): ?string {
@@ -91,7 +91,7 @@ class BuildingMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the footprints property value. The footprints property
+     * Sets the footprints property value. Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
      * @param array<FootprintMap>|null $value Value to set for the footprints property.
     */
     public function setFootprints(?array $value): void {
@@ -99,7 +99,7 @@ class BuildingMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the levels property value. The levels property
+     * Sets the levels property value. Represents a physical floor structure within a building. It corresponds to level.geojson in IMDF format.
      * @param array<LevelMap>|null $value Value to set for the levels property.
     */
     public function setLevels(?array $value): void {
@@ -107,7 +107,7 @@ class BuildingMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier for the building to which this buildingMap belongs.
      * @param string|null $value Value to set for the placeId property.
     */
     public function setPlaceId(?string $value): void {

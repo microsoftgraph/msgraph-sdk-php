@@ -27,6 +27,18 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
+     * Gets the assignedSensitivityLabel property value. Sensitivity label assigned to the fileStorageContainer. Read-write.
+     * @return AssignedLabel|null
+    */
+    public function getAssignedSensitivityLabel(): ?AssignedLabel {
+        $val = $this->getBackingStore()->get('assignedSensitivityLabel');
+        if (is_null($val) || $val instanceof AssignedLabel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedSensitivityLabel'");
+    }
+
+    /**
      * Gets the columns property value. The columns property
      * @return array<ColumnDefinition>|null
     */
@@ -119,6 +131,7 @@ class FileStorageContainer extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'assignedSensitivityLabel' => fn(ParseNode $n) => $o->setAssignedSensitivityLabel($n->getObjectValue([AssignedLabel::class, 'createFromDiscriminatorValue'])),
             'columns' => fn(ParseNode $n) => $o->setColumns($n->getCollectionOfObjectValues([ColumnDefinition::class, 'createFromDiscriminatorValue'])),
             'containerTypeId' => fn(ParseNode $n) => $o->setContainerTypeId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
@@ -230,6 +243,7 @@ class FileStorageContainer extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('assignedSensitivityLabel', $this->getAssignedSensitivityLabel());
         $writer->writeCollectionOfObjectValues('columns', $this->getColumns());
         $writer->writeStringValue('containerTypeId', $this->getContainerTypeId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
@@ -244,6 +258,14 @@ class FileStorageContainer extends Entity implements Parsable
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeObjectValue('viewpoint', $this->getViewpoint());
+    }
+
+    /**
+     * Sets the assignedSensitivityLabel property value. Sensitivity label assigned to the fileStorageContainer. Read-write.
+     * @param AssignedLabel|null $value Value to set for the assignedSensitivityLabel property.
+    */
+    public function setAssignedSensitivityLabel(?AssignedLabel $value): void {
+        $this->getBackingStore()->set('assignedSensitivityLabel', $value);
     }
 
     /**

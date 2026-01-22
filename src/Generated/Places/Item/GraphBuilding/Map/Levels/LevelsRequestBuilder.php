@@ -52,10 +52,11 @@ class LevelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get levels from places
+     * Get a list of the levelMap objects and their properties.
      * @param LevelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LevelMapCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/buildingmap-list-levels?view=graph-rest-1.0 Find more info here
     */
     public function get(?LevelsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class LevelsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get levels from places
+     * Get a list of the levelMap objects and their properties.
      * @param LevelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

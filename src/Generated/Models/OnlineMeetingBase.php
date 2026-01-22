@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -82,7 +83,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
+     * Gets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. The possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @return AllowedLobbyAdmitterRoles|null
     */
     public function getAllowedLobbyAdmitters(): ?AllowedLobbyAdmitterRoles {
@@ -94,7 +95,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
+     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. The possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
      * @return OnlineMeetingPresenters|null
     */
     public function getAllowedPresenters(): ?OnlineMeetingPresenters {
@@ -106,7 +107,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. Possible values are: enabled, disabled, unknownFutureValue.
+     * Gets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. The possible values are: enabled, disabled, unknownFutureValue.
      * @return MeetingLiveShareOptions|null
     */
     public function getAllowLiveShare(): ?MeetingLiveShareOptions {
@@ -252,6 +253,18 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return DateTime|null
+    */
+    public function getExpiryDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('expiryDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expiryDateTime'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -276,13 +289,17 @@ class OnlineMeetingBase extends Entity implements Parsable
             'audioConferencing' => fn(ParseNode $n) => $o->setAudioConferencing($n->getObjectValue([AudioConferencing::class, 'createFromDiscriminatorValue'])),
             'chatInfo' => fn(ParseNode $n) => $o->setChatInfo($n->getObjectValue([ChatInfo::class, 'createFromDiscriminatorValue'])),
             'chatRestrictions' => fn(ParseNode $n) => $o->setChatRestrictions($n->getObjectValue([ChatRestrictions::class, 'createFromDiscriminatorValue'])),
+            'expiryDateTime' => fn(ParseNode $n) => $o->setExpiryDateTime($n->getDateTimeValue()),
             'isEndToEndEncryptionEnabled' => fn(ParseNode $n) => $o->setIsEndToEndEncryptionEnabled($n->getBooleanValue()),
             'isEntryExitAnnounced' => fn(ParseNode $n) => $o->setIsEntryExitAnnounced($n->getBooleanValue()),
             'joinInformation' => fn(ParseNode $n) => $o->setJoinInformation($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'joinMeetingIdSettings' => fn(ParseNode $n) => $o->setJoinMeetingIdSettings($n->getObjectValue([JoinMeetingIdSettings::class, 'createFromDiscriminatorValue'])),
             'joinWebUrl' => fn(ParseNode $n) => $o->setJoinWebUrl($n->getStringValue()),
             'lobbyBypassSettings' => fn(ParseNode $n) => $o->setLobbyBypassSettings($n->getObjectValue([LobbyBypassSettings::class, 'createFromDiscriminatorValue'])),
+            'meetingOptionsWebUrl' => fn(ParseNode $n) => $o->setMeetingOptionsWebUrl($n->getStringValue()),
+            'meetingSpokenLanguageTag' => fn(ParseNode $n) => $o->setMeetingSpokenLanguageTag($n->getStringValue()),
             'recordAutomatically' => fn(ParseNode $n) => $o->setRecordAutomatically($n->getBooleanValue()),
+            'sensitivityLabelAssignment' => fn(ParseNode $n) => $o->setSensitivityLabelAssignment($n->getObjectValue([OnlineMeetingSensitivityLabelAssignment::class, 'createFromDiscriminatorValue'])),
             'shareMeetingChatHistoryDefault' => fn(ParseNode $n) => $o->setShareMeetingChatHistoryDefault($n->getEnumValue(MeetingChatHistoryDefaultMode::class)),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
             'videoTeleconferenceId' => fn(ParseNode $n) => $o->setVideoTeleconferenceId($n->getStringValue()),
@@ -363,6 +380,30 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the meetingOptionsWebUrl property value. Provides the URL to the Teams meeting options page for the specified meeting. This link allows only the organizer to configure meeting settings.
+     * @return string|null
+    */
+    public function getMeetingOptionsWebUrl(): ?string {
+        $val = $this->getBackingStore()->get('meetingOptionsWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingOptionsWebUrl'");
+    }
+
+    /**
+     * Gets the meetingSpokenLanguageTag property value. Specifies the spoken language used during the meeting for recording and transcription purposes.
+     * @return string|null
+    */
+    public function getMeetingSpokenLanguageTag(): ?string {
+        $val = $this->getBackingStore()->get('meetingSpokenLanguageTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingSpokenLanguageTag'");
+    }
+
+    /**
      * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @return bool|null
     */
@@ -375,7 +416,19 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
+     * Gets the sensitivityLabelAssignment property value. Specifies the sensitivity label applied to the Teams meeting.
+     * @return OnlineMeetingSensitivityLabelAssignment|null
+    */
+    public function getSensitivityLabelAssignment(): ?OnlineMeetingSensitivityLabelAssignment {
+        $val = $this->getBackingStore()->get('sensitivityLabelAssignment');
+        if (is_null($val) || $val instanceof OnlineMeetingSensitivityLabelAssignment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivityLabelAssignment'");
+    }
+
+    /**
+     * Gets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  The possible values are: all, none, unknownFutureValue.
      * @return MeetingChatHistoryDefaultMode|null
     */
     public function getShareMeetingChatHistoryDefault(): ?MeetingChatHistoryDefaultMode {
@@ -446,13 +499,17 @@ class OnlineMeetingBase extends Entity implements Parsable
         $writer->writeObjectValue('audioConferencing', $this->getAudioConferencing());
         $writer->writeObjectValue('chatInfo', $this->getChatInfo());
         $writer->writeObjectValue('chatRestrictions', $this->getChatRestrictions());
+        $writer->writeDateTimeValue('expiryDateTime', $this->getExpiryDateTime());
         $writer->writeBooleanValue('isEndToEndEncryptionEnabled', $this->getIsEndToEndEncryptionEnabled());
         $writer->writeBooleanValue('isEntryExitAnnounced', $this->getIsEntryExitAnnounced());
         $writer->writeObjectValue('joinInformation', $this->getJoinInformation());
         $writer->writeObjectValue('joinMeetingIdSettings', $this->getJoinMeetingIdSettings());
         $writer->writeStringValue('joinWebUrl', $this->getJoinWebUrl());
         $writer->writeObjectValue('lobbyBypassSettings', $this->getLobbyBypassSettings());
+        $writer->writeStringValue('meetingOptionsWebUrl', $this->getMeetingOptionsWebUrl());
+        $writer->writeStringValue('meetingSpokenLanguageTag', $this->getMeetingSpokenLanguageTag());
         $writer->writeBooleanValue('recordAutomatically', $this->getRecordAutomatically());
+        $writer->writeObjectValue('sensitivityLabelAssignment', $this->getSensitivityLabelAssignment());
         $writer->writeEnumValue('shareMeetingChatHistoryDefault', $this->getShareMeetingChatHistoryDefault());
         $writer->writeStringValue('subject', $this->getSubject());
         $writer->writeStringValue('videoTeleconferenceId', $this->getVideoTeleconferenceId());
@@ -492,7 +549,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
+     * Sets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. The possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @param AllowedLobbyAdmitterRoles|null $value Value to set for the allowedLobbyAdmitters property.
     */
     public function setAllowedLobbyAdmitters(?AllowedLobbyAdmitterRoles $value): void {
@@ -500,7 +557,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
+     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. The possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue. Inherited from onlineMeetingBase.
      * @param OnlineMeetingPresenters|null $value Value to set for the allowedPresenters property.
     */
     public function setAllowedPresenters(?OnlineMeetingPresenters $value): void {
@@ -508,7 +565,7 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. Possible values are: enabled, disabled, unknownFutureValue.
+     * Sets the allowLiveShare property value. Indicates whether live share is enabled for the meeting. The possible values are: enabled, disabled, unknownFutureValue.
      * @param MeetingLiveShareOptions|null $value Value to set for the allowLiveShare property.
     */
     public function setAllowLiveShare(?MeetingLiveShareOptions $value): void {
@@ -604,6 +661,14 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
+     * Sets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param DateTime|null $value Value to set for the expiryDateTime property.
+    */
+    public function setExpiryDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('expiryDateTime', $value);
+    }
+
+    /**
      * Sets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
      * @param bool|null $value Value to set for the isEndToEndEncryptionEnabled property.
     */
@@ -652,6 +717,22 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
+     * Sets the meetingOptionsWebUrl property value. Provides the URL to the Teams meeting options page for the specified meeting. This link allows only the organizer to configure meeting settings.
+     * @param string|null $value Value to set for the meetingOptionsWebUrl property.
+    */
+    public function setMeetingOptionsWebUrl(?string $value): void {
+        $this->getBackingStore()->set('meetingOptionsWebUrl', $value);
+    }
+
+    /**
+     * Sets the meetingSpokenLanguageTag property value. Specifies the spoken language used during the meeting for recording and transcription purposes.
+     * @param string|null $value Value to set for the meetingSpokenLanguageTag property.
+    */
+    public function setMeetingSpokenLanguageTag(?string $value): void {
+        $this->getBackingStore()->set('meetingSpokenLanguageTag', $value);
+    }
+
+    /**
      * Sets the recordAutomatically property value. Indicates whether to record the meeting automatically.
      * @param bool|null $value Value to set for the recordAutomatically property.
     */
@@ -660,7 +741,15 @@ class OnlineMeetingBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
+     * Sets the sensitivityLabelAssignment property value. Specifies the sensitivity label applied to the Teams meeting.
+     * @param OnlineMeetingSensitivityLabelAssignment|null $value Value to set for the sensitivityLabelAssignment property.
+    */
+    public function setSensitivityLabelAssignment(?OnlineMeetingSensitivityLabelAssignment $value): void {
+        $this->getBackingStore()->set('sensitivityLabelAssignment', $value);
+    }
+
+    /**
+     * Sets the shareMeetingChatHistoryDefault property value. Specifies whether meeting chat history is shared with participants.  The possible values are: all, none, unknownFutureValue.
      * @param MeetingChatHistoryDefaultMode|null $value Value to set for the shareMeetingChatHistoryDefault property.
     */
     public function setShareMeetingChatHistoryDefault(?MeetingChatHistoryDefaultMode $value): void {

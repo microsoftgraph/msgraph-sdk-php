@@ -69,7 +69,7 @@ class SynchronizationMetadataEntry implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
+     * Gets the key property value. The possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
      * @return SynchronizationMetadata|null
     */
     public function getKey(): ?SynchronizationMetadata {
@@ -132,7 +132,7 @@ class SynchronizationMetadataEntry implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the key property value. Possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
+     * Sets the key property value. The possible values are: GalleryApplicationIdentifier, GalleryApplicationKey, IsOAuthEnabled, IsSynchronizationAgentAssignmentRequired, IsSynchronizationAgentRequired, IsSynchronizationInPreview, OAuthSettings, SynchronizationLearnMoreIbizaFwLink, ConfigurationFields.
      * @param SynchronizationMetadata|null $value Value to set for the key property.
     */
     public function setKey(?SynchronizationMetadata $value): void {

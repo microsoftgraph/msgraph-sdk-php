@@ -6,8 +6,12 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
+use Microsoft\Graph\Generated\Users\Item\Presence\ClearAutomaticLocation\ClearAutomaticLocationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\ClearLocation\ClearLocationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\ClearPresence\ClearPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\SetAutomaticLocation\SetAutomaticLocationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\SetManualLocation\SetManualLocationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\SetPresence\SetPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\SetStatusMessage\SetStatusMessageRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Presence\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
@@ -22,6 +26,20 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class PresenceRequestBuilder extends BaseRequestBuilder 
 {
     /**
+     * Provides operations to call the clearAutomaticLocation method.
+    */
+    public function clearAutomaticLocation(): ClearAutomaticLocationRequestBuilder {
+        return new ClearAutomaticLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the clearLocation method.
+    */
+    public function clearLocation(): ClearLocationRequestBuilder {
+        return new ClearLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the clearPresence method.
     */
     public function clearPresence(): ClearPresenceRequestBuilder {
@@ -33,6 +51,20 @@ class PresenceRequestBuilder extends BaseRequestBuilder
     */
     public function clearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
         return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setAutomaticLocation method.
+    */
+    public function setAutomaticLocation(): SetAutomaticLocationRequestBuilder {
+        return new SetAutomaticLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setManualLocation method.
+    */
+    public function setManualLocation(): SetManualLocationRequestBuilder {
+        return new SetManualLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

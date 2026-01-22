@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get map from places
+ * Get the map of a building in IMDF format.
 */
 class MapRequestBuilderGetQueryParameters 
 {

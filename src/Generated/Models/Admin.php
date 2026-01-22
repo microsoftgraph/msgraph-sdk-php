@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsAdminRoot;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -81,6 +82,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
             'reportSettings' => fn(ParseNode $n) => $o->setReportSettings($n->getObjectValue([AdminReportSettings::class, 'createFromDiscriminatorValue'])),
             'serviceAnnouncement' => fn(ParseNode $n) => $o->setServiceAnnouncement($n->getObjectValue([ServiceAnnouncement::class, 'createFromDiscriminatorValue'])),
             'sharepoint' => fn(ParseNode $n) => $o->setSharepoint($n->getObjectValue([Sharepoint::class, 'createFromDiscriminatorValue'])),
+            'teams' => fn(ParseNode $n) => $o->setTeams($n->getObjectValue([TeamsAdminRoot::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -157,6 +159,18 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the teams property value. Represents a collection of user configurations.
+     * @return TeamsAdminRoot|null
+    */
+    public function getTeams(): ?TeamsAdminRoot {
+        $val = $this->getBackingStore()->get('teams');
+        if (is_null($val) || $val instanceof TeamsAdminRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teams'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -168,6 +182,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeObjectValue('reportSettings', $this->getReportSettings());
         $writer->writeObjectValue('serviceAnnouncement', $this->getServiceAnnouncement());
         $writer->writeObjectValue('sharepoint', $this->getSharepoint());
+        $writer->writeObjectValue('teams', $this->getTeams());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -241,6 +256,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setSharepoint(?Sharepoint $value): void {
         $this->getBackingStore()->set('sharepoint', $value);
+    }
+
+    /**
+     * Sets the teams property value. Represents a collection of user configurations.
+     * @param TeamsAdminRoot|null $value Value to set for the teams property.
+    */
+    public function setTeams(?TeamsAdminRoot $value): void {
+        $this->getBackingStore()->set('teams', $value);
     }
 
 }

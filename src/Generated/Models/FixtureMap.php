@@ -37,7 +37,7 @@ class FixtureMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier for the floor to which this fixtureMap belongs.
      * @return string|null
     */
     public function getPlaceId(): ?string {
@@ -58,7 +58,7 @@ class FixtureMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier for the floor to which this fixtureMap belongs.
      * @param string|null $value Value to set for the placeId property.
     */
     public function setPlaceId(?string $value): void {

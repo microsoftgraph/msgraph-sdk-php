@@ -153,7 +153,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Gets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @return SimulationContentSource|null
     */
     public function getSource(): ?SimulationContentSource {
@@ -165,7 +165,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Gets the status property value. The status of the simulation. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @return SimulationContentStatus|null
     */
     public function getStatus(): ?SimulationContentStatus {
@@ -274,7 +274,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the source property value. The source of the content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Sets the source property value. The source of the content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @param SimulationContentSource|null $value Value to set for the source property.
     */
     public function setSource(?SimulationContentSource $value): void {
@@ -282,7 +282,7 @@ class LandingPage extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the simulation. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
+     * Sets the status property value. The status of the simulation. The possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      * @param SimulationContentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationContentStatus $value): void {

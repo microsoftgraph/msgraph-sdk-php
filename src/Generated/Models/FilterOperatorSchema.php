@@ -63,7 +63,7 @@ class FilterOperatorSchema extends Entity implements Parsable
     }
 
     /**
-     * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
+     * Gets the supportedAttributeTypes property value. Attribute types supported by the operator. The possible values are: Boolean, Binary, Reference, Integer, String.
      * @return array<AttributeType>|null
     */
     public function getSupportedAttributeTypes(): ?array {
@@ -104,7 +104,7 @@ class FilterOperatorSchema extends Entity implements Parsable
     }
 
     /**
-     * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
+     * Sets the supportedAttributeTypes property value. Attribute types supported by the operator. The possible values are: Boolean, Binary, Reference, Integer, String.
      * @param array<AttributeType>|null $value Value to set for the supportedAttributeTypes property.
     */
     public function setSupportedAttributeTypes(?array $value): void {

@@ -40,7 +40,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
     }
 
     /**
-     * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     * Gets the callEventType property value. Represents the call event type. The possible values are: call, meeting, screenShare, unknownFutureValue.
      * @return TeamworkCallEventType|null
     */
     public function getCallEventType(): ?TeamworkCallEventType {
@@ -126,7 +126,7 @@ class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable
     }
 
     /**
-     * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     * Sets the callEventType property value. Represents the call event type. The possible values are: call, meeting, screenShare, unknownFutureValue.
      * @param TeamworkCallEventType|null $value Value to set for the callEventType property.
     */
     public function setCallEventType(?TeamworkCallEventType $value): void {

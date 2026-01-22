@@ -119,7 +119,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
     }
 
     /**
-     * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+     * Gets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. The possible values are: system, user.
      * @return RunAsAccountType|null
     */
     public function getRunAsAccount(): ?RunAsAccountType {
@@ -207,7 +207,7 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
     }
 
     /**
-     * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
+     * Sets the runAsAccount property value. The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. The possible values are: system, user.
      * @param RunAsAccountType|null $value Value to set for the runAsAccount property.
     */
     public function setRunAsAccount(?RunAsAccountType $value): void {

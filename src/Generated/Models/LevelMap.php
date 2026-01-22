@@ -41,7 +41,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the fixtures property value. The fixtures property
+     * Gets the fixtures property value. Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @return array<FixtureMap>|null
     */
     public function getFixtures(): ?array {
@@ -55,7 +55,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier of the floor to which this levelMap belongs.
      * @return string|null
     */
     public function getPlaceId(): ?string {
@@ -67,7 +67,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the sections property value. The sections property
+     * Gets the sections property value. Collection of sections (such as zones or partitions) on this level. Supports upsert.
      * @return array<SectionMap>|null
     */
     public function getSections(): ?array {
@@ -81,7 +81,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Gets the units property value. The units property
+     * Gets the units property value. Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @return array<UnitMap>|null
     */
     public function getUnits(): ?array {
@@ -107,7 +107,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the fixtures property value. The fixtures property
+     * Sets the fixtures property value. Collection of fixtures (such as furniture or equipment) on this level. Supports upsert.
      * @param array<FixtureMap>|null $value Value to set for the fixtures property.
     */
     public function setFixtures(?array $value): void {
@@ -115,7 +115,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier of the floor to which this levelMap belongs.
      * @param string|null $value Value to set for the placeId property.
     */
     public function setPlaceId(?string $value): void {
@@ -123,7 +123,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the sections property value. The sections property
+     * Sets the sections property value. Collection of sections (such as zones or partitions) on this level. Supports upsert.
      * @param array<SectionMap>|null $value Value to set for the sections property.
     */
     public function setSections(?array $value): void {
@@ -131,7 +131,7 @@ class LevelMap extends BaseMapFeature implements Parsable
     }
 
     /**
-     * Sets the units property value. The units property
+     * Sets the units property value. Collection of units (such as rooms or offices) on this level. Supports upsert.
      * @param array<UnitMap>|null $value Value to set for the units property.
     */
     public function setUnits(?array $value): void {

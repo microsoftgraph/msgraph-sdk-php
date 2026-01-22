@@ -52,10 +52,11 @@ class FootprintsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      * @param FootprintsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FootprintMapCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/buildingmap-list-footprints?view=graph-rest-1.0 Find more info here
     */
     public function get(?FootprintsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class FootprintsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get footprints from places
+     * Get a list of footprintMap objects for building footprints and their properties.
      * @param FootprintsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\FileStorage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\ContainersRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\ContainerTypeRegistrations\ContainerTypeRegistrationsRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\ContainerTypes\ContainerTypesRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\DeletedContainersRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,6 +25,20 @@ class FileStorageRequestBuilder extends BaseRequestBuilder
     */
     public function containers(): ContainersRequestBuilder {
         return new ContainersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the containerTypeRegistrations property of the microsoft.graph.fileStorage entity.
+    */
+    public function containerTypeRegistrations(): ContainerTypeRegistrationsRequestBuilder {
+        return new ContainerTypeRegistrationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the containerTypes property of the microsoft.graph.fileStorage entity.
+    */
+    public function containerTypes(): ContainerTypesRequestBuilder {
+        return new ContainerTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

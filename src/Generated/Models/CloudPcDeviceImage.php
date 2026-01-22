@@ -39,7 +39,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Gets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
+     * Gets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. The possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
      * @return CloudPcDeviceImageErrorCode|null
     */
     public function getErrorCode(): ?CloudPcDeviceImageErrorCode {
@@ -119,7 +119,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
+     * Gets the osStatus property value. The OS status of this image. The possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
      * @return CloudPcDeviceImageOsStatus|null
     */
     public function getOsStatus(): ?CloudPcDeviceImageOsStatus {
@@ -143,7 +143,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
+     * Gets the status property value. The status of the image on the Cloud PC. The possible values are: pending, ready, failed, unknownFutureValue. Read-only.
      * @return CloudPcDeviceImageStatus|null
     */
     public function getStatus(): ?CloudPcDeviceImageStatus {
@@ -193,7 +193,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Sets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
+     * Sets the errorCode property value. The error code of the status of the image that indicates why the upload failed, if applicable. The possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, sourceImageNotGeneralized, unknownFutureValue, vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: vmAlreadyAzureAdJoined, paidSourceImageNotSupport, sourceImageNotSupportCustomizeVMName, sourceImageSizeExceedsLimitation. Read-only.
      * @param CloudPcDeviceImageErrorCode|null $value Value to set for the errorCode property.
     */
     public function setErrorCode(?CloudPcDeviceImageErrorCode $value): void {
@@ -233,7 +233,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Sets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
+     * Sets the osStatus property value. The OS status of this image. The possible values are: supported, supportedWithWarning, unknown, unknownFutureValue. The default value is unknown. Read-only.
      * @param CloudPcDeviceImageOsStatus|null $value Value to set for the osStatus property.
     */
     public function setOsStatus(?CloudPcDeviceImageOsStatus $value): void {
@@ -249,7 +249,7 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the image on the Cloud PC. Possible values are: pending, ready, failed, unknownFutureValue. Read-only.
+     * Sets the status property value. The status of the image on the Cloud PC. The possible values are: pending, ready, failed, unknownFutureValue. Read-only.
      * @param CloudPcDeviceImageStatus|null $value Value to set for the status property.
     */
     public function setStatus(?CloudPcDeviceImageStatus $value): void {

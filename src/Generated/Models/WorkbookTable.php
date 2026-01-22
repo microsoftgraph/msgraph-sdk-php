@@ -198,7 +198,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Gets the style property value. A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Gets the style property value. A constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @return string|null
     */
     public function getStyle(): ?string {
@@ -340,7 +340,7 @@ class WorkbookTable extends Entity implements Parsable
     }
 
     /**
-     * Sets the style property value. A constant value that represents the Table style. Possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
+     * Sets the style property value. A constant value that represents the Table style. The possible values are: TableStyleLight1 through TableStyleLight21, TableStyleMedium1 through TableStyleMedium28, TableStyleStyleDark1 through TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      * @param string|null $value Value to set for the style property.
     */
     public function setStyle(?string $value): void {

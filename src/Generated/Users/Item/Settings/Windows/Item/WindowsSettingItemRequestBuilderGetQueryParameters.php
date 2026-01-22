@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Settings\Windows\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get windows from users
+ * The Windows settings of the user stored in the cloud.
 */
 class WindowsSettingItemRequestBuilderGetQueryParameters 
 {

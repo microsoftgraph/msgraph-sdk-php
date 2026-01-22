@@ -119,7 +119,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
+     * Gets the status property value. The status of the staff member. The possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @return BookingsAvailabilityStatus|null
     */
     public function getStatus(): ?BookingsAvailabilityStatus {
@@ -192,7 +192,7 @@ class AvailabilityItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the status property value. The status of the staff member. Possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
+     * Sets the status property value. The status of the staff member. The possible values are: available, busy, slotsAvailable, outOfOffice, unknownFutureValue.
      * @param BookingsAvailabilityStatus|null $value Value to set for the status property.
     */
     public function setStatus(?BookingsAvailabilityStatus $value): void {

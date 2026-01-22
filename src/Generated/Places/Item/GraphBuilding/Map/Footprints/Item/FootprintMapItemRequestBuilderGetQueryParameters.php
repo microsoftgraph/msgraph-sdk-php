@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphBuilding\Map\Footprints\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get footprints from places
+ * Represents the approximate physical extent of a referenced building. It corresponds to footprint.geojson in IMDF format.
 */
 class FootprintMapItemRequestBuilderGetQueryParameters 
 {

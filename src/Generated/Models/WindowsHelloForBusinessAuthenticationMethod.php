@@ -77,7 +77,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
     }
 
     /**
-     * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. The possible values are: normal, weak, unknown.
      * @return AuthenticationMethodKeyStrength|null
     */
     public function getKeyStrength(): ?AuthenticationMethodKeyStrength {
@@ -125,7 +125,7 @@ class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod i
     }
 
     /**
-     * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
+     * Sets the keyStrength property value. Key strength of this Windows Hello for Business key. The possible values are: normal, weak, unknown.
      * @param AuthenticationMethodKeyStrength|null $value Value to set for the keyStrength property.
     */
     public function setKeyStrength(?AuthenticationMethodKeyStrength $value): void {

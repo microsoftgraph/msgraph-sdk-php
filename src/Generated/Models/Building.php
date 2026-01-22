@@ -35,11 +35,12 @@ class Building extends Place implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'map' => fn(ParseNode $n) => $o->setMap($n->getObjectValue([BuildingMap::class, 'createFromDiscriminatorValue'])),
             'resourceLinks' => fn(ParseNode $n) => $o->setResourceLinks($n->getCollectionOfObjectValues([ResourceLink::class, 'createFromDiscriminatorValue'])),
+            'wifiState' => fn(ParseNode $n) => $o->setWifiState($n->getEnumValue(PlaceFeatureEnablement::class)),
         ]);
     }
 
     /**
-     * Gets the map property value. The map property
+     * Gets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
      * @return BuildingMap|null
     */
     public function getMap(): ?BuildingMap {
@@ -51,7 +52,7 @@ class Building extends Place implements Parsable
     }
 
     /**
-     * Gets the resourceLinks property value. The resourceLinks property
+     * Gets the resourceLinks property value. A set of links to external resources that are associated with the building. Inherited from place.
      * @return array<ResourceLink>|null
     */
     public function getResourceLinks(): ?array {
@@ -65,6 +66,18 @@ class Building extends Place implements Parsable
     }
 
     /**
+     * Gets the wifiState property value. The wifiState property
+     * @return PlaceFeatureEnablement|null
+    */
+    public function getWifiState(): ?PlaceFeatureEnablement {
+        $val = $this->getBackingStore()->get('wifiState');
+        if (is_null($val) || $val instanceof PlaceFeatureEnablement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wifiState'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -72,10 +85,11 @@ class Building extends Place implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('map', $this->getMap());
         $writer->writeCollectionOfObjectValues('resourceLinks', $this->getResourceLinks());
+        $writer->writeEnumValue('wifiState', $this->getWifiState());
     }
 
     /**
-     * Sets the map property value. The map property
+     * Sets the map property value. Map file associated with a building in Places. This object is the IMDF-format representation of building.geojson.
      * @param BuildingMap|null $value Value to set for the map property.
     */
     public function setMap(?BuildingMap $value): void {
@@ -83,11 +97,19 @@ class Building extends Place implements Parsable
     }
 
     /**
-     * Sets the resourceLinks property value. The resourceLinks property
+     * Sets the resourceLinks property value. A set of links to external resources that are associated with the building. Inherited from place.
      * @param array<ResourceLink>|null $value Value to set for the resourceLinks property.
     */
     public function setResourceLinks(?array $value): void {
         $this->getBackingStore()->set('resourceLinks', $value);
+    }
+
+    /**
+     * Sets the wifiState property value. The wifiState property
+     * @param PlaceFeatureEnablement|null $value Value to set for the wifiState property.
+    */
+    public function setWifiState(?PlaceFeatureEnablement $value): void {
+        $this->getBackingStore()->set('wifiState', $value);
     }
 
 }

@@ -82,7 +82,7 @@ class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The link text that is visible in the Places app. The maximum length is 200 characters.
      * @return string|null
     */
     public function getName(): ?string {
@@ -106,7 +106,7 @@ class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The URL of the resource link. The maximum length is 200 characters.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -154,7 +154,7 @@ class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The link text that is visible in the Places app. The maximum length is 200 characters.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -170,7 +170,7 @@ class ResourceLink implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The URL of the resource link. The maximum length is 200 characters.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

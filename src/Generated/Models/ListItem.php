@@ -51,6 +51,18 @@ class ListItem extends BaseItem implements Parsable
     }
 
     /**
+     * Gets the deleted property value. If present in the result of a delta enumeration, indicates that the item was deleted. Read-only.
+     * @return Deleted|null
+    */
+    public function getDeleted(): ?Deleted {
+        $val = $this->getBackingStore()->get('deleted');
+        if (is_null($val) || $val instanceof Deleted) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deleted'");
+    }
+
+    /**
      * Gets the documentSetVersions property value. Version information for a document set version created by a user.
      * @return array<DocumentSetVersion>|null
     */
@@ -85,6 +97,7 @@ class ListItem extends BaseItem implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'analytics' => fn(ParseNode $n) => $o->setAnalytics($n->getObjectValue([ItemAnalytics::class, 'createFromDiscriminatorValue'])),
             'contentType' => fn(ParseNode $n) => $o->setContentType($n->getObjectValue([ContentTypeInfo::class, 'createFromDiscriminatorValue'])),
+            'deleted' => fn(ParseNode $n) => $o->setDeleted($n->getObjectValue([Deleted::class, 'createFromDiscriminatorValue'])),
             'documentSetVersions' => fn(ParseNode $n) => $o->setDocumentSetVersions($n->getCollectionOfObjectValues([DocumentSetVersion::class, 'createFromDiscriminatorValue'])),
             'driveItem' => fn(ParseNode $n) => $o->setDriveItem($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'fields' => fn(ParseNode $n) => $o->setFields($n->getObjectValue([FieldValueSet::class, 'createFromDiscriminatorValue'])),
@@ -139,6 +152,7 @@ class ListItem extends BaseItem implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('analytics', $this->getAnalytics());
         $writer->writeObjectValue('contentType', $this->getContentType());
+        $writer->writeObjectValue('deleted', $this->getDeleted());
         $writer->writeCollectionOfObjectValues('documentSetVersions', $this->getDocumentSetVersions());
         $writer->writeObjectValue('driveItem', $this->getDriveItem());
         $writer->writeObjectValue('fields', $this->getFields());
@@ -160,6 +174,14 @@ class ListItem extends BaseItem implements Parsable
     */
     public function setContentType(?ContentTypeInfo $value): void {
         $this->getBackingStore()->set('contentType', $value);
+    }
+
+    /**
+     * Sets the deleted property value. If present in the result of a delta enumeration, indicates that the item was deleted. Read-only.
+     * @param Deleted|null $value Value to set for the deleted property.
+    */
+    public function setDeleted(?Deleted $value): void {
+        $this->getBackingStore()->set('deleted', $value);
     }
 
     /**

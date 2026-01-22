@@ -48,7 +48,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
+     * Gets the attachmentType property value. The type of attachment. The possible values are: file, item, reference. Required.
      * @return AttachmentType|null
     */
     public function getAttachmentType(): ?AttachmentType {
@@ -180,7 +180,7 @@ class AttachmentItem implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the attachmentType property value. The type of attachment. Possible values are: file, item, reference. Required.
+     * Sets the attachmentType property value. The type of attachment. The possible values are: file, item, reference. Required.
      * @param AttachmentType|null $value Value to set for the attachmentType property.
     */
     public function setAttachmentType(?AttachmentType $value): void {

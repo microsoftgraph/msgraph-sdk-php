@@ -29,7 +29,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity im
     }
 
     /**
-     * Gets the appDisplayName property value. The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
+     * Gets the appDisplayName property value. The friendly name of the application for which the event occurred. The possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @return string|null
     */
     public function getAppDisplayName(): ?string {
@@ -53,7 +53,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity im
     }
 
     /**
-     * Gets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
+     * Gets the appVersion property value. The version of the application. The possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
      * @return string|null
     */
     public function getAppVersion(): ?string {
@@ -145,7 +145,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity im
     }
 
     /**
-     * Sets the appDisplayName property value. The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
+     * Sets the appDisplayName property value. The friendly name of the application for which the event occurred. The possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
      * @param string|null $value Value to set for the appDisplayName property.
     */
     public function setAppDisplayName(?string $value): void {
@@ -161,7 +161,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity im
     }
 
     /**
-     * Sets the appVersion property value. The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
+     * Sets the appVersion property value. The version of the application. The possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
      * @param string|null $value Value to set for the appVersion property.
     */
     public function setAppVersion(?string $value): void {

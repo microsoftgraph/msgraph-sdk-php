@@ -38,7 +38,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
     }
 
     /**
-     * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
+     * Gets the destinationRoutingReason property value. The reason for mail routed to its destination. The possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @return MailDestinationRoutingReason|null
     */
     public function getDestinationRoutingReason(): ?MailDestinationRoutingReason {
@@ -94,7 +94,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
     }
 
     /**
-     * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
+     * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. The possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      * @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
     public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphRoomList\Rooms\Item\CheckIn
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get checkIns from places
+ * A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
 */
 class CheckInsRequestBuilderGetQueryParameters 
 {

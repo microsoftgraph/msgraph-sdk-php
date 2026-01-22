@@ -49,7 +49,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
+     * Gets the contentType property value. The content type of threat assessment. The possible values are: mail, url, file.
      * @return ThreatAssessmentContentType|null
     */
     public function getContentType(): ?ThreatAssessmentContentType {
@@ -115,7 +115,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
+     * Gets the requestSource property value. The source of the threat assessment request. The possible values are: administrator.
      * @return ThreatAssessmentRequestSource|null
     */
     public function getRequestSource(): ?ThreatAssessmentRequestSource {
@@ -141,7 +141,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The assessment process status. Possible values are: pending, completed.
+     * Gets the status property value. The assessment process status. The possible values are: pending, completed.
      * @return ThreatAssessmentStatus|null
     */
     public function getStatus(): ?ThreatAssessmentStatus {
@@ -177,7 +177,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
+     * Sets the contentType property value. The content type of threat assessment. The possible values are: mail, url, file.
      * @param ThreatAssessmentContentType|null $value Value to set for the contentType property.
     */
     public function setContentType(?ThreatAssessmentContentType $value): void {
@@ -209,7 +209,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
+     * Sets the requestSource property value. The source of the threat assessment request. The possible values are: administrator.
      * @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
     */
     public function setRequestSource(?ThreatAssessmentRequestSource $value): void {
@@ -225,7 +225,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The assessment process status. Possible values are: pending, completed.
+     * Sets the status property value. The assessment process status. The possible values are: pending, completed.
      * @param ThreatAssessmentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ThreatAssessmentStatus $value): void {

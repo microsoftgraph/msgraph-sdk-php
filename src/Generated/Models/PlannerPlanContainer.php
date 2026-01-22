@@ -94,7 +94,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: roster. Optional.
+     * Gets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. The possible values are: group, unknownFutureValue, roster. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: roster. Optional.
      * @return PlannerContainerType|null
     */
     public function getType(): ?PlannerContainerType {
@@ -162,7 +162,7 @@ class PlannerPlanContainer implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. Possible values are: group, unknownFutureValue, roster. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: roster. Optional.
+     * Sets the type property value. The type of the resource that contains the plan. For supported types, see the previous table. The possible values are: group, unknownFutureValue, roster. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: roster. Optional.
      * @param PlannerContainerType|null $value Value to set for the type property.
     */
     public function setType(?PlannerContainerType $value): void {

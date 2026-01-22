@@ -52,10 +52,11 @@ class FixturesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      * @param FixturesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FixtureMapCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/levelmap-list-fixtures?view=graph-rest-1.0 Find more info here
     */
     public function get(?FixturesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class FixturesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get fixtures from places
+     * Get a list of the fixtureMap objects and their properties.
      * @param FixturesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

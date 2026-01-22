@@ -52,7 +52,7 @@ class CheckInsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get checkIns from places
+     * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
      * @param CheckInsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckInClaimCollectionResponse|null>
      * @throws Exception
@@ -66,11 +66,12 @@ class CheckInsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to checkIns for places
+     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk or a room, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
      * @param CheckInClaim $body The request body
      * @param CheckInsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckInClaim|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/place-post-checkins?view=graph-rest-1.0 Find more info here
     */
     public function post(CheckInClaim $body, ?CheckInsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +82,7 @@ class CheckInsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get checkIns from places
+     * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
      * @param CheckInsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +103,7 @@ class CheckInsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to checkIns for places
+     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk or a room, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
      * @param CheckInClaim $body The request body
      * @param CheckInsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -56,7 +56,7 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
+     * Gets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. The possible values are: watermarkProtection, unknownFutureValue.
      * @return OnlineMeetingContentSharingDisabledReason|null
     */
     public function getContentSharingDisabled(): ?OnlineMeetingContentSharingDisabledReason {
@@ -93,7 +93,7 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
+     * Gets the videoDisabled property value. Specifies the reason video from this participant is disabled. The possible values are: watermarkProtection, unknownFutureValue.
      * @return OnlineMeetingVideoDisabledReason|null
     */
     public function getVideoDisabled(): ?OnlineMeetingVideoDisabledReason {
@@ -132,7 +132,7 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
+     * Sets the contentSharingDisabled property value. Specifies the reason shared content from this participant is disabled. The possible values are: watermarkProtection, unknownFutureValue.
      * @param OnlineMeetingContentSharingDisabledReason|null $value Value to set for the contentSharingDisabled property.
     */
     public function setContentSharingDisabled(?OnlineMeetingContentSharingDisabledReason $value): void {
@@ -148,7 +148,7 @@ class OnlineMeetingRestricted implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the videoDisabled property value. Specifies the reason video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
+     * Sets the videoDisabled property value. Specifies the reason video from this participant is disabled. The possible values are: watermarkProtection, unknownFutureValue.
      * @param OnlineMeetingVideoDisabledReason|null $value Value to set for the videoDisabled property.
     */
     public function setVideoDisabled(?OnlineMeetingVideoDisabledReason $value): void {

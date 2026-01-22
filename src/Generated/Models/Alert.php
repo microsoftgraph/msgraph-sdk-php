@@ -203,7 +203,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
+     * Gets the feedback property value. Analyst feedback on the alert. The possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
@@ -789,7 +789,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the feedback property value. Analyst feedback on the alert. Possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
+     * Sets the feedback property value. Analyst feedback on the alert. The possible values are: unknown, truePositive, falsePositive, benignPositive. Supports update.
      * @param AlertFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?AlertFeedback $value): void {

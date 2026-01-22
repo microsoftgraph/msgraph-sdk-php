@@ -64,7 +64,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Gets the type property value. Possible values are: days, hours.
+     * Gets the type property value. The possible values are: days, hours.
      * @return SigninFrequencyType|null
     */
     public function getType(): ?SigninFrequencyType {
@@ -116,7 +116,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
     }
 
     /**
-     * Sets the type property value. Possible values are: days, hours.
+     * Sets the type property value. The possible values are: days, hours.
      * @param SigninFrequencyType|null $value Value to set for the type property.
     */
     public function setType(?SigninFrequencyType $value): void {

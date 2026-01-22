@@ -57,7 +57,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Gets the excludePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return array<ConditionalAccessDevicePlatform>|null
     */
     public function getExcludePlatforms(): ?array {
@@ -84,7 +84,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Gets the includePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @return array<ConditionalAccessDevicePlatform>|null
     */
     public function getIncludePlatforms(): ?array {
@@ -137,7 +137,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the excludePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Sets the excludePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @param array<ConditionalAccessDevicePlatform>|null $value Value to set for the excludePlatforms property.
     */
     public function setExcludePlatforms(?array $value): void {
@@ -145,7 +145,7 @@ class ConditionalAccessPlatforms implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the includePlatforms property value. Possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
+     * Sets the includePlatforms property value. The possible values are: android, iOS, windows, windowsPhone, macOS, linux, all, unknownFutureValue.
      * @param array<ConditionalAccessDevicePlatform>|null $value Value to set for the includePlatforms property.
     */
     public function setIncludePlatforms(?array $value): void {
