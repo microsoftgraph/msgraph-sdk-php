@@ -31,10 +31,11 @@ class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property authenticationMethodConfigurations for policies
+     * Delete an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AuthenticationMethodConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodConfiguration|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationMethodConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the navigation property authenticationMethodConfigurations in policies
+     * Update the properties of an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfiguration $body The request body
      * @param AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodConfiguration|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/externalauthenticationmethodconfiguration-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationMethodConfiguration $body, ?AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property authenticationMethodConfigurations for policies
+     * Delete an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class AuthenticationMethodConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Update the navigation property authenticationMethodConfigurations in policies
+     * Update the properties of an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfiguration $body The request body
      * @param AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

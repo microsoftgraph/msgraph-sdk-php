@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -24,18 +23,6 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod implem
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): PlatformCredentialAuthenticationMethod {
         return new PlatformCredentialAuthenticationMethod();
-    }
-
-    /**
-     * Gets the createdDateTime property value. The date and time that this Platform Credential Key was registered.
-     * @return DateTime|null
-    */
-    public function getCreatedDateTime(): ?DateTime {
-        $val = $this->getBackingStore()->get('createdDateTime');
-        if (is_null($val) || $val instanceof DateTime) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -69,7 +56,6 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod implem
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'device' => fn(ParseNode $n) => $o->setDevice($n->getObjectValue([Device::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'keyStrength' => fn(ParseNode $n) => $o->setKeyStrength($n->getEnumValue(AuthenticationMethodKeyStrength::class)),
@@ -107,19 +93,10 @@ class PlatformCredentialAuthenticationMethod extends AuthenticationMethod implem
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('device', $this->getDevice());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeEnumValue('keyStrength', $this->getKeyStrength());
         $writer->writeEnumValue('platform', $this->getPlatform());
-    }
-
-    /**
-     * Sets the createdDateTime property value. The date and time that this Platform Credential Key was registered.
-     * @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value): void {
-        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**

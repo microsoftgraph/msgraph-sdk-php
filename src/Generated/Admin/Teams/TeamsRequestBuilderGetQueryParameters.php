@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Teams;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents a collection of user configurations.
+ * A container for Teams administration functionalities, such as user configurations and policy assignments.
 */
 class TeamsRequestBuilderGetQueryParameters 
 {

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -24,18 +23,6 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): MicrosoftAuthenticatorAuthenticationMethod {
         return new MicrosoftAuthenticatorAuthenticationMethod();
-    }
-
-    /**
-     * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
-     * @return DateTime|null
-    */
-    public function getCreatedDateTime(): ?DateTime {
-        $val = $this->getBackingStore()->get('createdDateTime');
-        if (is_null($val) || $val instanceof DateTime) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -81,7 +68,6 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'device' => fn(ParseNode $n) => $o->setDevice($n->getObjectValue([Device::class, 'createFromDiscriminatorValue'])),
             'deviceTag' => fn(ParseNode $n) => $o->setDeviceTag($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
@@ -107,19 +93,10 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('device', $this->getDevice());
         $writer->writeStringValue('deviceTag', $this->getDeviceTag());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('phoneAppVersion', $this->getPhoneAppVersion());
-    }
-
-    /**
-     * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device isn't registered for passwordless Phone Sign-In.
-     * @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value): void {
-        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**

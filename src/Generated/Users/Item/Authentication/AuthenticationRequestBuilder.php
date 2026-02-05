@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\Authentication;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Authentication\EmailMethods\EmailMethodsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\ExternalAuthenticationMethods\ExternalAuthenticationMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Fido2MethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\Methods\MethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\MicrosoftAuthenticatorMethods\MicrosoftAuthenticatorMethodsRequestBuilder;
@@ -32,6 +33,13 @@ class AuthenticationRequestBuilder extends BaseRequestBuilder
     */
     public function emailMethods(): EmailMethodsRequestBuilder {
         return new EmailMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the externalAuthenticationMethods property of the microsoft.graph.authentication entity.
+    */
+    public function externalAuthenticationMethods(): ExternalAuthenticationMethodsRequestBuilder {
+        return new ExternalAuthenticationMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -41,6 +41,34 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
+     * Gets the accessedResources_v2 property value. The accessedResources_v2 property
+     * @return array<ResourceAccessDetail>|null
+    */
+    public function getAccessedResourcesV2(): ?array {
+        $val = $this->getBackingStore()->get('accessedResources_v2');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ResourceAccessDetail::class);
+            /** @var array<ResourceAccessDetail>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessedResources_v2'");
+    }
+
+    /**
+     * Gets the agents property value. The agents property
+     * @return array<AiAgentInfo>|null
+    */
+    public function getAgents(): ?array {
+        $val = $this->getBackingStore()->get('agents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AiAgentInfo::class);
+            /** @var array<AiAgentInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'agents'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -55,6 +83,8 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
                 /** @var array<string>|null $val */
                 $this->setAccessedResources($val);
             },
+            'accessedResources_v2' => fn(ParseNode $n) => $o->setAccessedResourcesV2($n->getCollectionOfObjectValues([ResourceAccessDetail::class, 'createFromDiscriminatorValue'])),
+            'agents' => fn(ParseNode $n) => $o->setAgents($n->getCollectionOfObjectValues([AiAgentInfo::class, 'createFromDiscriminatorValue'])),
             'parentMessageId' => fn(ParseNode $n) => $o->setParentMessageId($n->getStringValue()),
             'plugins' => fn(ParseNode $n) => $o->setPlugins($n->getCollectionOfObjectValues([AiInteractionPlugin::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -93,6 +123,8 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfPrimitiveValues('accessedResources', $this->getAccessedResources());
+        $writer->writeCollectionOfObjectValues('accessedResources_v2', $this->getAccessedResourcesV2());
+        $writer->writeCollectionOfObjectValues('agents', $this->getAgents());
         $writer->writeStringValue('parentMessageId', $this->getParentMessageId());
         $writer->writeCollectionOfObjectValues('plugins', $this->getPlugins());
     }
@@ -103,6 +135,22 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     */
     public function setAccessedResources(?array $value): void {
         $this->getBackingStore()->set('accessedResources', $value);
+    }
+
+    /**
+     * Sets the accessedResources_v2 property value. The accessedResources_v2 property
+     * @param array<ResourceAccessDetail>|null $value Value to set for the accessedResources_v2 property.
+    */
+    public function setAccessedResourcesV2(?array $value): void {
+        $this->getBackingStore()->set('accessedResources_v2', $value);
+    }
+
+    /**
+     * Sets the agents property value. The agents property
+     * @param array<AiAgentInfo>|null $value Value to set for the agents property.
+    */
+    public function setAgents(?array $value): void {
+        $this->getBackingStore()->set('agents', $value);
     }
 
     /**

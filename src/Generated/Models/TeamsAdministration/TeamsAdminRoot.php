@@ -33,12 +33,25 @@ class TeamsAdminRoot extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'policy' => fn(ParseNode $n) => $o->setPolicy($n->getObjectValue([TeamsPolicyAssignment::class, 'createFromDiscriminatorValue'])),
             'userConfigurations' => fn(ParseNode $n) => $o->setUserConfigurations($n->getCollectionOfObjectValues([TeamsUserConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
-     * Gets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams.
+     * Gets the policy property value. Represents a navigation property to the Teams policy assignment object.
+     * @return TeamsPolicyAssignment|null
+    */
+    public function getPolicy(): ?TeamsPolicyAssignment {
+        $val = $this->getBackingStore()->get('policy');
+        if (is_null($val) || $val instanceof TeamsPolicyAssignment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policy'");
+    }
+
+    /**
+     * Gets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams
      * @return array<TeamsUserConfiguration>|null
     */
     public function getUserConfigurations(): ?array {
@@ -57,11 +70,20 @@ class TeamsAdminRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('policy', $this->getPolicy());
         $writer->writeCollectionOfObjectValues('userConfigurations', $this->getUserConfigurations());
     }
 
     /**
-     * Sets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams.
+     * Sets the policy property value. Represents a navigation property to the Teams policy assignment object.
+     * @param TeamsPolicyAssignment|null $value Value to set for the policy property.
+    */
+    public function setPolicy(?TeamsPolicyAssignment $value): void {
+        $this->getBackingStore()->set('policy', $value);
+    }
+
+    /**
+     * Sets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams
      * @param array<TeamsUserConfiguration>|null $value Value to set for the userConfigurations property.
     */
     public function setUserConfigurations(?array $value): void {

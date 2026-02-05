@@ -28,6 +28,7 @@ class IdentityProviderBase extends Entity implements Parsable
                 case '#microsoft.graph.appleManagedIdentityProvider': return new AppleManagedIdentityProvider();
                 case '#microsoft.graph.builtInIdentityProvider': return new BuiltInIdentityProvider();
                 case '#microsoft.graph.internalDomainFederation': return new InternalDomainFederation();
+                case '#microsoft.graph.oidcIdentityProvider': return new OidcIdentityProvider();
                 case '#microsoft.graph.samlOrWsFedExternalDomainFederation': return new SamlOrWsFedExternalDomainFederation();
                 case '#microsoft.graph.samlOrWsFedProvider': return new SamlOrWsFedProvider();
                 case '#microsoft.graph.socialIdentityProvider': return new SocialIdentityProvider();

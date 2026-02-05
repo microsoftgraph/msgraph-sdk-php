@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -66,18 +65,6 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The timestamp when this key was registered to the user.
-     * @return DateTime|null
-    */
-    public function getCreatedDateTime(): ?DateTime {
-        $val = $this->getBackingStore()->get('createdDateTime');
-        if (is_null($val) || $val instanceof DateTime) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
-    }
-
-    /**
      * Gets the displayName property value. The display name of the key as given by the user.
      * @return string|null
     */
@@ -106,7 +93,6 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
                 $this->setAttestationCertificates($val);
             },
             'attestationLevel' => fn(ParseNode $n) => $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)),
-            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
         ]);
@@ -133,7 +119,6 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
         $writer->writeStringValue('aaGuid', $this->getAaGuid());
         $writer->writeCollectionOfPrimitiveValues('attestationCertificates', $this->getAttestationCertificates());
         $writer->writeEnumValue('attestationLevel', $this->getAttestationLevel());
-        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('model', $this->getModel());
     }
@@ -160,14 +145,6 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     */
     public function setAttestationLevel(?AttestationLevel $value): void {
         $this->getBackingStore()->set('attestationLevel', $value);
-    }
-
-    /**
-     * Sets the createdDateTime property value. The timestamp when this key was registered to the user.
-     * @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value): void {
-        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**
