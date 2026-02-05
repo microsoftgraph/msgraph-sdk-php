@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models\Security;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsable 
 {
@@ -31,7 +32,22 @@ class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'reportFileMetadata' => fn(ParseNode $n) => $o->setReportFileMetadata($n->getCollectionOfObjectValues([ReportFileMetadata::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the reportFileMetadata property value. The purge job report file metadata. It contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @return array<ReportFileMetadata>|null
+    */
+    public function getReportFileMetadata(): ?array {
+        $val = $this->getBackingStore()->get('reportFileMetadata');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ReportFileMetadata::class);
+            /** @var array<ReportFileMetadata>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reportFileMetadata'");
     }
 
     /**
@@ -40,6 +56,15 @@ class EdiscoveryPurgeDataOperation extends CaseOperation implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('reportFileMetadata', $this->getReportFileMetadata());
+    }
+
+    /**
+     * Sets the reportFileMetadata property value. The purge job report file metadata. It contains the properties for report file metadata, including downloadUrl, fileName, and size.
+     * @param array<ReportFileMetadata>|null $value Value to set for the reportFileMetadata property.
+    */
+    public function setReportFileMetadata(?array $value): void {
+        $this->getBackingStore()->set('reportFileMetadata', $value);
     }
 
 }

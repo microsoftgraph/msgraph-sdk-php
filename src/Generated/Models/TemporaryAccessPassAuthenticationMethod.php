@@ -27,25 +27,12 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
     }
 
     /**
-     * Gets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
-     * @return DateTime|null
-    */
-    public function getCreatedDateTime(): ?DateTime {
-        $val = $this->getBackingStore()->get('createdDateTime');
-        if (is_null($val) || $val instanceof DateTime) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
-    }
-
-    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'isUsable' => fn(ParseNode $n) => $o->setIsUsable($n->getBooleanValue()),
             'isUsableOnce' => fn(ParseNode $n) => $o->setIsUsableOnce($n->getBooleanValue()),
             'lifetimeInMinutes' => fn(ParseNode $n) => $o->setLifetimeInMinutes($n->getIntegerValue()),
@@ -133,21 +120,12 @@ class TemporaryAccessPassAuthenticationMethod extends AuthenticationMethod imple
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeBooleanValue('isUsable', $this->getIsUsable());
         $writer->writeBooleanValue('isUsableOnce', $this->getIsUsableOnce());
         $writer->writeIntegerValue('lifetimeInMinutes', $this->getLifetimeInMinutes());
         $writer->writeStringValue('methodUsabilityReason', $this->getMethodUsabilityReason());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('temporaryAccessPass', $this->getTemporaryAccessPass());
-    }
-
-    /**
-     * Sets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
-     * @param DateTime|null $value Value to set for the createdDateTime property.
-    */
-    public function setCreatedDateTime(?DateTime $value): void {
-        $this->getBackingStore()->set('createdDateTime', $value);
     }
 
     /**

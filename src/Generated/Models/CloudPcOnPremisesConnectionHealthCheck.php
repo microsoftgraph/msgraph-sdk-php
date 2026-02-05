@@ -105,7 +105,7 @@ class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the errorType property value. The type of error that occurred during this health check. The possible values are: endpointConnectivityCheckCloudPcUrlNotAllowListed, endpointConnectivityCheckWVDUrlNotAllowListed, etc. (The all possible values can refer to cloudPcOnPremisesConnectionHealthCheckErrorType) Read-Only.
+     * Gets the errorType property value. The type of error that occurred during this health check. Read-only.
      * @return CloudPcOnPremisesConnectionHealthCheckErrorType|null
     */
     public function getErrorType(): ?CloudPcOnPremisesConnectionHealthCheckErrorType {
@@ -249,7 +249,7 @@ class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the errorType property value. The type of error that occurred during this health check. The possible values are: endpointConnectivityCheckCloudPcUrlNotAllowListed, endpointConnectivityCheckWVDUrlNotAllowListed, etc. (The all possible values can refer to cloudPcOnPremisesConnectionHealthCheckErrorType) Read-Only.
+     * Sets the errorType property value. The type of error that occurred during this health check. Read-only.
      * @param CloudPcOnPremisesConnectionHealthCheckErrorType|null $value Value to set for the errorType property.
     */
     public function setErrorType(?CloudPcOnPremisesConnectionHealthCheckErrorType $value): void {

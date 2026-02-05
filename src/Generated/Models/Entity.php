@@ -125,7 +125,10 @@ use Microsoft\Graph\Generated\Models\Security\VulnerabilityComponent;
 use Microsoft\Graph\Generated\Models\Security\WhoisBaseRecord;
 use Microsoft\Graph\Generated\Models\Security\WhoisHistoryRecord;
 use Microsoft\Graph\Generated\Models\Security\WhoisRecord;
+use Microsoft\Graph\Generated\Models\TeamsAdministration\PolicyIdentifierDetail;
 use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsAdminRoot;
+use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsPolicyAssignment;
+use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsPolicyUserAssignment;
 use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsUserConfiguration;
 use Microsoft\Graph\Generated\Models\TermStore\Group;
 use Microsoft\Graph\Generated\Models\TermStore\Relation;
@@ -497,6 +500,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.exchangeRestoreSession': return new ExchangeRestoreSession();
                 case '#microsoft.graph.extension': return new Extension();
                 case '#microsoft.graph.extensionProperty': return new ExtensionProperty();
+                case '#microsoft.graph.externalAuthenticationMethod': return new ExternalAuthenticationMethod();
                 case '#microsoft.graph.externalConnectors.connectionOperation': return new ConnectionOperation();
                 case '#microsoft.graph.externalConnectors.externalActivity': return new ExternalActivity();
                 case '#microsoft.graph.externalConnectors.externalActivityResult': return new ExternalActivityResult();
@@ -682,6 +686,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.oAuth2PermissionGrant': return new OAuth2PermissionGrant();
                 case '#microsoft.graph.offerShiftRequest': return new OfferShiftRequest();
                 case '#microsoft.graph.officeGraphInsights': return new OfficeGraphInsights();
+                case '#microsoft.graph.oidcIdentityProvider': return new OidcIdentityProvider();
                 case '#microsoft.graph.onAttributeCollectionListener': return new OnAttributeCollectionListener();
                 case '#microsoft.graph.onAttributeCollectionStartCustomExtension': return new OnAttributeCollectionStartCustomExtension();
                 case '#microsoft.graph.onAttributeCollectionStartListener': return new OnAttributeCollectionStartListener();
@@ -1009,7 +1014,10 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.taskFileAttachment': return new TaskFileAttachment();
                 case '#microsoft.graph.team': return new Team();
                 case '#microsoft.graph.teamInfo': return new TeamInfo();
+                case '#microsoft.graph.teamsAdministration.policyIdentifierDetail': return new PolicyIdentifierDetail();
                 case '#microsoft.graph.teamsAdministration.teamsAdminRoot': return new TeamsAdminRoot();
+                case '#microsoft.graph.teamsAdministration.teamsPolicyAssignment': return new TeamsPolicyAssignment();
+                case '#microsoft.graph.teamsAdministration.teamsPolicyUserAssignment': return new TeamsPolicyUserAssignment();
                 case '#microsoft.graph.teamsAdministration.teamsUserConfiguration': return new TeamsUserConfiguration();
                 case '#microsoft.graph.teamsApp': return new TeamsApp();
                 case '#microsoft.graph.teamsAppDefinition': return new TeamsAppDefinition();

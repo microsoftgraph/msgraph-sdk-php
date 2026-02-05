@@ -52,7 +52,7 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodConfigurationCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+     * Read the properties and relationships of an externalAuthenticationMethodConfiguration object.
      * @param AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
