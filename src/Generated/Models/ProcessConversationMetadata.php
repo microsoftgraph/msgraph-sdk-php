@@ -27,7 +27,7 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
-     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
+     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions). The accessedResources property is deprecated and stopped returning data on August 20, 2025. Going forward, use the accessedResources_v2 property.
      * @return array<string>|null
     */
     public function getAccessedResources(): ?array {
@@ -41,7 +41,7 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
-     * Gets the accessedResources_v2 property value. The accessedResources_v2 property
+     * Gets the accessedResources_v2 property value. Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.
      * @return array<ResourceAccessDetail>|null
     */
     public function getAccessedResourcesV2(): ?array {
@@ -55,7 +55,7 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
-     * Gets the agents property value. The agents property
+     * Gets the agents property value. Indicates the information about an AI agent that participated in the preparation of the message.
      * @return array<AiAgentInfo>|null
     */
     public function getAgents(): ?array {
@@ -130,7 +130,7 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
-     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
+     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions). The accessedResources property is deprecated and stopped returning data on August 20, 2025. Going forward, use the accessedResources_v2 property.
      * @param array<string>|null $value Value to set for the accessedResources property.
     */
     public function setAccessedResources(?array $value): void {
@@ -138,7 +138,7 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
-     * Sets the accessedResources_v2 property value. The accessedResources_v2 property
+     * Sets the accessedResources_v2 property value. Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.
      * @param array<ResourceAccessDetail>|null $value Value to set for the accessedResources_v2 property.
     */
     public function setAccessedResourcesV2(?array $value): void {
@@ -146,7 +146,7 @@ class ProcessConversationMetadata extends ProcessContentMetadataBase implements 
     }
 
     /**
-     * Sets the agents property value. The agents property
+     * Sets the agents property value. Indicates the information about an AI agent that participated in the preparation of the message.
      * @param array<AiAgentInfo>|null $value Value to set for the agents property.
     */
     public function setAgents(?array $value): void {

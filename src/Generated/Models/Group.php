@@ -353,6 +353,22 @@ class Group extends DirectoryObject implements Parsable
             },
             'rejectedSenders' => fn(ParseNode $n) => $o->setRejectedSenders($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'renewedDateTime' => fn(ParseNode $n) => $o->setRenewedDateTime($n->getDateTimeValue()),
+            'resourceBehaviorOptions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setResourceBehaviorOptions($val);
+            },
+            'resourceProvisioningOptions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setResourceProvisioningOptions($val);
+            },
             'securityEnabled' => fn(ParseNode $n) => $o->setSecurityEnabled($n->getBooleanValue()),
             'securityIdentifier' => fn(ParseNode $n) => $o->setSecurityIdentifier($n->getStringValue()),
             'serviceProvisioningErrors' => fn(ParseNode $n) => $o->setServiceProvisioningErrors($n->getCollectionOfObjectValues([ServiceProvisioningError::class, 'createFromDiscriminatorValue'])),
@@ -836,6 +852,34 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This property can be set only as part of creation (POST). For the list of possible values, see Microsoft 365 group behaviors and provisioning options.
+     * @return array<string>|null
+    */
+    public function getResourceBehaviorOptions(): ?array {
+        $val = $this->getBackingStore()->get('resourceBehaviorOptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceBehaviorOptions'");
+    }
+
+    /**
+     * Gets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith).
+     * @return array<string>|null
+    */
+    public function getResourceProvisioningOptions(): ?array {
+        $val = $this->getBackingStore()->get('resourceProvisioningOptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceProvisioningOptions'");
+    }
+
+    /**
      * Gets the securityEnabled property value. Specifies whether the group is a security group. Required. Returned by default. Supports $filter (eq, ne, not, in).
      * @return bool|null
     */
@@ -1065,6 +1109,8 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeCollectionOfPrimitiveValues('proxyAddresses', $this->getProxyAddresses());
         $writer->writeCollectionOfObjectValues('rejectedSenders', $this->getRejectedSenders());
         $writer->writeDateTimeValue('renewedDateTime', $this->getRenewedDateTime());
+        $writer->writeCollectionOfPrimitiveValues('resourceBehaviorOptions', $this->getResourceBehaviorOptions());
+        $writer->writeCollectionOfPrimitiveValues('resourceProvisioningOptions', $this->getResourceProvisioningOptions());
         $writer->writeBooleanValue('securityEnabled', $this->getSecurityEnabled());
         $writer->writeStringValue('securityIdentifier', $this->getSecurityIdentifier());
         $writer->writeCollectionOfObjectValues('serviceProvisioningErrors', $this->getServiceProvisioningErrors());
@@ -1526,6 +1572,22 @@ class Group extends DirectoryObject implements Parsable
     */
     public function setRenewedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('renewedDateTime', $value);
+    }
+
+    /**
+     * Sets the resourceBehaviorOptions property value. Specifies the group behaviors that can be set for a Microsoft 365 group during creation. This property can be set only as part of creation (POST). For the list of possible values, see Microsoft 365 group behaviors and provisioning options.
+     * @param array<string>|null $value Value to set for the resourceBehaviorOptions property.
+    */
+    public function setResourceBehaviorOptions(?array $value): void {
+        $this->getBackingStore()->set('resourceBehaviorOptions', $value);
+    }
+
+    /**
+     * Sets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith).
+     * @param array<string>|null $value Value to set for the resourceProvisioningOptions property.
+    */
+    public function setResourceProvisioningOptions(?array $value): void {
+        $this->getBackingStore()->set('resourceProvisioningOptions', $value);
     }
 
     /**

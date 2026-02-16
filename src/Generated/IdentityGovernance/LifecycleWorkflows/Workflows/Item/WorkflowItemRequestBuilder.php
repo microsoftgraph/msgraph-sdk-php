@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workfl
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\AdministrationScopeTargets\AdministrationScopeTargetsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\CreatedBy\CreatedByRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\ExecutionScope\ExecutionScopeRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\LastModifiedBy\LastModifiedByRequestBuilder;
@@ -28,6 +29,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class WorkflowItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the administrationScopeTargets property of the microsoft.graph.identityGovernance.workflowBase entity.
+    */
+    public function administrationScopeTargets(): AdministrationScopeTargetsRequestBuilder {
+        return new AdministrationScopeTargetsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
     */
