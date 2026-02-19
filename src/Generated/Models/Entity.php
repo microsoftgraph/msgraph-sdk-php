@@ -496,11 +496,15 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.eventMessage': return new EventMessage();
                 case '#microsoft.graph.eventMessageRequest': return new EventMessageRequest();
                 case '#microsoft.graph.eventMessageResponse': return new EventMessageResponse();
+                case '#microsoft.graph.exchangeAdmin': return new ExchangeAdmin();
+                case '#microsoft.graph.exchangeMessageTrace': return new ExchangeMessageTrace();
+                case '#microsoft.graph.exchangeMessageTraceDetail': return new ExchangeMessageTraceDetail();
                 case '#microsoft.graph.exchangeProtectionPolicy': return new ExchangeProtectionPolicy();
                 case '#microsoft.graph.exchangeRestoreSession': return new ExchangeRestoreSession();
                 case '#microsoft.graph.extension': return new Extension();
                 case '#microsoft.graph.extensionProperty': return new ExtensionProperty();
                 case '#microsoft.graph.externalAuthenticationMethod': return new ExternalAuthenticationMethod();
+                case '#microsoft.graph.externalAuthenticationMethodConfiguration': return new ExternalAuthenticationMethodConfiguration();
                 case '#microsoft.graph.externalConnectors.connectionOperation': return new ConnectionOperation();
                 case '#microsoft.graph.externalConnectors.externalActivity': return new ExternalActivity();
                 case '#microsoft.graph.externalConnectors.externalActivityResult': return new ExternalActivityResult();
@@ -658,6 +662,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.membershipOutlierInsight': return new MembershipOutlierInsight();
                 case '#microsoft.graph.message': return new Message();
                 case '#microsoft.graph.messageRule': return new MessageRule();
+                case '#microsoft.graph.messageTracingRoot': return new MessageTracingRoot();
                 case '#microsoft.graph.microsoftAccountUserConversationMember': return new MicrosoftAccountUserConversationMember();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethod': return new MicrosoftAuthenticatorAuthenticationMethod();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration': return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();

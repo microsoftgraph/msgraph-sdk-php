@@ -87,7 +87,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. Unique identifier of the resource accessed.
      * @return string|null
     */
     public function getIdentifier(): ?string {
@@ -99,7 +99,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the isCrossPromptInjectionDetected property value. The isCrossPromptInjectionDetected property
+     * Gets the isCrossPromptInjectionDetected property value. Indicates whether cross-prompt injection was detected during the access attempt.
      * @return bool|null
     */
     public function getIsCrossPromptInjectionDetected(): ?bool {
@@ -111,7 +111,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the labelId property value. The labelId property
+     * Gets the labelId property value. Identifier for the sensitivity label applied to the resource, if any.
      * @return string|null
     */
     public function getLabelId(): ?string {
@@ -123,7 +123,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the resource accessed.
      * @return string|null
     */
     public function getName(): ?string {
@@ -159,7 +159,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the storageId property value. The storageId property
+     * Gets the storageId property value. Identifier for the resource in its native storage format. For SharePoint resources, this is the unique identifier of the list item.  For other resources, this is the name of the location, such as Box, Dropbox, Exchange, or Google Drive.
      * @return string|null
     */
     public function getStorageId(): ?string {
@@ -171,7 +171,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the url property value. The url property
+     * Gets the url property value. URL of the resource accessed.
      * @return string|null
     */
     public function getUrl(): ?string {
@@ -224,7 +224,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. Unique identifier of the resource accessed.
      * @param string|null $value Value to set for the identifier property.
     */
     public function setIdentifier(?string $value): void {
@@ -232,7 +232,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the isCrossPromptInjectionDetected property value. The isCrossPromptInjectionDetected property
+     * Sets the isCrossPromptInjectionDetected property value. Indicates whether cross-prompt injection was detected during the access attempt.
      * @param bool|null $value Value to set for the isCrossPromptInjectionDetected property.
     */
     public function setIsCrossPromptInjectionDetected(?bool $value): void {
@@ -240,7 +240,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the labelId property value. The labelId property
+     * Sets the labelId property value. Identifier for the sensitivity label applied to the resource, if any.
      * @param string|null $value Value to set for the labelId property.
     */
     public function setLabelId(?string $value): void {
@@ -248,7 +248,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the resource accessed.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -272,7 +272,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the storageId property value. The storageId property
+     * Sets the storageId property value. Identifier for the resource in its native storage format. For SharePoint resources, this is the unique identifier of the list item.  For other resources, this is the name of the location, such as Box, Dropbox, Exchange, or Google Drive.
      * @param string|null $value Value to set for the storageId property.
     */
     public function setStorageId(?string $value): void {
@@ -280,7 +280,7 @@ class ResourceAccessDetail implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the url property value. The url property
+     * Sets the url property value. URL of the resource accessed.
      * @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {

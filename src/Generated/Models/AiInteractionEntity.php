@@ -78,7 +78,7 @@ class AiInteractionEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The unique identifier of the AI entity.
      * @return string|null
     */
     public function getIdentifier(): ?string {
@@ -90,7 +90,7 @@ class AiInteractionEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The display name of the AI entity.
      * @return string|null
     */
     public function getName(): ?string {
@@ -114,7 +114,7 @@ class AiInteractionEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the AI entity used.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -154,7 +154,7 @@ class AiInteractionEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The unique identifier of the AI entity.
      * @param string|null $value Value to set for the identifier property.
     */
     public function setIdentifier(?string $value): void {
@@ -162,7 +162,7 @@ class AiInteractionEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The display name of the AI entity.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -178,7 +178,7 @@ class AiInteractionEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the AI entity used.
      * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {

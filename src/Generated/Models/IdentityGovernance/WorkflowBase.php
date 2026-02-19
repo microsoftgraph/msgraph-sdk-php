@@ -3,6 +3,7 @@
 namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
 
 use DateTime;
+use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\User;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
@@ -56,6 +57,20 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
+    }
+
+    /**
+     * Gets the administrationScopeTargets property value. The administrationScopeTargets property
+     * @return array<DirectoryObject>|null
+    */
+    public function getAdministrationScopeTargets(): ?array {
+        $val = $this->getBackingStore()->get('administrationScopeTargets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'administrationScopeTargets'");
     }
 
     /**
@@ -145,6 +160,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'administrationScopeTargets' => fn(ParseNode $n) => $o->setAdministrationScopeTargets($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'category' => fn(ParseNode $n) => $o->setCategory($n->getEnumValue(LifecycleWorkflowCategory::class)),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
@@ -239,6 +255,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeCollectionOfObjectValues('administrationScopeTargets', $this->getAdministrationScopeTargets());
         $writer->writeEnumValue('category', $this->getCategory());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
@@ -260,6 +277,14 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the administrationScopeTargets property value. The administrationScopeTargets property
+     * @param array<DirectoryObject>|null $value Value to set for the administrationScopeTargets property.
+    */
+    public function setAdministrationScopeTargets(?array $value): void {
+        $this->getBackingStore()->set('administrationScopeTargets', $value);
     }
 
     /**
