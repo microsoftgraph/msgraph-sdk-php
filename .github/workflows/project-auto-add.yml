@@ -2,7 +2,7 @@
 
 name: Add Issue or PR to project
 on:
-  issues:
+  issues: BOUT
     types:
       - opened
   pull_request:
