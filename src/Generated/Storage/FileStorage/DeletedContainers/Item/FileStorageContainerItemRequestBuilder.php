@@ -16,6 +16,7 @@ use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Permiss
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\ProvisionMigrationContainers\ProvisionMigrationContainersRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\RecycleBin\RecycleBinRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\SharePointGroups\SharePointGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\Unlock\UnlockRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -95,6 +96,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sharePointGroups property of the microsoft.graph.fileStorageContainer entity.
+    */
+    public function sharePointGroups(): SharePointGroupsRequestBuilder {
+        return new SharePointGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

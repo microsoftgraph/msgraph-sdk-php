@@ -18,4 +18,5 @@ class BaseAuthenticationMethod extends Enum {
     public const X509_CERTIFICATE = "x509Certificate";
     public const FEDERATION = "federation";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const QR_CODE_PIN = "qrCodePin";
 }

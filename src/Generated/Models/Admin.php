@@ -172,7 +172,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Gets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @return TeamsAdminRoot|null
     */
     public function getTeams(): ?TeamsAdminRoot {
@@ -281,7 +281,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Sets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param TeamsAdminRoot|null $value Value to set for the teams property.
     */
     public function setTeams(?TeamsAdminRoot $value): void {

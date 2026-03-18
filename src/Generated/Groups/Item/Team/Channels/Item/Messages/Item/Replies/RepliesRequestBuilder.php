@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\ReplyWithQuote\ReplyWithQuoteRequestBuilder;
 use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,6 +33,13 @@ class RepliesRequestBuilder extends BaseRequestBuilder
     */
     public function delta(): DeltaRequestBuilder {
         return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the replyWithQuote method.
+    */
+    public function replyWithQuote(): ReplyWithQuoteRequestBuilder {
+        return new ReplyWithQuoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

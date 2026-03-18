@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\Sponsors\Item;
+namespace Microsoft\Graph\Generated\Admin\Teams\TelephoneNumberManagement;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The users and groups responsible for this guest's privileges in the tenant and keeping the guest's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
+ * Represents a collection of available telephone number management operations.
 */
-class DirectoryObjectItemRequestBuilderGetQueryParameters 
+class TelephoneNumberManagementRequestBuilderGetQueryParameters 
 {
     /**
      * @QueryParameter("%24expand")
@@ -22,7 +22,7 @@ class DirectoryObjectItemRequestBuilderGetQueryParameters
     public ?array $select = null;
     
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new TelephoneNumberManagementRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
     */

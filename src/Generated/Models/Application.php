@@ -25,6 +25,13 @@ class Application extends DirectoryObject implements Parsable
      * @return Application
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Application {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.agentIdentityBlueprint': return new AgentIdentityBlueprint();
+            }
+        }
         return new Application();
     }
 

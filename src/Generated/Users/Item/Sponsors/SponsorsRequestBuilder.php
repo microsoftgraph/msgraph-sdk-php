@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Sponsors\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Sponsors\Item\DirectoryObjectItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Sponsors\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -26,7 +27,14 @@ class SponsorsRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the sponsors property of the microsoft.graph.user entity.
+     * Provides operations to manage the collection of user entities.
+    */
+    public function ref(): RefRequestBuilder {
+        return new RefRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.users.item.sponsors.item collection
      * @param string $directoryObjectId The unique identifier of directoryObject
      * @return DirectoryObjectItemRequestBuilder
     */
