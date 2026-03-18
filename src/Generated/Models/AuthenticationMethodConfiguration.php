@@ -30,6 +30,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
                 case '#microsoft.graph.externalAuthenticationMethodConfiguration': return new ExternalAuthenticationMethodConfiguration();
                 case '#microsoft.graph.fido2AuthenticationMethodConfiguration': return new Fido2AuthenticationMethodConfiguration();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration': return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
+                case '#microsoft.graph.qrCodePinAuthenticationMethodConfiguration': return new QrCodePinAuthenticationMethodConfiguration();
                 case '#microsoft.graph.smsAuthenticationMethodConfiguration': return new SmsAuthenticationMethodConfiguration();
                 case '#microsoft.graph.softwareOathAuthenticationMethodConfiguration': return new SoftwareOathAuthenticationMethodConfiguration();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();

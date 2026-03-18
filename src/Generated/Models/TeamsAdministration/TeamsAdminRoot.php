@@ -34,6 +34,7 @@ class TeamsAdminRoot extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'policy' => fn(ParseNode $n) => $o->setPolicy($n->getObjectValue([TeamsPolicyAssignment::class, 'createFromDiscriminatorValue'])),
+            'telephoneNumberManagement' => fn(ParseNode $n) => $o->setTelephoneNumberManagement($n->getObjectValue([TelephoneNumberManagementRoot::class, 'createFromDiscriminatorValue'])),
             'userConfigurations' => fn(ParseNode $n) => $o->setUserConfigurations($n->getCollectionOfObjectValues([TeamsUserConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -48,6 +49,18 @@ class TeamsAdminRoot extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'policy'");
+    }
+
+    /**
+     * Gets the telephoneNumberManagement property value. Represents a collection of available telephone number management operations.
+     * @return TelephoneNumberManagementRoot|null
+    */
+    public function getTelephoneNumberManagement(): ?TelephoneNumberManagementRoot {
+        $val = $this->getBackingStore()->get('telephoneNumberManagement');
+        if (is_null($val) || $val instanceof TelephoneNumberManagementRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'telephoneNumberManagement'");
     }
 
     /**
@@ -71,6 +84,7 @@ class TeamsAdminRoot extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('policy', $this->getPolicy());
+        $writer->writeObjectValue('telephoneNumberManagement', $this->getTelephoneNumberManagement());
         $writer->writeCollectionOfObjectValues('userConfigurations', $this->getUserConfigurations());
     }
 
@@ -80,6 +94,14 @@ class TeamsAdminRoot extends Entity implements Parsable
     */
     public function setPolicy(?TeamsPolicyAssignment $value): void {
         $this->getBackingStore()->set('policy', $value);
+    }
+
+    /**
+     * Sets the telephoneNumberManagement property value. Represents a collection of available telephone number management operations.
+     * @param TelephoneNumberManagementRoot|null $value Value to set for the telephoneNumberManagement property.
+    */
+    public function setTelephoneNumberManagement(?TelephoneNumberManagementRoot $value): void {
+        $this->getBackingStore()->set('telephoneNumberManagement', $value);
     }
 
     /**

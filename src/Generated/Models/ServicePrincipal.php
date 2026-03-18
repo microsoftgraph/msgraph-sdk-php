@@ -23,6 +23,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
      * @return ServicePrincipal
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ServicePrincipal {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.agentIdentity': return new AgentIdentity();
+                case '#microsoft.graph.agentIdentityBlueprintPrincipal': return new AgentIdentityBlueprintPrincipal();
+            }
+        }
         return new ServicePrincipal();
     }
 

@@ -17,4 +17,5 @@ class DlpAction extends Enum {
     public const S_P_RUNTIME_ACCESS_CONTROL = "sPRuntimeAccessControl";
     public const S_P_SHARING_NOTIFY_USER = "sPSharingNotifyUser";
     public const S_P_SHARING_GENERATE_INCIDENT_REPORT = "sPSharingGenerateIncidentReport";
+    public const RESTRICT_WEB_GROUNDING = "restrictWebGrounding";
 }

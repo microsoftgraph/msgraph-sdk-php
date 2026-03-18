@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of servicePrincipal objects.
+ * Retrieve a list of servicePrincipal objects. This API also returns agentIdentityBlueprintPrincipal objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprintPrincipal.
 */
 class ServicePrincipalsRequestBuilderGetQueryParameters 
 {

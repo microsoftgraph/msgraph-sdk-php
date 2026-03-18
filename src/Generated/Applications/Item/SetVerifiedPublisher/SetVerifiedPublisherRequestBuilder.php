@@ -30,12 +30,12 @@ class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the the verifiedPublisher on an agentIdentityBlueprint. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param SetVerifiedPublisherPostRequestBody $body The request body
      * @param SetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/application-setverifiedpublisher?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agentidentityblueprint-setverifiedpublisher?view=graph-rest-1.0 Find more info here
     */
     public function post(SetVerifiedPublisherPostRequestBody $body, ?SetVerifiedPublisherRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -46,7 +46,7 @@ class SetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Set the verifiedPublisher on an application. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
+     * Set the the verifiedPublisher on an agentIdentityBlueprint. For more information, including prerequisites to setting a verified publisher, see Publisher verification.
      * @param SetVerifiedPublisherPostRequestBody $body The request body
      * @param SetVerifiedPublisherRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
