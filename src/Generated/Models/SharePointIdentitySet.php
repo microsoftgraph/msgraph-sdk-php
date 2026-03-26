@@ -33,6 +33,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
+            'sharePointGroup' => fn(ParseNode $n) => $o->setSharePointGroup($n->getObjectValue([SharePointGroupIdentity::class, 'createFromDiscriminatorValue'])),
             'siteGroup' => fn(ParseNode $n) => $o->setSiteGroup($n->getObjectValue([SharePointIdentity::class, 'createFromDiscriminatorValue'])),
             'siteUser' => fn(ParseNode $n) => $o->setSiteUser($n->getObjectValue([SharePointIdentity::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -48,6 +49,18 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'group'");
+    }
+
+    /**
+     * Gets the sharePointGroup property value. The sharePointGroup property
+     * @return SharePointGroupIdentity|null
+    */
+    public function getSharePointGroup(): ?SharePointGroupIdentity {
+        $val = $this->getBackingStore()->get('sharePointGroup');
+        if (is_null($val) || $val instanceof SharePointGroupIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharePointGroup'");
     }
 
     /**
@@ -81,6 +94,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('group', $this->getGroup());
+        $writer->writeObjectValue('sharePointGroup', $this->getSharePointGroup());
         $writer->writeObjectValue('siteGroup', $this->getSiteGroup());
         $writer->writeObjectValue('siteUser', $this->getSiteUser());
     }
@@ -91,6 +105,14 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     */
     public function setGroup(?Identity $value): void {
         $this->getBackingStore()->set('group', $value);
+    }
+
+    /**
+     * Sets the sharePointGroup property value. The sharePointGroup property
+     * @param SharePointGroupIdentity|null $value Value to set for the sharePointGroup property.
+    */
+    public function setSharePointGroup(?SharePointGroupIdentity $value): void {
+        $this->getBackingStore()->set('sharePointGroup', $value);
     }
 
     /**

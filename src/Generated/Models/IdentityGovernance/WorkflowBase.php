@@ -60,7 +60,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the administrationScopeTargets property value. The administrationScopeTargets property
+     * Gets the administrationScopeTargets property value. The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @return array<DirectoryObject>|null
     */
     public function getAdministrationScopeTargets(): ?array {
@@ -280,7 +280,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the administrationScopeTargets property value. The administrationScopeTargets property
+     * Sets the administrationScopeTargets property value. The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @param array<DirectoryObject>|null $value Value to set for the administrationScopeTargets property.
     */
     public function setAdministrationScopeTargets(?array $value): void {

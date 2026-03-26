@@ -16,6 +16,7 @@ use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Permissions\Pe
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\ProvisionMigrationContainers\ProvisionMigrationContainersRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\RecycleBin\RecycleBinRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\SharePointGroups\SharePointGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Unlock\UnlockRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -95,6 +96,13 @@ class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sharePointGroups property of the microsoft.graph.fileStorageContainer entity.
+    */
+    public function sharePointGroups(): SharePointGroupsRequestBuilder {
+        return new SharePointGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

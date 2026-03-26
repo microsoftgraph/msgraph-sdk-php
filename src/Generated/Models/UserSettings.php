@@ -50,6 +50,18 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the exchange property value. The exchange property
+     * @return ExchangeSettings|null
+    */
+    public function getExchange(): ?ExchangeSettings {
+        $val = $this->getBackingStore()->get('exchange');
+        if (is_null($val) || $val instanceof ExchangeSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exchange'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -58,6 +70,7 @@ class UserSettings extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'contributionToContentDiscoveryAsOrganizationDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryAsOrganizationDisabled($n->getBooleanValue()),
             'contributionToContentDiscoveryDisabled' => fn(ParseNode $n) => $o->setContributionToContentDiscoveryDisabled($n->getBooleanValue()),
+            'exchange' => fn(ParseNode $n) => $o->setExchange($n->getObjectValue([ExchangeSettings::class, 'createFromDiscriminatorValue'])),
             'itemInsights' => fn(ParseNode $n) => $o->setItemInsights($n->getObjectValue([UserInsightsSettings::class, 'createFromDiscriminatorValue'])),
             'shiftPreferences' => fn(ParseNode $n) => $o->setShiftPreferences($n->getObjectValue([ShiftPreferences::class, 'createFromDiscriminatorValue'])),
             'storage' => fn(ParseNode $n) => $o->setStorage($n->getObjectValue([UserStorage::class, 'createFromDiscriminatorValue'])),
@@ -136,6 +149,7 @@ class UserSettings extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('contributionToContentDiscoveryAsOrganizationDisabled', $this->getContributionToContentDiscoveryAsOrganizationDisabled());
         $writer->writeBooleanValue('contributionToContentDiscoveryDisabled', $this->getContributionToContentDiscoveryDisabled());
+        $writer->writeObjectValue('exchange', $this->getExchange());
         $writer->writeObjectValue('itemInsights', $this->getItemInsights());
         $writer->writeObjectValue('shiftPreferences', $this->getShiftPreferences());
         $writer->writeObjectValue('storage', $this->getStorage());
@@ -157,6 +171,14 @@ class UserSettings extends Entity implements Parsable
     */
     public function setContributionToContentDiscoveryDisabled(?bool $value): void {
         $this->getBackingStore()->set('contributionToContentDiscoveryDisabled', $value);
+    }
+
+    /**
+     * Sets the exchange property value. The exchange property
+     * @param ExchangeSettings|null $value Value to set for the exchange property.
+    */
+    public function setExchange(?ExchangeSettings $value): void {
+        $this->getBackingStore()->set('exchange', $value);
     }
 
     /**

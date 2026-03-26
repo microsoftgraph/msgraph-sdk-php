@@ -27,7 +27,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
+     * Gets the accessPackage property value. Access package containing this policy. Read-only. Supports $expand.
      * @return AccessPackage|null
     */
     public function getAccessPackage(): ?AccessPackage {
@@ -39,7 +39,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
+     * Gets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, allDirectoryAgentIdentities, unknownFutureValue.
      * @return AllowedTargetScope|null
     */
     public function getAllowedTargetScope(): ?AllowedTargetScope {
@@ -275,7 +275,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessPackage property value. Access package containing this policy. Read-only.  Supports $expand.
+     * Sets the accessPackage property value. Access package containing this policy. Read-only. Supports $expand.
      * @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value): void {
@@ -283,7 +283,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, unknownFutureValue.
+     * Sets the allowedTargetScope property value. Principals that can be assigned the access package through this policy. The possible values are: notSpecified, specificDirectoryUsers, specificConnectedOrganizationUsers, specificDirectoryServicePrincipals, allMemberUsers, allDirectoryUsers, allDirectoryServicePrincipals, allConfiguredConnectedOrganizationUsers, allExternalUsers, allDirectoryAgentIdentities, unknownFutureValue.
      * @param AllowedTargetScope|null $value Value to set for the allowedTargetScope property.
     */
     public function setAllowedTargetScope(?AllowedTargetScope $value): void {

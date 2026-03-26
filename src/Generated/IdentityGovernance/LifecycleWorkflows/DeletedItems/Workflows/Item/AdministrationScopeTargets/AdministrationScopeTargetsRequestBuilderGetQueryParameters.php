@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get administrationScopeTargets from identityGovernance
+ * The administrative units in the scope of the workflow. Optional. Supports $expand.
 */
 class AdministrationScopeTargetsRequestBuilderGetQueryParameters 
 {

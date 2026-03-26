@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\AllMemb
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\EnabledApps\EnabledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
@@ -54,6 +55,13 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     */
     public function doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
         return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.
+    */
+    public function enabledApps(): EnabledAppsRequestBuilder {
+        return new EnabledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

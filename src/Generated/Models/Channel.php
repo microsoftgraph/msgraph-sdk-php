@@ -89,6 +89,20 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the enabledApps property value. The enabledApps property
+     * @return array<TeamsApp>|null
+    */
+    public function getEnabledApps(): ?array {
+        $val = $this->getBackingStore()->get('enabledApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamsApp::class);
+            /** @var array<TeamsApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabledApps'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -100,6 +114,7 @@ class Channel extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'enabledApps' => fn(ParseNode $n) => $o->setEnabledApps($n->getCollectionOfObjectValues([TeamsApp::class, 'createFromDiscriminatorValue'])),
             'filesFolder' => fn(ParseNode $n) => $o->setFilesFolder($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
             'isFavoriteByDefault' => fn(ParseNode $n) => $o->setIsFavoriteByDefault($n->getBooleanValue()),
@@ -265,6 +280,7 @@ class Channel extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeCollectionOfObjectValues('enabledApps', $this->getEnabledApps());
         $writer->writeObjectValue('filesFolder', $this->getFilesFolder());
         $writer->writeBooleanValue('isArchived', $this->getIsArchived());
         $writer->writeBooleanValue('isFavoriteByDefault', $this->getIsFavoriteByDefault());
@@ -316,6 +332,14 @@ class Channel extends Entity implements Parsable
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
+    }
+
+    /**
+     * Sets the enabledApps property value. The enabledApps property
+     * @param array<TeamsApp>|null $value Value to set for the enabledApps property.
+    */
+    public function setEnabledApps(?array $value): void {
+        $this->getBackingStore()->set('enabledApps', $value);
     }
 
     /**

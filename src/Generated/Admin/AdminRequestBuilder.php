@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Admin;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationManagementRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Edge\EdgeRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Exchange\ExchangeRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Microsoft365Apps\Microsoft365AppsRequestBuilder;
@@ -24,6 +25,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class AdminRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the configurationManagement property of the microsoft.graph.admin entity.
+    */
+    public function configurationManagement(): ConfigurationManagementRequestBuilder {
+        return new ConfigurationManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the edge property of the microsoft.graph.admin entity.
     */

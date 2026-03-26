@@ -63,6 +63,18 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
+     * Gets the contentCategory property value. The contentCategory property
+     * @return ContentCategory|null
+    */
+    public function getContentCategory(): ?ContentCategory {
+        $val = $this->getBackingStore()->get('contentCategory');
+        if (is_null($val) || $val instanceof ContentCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentCategory'");
+    }
+
+    /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @return string|null
     */
@@ -84,6 +96,7 @@ class ExternalConnection extends Entity implements Parsable
             'activitySettings' => fn(ParseNode $n) => $o->setActivitySettings($n->getObjectValue([ActivitySettings::class, 'createFromDiscriminatorValue'])),
             'configuration' => fn(ParseNode $n) => $o->setConfiguration($n->getObjectValue([Configuration::class, 'createFromDiscriminatorValue'])),
             'connectorId' => fn(ParseNode $n) => $o->setConnectorId($n->getStringValue()),
+            'contentCategory' => fn(ParseNode $n) => $o->setContentCategory($n->getEnumValue(ContentCategory::class)),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'groups' => fn(ParseNode $n) => $o->setGroups($n->getCollectionOfObjectValues([ExternalGroup::class, 'createFromDiscriminatorValue'])),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([ExternalItem::class, 'createFromDiscriminatorValue'])),
@@ -194,6 +207,7 @@ class ExternalConnection extends Entity implements Parsable
         $writer->writeObjectValue('activitySettings', $this->getActivitySettings());
         $writer->writeObjectValue('configuration', $this->getConfiguration());
         $writer->writeStringValue('connectorId', $this->getConnectorId());
+        $writer->writeEnumValue('contentCategory', $this->getContentCategory());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
@@ -225,6 +239,14 @@ class ExternalConnection extends Entity implements Parsable
     */
     public function setConnectorId(?string $value): void {
         $this->getBackingStore()->set('connectorId', $value);
+    }
+
+    /**
+     * Sets the contentCategory property value. The contentCategory property
+     * @param ContentCategory|null $value Value to set for the contentCategory property.
+    */
+    public function setContentCategory(?ContentCategory $value): void {
+        $this->getBackingStore()->set('contentCategory', $value);
     }
 
     /**

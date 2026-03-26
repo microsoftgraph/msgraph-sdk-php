@@ -39,6 +39,20 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
+     * Gets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * @return array<X509CertificateAuthorityScope>|null
+    */
+    public function getCertificateAuthorityScopes(): ?array {
+        $val = $this->getBackingStore()->get('certificateAuthorityScopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, X509CertificateAuthorityScope::class);
+            /** @var array<X509CertificateAuthorityScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateAuthorityScopes'");
+    }
+
+    /**
      * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @return array<X509CertificateUserBinding>|null
     */
@@ -72,9 +86,11 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationModeConfiguration' => fn(ParseNode $n) => $o->setAuthenticationModeConfiguration($n->getObjectValue([X509CertificateAuthenticationModeConfiguration::class, 'createFromDiscriminatorValue'])),
+            'certificateAuthorityScopes' => fn(ParseNode $n) => $o->setCertificateAuthorityScopes($n->getCollectionOfObjectValues([X509CertificateAuthorityScope::class, 'createFromDiscriminatorValue'])),
             'certificateUserBindings' => fn(ParseNode $n) => $o->setCertificateUserBindings($n->getCollectionOfObjectValues([X509CertificateUserBinding::class, 'createFromDiscriminatorValue'])),
             'crlValidationConfiguration' => fn(ParseNode $n) => $o->setCrlValidationConfiguration($n->getObjectValue([X509CertificateCRLValidationConfiguration::class, 'createFromDiscriminatorValue'])),
             'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            'issuerHintsConfiguration' => fn(ParseNode $n) => $o->setIssuerHintsConfiguration($n->getObjectValue([X509CertificateIssuerHintsConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -93,15 +109,29 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
+     * Gets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * @return X509CertificateIssuerHintsConfiguration|null
+    */
+    public function getIssuerHintsConfiguration(): ?X509CertificateIssuerHintsConfiguration {
+        $val = $this->getBackingStore()->get('issuerHintsConfiguration');
+        if (is_null($val) || $val instanceof X509CertificateIssuerHintsConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerHintsConfiguration'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('authenticationModeConfiguration', $this->getAuthenticationModeConfiguration());
+        $writer->writeCollectionOfObjectValues('certificateAuthorityScopes', $this->getCertificateAuthorityScopes());
         $writer->writeCollectionOfObjectValues('certificateUserBindings', $this->getCertificateUserBindings());
         $writer->writeObjectValue('crlValidationConfiguration', $this->getCrlValidationConfiguration());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
+        $writer->writeObjectValue('issuerHintsConfiguration', $this->getIssuerHintsConfiguration());
     }
 
     /**
@@ -110,6 +140,14 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     */
     public function setAuthenticationModeConfiguration(?X509CertificateAuthenticationModeConfiguration $value): void {
         $this->getBackingStore()->set('authenticationModeConfiguration', $value);
+    }
+
+    /**
+     * Sets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * @param array<X509CertificateAuthorityScope>|null $value Value to set for the certificateAuthorityScopes property.
+    */
+    public function setCertificateAuthorityScopes(?array $value): void {
+        $this->getBackingStore()->set('certificateAuthorityScopes', $value);
     }
 
     /**
@@ -134,6 +172,14 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
+    }
+
+    /**
+     * Sets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * @param X509CertificateIssuerHintsConfiguration|null $value Value to set for the issuerHintsConfiguration property.
+    */
+    public function setIssuerHintsConfiguration(?X509CertificateIssuerHintsConfiguration $value): void {
+        $this->getBackingStore()->set('issuerHintsConfiguration', $value);
     }
 
 }

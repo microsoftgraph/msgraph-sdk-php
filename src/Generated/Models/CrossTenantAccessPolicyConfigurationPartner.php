@@ -48,6 +48,18 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
+     * Gets the appServiceConnectInbound property value. The appServiceConnectInbound property
+     * @return CrossTenantAccessPolicyAppServiceConnectSetting|null
+    */
+    public function getAppServiceConnectInbound(): ?CrossTenantAccessPolicyAppServiceConnectSetting {
+        $val = $this->getBackingStore()->get('appServiceConnectInbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyAppServiceConnectSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appServiceConnectInbound'");
+    }
+
+    /**
      * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @return InboundOutboundPolicyConfiguration|null
     */
@@ -122,6 +134,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'appServiceConnectInbound' => fn(ParseNode $n) => $o->setAppServiceConnectInbound($n->getObjectValue([CrossTenantAccessPolicyAppServiceConnectSetting::class, 'createFromDiscriminatorValue'])),
             'automaticUserConsentSettings' => fn(ParseNode $n) => $o->setAutomaticUserConsentSettings($n->getObjectValue([InboundOutboundPolicyConfiguration::class, 'createFromDiscriminatorValue'])),
             'b2bCollaborationInbound' => fn(ParseNode $n) => $o->setB2bCollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bCollaborationOutbound' => fn(ParseNode $n) => $o->setB2bCollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
@@ -131,6 +144,8 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
             'isInMultiTenantOrganization' => fn(ParseNode $n) => $o->setIsInMultiTenantOrganization($n->getBooleanValue()),
             'isServiceProvider' => fn(ParseNode $n) => $o->setIsServiceProvider($n->getBooleanValue()),
+            'm365CollaborationInbound' => fn(ParseNode $n) => $o->setM365CollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyM365CollaborationInboundSetting::class, 'createFromDiscriminatorValue'])),
+            'm365CollaborationOutbound' => fn(ParseNode $n) => $o->setM365CollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyM365CollaborationOutboundSetting::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
             'tenantRestrictions' => fn(ParseNode $n) => $o->setTenantRestrictions($n->getObjectValue([CrossTenantAccessPolicyTenantRestrictions::class, 'createFromDiscriminatorValue'])),
@@ -186,6 +201,30 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
+     * Gets the m365CollaborationInbound property value. The m365CollaborationInbound property
+     * @return CrossTenantAccessPolicyM365CollaborationInboundSetting|null
+    */
+    public function getM365CollaborationInbound(): ?CrossTenantAccessPolicyM365CollaborationInboundSetting {
+        $val = $this->getBackingStore()->get('m365CollaborationInbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyM365CollaborationInboundSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'm365CollaborationInbound'");
+    }
+
+    /**
+     * Gets the m365CollaborationOutbound property value. The m365CollaborationOutbound property
+     * @return CrossTenantAccessPolicyM365CollaborationOutboundSetting|null
+    */
+    public function getM365CollaborationOutbound(): ?CrossTenantAccessPolicyM365CollaborationOutboundSetting {
+        $val = $this->getBackingStore()->get('m365CollaborationOutbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyM365CollaborationOutboundSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'm365CollaborationOutbound'");
+    }
+
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
@@ -226,6 +265,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('appServiceConnectInbound', $this->getAppServiceConnectInbound());
         $writer->writeObjectValue('automaticUserConsentSettings', $this->getAutomaticUserConsentSettings());
         $writer->writeObjectValue('b2bCollaborationInbound', $this->getB2bCollaborationInbound());
         $writer->writeObjectValue('b2bCollaborationOutbound', $this->getB2bCollaborationOutbound());
@@ -235,6 +275,8 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
         $writer->writeBooleanValue('isInMultiTenantOrganization', $this->getIsInMultiTenantOrganization());
         $writer->writeBooleanValue('isServiceProvider', $this->getIsServiceProvider());
+        $writer->writeObjectValue('m365CollaborationInbound', $this->getM365CollaborationInbound());
+        $writer->writeObjectValue('m365CollaborationOutbound', $this->getM365CollaborationOutbound());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeObjectValue('tenantRestrictions', $this->getTenantRestrictions());
@@ -247,6 +289,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the appServiceConnectInbound property value. The appServiceConnectInbound property
+     * @param CrossTenantAccessPolicyAppServiceConnectSetting|null $value Value to set for the appServiceConnectInbound property.
+    */
+    public function setAppServiceConnectInbound(?CrossTenantAccessPolicyAppServiceConnectSetting $value): void {
+        $this->getBackingStore()->set('appServiceConnectInbound', $value);
     }
 
     /**
@@ -327,6 +377,22 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setIsServiceProvider(?bool $value): void {
         $this->getBackingStore()->set('isServiceProvider', $value);
+    }
+
+    /**
+     * Sets the m365CollaborationInbound property value. The m365CollaborationInbound property
+     * @param CrossTenantAccessPolicyM365CollaborationInboundSetting|null $value Value to set for the m365CollaborationInbound property.
+    */
+    public function setM365CollaborationInbound(?CrossTenantAccessPolicyM365CollaborationInboundSetting $value): void {
+        $this->getBackingStore()->set('m365CollaborationInbound', $value);
+    }
+
+    /**
+     * Sets the m365CollaborationOutbound property value. The m365CollaborationOutbound property
+     * @param CrossTenantAccessPolicyM365CollaborationOutboundSetting|null $value Value to set for the m365CollaborationOutbound property.
+    */
+    public function setM365CollaborationOutbound(?CrossTenantAccessPolicyM365CollaborationOutboundSetting $value): void {
+        $this->getBackingStore()->set('m365CollaborationOutbound', $value);
     }
 
     /**

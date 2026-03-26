@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Teams;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\Teams\Policy\PolicyRequestBuilder;
+use Microsoft\Graph\Generated\Admin\Teams\TelephoneNumberManagement\TelephoneNumberManagementRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Teams\UserConfigurations\UserConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsAdminRoot;
@@ -23,6 +24,13 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     */
     public function policy(): PolicyRequestBuilder {
         return new PolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the telephoneNumberManagement property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.
+    */
+    public function telephoneNumberManagement(): TelephoneNumberManagementRequestBuilder {
+        return new TelephoneNumberManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -61,7 +69,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param TeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsAdminRoot|null>
      * @throws Exception
@@ -108,7 +116,7 @@ class TeamsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param TeamsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
