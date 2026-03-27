@@ -6,6 +6,10 @@
 [![PHP Version Require](http://poser.pugx.org/microsoft/microsoft-graph/require/php)](https://packagist.org/packages/microsoft/microsoft-graph)
 
 ## Install the SDK
+
+### Prerequisites
+- PHP 8.2 or later (see [PHP supported versions](https://www.php.net/supported-versions.php))
+
 You can install the PHP SDK with Composer by editing your `composer.json` file:
 ```jsonc
 {
