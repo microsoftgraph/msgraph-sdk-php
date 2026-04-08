@@ -39,7 +39,7 @@ class ExternalAuthenticationMethodConfiguration extends AuthenticationMethodConf
     }
 
     /**
-     * Gets the displayName property value. Display name for the external authentication method. This name is shown to users during sign-in.
+     * Gets the displayName property value. Display name for the external MFA. This name is shown to users during sign-in.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -111,7 +111,7 @@ class ExternalAuthenticationMethodConfiguration extends AuthenticationMethodConf
     }
 
     /**
-     * Sets the displayName property value. Display name for the external authentication method. This name is shown to users during sign-in.
+     * Sets the displayName property value. Display name for the external MFA. This name is shown to users during sign-in.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

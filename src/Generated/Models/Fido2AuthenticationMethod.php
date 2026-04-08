@@ -27,7 +27,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Gets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
      * @return string|null
     */
     public function getAaGuid(): ?string {
@@ -39,7 +39,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
+     * Gets the attestationCertificates property value. The attestation certificate or certificates attached to this passkey.
      * @return array<string>|null
     */
     public function getAttestationCertificates(): ?array {
@@ -53,7 +53,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. The possible values are: attested, or notAttested.
+     * Gets the attestationLevel property value. The attestation level of this passkey (FIDO2). The possible values are: attested, notAttested, unknownFutureValue.
      * @return AttestationLevel|null
     */
     public function getAttestationLevel(): ?AttestationLevel {
@@ -95,11 +95,12 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
             'attestationLevel' => fn(ParseNode $n) => $o->setAttestationLevel($n->getEnumValue(AttestationLevel::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
+            'passkeyType' => fn(ParseNode $n) => $o->setPasskeyType($n->getEnumValue(PasskeyType::class)),
         ]);
     }
 
     /**
-     * Gets the model property value. The manufacturer-assigned model of the FIDO2 security key.
+     * Gets the model property value. The manufacturer-assigned model of the FIDO2 passkey.
      * @return string|null
     */
     public function getModel(): ?string {
@@ -108,6 +109,18 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'model'");
+    }
+
+    /**
+     * Gets the passkeyType property value. The type of passkey. The possible values are: deviceBound, synced, unknownFutureValue.
+     * @return PasskeyType|null
+    */
+    public function getPasskeyType(): ?PasskeyType {
+        $val = $this->getBackingStore()->get('passkeyType');
+        if (is_null($val) || $val instanceof PasskeyType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passkeyType'");
     }
 
     /**
@@ -121,10 +134,11 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
         $writer->writeEnumValue('attestationLevel', $this->getAttestationLevel());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('model', $this->getModel());
+        $writer->writeEnumValue('passkeyType', $this->getPasskeyType());
     }
 
     /**
-     * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
      * @param string|null $value Value to set for the aaGuid property.
     */
     public function setAaGuid(?string $value): void {
@@ -132,7 +146,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Sets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
+     * Sets the attestationCertificates property value. The attestation certificate or certificates attached to this passkey.
      * @param array<string>|null $value Value to set for the attestationCertificates property.
     */
     public function setAttestationCertificates(?array $value): void {
@@ -140,7 +154,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. The possible values are: attested, or notAttested.
+     * Sets the attestationLevel property value. The attestation level of this passkey (FIDO2). The possible values are: attested, notAttested, unknownFutureValue.
      * @param AttestationLevel|null $value Value to set for the attestationLevel property.
     */
     public function setAttestationLevel(?AttestationLevel $value): void {
@@ -156,11 +170,19 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Sets the model property value. The manufacturer-assigned model of the FIDO2 security key.
+     * Sets the model property value. The manufacturer-assigned model of the FIDO2 passkey.
      * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
         $this->getBackingStore()->set('model', $value);
+    }
+
+    /**
+     * Sets the passkeyType property value. The type of passkey. The possible values are: deviceBound, synced, unknownFutureValue.
+     * @param PasskeyType|null $value Value to set for the passkeyType property.
+    */
+    public function setPasskeyType(?PasskeyType $value): void {
+        $this->getBackingStore()->set('passkeyType', $value);
     }
 
 }

@@ -51,7 +51,7 @@ class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @param AdministrationScopeTargetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
@@ -65,7 +65,7 @@ class AdministrationScopeTargetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get administrationScopeTargets from identityGovernance
+     * The administrative units in the scope of the workflow. Optional. Supports $expand.
      * @param AdministrationScopeTargetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -23,6 +23,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
      * @return ServicePrincipal
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ServicePrincipal {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.agentIdentity': return new AgentIdentity();
+                case '#microsoft.graph.agentIdentityBlueprintPrincipal': return new AgentIdentityBlueprintPrincipal();
+            }
+        }
         return new ServicePrincipal();
     }
 
@@ -209,6 +217,18 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @return string|null
+    */
+    public function getCreatedByAppId(): ?string {
+        $val = $this->getBackingStore()->get('createdByAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdByAppId'");
+    }
+
+    /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @return array<DirectoryObject>|null
     */
@@ -340,6 +360,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'appRoleAssignments' => fn(ParseNode $n) => $o->setAppRoleAssignments($n->getCollectionOfObjectValues([AppRoleAssignment::class, 'createFromDiscriminatorValue'])),
             'appRoles' => fn(ParseNode $n) => $o->setAppRoles($n->getCollectionOfObjectValues([AppRole::class, 'createFromDiscriminatorValue'])),
             'claimsMappingPolicies' => fn(ParseNode $n) => $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues([ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'])),
+            'createdByAppId' => fn(ParseNode $n) => $o->setCreatedByAppId($n->getStringValue()),
             'createdObjects' => fn(ParseNode $n) => $o->setCreatedObjects($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'customSecurityAttributes' => fn(ParseNode $n) => $o->setCustomSecurityAttributes($n->getObjectValue([CustomSecurityAttributeValue::class, 'createFromDiscriminatorValue'])),
             'delegatedPermissionClassifications' => fn(ParseNode $n) => $o->setDelegatedPermissionClassifications($n->getCollectionOfObjectValues([DelegatedPermissionClassification::class, 'createFromDiscriminatorValue'])),
@@ -821,6 +842,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('appRoleAssignments', $this->getAppRoleAssignments());
         $writer->writeCollectionOfObjectValues('appRoles', $this->getAppRoles());
         $writer->writeCollectionOfObjectValues('claimsMappingPolicies', $this->getClaimsMappingPolicies());
+        $writer->writeStringValue('createdByAppId', $this->getCreatedByAppId());
         $writer->writeCollectionOfObjectValues('createdObjects', $this->getCreatedObjects());
         $writer->writeObjectValue('customSecurityAttributes', $this->getCustomSecurityAttributes());
         $writer->writeCollectionOfObjectValues('delegatedPermissionClassifications', $this->getDelegatedPermissionClassifications());
@@ -971,6 +993,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     */
     public function setClaimsMappingPolicies(?array $value): void {
         $this->getBackingStore()->set('claimsMappingPolicies', $value);
+    }
+
+    /**
+     * Sets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @param string|null $value Value to set for the createdByAppId property.
+    */
+    public function setCreatedByAppId(?string $value): void {
+        $this->getBackingStore()->set('createdByAppId', $value);
     }
 
     /**

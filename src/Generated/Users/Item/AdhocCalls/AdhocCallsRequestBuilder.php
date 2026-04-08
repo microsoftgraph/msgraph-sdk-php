@@ -8,6 +8,8 @@ use Microsoft\Graph\Generated\Models\AdhocCall;
 use Microsoft\Graph\Generated\Models\AdhocCallCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\AdhocCalls\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\AdhocCalls\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\AdhocCalls\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\AdhocCalls\Item\AdhocCallItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +26,20 @@ class AdhocCallsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllRecordings method.
+    */
+    public function getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllTranscripts method.
+    */
+    public function getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

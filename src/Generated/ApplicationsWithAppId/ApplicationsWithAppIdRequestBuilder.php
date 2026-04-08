@@ -34,7 +34,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
      * @param ApplicationsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -49,7 +49,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      * @param ApplicationsWithAppIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Application|null>
      * @throws Exception
@@ -64,7 +64,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn't exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn't exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param Application $body The request body
      * @param ApplicationsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Application|null>
@@ -80,7 +80,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.
+     * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
      * @param ApplicationsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -98,7 +98,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the properties and relationships of an application object.
+     * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
      * @param ApplicationsWithAppIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +119,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new application object if it doesn't exist, or update the properties of an existing application object.
+     * Create a new application object if it doesn't exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn't exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param Application $body The request body
      * @param ApplicationsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

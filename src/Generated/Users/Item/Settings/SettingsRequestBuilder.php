@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserSettings;
+use Microsoft\Graph\Generated\Users\Item\Settings\Exchange\ExchangeRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Settings\ItemInsights\ItemInsightsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Settings\ShiftPreferences\ShiftPreferencesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Settings\Storage\StorageRequestBuilder;
@@ -21,6 +22,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SettingsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the exchange property of the microsoft.graph.userSettings entity.
+    */
+    public function exchange(): ExchangeRequestBuilder {
+        return new ExchangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the itemInsights property of the microsoft.graph.userSettings entity.
     */

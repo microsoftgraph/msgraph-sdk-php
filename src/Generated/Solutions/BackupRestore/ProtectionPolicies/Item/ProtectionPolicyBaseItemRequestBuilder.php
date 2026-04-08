@@ -47,7 +47,7 @@ class ProtectionPolicyBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a protection policy. Read the properties and relationships of a protectionPolicyBase object.
+     * Delete a protectionPolicyBase object. A protection policy can be deleted only after it was deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
      * @param ProtectionPolicyBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -91,7 +91,7 @@ class ProtectionPolicyBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a protection policy. Read the properties and relationships of a protectionPolicyBase object.
+     * Delete a protectionPolicyBase object. A protection policy can be deleted only after it was deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
      * @param ProtectionPolicyBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
