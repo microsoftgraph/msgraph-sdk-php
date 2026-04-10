@@ -3,6 +3,25 @@
 This guide highlights breaking changes, bug fixes and new features introduced during major upgrades.
 
 
+# Upcoming Breaking Change: Minimum PHP version raised to 8.2
+
+The SDK now requires **PHP 8.2 or later**. Support for PHP 7.4, 8.0, and 8.1 has been removed.
+
+## Why
+
+PHP 7.4 (EOL Nov 2022), PHP 8.0 (EOL Nov 2023), and PHP 8.1 (EOL Dec 2025) no longer receive security updates from the PHP project. Continuing to support them prevented us from updating dependencies that have already dropped these versions, introducing potential security vulnerabilities.
+
+## What to do
+
+- Run `php -v` to check your current PHP version.
+- If you are on PHP 7.4, 8.0, or 8.1, upgrade to PHP 8.2 or later before updating the SDK.
+- No code changes are required — only the PHP runtime version needs to be updated.
+
+**Supported PHP versions:** 8.2, 8.3, 8.4
+
+See https://www.php.net/supported-versions.php for PHP's official support lifecycle.
+
+
 # Upgrading to 2.0.0
 - [New Features](#new-features)
 - [Breaking Changes](#breaking-changes)
