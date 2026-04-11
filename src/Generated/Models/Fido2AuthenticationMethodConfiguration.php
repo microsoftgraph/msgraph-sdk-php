@@ -27,35 +27,49 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
+     * Gets the defaultPasskeyProfile property value. The non-deletable baseline passkey profile, within the passkey profile collection. It's automatically created when migrating to passkey profiles and initially mirrors the tenant's legacy global passkey (FIDO2) authentication methods policy settings.
+     * @return string|null
+    */
+    public function getDefaultPasskeyProfile(): ?string {
+        $val = $this->getBackingStore()->get('defaultPasskeyProfile');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultPasskeyProfile'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([AuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            'defaultPasskeyProfile' => fn(ParseNode $n) => $o->setDefaultPasskeyProfile($n->getStringValue()),
+            'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([PasskeyAuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
             'isAttestationEnforced' => fn(ParseNode $n) => $o->setIsAttestationEnforced($n->getBooleanValue()),
             'isSelfServiceRegistrationAllowed' => fn(ParseNode $n) => $o->setIsSelfServiceRegistrationAllowed($n->getBooleanValue()),
             'keyRestrictions' => fn(ParseNode $n) => $o->setKeyRestrictions($n->getObjectValue([Fido2KeyRestrictions::class, 'createFromDiscriminatorValue'])),
+            'passkeyProfiles' => fn(ParseNode $n) => $o->setPasskeyProfiles($n->getCollectionOfObjectValues([PasskeyProfile::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @return array<AuthenticationMethodTarget>|null
+     * @return array<PasskeyAuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
         $val = $this->getBackingStore()->get('includeTargets');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, AuthenticationMethodTarget::class);
-            /** @var array<AuthenticationMethodTarget>|null $val */
+            TypeUtils::validateCollectionValues($val, PasskeyAuthenticationMethodTarget::class);
+            /** @var array<PasskeyAuthenticationMethodTarget>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTargets'");
     }
 
     /**
-     * Gets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
+     * Gets the isAttestationEnforced property value. Determines whether attestation must be enforced for passkey (FIDO2) registration. This property is deprecated and will be removed in October 2027. Use passkeyProfiles property.
      * @return bool|null
     */
     public function getIsAttestationEnforced(): ?bool {
@@ -67,7 +81,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Gets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
+     * Gets the isSelfServiceRegistrationAllowed property value. Determines if users can register new passkeys (FIDO2).
      * @return bool|null
     */
     public function getIsSelfServiceRegistrationAllowed(): ?bool {
@@ -79,7 +93,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator.
+     * Gets the keyRestrictions property value. Controls whether key restrictions are enforced on passkeys (FIDO2), either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator. This property is deprecated and will be removed in October 2027. Use the passkeyProfiles property.
      * @return Fido2KeyRestrictions|null
     */
     public function getKeyRestrictions(): ?Fido2KeyRestrictions {
@@ -91,27 +105,51 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
+     * Gets the passkeyProfiles property value. A collection of configuration profiles that control the registration of and authentication with passkeys (FIDO2).
+     * @return array<PasskeyProfile>|null
+    */
+    public function getPasskeyProfiles(): ?array {
+        $val = $this->getBackingStore()->get('passkeyProfiles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PasskeyProfile::class);
+            /** @var array<PasskeyProfile>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passkeyProfiles'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('defaultPasskeyProfile', $this->getDefaultPasskeyProfile());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
         $writer->writeBooleanValue('isAttestationEnforced', $this->getIsAttestationEnforced());
         $writer->writeBooleanValue('isSelfServiceRegistrationAllowed', $this->getIsSelfServiceRegistrationAllowed());
         $writer->writeObjectValue('keyRestrictions', $this->getKeyRestrictions());
+        $writer->writeCollectionOfObjectValues('passkeyProfiles', $this->getPasskeyProfiles());
+    }
+
+    /**
+     * Sets the defaultPasskeyProfile property value. The non-deletable baseline passkey profile, within the passkey profile collection. It's automatically created when migrating to passkey profiles and initially mirrors the tenant's legacy global passkey (FIDO2) authentication methods policy settings.
+     * @param string|null $value Value to set for the defaultPasskeyProfile property.
+    */
+    public function setDefaultPasskeyProfile(?string $value): void {
+        $this->getBackingStore()->set('defaultPasskeyProfile', $value);
     }
 
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     * @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
+     * @param array<PasskeyAuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
     }
 
     /**
-     * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
+     * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for passkey (FIDO2) registration. This property is deprecated and will be removed in October 2027. Use passkeyProfiles property.
      * @param bool|null $value Value to set for the isAttestationEnforced property.
     */
     public function setIsAttestationEnforced(?bool $value): void {
@@ -119,7 +157,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Sets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
+     * Sets the isSelfServiceRegistrationAllowed property value. Determines if users can register new passkeys (FIDO2).
      * @param bool|null $value Value to set for the isSelfServiceRegistrationAllowed property.
     */
     public function setIsSelfServiceRegistrationAllowed(?bool $value): void {
@@ -127,11 +165,19 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
     }
 
     /**
-     * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator.
+     * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on passkeys (FIDO2), either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator. This property is deprecated and will be removed in October 2027. Use the passkeyProfiles property.
      * @param Fido2KeyRestrictions|null $value Value to set for the keyRestrictions property.
     */
     public function setKeyRestrictions(?Fido2KeyRestrictions $value): void {
         $this->getBackingStore()->set('keyRestrictions', $value);
+    }
+
+    /**
+     * Sets the passkeyProfiles property value. A collection of configuration profiles that control the registration of and authentication with passkeys (FIDO2).
+     * @param array<PasskeyProfile>|null $value Value to set for the passkeyProfiles property.
+    */
+    public function setPasskeyProfiles(?array $value): void {
+        $this->getBackingStore()->set('passkeyProfiles', $value);
     }
 
 }

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ExchangeAdmin extends Entity implements Parsable 
 {
@@ -31,8 +32,23 @@ class ExchangeAdmin extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'mailboxes' => fn(ParseNode $n) => $o->setMailboxes($n->getCollectionOfObjectValues([Mailbox::class, 'createFromDiscriminatorValue'])),
             'tracing' => fn(ParseNode $n) => $o->setTracing($n->getObjectValue([MessageTracingRoot::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the mailboxes property value. The mailboxes property
+     * @return array<Mailbox>|null
+    */
+    public function getMailboxes(): ?array {
+        $val = $this->getBackingStore()->get('mailboxes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Mailbox::class);
+            /** @var array<Mailbox>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxes'");
     }
 
     /**
@@ -53,7 +69,16 @@ class ExchangeAdmin extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('mailboxes', $this->getMailboxes());
         $writer->writeObjectValue('tracing', $this->getTracing());
+    }
+
+    /**
+     * Sets the mailboxes property value. The mailboxes property
+     * @param array<Mailbox>|null $value Value to set for the mailboxes property.
+    */
+    public function setMailboxes(?array $value): void {
+        $this->getBackingStore()->set('mailboxes', $value);
     }
 
     /**

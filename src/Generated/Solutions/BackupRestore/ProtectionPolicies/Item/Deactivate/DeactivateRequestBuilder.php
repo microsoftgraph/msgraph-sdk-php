@@ -31,7 +31,7 @@ class DeactivateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deactivate a protectionPolicyBase.
+     * Deactivate a protectionPolicyBase. When a protection policy is deactivated, backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation. To reactivate a deactivated policy, use the activate API.
      * @param DeactivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProtectionPolicyBase|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class DeactivateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deactivate a protectionPolicyBase.
+     * Deactivate a protectionPolicyBase. When a protection policy is deactivated, backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation. To reactivate a deactivated policy, use the activate API.
      * @param DeactivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

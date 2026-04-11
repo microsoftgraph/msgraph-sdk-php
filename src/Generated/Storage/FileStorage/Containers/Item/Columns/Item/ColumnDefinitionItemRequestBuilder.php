@@ -53,7 +53,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ColumnDefinition|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get columns from storage
+     * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

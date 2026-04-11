@@ -34,6 +34,8 @@ class PeopleAdminSettings extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'itemInsights' => fn(ParseNode $n) => $o->setItemInsights($n->getObjectValue([InsightsSettings::class, 'createFromDiscriminatorValue'])),
             'profileCardProperties' => fn(ParseNode $n) => $o->setProfileCardProperties($n->getCollectionOfObjectValues([ProfileCardProperty::class, 'createFromDiscriminatorValue'])),
+            'profilePropertySettings' => fn(ParseNode $n) => $o->setProfilePropertySettings($n->getCollectionOfObjectValues([ProfilePropertySetting::class, 'createFromDiscriminatorValue'])),
+            'profileSources' => fn(ParseNode $n) => $o->setProfileSources($n->getCollectionOfObjectValues([ProfileSource::class, 'createFromDiscriminatorValue'])),
             'pronouns' => fn(ParseNode $n) => $o->setPronouns($n->getObjectValue([PronounsSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -65,6 +67,34 @@ class PeopleAdminSettings extends Entity implements Parsable
     }
 
     /**
+     * Gets the profilePropertySettings property value. A collection of profile property configuration settings defined by an administrator for an organization.
+     * @return array<ProfilePropertySetting>|null
+    */
+    public function getProfilePropertySettings(): ?array {
+        $val = $this->getBackingStore()->get('profilePropertySettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ProfilePropertySetting::class);
+            /** @var array<ProfilePropertySetting>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'profilePropertySettings'");
+    }
+
+    /**
+     * Gets the profileSources property value. A collection of profile source settings configured by an administrator in an organization.
+     * @return array<ProfileSource>|null
+    */
+    public function getProfileSources(): ?array {
+        $val = $this->getBackingStore()->get('profileSources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ProfileSource::class);
+            /** @var array<ProfileSource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'profileSources'");
+    }
+
+    /**
      * Gets the pronouns property value. Represents administrator settings that manage the support of pronouns in an organization.
      * @return PronounsSettings|null
     */
@@ -84,6 +114,8 @@ class PeopleAdminSettings extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeObjectValue('itemInsights', $this->getItemInsights());
         $writer->writeCollectionOfObjectValues('profileCardProperties', $this->getProfileCardProperties());
+        $writer->writeCollectionOfObjectValues('profilePropertySettings', $this->getProfilePropertySettings());
+        $writer->writeCollectionOfObjectValues('profileSources', $this->getProfileSources());
         $writer->writeObjectValue('pronouns', $this->getPronouns());
     }
 
@@ -101,6 +133,22 @@ class PeopleAdminSettings extends Entity implements Parsable
     */
     public function setProfileCardProperties(?array $value): void {
         $this->getBackingStore()->set('profileCardProperties', $value);
+    }
+
+    /**
+     * Sets the profilePropertySettings property value. A collection of profile property configuration settings defined by an administrator for an organization.
+     * @param array<ProfilePropertySetting>|null $value Value to set for the profilePropertySettings property.
+    */
+    public function setProfilePropertySettings(?array $value): void {
+        $this->getBackingStore()->set('profilePropertySettings', $value);
+    }
+
+    /**
+     * Sets the profileSources property value. A collection of profile source settings configured by an administrator in an organization.
+     * @param array<ProfileSource>|null $value Value to set for the profileSources property.
+    */
+    public function setProfileSources(?array $value): void {
+        $this->getBackingStore()->set('profileSources', $value);
     }
 
     /**

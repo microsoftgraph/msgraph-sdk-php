@@ -382,6 +382,7 @@ class Group extends DirectoryObject implements Parsable
             'uniqueName' => fn(ParseNode $n) => $o->setUniqueName($n->getStringValue()),
             'unseenCount' => fn(ParseNode $n) => $o->setUnseenCount($n->getIntegerValue()),
             'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getStringValue()),
+            'welcomeMessageEnabled' => fn(ParseNode $n) => $o->setWelcomeMessageEnabled($n->getBooleanValue()),
         ]);
     }
 
@@ -1048,6 +1049,18 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * @return bool|null
+    */
+    public function getWelcomeMessageEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('welcomeMessageEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'welcomeMessageEnabled'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -1124,6 +1137,7 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeStringValue('uniqueName', $this->getUniqueName());
         $writer->writeIntegerValue('unseenCount', $this->getUnseenCount());
         $writer->writeStringValue('visibility', $this->getVisibility());
+        $writer->writeBooleanValue('welcomeMessageEnabled', $this->getWelcomeMessageEnabled());
     }
 
     /**
@@ -1692,6 +1706,14 @@ class Group extends DirectoryObject implements Parsable
     */
     public function setVisibility(?string $value): void {
         $this->getBackingStore()->set('visibility', $value);
+    }
+
+    /**
+     * Sets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * @param bool|null $value Value to set for the welcomeMessageEnabled property.
+    */
+    public function setWelcomeMessageEnabled(?bool $value): void {
+        $this->getBackingStore()->set('welcomeMessageEnabled', $value);
     }
 
 }

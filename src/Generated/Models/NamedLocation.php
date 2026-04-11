@@ -7,13 +7,14 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class NamedLocation extends Entity implements Parsable 
+class NamedLocation extends PolicyDeletableItem implements Parsable 
 {
     /**
      * Instantiates a new NamedLocation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.namedLocation');
     }
 
     /**
@@ -66,8 +67,21 @@ class NamedLocation extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
         ]);
+    }
+
+    /**
+     * Gets the id property value. Identifier of a namedLocation object. Read-only.
+     * @return string|null
+    */
+    public function getId(): ?string {
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -90,6 +104,7 @@ class NamedLocation extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('id', $this->getId());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
     }
 
@@ -107,6 +122,14 @@ class NamedLocation extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the id property value. Identifier of a namedLocation object. Read-only.
+     * @param string|null $value Value to set for the id property.
+    */
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**

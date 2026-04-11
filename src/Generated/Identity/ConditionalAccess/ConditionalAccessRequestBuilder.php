@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess;
 
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\AuthenticationContextClassReferencesRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStrength\AuthenticationStrengthRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\DeletedItems\DeletedItemsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\Evaluate\EvaluateRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\NamedLocations\NamedLocationsRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\PoliciesRequestBuilder;
@@ -28,6 +29,13 @@ class ConditionalAccessRequestBuilder extends BaseRequestBuilder
     */
     public function authenticationStrength(): AuthenticationStrengthRequestBuilder {
         return new AuthenticationStrengthRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.conditionalAccessRoot entity.
+    */
+    public function deletedItems(): DeletedItemsRequestBuilder {
+        return new DeletedItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

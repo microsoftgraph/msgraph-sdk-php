@@ -34,7 +34,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -49,7 +49,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @param ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
      * @throws Exception
@@ -64,7 +64,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn't exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
@@ -80,7 +80,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a servicePrincipal object.
+     * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -98,7 +98,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a servicePrincipal object.
+     * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @param ServicePrincipalsWithAppIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +119,7 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object.
+     * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn't exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

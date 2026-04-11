@@ -231,10 +231,13 @@ class Contact extends OutlookItem implements Parsable
             'parentFolderId' => fn(ParseNode $n) => $o->setParentFolderId($n->getStringValue()),
             'personalNotes' => fn(ParseNode $n) => $o->setPersonalNotes($n->getStringValue()),
             'photo' => fn(ParseNode $n) => $o->setPhoto($n->getObjectValue([ProfilePhoto::class, 'createFromDiscriminatorValue'])),
+            'primaryEmailAddress' => fn(ParseNode $n) => $o->setPrimaryEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
             'profession' => fn(ParseNode $n) => $o->setProfession($n->getStringValue()),
+            'secondaryEmailAddress' => fn(ParseNode $n) => $o->setSecondaryEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
             'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'spouseName' => fn(ParseNode $n) => $o->setSpouseName($n->getStringValue()),
             'surname' => fn(ParseNode $n) => $o->setSurname($n->getStringValue()),
+            'tertiaryEmailAddress' => fn(ParseNode $n) => $o->setTertiaryEmailAddress($n->getObjectValue([EmailAddress::class, 'createFromDiscriminatorValue'])),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
             'yomiCompanyName' => fn(ParseNode $n) => $o->setYomiCompanyName($n->getStringValue()),
             'yomiGivenName' => fn(ParseNode $n) => $o->setYomiGivenName($n->getStringValue()),
@@ -465,6 +468,18 @@ class Contact extends OutlookItem implements Parsable
     }
 
     /**
+     * Gets the primaryEmailAddress property value. The contact's primary email address.
+     * @return EmailAddress|null
+    */
+    public function getPrimaryEmailAddress(): ?EmailAddress {
+        $val = $this->getBackingStore()->get('primaryEmailAddress');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'primaryEmailAddress'");
+    }
+
+    /**
      * Gets the profession property value. The contact's profession.
      * @return string|null
     */
@@ -474,6 +489,18 @@ class Contact extends OutlookItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'profession'");
+    }
+
+    /**
+     * Gets the secondaryEmailAddress property value. The contact's secondary email address.
+     * @return EmailAddress|null
+    */
+    public function getSecondaryEmailAddress(): ?EmailAddress {
+        $val = $this->getBackingStore()->get('secondaryEmailAddress');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secondaryEmailAddress'");
     }
 
     /**
@@ -512,6 +539,18 @@ class Contact extends OutlookItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'surname'");
+    }
+
+    /**
+     * Gets the tertiaryEmailAddress property value. The contact's tertiary email address.
+     * @return EmailAddress|null
+    */
+    public function getTertiaryEmailAddress(): ?EmailAddress {
+        $val = $this->getBackingStore()->get('tertiaryEmailAddress');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tertiaryEmailAddress'");
     }
 
     /**
@@ -597,10 +636,13 @@ class Contact extends OutlookItem implements Parsable
         $writer->writeStringValue('parentFolderId', $this->getParentFolderId());
         $writer->writeStringValue('personalNotes', $this->getPersonalNotes());
         $writer->writeObjectValue('photo', $this->getPhoto());
+        $writer->writeObjectValue('primaryEmailAddress', $this->getPrimaryEmailAddress());
         $writer->writeStringValue('profession', $this->getProfession());
+        $writer->writeObjectValue('secondaryEmailAddress', $this->getSecondaryEmailAddress());
         $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
         $writer->writeStringValue('spouseName', $this->getSpouseName());
         $writer->writeStringValue('surname', $this->getSurname());
+        $writer->writeObjectValue('tertiaryEmailAddress', $this->getTertiaryEmailAddress());
         $writer->writeStringValue('title', $this->getTitle());
         $writer->writeStringValue('yomiCompanyName', $this->getYomiCompanyName());
         $writer->writeStringValue('yomiGivenName', $this->getYomiGivenName());
@@ -840,11 +882,27 @@ class Contact extends OutlookItem implements Parsable
     }
 
     /**
+     * Sets the primaryEmailAddress property value. The contact's primary email address.
+     * @param EmailAddress|null $value Value to set for the primaryEmailAddress property.
+    */
+    public function setPrimaryEmailAddress(?EmailAddress $value): void {
+        $this->getBackingStore()->set('primaryEmailAddress', $value);
+    }
+
+    /**
      * Sets the profession property value. The contact's profession.
      * @param string|null $value Value to set for the profession property.
     */
     public function setProfession(?string $value): void {
         $this->getBackingStore()->set('profession', $value);
+    }
+
+    /**
+     * Sets the secondaryEmailAddress property value. The contact's secondary email address.
+     * @param EmailAddress|null $value Value to set for the secondaryEmailAddress property.
+    */
+    public function setSecondaryEmailAddress(?EmailAddress $value): void {
+        $this->getBackingStore()->set('secondaryEmailAddress', $value);
     }
 
     /**
@@ -869,6 +927,14 @@ class Contact extends OutlookItem implements Parsable
     */
     public function setSurname(?string $value): void {
         $this->getBackingStore()->set('surname', $value);
+    }
+
+    /**
+     * Sets the tertiaryEmailAddress property value. The contact's tertiary email address.
+     * @param EmailAddress|null $value Value to set for the tertiaryEmailAddress property.
+    */
+    public function setTertiaryEmailAddress(?EmailAddress $value): void {
+        $this->getBackingStore()->set('tertiaryEmailAddress', $value);
     }
 
     /**

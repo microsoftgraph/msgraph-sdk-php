@@ -57,6 +57,18 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the configurationManagement property value. A container for Tenant Configuration Management (TCM) resources. Read-only.
+     * @return ConfigurationManagement|null
+    */
+    public function getConfigurationManagement(): ?ConfigurationManagement {
+        $val = $this->getBackingStore()->get('configurationManagement');
+        if (is_null($val) || $val instanceof ConfigurationManagement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configurationManagement'");
+    }
+
+    /**
      * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @return Edge|null
     */
@@ -87,6 +99,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'configurationManagement' => fn(ParseNode $n) => $o->setConfigurationManagement($n->getObjectValue([ConfigurationManagement::class, 'createFromDiscriminatorValue'])),
             'edge' => fn(ParseNode $n) => $o->setEdge($n->getObjectValue([Edge::class, 'createFromDiscriminatorValue'])),
             'exchange' => fn(ParseNode $n) => $o->setExchange($n->getObjectValue([ExchangeAdmin::class, 'createFromDiscriminatorValue'])),
             'microsoft365Apps' => fn(ParseNode $n) => $o->setMicrosoft365Apps($n->getObjectValue([AdminMicrosoft365Apps::class, 'createFromDiscriminatorValue'])),
@@ -172,7 +185,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Gets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @return TeamsAdminRoot|null
     */
     public function getTeams(): ?TeamsAdminRoot {
@@ -188,6 +201,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('configurationManagement', $this->getConfigurationManagement());
         $writer->writeObjectValue('edge', $this->getEdge());
         $writer->writeObjectValue('exchange', $this->getExchange());
         $writer->writeObjectValue('microsoft365Apps', $this->getMicrosoft365Apps());
@@ -214,6 +228,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the configurationManagement property value. A container for Tenant Configuration Management (TCM) resources. Read-only.
+     * @param ConfigurationManagement|null $value Value to set for the configurationManagement property.
+    */
+    public function setConfigurationManagement(?ConfigurationManagement $value): void {
+        $this->getBackingStore()->set('configurationManagement', $value);
     }
 
     /**
@@ -281,7 +303,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the teams property value. A container for Teams administration functionalities, such as user configurations and policy assignments.
+     * Sets the teams property value. A container for Teams administration functionalities, such as Teams telephone number management functionalities, user Teams configurations, and policy assignments.
      * @param TeamsAdminRoot|null $value Value to set for the teams property.
     */
     public function setTeams(?TeamsAdminRoot $value): void {

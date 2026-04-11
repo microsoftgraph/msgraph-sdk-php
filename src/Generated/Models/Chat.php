@@ -65,7 +65,9 @@ class Chat extends Entity implements Parsable
             'lastUpdatedDateTime' => fn(ParseNode $n) => $o->setLastUpdatedDateTime($n->getDateTimeValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
+            'migrationMode' => fn(ParseNode $n) => $o->setMigrationMode($n->getEnumValue(MigrationMode::class)),
             'onlineMeetingInfo' => fn(ParseNode $n) => $o->setOnlineMeetingInfo($n->getObjectValue([TeamworkOnlineMeetingInfo::class, 'createFromDiscriminatorValue'])),
+            'originalCreatedDateTime' => fn(ParseNode $n) => $o->setOriginalCreatedDateTime($n->getDateTimeValue()),
             'permissionGrants' => fn(ParseNode $n) => $o->setPermissionGrants($n->getCollectionOfObjectValues([ResourceSpecificPermissionGrant::class, 'createFromDiscriminatorValue'])),
             'pinnedMessages' => fn(ParseNode $n) => $o->setPinnedMessages($n->getCollectionOfObjectValues([PinnedChatMessageInfo::class, 'createFromDiscriminatorValue'])),
             'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
@@ -155,6 +157,18 @@ class Chat extends Entity implements Parsable
     }
 
     /**
+     * Gets the migrationMode property value. The migrationMode property
+     * @return MigrationMode|null
+    */
+    public function getMigrationMode(): ?MigrationMode {
+        $val = $this->getBackingStore()->get('migrationMode');
+        if (is_null($val) || $val instanceof MigrationMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'migrationMode'");
+    }
+
+    /**
      * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
      * @return TeamworkOnlineMeetingInfo|null
     */
@@ -164,6 +178,18 @@ class Chat extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onlineMeetingInfo'");
+    }
+
+    /**
+     * Gets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * @return DateTime|null
+    */
+    public function getOriginalCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('originalCreatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'originalCreatedDateTime'");
     }
 
     /**
@@ -270,7 +296,9 @@ class Chat extends Entity implements Parsable
         $writer->writeDateTimeValue('lastUpdatedDateTime', $this->getLastUpdatedDateTime());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
+        $writer->writeEnumValue('migrationMode', $this->getMigrationMode());
         $writer->writeObjectValue('onlineMeetingInfo', $this->getOnlineMeetingInfo());
+        $writer->writeDateTimeValue('originalCreatedDateTime', $this->getOriginalCreatedDateTime());
         $writer->writeCollectionOfObjectValues('permissionGrants', $this->getPermissionGrants());
         $writer->writeCollectionOfObjectValues('pinnedMessages', $this->getPinnedMessages());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
@@ -345,11 +373,27 @@ class Chat extends Entity implements Parsable
     }
 
     /**
+     * Sets the migrationMode property value. The migrationMode property
+     * @param MigrationMode|null $value Value to set for the migrationMode property.
+    */
+    public function setMigrationMode(?MigrationMode $value): void {
+        $this->getBackingStore()->set('migrationMode', $value);
+    }
+
+    /**
      * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
      * @param TeamworkOnlineMeetingInfo|null $value Value to set for the onlineMeetingInfo property.
     */
     public function setOnlineMeetingInfo(?TeamworkOnlineMeetingInfo $value): void {
         $this->getBackingStore()->set('onlineMeetingInfo', $value);
+    }
+
+    /**
+     * Sets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * @param DateTime|null $value Value to set for the originalCreatedDateTime property.
+    */
+    public function setOriginalCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('originalCreatedDateTime', $value);
     }
 
     /**

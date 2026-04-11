@@ -52,6 +52,18 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the deletedItems property value. The deletedItems property
+     * @return CaPoliciesDeletableRoot|null
+    */
+    public function getDeletedItems(): ?CaPoliciesDeletableRoot {
+        $val = $this->getBackingStore()->get('deletedItems');
+        if (is_null($val) || $val instanceof CaPoliciesDeletableRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedItems'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -60,6 +72,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationContextClassReferences' => fn(ParseNode $n) => $o->setAuthenticationContextClassReferences($n->getCollectionOfObjectValues([AuthenticationContextClassReference::class, 'createFromDiscriminatorValue'])),
             'authenticationStrength' => fn(ParseNode $n) => $o->setAuthenticationStrength($n->getObjectValue([AuthenticationStrengthRoot::class, 'createFromDiscriminatorValue'])),
+            'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getObjectValue([CaPoliciesDeletableRoot::class, 'createFromDiscriminatorValue'])),
             'namedLocations' => fn(ParseNode $n) => $o->setNamedLocations($n->getCollectionOfObjectValues([NamedLocation::class, 'createFromDiscriminatorValue'])),
             'policies' => fn(ParseNode $n) => $o->setPolicies($n->getCollectionOfObjectValues([ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
             'templates' => fn(ParseNode $n) => $o->setTemplates($n->getCollectionOfObjectValues([ConditionalAccessTemplate::class, 'createFromDiscriminatorValue'])),
@@ -116,6 +129,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('authenticationContextClassReferences', $this->getAuthenticationContextClassReferences());
         $writer->writeObjectValue('authenticationStrength', $this->getAuthenticationStrength());
+        $writer->writeObjectValue('deletedItems', $this->getDeletedItems());
         $writer->writeCollectionOfObjectValues('namedLocations', $this->getNamedLocations());
         $writer->writeCollectionOfObjectValues('policies', $this->getPolicies());
         $writer->writeCollectionOfObjectValues('templates', $this->getTemplates());
@@ -135,6 +149,14 @@ class ConditionalAccessRoot extends Entity implements Parsable
     */
     public function setAuthenticationStrength(?AuthenticationStrengthRoot $value): void {
         $this->getBackingStore()->set('authenticationStrength', $value);
+    }
+
+    /**
+     * Sets the deletedItems property value. The deletedItems property
+     * @param CaPoliciesDeletableRoot|null $value Value to set for the deletedItems property.
+    */
+    public function setDeletedItems(?CaPoliciesDeletableRoot $value): void {
+        $this->getBackingStore()->set('deletedItems', $value);
     }
 
     /**

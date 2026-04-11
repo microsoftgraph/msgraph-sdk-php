@@ -71,6 +71,18 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the description property value. Specifies a human-readable description that explains the purpose, usage, or guidance related to the property. This property enhances semantic understanding by helping Copilot interpret queries and accurately map them to properties that results in more relevant and precise responses. Optional but we recommend that you use this property for queryable properties. The maximum supported length is 200 characters.
+     * @return string|null
+    */
+    public function getDescription(): ?string {
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -85,6 +97,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
                 /** @var array<string>|null $val */
                 $this->setAliases($val);
             },
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'isQueryable' => fn(ParseNode $n) => $o->setIsQueryable($n->getBooleanValue()),
             'isRefinable' => fn(ParseNode $n) => $o->setIsRefinable($n->getBooleanValue()),
             'isRetrievable' => fn(ParseNode $n) => $o->setIsRetrievable($n->getBooleanValue()),
@@ -145,7 +158,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: iconUrl.
+     * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional..The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, containerName, containerUrl, iconUrl, assignedTo, dueDate, closedDate, closedBy, reportedBy, sprintName, severity, state, priority, secondaryId, itemParentId, parentUrl, tags, itemType, itemPath, numReactions. Use the Prefer: include-unknown-enum-members request header to retrieve additional values defined in this evolvable enum,For People Connectors you can include : personEmails, personAddresses, personAnniversaries, personName, personNote, personPhones, personCurrentPosition, personWebAccounts, personWebSite, personSkills, personProjects, personAccount, personAwards, personCertifications, personAssistants, personColleagues, personManager, personAlternateContacts, personEmergencyContacts.
      * @return array<Label>|null
     */
     public function getLabels(): ?array {
@@ -200,6 +213,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('aliases', $this->getAliases());
+        $writer->writeStringValue('description', $this->getDescription());
         $writer->writeBooleanValue('isQueryable', $this->getIsQueryable());
         $writer->writeBooleanValue('isRefinable', $this->getIsRefinable());
         $writer->writeBooleanValue('isRetrievable', $this->getIsRetrievable());
@@ -236,6 +250,14 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Sets the description property value. Specifies a human-readable description that explains the purpose, usage, or guidance related to the property. This property enhances semantic understanding by helping Copilot interpret queries and accurately map them to properties that results in more relevant and precise responses. Optional but we recommend that you use this property for queryable properties. The maximum supported length is 200 characters.
+     * @param string|null $value Value to set for the description property.
+    */
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
+    }
+
+    /**
      * Sets the isQueryable property value. Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
      * @param bool|null $value Value to set for the isQueryable property.
     */
@@ -268,7 +290,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: iconUrl.
+     * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional..The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, containerName, containerUrl, iconUrl, assignedTo, dueDate, closedDate, closedBy, reportedBy, sprintName, severity, state, priority, secondaryId, itemParentId, parentUrl, tags, itemType, itemPath, numReactions. Use the Prefer: include-unknown-enum-members request header to retrieve additional values defined in this evolvable enum,For People Connectors you can include : personEmails, personAddresses, personAnniversaries, personName, personNote, personPhones, personCurrentPosition, personWebAccounts, personWebSite, personSkills, personProjects, personAccount, personAwards, personCertifications, personAssistants, personColleagues, personManager, personAlternateContacts, personEmergencyContacts.
      * @param array<Label>|null $value Value to set for the labels property.
     */
     public function setLabels(?array $value): void {

@@ -10,12 +10,14 @@ use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\AllMembers\AllMembersReq
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\EnabledApps\EnabledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\StartMigration\StartMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Tabs\TabsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -54,6 +56,13 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     */
     public function doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
         return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.
+    */
+    public function enabledApps(): EnabledAppsRequestBuilder {
+        return new EnabledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -96,6 +105,13 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     */
     public function sharedWithTeams(): SharedWithTeamsRequestBuilder {
         return new SharedWithTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the startMigration method.
+    */
+    public function startMigration(): StartMigrationRequestBuilder {
+        return new StartMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
