@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\Columns;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get columns from storage
+ * The set of custom structured metadata supported by the fileStorageContainer. Read-write.
 */
 class ColumnsRequestBuilderGetQueryParameters 
 {

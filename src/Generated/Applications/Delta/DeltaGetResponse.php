@@ -2,8 +2,8 @@
 
 namespace Microsoft\Graph\Generated\Applications\Delta;
 
-use Microsoft\Graph\Generated\Models\Application;
 use Microsoft\Graph\Generated\Models\BaseDeltaFunctionResponse;
+use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -34,19 +34,19 @@ class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([Application::class, 'createFromDiscriminatorValue'])),
+            'value' => fn(ParseNode $n) => $o->setValue($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
     /**
      * Gets the value property value. The value property
-     * @return array<Application>|null
+     * @return array<DirectoryObject>|null
     */
     public function getValue(): ?array {
         $val = $this->getBackingStore()->get('value');
         if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, Application::class);
-            /** @var array<Application>|null $val */
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
@@ -63,7 +63,7 @@ class DeltaGetResponse extends BaseDeltaFunctionResponse implements Parsable
 
     /**
      * Sets the value property value. The value property
-     * @param array<Application>|null $value Value to set for the value property.
+     * @param array<DirectoryObject>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {
         $this->getBackingStore()->set('value', $value);

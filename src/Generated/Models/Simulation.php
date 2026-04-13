@@ -324,7 +324,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
+     * Gets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, draft, running, scheduled, succeeded, failed, canceled, excluded, unknownFutureValue.
      * @return SimulationStatus|null
     */
     public function getStatus(): ?SimulationStatus {
@@ -556,7 +556,7 @@ class Simulation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
+     * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. The possible values are: unknown, draft, running, scheduled, succeeded, failed, canceled, excluded, unknownFutureValue.
      * @param SimulationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationStatus $value): void {

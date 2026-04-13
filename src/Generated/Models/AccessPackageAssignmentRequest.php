@@ -53,7 +53,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove, approverRemove, or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @return AccessPackageAssignment|null
     */
     public function getAssignment(): ?AccessPackageAssignment {
@@ -149,7 +149,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can't be changed once set.
+     * Gets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: approverRemove. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can't be changed once set.
      * @return AccessPackageRequestType|null
     */
     public function getRequestType(): ?AccessPackageRequestType {
@@ -161,7 +161,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
+     * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or adminUpdate assignment request.
      * @return EntitlementManagementSchedule|null
     */
     public function getSchedule(): ?EntitlementManagementSchedule {
@@ -233,7 +233,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
+     * Sets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created. For a requestType of userRemove, adminRemove, approverRemove, or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @param AccessPackageAssignment|null $value Value to set for the assignment property.
     */
     public function setAssignment(?AccessPackageAssignment $value): void {
@@ -281,7 +281,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, UserExtend, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can't be changed once set.
+     * Sets the requestType property value. The type of the request. The possible values are: notSpecified, userAdd, userUpdate, userRemove, adminAdd, adminUpdate, adminRemove, systemAdd, systemUpdate, systemRemove, onBehalfAdd (not supported), unknownFutureValue. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: approverRemove. Requests from the user have a requestType of userAdd, userUpdate, or userRemove. This property can't be changed once set.
      * @param AccessPackageRequestType|null $value Value to set for the requestType property.
     */
     public function setRequestType(?AccessPackageRequestType $value): void {
@@ -289,7 +289,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or UserExtend or adminUpdate assignment request.
+     * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. This property can't be changed once set, but a new schedule for an assignment can be included in another userUpdate or adminUpdate assignment request.
      * @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?EntitlementManagementSchedule $value): void {

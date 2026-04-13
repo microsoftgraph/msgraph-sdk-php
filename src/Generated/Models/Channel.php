@@ -89,6 +89,20 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the enabledApps property value. A collection of enabled apps in the channel.
+     * @return array<TeamsApp>|null
+    */
+    public function getEnabledApps(): ?array {
+        $val = $this->getBackingStore()->get('enabledApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamsApp::class);
+            /** @var array<TeamsApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabledApps'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -100,12 +114,15 @@ class Channel extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'email' => fn(ParseNode $n) => $o->setEmail($n->getStringValue()),
+            'enabledApps' => fn(ParseNode $n) => $o->setEnabledApps($n->getCollectionOfObjectValues([TeamsApp::class, 'createFromDiscriminatorValue'])),
             'filesFolder' => fn(ParseNode $n) => $o->setFilesFolder($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
             'isFavoriteByDefault' => fn(ParseNode $n) => $o->setIsFavoriteByDefault($n->getBooleanValue()),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
+            'migrationMode' => fn(ParseNode $n) => $o->setMigrationMode($n->getEnumValue(MigrationMode::class)),
+            'originalCreatedDateTime' => fn(ParseNode $n) => $o->setOriginalCreatedDateTime($n->getDateTimeValue()),
             'sharedWithTeams' => fn(ParseNode $n) => $o->setSharedWithTeams($n->getCollectionOfObjectValues([SharedWithChannelTeamInfo::class, 'createFromDiscriminatorValue'])),
             'summary' => fn(ParseNode $n) => $o->setSummary($n->getObjectValue([ChannelSummary::class, 'createFromDiscriminatorValue'])),
             'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
@@ -191,6 +208,30 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Gets the migrationMode property value. The migrationMode property
+     * @return MigrationMode|null
+    */
+    public function getMigrationMode(): ?MigrationMode {
+        $val = $this->getBackingStore()->get('migrationMode');
+        if (is_null($val) || $val instanceof MigrationMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'migrationMode'");
+    }
+
+    /**
+     * Gets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * @return DateTime|null
+    */
+    public function getOriginalCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('originalCreatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'originalCreatedDateTime'");
+    }
+
+    /**
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
      * @return array<SharedWithChannelTeamInfo>|null
     */
@@ -265,12 +306,15 @@ class Channel extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('email', $this->getEmail());
+        $writer->writeCollectionOfObjectValues('enabledApps', $this->getEnabledApps());
         $writer->writeObjectValue('filesFolder', $this->getFilesFolder());
         $writer->writeBooleanValue('isArchived', $this->getIsArchived());
         $writer->writeBooleanValue('isFavoriteByDefault', $this->getIsFavoriteByDefault());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeEnumValue('membershipType', $this->getMembershipType());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
+        $writer->writeEnumValue('migrationMode', $this->getMigrationMode());
+        $writer->writeDateTimeValue('originalCreatedDateTime', $this->getOriginalCreatedDateTime());
         $writer->writeCollectionOfObjectValues('sharedWithTeams', $this->getSharedWithTeams());
         $writer->writeObjectValue('summary', $this->getSummary());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
@@ -319,6 +363,14 @@ class Channel extends Entity implements Parsable
     }
 
     /**
+     * Sets the enabledApps property value. A collection of enabled apps in the channel.
+     * @param array<TeamsApp>|null $value Value to set for the enabledApps property.
+    */
+    public function setEnabledApps(?array $value): void {
+        $this->getBackingStore()->set('enabledApps', $value);
+    }
+
+    /**
      * Sets the filesFolder property value. Metadata for the location where the channel's files are stored.
      * @param DriveItem|null $value Value to set for the filesFolder property.
     */
@@ -364,6 +416,22 @@ class Channel extends Entity implements Parsable
     */
     public function setMessages(?array $value): void {
         $this->getBackingStore()->set('messages', $value);
+    }
+
+    /**
+     * Sets the migrationMode property value. The migrationMode property
+     * @param MigrationMode|null $value Value to set for the migrationMode property.
+    */
+    public function setMigrationMode(?MigrationMode $value): void {
+        $this->getBackingStore()->set('migrationMode', $value);
+    }
+
+    /**
+     * Sets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * @param DateTime|null $value Value to set for the originalCreatedDateTime property.
+    */
+    public function setOriginalCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('originalCreatedDateTime', $value);
     }
 
     /**

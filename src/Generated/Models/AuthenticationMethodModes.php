@@ -22,4 +22,5 @@ class AuthenticationMethodModes extends Enum {
     public const FEDERATED_SINGLE_FACTOR = "federatedSingleFactor";
     public const FEDERATED_MULTI_FACTOR = "federatedMultiFactor";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const QR_CODE_PIN = "qrCodePin";
 }

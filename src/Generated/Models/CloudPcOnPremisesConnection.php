@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CloudPcOnPremisesConnection extends Entity implements Parsable 
 {
@@ -109,17 +110,39 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
             'alternateResourceUrl' => fn(ParseNode $n) => $o->setAlternateResourceUrl($n->getStringValue()),
             'connectionType' => fn(ParseNode $n) => $o->setConnectionType($n->getEnumValue(CloudPcOnPremisesConnectionType::class)),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'healthCheckPaused' => fn(ParseNode $n) => $o->setHealthCheckPaused($n->getBooleanValue()),
             'healthCheckStatus' => fn(ParseNode $n) => $o->setHealthCheckStatus($n->getEnumValue(CloudPcOnPremisesConnectionStatus::class)),
             'healthCheckStatusDetail' => fn(ParseNode $n) => $o->setHealthCheckStatusDetail($n->getObjectValue([CloudPcOnPremisesConnectionStatusDetail::class, 'createFromDiscriminatorValue'])),
             'inUse' => fn(ParseNode $n) => $o->setInUse($n->getBooleanValue()),
+            'inUseByCloudPc' => fn(ParseNode $n) => $o->setInUseByCloudPc($n->getBooleanValue()),
             'organizationalUnit' => fn(ParseNode $n) => $o->setOrganizationalUnit($n->getStringValue()),
             'resourceGroupId' => fn(ParseNode $n) => $o->setResourceGroupId($n->getStringValue()),
+            'scopeIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setScopeIds($val);
+            },
             'subnetId' => fn(ParseNode $n) => $o->setSubnetId($n->getStringValue()),
             'subscriptionId' => fn(ParseNode $n) => $o->setSubscriptionId($n->getStringValue()),
             'subscriptionName' => fn(ParseNode $n) => $o->setSubscriptionName($n->getStringValue()),
             'virtualNetworkId' => fn(ParseNode $n) => $o->setVirtualNetworkId($n->getStringValue()),
             'virtualNetworkLocation' => fn(ParseNode $n) => $o->setVirtualNetworkLocation($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the healthCheckPaused property value. The healthCheckPaused property
+     * @return bool|null
+    */
+    public function getHealthCheckPaused(): ?bool {
+        $val = $this->getBackingStore()->get('healthCheckPaused');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'healthCheckPaused'");
     }
 
     /**
@@ -159,6 +182,18 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
+     * Gets the inUseByCloudPc property value. The inUseByCloudPc property
+     * @return bool|null
+    */
+    public function getInUseByCloudPc(): ?bool {
+        $val = $this->getBackingStore()->get('inUseByCloudPc');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inUseByCloudPc'");
+    }
+
+    /**
      * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.
      * @return string|null
     */
@@ -180,6 +215,20 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceGroupId'");
+    }
+
+    /**
+     * Gets the scopeIds property value. The scopeIds property
+     * @return array<string>|null
+    */
+    public function getScopeIds(): ?array {
+        $val = $this->getBackingStore()->get('scopeIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopeIds'");
     }
 
     /**
@@ -254,11 +303,14 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
         $writer->writeStringValue('alternateResourceUrl', $this->getAlternateResourceUrl());
         $writer->writeEnumValue('connectionType', $this->getConnectionType());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('healthCheckPaused', $this->getHealthCheckPaused());
         $writer->writeEnumValue('healthCheckStatus', $this->getHealthCheckStatus());
         $writer->writeObjectValue('healthCheckStatusDetail', $this->getHealthCheckStatusDetail());
         $writer->writeBooleanValue('inUse', $this->getInUse());
+        $writer->writeBooleanValue('inUseByCloudPc', $this->getInUseByCloudPc());
         $writer->writeStringValue('organizationalUnit', $this->getOrganizationalUnit());
         $writer->writeStringValue('resourceGroupId', $this->getResourceGroupId());
+        $writer->writeCollectionOfPrimitiveValues('scopeIds', $this->getScopeIds());
         $writer->writeStringValue('subnetId', $this->getSubnetId());
         $writer->writeStringValue('subscriptionId', $this->getSubscriptionId());
         $writer->writeStringValue('subscriptionName', $this->getSubscriptionName());
@@ -315,6 +367,14 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
+     * Sets the healthCheckPaused property value. The healthCheckPaused property
+     * @param bool|null $value Value to set for the healthCheckPaused property.
+    */
+    public function setHealthCheckPaused(?bool $value): void {
+        $this->getBackingStore()->set('healthCheckPaused', $value);
+    }
+
+    /**
      * Sets the healthCheckStatus property value. The healthCheckStatus property
      * @param CloudPcOnPremisesConnectionStatus|null $value Value to set for the healthCheckStatus property.
     */
@@ -339,6 +399,14 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
+     * Sets the inUseByCloudPc property value. The inUseByCloudPc property
+     * @param bool|null $value Value to set for the inUseByCloudPc property.
+    */
+    public function setInUseByCloudPc(?bool $value): void {
+        $this->getBackingStore()->set('inUseByCloudPc', $value);
+    }
+
+    /**
      * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.
      * @param string|null $value Value to set for the organizationalUnit property.
     */
@@ -352,6 +420,14 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     */
     public function setResourceGroupId(?string $value): void {
         $this->getBackingStore()->set('resourceGroupId', $value);
+    }
+
+    /**
+     * Sets the scopeIds property value. The scopeIds property
+     * @param array<string>|null $value Value to set for the scopeIds property.
+    */
+    public function setScopeIds(?array $value): void {
+        $this->getBackingStore()->set('scopeIds', $value);
     }
 
     /**

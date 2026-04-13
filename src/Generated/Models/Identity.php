@@ -50,6 +50,7 @@ class Identity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.provisioningServicePrincipal': return new ProvisioningServicePrincipal();
                 case '#microsoft.graph.provisioningSystem': return new ProvisioningSystem();
                 case '#microsoft.graph.servicePrincipalIdentity': return new ServicePrincipalIdentity();
+                case '#microsoft.graph.sharePointGroupIdentity': return new SharePointGroupIdentity();
                 case '#microsoft.graph.sharePointIdentity': return new SharePointIdentity();
                 case '#microsoft.graph.teamworkApplicationIdentity': return new TeamworkApplicationIdentity();
                 case '#microsoft.graph.teamworkConversationIdentity': return new TeamworkConversationIdentity();
