@@ -7,13 +7,14 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ConditionalAccessPolicy extends Entity implements Parsable 
+class ConditionalAccessPolicy extends PolicyDeletableItem implements Parsable 
 {
     /**
      * Instantiates a new ConditionalAccessPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->setOdataType('#microsoft.graph.conditionalAccessPolicy');
     }
 
     /**
@@ -92,6 +93,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'grantControls' => fn(ParseNode $n) => $o->setGrantControls($n->getObjectValue([ConditionalAccessGrantControls::class, 'createFromDiscriminatorValue'])),
+            'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
             'sessionControls' => fn(ParseNode $n) => $o->setSessionControls($n->getObjectValue([ConditionalAccessSessionControls::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ConditionalAccessPolicyState::class)),
@@ -109,6 +111,18 @@ class ConditionalAccessPolicy extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'grantControls'");
+    }
+
+    /**
+     * Gets the id property value. Specifies the identifier of a conditionalAccessPolicy object. Read-only.
+     * @return string|null
+    */
+    public function getId(): ?string {
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -170,6 +184,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('grantControls', $this->getGrantControls());
+        $writer->writeStringValue('id', $this->getId());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
         $writer->writeObjectValue('sessionControls', $this->getSessionControls());
         $writer->writeEnumValue('state', $this->getState());
@@ -214,6 +229,14 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     */
     public function setGrantControls(?ConditionalAccessGrantControls $value): void {
         $this->getBackingStore()->set('grantControls', $value);
+    }
+
+    /**
+     * Sets the id property value. Specifies the identifier of a conditionalAccessPolicy object. Read-only.
+     * @param string|null $value Value to set for the id property.
+    */
+    public function setId(?string $value): void {
+        $this->getBackingStore()->set('id', $value);
     }
 
     /**

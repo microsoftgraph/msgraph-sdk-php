@@ -84,7 +84,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of servicePrincipal objects.
+     * Retrieve a list of servicePrincipal objects. This API also returns agentIdentityBlueprintPrincipal objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalCollectionResponse|null>
      * @throws Exception
@@ -99,7 +99,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new servicePrincipal object.
+     * Create a new servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
@@ -115,7 +115,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve a list of servicePrincipal objects.
+     * Retrieve a list of servicePrincipal objects. This API also returns agentIdentityBlueprintPrincipal objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -136,7 +136,7 @@ class ServicePrincipalsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new servicePrincipal object.
+     * Create a new servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

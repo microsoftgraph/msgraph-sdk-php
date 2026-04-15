@@ -46,7 +46,7 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      * @param ExternalAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalAuthenticationMethod|null>
      * @throws Exception
@@ -93,7 +93,7 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the external authentication methods registered to a user for authentication using an external identity provider.
+     * Represents the external MFA registered to a user for authentication using an external identity provider.
      * @param ExternalAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -8,12 +8,14 @@ use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\AllMembers\AllMemb
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\EnabledApps\EnabledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\StartMigration\StartMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Tabs\TabsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Models\Channel;
@@ -57,6 +59,13 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.
+    */
+    public function enabledApps(): EnabledAppsRequestBuilder {
+        return new EnabledAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the filesFolder property of the microsoft.graph.channel entity.
     */
     public function filesFolder(): FilesFolderRequestBuilder {
@@ -96,6 +105,13 @@ class PrimaryChannelRequestBuilder extends BaseRequestBuilder
     */
     public function sharedWithTeams(): SharedWithTeamsRequestBuilder {
         return new SharedWithTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the startMigration method.
+    */
+    public function startMigration(): StartMigrationRequestBuilder {
+        return new StartMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

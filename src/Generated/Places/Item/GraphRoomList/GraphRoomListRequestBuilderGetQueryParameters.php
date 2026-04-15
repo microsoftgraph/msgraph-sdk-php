@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Places\Item\GraphRoomList;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the item of type microsoft.graph.place as microsoft.graph.roomList
+ * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
 */
 class GraphRoomListRequestBuilderGetQueryParameters 
 {

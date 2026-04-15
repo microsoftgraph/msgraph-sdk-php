@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesC
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item\RunHealthChecks\RunHealthChecksRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\Item\UpdateAdDomainPassword\UpdateAdDomainPasswordRequestBuilder;
 use Microsoft\Graph\Generated\Models\CloudPcOnPremisesConnection;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -22,6 +23,13 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
     */
     public function runHealthChecks(): RunHealthChecksRequestBuilder {
         return new RunHealthChecksRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the updateAdDomainPassword method.
+    */
+    public function updateAdDomainPassword(): UpdateAdDomainPasswordRequestBuilder {
+        return new UpdateAdDomainPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

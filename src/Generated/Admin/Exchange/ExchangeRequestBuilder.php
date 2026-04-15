@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Admin\Exchange;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\MailboxesRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Exchange\Tracing\TracingRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExchangeAdmin;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ExchangeRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the mailboxes property of the microsoft.graph.exchangeAdmin entity.
+    */
+    public function mailboxes(): MailboxesRequestBuilder {
+        return new MailboxesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the tracing property of the microsoft.graph.exchangeAdmin entity.
     */

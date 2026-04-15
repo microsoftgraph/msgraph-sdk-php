@@ -23,6 +23,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
      * @return ServicePrincipal
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ServicePrincipal {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.agentIdentity': return new AgentIdentity();
+                case '#microsoft.graph.agentIdentityBlueprintPrincipal': return new AgentIdentityBlueprintPrincipal();
+            }
+        }
         return new ServicePrincipal();
     }
 
@@ -209,6 +217,18 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @return string|null
+    */
+    public function getCreatedByAppId(): ?string {
+        $val = $this->getBackingStore()->get('createdByAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdByAppId'");
+    }
+
+    /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @return array<DirectoryObject>|null
     */
@@ -340,6 +360,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'appRoleAssignments' => fn(ParseNode $n) => $o->setAppRoleAssignments($n->getCollectionOfObjectValues([AppRoleAssignment::class, 'createFromDiscriminatorValue'])),
             'appRoles' => fn(ParseNode $n) => $o->setAppRoles($n->getCollectionOfObjectValues([AppRole::class, 'createFromDiscriminatorValue'])),
             'claimsMappingPolicies' => fn(ParseNode $n) => $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues([ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'])),
+            'createdByAppId' => fn(ParseNode $n) => $o->setCreatedByAppId($n->getStringValue()),
             'createdObjects' => fn(ParseNode $n) => $o->setCreatedObjects($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'customSecurityAttributes' => fn(ParseNode $n) => $o->setCustomSecurityAttributes($n->getObjectValue([CustomSecurityAttributeValue::class, 'createFromDiscriminatorValue'])),
             'delegatedPermissionClassifications' => fn(ParseNode $n) => $o->setDelegatedPermissionClassifications($n->getCollectionOfObjectValues([DelegatedPermissionClassification::class, 'createFromDiscriminatorValue'])),
@@ -351,6 +372,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'homepage' => fn(ParseNode $n) => $o->setHomepage($n->getStringValue()),
             'homeRealmDiscoveryPolicies' => fn(ParseNode $n) => $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues([HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'])),
             'info' => fn(ParseNode $n) => $o->setInfo($n->getObjectValue([InformationalUrl::class, 'createFromDiscriminatorValue'])),
+            'isDisabled' => fn(ParseNode $n) => $o->setIsDisabled($n->getBooleanValue()),
             'keyCredentials' => fn(ParseNode $n) => $o->setKeyCredentials($n->getCollectionOfObjectValues([KeyCredential::class, 'createFromDiscriminatorValue'])),
             'loginUrl' => fn(ParseNode $n) => $o->setLoginUrl($n->getStringValue()),
             'logoutUrl' => fn(ParseNode $n) => $o->setLogoutUrl($n->getStringValue()),
@@ -445,6 +467,18 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'info'");
+    }
+
+    /**
+     * Gets the isDisabled property value. The isDisabled property
+     * @return bool|null
+    */
+    public function getIsDisabled(): ?bool {
+        $val = $this->getBackingStore()->get('isDisabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDisabled'");
     }
 
     /**
@@ -821,6 +855,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('appRoleAssignments', $this->getAppRoleAssignments());
         $writer->writeCollectionOfObjectValues('appRoles', $this->getAppRoles());
         $writer->writeCollectionOfObjectValues('claimsMappingPolicies', $this->getClaimsMappingPolicies());
+        $writer->writeStringValue('createdByAppId', $this->getCreatedByAppId());
         $writer->writeCollectionOfObjectValues('createdObjects', $this->getCreatedObjects());
         $writer->writeObjectValue('customSecurityAttributes', $this->getCustomSecurityAttributes());
         $writer->writeCollectionOfObjectValues('delegatedPermissionClassifications', $this->getDelegatedPermissionClassifications());
@@ -832,6 +867,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
         $writer->writeStringValue('homepage', $this->getHomepage());
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->getHomeRealmDiscoveryPolicies());
         $writer->writeObjectValue('info', $this->getInfo());
+        $writer->writeBooleanValue('isDisabled', $this->getIsDisabled());
         $writer->writeCollectionOfObjectValues('keyCredentials', $this->getKeyCredentials());
         $writer->writeStringValue('loginUrl', $this->getLoginUrl());
         $writer->writeStringValue('logoutUrl', $this->getLogoutUrl());
@@ -974,6 +1010,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @param string|null $value Value to set for the createdByAppId property.
+    */
+    public function setCreatedByAppId(?string $value): void {
+        $this->getBackingStore()->set('createdByAppId', $value);
+    }
+
+    /**
      * Sets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @param array<DirectoryObject>|null $value Value to set for the createdObjects property.
     */
@@ -1059,6 +1103,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     */
     public function setInfo(?InformationalUrl $value): void {
         $this->getBackingStore()->set('info', $value);
+    }
+
+    /**
+     * Sets the isDisabled property value. The isDisabled property
+     * @param bool|null $value Value to set for the isDisabled property.
+    */
+    public function setIsDisabled(?bool $value): void {
+        $this->getBackingStore()->set('isDisabled', $value);
     }
 
     /**

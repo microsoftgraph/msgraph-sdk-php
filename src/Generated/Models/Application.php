@@ -25,6 +25,13 @@ class Application extends DirectoryObject implements Parsable
      * @return Application
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Application {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.agentIdentityBlueprint': return new AgentIdentityBlueprint();
+            }
+        }
         return new Application();
     }
 
@@ -128,6 +135,18 @@ class Application extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'certification'");
+    }
+
+    /**
+     * Gets the createdByAppId property value. The appId of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
+     * @return string|null
+    */
+    public function getCreatedByAppId(): ?string {
+        $val = $this->getBackingStore()->get('createdByAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdByAppId'");
     }
 
     /**
@@ -245,6 +264,7 @@ class Application extends DirectoryObject implements Parsable
             'appRoles' => fn(ParseNode $n) => $o->setAppRoles($n->getCollectionOfObjectValues([AppRole::class, 'createFromDiscriminatorValue'])),
             'authenticationBehaviors' => fn(ParseNode $n) => $o->setAuthenticationBehaviors($n->getObjectValue([AuthenticationBehaviors::class, 'createFromDiscriminatorValue'])),
             'certification' => fn(ParseNode $n) => $o->setCertification($n->getObjectValue([Certification::class, 'createFromDiscriminatorValue'])),
+            'createdByAppId' => fn(ParseNode $n) => $o->setCreatedByAppId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'createdOnBehalfOf' => fn(ParseNode $n) => $o->setCreatedOnBehalfOf($n->getObjectValue([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'defaultRedirectUri' => fn(ParseNode $n) => $o->setDefaultRedirectUri($n->getStringValue()),
@@ -265,6 +285,7 @@ class Application extends DirectoryObject implements Parsable
             },
             'info' => fn(ParseNode $n) => $o->setInfo($n->getObjectValue([InformationalUrl::class, 'createFromDiscriminatorValue'])),
             'isDeviceOnlyAuthSupported' => fn(ParseNode $n) => $o->setIsDeviceOnlyAuthSupported($n->getBooleanValue()),
+            'isDisabled' => fn(ParseNode $n) => $o->setIsDisabled($n->getBooleanValue()),
             'isFallbackPublicClient' => fn(ParseNode $n) => $o->setIsFallbackPublicClient($n->getBooleanValue()),
             'keyCredentials' => fn(ParseNode $n) => $o->setKeyCredentials($n->getCollectionOfObjectValues([KeyCredential::class, 'createFromDiscriminatorValue'])),
             'logo' => fn(ParseNode $n) => $o->setLogo($n->getBinaryContent()),
@@ -364,6 +385,18 @@ class Application extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isDeviceOnlyAuthSupported'");
+    }
+
+    /**
+     * Gets the isDisabled property value. The isDisabled property
+     * @return bool|null
+    */
+    public function getIsDisabled(): ?bool {
+        $val = $this->getBackingStore()->get('isDisabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDisabled'");
     }
 
     /**
@@ -718,6 +751,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('appRoles', $this->getAppRoles());
         $writer->writeObjectValue('authenticationBehaviors', $this->getAuthenticationBehaviors());
         $writer->writeObjectValue('certification', $this->getCertification());
+        $writer->writeStringValue('createdByAppId', $this->getCreatedByAppId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('createdOnBehalfOf', $this->getCreatedOnBehalfOf());
         $writer->writeStringValue('defaultRedirectUri', $this->getDefaultRedirectUri());
@@ -731,6 +765,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeCollectionOfPrimitiveValues('identifierUris', $this->getIdentifierUris());
         $writer->writeObjectValue('info', $this->getInfo());
         $writer->writeBooleanValue('isDeviceOnlyAuthSupported', $this->getIsDeviceOnlyAuthSupported());
+        $writer->writeBooleanValue('isDisabled', $this->getIsDisabled());
         $writer->writeBooleanValue('isFallbackPublicClient', $this->getIsFallbackPublicClient());
         $writer->writeCollectionOfObjectValues('keyCredentials', $this->getKeyCredentials());
         $writer->writeBinaryContent('logo', $this->getLogo());
@@ -822,6 +857,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setCertification(?Certification $value): void {
         $this->getBackingStore()->set('certification', $value);
+    }
+
+    /**
+     * Sets the createdByAppId property value. The appId of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
+     * @param string|null $value Value to set for the createdByAppId property.
+    */
+    public function setCreatedByAppId(?string $value): void {
+        $this->getBackingStore()->set('createdByAppId', $value);
     }
 
     /**
@@ -926,6 +969,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setIsDeviceOnlyAuthSupported(?bool $value): void {
         $this->getBackingStore()->set('isDeviceOnlyAuthSupported', $value);
+    }
+
+    /**
+     * Sets the isDisabled property value. The isDisabled property
+     * @param bool|null $value Value to set for the isDisabled property.
+    */
+    public function setIsDisabled(?bool $value): void {
+        $this->getBackingStore()->set('isDisabled', $value);
     }
 
     /**

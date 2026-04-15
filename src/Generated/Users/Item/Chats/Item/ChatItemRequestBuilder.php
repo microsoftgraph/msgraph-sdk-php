@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\CompleteMigration\CompleteMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\HideForUser\HideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
@@ -17,6 +18,7 @@ use Microsoft\Graph\Generated\Users\Item\Chats\Item\PermissionGrants\PermissionG
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\RemoveAllAccessForUser\RemoveAllAccessForUserRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\StartMigration\StartMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -29,6 +31,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ChatItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the completeMigration method.
+    */
+    public function completeMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the hideForUser method.
     */
@@ -104,6 +113,13 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     */
     public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
         return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the startMigration method.
+    */
+    public function startMigration(): StartMigrationRequestBuilder {
+        return new StartMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -76,6 +76,8 @@ class CloudPcDeviceImage extends Entity implements Parsable
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'osBuildNumber' => fn(ParseNode $n) => $o->setOsBuildNumber($n->getStringValue()),
             'osStatus' => fn(ParseNode $n) => $o->setOsStatus($n->getEnumValue(CloudPcDeviceImageOsStatus::class)),
+            'osVersionNumber' => fn(ParseNode $n) => $o->setOsVersionNumber($n->getStringValue()),
+            'sizeInGB' => fn(ParseNode $n) => $o->setSizeInGB($n->getIntegerValue()),
             'sourceImageResourceId' => fn(ParseNode $n) => $o->setSourceImageResourceId($n->getStringValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(CloudPcDeviceImageStatus::class)),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getStringValue()),
@@ -131,6 +133,30 @@ class CloudPcDeviceImage extends Entity implements Parsable
     }
 
     /**
+     * Gets the osVersionNumber property value. The operating system version of this image. For example, 10.0.22000.296. Read-only.
+     * @return string|null
+    */
+    public function getOsVersionNumber(): ?string {
+        $val = $this->getBackingStore()->get('osVersionNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osVersionNumber'");
+    }
+
+    /**
+     * Gets the sizeInGB property value. The size of the image in GB. For example, 64. Read-only.
+     * @return int|null
+    */
+    public function getSizeInGB(): ?int {
+        $val = $this->getBackingStore()->get('sizeInGB');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sizeInGB'");
+    }
+
+    /**
      * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
      * @return string|null
     */
@@ -179,6 +205,8 @@ class CloudPcDeviceImage extends Entity implements Parsable
         $writer->writeStringValue('operatingSystem', $this->getOperatingSystem());
         $writer->writeStringValue('osBuildNumber', $this->getOsBuildNumber());
         $writer->writeEnumValue('osStatus', $this->getOsStatus());
+        $writer->writeStringValue('osVersionNumber', $this->getOsVersionNumber());
+        $writer->writeIntegerValue('sizeInGB', $this->getSizeInGB());
         $writer->writeStringValue('sourceImageResourceId', $this->getSourceImageResourceId());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('version', $this->getVersion());
@@ -238,6 +266,22 @@ class CloudPcDeviceImage extends Entity implements Parsable
     */
     public function setOsStatus(?CloudPcDeviceImageOsStatus $value): void {
         $this->getBackingStore()->set('osStatus', $value);
+    }
+
+    /**
+     * Sets the osVersionNumber property value. The operating system version of this image. For example, 10.0.22000.296. Read-only.
+     * @param string|null $value Value to set for the osVersionNumber property.
+    */
+    public function setOsVersionNumber(?string $value): void {
+        $this->getBackingStore()->set('osVersionNumber', $value);
+    }
+
+    /**
+     * Sets the sizeInGB property value. The size of the image in GB. For example, 64. Read-only.
+     * @param int|null $value Value to set for the sizeInGB property.
+    */
+    public function setSizeInGB(?int $value): void {
+        $this->getBackingStore()->set('sizeInGB', $value);
     }
 
     /**

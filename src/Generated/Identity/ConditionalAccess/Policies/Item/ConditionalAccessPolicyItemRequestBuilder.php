@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\Item;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\Policies\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConditionalAccessPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -16,6 +17,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ConditionalAccessPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
