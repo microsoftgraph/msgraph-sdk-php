@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.0.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.56.0...v3.0.0) (2026-04-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop PHP 7.4–8.1 support to address insecure dependencies
+
+### Features
+
+* **generation:** update request builders and models ([a19c250](https://github.com/microsoftgraph/msgraph-sdk-php/commit/a19c250cbee0918530a8c32d3122b461ff5567bb))
+* **generation:** update request builders and models ([0c36744](https://github.com/microsoftgraph/msgraph-sdk-php/commit/0c36744145568ca75375e6e976d0d4b70a29d8b1))
+
+
+### Bug Fixes
+
+* drop PHP 7.4–8.1 support to address insecure dependencies ([0a966ba](https://github.com/microsoftgraph/msgraph-sdk-php/commit/0a966bab0461bd90e2c0f5c35da35d9da6e7079b))
+
 ## [2.56.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v2.55.0...v2.56.0) (2026-02-05)
 
 
