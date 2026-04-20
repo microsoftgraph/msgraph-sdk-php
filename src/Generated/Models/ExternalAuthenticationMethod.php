@@ -38,7 +38,7 @@ class ExternalAuthenticationMethod extends AuthenticationMethod implements Parsa
     }
 
     /**
-     * Gets the displayName property value. Custom name given to the registered external authentication method.
+     * Gets the displayName property value. Custom name given to the registered external MFA.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -80,7 +80,7 @@ class ExternalAuthenticationMethod extends AuthenticationMethod implements Parsa
     }
 
     /**
-     * Sets the displayName property value. Custom name given to the registered external authentication method.
+     * Sets the displayName property value. Custom name given to the registered external MFA.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

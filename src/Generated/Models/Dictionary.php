@@ -37,6 +37,7 @@ class Dictionary implements AdditionalDataHolder, BackedModel, Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.customMetadataDictionary': return new CustomMetadataDictionary();
                 case '#microsoft.graph.fileStorageContainerCustomPropertyDictionary': return new FileStorageContainerCustomPropertyDictionary();
+                case '#microsoft.graph.openComplexDictionaryType': return new OpenComplexDictionaryType();
                 case '#microsoft.graph.resultTemplateDictionary': return new ResultTemplateDictionary();
             }
         }

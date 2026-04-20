@@ -15,4 +15,6 @@ class PropertyType extends Enum {
     public const DOUBLE_COLLECTION = "doubleCollection";
     public const DATE_TIME_COLLECTION = "dateTimeCollection";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const PRINCIPAL = "principal";
+    public const PRINCIPAL_COLLECTION = "principalCollection";
 }

@@ -29,6 +29,7 @@ class CustomAuthenticationExtension extends CustomCalloutExtension implements Pa
                 case '#microsoft.graph.onAttributeCollectionStartCustomExtension': return new OnAttributeCollectionStartCustomExtension();
                 case '#microsoft.graph.onAttributeCollectionSubmitCustomExtension': return new OnAttributeCollectionSubmitCustomExtension();
                 case '#microsoft.graph.onOtpSendCustomExtension': return new OnOtpSendCustomExtension();
+                case '#microsoft.graph.onPasswordSubmitCustomExtension': return new OnPasswordSubmitCustomExtension();
                 case '#microsoft.graph.onTokenIssuanceStartCustomExtension': return new OnTokenIssuanceStartCustomExtension();
             }
         }

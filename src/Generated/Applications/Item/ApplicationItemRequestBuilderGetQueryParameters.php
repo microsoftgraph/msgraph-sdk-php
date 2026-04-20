@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the properties and relationships of an application object.
+ * Get the properties and relationships of an application object. This API can be used to get agentIdentityBlueprint objects as well by their ID.
 */
 class ApplicationItemRequestBuilderGetQueryParameters 
 {

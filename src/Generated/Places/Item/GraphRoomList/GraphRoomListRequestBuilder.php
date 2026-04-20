@@ -55,10 +55,11 @@ class GraphRoomListRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.roomList
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      * @param GraphRoomListRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoomList|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/place-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GraphRoomListRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,7 +70,7 @@ class GraphRoomListRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the item of type microsoft.graph.place as microsoft.graph.roomList
+     * Read the properties of a place object specified by its ID. The place object can be one of the following types: The listed resources are derived from the place object.
      * @param GraphRoomListRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -6,6 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\People\ItemInsights\ItemInsightsRequestBuilder;
 use Microsoft\Graph\Generated\Admin\People\ProfileCardProperties\ProfileCardPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Admin\People\ProfilePropertySettings\ProfilePropertySettingsRequestBuilder;
+use Microsoft\Graph\Generated\Admin\People\ProfileSources\ProfileSourcesRequestBuilder;
+use Microsoft\Graph\Generated\Admin\People\ProfileSourcesWithSourceId\ProfileSourcesWithSourceIdRequestBuilder;
 use Microsoft\Graph\Generated\Admin\People\Pronouns\PronounsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PeopleAdminSettings;
@@ -31,6 +34,20 @@ class PeopleRequestBuilder extends BaseRequestBuilder
     */
     public function profileCardProperties(): ProfileCardPropertiesRequestBuilder {
         return new ProfileCardPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the profilePropertySettings property of the microsoft.graph.peopleAdminSettings entity.
+    */
+    public function profilePropertySettings(): ProfilePropertySettingsRequestBuilder {
+        return new ProfilePropertySettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the profileSources property of the microsoft.graph.peopleAdminSettings entity.
+    */
+    public function profileSources(): ProfileSourcesRequestBuilder {
+        return new ProfileSourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -67,6 +84,15 @@ class PeopleRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [PeopleAdminSettings::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to manage the profileSources property of the microsoft.graph.peopleAdminSettings entity.
+     * @param string $sourceId Alternate key of profileSource
+     * @return ProfileSourcesWithSourceIdRequestBuilder
+    */
+    public function profileSourcesWithSourceId(string $sourceId): ProfileSourcesWithSourceIdRequestBuilder {
+        return new ProfileSourcesWithSourceIdRequestBuilder($this->pathParameters, $this->requestAdapter, $sourceId);
     }
 
     /**

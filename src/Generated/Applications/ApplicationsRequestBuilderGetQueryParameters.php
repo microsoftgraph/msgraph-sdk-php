@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the list of applications in this organization.
+ * Get the list of applications in this organization. This API also returns agentIdentityBlueprint objects, which are identified by the @odata.type property of #microsoft.graph.agentIdentityBlueprint.
 */
 class ApplicationsRequestBuilderGetQueryParameters 
 {

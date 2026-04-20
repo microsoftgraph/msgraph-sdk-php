@@ -42,6 +42,18 @@ class WindowsProtectionState extends Entity implements Parsable
     }
 
     /**
+     * Gets the controlledConfigurationEnabled property value. When TRUE indicates the Windows Defender controlled configuration feature is enabled, when FALSE indicates the Windows Defender controlled configuration feature is not enabled. Defaults to setting on client device.
+     * @return bool|null
+    */
+    public function getControlledConfigurationEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('controlledConfigurationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'controlledConfigurationEnabled'");
+    }
+
+    /**
      * Gets the detectedMalwareState property value. Device malware list
      * @return array<WindowsDeviceMalwareState>|null
     */
@@ -87,6 +99,7 @@ class WindowsProtectionState extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'antiMalwareVersion' => fn(ParseNode $n) => $o->setAntiMalwareVersion($n->getStringValue()),
+            'controlledConfigurationEnabled' => fn(ParseNode $n) => $o->setControlledConfigurationEnabled($n->getBooleanValue()),
             'detectedMalwareState' => fn(ParseNode $n) => $o->setDetectedMalwareState($n->getCollectionOfObjectValues([WindowsDeviceMalwareState::class, 'createFromDiscriminatorValue'])),
             'deviceState' => fn(ParseNode $n) => $o->setDeviceState($n->getEnumValue(WindowsDeviceHealthState::class)),
             'engineVersion' => fn(ParseNode $n) => $o->setEngineVersion($n->getStringValue()),
@@ -321,6 +334,7 @@ class WindowsProtectionState extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('antiMalwareVersion', $this->getAntiMalwareVersion());
+        $writer->writeBooleanValue('controlledConfigurationEnabled', $this->getControlledConfigurationEnabled());
         $writer->writeCollectionOfObjectValues('detectedMalwareState', $this->getDetectedMalwareState());
         $writer->writeEnumValue('deviceState', $this->getDeviceState());
         $writer->writeStringValue('engineVersion', $this->getEngineVersion());
@@ -349,6 +363,14 @@ class WindowsProtectionState extends Entity implements Parsable
     */
     public function setAntiMalwareVersion(?string $value): void {
         $this->getBackingStore()->set('antiMalwareVersion', $value);
+    }
+
+    /**
+     * Sets the controlledConfigurationEnabled property value. When TRUE indicates the Windows Defender controlled configuration feature is enabled, when FALSE indicates the Windows Defender controlled configuration feature is not enabled. Defaults to setting on client device.
+     * @param bool|null $value Value to set for the controlledConfigurationEnabled property.
+    */
+    public function setControlledConfigurationEnabled(?bool $value): void {
+        $this->getBackingStore()->set('controlledConfigurationEnabled', $value);
     }
 
     /**

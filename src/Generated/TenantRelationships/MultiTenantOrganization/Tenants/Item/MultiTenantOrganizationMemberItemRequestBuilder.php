@@ -61,11 +61,12 @@ class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tenants in tenantRelationships
+     * Update the properties of a tenant in a multitenant organization. Only owner tenants can call this API.
      * @param MultiTenantOrganizationMember $body The request body
      * @param MultiTenantOrganizationMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantOrganizationMember|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/multitenantorganizationmember-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MultiTenantOrganizationMember $body, ?MultiTenantOrganizationMemberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -115,7 +116,7 @@ class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tenants in tenantRelationships
+     * Update the properties of a tenant in a multitenant organization. Only owner tenants can call this API.
      * @param MultiTenantOrganizationMember $body The request body
      * @param MultiTenantOrganizationMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
