@@ -39,7 +39,7 @@ class ConfigurationMonitoringResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Returned only on $select.
+     * Gets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Requires $select to retrieve.
      * @return array<ErrorDetail>|null
     */
     public function getErrorDetails(): ?array {
@@ -147,7 +147,7 @@ class ConfigurationMonitoringResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Returned only on $select.
+     * Sets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity. Requires $select to retrieve.
      * @param array<ErrorDetail>|null $value Value to set for the errorDetails property.
     */
     public function setErrorDetails(?array $value): void {

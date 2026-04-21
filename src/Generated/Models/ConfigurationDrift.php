@@ -39,7 +39,7 @@ class ConfigurationDrift extends Entity implements Parsable
     }
 
     /**
-     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Returned only on $select.
+     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Requires $select to retrieve.
      * @return array<DriftedProperty>|null
     */
     public function getDriftedProperties(): ?array {
@@ -161,7 +161,7 @@ class ConfigurationDrift extends Entity implements Parsable
     }
 
     /**
-     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Returned only on $select.
+     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Requires $select to retrieve.
      * @param array<DriftedProperty>|null $value Value to set for the driftedProperties property.
     */
     public function setDriftedProperties(?array $value): void {

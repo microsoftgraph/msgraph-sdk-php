@@ -289,6 +289,14 @@ class Application extends DirectoryObject implements Parsable
             'isFallbackPublicClient' => fn(ParseNode $n) => $o->setIsFallbackPublicClient($n->getBooleanValue()),
             'keyCredentials' => fn(ParseNode $n) => $o->setKeyCredentials($n->getCollectionOfObjectValues([KeyCredential::class, 'createFromDiscriminatorValue'])),
             'logo' => fn(ParseNode $n) => $o->setLogo($n->getBinaryContent()),
+            'managerApplications' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setManagerApplications($val);
+            },
             'nativeAuthenticationApisEnabled' => fn(ParseNode $n) => $o->setNativeAuthenticationApisEnabled($n->getEnumValue(NativeAuthenticationApisEnabled::class)),
             'notes' => fn(ParseNode $n) => $o->setNotes($n->getStringValue()),
             'oauth2RequirePostResponse' => fn(ParseNode $n) => $o->setOauth2RequirePostResponse($n->getBooleanValue()),
@@ -435,6 +443,20 @@ class Application extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'logo'");
+    }
+
+    /**
+     * Gets the managerApplications property value. A collection of application IDs for Microsoft first-party applications designated as managers. Manager applications can create service principals, agent identities, and agent users for managed agent blueprints. Limited to a maximum of 10 entries. Not nullable. Only supported on agentIdentityBlueprint objects; attempts to set this property on non-agent-blueprint applications return an error. Not returned by default; must be explicitly requested via $select.
+     * @return array<string>|null
+    */
+    public function getManagerApplications(): ?array {
+        $val = $this->getBackingStore()->get('managerApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managerApplications'");
     }
 
     /**
@@ -769,6 +791,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeBooleanValue('isFallbackPublicClient', $this->getIsFallbackPublicClient());
         $writer->writeCollectionOfObjectValues('keyCredentials', $this->getKeyCredentials());
         $writer->writeBinaryContent('logo', $this->getLogo());
+        $writer->writeCollectionOfPrimitiveValues('managerApplications', $this->getManagerApplications());
         $writer->writeEnumValue('nativeAuthenticationApisEnabled', $this->getNativeAuthenticationApisEnabled());
         $writer->writeStringValue('notes', $this->getNotes());
         $writer->writeBooleanValue('oauth2RequirePostResponse', $this->getOauth2RequirePostResponse());
@@ -1001,6 +1024,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setLogo(?StreamInterface $value): void {
         $this->getBackingStore()->set('logo', $value);
+    }
+
+    /**
+     * Sets the managerApplications property value. A collection of application IDs for Microsoft first-party applications designated as managers. Manager applications can create service principals, agent identities, and agent users for managed agent blueprints. Limited to a maximum of 10 entries. Not nullable. Only supported on agentIdentityBlueprint objects; attempts to set this property on non-agent-blueprint applications return an error. Not returned by default; must be explicitly requested via $select.
+     * @param array<string>|null $value Value to set for the managerApplications property.
+    */
+    public function setManagerApplications(?array $value): void {
+        $this->getBackingStore()->set('managerApplications', $value);
     }
 
     /**

@@ -56,7 +56,7 @@ class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the costCenter property value. The cost center associated with the user. Returned only on $select. Supports $filter.
+     * Gets the costCenter property value. The cost center associated with the user. Requires $select to retrieve. Supports $filter.
      * @return string|null
     */
     public function getCostCenter(): ?string {
@@ -68,7 +68,7 @@ class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the division property value. The name of the division in which the user works. Returned only on $select. Supports $filter.
+     * Gets the division property value. The name of the division in which the user works. Requires $select to retrieve. Supports $filter.
      * @return string|null
     */
     public function getDivision(): ?string {
@@ -132,7 +132,7 @@ class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the costCenter property value. The cost center associated with the user. Returned only on $select. Supports $filter.
+     * Sets the costCenter property value. The cost center associated with the user. Requires $select to retrieve. Supports $filter.
      * @param string|null $value Value to set for the costCenter property.
     */
     public function setCostCenter(?string $value): void {
@@ -140,7 +140,7 @@ class EmployeeOrgData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the division property value. The name of the division in which the user works. Returned only on $select. Supports $filter.
+     * Sets the division property value. The name of the division in which the user works. Requires $select to retrieve. Supports $filter.
      * @param string|null $value Value to set for the division property.
     */
     public function setDivision(?string $value): void {

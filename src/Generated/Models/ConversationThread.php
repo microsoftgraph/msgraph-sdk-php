@@ -27,7 +27,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Gets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
+     * Gets the ccRecipients property value. The Cc: recipients for the thread. Requires $select to retrieve.
      * @return array<Recipient>|null
     */
     public function getCcRecipients(): ?array {
@@ -141,7 +141,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Gets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
+     * Gets the toRecipients property value. The To: recipients for the thread. Requires $select to retrieve.
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
@@ -186,7 +186,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Sets the ccRecipients property value. The Cc: recipients for the thread. Returned only on $select.
+     * Sets the ccRecipients property value. The Cc: recipients for the thread. Requires $select to retrieve.
      * @param array<Recipient>|null $value Value to set for the ccRecipients property.
     */
     public function setCcRecipients(?array $value): void {
@@ -242,7 +242,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Sets the toRecipients property value. The To: recipients for the thread. Returned only on $select.
+     * Sets the toRecipients property value. The To: recipients for the thread. Requires $select to retrieve.
      * @param array<Recipient>|null $value Value to set for the toRecipients property.
     */
     public function setToRecipients(?array $value): void {

@@ -249,6 +249,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.appRoleAssignment': return new AppRoleAssignment();
                 case '#microsoft.graph.approval': return new Approval();
                 case '#microsoft.graph.approvalStage': return new ApprovalStage();
+                case '#microsoft.graph.approvedClientApp': return new ApprovedClientApp();
                 case '#microsoft.graph.appScope': return new AppScope();
                 case '#microsoft.graph.arkoseFraudProtectionProvider': return new ArkoseFraudProtectionProvider();
                 case '#microsoft.graph.associatedTeamInfo': return new AssociatedTeamInfo();

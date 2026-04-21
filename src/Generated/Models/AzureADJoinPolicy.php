@@ -76,6 +76,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'allowedToJoin' => fn(ParseNode $n) => $o->setAllowedToJoin($n->getObjectValue([DeviceRegistrationMembership::class, 'createFromDiscriminatorValue'])),
             'isAdminConfigurable' => fn(ParseNode $n) => $o->setIsAdminConfigurable($n->getBooleanValue()),
+            'localAdmins' => fn(ParseNode $n) => $o->setLocalAdmins($n->getObjectValue([LocalAdminSettings::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -90,6 +91,18 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isAdminConfigurable'");
+    }
+
+    /**
+     * Gets the localAdmins property value. The localAdmins property
+     * @return LocalAdminSettings|null
+    */
+    public function getLocalAdmins(): ?LocalAdminSettings {
+        $val = $this->getBackingStore()->get('localAdmins');
+        if (is_null($val) || $val instanceof LocalAdminSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'localAdmins'");
     }
 
     /**
@@ -111,6 +124,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('allowedToJoin', $this->getAllowedToJoin());
         $writer->writeBooleanValue('isAdminConfigurable', $this->getIsAdminConfigurable());
+        $writer->writeObjectValue('localAdmins', $this->getLocalAdmins());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -145,6 +159,14 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setIsAdminConfigurable(?bool $value): void {
         $this->getBackingStore()->set('isAdminConfigurable', $value);
+    }
+
+    /**
+     * Sets the localAdmins property value. The localAdmins property
+     * @param LocalAdminSettings|null $value Value to set for the localAdmins property.
+    */
+    public function setLocalAdmins(?LocalAdminSettings $value): void {
+        $this->getBackingStore()->set('localAdmins', $value);
     }
 
     /**

@@ -87,7 +87,7 @@ class ConfigurationSnapshotJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the errorDetails property value. Details of errors related to the reasons why the snapshot can't complete. Returned only on $select.
+     * Gets the errorDetails property value. Details of errors related to the reasons why the snapshot can't complete. Requires $select to retrieve.
      * @return array<string>|null
     */
     public function getErrorDetails(): ?array {
@@ -135,7 +135,7 @@ class ConfigurationSnapshotJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the resourceLocation property value. The URL at which the snapshot file resides. Returned only on $select.
+     * Gets the resourceLocation property value. The URL at which the snapshot file resides. Requires $select to retrieve.
      * @return string|null
     */
     public function getResourceLocation(): ?string {
@@ -147,7 +147,7 @@ class ConfigurationSnapshotJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Returned only on $select.
+     * Gets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Requires $select to retrieve.
      * @return array<string>|null
     */
     public function getResources(): ?array {
@@ -238,7 +238,7 @@ class ConfigurationSnapshotJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the errorDetails property value. Details of errors related to the reasons why the snapshot can't complete. Returned only on $select.
+     * Sets the errorDetails property value. Details of errors related to the reasons why the snapshot can't complete. Requires $select to retrieve.
      * @param array<string>|null $value Value to set for the errorDetails property.
     */
     public function setErrorDetails(?array $value): void {
@@ -246,7 +246,7 @@ class ConfigurationSnapshotJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the resourceLocation property value. The URL at which the snapshot file resides. Returned only on $select.
+     * Sets the resourceLocation property value. The URL at which the snapshot file resides. Requires $select to retrieve.
      * @param string|null $value Value to set for the resourceLocation property.
     */
     public function setResourceLocation(?string $value): void {
@@ -254,7 +254,7 @@ class ConfigurationSnapshotJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Returned only on $select.
+     * Sets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Requires $select to retrieve.
      * @param array<string>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {
