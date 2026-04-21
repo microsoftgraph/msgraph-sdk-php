@@ -113,7 +113,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     * Gets the key property value. The certificate's raw data in byte array converted to Base64 string. Requires $select to retrieve; only available for single object requests (GET /applications/{applicationId}?$select=keyCredentials or GET /servicePrincipals/{servicePrincipalId}?$select=keyCredentials); otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -242,7 +242,7 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
+     * Sets the key property value. The certificate's raw data in byte array converted to Base64 string. Requires $select to retrieve; only available for single object requests (GET /applications/{applicationId}?$select=keyCredentials or GET /servicePrincipals/{servicePrincipalId}?$select=keyCredentials); otherwise, it's always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.
      * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {

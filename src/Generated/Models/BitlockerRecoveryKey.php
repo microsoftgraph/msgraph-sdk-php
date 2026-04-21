@@ -64,7 +64,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
     }
 
     /**
-     * Gets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
+     * Gets the key property value. The BitLocker recovery key. Requires $select to retrieve. Not nullable.
      * @return string|null
     */
     public function getKey(): ?string {
@@ -116,7 +116,7 @@ class BitlockerRecoveryKey extends Entity implements Parsable
     }
 
     /**
-     * Sets the key property value. The BitLocker recovery key. Returned only on $select. Not nullable.
+     * Sets the key property value. The BitLocker recovery key. Requires $select to retrieve. Not nullable.
      * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {

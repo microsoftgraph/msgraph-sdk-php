@@ -17,4 +17,5 @@ class AccessPackageRequestType extends Enum {
     public const SYSTEM_REMOVE = "systemRemove";
     public const ON_BEHALF_ADD = "onBehalfAdd";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const APPROVER_REMOVE = "approverRemove";
 }

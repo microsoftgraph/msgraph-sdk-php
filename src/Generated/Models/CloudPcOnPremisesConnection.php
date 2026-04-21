@@ -62,7 +62,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
+     * Gets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Requires $select to retrieve.
      * @return string|null
     */
     public function getAlternateResourceUrl(): ?string {
@@ -158,7 +158,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the healthCheckStatusDetail property value. Indicates the results of health checks performed on the on-premises connection. Read-only. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Gets the healthCheckStatusDetail property value. Indicates the results of health checks performed on the on-premises connection. Read-only. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @return CloudPcOnPremisesConnectionStatusDetail|null
     */
     public function getHealthCheckStatusDetail(): ?CloudPcOnPremisesConnectionStatusDetail {
@@ -170,7 +170,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @return bool|null
     */
     public function getInUse(): ?bool {
@@ -343,7 +343,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
+     * Sets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Requires $select to retrieve.
      * @param string|null $value Value to set for the alternateResourceUrl property.
     */
     public function setAlternateResourceUrl(?string $value): void {
@@ -383,7 +383,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the healthCheckStatusDetail property value. Indicates the results of health checks performed on the on-premises connection. Read-only. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Sets the healthCheckStatusDetail property value. Indicates the results of health checks performed on the on-premises connection. Read-only. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @param CloudPcOnPremisesConnectionStatusDetail|null $value Value to set for the healthCheckStatusDetail property.
     */
     public function setHealthCheckStatusDetail(?CloudPcOnPremisesConnectionStatusDetail $value): void {
@@ -391,7 +391,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @param bool|null $value Value to set for the inUse property.
     */
     public function setInUse(?bool $value): void {

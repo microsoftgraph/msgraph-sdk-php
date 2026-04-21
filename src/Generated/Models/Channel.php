@@ -118,6 +118,7 @@ class Channel extends Entity implements Parsable
             'filesFolder' => fn(ParseNode $n) => $o->setFilesFolder($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
             'isFavoriteByDefault' => fn(ParseNode $n) => $o->setIsFavoriteByDefault($n->getBooleanValue()),
+            'layoutType' => fn(ParseNode $n) => $o->setLayoutType($n->getEnumValue(ChannelLayoutType::class)),
             'members' => fn(ParseNode $n) => $o->setMembers($n->getCollectionOfObjectValues([ConversationMember::class, 'createFromDiscriminatorValue'])),
             'membershipType' => fn(ParseNode $n) => $o->setMembershipType($n->getEnumValue(ChannelMembershipType::class)),
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([ChatMessage::class, 'createFromDiscriminatorValue'])),
@@ -165,6 +166,18 @@ class Channel extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isFavoriteByDefault'");
+    }
+
+    /**
+     * Gets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional post‑reply conversation format, and channels with the chat layout provide a chat‑like threading experience similar to group chats.
+     * @return ChannelLayoutType|null
+    */
+    public function getLayoutType(): ?ChannelLayoutType {
+        $val = $this->getBackingStore()->get('layoutType');
+        if (is_null($val) || $val instanceof ChannelLayoutType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'layoutType'");
     }
 
     /**
@@ -310,6 +323,7 @@ class Channel extends Entity implements Parsable
         $writer->writeObjectValue('filesFolder', $this->getFilesFolder());
         $writer->writeBooleanValue('isArchived', $this->getIsArchived());
         $writer->writeBooleanValue('isFavoriteByDefault', $this->getIsFavoriteByDefault());
+        $writer->writeEnumValue('layoutType', $this->getLayoutType());
         $writer->writeCollectionOfObjectValues('members', $this->getMembers());
         $writer->writeEnumValue('membershipType', $this->getMembershipType());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
@@ -392,6 +406,14 @@ class Channel extends Entity implements Parsable
     */
     public function setIsFavoriteByDefault(?bool $value): void {
         $this->getBackingStore()->set('isFavoriteByDefault', $value);
+    }
+
+    /**
+     * Sets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional post‑reply conversation format, and channels with the chat layout provide a chat‑like threading experience similar to group chats.
+     * @param ChannelLayoutType|null $value Value to set for the layoutType property.
+    */
+    public function setLayoutType(?ChannelLayoutType $value): void {
+        $this->getBackingStore()->set('layoutType', $value);
     }
 
     /**

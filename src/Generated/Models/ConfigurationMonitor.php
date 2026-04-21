@@ -109,7 +109,7 @@ class ConfigurationMonitor extends Entity implements Parsable
     }
 
     /**
-     * Gets the inactivationReason property value. The reason for the monitor's inactivation. Returned only on $select.
+     * Gets the inactivationReason property value. The reason for the monitor's inactivation. Requires $select to retrieve.
      * @return string|null
     */
     public function getInactivationReason(): ?string {
@@ -169,7 +169,7 @@ class ConfigurationMonitor extends Entity implements Parsable
     }
 
     /**
-     * Gets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Returned only on $select.
+     * Gets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Requires $select to retrieve.
      * @return OpenComplexDictionaryType|null
     */
     public function getParameters(): ?OpenComplexDictionaryType {
@@ -261,7 +261,7 @@ class ConfigurationMonitor extends Entity implements Parsable
     }
 
     /**
-     * Sets the inactivationReason property value. The reason for the monitor's inactivation. Returned only on $select.
+     * Sets the inactivationReason property value. The reason for the monitor's inactivation. Requires $select to retrieve.
      * @param string|null $value Value to set for the inactivationReason property.
     */
     public function setInactivationReason(?string $value): void {
@@ -301,7 +301,7 @@ class ConfigurationMonitor extends Entity implements Parsable
     }
 
     /**
-     * Sets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Returned only on $select.
+     * Sets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline. Requires $select to retrieve.
      * @param OpenComplexDictionaryType|null $value Value to set for the parameters property.
     */
     public function setParameters(?OpenComplexDictionaryType $value): void {
