@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SharePointRestoreSession;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointRestoreSessions\Item\GranularSiteRestoreArtifacts\GranularSiteRestoreArtifactsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointRestoreSessions\Item\SiteRestoreArtifacts\SiteRestoreArtifactsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointRestoreSessions\Item\SiteRestoreArtifactsBulkAdditionRequests\SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the granularSiteRestoreArtifacts property of the microsoft.graph.sharePointRestoreSession entity.
+    */
+    public function granularSiteRestoreArtifacts(): GranularSiteRestoreArtifactsRequestBuilder {
+        return new GranularSiteRestoreArtifactsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the siteRestoreArtifacts property of the microsoft.graph.sharePointRestoreSession entity.
     */

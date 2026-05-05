@@ -67,10 +67,11 @@ class DirectReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
+     * Get an agentUser's direct reports. Returns the users and contacts for whom this agent user is assigned as manager.
      * @param DirectReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryObjectCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/agentuser-list-directreports?view=graph-rest-1.0 Find more info here
     */
     public function get(?DirectReportsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class DirectReportsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
+     * Get an agentUser's direct reports. Returns the users and contacts for whom this agent user is assigned as manager.
      * @param DirectReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

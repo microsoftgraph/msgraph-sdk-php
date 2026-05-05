@@ -69,7 +69,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+     * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue, riskRemediation.  Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: riskRemediation.
      * @return array<ConditionalAccessGrantControl>|null
     */
     public function getBuiltInControls(): ?array {
@@ -203,7 +203,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+     * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue, riskRemediation.  Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: riskRemediation.
      * @param array<ConditionalAccessGrantControl>|null $value Value to set for the builtInControls property.
     */
     public function setBuiltInControls(?array $value): void {

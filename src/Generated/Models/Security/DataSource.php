@@ -87,7 +87,7 @@ class DataSource extends Entity implements Parsable
     }
 
     /**
-     * Gets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
+     * Gets the holdStatus property value. The hold status of the dataSource. The possible values are: notApplied, applied, applying, removing, partial.
      * @return DataSourceHoldStatus|null
     */
     public function getHoldStatus(): ?DataSourceHoldStatus {
@@ -135,7 +135,7 @@ class DataSource extends Entity implements Parsable
     }
 
     /**
-     * Sets the holdStatus property value. The hold status of the dataSource.The possible values are: notApplied, applied, applying, removing, partial
+     * Sets the holdStatus property value. The hold status of the dataSource. The possible values are: notApplied, applied, applying, removing, partial.
      * @param DataSourceHoldStatus|null $value Value to set for the holdStatus property.
     */
     public function setHoldStatus(?DataSourceHoldStatus $value): void {

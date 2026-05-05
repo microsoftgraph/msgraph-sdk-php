@@ -13,4 +13,5 @@ class ConditionalAccessGrantControl extends Enum {
     public const COMPLIANT_APPLICATION = "compliantApplication";
     public const PASSWORD_CHANGE = "passwordChange";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const RISK_REMEDIATION = "riskRemediation";
 }

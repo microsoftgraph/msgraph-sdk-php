@@ -25,7 +25,7 @@ class AiAgentInfo extends AiInteractionEntity implements Parsable
     }
 
     /**
-     * Gets the blueprintId property value. The unique identifier of the parent agent blueprint that defines the identity and configuration of this agent instance.
+     * Gets the blueprintId property value. The unique identifier of the parent agent blueprint that defines the identity and configuration of this agent instance. This identifier is provided by Microsoft Entra.
      * @return string|null
     */
     public function getBlueprintId(): ?string {
@@ -57,7 +57,7 @@ class AiAgentInfo extends AiInteractionEntity implements Parsable
     }
 
     /**
-     * Sets the blueprintId property value. The unique identifier of the parent agent blueprint that defines the identity and configuration of this agent instance.
+     * Sets the blueprintId property value. The unique identifier of the parent agent blueprint that defines the identity and configuration of this agent instance. This identifier is provided by Microsoft Entra.
      * @param string|null $value Value to set for the blueprintId property.
     */
     public function setBlueprintId(?string $value): void {

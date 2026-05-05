@@ -25,7 +25,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the azureADJoin property value. The azureADJoin property
+     * Gets the azureADJoin property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra join within your organization. Required. For more information, see What is a device identity?.
      * @return AzureADJoinPolicy|null
     */
     public function getAzureADJoin(): ?AzureADJoinPolicy {
@@ -37,7 +37,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the azureADRegistration property value. The azureADRegistration property
+     * Gets the azureADRegistration property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registered within your organization. Required. For more information, see What is a device identity?.
      * @return AzureADRegistrationPolicy|null
     */
     public function getAzureADRegistration(): ?AzureADRegistrationPolicy {
@@ -49,7 +49,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the device registration policy. Always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -61,7 +61,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the device registration policy. Always set to Device Registration Policy. Read-only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -90,7 +90,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the localAdminPassword property value. The localAdminPassword property
+     * Gets the localAdminPassword property value. Specifies the setting for Local Admin Password Solution (LAPS) within your organization.
      * @return LocalAdminPasswordSettings|null
     */
     public function getLocalAdminPassword(): ?LocalAdminPasswordSettings {
@@ -114,7 +114,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the userDeviceQuota property value. The userDeviceQuota property
+     * Gets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
      * @return int|null
     */
     public function getUserDeviceQuota(): ?int {
@@ -141,7 +141,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the azureADJoin property value. The azureADJoin property
+     * Sets the azureADJoin property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra join within your organization. Required. For more information, see What is a device identity?.
      * @param AzureADJoinPolicy|null $value Value to set for the azureADJoin property.
     */
     public function setAzureADJoin(?AzureADJoinPolicy $value): void {
@@ -149,7 +149,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the azureADRegistration property value. The azureADRegistration property
+     * Sets the azureADRegistration property value. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registered within your organization. Required. For more information, see What is a device identity?.
      * @param AzureADRegistrationPolicy|null $value Value to set for the azureADRegistration property.
     */
     public function setAzureADRegistration(?AzureADRegistrationPolicy $value): void {
@@ -157,7 +157,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the device registration policy. Always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -165,7 +165,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the device registration policy. Always set to Device Registration Policy. Read-only.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -173,7 +173,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the localAdminPassword property value. The localAdminPassword property
+     * Sets the localAdminPassword property value. Specifies the setting for Local Admin Password Solution (LAPS) within your organization.
      * @param LocalAdminPasswordSettings|null $value Value to set for the localAdminPassword property.
     */
     public function setLocalAdminPassword(?LocalAdminPasswordSettings $value): void {
@@ -189,7 +189,7 @@ class DeviceRegistrationPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the userDeviceQuota property value. The userDeviceQuota property
+     * Sets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
      * @param int|null $value Value to set for the userDeviceQuota property.
     */
     public function setUserDeviceQuota(?int $value): void {

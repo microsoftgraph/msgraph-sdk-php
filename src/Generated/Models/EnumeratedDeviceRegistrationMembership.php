@@ -53,7 +53,7 @@ class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMembershi
     }
 
     /**
-     * Gets the groups property value. The groups property
+     * Gets the groups property value. List of groups that this policy applies to.
      * @return array<string>|null
     */
     public function getGroups(): ?array {
@@ -67,7 +67,7 @@ class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMembershi
     }
 
     /**
-     * Gets the users property value. The users property
+     * Gets the users property value. List of users that this policy applies to.
      * @return array<string>|null
     */
     public function getUsers(): ?array {
@@ -91,7 +91,7 @@ class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMembershi
     }
 
     /**
-     * Sets the groups property value. The groups property
+     * Sets the groups property value. List of groups that this policy applies to.
      * @param array<string>|null $value Value to set for the groups property.
     */
     public function setGroups(?array $value): void {
@@ -99,7 +99,7 @@ class EnumeratedDeviceRegistrationMembership extends DeviceRegistrationMembershi
     }
 
     /**
-     * Sets the users property value. The users property
+     * Sets the users property value. List of users that this policy applies to.
      * @param array<string>|null $value Value to set for the users property.
     */
     public function setUsers(?array $value): void {

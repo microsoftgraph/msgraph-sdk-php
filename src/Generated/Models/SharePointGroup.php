@@ -26,7 +26,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The user-visible description of the sharePointGroup. Read-write.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -52,7 +52,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the members property value. The members property
+     * Gets the members property value. The set of members in the sharePointGroup. Read-write.
      * @return array<SharePointGroupMember>|null
     */
     public function getMembers(): ?array {
@@ -66,7 +66,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -78,7 +78,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. The user-visible title of the sharePointGroup. Read-write.
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -102,7 +102,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The user-visible description of the sharePointGroup. Read-write.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -110,7 +110,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. The set of members in the sharePointGroup. Read-write.
      * @param array<SharePointGroupMember>|null $value Value to set for the members property.
     */
     public function setMembers(?array $value): void {
@@ -118,7 +118,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
@@ -126,7 +126,7 @@ class SharePointGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. The user-visible title of the sharePointGroup. Read-write.
      * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {

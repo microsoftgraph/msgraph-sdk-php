@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\Identity\CustomAuthenticationExtensions\CustomAuth
 use Microsoft\Graph\Generated\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
 use Microsoft\Graph\Generated\Identity\RiskPrevention\RiskPreventionRequestBuilder;
 use Microsoft\Graph\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
+use Microsoft\Graph\Generated\Identity\VerifiedId\VerifiedIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityContainer;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -86,6 +87,13 @@ class IdentityRequestBuilder extends BaseRequestBuilder
     */
     public function userFlowAttributes(): UserFlowAttributesRequestBuilder {
         return new UserFlowAttributesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the verifiedId property of the microsoft.graph.identityContainer entity.
+    */
+    public function verifiedId(): VerifiedIdRequestBuilder {
+        return new VerifiedIdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

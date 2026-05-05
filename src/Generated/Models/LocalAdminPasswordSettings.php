@@ -68,7 +68,7 @@ class LocalAdminPasswordSettings implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Specifies whether LAPS is enabled. The default value is false. An admin can set it to true to enable Local Admin Password Solution (LAPS) within their organization.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -118,7 +118,7 @@ class LocalAdminPasswordSettings implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Specifies whether LAPS is enabled. The default value is false. An admin can set it to true to enable Local Admin Password Solution (LAPS) within their organization.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {

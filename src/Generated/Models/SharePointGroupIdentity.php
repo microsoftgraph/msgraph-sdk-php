@@ -38,7 +38,7 @@ class SharePointGroupIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -50,7 +50,7 @@ class SharePointGroupIdentity extends Identity implements Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. The title of the SharePoint group. Read-only.
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -72,7 +72,7 @@ class SharePointGroupIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
@@ -80,7 +80,7 @@ class SharePointGroupIdentity extends Identity implements Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. The title of the SharePoint group. Read-only.
      * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
