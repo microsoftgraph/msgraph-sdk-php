@@ -215,7 +215,7 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the sharePointGroups property value. The sharePointGroups property
+     * Gets the sharePointGroups property value. The collection of sharePointGroup objects local to the container. Read-write.
      * @return array<SharePointGroup>|null
     */
     public function getSharePointGroups(): ?array {
@@ -381,7 +381,7 @@ class FileStorageContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the sharePointGroups property value. The sharePointGroups property
+     * Sets the sharePointGroups property value. The collection of sharePointGroup objects local to the container. Read-write.
      * @param array<SharePointGroup>|null $value Value to set for the sharePointGroups property.
     */
     public function setSharePointGroups(?array $value): void {

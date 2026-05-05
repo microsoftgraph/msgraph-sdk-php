@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\MemberOf;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get groups, directory roles, and administrative units that the user is a direct member of. This operation isn't transitive. To retrieve groups, directory roles, and administrative units that the user is a member through transitive membership, use the List user transitive memberOf API.
+ * Get groups, directory roles, and administrative units that the agentUser is a direct member of. This operation isn't transitive.
 */
 class MemberOfRequestBuilderGetQueryParameters 
 {

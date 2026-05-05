@@ -52,7 +52,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Gets the sharePointGroup property value. The sharePointGroup property
+     * Gets the sharePointGroup property value. The SharePoint group associated with this action, identified by a globally unique ID. Use this property instead of siteGroup when available. Optional.
      * @return SharePointGroupIdentity|null
     */
     public function getSharePointGroup(): ?SharePointGroupIdentity {
@@ -64,7 +64,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Gets the siteGroup property value. The SharePoint group associated with this action. Optional.
+     * Gets the siteGroup property value. The SharePoint group associated with this action, identified by a principal ID that is unique only within the site. Optional.
      * @return SharePointIdentity|null
     */
     public function getSiteGroup(): ?SharePointIdentity {
@@ -108,7 +108,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Sets the sharePointGroup property value. The sharePointGroup property
+     * Sets the sharePointGroup property value. The SharePoint group associated with this action, identified by a globally unique ID. Use this property instead of siteGroup when available. Optional.
      * @param SharePointGroupIdentity|null $value Value to set for the sharePointGroup property.
     */
     public function setSharePointGroup(?SharePointGroupIdentity $value): void {
@@ -116,7 +116,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
     }
 
     /**
-     * Sets the siteGroup property value. The SharePoint group associated with this action. Optional.
+     * Sets the siteGroup property value. The SharePoint group associated with this action, identified by a principal ID that is unique only within the site. Optional.
      * @param SharePointIdentity|null $value Value to set for the siteGroup property.
     */
     public function setSiteGroup(?SharePointIdentity $value): void {

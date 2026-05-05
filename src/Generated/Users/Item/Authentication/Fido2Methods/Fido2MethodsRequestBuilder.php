@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\Fido2AuthenticationMethodCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\CreationOptions\CreationOptionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\Fido2Methods\Item\Fido2AuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,6 +24,13 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the creationOptions method.
+    */
+    public function creationOptions(): CreationOptionsRequestBuilder {
+        return new CreationOptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

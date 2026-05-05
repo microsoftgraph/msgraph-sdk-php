@@ -53,7 +53,7 @@ class SharePointGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      * @param SharePointGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointGroup|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class SharePointGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sharePointGroups from storage
+     * The collection of sharePointGroup objects local to the container. Read-write.
      * @param SharePointGroupItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

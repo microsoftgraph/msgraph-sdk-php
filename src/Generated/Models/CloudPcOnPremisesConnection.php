@@ -134,7 +134,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the healthCheckPaused property value. The healthCheckPaused property
+     * Gets the healthCheckPaused property value. Indicates whether regular health checks on the network or domain configuration are paused or active. false if the regular health checks on the network or domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for four weeks. If you retry a health check on network or domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past four weeks, healthCheckPaused is set to false. Read-only. Default is false.
      * @return bool|null
     */
     public function getHealthCheckPaused(): ?bool {
@@ -170,7 +170,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @return bool|null
     */
     public function getInUse(): ?bool {
@@ -182,7 +182,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the inUseByCloudPc property value. The inUseByCloudPc property
+     * Gets the inUseByCloudPc property value. Indicates whether a Cloud PC is using this on-premises network connection. true if at least one Cloud PC is using it. Otherwise, false. Read-only. Default is false.
      * @return bool|null
     */
     public function getInUseByCloudPc(): ?bool {
@@ -218,7 +218,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it's the Intune scope tag ID.
      * @return array<string>|null
     */
     public function getScopeIds(): ?array {
@@ -367,7 +367,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the healthCheckPaused property value. The healthCheckPaused property
+     * Sets the healthCheckPaused property value. Indicates whether regular health checks on the network or domain configuration are paused or active. false if the regular health checks on the network or domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for four weeks. If you retry a health check on network or domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past four weeks, healthCheckPaused is set to false. Read-only. Default is false.
      * @param bool|null $value Value to set for the healthCheckPaused property.
     */
     public function setHealthCheckPaused(?bool $value): void {
@@ -391,7 +391,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Requires $select to retrieve. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail. Read-only.
      * @param bool|null $value Value to set for the inUse property.
     */
     public function setInUse(?bool $value): void {
@@ -399,7 +399,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the inUseByCloudPc property value. The inUseByCloudPc property
+     * Sets the inUseByCloudPc property value. Indicates whether a Cloud PC is using this on-premises network connection. true if at least one Cloud PC is using it. Otherwise, false. Read-only. Default is false.
      * @param bool|null $value Value to set for the inUseByCloudPc property.
     */
     public function setInUseByCloudPc(?bool $value): void {
@@ -423,7 +423,7 @@ class CloudPcOnPremisesConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it's the Intune scope tag ID.
      * @param array<string>|null $value Value to set for the scopeIds property.
     */
     public function setScopeIds(?array $value): void {

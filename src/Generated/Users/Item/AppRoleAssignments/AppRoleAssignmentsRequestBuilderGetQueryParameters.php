@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\AppRoleAssignments;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+ * Retrieve the list of appRoleAssignments granted to an agentUser.
 */
 class AppRoleAssignmentsRequestBuilderGetQueryParameters 
 {

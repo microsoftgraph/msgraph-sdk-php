@@ -48,7 +48,7 @@ class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the allowedToRegister property value. The allowedToRegister property
+     * Gets the allowedToRegister property value. Determines if Microsoft Entra registered is allowed.
      * @return DeviceRegistrationMembership|null
     */
     public function getAllowedToRegister(): ?DeviceRegistrationMembership {
@@ -81,7 +81,7 @@ class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the isAdminConfigurable property value. The isAdminConfigurable property
+     * Gets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @return bool|null
     */
     public function getIsAdminConfigurable(): ?bool {
@@ -124,7 +124,7 @@ class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the allowedToRegister property value. The allowedToRegister property
+     * Sets the allowedToRegister property value. Determines if Microsoft Entra registered is allowed.
      * @param DeviceRegistrationMembership|null $value Value to set for the allowedToRegister property.
     */
     public function setAllowedToRegister(?DeviceRegistrationMembership $value): void {
@@ -140,7 +140,7 @@ class AzureADRegistrationPolicy implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the isAdminConfigurable property value. The isAdminConfigurable property
+     * Sets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @param bool|null $value Value to set for the isAdminConfigurable property.
     */
     public function setIsAdminConfigurable(?bool $value): void {
