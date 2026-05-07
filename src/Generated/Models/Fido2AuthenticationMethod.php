@@ -96,6 +96,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'model' => fn(ParseNode $n) => $o->setModel($n->getStringValue()),
             'passkeyType' => fn(ParseNode $n) => $o->setPasskeyType($n->getEnumValue(PasskeyType::class)),
+            'publicKeyCredential' => fn(ParseNode $n) => $o->setPublicKeyCredential($n->getObjectValue([WebauthnPublicKeyCredential::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -124,6 +125,18 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
+     * Gets the publicKeyCredential property value. The publicKeyCredential property
+     * @return WebauthnPublicKeyCredential|null
+    */
+    public function getPublicKeyCredential(): ?WebauthnPublicKeyCredential {
+        $val = $this->getBackingStore()->get('publicKeyCredential');
+        if (is_null($val) || $val instanceof WebauthnPublicKeyCredential) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publicKeyCredential'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -135,6 +148,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('model', $this->getModel());
         $writer->writeEnumValue('passkeyType', $this->getPasskeyType());
+        $writer->writeObjectValue('publicKeyCredential', $this->getPublicKeyCredential());
     }
 
     /**
@@ -183,6 +197,14 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     */
     public function setPasskeyType(?PasskeyType $value): void {
         $this->getBackingStore()->set('passkeyType', $value);
+    }
+
+    /**
+     * Sets the publicKeyCredential property value. The publicKeyCredential property
+     * @param WebauthnPublicKeyCredential|null $value Value to set for the publicKeyCredential property.
+    */
+    public function setPublicKeyCredential(?WebauthnPublicKeyCredential $value): void {
+        $this->getBackingStore()->set('publicKeyCredential', $value);
     }
 
 }

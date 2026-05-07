@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\BackupRestoreRoot;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\BrowseSessions\BrowseSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\DriveInclusionRules\DriveInclusionRulesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\DriveProtectionUnits\DriveProtectionUnitsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\DriveProtectionUnitsBulkAdditionJobs\DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -15,6 +16,7 @@ use Microsoft\Graph\Generated\Solutions\BackupRestore\ExchangeRestoreSessions\Ex
 use Microsoft\Graph\Generated\Solutions\BackupRestore\MailboxInclusionRules\MailboxInclusionRulesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\MailboxProtectionUnits\MailboxProtectionUnitsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\MailboxProtectionUnitsBulkAdditionJobs\MailboxProtectionUnitsBulkAdditionJobsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessBrowseSessions\OneDriveForBusinessBrowseSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessProtectionPolicies\OneDriveForBusinessProtectionPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions\OneDriveForBusinessRestoreSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionPolicies\ProtectionPoliciesRequestBuilder;
@@ -22,6 +24,7 @@ use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\Protection
 use Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints\RestorePointsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\RestoreSessions\RestoreSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ServiceApps\ServiceAppsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointBrowseSessions\SharePointBrowseSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointProtectionPolicies\SharePointProtectionPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointRestoreSessions\SharePointRestoreSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\SiteInclusionRules\SiteInclusionRulesRequestBuilder;
@@ -37,6 +40,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class BackupRestoreRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the browseSessions property of the microsoft.graph.backupRestoreRoot entity.
+    */
+    public function browseSessions(): BrowseSessionsRequestBuilder {
+        return new BrowseSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the driveInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
     */
@@ -101,6 +111,13 @@ class BackupRestoreRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the oneDriveForBusinessBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
+    */
+    public function oneDriveForBusinessBrowseSessions(): OneDriveForBusinessBrowseSessionsRequestBuilder {
+        return new OneDriveForBusinessBrowseSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the oneDriveForBusinessProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
     */
     public function oneDriveForBusinessProtectionPolicies(): OneDriveForBusinessProtectionPoliciesRequestBuilder {
@@ -147,6 +164,13 @@ class BackupRestoreRequestBuilder extends BaseRequestBuilder
     */
     public function serviceApps(): ServiceAppsRequestBuilder {
         return new ServiceAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sharePointBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
+    */
+    public function sharePointBrowseSessions(): SharePointBrowseSessionsRequestBuilder {
+        return new SharePointBrowseSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

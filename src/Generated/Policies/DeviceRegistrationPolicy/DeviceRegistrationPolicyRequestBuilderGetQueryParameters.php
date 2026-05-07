@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\DeviceRegistrationPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get deviceRegistrationPolicy from policies
+ * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
 */
 class DeviceRegistrationPolicyRequestBuilderGetQueryParameters 
 {

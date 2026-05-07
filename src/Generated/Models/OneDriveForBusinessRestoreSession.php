@@ -63,7 +63,22 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
         return array_merge(parent::getFieldDeserializers(), [
             'driveRestoreArtifacts' => fn(ParseNode $n) => $o->setDriveRestoreArtifacts($n->getCollectionOfObjectValues([DriveRestoreArtifact::class, 'createFromDiscriminatorValue'])),
             'driveRestoreArtifactsBulkAdditionRequests' => fn(ParseNode $n) => $o->setDriveRestoreArtifactsBulkAdditionRequests($n->getCollectionOfObjectValues([DriveRestoreArtifactsBulkAdditionRequest::class, 'createFromDiscriminatorValue'])),
+            'granularDriveRestoreArtifacts' => fn(ParseNode $n) => $o->setGranularDriveRestoreArtifacts($n->getCollectionOfObjectValues([GranularDriveRestoreArtifact::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the granularDriveRestoreArtifacts property value. The granularDriveRestoreArtifacts property
+     * @return array<GranularDriveRestoreArtifact>|null
+    */
+    public function getGranularDriveRestoreArtifacts(): ?array {
+        $val = $this->getBackingStore()->get('granularDriveRestoreArtifacts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, GranularDriveRestoreArtifact::class);
+            /** @var array<GranularDriveRestoreArtifact>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'granularDriveRestoreArtifacts'");
     }
 
     /**
@@ -74,6 +89,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('driveRestoreArtifacts', $this->getDriveRestoreArtifacts());
         $writer->writeCollectionOfObjectValues('driveRestoreArtifactsBulkAdditionRequests', $this->getDriveRestoreArtifactsBulkAdditionRequests());
+        $writer->writeCollectionOfObjectValues('granularDriveRestoreArtifacts', $this->getGranularDriveRestoreArtifacts());
     }
 
     /**
@@ -90,6 +106,14 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     */
     public function setDriveRestoreArtifactsBulkAdditionRequests(?array $value): void {
         $this->getBackingStore()->set('driveRestoreArtifactsBulkAdditionRequests', $value);
+    }
+
+    /**
+     * Sets the granularDriveRestoreArtifacts property value. The granularDriveRestoreArtifacts property
+     * @param array<GranularDriveRestoreArtifact>|null $value Value to set for the granularDriveRestoreArtifacts property.
+    */
+    public function setGranularDriveRestoreArtifacts(?array $value): void {
+        $this->getBackingStore()->set('granularDriveRestoreArtifacts', $value);
     }
 
 }

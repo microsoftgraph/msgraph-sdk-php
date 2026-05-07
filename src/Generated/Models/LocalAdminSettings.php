@@ -56,7 +56,7 @@ class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the enableGlobalAdmins property value. The enableGlobalAdmins property
+     * Gets the enableGlobalAdmins property value. Indicates whether global administrators are local administrators on all Microsoft Entra-joined devices. This setting only applies to future registrations. Default is true.
      * @return bool|null
     */
     public function getEnableGlobalAdmins(): ?bool {
@@ -93,7 +93,7 @@ class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the registeringUsers property value. The registeringUsers property
+     * Gets the registeringUsers property value. Determines the users and groups that become local administrators on Microsoft Entra joined devices that they register.
      * @return DeviceRegistrationMembership|null
     */
     public function getRegisteringUsers(): ?DeviceRegistrationMembership {
@@ -132,7 +132,7 @@ class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the enableGlobalAdmins property value. The enableGlobalAdmins property
+     * Sets the enableGlobalAdmins property value. Indicates whether global administrators are local administrators on all Microsoft Entra-joined devices. This setting only applies to future registrations. Default is true.
      * @param bool|null $value Value to set for the enableGlobalAdmins property.
     */
     public function setEnableGlobalAdmins(?bool $value): void {
@@ -148,7 +148,7 @@ class LocalAdminSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the registeringUsers property value. The registeringUsers property
+     * Sets the registeringUsers property value. Determines the users and groups that become local administrators on Microsoft Entra joined devices that they register.
      * @param DeviceRegistrationMembership|null $value Value to set for the registeringUsers property.
     */
     public function setRegisteringUsers(?DeviceRegistrationMembership $value): void {

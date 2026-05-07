@@ -54,4 +54,9 @@ class Label extends Enum {
     public const PERSON_MANAGER = "personManager";
     public const PERSON_ALTERNATE_CONTACTS = "personAlternateContacts";
     public const PERSON_EMERGENCY_CONTACTS = "personEmergencyContacts";
+    public const PERSON_EDUCATIONAL_ACTIVITIES = "personEducationalActivities";
+    public const PERSON_INTERESTS = "personInterests";
+    public const PERSON_LANGUAGES = "personLanguages";
+    public const PERSON_PUBLICATIONS = "personPublications";
+    public const PERSON_PATENTS = "personPatents";
 }

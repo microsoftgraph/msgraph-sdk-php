@@ -30,11 +30,10 @@ class PermanentDeleteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Permanently delete a calendar folder and the events that it contains and remove them from the mailbox. For more information about item retention, see Configure deleted item retention and recoverable items quotas.
+     * Invoke action permanentDelete
      * @param PermanentDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/calendar-permanentdelete?view=graph-rest-1.0 Find more info here
     */
     public function post(?PermanentDeleteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -45,7 +44,7 @@ class PermanentDeleteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Permanently delete a calendar folder and the events that it contains and remove them from the mailbox. For more information about item retention, see Configure deleted item retention and recoverable items quotas.
+     * Invoke action permanentDelete
      * @param PermanentDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

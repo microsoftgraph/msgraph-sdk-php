@@ -23,4 +23,5 @@ class RiskDetail extends Enum {
     public const USER_CHANGED_PASSWORD_ON_PREMISES = "userChangedPasswordOnPremises";
     public const ADMIN_DISMISSED_RISK_FOR_SIGN_IN = "adminDismissedRiskForSignIn";
     public const ADMIN_CONFIRMED_ACCOUNT_SAFE = "adminConfirmedAccountSafe";
+    public const MICROSOFT_REVOKED_SESSIONS = "microsoftRevokedSessions";
 }

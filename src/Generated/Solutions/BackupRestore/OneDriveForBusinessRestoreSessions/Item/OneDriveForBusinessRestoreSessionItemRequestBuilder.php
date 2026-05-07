@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OneDriveForBusinessRestoreSession;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions\Item\DriveRestoreArtifacts\DriveRestoreArtifactsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions\Item\DriveRestoreArtifactsBulkAdditionRequests\DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions\Item\GranularDriveRestoreArtifacts\GranularDriveRestoreArtifactsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,6 +31,13 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
     */
     public function driveRestoreArtifactsBulkAdditionRequests(): DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder {
         return new DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the granularDriveRestoreArtifacts property of the microsoft.graph.oneDriveForBusinessRestoreSession entity.
+    */
+    public function granularDriveRestoreArtifacts(): GranularDriveRestoreArtifactsRequestBuilder {
+        return new GranularDriveRestoreArtifactsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

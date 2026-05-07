@@ -36,7 +36,7 @@ class SharePointGroupMember extends Entity implements Parsable
     }
 
     /**
-     * Gets the identity property value. The identity property
+     * Gets the identity property value. The identity represented by the sharePointGroupMember object.
      * @return SharePointIdentitySet|null
     */
     public function getIdentity(): ?SharePointIdentitySet {
@@ -57,7 +57,7 @@ class SharePointGroupMember extends Entity implements Parsable
     }
 
     /**
-     * Sets the identity property value. The identity property
+     * Sets the identity property value. The identity represented by the sharePointGroupMember object.
      * @param SharePointIdentitySet|null $value Value to set for the identity property.
     */
     public function setIdentity(?SharePointIdentitySet $value): void {

@@ -33,9 +33,24 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'granularSiteRestoreArtifacts' => fn(ParseNode $n) => $o->setGranularSiteRestoreArtifacts($n->getCollectionOfObjectValues([GranularSiteRestoreArtifact::class, 'createFromDiscriminatorValue'])),
             'siteRestoreArtifacts' => fn(ParseNode $n) => $o->setSiteRestoreArtifacts($n->getCollectionOfObjectValues([SiteRestoreArtifact::class, 'createFromDiscriminatorValue'])),
             'siteRestoreArtifactsBulkAdditionRequests' => fn(ParseNode $n) => $o->setSiteRestoreArtifactsBulkAdditionRequests($n->getCollectionOfObjectValues([SiteRestoreArtifactsBulkAdditionRequest::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * @return array<GranularSiteRestoreArtifact>|null
+    */
+    public function getGranularSiteRestoreArtifacts(): ?array {
+        $val = $this->getBackingStore()->get('granularSiteRestoreArtifacts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, GranularSiteRestoreArtifact::class);
+            /** @var array<GranularSiteRestoreArtifact>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'granularSiteRestoreArtifacts'");
     }
 
     /**
@@ -72,8 +87,17 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('granularSiteRestoreArtifacts', $this->getGranularSiteRestoreArtifacts());
         $writer->writeCollectionOfObjectValues('siteRestoreArtifacts', $this->getSiteRestoreArtifacts());
         $writer->writeCollectionOfObjectValues('siteRestoreArtifactsBulkAdditionRequests', $this->getSiteRestoreArtifactsBulkAdditionRequests());
+    }
+
+    /**
+     * Sets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * @param array<GranularSiteRestoreArtifact>|null $value Value to set for the granularSiteRestoreArtifacts property.
+    */
+    public function setGranularSiteRestoreArtifacts(?array $value): void {
+        $this->getBackingStore()->set('granularSiteRestoreArtifacts', $value);
     }
 
     /**

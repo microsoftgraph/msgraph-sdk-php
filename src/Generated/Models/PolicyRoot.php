@@ -215,6 +215,7 @@ class PolicyRoot extends Entity implements Parsable
             'featureRolloutPolicies' => fn(ParseNode $n) => $o->setFeatureRolloutPolicies($n->getCollectionOfObjectValues([FeatureRolloutPolicy::class, 'createFromDiscriminatorValue'])),
             'homeRealmDiscoveryPolicies' => fn(ParseNode $n) => $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues([HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'])),
             'identitySecurityDefaultsEnforcementPolicy' => fn(ParseNode $n) => $o->setIdentitySecurityDefaultsEnforcementPolicy($n->getObjectValue([IdentitySecurityDefaultsEnforcementPolicy::class, 'createFromDiscriminatorValue'])),
+            'ownerlessGroupPolicy' => fn(ParseNode $n) => $o->setOwnerlessGroupPolicy($n->getObjectValue([OwnerlessGroupPolicy::class, 'createFromDiscriminatorValue'])),
             'permissionGrantPolicies' => fn(ParseNode $n) => $o->setPermissionGrantPolicies($n->getCollectionOfObjectValues([PermissionGrantPolicy::class, 'createFromDiscriminatorValue'])),
             'roleManagementPolicies' => fn(ParseNode $n) => $o->setRoleManagementPolicies($n->getCollectionOfObjectValues([UnifiedRoleManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'roleManagementPolicyAssignments' => fn(ParseNode $n) => $o->setRoleManagementPolicyAssignments($n->getCollectionOfObjectValues([UnifiedRoleManagementPolicyAssignment::class, 'createFromDiscriminatorValue'])),
@@ -247,6 +248,18 @@ class PolicyRoot extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'identitySecurityDefaultsEnforcementPolicy'");
+    }
+
+    /**
+     * Gets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * @return OwnerlessGroupPolicy|null
+    */
+    public function getOwnerlessGroupPolicy(): ?OwnerlessGroupPolicy {
+        $val = $this->getBackingStore()->get('ownerlessGroupPolicy');
+        if (is_null($val) || $val instanceof OwnerlessGroupPolicy) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ownerlessGroupPolicy'");
     }
 
     /**
@@ -340,6 +353,7 @@ class PolicyRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('featureRolloutPolicies', $this->getFeatureRolloutPolicies());
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->getHomeRealmDiscoveryPolicies());
         $writer->writeObjectValue('identitySecurityDefaultsEnforcementPolicy', $this->getIdentitySecurityDefaultsEnforcementPolicy());
+        $writer->writeObjectValue('ownerlessGroupPolicy', $this->getOwnerlessGroupPolicy());
         $writer->writeCollectionOfObjectValues('permissionGrantPolicies', $this->getPermissionGrantPolicies());
         $writer->writeCollectionOfObjectValues('roleManagementPolicies', $this->getRoleManagementPolicies());
         $writer->writeCollectionOfObjectValues('roleManagementPolicyAssignments', $this->getRoleManagementPolicyAssignments());
@@ -465,6 +479,14 @@ class PolicyRoot extends Entity implements Parsable
     */
     public function setIdentitySecurityDefaultsEnforcementPolicy(?IdentitySecurityDefaultsEnforcementPolicy $value): void {
         $this->getBackingStore()->set('identitySecurityDefaultsEnforcementPolicy', $value);
+    }
+
+    /**
+     * Sets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * @param OwnerlessGroupPolicy|null $value Value to set for the ownerlessGroupPolicy property.
+    */
+    public function setOwnerlessGroupPolicy(?OwnerlessGroupPolicy $value): void {
+        $this->getBackingStore()->set('ownerlessGroupPolicy', $value);
     }
 
     /**

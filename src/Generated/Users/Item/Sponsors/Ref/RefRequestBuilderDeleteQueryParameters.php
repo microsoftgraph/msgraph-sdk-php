@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Sponsors\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Remove a user's sponsor.
+ * Remove an agentUser's sponsor.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

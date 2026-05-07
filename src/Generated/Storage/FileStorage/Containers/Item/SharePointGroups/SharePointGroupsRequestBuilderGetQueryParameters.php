@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Storage\FileStorage\Containers\Item\SharePoi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get sharePointGroups from storage
+ * The collection of sharePointGroup objects local to the container. Read-write.
 */
 class SharePointGroupsRequestBuilderGetQueryParameters 
 {

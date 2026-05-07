@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Storage\FileStorage\DeletedContainers\Item\S
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get sharePointGroups from storage
+ * The collection of sharePointGroup objects local to the container. Read-write.
 */
 class SharePointGroupItemRequestBuilderGetQueryParameters 
 {

@@ -48,7 +48,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the allowedToJoin property value. The allowedToJoin property
+     * Gets the allowedToJoin property value. Determines if Microsoft Entra join is allowed.
      * @return DeviceRegistrationMembership|null
     */
     public function getAllowedToJoin(): ?DeviceRegistrationMembership {
@@ -82,7 +82,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isAdminConfigurable property value. The isAdminConfigurable property
+     * Gets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @return bool|null
     */
     public function getIsAdminConfigurable(): ?bool {
@@ -94,7 +94,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the localAdmins property value. The localAdmins property
+     * Gets the localAdmins property value. Determines who becomes a local administrator on joined devices.
      * @return LocalAdminSettings|null
     */
     public function getLocalAdmins(): ?LocalAdminSettings {
@@ -138,7 +138,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the allowedToJoin property value. The allowedToJoin property
+     * Sets the allowedToJoin property value. Determines if Microsoft Entra join is allowed.
      * @param DeviceRegistrationMembership|null $value Value to set for the allowedToJoin property.
     */
     public function setAllowedToJoin(?DeviceRegistrationMembership $value): void {
@@ -154,7 +154,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isAdminConfigurable property value. The isAdminConfigurable property
+     * Sets the isAdminConfigurable property value. Determines if administrators can modify this policy.
      * @param bool|null $value Value to set for the isAdminConfigurable property.
     */
     public function setIsAdminConfigurable(?bool $value): void {
@@ -162,7 +162,7 @@ class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the localAdmins property value. The localAdmins property
+     * Sets the localAdmins property value. Determines who becomes a local administrator on joined devices.
      * @param LocalAdminSettings|null $value Value to set for the localAdmins property.
     */
     public function setLocalAdmins(?LocalAdminSettings $value): void {

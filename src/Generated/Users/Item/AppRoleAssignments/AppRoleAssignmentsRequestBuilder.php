@@ -52,11 +52,11 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      * @param AppRoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignmentCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-list-approleassignments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agentuser-list-approleassignments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppRoleAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,12 +67,12 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
+     * Grant an app role assignment to an agentUser.
      * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppRoleAssignment|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agentuser-post-approleassignments?view=graph-rest-1.0 Find more info here
     */
     public function post(AppRoleAssignment $body, ?AppRoleAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -83,7 +83,7 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the list of appRoleAssignments that are currently granted to a user. This operation also returns app role assignments granted to groups that the user is a direct member of.
+     * Retrieve the list of appRoleAssignments granted to an agentUser.
      * @param AppRoleAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +104,7 @@ class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign an app role to a user, creating an appRoleAssignment object. To grant an app role assignment to a user, you need three identifiers:
+     * Grant an app role assignment to an agentUser.
      * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

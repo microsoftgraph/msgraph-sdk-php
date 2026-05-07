@@ -88,6 +88,20 @@ class Alert extends Entity implements Parsable
     }
 
     /**
+     * Gets the categories property value. The categories property
+     * @return array<string>|null
+    */
+    public function getCategories(): ?array {
+        $val = $this->getBackingStore()->get('categories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'categories'");
+    }
+
+    /**
      * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @return string|null
     */
@@ -223,6 +237,14 @@ class Alert extends Entity implements Parsable
             'alertPolicyId' => fn(ParseNode $n) => $o->setAlertPolicyId($n->getStringValue()),
             'alertWebUrl' => fn(ParseNode $n) => $o->setAlertWebUrl($n->getStringValue()),
             'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
+            'categories' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCategories($val);
+            },
             'category' => fn(ParseNode $n) => $o->setCategory($n->getStringValue()),
             'classification' => fn(ParseNode $n) => $o->setClassification($n->getEnumValue(AlertClassification::class)),
             'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfObjectValues([AlertComment::class, 'createFromDiscriminatorValue'])),
@@ -512,6 +534,7 @@ class Alert extends Entity implements Parsable
         $writer->writeStringValue('alertPolicyId', $this->getAlertPolicyId());
         $writer->writeStringValue('alertWebUrl', $this->getAlertWebUrl());
         $writer->writeStringValue('assignedTo', $this->getAssignedTo());
+        $writer->writeCollectionOfPrimitiveValues('categories', $this->getCategories());
         $writer->writeStringValue('category', $this->getCategory());
         $writer->writeEnumValue('classification', $this->getClassification());
         $writer->writeCollectionOfObjectValues('comments', $this->getComments());
@@ -581,6 +604,14 @@ class Alert extends Entity implements Parsable
     */
     public function setAssignedTo(?string $value): void {
         $this->getBackingStore()->set('assignedTo', $value);
+    }
+
+    /**
+     * Sets the categories property value. The categories property
+     * @param array<string>|null $value Value to set for the categories property.
+    */
+    public function setCategories(?array $value): void {
+        $this->getBackingStore()->set('categories', $value);
     }
 
     /**

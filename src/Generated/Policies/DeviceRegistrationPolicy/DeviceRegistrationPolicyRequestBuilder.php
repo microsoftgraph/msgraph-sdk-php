@@ -31,10 +31,11 @@ class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param DeviceRegistrationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceRegistrationPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceRegistrationPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deviceRegistrationPolicy from policies
+     * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param DeviceRegistrationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

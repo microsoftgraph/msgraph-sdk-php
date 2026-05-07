@@ -21,6 +21,7 @@ use Microsoft\Graph\Generated\Policies\DeviceRegistrationPolicy\DeviceRegistrati
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\FeatureRolloutPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\IdentitySecurityDefaultsEnforcementPolicy\IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\OwnerlessGroupPolicy\OwnerlessGroupPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\PermissionGrantPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\RoleManagementPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\RoleManagementPolicyAssignments\RoleManagementPolicyAssignmentsRequestBuilder;
@@ -139,6 +140,13 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function identitySecurityDefaultsEnforcementPolicy(): IdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the ownerlessGroupPolicy property of the microsoft.graph.policyRoot entity.
+    */
+    public function ownerlessGroupPolicy(): OwnerlessGroupPolicyRequestBuilder {
+        return new OwnerlessGroupPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -32,11 +32,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a user's sponsor.
+     * Remove an agentUser's sponsor.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-delete-sponsors?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agentuser-delete-sponsors?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -47,11 +47,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest's privileges in the tenant and for keeping the guest's information and access up to date.
+     * Get an agentUser's sponsors. Sponsors are users and groups that are responsible for this agent user's privileges in the tenant and for keeping the agent user's information and access up to date.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StringCollectionResponse|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agentuser-list-sponsors?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -62,12 +62,12 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a user a sponsor. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
+     * Assign an agentUser a sponsor. Sponsors are users and groups that are responsible for this agent user's privileges in the tenant and for keeping the agent user's information and access up to date.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
-     * @link https://learn.microsoft.com/graph/api/user-post-sponsors?view=graph-rest-1.0 Find more info here
+     * @link https://learn.microsoft.com/graph/api/agentuser-post-sponsors?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -78,7 +78,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Remove a user's sponsor.
+     * Remove an agentUser's sponsor.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -99,7 +99,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest's privileges in the tenant and for keeping the guest's information and access up to date.
+     * Get an agentUser's sponsors. Sponsors are users and groups that are responsible for this agent user's privileges in the tenant and for keeping the agent user's information and access up to date.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +120,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Assign a user a sponsor. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
+     * Assign an agentUser a sponsor. Sponsors are users and groups that are responsible for this agent user's privileges in the tenant and for keeping the agent user's information and access up to date.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

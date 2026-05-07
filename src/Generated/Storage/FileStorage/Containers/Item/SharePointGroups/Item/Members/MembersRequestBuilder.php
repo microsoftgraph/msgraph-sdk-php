@@ -52,7 +52,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointGroupMemberCollectionResponse|null>
      * @throws Exception
@@ -81,7 +81,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get members from storage
+     * The set of members in the sharePointGroup. Read-write.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

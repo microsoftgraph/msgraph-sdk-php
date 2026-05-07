@@ -123,6 +123,7 @@ class IdentityContainer extends Entity implements Parsable
             'identityProviders' => fn(ParseNode $n) => $o->setIdentityProviders($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'riskPrevention' => fn(ParseNode $n) => $o->setRiskPrevention($n->getObjectValue([RiskPreventionContainer::class, 'createFromDiscriminatorValue'])),
             'userFlowAttributes' => fn(ParseNode $n) => $o->setUserFlowAttributes($n->getCollectionOfObjectValues([IdentityUserFlowAttribute::class, 'createFromDiscriminatorValue'])),
+            'verifiedId' => fn(ParseNode $n) => $o->setVerifiedId($n->getObjectValue([IdentityVerifiedIdRoot::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -167,6 +168,18 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
+     * Gets the verifiedId property value. The verifiedId property
+     * @return IdentityVerifiedIdRoot|null
+    */
+    public function getVerifiedId(): ?IdentityVerifiedIdRoot {
+        $val = $this->getBackingStore()->get('verifiedId');
+        if (is_null($val) || $val instanceof IdentityVerifiedIdRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'verifiedId'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -181,6 +194,7 @@ class IdentityContainer extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('identityProviders', $this->getIdentityProviders());
         $writer->writeObjectValue('riskPrevention', $this->getRiskPrevention());
         $writer->writeCollectionOfObjectValues('userFlowAttributes', $this->getUserFlowAttributes());
+        $writer->writeObjectValue('verifiedId', $this->getVerifiedId());
     }
 
     /**
@@ -253,6 +267,14 @@ class IdentityContainer extends Entity implements Parsable
     */
     public function setUserFlowAttributes(?array $value): void {
         $this->getBackingStore()->set('userFlowAttributes', $value);
+    }
+
+    /**
+     * Sets the verifiedId property value. The verifiedId property
+     * @param IdentityVerifiedIdRoot|null $value Value to set for the verifiedId property.
+    */
+    public function setVerifiedId(?IdentityVerifiedIdRoot $value): void {
+        $this->getBackingStore()->set('verifiedId', $value);
     }
 
 }
