@@ -39,7 +39,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Gets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * Gets the certificateAuthorityScopes property value. Defines configuration to allow a group of users to use certificates from specific issuing certificate authorities to successfully authenticate.
      * @return array<X509CertificateAuthorityScope>|null
     */
     public function getCertificateAuthorityScopes(): ?array {
@@ -109,7 +109,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Gets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * Gets the issuerHintsConfiguration property value. Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
      * @return X509CertificateIssuerHintsConfiguration|null
     */
     public function getIssuerHintsConfiguration(): ?X509CertificateIssuerHintsConfiguration {
@@ -143,7 +143,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Sets the certificateAuthorityScopes property value. The certificateAuthorityScopes property
+     * Sets the certificateAuthorityScopes property value. Defines configuration to allow a group of users to use certificates from specific issuing certificate authorities to successfully authenticate.
      * @param array<X509CertificateAuthorityScope>|null $value Value to set for the certificateAuthorityScopes property.
     */
     public function setCertificateAuthorityScopes(?array $value): void {
@@ -175,7 +175,7 @@ class X509CertificateAuthenticationMethodConfiguration extends AuthenticationMet
     }
 
     /**
-     * Sets the issuerHintsConfiguration property value. The issuerHintsConfiguration property
+     * Sets the issuerHintsConfiguration property value. Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
      * @param X509CertificateIssuerHintsConfiguration|null $value Value to set for the issuerHintsConfiguration property.
     */
     public function setIssuerHintsConfiguration(?X509CertificateIssuerHintsConfiguration $value): void {

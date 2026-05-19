@@ -1177,6 +1177,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.userSolutionRoot': return new UserSolutionRoot();
                 case '#microsoft.graph.userStorage': return new UserStorage();
                 case '#microsoft.graph.userTeamwork': return new UserTeamwork();
+                case '#microsoft.graph.verifiableCredentialAuthenticationMethodTarget': return new VerifiableCredentialAuthenticationMethodTarget();
+                case '#microsoft.graph.verifiableCredentialsAuthenticationMethodConfiguration': return new VerifiableCredentialsAuthenticationMethodConfiguration();
                 case '#microsoft.graph.verifiedIdProfile': return new VerifiedIdProfile();
                 case '#microsoft.graph.verticalSection': return new VerticalSection();
                 case '#microsoft.graph.virtualEndpoint': return new VirtualEndpoint();

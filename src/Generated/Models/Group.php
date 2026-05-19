@@ -314,6 +314,14 @@ class Group extends DirectoryObject implements Parsable
             'hasMembersWithLicenseErrors' => fn(ParseNode $n) => $o->setHasMembersWithLicenseErrors($n->getBooleanValue()),
             'hideFromAddressLists' => fn(ParseNode $n) => $o->setHideFromAddressLists($n->getBooleanValue()),
             'hideFromOutlookClients' => fn(ParseNode $n) => $o->setHideFromOutlookClients($n->getBooleanValue()),
+            'infoCatalogs' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setInfoCatalogs($val);
+            },
             'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
             'isAssignableToRole' => fn(ParseNode $n) => $o->setIsAssignableToRole($n->getBooleanValue()),
             'isManagementRestricted' => fn(ParseNode $n) => $o->setIsManagementRestricted($n->getBooleanValue()),
@@ -448,6 +456,20 @@ class Group extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'hideFromOutlookClients'");
+    }
+
+    /**
+     * Gets the infoCatalogs property value. The infoCatalogs property
+     * @return array<string>|null
+    */
+    public function getInfoCatalogs(): ?array {
+        $val = $this->getBackingStore()->get('infoCatalogs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'infoCatalogs'");
     }
 
     /**
@@ -1090,6 +1112,7 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeBooleanValue('hasMembersWithLicenseErrors', $this->getHasMembersWithLicenseErrors());
         $writer->writeBooleanValue('hideFromAddressLists', $this->getHideFromAddressLists());
         $writer->writeBooleanValue('hideFromOutlookClients', $this->getHideFromOutlookClients());
+        $writer->writeCollectionOfPrimitiveValues('infoCatalogs', $this->getInfoCatalogs());
         $writer->writeBooleanValue('isArchived', $this->getIsArchived());
         $writer->writeBooleanValue('isAssignableToRole', $this->getIsAssignableToRole());
         $writer->writeBooleanValue('isManagementRestricted', $this->getIsManagementRestricted());
@@ -1330,6 +1353,14 @@ class Group extends DirectoryObject implements Parsable
     */
     public function setHideFromOutlookClients(?bool $value): void {
         $this->getBackingStore()->set('hideFromOutlookClients', $value);
+    }
+
+    /**
+     * Sets the infoCatalogs property value. The infoCatalogs property
+     * @param array<string>|null $value Value to set for the infoCatalogs property.
+    */
+    public function setInfoCatalogs(?array $value): void {
+        $this->getBackingStore()->set('infoCatalogs', $value);
     }
 
     /**

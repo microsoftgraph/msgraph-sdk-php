@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\BrowseSessions\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get browseSessions from solutions
+ * The list of browse sessions in the tenant.
 */
 class BrowseSessionBaseItemRequestBuilderGetQueryParameters 
 {

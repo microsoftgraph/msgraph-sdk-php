@@ -25,7 +25,7 @@ class GranularDriveRestoreArtifact extends GranularRestoreArtifactBase implement
     }
 
     /**
-     * Gets the directoryObjectId property value. The directoryObjectId property
+     * Gets the directoryObjectId property value. Id of the drive in which artifact is present.
      * @return string|null
     */
     public function getDirectoryObjectId(): ?string {
@@ -57,7 +57,7 @@ class GranularDriveRestoreArtifact extends GranularRestoreArtifactBase implement
     }
 
     /**
-     * Sets the directoryObjectId property value. The directoryObjectId property
+     * Sets the directoryObjectId property value. Id of the drive in which artifact is present.
      * @param string|null $value Value to set for the directoryObjectId property.
     */
     public function setDirectoryObjectId(?string $value): void {

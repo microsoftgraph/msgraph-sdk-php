@@ -30,10 +30,11 @@ class CompleteMigrationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action completeMigration
+     * Complete the migration of external messages by removing migration mode from a chat. Complete migration operations were initially restricted to newly created standard channels using migration templates specifically designed for the initial migration process. For more information, see Import third-party platform messages to Teams using Microsoft Graph. After a completeMigration request is made for an existing or new chat, you can start a migration session by calling chat: startMigration. This API supportes the following channel types.
      * @param CompleteMigrationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/chat-completemigration?view=graph-rest-1.0 Find more info here
     */
     public function post(?CompleteMigrationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class CompleteMigrationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action completeMigration
+     * Complete the migration of external messages by removing migration mode from a chat. Complete migration operations were initially restricted to newly created standard channels using migration templates specifically designed for the initial migration process. For more information, see Import third-party platform messages to Teams using Microsoft Graph. After a completeMigration request is made for an existing or new chat, you can start a migration session by calling chat: startMigration. This API supportes the following channel types.
      * @param CompleteMigrationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

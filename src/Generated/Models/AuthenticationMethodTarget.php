@@ -28,6 +28,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget': return new MicrosoftAuthenticatorAuthenticationMethodTarget();
                 case '#microsoft.graph.passkeyAuthenticationMethodTarget': return new PasskeyAuthenticationMethodTarget();
                 case '#microsoft.graph.smsAuthenticationMethodTarget': return new SmsAuthenticationMethodTarget();
+                case '#microsoft.graph.verifiableCredentialAuthenticationMethodTarget': return new VerifiableCredentialAuthenticationMethodTarget();
             }
         }
         return new AuthenticationMethodTarget();

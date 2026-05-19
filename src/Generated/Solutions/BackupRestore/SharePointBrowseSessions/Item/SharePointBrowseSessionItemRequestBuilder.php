@@ -45,10 +45,11 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      * @param SharePointBrowseSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointBrowseSession|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sharepointbrowsesession-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharePointBrowseSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get sharePointBrowseSessions from solutions
+     * Read the properties and relationships of sharePointBrowseSession object.
      * @param SharePointBrowseSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

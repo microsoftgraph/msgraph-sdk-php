@@ -50,7 +50,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the exchange property value. The exchange property
+     * Gets the exchange property value. The Exchange settings for mailbox discovery.
      * @return ExchangeSettings|null
     */
     public function getExchange(): ?ExchangeSettings {
@@ -174,7 +174,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the exchange property value. The exchange property
+     * Sets the exchange property value. The Exchange settings for mailbox discovery.
      * @param ExchangeSettings|null $value Value to set for the exchange property.
     */
     public function setExchange(?ExchangeSettings $value): void {

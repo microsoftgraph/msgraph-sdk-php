@@ -45,7 +45,7 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @param GranularSiteRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularSiteRestoreArtifact|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get granularSiteRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @param GranularSiteRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

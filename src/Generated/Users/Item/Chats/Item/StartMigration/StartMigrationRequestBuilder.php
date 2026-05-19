@@ -30,11 +30,12 @@ class StartMigrationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action startMigration
+     * Start the migration of external messages by enabling migration mode in an existing chat. Import operations were limited to newly created standard channels that were in an empty state. For more information, see Import third-party platform messages to Teams using Microsoft Graph. You can define a minimum timestamp for content migration that enables the import of messages from the past. The specified timestamp must be earlier than the current createdDateTime of the chat. Imported content is always limited by the createdDateTime of the target thread. An optional createdDateTime property in the payload allows you to update this value, but with strict rules: This API supportes the following channel types.
      * @param StartMigrationPostRequestBody $body The request body
      * @param StartMigrationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/chat-startmigration?view=graph-rest-1.0 Find more info here
     */
     public function post(StartMigrationPostRequestBody $body, ?StartMigrationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -45,7 +46,7 @@ class StartMigrationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action startMigration
+     * Start the migration of external messages by enabling migration mode in an existing chat. Import operations were limited to newly created standard channels that were in an empty state. For more information, see Import third-party platform messages to Teams using Microsoft Graph. You can define a minimum timestamp for content migration that enables the import of messages from the past. The specified timestamp must be earlier than the current createdDateTime of the chat. Imported content is always limited by the createdDateTime of the target thread. An optional createdDateTime property in the payload allows you to update this value, but with strict rules: This API supportes the following channel types.
      * @param StartMigrationPostRequestBody $body The request body
      * @param StartMigrationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

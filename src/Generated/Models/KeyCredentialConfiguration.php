@@ -58,12 +58,25 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
+     * Gets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they're exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
+     * @return AppManagementPolicyActorExemptions|null
+    */
+    public function getExcludeActors(): ?AppManagementPolicyActorExemptions {
+        $val = $this->getBackingStore()->get('excludeActors');
+        if (is_null($val) || $val instanceof AppManagementPolicyActorExemptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeActors'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'excludeActors' => fn(ParseNode $n) => $o->setExcludeActors($n->getObjectValue([AppManagementPolicyActorExemptions::class, 'createFromDiscriminatorValue'])),
             'maxLifetime' => fn(ParseNode $n) => $o->setMaxLifetime($n->getDateIntervalValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'restrictForAppsCreatedAfterDateTime' => fn(ParseNode $n) => $o->setRestrictForAppsCreatedAfterDateTime($n->getDateTimeValue()),
@@ -73,7 +86,7 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
+     * Gets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to asymmetricKeyLifetime.
      * @return DateInterval|null
     */
     public function getMaxLifetime(): ?DateInterval {
@@ -137,6 +150,7 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('excludeActors', $this->getExcludeActors());
         $writer->writeDateIntervalValue('maxLifetime', $this->getMaxLifetime());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('restrictForAppsCreatedAfterDateTime', $this->getRestrictForAppsCreatedAfterDateTime());
@@ -162,7 +176,15 @@ class KeyCredentialConfiguration implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
+     * Sets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they're exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
+     * @param AppManagementPolicyActorExemptions|null $value Value to set for the excludeActors property.
+    */
+    public function setExcludeActors(?AppManagementPolicyActorExemptions $value): void {
+        $this->getBackingStore()->set('excludeActors', $value);
+    }
+
+    /**
+     * Sets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to asymmetricKeyLifetime.
      * @param DateInterval|null $value Value to set for the maxLifetime property.
     */
     public function setMaxLifetime(?DateInterval $value): void {

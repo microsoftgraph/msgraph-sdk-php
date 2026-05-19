@@ -45,7 +45,7 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @param GranularDriveRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularDriveRestoreArtifact|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get granularDriveRestoreArtifacts from solutions
+     * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @param GranularDriveRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

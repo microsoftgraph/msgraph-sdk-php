@@ -26,7 +26,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the baseUrl property value. The baseUrl property
+     * Gets the baseUrl property value. The base URL of the web page for the repository.
      * @return string|null
     */
     public function getBaseUrl(): ?string {
@@ -53,7 +53,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the login property value. The login property
+     * Gets the login property value. The login (name) of the repository.
      * @return string|null
     */
     public function getLogin(): ?string {
@@ -65,7 +65,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the owner property value. The owner property
+     * Gets the owner property value. The login of the owner of the repository.
      * @return string|null
     */
     public function getOwner(): ?string {
@@ -77,7 +77,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ownerType property value. The ownerType property
+     * Gets the ownerType property value. The type of owner of the repository, for example, User or Organization.
      * @return string|null
     */
     public function getOwnerType(): ?string {
@@ -89,7 +89,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the repoId property value. The repoId property
+     * Gets the repoId property value. The unique and immutable ID of the GitHub repository.
      * @return string|null
     */
     public function getRepoId(): ?string {
@@ -114,7 +114,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the baseUrl property value. The baseUrl property
+     * Sets the baseUrl property value. The base URL of the web page for the repository.
      * @param string|null $value Value to set for the baseUrl property.
     */
     public function setBaseUrl(?string $value): void {
@@ -122,7 +122,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the login property value. The login property
+     * Sets the login property value. The login (name) of the repository.
      * @param string|null $value Value to set for the login property.
     */
     public function setLogin(?string $value): void {
@@ -130,7 +130,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the owner property value. The owner property
+     * Sets the owner property value. The login of the owner of the repository.
      * @param string|null $value Value to set for the owner property.
     */
     public function setOwner(?string $value): void {
@@ -138,7 +138,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ownerType property value. The ownerType property
+     * Sets the ownerType property value. The type of owner of the repository, for example, User or Organization.
      * @param string|null $value Value to set for the ownerType property.
     */
     public function setOwnerType(?string $value): void {
@@ -146,7 +146,7 @@ class GitHubRepoEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the repoId property value. The repoId property
+     * Sets the repoId property value. The unique and immutable ID of the GitHub repository.
      * @param string|null $value Value to set for the repoId property.
     */
     public function setRepoId(?string $value): void {

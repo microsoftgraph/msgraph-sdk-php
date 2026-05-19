@@ -26,7 +26,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email address of the user account.
      * @return string|null
     */
     public function getEmail(): ?string {
@@ -53,7 +53,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the login property value. The login property
+     * Gets the login property value. The user's login (GitHub handle).
      * @return string|null
     */
     public function getLogin(): ?string {
@@ -65,7 +65,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The user's name.
      * @return string|null
     */
     public function getName(): ?string {
@@ -77,7 +77,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The unique and immutable ID of the user account.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -89,7 +89,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The URL of the user's profile web page. For example, https://github.com/my-login.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -114,7 +114,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email address of the user account.
      * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
@@ -122,7 +122,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the login property value. The login property
+     * Sets the login property value. The user's login (GitHub handle).
      * @param string|null $value Value to set for the login property.
     */
     public function setLogin(?string $value): void {
@@ -130,7 +130,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The user's name.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -138,7 +138,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The unique and immutable ID of the user account.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
@@ -146,7 +146,7 @@ class GitHubUserEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The URL of the user's profile web page. For example, https://github.com/my-login.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

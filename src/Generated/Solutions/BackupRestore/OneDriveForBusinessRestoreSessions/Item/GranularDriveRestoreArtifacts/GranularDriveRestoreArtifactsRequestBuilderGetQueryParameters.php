@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessR
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get granularDriveRestoreArtifacts from solutions
+ * Get a list of the granularDriveRestoreArtifact objects and their properties.
 */
 class GranularDriveRestoreArtifactsRequestBuilderGetQueryParameters 
 {

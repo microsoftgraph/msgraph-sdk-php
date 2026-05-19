@@ -34,6 +34,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
                 case '#microsoft.graph.smsAuthenticationMethodConfiguration': return new SmsAuthenticationMethodConfiguration();
                 case '#microsoft.graph.softwareOathAuthenticationMethodConfiguration': return new SoftwareOathAuthenticationMethodConfiguration();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();
+                case '#microsoft.graph.verifiableCredentialsAuthenticationMethodConfiguration': return new VerifiableCredentialsAuthenticationMethodConfiguration();
                 case '#microsoft.graph.voiceAuthenticationMethodConfiguration': return new VoiceAuthenticationMethodConfiguration();
                 case '#microsoft.graph.x509CertificateAuthenticationMethodConfiguration': return new X509CertificateAuthenticationMethodConfiguration();
             }

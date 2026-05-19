@@ -27,7 +27,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the account property value. The account property
+     * Gets the account property value. The account that is associated with the sign-in session ID.
      * @return UserEvidence|null
     */
     public function getAccount(): ?UserEvidence {
@@ -39,7 +39,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the endUtcDateTime property value. The endUtcDateTime property
+     * Gets the endUtcDateTime property value. The session end time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getEndUtcDateTime(): ?DateTime {
@@ -66,7 +66,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the host property value. The host property
+     * Gets the host property value. The host for the session.
      * @return DeviceEvidence|null
     */
     public function getHost(): ?DeviceEvidence {
@@ -78,7 +78,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the sessionId property value. The sessionId property
+     * Gets the sessionId property value. The session ID for the account reported in the alert, for example, 0x3e7.
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -90,7 +90,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the startUtcDateTime property value. The startUtcDateTime property
+     * Gets the startUtcDateTime property value. The session start time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getStartUtcDateTime(): ?DateTime {
@@ -115,7 +115,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the account property value. The account property
+     * Sets the account property value. The account that is associated with the sign-in session ID.
      * @param UserEvidence|null $value Value to set for the account property.
     */
     public function setAccount(?UserEvidence $value): void {
@@ -123,7 +123,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the endUtcDateTime property value. The endUtcDateTime property
+     * Sets the endUtcDateTime property value. The session end time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the endUtcDateTime property.
     */
     public function setEndUtcDateTime(?DateTime $value): void {
@@ -131,7 +131,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the host property value. The host property
+     * Sets the host property value. The host for the session.
      * @param DeviceEvidence|null $value Value to set for the host property.
     */
     public function setHost(?DeviceEvidence $value): void {
@@ -139,7 +139,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the sessionId property value. The sessionId property
+     * Sets the sessionId property value. The session ID for the account reported in the alert, for example, 0x3e7.
      * @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value): void {
@@ -147,7 +147,7 @@ class HostLogonSessionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the startUtcDateTime property value. The startUtcDateTime property
+     * Sets the startUtcDateTime property value. The session start time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the startUtcDateTime property.
     */
     public function setStartUtcDateTime(?DateTime $value): void {

@@ -27,7 +27,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the dnsServerIp property value. The dnsServerIp property
+     * Gets the dnsServerIp property value. An IP entity that represents the DNS server that resolves the request.
      * @return IpEvidence|null
     */
     public function getDnsServerIp(): ?IpEvidence {
@@ -39,7 +39,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. The name of the DNS record associated with the alert.
      * @return string|null
     */
     public function getDomainName(): ?string {
@@ -65,7 +65,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the hostIpAddress property value. The hostIpAddress property
+     * Gets the hostIpAddress property value. An IP entity that represents the DNS request client.
      * @return IpEvidence|null
     */
     public function getHostIpAddress(): ?IpEvidence {
@@ -77,7 +77,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the ipAddresses property value. The ipAddresses property
+     * Gets the ipAddresses property value. IP entities that represent the resolved IP addresses.
      * @return array<IpEvidence>|null
     */
     public function getIpAddresses(): ?array {
@@ -103,7 +103,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the dnsServerIp property value. The dnsServerIp property
+     * Sets the dnsServerIp property value. An IP entity that represents the DNS server that resolves the request.
      * @param IpEvidence|null $value Value to set for the dnsServerIp property.
     */
     public function setDnsServerIp(?IpEvidence $value): void {
@@ -111,7 +111,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. The name of the DNS record associated with the alert.
      * @param string|null $value Value to set for the domainName property.
     */
     public function setDomainName(?string $value): void {
@@ -119,7 +119,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the hostIpAddress property value. The hostIpAddress property
+     * Sets the hostIpAddress property value. An IP entity that represents the DNS request client.
      * @param IpEvidence|null $value Value to set for the hostIpAddress property.
     */
     public function setHostIpAddress(?IpEvidence $value): void {
@@ -127,7 +127,7 @@ class DnsEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the ipAddresses property value. The ipAddresses property
+     * Sets the ipAddresses property value. IP entities that represent the resolved IP addresses.
      * @param array<IpEvidence>|null $value Value to set for the ipAddresses property.
     */
     public function setIpAddresses(?array $value): void {

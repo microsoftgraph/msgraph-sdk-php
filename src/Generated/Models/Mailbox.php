@@ -38,7 +38,7 @@ class Mailbox extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the folders property value. The folders property
+     * Gets the folders property value. The collection of folders in the mailbox.
      * @return array<MailboxFolder>|null
     */
     public function getFolders(): ?array {
@@ -61,7 +61,7 @@ class Mailbox extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the folders property value. The folders property
+     * Sets the folders property value. The collection of folders in the mailbox.
      * @param array<MailboxFolder>|null $value Value to set for the folders property.
     */
     public function setFolders(?array $value): void {

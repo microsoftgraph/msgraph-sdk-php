@@ -36,7 +36,7 @@ class ExchangeSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the primaryMailboxId property value. The primaryMailboxId property
+     * Gets the primaryMailboxId property value. The unique identifier for the user's primary mailbox.
      * @return string|null
     */
     public function getPrimaryMailboxId(): ?string {
@@ -57,7 +57,7 @@ class ExchangeSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the primaryMailboxId property value. The primaryMailboxId property
+     * Sets the primaryMailboxId property value. The unique identifier for the user's primary mailbox.
      * @param string|null $value Value to set for the primaryMailboxId property.
     */
     public function setPrimaryMailboxId(?string $value): void {

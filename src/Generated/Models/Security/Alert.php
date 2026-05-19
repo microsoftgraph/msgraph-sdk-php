@@ -88,7 +88,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the categories property value. The categories property
+     * Gets the categories property value. The attack kill-chain categories that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @return array<string>|null
     */
     public function getCategories(): ?array {
@@ -102,7 +102,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
+     * Gets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework. This property is in the process of being deprecated. Use the categories property instead.
      * @return string|null
     */
     public function getCategory(): ?string {
@@ -607,7 +607,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the categories property value. The categories property
+     * Sets the categories property value. The attack kill-chain categories that the alert belongs to. Aligned with the MITRE ATT&CK framework.
      * @param array<string>|null $value Value to set for the categories property.
     */
     public function setCategories(?array $value): void {
@@ -615,7 +615,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework.
+     * Sets the category property value. The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework. This property is in the process of being deprecated. Use the categories property instead.
      * @param string|null $value Value to set for the category property.
     */
     public function setCategory(?string $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get folders from admin
+ * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
 */
 class FoldersRequestBuilderGetQueryParameters 
 {

@@ -59,10 +59,11 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from admin
+     * Get the mailboxItem collection within a specified mailboxFolder in a mailbox.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxItemCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailboxfolder-list-items?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +74,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from admin
+     * Get the mailboxItem collection within a specified mailboxFolder in a mailbox.
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

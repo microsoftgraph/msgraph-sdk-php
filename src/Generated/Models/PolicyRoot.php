@@ -251,7 +251,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * Gets the ownerlessGroupPolicy property value. The policy configuration for managing groups that have lost their sole owner.
      * @return OwnerlessGroupPolicy|null
     */
     public function getOwnerlessGroupPolicy(): ?OwnerlessGroupPolicy {
@@ -482,7 +482,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * Sets the ownerlessGroupPolicy property value. The policy configuration for managing groups that have lost their sole owner.
      * @param OwnerlessGroupPolicy|null $value Value to set for the ownerlessGroupPolicy property.
     */
     public function setOwnerlessGroupPolicy(?OwnerlessGroupPolicy $value): void {

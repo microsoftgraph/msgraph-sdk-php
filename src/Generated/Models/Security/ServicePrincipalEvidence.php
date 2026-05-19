@@ -26,7 +26,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The unique identifier for the associated application, represented by its appId property.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -38,7 +38,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the appOwnerTenantId property value. The appOwnerTenantId property
+     * Gets the appOwnerTenantId property value. The tenant ID where the application is registered.
      * @return string|null
     */
     public function getAppOwnerTenantId(): ?string {
@@ -66,7 +66,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the servicePrincipalName property value. The servicePrincipalName property
+     * Gets the servicePrincipalName property value. The display name for the service principal.
      * @return string|null
     */
     public function getServicePrincipalName(): ?string {
@@ -78,7 +78,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the servicePrincipalObjectId property value. The servicePrincipalObjectId property
+     * Gets the servicePrincipalObjectId property value. The unique identifier for the service principal.
      * @return string|null
     */
     public function getServicePrincipalObjectId(): ?string {
@@ -90,7 +90,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the servicePrincipalType property value. The servicePrincipalType property
+     * Gets the servicePrincipalType property value. The service principal type. Possible values are: unknown, application, managedIdentity, legacy, unknownFutureValue.
      * @return ServicePrincipalType|null
     */
     public function getServicePrincipalType(): ?ServicePrincipalType {
@@ -102,7 +102,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Microsoft Entra tenant ID of the service principal.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -128,7 +128,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The unique identifier for the associated application, represented by its appId property.
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
@@ -136,7 +136,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the appOwnerTenantId property value. The appOwnerTenantId property
+     * Sets the appOwnerTenantId property value. The tenant ID where the application is registered.
      * @param string|null $value Value to set for the appOwnerTenantId property.
     */
     public function setAppOwnerTenantId(?string $value): void {
@@ -144,7 +144,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the servicePrincipalName property value. The servicePrincipalName property
+     * Sets the servicePrincipalName property value. The display name for the service principal.
      * @param string|null $value Value to set for the servicePrincipalName property.
     */
     public function setServicePrincipalName(?string $value): void {
@@ -152,7 +152,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the servicePrincipalObjectId property value. The servicePrincipalObjectId property
+     * Sets the servicePrincipalObjectId property value. The unique identifier for the service principal.
      * @param string|null $value Value to set for the servicePrincipalObjectId property.
     */
     public function setServicePrincipalObjectId(?string $value): void {
@@ -160,7 +160,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the servicePrincipalType property value. The servicePrincipalType property
+     * Sets the servicePrincipalType property value. The service principal type. Possible values are: unknown, application, managedIdentity, legacy, unknownFutureValue.
      * @param ServicePrincipalType|null $value Value to set for the servicePrincipalType property.
     */
     public function setServicePrincipalType(?ServicePrincipalType $value): void {
@@ -168,7 +168,7 @@ class ServicePrincipalEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Microsoft Entra tenant ID of the service principal.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

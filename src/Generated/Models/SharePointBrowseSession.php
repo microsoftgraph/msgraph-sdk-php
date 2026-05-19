@@ -37,7 +37,7 @@ class SharePointBrowseSession extends BrowseSessionBase implements Parsable
     }
 
     /**
-     * Gets the siteId property value. The siteId property
+     * Gets the siteId property value. Id of the backed-up SharePoint site.
      * @return string|null
     */
     public function getSiteId(): ?string {
@@ -58,7 +58,7 @@ class SharePointBrowseSession extends BrowseSessionBase implements Parsable
     }
 
     /**
-     * Sets the siteId property value. The siteId property
+     * Sets the siteId property value. Id of the backed-up SharePoint site.
      * @param string|null $value Value to set for the siteId property.
     */
     public function setSiteId(?string $value): void {

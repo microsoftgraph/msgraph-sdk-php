@@ -34,7 +34,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the browseSessionId property value. The browseSessionId property
+     * Gets the browseSessionId property value. The unique identifier of the browseSession
      * @return string|null
     */
     public function getBrowseSessionId(): ?string {
@@ -46,7 +46,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the completionDateTime property value. The completionDateTime property
+     * Gets the completionDateTime property value. Date time when the artifact's restoration completes.
      * @return DateTime|null
     */
     public function getCompletionDateTime(): ?DateTime {
@@ -77,7 +77,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the restoredItemKey property value. The restoredItemKey property
+     * Gets the restoredItemKey property value. The unique identifier for the restored artifact.
      * @return string|null
     */
     public function getRestoredItemKey(): ?string {
@@ -89,7 +89,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the restoredItemPath property value. The restoredItemPath property
+     * Gets the restoredItemPath property value. The path of the restored artifact. It's the path of the folder where all the artifacts are restored within a granular restore session.
      * @return string|null
     */
     public function getRestoredItemPath(): ?string {
@@ -101,7 +101,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the restoredItemWebUrl property value. The restoredItemWebUrl property
+     * Gets the restoredItemWebUrl property value. The web url of the restored artifact.
      * @return string|null
     */
     public function getRestoredItemWebUrl(): ?string {
@@ -113,7 +113,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the restorePointDateTime property value. The restorePointDateTime property
+     * Gets the restorePointDateTime property value. The restore point date time to which the artifact is restored.
      * @return DateTime|null
     */
     public function getRestorePointDateTime(): ?DateTime {
@@ -125,7 +125,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The start time of the restoration.
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -149,7 +149,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The original web url of the artifact being restored.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -178,7 +178,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the browseSessionId property value. The browseSessionId property
+     * Sets the browseSessionId property value. The unique identifier of the browseSession
      * @param string|null $value Value to set for the browseSessionId property.
     */
     public function setBrowseSessionId(?string $value): void {
@@ -186,7 +186,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the completionDateTime property value. The completionDateTime property
+     * Sets the completionDateTime property value. Date time when the artifact's restoration completes.
      * @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value): void {
@@ -194,7 +194,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the restoredItemKey property value. The restoredItemKey property
+     * Sets the restoredItemKey property value. The unique identifier for the restored artifact.
      * @param string|null $value Value to set for the restoredItemKey property.
     */
     public function setRestoredItemKey(?string $value): void {
@@ -202,7 +202,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the restoredItemPath property value. The restoredItemPath property
+     * Sets the restoredItemPath property value. The path of the restored artifact. It's the path of the folder where all the artifacts are restored within a granular restore session.
      * @param string|null $value Value to set for the restoredItemPath property.
     */
     public function setRestoredItemPath(?string $value): void {
@@ -210,7 +210,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the restoredItemWebUrl property value. The restoredItemWebUrl property
+     * Sets the restoredItemWebUrl property value. The web url of the restored artifact.
      * @param string|null $value Value to set for the restoredItemWebUrl property.
     */
     public function setRestoredItemWebUrl(?string $value): void {
@@ -218,7 +218,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the restorePointDateTime property value. The restorePointDateTime property
+     * Sets the restorePointDateTime property value. The restore point date time to which the artifact is restored.
      * @param DateTime|null $value Value to set for the restorePointDateTime property.
     */
     public function setRestorePointDateTime(?DateTime $value): void {
@@ -226,7 +226,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The start time of the restoration.
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -242,7 +242,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The original web url of the artifact being restored.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

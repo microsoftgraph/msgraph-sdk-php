@@ -40,7 +40,7 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
-     * Gets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * Gets the granularSiteRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @return array<GranularSiteRestoreArtifact>|null
     */
     public function getGranularSiteRestoreArtifacts(): ?array {
@@ -93,7 +93,7 @@ class SharePointRestoreSession extends RestoreSessionBase implements Parsable
     }
 
     /**
-     * Sets the granularSiteRestoreArtifacts property value. The granularSiteRestoreArtifacts property
+     * Sets the granularSiteRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
      * @param array<GranularSiteRestoreArtifact>|null $value Value to set for the granularSiteRestoreArtifacts property.
     */
     public function setGranularSiteRestoreArtifacts(?array $value): void {

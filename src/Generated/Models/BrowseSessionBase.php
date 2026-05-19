@@ -34,7 +34,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the backupSizeInBytes property value. The backupSizeInBytes property
+     * Gets the backupSizeInBytes property value. The size of the backup in bytes.
      * @return string|null
     */
     public function getBackupSizeInBytes(): ?string {
@@ -46,7 +46,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the browse session was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -58,7 +58,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Contains the error details if the browse session creation fails.
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -70,7 +70,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time after which the browse session is deleted automatically.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -99,7 +99,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the restorePointDateTime property value. The restorePointDateTime property
+     * Gets the restorePointDateTime property value. The date and time of the restore point on which the browse session is created.
      * @return DateTime|null
     */
     public function getRestorePointDateTime(): ?DateTime {
@@ -150,7 +150,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the backupSizeInBytes property value. The backupSizeInBytes property
+     * Sets the backupSizeInBytes property value. The size of the backup in bytes.
      * @param string|null $value Value to set for the backupSizeInBytes property.
     */
     public function setBackupSizeInBytes(?string $value): void {
@@ -158,7 +158,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the browse session was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -166,7 +166,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Contains the error details if the browse session creation fails.
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
@@ -174,7 +174,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time after which the browse session is deleted automatically.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -182,7 +182,7 @@ class BrowseSessionBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the restorePointDateTime property value. The restorePointDateTime property
+     * Sets the restorePointDateTime property value. The date and time of the restore point on which the browse session is created.
      * @param DateTime|null $value Value to set for the restorePointDateTime property.
     */
     public function setRestorePointDateTime(?DateTime $value): void {

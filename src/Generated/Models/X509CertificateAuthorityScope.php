@@ -71,7 +71,7 @@ class X509CertificateAuthorityScope implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the includeTargets property value. The includeTargets property
+     * Gets the includeTargets property value. A collection of groups that are enabled to be in scope to use certificates issued by specific certificate authority.
      * @return array<IncludeTarget>|null
     */
     public function getIncludeTargets(): ?array {
@@ -97,7 +97,7 @@ class X509CertificateAuthorityScope implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the publicKeyInfrastructureIdentifier property value. The publicKeyInfrastructureIdentifier property
+     * Gets the publicKeyInfrastructureIdentifier property value. Public Key Infrastructure container object under which the certificate authorities are stored in the Entra PKI based trust store.
      * @return string|null
     */
     public function getPublicKeyInfrastructureIdentifier(): ?string {
@@ -109,7 +109,7 @@ class X509CertificateAuthorityScope implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the subjectKeyIdentifier property value. The subjectKeyIdentifier property
+     * Gets the subjectKeyIdentifier property value. Subject Key Identifier that identifies the certificate authority uniquely.
      * @return string|null
     */
     public function getSubjectKeyIdentifier(): ?string {
@@ -149,7 +149,7 @@ class X509CertificateAuthorityScope implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the includeTargets property value. The includeTargets property
+     * Sets the includeTargets property value. A collection of groups that are enabled to be in scope to use certificates issued by specific certificate authority.
      * @param array<IncludeTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value): void {
@@ -165,7 +165,7 @@ class X509CertificateAuthorityScope implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the publicKeyInfrastructureIdentifier property value. The publicKeyInfrastructureIdentifier property
+     * Sets the publicKeyInfrastructureIdentifier property value. Public Key Infrastructure container object under which the certificate authorities are stored in the Entra PKI based trust store.
      * @param string|null $value Value to set for the publicKeyInfrastructureIdentifier property.
     */
     public function setPublicKeyInfrastructureIdentifier(?string $value): void {
@@ -173,7 +173,7 @@ class X509CertificateAuthorityScope implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the subjectKeyIdentifier property value. The subjectKeyIdentifier property
+     * Sets the subjectKeyIdentifier property value. Subject Key Identifier that identifies the certificate authority uniquely.
      * @param string|null $value Value to set for the subjectKeyIdentifier property.
     */
     public function setSubjectKeyIdentifier(?string $value): void {

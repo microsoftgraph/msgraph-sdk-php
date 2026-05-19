@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\SharePointBrowseSess
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get sharePointBrowseSessions from solutions
+ * Get a list of the sharePointBrowseSession objects and their properties.
 */
 class SharePointBrowseSessionsRequestBuilderGetQueryParameters 
 {

@@ -36,7 +36,7 @@ class GranularSiteRestoreArtifact extends GranularRestoreArtifactBase implements
     }
 
     /**
-     * Gets the siteId property value. The siteId property
+     * Gets the siteId property value. Id of the site in which artifact is present.
      * @return string|null
     */
     public function getSiteId(): ?string {
@@ -57,7 +57,7 @@ class GranularSiteRestoreArtifact extends GranularRestoreArtifactBase implements
     }
 
     /**
-     * Sets the siteId property value. The siteId property
+     * Sets the siteId property value. Id of the site in which artifact is present.
      * @param string|null $value Value to set for the siteId property.
     */
     public function setSiteId(?string $value): void {

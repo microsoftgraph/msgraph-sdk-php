@@ -31,10 +31,11 @@ class ExchangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user's primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @param ExchangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExchangeSettings|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/usersettings-list-exchange?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExchangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class ExchangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get exchange from users
+     * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user's primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
      * @param ExchangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

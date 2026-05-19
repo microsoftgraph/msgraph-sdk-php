@@ -69,7 +69,7 @@ class MailboxItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get mailboxes from admin
+     * Represents a user's mailboxes.
      * @param MailboxItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Mailbox|null>
      * @throws Exception
@@ -116,7 +116,7 @@ class MailboxItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get mailboxes from admin
+     * Represents a user's mailboxes.
      * @param MailboxItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
