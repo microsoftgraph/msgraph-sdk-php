@@ -52,10 +52,11 @@ class BrowseSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      * @param BrowseSessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowseSessionBaseCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/backuprestoreroot-list-browsesessions?view=graph-rest-1.0 Find more info here
     */
     public function get(?BrowseSessionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class BrowseSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get browseSessions from solutions
+     * Get a list of the browseSessionBase objects and their properties.
      * @param BrowseSessionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

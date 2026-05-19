@@ -32,7 +32,20 @@ class AppManagementApplicationConfiguration extends AppManagementConfiguration i
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'identifierUris' => fn(ParseNode $n) => $o->setIdentifierUris($n->getObjectValue([IdentifierUriConfiguration::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application.
+     * @return IdentifierUriConfiguration|null
+    */
+    public function getIdentifierUris(): ?IdentifierUriConfiguration {
+        $val = $this->getBackingStore()->get('identifierUris');
+        if (is_null($val) || $val instanceof IdentifierUriConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identifierUris'");
     }
 
     /**
@@ -41,6 +54,15 @@ class AppManagementApplicationConfiguration extends AppManagementConfiguration i
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('identifierUris', $this->getIdentifierUris());
+    }
+
+    /**
+     * Sets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application.
+     * @param IdentifierUriConfiguration|null $value Value to set for the identifierUris property.
+    */
+    public function setIdentifierUris(?IdentifierUriConfiguration $value): void {
+        $this->getBackingStore()->set('identifierUris', $value);
     }
 
 }

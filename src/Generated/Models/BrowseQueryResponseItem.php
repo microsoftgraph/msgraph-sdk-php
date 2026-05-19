@@ -73,7 +73,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the itemKey property value. The itemKey property
+     * Gets the itemKey property value. Unique identifier of the returned item.
      * @return string|null
     */
     public function getItemKey(): ?string {
@@ -85,7 +85,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the itemsCount property value. The itemsCount property
+     * Gets the itemsCount property value. The count of items present within the items; for example, the count of files in a folder.
      * @return int|null
     */
     public function getItemsCount(): ?int {
@@ -97,7 +97,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the item.
      * @return string|null
     */
     public function getName(): ?string {
@@ -121,7 +121,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the sizeInBytes property value. The sizeInBytes property
+     * Gets the sizeInBytes property value. The size of the item in bytes.
      * @return string|null
     */
     public function getSizeInBytes(): ?string {
@@ -145,7 +145,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The web URL of the item.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -188,7 +188,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the itemKey property value. The itemKey property
+     * Sets the itemKey property value. Unique identifier of the returned item.
      * @param string|null $value Value to set for the itemKey property.
     */
     public function setItemKey(?string $value): void {
@@ -196,7 +196,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the itemsCount property value. The itemsCount property
+     * Sets the itemsCount property value. The count of items present within the items; for example, the count of files in a folder.
      * @param int|null $value Value to set for the itemsCount property.
     */
     public function setItemsCount(?int $value): void {
@@ -204,7 +204,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the item.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -220,7 +220,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the sizeInBytes property value. The sizeInBytes property
+     * Sets the sizeInBytes property value. The size of the item in bytes.
      * @param string|null $value Value to set for the sizeInBytes property.
     */
     public function setSizeInBytes(?string $value): void {
@@ -236,7 +236,7 @@ class BrowseQueryResponseItem implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The web URL of the item.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

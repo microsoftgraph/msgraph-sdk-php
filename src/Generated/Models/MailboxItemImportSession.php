@@ -57,7 +57,7 @@ class MailboxItemImportSession implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time in UTC when the import session expires. The date and time information uses ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -82,7 +82,7 @@ class MailboxItemImportSession implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the importUrl property value. The importUrl property
+     * Gets the importUrl property value. The URL endpoint that accepts POST requests for uploading a mailbox item exported using exportItems.
      * @return string|null
     */
     public function getImportUrl(): ?string {
@@ -133,7 +133,7 @@ class MailboxItemImportSession implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time in UTC when the import session expires. The date and time information uses ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -141,7 +141,7 @@ class MailboxItemImportSession implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the importUrl property value. The importUrl property
+     * Sets the importUrl property value. The URL endpoint that accepts POST requests for uploading a mailbox item exported using exportItems.
      * @param string|null $value Value to set for the importUrl property.
     */
     public function setImportUrl(?string $value): void {

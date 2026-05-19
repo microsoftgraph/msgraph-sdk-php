@@ -59,10 +59,11 @@ class FoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get folders from admin
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
      * @param FoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxFolderCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailbox-list-folders?view=graph-rest-1.0 Find more info here
     */
     public function get(?FoldersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +74,7 @@ class FoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get folders from admin
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
      * @param FoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

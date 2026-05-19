@@ -48,6 +48,18 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     }
 
     /**
+     * Gets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * @return bool|null
+    */
+    public function getAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled'");
+    }
+
+    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -158,6 +170,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled' => fn(ParseNode $n) => $o->setAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled($n->getBooleanValue()),
             'blockCloudObjectTakeoverThroughHardMatchEnabled' => fn(ParseNode $n) => $o->setBlockCloudObjectTakeoverThroughHardMatchEnabled($n->getBooleanValue()),
             'blockSoftMatchEnabled' => fn(ParseNode $n) => $o->setBlockSoftMatchEnabled($n->getBooleanValue()),
             'bypassDirSyncOverridesEnabled' => fn(ParseNode $n) => $o->setBypassDirSyncOverridesEnabled($n->getBooleanValue()),
@@ -330,6 +343,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeBooleanValue('allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled', $this->getAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled());
         $writer->writeBooleanValue('blockCloudObjectTakeoverThroughHardMatchEnabled', $this->getBlockCloudObjectTakeoverThroughHardMatchEnabled());
         $writer->writeBooleanValue('blockSoftMatchEnabled', $this->getBlockSoftMatchEnabled());
         $writer->writeBooleanValue('bypassDirSyncOverridesEnabled', $this->getBypassDirSyncOverridesEnabled());
@@ -359,6 +373,14 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * @param bool|null $value Value to set for the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property.
+    */
+    public function setAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(?bool $value): void {
+        $this->getBackingStore()->set('allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled', $value);
     }
 
     /**

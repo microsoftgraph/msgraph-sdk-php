@@ -38,7 +38,7 @@ class ExchangeAdmin extends Entity implements Parsable
     }
 
     /**
-     * Gets the mailboxes property value. The mailboxes property
+     * Gets the mailboxes property value. Represents a user's mailboxes.
      * @return array<Mailbox>|null
     */
     public function getMailboxes(): ?array {
@@ -74,7 +74,7 @@ class ExchangeAdmin extends Entity implements Parsable
     }
 
     /**
-     * Sets the mailboxes property value. The mailboxes property
+     * Sets the mailboxes property value. Represents a user's mailboxes.
      * @param array<Mailbox>|null $value Value to set for the mailboxes property.
     */
     public function setMailboxes(?array $value): void {

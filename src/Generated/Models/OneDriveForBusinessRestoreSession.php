@@ -68,7 +68,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     }
 
     /**
-     * Gets the granularDriveRestoreArtifacts property value. The granularDriveRestoreArtifacts property
+     * Gets the granularDriveRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @return array<GranularDriveRestoreArtifact>|null
     */
     public function getGranularDriveRestoreArtifacts(): ?array {
@@ -109,7 +109,7 @@ class OneDriveForBusinessRestoreSession extends RestoreSessionBase implements Pa
     }
 
     /**
-     * Sets the granularDriveRestoreArtifacts property value. The granularDriveRestoreArtifacts property
+     * Sets the granularDriveRestoreArtifacts property value. A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
      * @param array<GranularDriveRestoreArtifact>|null $value Value to set for the granularDriveRestoreArtifacts property.
     */
     public function setGranularDriveRestoreArtifacts(?array $value): void {

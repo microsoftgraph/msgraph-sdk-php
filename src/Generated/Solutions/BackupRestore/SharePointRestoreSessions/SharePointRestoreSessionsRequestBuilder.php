@@ -66,7 +66,7 @@ class SharePointRestoreSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new sharePointRestoreSession object.
+     * Create a new sharePointRestoreSession object. To create a granular restore session, granular site restore artifacts must be present in the payload. A request can't include both granularSiteRestoreArtifact and siteRestoreArtifact in the same create or update request. If no payload is provided when you create the restore session, the request creates an empty standard restore session by default.
      * @param SharePointRestoreSession $body The request body
      * @param SharePointRestoreSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointRestoreSession|null>
@@ -103,7 +103,7 @@ class SharePointRestoreSessionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new sharePointRestoreSession object.
+     * Create a new sharePointRestoreSession object. To create a granular restore session, granular site restore artifacts must be present in the payload. A request can't include both granularSiteRestoreArtifact and siteRestoreArtifact in the same create or update request. If no payload is provided when you create the restore session, the request creates an empty standard restore session by default.
      * @param SharePointRestoreSession $body The request body
      * @param SharePointRestoreSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

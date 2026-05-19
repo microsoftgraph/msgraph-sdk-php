@@ -58,12 +58,25 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     }
 
     /**
+     * Gets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they're exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
+     * @return AppManagementPolicyActorExemptions|null
+    */
+    public function getExcludeActors(): ?AppManagementPolicyActorExemptions {
+        $val = $this->getBackingStore()->get('excludeActors');
+        if (is_null($val) || $val instanceof AppManagementPolicyActorExemptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeActors'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'excludeActors' => fn(ParseNode $n) => $o->setExcludeActors($n->getObjectValue([AppManagementPolicyActorExemptions::class, 'createFromDiscriminatorValue'])),
             'maxLifetime' => fn(ParseNode $n) => $o->setMaxLifetime($n->getDateIntervalValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'restrictForAppsCreatedAfterDateTime' => fn(ParseNode $n) => $o->setRestrictForAppsCreatedAfterDateTime($n->getDateTimeValue()),
@@ -137,6 +150,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('excludeActors', $this->getExcludeActors());
         $writer->writeDateIntervalValue('maxLifetime', $this->getMaxLifetime());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeDateTimeValue('restrictForAppsCreatedAfterDateTime', $this->getRestrictForAppsCreatedAfterDateTime());
@@ -159,6 +173,14 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they're exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
+     * @param AppManagementPolicyActorExemptions|null $value Value to set for the excludeActors property.
+    */
+    public function setExcludeActors(?AppManagementPolicyActorExemptions $value): void {
+        $this->getBackingStore()->set('excludeActors', $value);
     }
 
     /**

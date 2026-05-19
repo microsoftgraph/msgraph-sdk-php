@@ -26,7 +26,7 @@ class OneDriveForBusinessBrowseSession extends BrowseSessionBase implements Pars
     }
 
     /**
-     * Gets the directoryObjectId property value. The directoryObjectId property
+     * Gets the directoryObjectId property value. Id of the backed-up OneDrive.
      * @return string|null
     */
     public function getDirectoryObjectId(): ?string {
@@ -58,7 +58,7 @@ class OneDriveForBusinessBrowseSession extends BrowseSessionBase implements Pars
     }
 
     /**
-     * Sets the directoryObjectId property value. The directoryObjectId property
+     * Sets the directoryObjectId property value. Id of the backed-up OneDrive.
      * @param string|null $value Value to set for the directoryObjectId property.
     */
     public function setDirectoryObjectId(?string $value): void {

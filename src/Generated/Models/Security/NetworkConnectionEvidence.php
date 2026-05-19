@@ -26,7 +26,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the destinationAddress property value. The destinationAddress property
+     * Gets the destinationAddress property value. An entity of type IP that is the destination for this connection.
      * @return IpEvidence|null
     */
     public function getDestinationAddress(): ?IpEvidence {
@@ -38,7 +38,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the destinationPort property value. The destinationPort property
+     * Gets the destinationPort property value. The destination port number. For example, 80.
      * @return int|null
     */
     public function getDestinationPort(): ?int {
@@ -65,7 +65,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the protocol property value. The protocol property
+     * Gets the protocol property value. The protocol type. Possible values are tcp, udp, unknownFutureValue.
      * @return ProtocolType|null
     */
     public function getProtocol(): ?ProtocolType {
@@ -77,7 +77,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the sourceAddress property value. The sourceAddress property
+     * Gets the sourceAddress property value. An entity of type IP that is the source for this connection.
      * @return IpEvidence|null
     */
     public function getSourceAddress(): ?IpEvidence {
@@ -89,7 +89,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the sourcePort property value. The sourcePort property
+     * Gets the sourcePort property value. The source port number. For example, 80.
      * @return int|null
     */
     public function getSourcePort(): ?int {
@@ -114,7 +114,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the destinationAddress property value. The destinationAddress property
+     * Sets the destinationAddress property value. An entity of type IP that is the destination for this connection.
      * @param IpEvidence|null $value Value to set for the destinationAddress property.
     */
     public function setDestinationAddress(?IpEvidence $value): void {
@@ -122,7 +122,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the destinationPort property value. The destinationPort property
+     * Sets the destinationPort property value. The destination port number. For example, 80.
      * @param int|null $value Value to set for the destinationPort property.
     */
     public function setDestinationPort(?int $value): void {
@@ -130,7 +130,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the protocol property value. The protocol property
+     * Sets the protocol property value. The protocol type. Possible values are tcp, udp, unknownFutureValue.
      * @param ProtocolType|null $value Value to set for the protocol property.
     */
     public function setProtocol(?ProtocolType $value): void {
@@ -138,7 +138,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the sourceAddress property value. The sourceAddress property
+     * Sets the sourceAddress property value. An entity of type IP that is the source for this connection.
      * @param IpEvidence|null $value Value to set for the sourceAddress property.
     */
     public function setSourceAddress(?IpEvidence $value): void {
@@ -146,7 +146,7 @@ class NetworkConnectionEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the sourcePort property value. The sourcePort property
+     * Sets the sourcePort property value. The source port number. For example, 80.
      * @param int|null $value Value to set for the sourcePort property.
     */
     public function setSourcePort(?int $value): void {

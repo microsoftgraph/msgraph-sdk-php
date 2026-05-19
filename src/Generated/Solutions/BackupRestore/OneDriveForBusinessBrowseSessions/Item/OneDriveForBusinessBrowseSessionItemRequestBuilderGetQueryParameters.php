@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessB
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get oneDriveForBusinessBrowseSessions from solutions
+ * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
 */
 class OneDriveForBusinessBrowseSessionItemRequestBuilderGetQueryParameters 
 {

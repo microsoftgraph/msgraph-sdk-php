@@ -56,7 +56,7 @@ class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the body property value. The body property
+     * Gets the body property value. The body content of the notification email in plain text format.
      * @return string|null
     */
     public function getBody(): ?string {
@@ -94,7 +94,7 @@ class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the senderEmailAddress property value. The senderEmailAddress property
+     * Gets the senderEmailAddress property value. The email address of the sender for notification emails. Shared mailboxes aren't supported.
      * @return string|null
     */
     public function getSenderEmailAddress(): ?string {
@@ -106,7 +106,7 @@ class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject line of the notification email.
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -146,7 +146,7 @@ class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the body property value. The body property
+     * Sets the body property value. The body content of the notification email in plain text format.
      * @param string|null $value Value to set for the body property.
     */
     public function setBody(?string $value): void {
@@ -162,7 +162,7 @@ class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the senderEmailAddress property value. The senderEmailAddress property
+     * Sets the senderEmailAddress property value. The email address of the sender for notification emails. Shared mailboxes aren't supported.
      * @param string|null $value Value to set for the senderEmailAddress property.
     */
     public function setSenderEmailAddress(?string $value): void {
@@ -170,7 +170,7 @@ class EmailDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject line of the notification email.
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {

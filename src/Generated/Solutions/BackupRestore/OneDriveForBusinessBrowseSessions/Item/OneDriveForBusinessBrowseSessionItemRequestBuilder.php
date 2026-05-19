@@ -45,10 +45,11 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      * @param OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessBrowseSession|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/onedriveforbusinessbrowsesession-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Get oneDriveForBusinessBrowseSessions from solutions
+     * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
      * @param OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

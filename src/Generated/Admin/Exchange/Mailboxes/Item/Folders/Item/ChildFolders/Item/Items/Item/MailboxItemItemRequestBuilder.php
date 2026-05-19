@@ -31,7 +31,7 @@ class MailboxItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      * @param MailboxItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxItem|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class MailboxItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from admin
+     * The collection of items in this folder.
      * @param MailboxItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

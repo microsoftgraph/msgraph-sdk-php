@@ -31,10 +31,11 @@ class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      * @param OwnerlessGroupPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OwnerlessGroupPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/ownerlessgrouppolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OwnerlessGroupPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,11 +46,12 @@ class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property ownerlessGroupPolicy in policies
+     * Create or update the ownerlessGroupPolicy for the tenant. If the policy doesn't exist, it creates a new one; if the policy exists, it updates the existing policy. To disable the policy, set isEnabled to false. Setting isEnabled to false clears the values of all other policy parameters.
      * @param OwnerlessGroupPolicy $body The request body
      * @param OwnerlessGroupPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OwnerlessGroupPolicy|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/ownerlessgrouppolicy-upsert?view=graph-rest-1.0 Find more info here
     */
     public function patch(OwnerlessGroupPolicy $body, ?OwnerlessGroupPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -60,7 +62,7 @@ class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get ownerlessGroupPolicy from policies
+     * Read the properties of an ownerlessGroupPolicy object.
      * @param OwnerlessGroupPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -81,7 +83,7 @@ class OwnerlessGroupPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property ownerlessGroupPolicy in policies
+     * Create or update the ownerlessGroupPolicy for the tenant. If the policy doesn't exist, it creates a new one; if the policy exists, it updates the existing policy. To disable the policy, set isEnabled to false. Setting isEnabled to false clears the values of all other policy parameters.
      * @param OwnerlessGroupPolicy $body The request body
      * @param OwnerlessGroupPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

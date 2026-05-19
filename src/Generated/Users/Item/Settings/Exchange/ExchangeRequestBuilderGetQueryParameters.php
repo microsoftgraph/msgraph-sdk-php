@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Settings\Exchange;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get exchange from users
+ * Get a list of Exchange mailboxes that belong to a user. Currently, the mailbox types supported are the user's primary mailbox and shared mailboxes. To learn how to get a list of users in a tenant, see List users.
 */
 class ExchangeRequestBuilderGetQueryParameters 
 {

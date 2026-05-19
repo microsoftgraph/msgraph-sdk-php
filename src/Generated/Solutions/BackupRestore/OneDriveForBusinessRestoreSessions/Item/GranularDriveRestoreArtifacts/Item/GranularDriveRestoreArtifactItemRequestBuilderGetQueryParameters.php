@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessR
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get granularDriveRestoreArtifacts from solutions
+ * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
 */
 class GranularDriveRestoreArtifactItemRequestBuilderGetQueryParameters 
 {

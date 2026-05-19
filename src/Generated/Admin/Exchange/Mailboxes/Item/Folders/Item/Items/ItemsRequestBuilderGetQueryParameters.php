@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Item\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get items from admin
+ * Get the mailboxItem collection within a specified mailboxFolder in a mailbox.
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

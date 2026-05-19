@@ -101,7 +101,7 @@ class TargetOwners implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the securityGroups property value. The securityGroups property
+     * Gets the securityGroups property value. The collection of IDs for security groups used for allowing or blocking filtering. When notifyMembers is all, all members are eligible for ownership and this collection can be empty. When notifyMembers is allowSelected, only members in these security groups are eligible. When notifyMembers is blockSelected, members in these security groups are excluded.
      * @return array<string>|null
     */
     public function getSecurityGroups(): ?array {
@@ -158,7 +158,7 @@ class TargetOwners implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the securityGroups property value. The securityGroups property
+     * Sets the securityGroups property value. The collection of IDs for security groups used for allowing or blocking filtering. When notifyMembers is all, all members are eligible for ownership and this collection can be empty. When notifyMembers is allowSelected, only members in these security groups are eligible. When notifyMembers is blockSelected, members in these security groups are excluded.
      * @param array<string>|null $value Value to set for the securityGroups property.
     */
     public function setSecurityGroups(?array $value): void {

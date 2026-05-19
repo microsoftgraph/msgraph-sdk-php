@@ -221,7 +221,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the migrationMode property value. The migrationMode property
+     * Gets the migrationMode property value. Indicates whether a channel is in migration mode. This value is null for channels that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
      * @return MigrationMode|null
     */
     public function getMigrationMode(): ?MigrationMode {
@@ -233,7 +233,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * Gets the originalCreatedDateTime property value. Timestamp of the original creation time for the channel. The value is null if the channel never entered migration mode.
      * @return DateTime|null
     */
     public function getOriginalCreatedDateTime(): ?DateTime {
@@ -441,7 +441,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the migrationMode property value. The migrationMode property
+     * Sets the migrationMode property value. Indicates whether a channel is in migration mode. This value is null for channels that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
      * @param MigrationMode|null $value Value to set for the migrationMode property.
     */
     public function setMigrationMode(?MigrationMode $value): void {
@@ -449,7 +449,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the originalCreatedDateTime property value. The originalCreatedDateTime property
+     * Sets the originalCreatedDateTime property value. Timestamp of the original creation time for the channel. The value is null if the channel never entered migration mode.
      * @param DateTime|null $value Value to set for the originalCreatedDateTime property.
     */
     public function setOriginalCreatedDateTime(?DateTime $value): void {

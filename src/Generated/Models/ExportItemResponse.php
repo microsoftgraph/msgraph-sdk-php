@@ -57,7 +57,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the changeKey property value. The changeKey property
+     * Gets the changeKey property value. The version of the item.
      * @return string|null
     */
     public function getChangeKey(): ?string {
@@ -69,7 +69,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. Data that represents an item in a Base64-encoded opaque stream.
      * @return StreamInterface|null
     */
     public function getData(): ?StreamInterface {
@@ -81,7 +81,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. An error that occurs during an action.
      * @return MailTipsError|null
     */
     public function getError(): ?MailTipsError {
@@ -108,7 +108,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the itemId property value. The itemId property
+     * Gets the itemId property value. The unique identifier of the item.
      * @return string|null
     */
     public function getItemId(): ?string {
@@ -161,7 +161,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the changeKey property value. The changeKey property
+     * Sets the changeKey property value. The version of the item.
      * @param string|null $value Value to set for the changeKey property.
     */
     public function setChangeKey(?string $value): void {
@@ -169,7 +169,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. Data that represents an item in a Base64-encoded opaque stream.
      * @param StreamInterface|null $value Value to set for the data property.
     */
     public function setData(?StreamInterface $value): void {
@@ -177,7 +177,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. An error that occurs during an action.
      * @param MailTipsError|null $value Value to set for the error property.
     */
     public function setError(?MailTipsError $value): void {
@@ -185,7 +185,7 @@ class ExportItemResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the itemId property value. The itemId property
+     * Sets the itemId property value. The unique identifier of the item.
      * @param string|null $value Value to set for the itemId property.
     */
     public function setItemId(?string $value): void {

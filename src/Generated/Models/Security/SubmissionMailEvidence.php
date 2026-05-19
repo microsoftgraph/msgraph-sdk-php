@@ -46,7 +46,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the networkMessageId property value. The networkMessageId property
+     * Gets the networkMessageId property value. The network message ID of the email to which the submission belongs.
      * @return string|null
     */
     public function getNetworkMessageId(): ?string {
@@ -58,7 +58,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the recipient property value. The recipient property
+     * Gets the recipient property value. The recipient of the email.
      * @return string|null
     */
     public function getRecipient(): ?string {
@@ -70,7 +70,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the reportType property value. The reportType property
+     * Gets the reportType property value. The submission type for the specified instance that maps to Junk, Phish, Malware, or NotJunk.
      * @return string|null
     */
     public function getReportType(): ?string {
@@ -82,7 +82,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the sender property value. The sender property
+     * Gets the sender property value. The sender of the email.
      * @return string|null
     */
     public function getSender(): ?string {
@@ -94,7 +94,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the senderIp property value. The senderIp property
+     * Gets the senderIp property value. The sender's IP.
      * @return string|null
     */
     public function getSenderIp(): ?string {
@@ -106,7 +106,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject of the submission mail.
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -118,7 +118,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the submissionDateTime property value. The submissionDateTime property
+     * Gets the submissionDateTime property value. The reported date and time of this submission. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getSubmissionDateTime(): ?DateTime {
@@ -130,7 +130,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the submissionId property value. The submissionId property
+     * Gets the submissionId property value. The submission ID.
      * @return string|null
     */
     public function getSubmissionId(): ?string {
@@ -142,7 +142,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the submitter property value. The submitter property
+     * Gets the submitter property value. The submitter's email address.
      * @return string|null
     */
     public function getSubmitter(): ?string {
@@ -171,7 +171,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the networkMessageId property value. The networkMessageId property
+     * Sets the networkMessageId property value. The network message ID of the email to which the submission belongs.
      * @param string|null $value Value to set for the networkMessageId property.
     */
     public function setNetworkMessageId(?string $value): void {
@@ -179,7 +179,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the recipient property value. The recipient property
+     * Sets the recipient property value. The recipient of the email.
      * @param string|null $value Value to set for the recipient property.
     */
     public function setRecipient(?string $value): void {
@@ -187,7 +187,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the reportType property value. The reportType property
+     * Sets the reportType property value. The submission type for the specified instance that maps to Junk, Phish, Malware, or NotJunk.
      * @param string|null $value Value to set for the reportType property.
     */
     public function setReportType(?string $value): void {
@@ -195,7 +195,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the sender property value. The sender property
+     * Sets the sender property value. The sender of the email.
      * @param string|null $value Value to set for the sender property.
     */
     public function setSender(?string $value): void {
@@ -203,7 +203,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the senderIp property value. The senderIp property
+     * Sets the senderIp property value. The sender's IP.
      * @param string|null $value Value to set for the senderIp property.
     */
     public function setSenderIp(?string $value): void {
@@ -211,7 +211,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject of the submission mail.
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
@@ -219,7 +219,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the submissionDateTime property value. The submissionDateTime property
+     * Sets the submissionDateTime property value. The reported date and time of this submission. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is 2024-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the submissionDateTime property.
     */
     public function setSubmissionDateTime(?DateTime $value): void {
@@ -227,7 +227,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the submissionId property value. The submissionId property
+     * Sets the submissionId property value. The submission ID.
      * @param string|null $value Value to set for the submissionId property.
     */
     public function setSubmissionId(?string $value): void {
@@ -235,7 +235,7 @@ class SubmissionMailEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the submitter property value. The submitter property
+     * Sets the submitter property value. The submitter's email address.
      * @param string|null $value Value to set for the submitter property.
     */
     public function setSubmitter(?string $value): void {

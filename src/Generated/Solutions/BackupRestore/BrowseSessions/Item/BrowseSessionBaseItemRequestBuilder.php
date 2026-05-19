@@ -63,7 +63,7 @@ class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      * @param BrowseSessionBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BrowseSessionBase|null>
      * @throws Exception
@@ -110,7 +110,7 @@ class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get browseSessions from solutions
+     * The list of browse sessions in the tenant.
      * @param BrowseSessionBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

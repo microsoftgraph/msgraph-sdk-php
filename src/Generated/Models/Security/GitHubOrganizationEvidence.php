@@ -26,7 +26,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the company property value. The company property
+     * Gets the company property value. The name of the company that owns the organization.
      * @return string|null
     */
     public function getCompany(): ?string {
@@ -38,7 +38,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the organization.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -50,7 +50,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email address of the organization.
      * @return string|null
     */
     public function getEmail(): ?string {
@@ -78,7 +78,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the login property value. The login property
+     * Gets the login property value. The login (name) of the organization.
      * @return string|null
     */
     public function getLogin(): ?string {
@@ -90,7 +90,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the orgId property value. The orgId property
+     * Gets the orgId property value. The unique and immutable ID of the organization.
      * @return string|null
     */
     public function getOrgId(): ?string {
@@ -102,7 +102,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. The URL of the web page for the organization.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -128,7 +128,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the company property value. The company property
+     * Sets the company property value. The name of the company that owns the organization.
      * @param string|null $value Value to set for the company property.
     */
     public function setCompany(?string $value): void {
@@ -136,7 +136,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the organization.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -144,7 +144,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email address of the organization.
      * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
@@ -152,7 +152,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the login property value. The login property
+     * Sets the login property value. The login (name) of the organization.
      * @param string|null $value Value to set for the login property.
     */
     public function setLogin(?string $value): void {
@@ -160,7 +160,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the orgId property value. The orgId property
+     * Sets the orgId property value. The unique and immutable ID of the organization.
      * @param string|null $value Value to set for the orgId property.
     */
     public function setOrgId(?string $value): void {
@@ -168,7 +168,7 @@ class GitHubOrganizationEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. The URL of the web page for the organization.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

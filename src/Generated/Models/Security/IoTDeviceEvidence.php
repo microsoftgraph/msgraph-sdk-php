@@ -137,7 +137,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Gets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
+     * Gets the importance property value. The importance level for the IoT device. The possible values are: unknown, low, normal, high, unknownFutureValue.
      * @return IoTDeviceImportanceType|null
     */
     public function getImportance(): ?IoTDeviceImportanceType {
@@ -469,7 +469,7 @@ class IoTDeviceEvidence extends AlertEvidence implements Parsable
     }
 
     /**
-     * Sets the importance property value. The importance level for the IoT device. Possible values are low, normal, high, and unknownFutureValue.
+     * Sets the importance property value. The importance level for the IoT device. The possible values are: unknown, low, normal, high, unknownFutureValue.
      * @param IoTDeviceImportanceType|null $value Value to set for the importance property.
     */
     public function setImportance(?IoTDeviceImportanceType $value): void {

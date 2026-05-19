@@ -31,10 +31,11 @@ class MailboxItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      * @param MailboxItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxItem|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailboxitem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MailboxItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class MailboxItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from admin
+     * Read the properties and relationships of a mailboxItem object.
      * @param MailboxItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

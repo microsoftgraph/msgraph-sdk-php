@@ -41,7 +41,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
+     * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailboxItem.
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
@@ -55,7 +55,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailboxItem.
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
@@ -69,7 +69,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the size property value. The size property
+     * Gets the size property value. The length of the item in bytes.
      * @return int|null
     */
     public function getSize(): ?int {
@@ -81,7 +81,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The message class ID of the item.
      * @return string|null
     */
     public function getType(): ?string {
@@ -105,7 +105,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
+     * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailboxItem.
      * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
@@ -113,7 +113,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailboxItem.
      * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
@@ -121,7 +121,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the size property value. The size property
+     * Sets the size property value. The length of the item in bytes.
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
@@ -129,7 +129,7 @@ class MailboxItem extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The message class ID of the item.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

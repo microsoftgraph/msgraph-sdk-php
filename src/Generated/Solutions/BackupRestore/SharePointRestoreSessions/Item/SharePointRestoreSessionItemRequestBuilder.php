@@ -83,11 +83,12 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property sharePointRestoreSessions in solutions
+     * Update the properties of a sharePointRestoreSession object.
      * @param SharePointRestoreSession $body The request body
      * @param SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointRestoreSession|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/sharepointrestoresession-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(SharePointRestoreSession $body, ?SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -137,7 +138,7 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property sharePointRestoreSessions in solutions
+     * Update the properties of a sharePointRestoreSession object.
      * @param SharePointRestoreSession $body The request body
      * @param SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

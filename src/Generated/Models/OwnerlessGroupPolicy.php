@@ -38,7 +38,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the enabledGroupIds property value. The enabledGroupIds property
+     * Gets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled. If empty, the policy is enabled for all groups in the tenant.
      * @return array<string>|null
     */
     public function getEnabledGroupIds(): ?array {
@@ -76,7 +76,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the ownerless group policy is enabled in the tenant. Setting this property to false clears the values of all other policy parameters.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -88,7 +88,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the maxMembersToNotify property value. The maxMembersToNotify property
+     * Gets the maxMembersToNotify property value. The maximum number of members to notify. Value range is 0-90. Members are prioritized by recent group activity (most active first). If there aren't enough active members to fill the limit, remaining slots are filled with other eligible group members from the directory.
      * @return int|null
     */
     public function getMaxMembersToNotify(): ?int {
@@ -100,7 +100,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationDurationInWeeks property value. The notificationDurationInWeeks property
+     * Gets the notificationDurationInWeeks property value. The number of weeks for the notification duration. Value range is 1-7.
      * @return int|null
     */
     public function getNotificationDurationInWeeks(): ?int {
@@ -112,7 +112,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the policyWebUrl property value. The policyWebUrl property
+     * Gets the policyWebUrl property value. The URL to the policy documentation.
      * @return string|null
     */
     public function getPolicyWebUrl(): ?string {
@@ -159,7 +159,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the enabledGroupIds property value. The enabledGroupIds property
+     * Sets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled. If empty, the policy is enabled for all groups in the tenant.
      * @param array<string>|null $value Value to set for the enabledGroupIds property.
     */
     public function setEnabledGroupIds(?array $value): void {
@@ -167,7 +167,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the ownerless group policy is enabled in the tenant. Setting this property to false clears the values of all other policy parameters.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
@@ -175,7 +175,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the maxMembersToNotify property value. The maxMembersToNotify property
+     * Sets the maxMembersToNotify property value. The maximum number of members to notify. Value range is 0-90. Members are prioritized by recent group activity (most active first). If there aren't enough active members to fill the limit, remaining slots are filled with other eligible group members from the directory.
      * @param int|null $value Value to set for the maxMembersToNotify property.
     */
     public function setMaxMembersToNotify(?int $value): void {
@@ -183,7 +183,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationDurationInWeeks property value. The notificationDurationInWeeks property
+     * Sets the notificationDurationInWeeks property value. The number of weeks for the notification duration. Value range is 1-7.
      * @param int|null $value Value to set for the notificationDurationInWeeks property.
     */
     public function setNotificationDurationInWeeks(?int $value): void {
@@ -191,7 +191,7 @@ class OwnerlessGroupPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the policyWebUrl property value. The policyWebUrl property
+     * Sets the policyWebUrl property value. The URL to the policy documentation.
      * @param string|null $value Value to set for the policyWebUrl property.
     */
     public function setPolicyWebUrl(?string $value): void {

@@ -52,7 +52,7 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the failureReason property value. Describes why the taskProcessingResult has failed.
+     * Gets the failureReason property value. Describes why the taskProcessingResult failed.
      * @return string|null
     */
     public function getFailureReason(): ?string {
@@ -82,7 +82,7 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the processingInfo property value. The processingInfo property
+     * Gets the processingInfo property value. Additional human-readable context about the task processing outcome. This property contains information about edge cases where the task completed successfully but the expected action wasn't performed because the target was already in the desired state, such as when the user was already a member of the specified group. Returns null when no additional context is needed. Nullable.
      * @return string|null
     */
     public function getProcessingInfo(): ?string {
@@ -106,7 +106,7 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution hasn't started yet.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
@@ -174,7 +174,7 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the failureReason property value. Describes why the taskProcessingResult has failed.
+     * Sets the failureReason property value. Describes why the taskProcessingResult failed.
      * @param string|null $value Value to set for the failureReason property.
     */
     public function setFailureReason(?string $value): void {
@@ -182,7 +182,7 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the processingInfo property value. The processingInfo property
+     * Sets the processingInfo property value. Additional human-readable context about the task processing outcome. This property contains information about edge cases where the task completed successfully but the expected action wasn't performed because the target was already in the desired state, such as when the user was already a member of the specified group. Returns null when no additional context is needed. Nullable.
      * @param string|null $value Value to set for the processingInfo property.
     */
     public function setProcessingInfo(?string $value): void {
@@ -198,7 +198,7 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Sets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution hasn't started yet.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param DateTime|null $value Value to set for the startedDateTime property.
     */
     public function setStartedDateTime(?DateTime $value): void {

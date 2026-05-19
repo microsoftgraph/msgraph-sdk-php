@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\OwnerlessGroupPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get ownerlessGroupPolicy from policies
+ * Read the properties of an ownerlessGroupPolicy object.
 */
 class OwnerlessGroupPolicyRequestBuilderGetQueryParameters 
 {

@@ -80,7 +80,7 @@ class X509CertificateIssuerHintsConfiguration implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The possible values are: disabled, enabled, unknownFutureValue.
      * @return X509CertificateIssuerHintsState|null
     */
     public function getState(): ?X509CertificateIssuerHintsState {
@@ -126,7 +126,7 @@ class X509CertificateIssuerHintsConfiguration implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The possible values are: disabled, enabled, unknownFutureValue.
      * @param X509CertificateIssuerHintsState|null $value Value to set for the state property.
     */
     public function setState(?X509CertificateIssuerHintsState $value): void {

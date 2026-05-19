@@ -26,7 +26,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the childFolderCount property value. The childFolderCount property
+     * Gets the childFolderCount property value. The number of immediate child folders in the current folder.
      * @return int|null
     */
     public function getChildFolderCount(): ?int {
@@ -38,7 +38,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the childFolders property value. The childFolders property
+     * Gets the childFolders property value. The collection of child folders in this folder.
      * @return array<MailboxFolder>|null
     */
     public function getChildFolders(): ?array {
@@ -52,7 +52,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the folder.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -83,7 +83,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the items property value. The items property
+     * Gets the items property value. The collection of items in this folder.
      * @return array<MailboxItem>|null
     */
     public function getItems(): ?array {
@@ -97,7 +97,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
+     * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailboxFolder.
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
@@ -111,7 +111,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the parentFolderId property value. The parentFolderId property
+     * Gets the parentFolderId property value. The unique identifier for the parent folder of this folder.
      * @return string|null
     */
     public function getParentFolderId(): ?string {
@@ -123,7 +123,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailboxFolder.
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
@@ -137,7 +137,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the totalItemCount property value. The totalItemCount property
+     * Gets the totalItemCount property value. The number of items in the folder.
      * @return int|null
     */
     public function getTotalItemCount(): ?int {
@@ -149,7 +149,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. Describes the folder class type.
      * @return string|null
     */
     public function getType(): ?string {
@@ -178,7 +178,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the childFolderCount property value. The childFolderCount property
+     * Sets the childFolderCount property value. The number of immediate child folders in the current folder.
      * @param int|null $value Value to set for the childFolderCount property.
     */
     public function setChildFolderCount(?int $value): void {
@@ -186,7 +186,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the childFolders property value. The childFolders property
+     * Sets the childFolders property value. The collection of child folders in this folder.
      * @param array<MailboxFolder>|null $value Value to set for the childFolders property.
     */
     public function setChildFolders(?array $value): void {
@@ -194,7 +194,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the folder.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -202,7 +202,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the items property value. The items property
+     * Sets the items property value. The collection of items in this folder.
      * @param array<MailboxItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
@@ -210,7 +210,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the multiValueExtendedProperties property value. The multiValueExtendedProperties property
+     * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the mailboxFolder.
      * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
@@ -218,7 +218,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the parentFolderId property value. The parentFolderId property
+     * Sets the parentFolderId property value. The unique identifier for the parent folder of this folder.
      * @param string|null $value Value to set for the parentFolderId property.
     */
     public function setParentFolderId(?string $value): void {
@@ -226,7 +226,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the mailboxFolder.
      * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
@@ -234,7 +234,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the totalItemCount property value. The totalItemCount property
+     * Sets the totalItemCount property value. The number of items in the folder.
      * @param int|null $value Value to set for the totalItemCount property.
     */
     public function setTotalItemCount(?int $value): void {
@@ -242,7 +242,7 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. Describes the folder class type.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
