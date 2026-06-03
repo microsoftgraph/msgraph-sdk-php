@@ -23,7 +23,7 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
      * @param string|null $name Alternate key of federatedIdentityCredential
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $name = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials(name=\'{name}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/federatedIdentityCredentials(name=\'{name}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['name'] = $name;
@@ -35,11 +35,11 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property federatedIdentityCredentials for servicePrincipals
-     * @param FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsWithNameRequestBuilderDelet_9cbdb9ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?FederatedIdentityCredentialsWithNameRequestBuilderDelet_9cbdb9ff $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,11 +49,11 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
 
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRe_cda5e15a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
     */
-    public function get(?FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?FederatedIdentityCredentialsWithNameRequestBuilderGetRe_cda5e15a $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -64,11 +64,11 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property federatedIdentityCredentials in servicePrincipals
      * @param FederatedIdentityCredential $body The request body
-     * @param FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsWithNameRequestBuilderPatch_4c5a1127|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
     */
-    public function patch(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsWithNameRequestBuilderPatch_4c5a1127 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property federatedIdentityCredentials for servicePrincipals
-     * @param FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsWithNameRequestBuilderDelet_9cbdb9ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?FederatedIdentityCredentialsWithNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?FederatedIdentityCredentialsWithNameRequestBuilderDelet_9cbdb9ff $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
 
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsWithNameRequestBuilderGetRe_cda5e15a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FederatedIdentityCredentialsWithNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FederatedIdentityCredentialsWithNameRequestBuilderGetRe_cda5e15a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property federatedIdentityCredentials in servicePrincipals
      * @param FederatedIdentityCredential $body The request body
-     * @param FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsWithNameRequestBuilderPatch_4c5a1127|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsWithNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsWithNameRequestBuilderPatch_4c5a1127 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

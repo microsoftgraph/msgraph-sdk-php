@@ -43,7 +43,7 @@ class SharePointProtectionPoliciesRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointProtectionPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class SharePointProtectionPoliciesRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of SharePoint protection policies in the tenant.
-     * @param SharePointProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPoliciesRequestBuilderGetRequestCon_9639a61f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointProtectionPolicyCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?SharePointProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SharePointProtectionPoliciesRequestBuilderGetRequestCon_9639a61f $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,12 +68,12 @@ class SharePointProtectionPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a protection policy for a M365 service SharePoint. Policy will be created in inactive state. User can also provide a list of protection units under the policy.
      * @param SharePointProtectionPolicy $body The request body
-     * @param SharePointProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPoliciesRequestBuilderPostRequestCo_b17a40a1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointProtectionPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/backuprestoreroot-post-sharepointprotectionpolicies?view=graph-rest-1.0 Find more info here
     */
-    public function post(SharePointProtectionPolicy $body, ?SharePointProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(SharePointProtectionPolicy $body, ?SharePointProtectionPoliciesRequestBuilderPostRequestCo_b17a40a1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class SharePointProtectionPoliciesRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of SharePoint protection policies in the tenant.
-     * @param SharePointProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPoliciesRequestBuilderGetRequestCon_9639a61f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SharePointProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SharePointProtectionPoliciesRequestBuilderGetRequestCon_9639a61f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class SharePointProtectionPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a protection policy for a M365 service SharePoint. Policy will be created in inactive state. User can also provide a list of protection units under the policy.
      * @param SharePointProtectionPolicy $body The request body
-     * @param SharePointProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPoliciesRequestBuilderPostRequestCo_b17a40a1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SharePointProtectionPolicy $body, ?SharePointProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SharePointProtectionPolicy $body, ?SharePointProtectionPoliciesRequestBuilderPostRequestCo_b17a40a1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

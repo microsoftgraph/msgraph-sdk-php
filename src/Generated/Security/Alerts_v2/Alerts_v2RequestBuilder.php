@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\AlertCollectionResponse;
 use Microsoft\Graph\Generated\Security\Alerts_v2\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder;
+use Microsoft\Graph\Generated\Security\Alerts_v2\MicrosoftGraphSecurityMoveAlerts\MicrosoftGraphSecurityMoveAlertsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -24,6 +25,13 @@ class Alerts_v2RequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the moveAlerts method.
+    */
+    public function microsoftGraphSecurityMoveAlerts(): MicrosoftGraphSecurityMoveAlertsRequestBuilder {
+        return new MicrosoftGraphSecurityMoveAlertsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -43,7 +51,7 @@ class Alerts_v2RequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/alerts_v2{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

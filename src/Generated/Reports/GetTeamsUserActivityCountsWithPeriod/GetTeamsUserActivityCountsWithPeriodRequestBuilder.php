@@ -35,12 +35,12 @@ class GetTeamsUserActivityCountsWithPeriodRequestBuilder extends BaseRequestBuil
 
     /**
      * Get the number of Microsoft Teams activities by activity type. The activities are performed by Microsoft Teams licensed users.
-     * @param GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRe_56b48772|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getteamsuseractivitycounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRe_56b48772 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetTeamsUserActivityCountsWithPeriodRequestBuilder extends BaseRequestBuil
 
     /**
      * Get the number of Microsoft Teams activities by activity type. The activities are performed by Microsoft Teams licensed users.
-     * @param GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRe_56b48772|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetTeamsUserActivityCountsWithPeriodRequestBuilderGetRe_56b48772 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

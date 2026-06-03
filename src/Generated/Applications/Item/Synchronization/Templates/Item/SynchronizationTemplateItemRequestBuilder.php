@@ -30,7 +30,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/applications/{application%2Did}/synchronization/templates/{synchronizationTemplate%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/applications/{application%2Did}/synchronization/templates/{synchronizationTemplate%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property templates for applications
-     * @param SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SynchronizationTemplateItemRequestBuilderDeleteRequestC_3096b868|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SynchronizationTemplateItemRequestBuilderDeleteRequestC_3096b868 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update (override) the synchronization template associated with a given application.
      * @param SynchronizationTemplate $body The request body
-     * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SynchronizationTemplateItemRequestBuilderPatchRequestCo_7a3480ca|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationTemplate|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/synchronization-synchronizationtemplate-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(SynchronizationTemplate $body, ?SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SynchronizationTemplate $body, ?SynchronizationTemplateItemRequestBuilderPatchRequestCo_7a3480ca $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property templates for applications
-     * @param SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SynchronizationTemplateItemRequestBuilderDeleteRequestC_3096b868|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SynchronizationTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SynchronizationTemplateItemRequestBuilderDeleteRequestC_3096b868 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update (override) the synchronization template associated with a given application.
      * @param SynchronizationTemplate $body The request body
-     * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SynchronizationTemplateItemRequestBuilderPatchRequestCo_7a3480ca|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SynchronizationTemplate $body, ?SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SynchronizationTemplate $body, ?SynchronizationTemplateItemRequestBuilderPatchRequestCo_7a3480ca $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ApplicationTemplates\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties of an applicationTemplate object.
+ * Retrieve the properties of an applicationTemplate object. Details about optional risk properties such as riskScore and riskFactors are available with either the Microsoft Entra Suite or Microsoft Entra Internet Access license.
 */
 class ApplicationTemplateItemRequestBuilderGetQueryParameters 
 {

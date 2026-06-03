@@ -32,11 +32,11 @@ class ProvisionMigrationContainersRequestBuilder extends BaseRequestBuilder
 
     /**
      * Invoke action provisionMigrationContainers
-     * @param ProvisionMigrationContainersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisionMigrationContainersRequestBuilderPostRequestCo_a6bfcb5c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointMigrationContainerInfo|null>
      * @throws Exception
     */
-    public function post(?ProvisionMigrationContainersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(?ProvisionMigrationContainersRequestBuilderPostRequestCo_a6bfcb5c $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class ProvisionMigrationContainersRequestBuilder extends BaseRequestBuilder
 
     /**
      * Invoke action provisionMigrationContainers
-     * @param ProvisionMigrationContainersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisionMigrationContainersRequestBuilderPostRequestCo_a6bfcb5c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?ProvisionMigrationContainersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?ProvisionMigrationContainersRequestBuilderPostRequestCo_a6bfcb5c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

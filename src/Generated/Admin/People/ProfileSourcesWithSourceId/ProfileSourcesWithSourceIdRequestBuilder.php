@@ -23,7 +23,7 @@ class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $sourceId Alternate key of profileSource
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $sourceId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/people/profileSources(sourceId=\'{sourceId}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/people/profileSources(sourceId=\'{sourceId}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['sourceId'] = $sourceId;
@@ -35,12 +35,12 @@ class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a profileSource object.
-     * @param ProfileSourcesWithSourceIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfileSourcesWithSourceIdRequestBuilderDeleteRequestCo_abec6913|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/profilesource-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ProfileSourcesWithSourceIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ProfileSourcesWithSourceIdRequestBuilderDeleteRequestCo_abec6913 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -65,12 +65,12 @@ class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a profileSource object.
      * @param ProfileSource $body The request body
-     * @param ProfileSourcesWithSourceIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfileSourcesWithSourceIdRequestBuilderPatchRequestCon_d1fd875b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfileSource|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/profilesource-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ProfileSource $body, ?ProfileSourcesWithSourceIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ProfileSource $body, ?ProfileSourcesWithSourceIdRequestBuilderPatchRequestCon_d1fd875b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -80,10 +80,10 @@ class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a profileSource object.
-     * @param ProfileSourcesWithSourceIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfileSourcesWithSourceIdRequestBuilderDeleteRequestCo_abec6913|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ProfileSourcesWithSourceIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ProfileSourcesWithSourceIdRequestBuilderDeleteRequestCo_abec6913 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -120,10 +120,10 @@ class ProfileSourcesWithSourceIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a profileSource object.
      * @param ProfileSource $body The request body
-     * @param ProfileSourcesWithSourceIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfileSourcesWithSourceIdRequestBuilderPatchRequestCon_d1fd875b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ProfileSource $body, ?ProfileSourcesWithSourceIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ProfileSource $body, ?ProfileSourcesWithSourceIdRequestBuilderPatchRequestCon_d1fd875b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

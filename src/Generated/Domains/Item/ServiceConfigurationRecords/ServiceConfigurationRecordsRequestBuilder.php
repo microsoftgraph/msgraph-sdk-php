@@ -43,7 +43,7 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/domains/{domain%2Did}/serviceConfigurationRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -69,11 +69,11 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
      * @param DomainDnsRecord $body The request body
-     * @param ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DomainDnsRecord|null>
      * @throws Exception
     */
-    public function post(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -105,10 +105,10 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
      * @param DomainDnsRecord $body The request body
-     * @param ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -22,7 +22,7 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/attackSimulation/endUserNotifications/{endUserNotification%2Did}/details/{endUserNotificationDetail%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/attackSimulation/endUserNotifications/{endUserNotification%2Did}/details/{endUserNotificationDetail%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property details for security
-     * @param EndUserNotificationDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EndUserNotificationDetailItemRequestBuilderDeleteReques_698e663d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EndUserNotificationDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EndUserNotificationDetailItemRequestBuilderDeleteReques_698e663d $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get details from security
-     * @param EndUserNotificationDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EndUserNotificationDetailItemRequestBuilderGetRequestCo_dde03368|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EndUserNotificationDetail|null>
      * @throws Exception
     */
-    public function get(?EndUserNotificationDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EndUserNotificationDetailItemRequestBuilderGetRequestCo_dde03368 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property details in security
      * @param EndUserNotificationDetail $body The request body
-     * @param EndUserNotificationDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EndUserNotificationDetailItemRequestBuilderPatchRequest_c21f560c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EndUserNotificationDetail|null>
      * @throws Exception
     */
-    public function patch(EndUserNotificationDetail $body, ?EndUserNotificationDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EndUserNotificationDetail $body, ?EndUserNotificationDetailItemRequestBuilderPatchRequest_c21f560c $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property details for security
-     * @param EndUserNotificationDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EndUserNotificationDetailItemRequestBuilderDeleteReques_698e663d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EndUserNotificationDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EndUserNotificationDetailItemRequestBuilderDeleteReques_698e663d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get details from security
-     * @param EndUserNotificationDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EndUserNotificationDetailItemRequestBuilderGetRequestCo_dde03368|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EndUserNotificationDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EndUserNotificationDetailItemRequestBuilderGetRequestCo_dde03368 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property details in security
      * @param EndUserNotificationDetail $body The request body
-     * @param EndUserNotificationDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EndUserNotificationDetailItemRequestBuilderPatchRequest_c21f560c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EndUserNotificationDetail $body, ?EndUserNotificationDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EndUserNotificationDetail $body, ?EndUserNotificationDetailItemRequestBuilderPatchRequest_c21f560c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

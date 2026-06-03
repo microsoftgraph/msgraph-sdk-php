@@ -23,6 +23,7 @@ class PromotePostResponse implements AdditionalDataHolder, BackedModel, Parsable
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setValue(false);
     }
 
     /**

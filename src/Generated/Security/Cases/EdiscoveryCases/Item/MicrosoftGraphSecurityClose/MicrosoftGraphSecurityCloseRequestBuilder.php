@@ -31,12 +31,12 @@ class MicrosoftGraphSecurityCloseRequestBuilder extends BaseRequestBuilder
 
     /**
      * Close an eDiscovery case. For details, see Close a case.
-     * @param MicrosoftGraphSecurityCloseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityCloseRequestBuilderPostRequestCon_af23b1b4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-close?view=graph-rest-1.0 Find more info here
     */
-    public function post(?MicrosoftGraphSecurityCloseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(?MicrosoftGraphSecurityCloseRequestBuilderPostRequestCon_af23b1b4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityCloseRequestBuilder extends BaseRequestBuilder
 
     /**
      * Close an eDiscovery case. For details, see Close a case.
-     * @param MicrosoftGraphSecurityCloseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityCloseRequestBuilderPostRequestCon_af23b1b4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?MicrosoftGraphSecurityCloseRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?MicrosoftGraphSecurityCloseRequestBuilderPostRequestCon_af23b1b4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

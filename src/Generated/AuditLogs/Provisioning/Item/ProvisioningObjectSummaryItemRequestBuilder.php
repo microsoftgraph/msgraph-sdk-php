@@ -22,7 +22,7 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/auditLogs/provisioning/{provisioningObjectSummary%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/auditLogs/provisioning/{provisioningObjectSummary%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property provisioning for auditLogs
-     * @param ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisioningObjectSummaryItemRequestBuilderDeleteReques_5f4bb45e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ProvisioningObjectSummaryItemRequestBuilderDeleteReques_5f4bb45e $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get provisioning from auditLogs
-     * @param ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisioningObjectSummaryItemRequestBuilderGetRequestCo_de568d79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProvisioningObjectSummary|null>
      * @throws Exception
     */
-    public function get(?ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ProvisioningObjectSummaryItemRequestBuilderGetRequestCo_de568d79 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property provisioning in auditLogs
      * @param ProvisioningObjectSummary $body The request body
-     * @param ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisioningObjectSummaryItemRequestBuilderPatchRequest_c3e7fb39|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProvisioningObjectSummary|null>
      * @throws Exception
     */
-    public function patch(ProvisioningObjectSummary $body, ?ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ProvisioningObjectSummary $body, ?ProvisioningObjectSummaryItemRequestBuilderPatchRequest_c3e7fb39 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property provisioning for auditLogs
-     * @param ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisioningObjectSummaryItemRequestBuilderDeleteReques_5f4bb45e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ProvisioningObjectSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ProvisioningObjectSummaryItemRequestBuilderDeleteReques_5f4bb45e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get provisioning from auditLogs
-     * @param ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisioningObjectSummaryItemRequestBuilderGetRequestCo_de568d79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ProvisioningObjectSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ProvisioningObjectSummaryItemRequestBuilderGetRequestCo_de568d79 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ProvisioningObjectSummaryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property provisioning in auditLogs
      * @param ProvisioningObjectSummary $body The request body
-     * @param ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProvisioningObjectSummaryItemRequestBuilderPatchRequest_c3e7fb39|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ProvisioningObjectSummary $body, ?ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ProvisioningObjectSummary $body, ?ProvisioningObjectSummaryItemRequestBuilderPatchRequest_c3e7fb39 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

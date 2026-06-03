@@ -22,7 +22,7 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/policies/adminConsentRequestPolicy{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/policies/adminConsentRequestPolicy');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property adminConsentRequestPolicy for policies
-     * @param AdminConsentRequestPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AdminConsentRequestPolicyRequestBuilderDeleteRequestCon_693f9fab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AdminConsentRequestPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AdminConsentRequestPolicyRequestBuilderDeleteRequestCon_693f9fab $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property adminConsentRequestPolicy for policies
-     * @param AdminConsentRequestPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AdminConsentRequestPolicyRequestBuilderDeleteRequestCon_693f9fab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AdminConsentRequestPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AdminConsentRequestPolicyRequestBuilderDeleteRequestCon_693f9fab $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

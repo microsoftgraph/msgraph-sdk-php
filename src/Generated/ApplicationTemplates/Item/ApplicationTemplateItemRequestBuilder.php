@@ -39,7 +39,7 @@ class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an applicationTemplate object.
+     * Retrieve the properties of an applicationTemplate object. Details about optional risk properties such as riskScore and riskFactors are available with either the Microsoft Entra Suite or Microsoft Entra Internet Access license.
      * @param ApplicationTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApplicationTemplate|null>
      * @throws Exception
@@ -54,7 +54,7 @@ class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the properties of an applicationTemplate object.
+     * Retrieve the properties of an applicationTemplate object. Details about optional risk properties such as riskScore and riskFactors are available with either the Microsoft Entra Suite or Microsoft Entra Internet Access license.
      * @param ApplicationTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

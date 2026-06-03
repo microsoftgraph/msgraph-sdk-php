@@ -22,7 +22,7 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession%2Did}/granularSiteRestoreArtifacts/{granularSiteRestoreArtifact%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession%2Did}/granularSiteRestoreArtifacts/{granularSiteRestoreArtifact%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property granularSiteRestoreArtifacts for solutions
-     * @param GranularSiteRestoreArtifactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactItemRequestBuilderDeleteRequ_8fd49ac2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?GranularSiteRestoreArtifactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?GranularSiteRestoreArtifactItemRequestBuilderDeleteRequ_8fd49ac2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
-     * @param GranularSiteRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactItemRequestBuilderGetRequest_7372ae1b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularSiteRestoreArtifact|null>
      * @throws Exception
     */
-    public function get(?GranularSiteRestoreArtifactItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GranularSiteRestoreArtifactItemRequestBuilderGetRequest_7372ae1b $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property granularSiteRestoreArtifacts in solutions
      * @param GranularSiteRestoreArtifact $body The request body
-     * @param GranularSiteRestoreArtifactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactItemRequestBuilderPatchReque_b1de3aad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularSiteRestoreArtifact|null>
      * @throws Exception
     */
-    public function patch(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactItemRequestBuilderPatchReque_b1de3aad $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property granularSiteRestoreArtifacts for solutions
-     * @param GranularSiteRestoreArtifactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactItemRequestBuilderDeleteRequ_8fd49ac2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?GranularSiteRestoreArtifactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?GranularSiteRestoreArtifactItemRequestBuilderDeleteRequ_8fd49ac2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.
-     * @param GranularSiteRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactItemRequestBuilderGetRequest_7372ae1b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GranularSiteRestoreArtifactItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GranularSiteRestoreArtifactItemRequestBuilderGetRequest_7372ae1b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class GranularSiteRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property granularSiteRestoreArtifacts in solutions
      * @param GranularSiteRestoreArtifact $body The request body
-     * @param GranularSiteRestoreArtifactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactItemRequestBuilderPatchReque_b1de3aad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactItemRequestBuilderPatchReque_b1de3aad $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

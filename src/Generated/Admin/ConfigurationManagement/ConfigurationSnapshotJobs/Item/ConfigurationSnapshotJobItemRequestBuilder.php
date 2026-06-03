@@ -22,7 +22,7 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/configurationManagement/configurationSnapshotJobs/{configurationSnapshotJob%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/configurationManagement/configurationSnapshotJobs/{configurationSnapshotJob%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a configurationSnapshotJob object.
-     * @param ConfigurationSnapshotJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationSnapshotJobItemRequestBuilderDeleteRequest_b0ebe7bd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/configurationsnapshotjob-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ConfigurationSnapshotJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ConfigurationSnapshotJobItemRequestBuilderDeleteRequest_b0ebe7bd $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a configurationSnapshotJob object.
-     * @param ConfigurationSnapshotJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationSnapshotJobItemRequestBuilderGetRequestCon_9a00b865|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationSnapshotJob|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/configurationsnapshotjob-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ConfigurationSnapshotJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ConfigurationSnapshotJobItemRequestBuilderGetRequestCon_9a00b865 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property configurationSnapshotJobs in admin
      * @param ConfigurationSnapshotJob $body The request body
-     * @param ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationSnapshotJobItemRequestBuilderPatchRequestC_727dd0f9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationSnapshotJob|null>
      * @throws Exception
     */
-    public function patch(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobItemRequestBuilderPatchRequestC_727dd0f9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a configurationSnapshotJob object.
-     * @param ConfigurationSnapshotJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationSnapshotJobItemRequestBuilderDeleteRequest_b0ebe7bd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ConfigurationSnapshotJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ConfigurationSnapshotJobItemRequestBuilderDeleteRequest_b0ebe7bd $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a configurationSnapshotJob object.
-     * @param ConfigurationSnapshotJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationSnapshotJobItemRequestBuilderGetRequestCon_9a00b865|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ConfigurationSnapshotJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ConfigurationSnapshotJobItemRequestBuilderGetRequestCon_9a00b865 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property configurationSnapshotJobs in admin
      * @param ConfigurationSnapshotJob $body The request body
-     * @param ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationSnapshotJobItemRequestBuilderPatchRequestC_727dd0f9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobItemRequestBuilderPatchRequestC_727dd0f9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

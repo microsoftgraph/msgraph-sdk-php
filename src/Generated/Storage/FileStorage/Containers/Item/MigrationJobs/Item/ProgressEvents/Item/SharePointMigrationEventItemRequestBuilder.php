@@ -22,7 +22,7 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/storage/fileStorage/containers/{fileStorageContainer%2Did}/migrationJobs/{sharePointMigrationJob%2Did}/progressEvents/{sharePointMigrationEvent%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/storage/fileStorage/containers/{fileStorageContainer%2Did}/migrationJobs/{sharePointMigrationJob%2Did}/progressEvents/{sharePointMigrationEvent%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property progressEvents for storage
-     * @param SharePointMigrationEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationEventItemRequestBuilderDeleteRequest_fb3926b3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SharePointMigrationEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SharePointMigrationEventItemRequestBuilderDeleteRequest_fb3926b3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of migration events that reflects the job status changes.
-     * @param SharePointMigrationEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationEventItemRequestBuilderGetRequestCon_aeaf03ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointMigrationEvent|null>
      * @throws Exception
     */
-    public function get(?SharePointMigrationEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SharePointMigrationEventItemRequestBuilderGetRequestCon_aeaf03ff $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property progressEvents in storage
      * @param SharePointMigrationEvent $body The request body
-     * @param SharePointMigrationEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationEventItemRequestBuilderPatchRequestC_353717c3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointMigrationEvent|null>
      * @throws Exception
     */
-    public function patch(SharePointMigrationEvent $body, ?SharePointMigrationEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SharePointMigrationEvent $body, ?SharePointMigrationEventItemRequestBuilderPatchRequestC_353717c3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property progressEvents for storage
-     * @param SharePointMigrationEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationEventItemRequestBuilderDeleteRequest_fb3926b3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SharePointMigrationEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SharePointMigrationEventItemRequestBuilderDeleteRequest_fb3926b3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of migration events that reflects the job status changes.
-     * @param SharePointMigrationEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationEventItemRequestBuilderGetRequestCon_aeaf03ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SharePointMigrationEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SharePointMigrationEventItemRequestBuilderGetRequestCon_aeaf03ff $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property progressEvents in storage
      * @param SharePointMigrationEvent $body The request body
-     * @param SharePointMigrationEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationEventItemRequestBuilderPatchRequestC_353717c3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SharePointMigrationEvent $body, ?SharePointMigrationEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SharePointMigrationEvent $body, ?SharePointMigrationEventItemRequestBuilderPatchRequestC_353717c3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

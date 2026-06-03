@@ -22,7 +22,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/operations/{delegatedAdminRelationshipOperation%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/operations/{delegatedAdminRelationshipOperation%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property operations for tenantRelationships
-     * @param DelegatedAdminRelationshipOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipOperationItemRequestBuilderDe_782aee1f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DelegatedAdminRelationshipOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DelegatedAdminRelationshipOperationItemRequestBuilderDe_782aee1f $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Read the properties of a delegatedAdminRelationshipOperation object.
-     * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipOperationItemRequestBuilderGe_d36c10e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipOperation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DelegatedAdminRelationshipOperationItemRequestBuilderGe_d36c10e2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property operations in tenantRelationships
      * @param DelegatedAdminRelationshipOperation $body The request body
-     * @param DelegatedAdminRelationshipOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipOperationItemRequestBuilderPa_1a3213ed|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipOperation|null>
      * @throws Exception
     */
-    public function patch(DelegatedAdminRelationshipOperation $body, ?DelegatedAdminRelationshipOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(DelegatedAdminRelationshipOperation $body, ?DelegatedAdminRelationshipOperationItemRequestBuilderPa_1a3213ed $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property operations for tenantRelationships
-     * @param DelegatedAdminRelationshipOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipOperationItemRequestBuilderDe_782aee1f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DelegatedAdminRelationshipOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DelegatedAdminRelationshipOperationItemRequestBuilderDe_782aee1f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Read the properties of a delegatedAdminRelationshipOperation object.
-     * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipOperationItemRequestBuilderGe_d36c10e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DelegatedAdminRelationshipOperationItemRequestBuilderGe_d36c10e2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property operations in tenantRelationships
      * @param DelegatedAdminRelationshipOperation $body The request body
-     * @param DelegatedAdminRelationshipOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipOperationItemRequestBuilderPa_1a3213ed|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DelegatedAdminRelationshipOperation $body, ?DelegatedAdminRelationshipOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DelegatedAdminRelationshipOperation $body, ?DelegatedAdminRelationshipOperationItemRequestBuilderPa_1a3213ed $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

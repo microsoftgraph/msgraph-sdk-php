@@ -30,7 +30,7 @@ class TeamsUserConfigurationItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/teams/userConfigurations/{teamsUserConfiguration%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/teams/userConfigurations/{teamsUserConfiguration%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class TeamsUserConfigurationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userConfigurations for admin
-     * @param TeamsUserConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsUserConfigurationItemRequestBuilderDeleteRequestCo_4ebb97a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TeamsUserConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?TeamsUserConfigurationItemRequestBuilderDeleteRequestCo_4ebb97a8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class TeamsUserConfigurationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userConfigurations in admin
      * @param TeamsUserConfiguration $body The request body
-     * @param TeamsUserConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsUserConfigurationItemRequestBuilderPatchRequestCon_2ea7fc29|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsUserConfiguration|null>
      * @throws Exception
     */
-    public function patch(TeamsUserConfiguration $body, ?TeamsUserConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(TeamsUserConfiguration $body, ?TeamsUserConfigurationItemRequestBuilderPatchRequestCon_2ea7fc29 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class TeamsUserConfigurationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userConfigurations for admin
-     * @param TeamsUserConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsUserConfigurationItemRequestBuilderDeleteRequestCo_4ebb97a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TeamsUserConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TeamsUserConfigurationItemRequestBuilderDeleteRequestCo_4ebb97a8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class TeamsUserConfigurationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userConfigurations in admin
      * @param TeamsUserConfiguration $body The request body
-     * @param TeamsUserConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsUserConfigurationItemRequestBuilderPatchRequestCon_2ea7fc29|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TeamsUserConfiguration $body, ?TeamsUserConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TeamsUserConfiguration $body, ?TeamsUserConfigurationItemRequestBuilderPatchRequestCon_2ea7fc29 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

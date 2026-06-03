@@ -48,11 +48,11 @@ class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.microsoftStoreForBusinessApp
-     * @param GraphMicrosoftStoreForBusinessAppRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GraphMicrosoftStoreForBusinessAppRequestBuilderGetReque_06016c5c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MicrosoftStoreForBusinessApp|null>
      * @throws Exception
     */
-    public function get(?GraphMicrosoftStoreForBusinessAppRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GraphMicrosoftStoreForBusinessAppRequestBuilderGetReque_06016c5c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,10 +62,10 @@ class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.microsoftStoreForBusinessApp
-     * @param GraphMicrosoftStoreForBusinessAppRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GraphMicrosoftStoreForBusinessAppRequestBuilderGetReque_06016c5c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GraphMicrosoftStoreForBusinessAppRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GraphMicrosoftStoreForBusinessAppRequestBuilderGetReque_06016c5c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

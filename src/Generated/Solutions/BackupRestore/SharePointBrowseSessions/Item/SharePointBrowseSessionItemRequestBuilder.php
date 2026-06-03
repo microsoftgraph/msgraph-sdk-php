@@ -22,7 +22,7 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointBrowseSessions/{sharePointBrowseSession%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointBrowseSessions/{sharePointBrowseSession%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharePointBrowseSessions for solutions
-     * @param SharePointBrowseSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointBrowseSessionItemRequestBuilderDeleteRequestC_2b239c1f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SharePointBrowseSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SharePointBrowseSessionItemRequestBuilderDeleteRequestC_2b239c1f $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property sharePointBrowseSessions in solutions
      * @param SharePointBrowseSession $body The request body
-     * @param SharePointBrowseSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointBrowseSessionItemRequestBuilderPatchRequestCo_bdc917f0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointBrowseSession|null>
      * @throws Exception
     */
-    public function patch(SharePointBrowseSession $body, ?SharePointBrowseSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SharePointBrowseSession $body, ?SharePointBrowseSessionItemRequestBuilderPatchRequestCo_bdc917f0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharePointBrowseSessions for solutions
-     * @param SharePointBrowseSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointBrowseSessionItemRequestBuilderDeleteRequestC_2b239c1f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SharePointBrowseSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SharePointBrowseSessionItemRequestBuilderDeleteRequestC_2b239c1f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class SharePointBrowseSessionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property sharePointBrowseSessions in solutions
      * @param SharePointBrowseSession $body The request body
-     * @param SharePointBrowseSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointBrowseSessionItemRequestBuilderPatchRequestCo_bdc917f0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SharePointBrowseSession $body, ?SharePointBrowseSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SharePointBrowseSession $body, ?SharePointBrowseSessionItemRequestBuilderPatchRequestCo_bdc917f0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

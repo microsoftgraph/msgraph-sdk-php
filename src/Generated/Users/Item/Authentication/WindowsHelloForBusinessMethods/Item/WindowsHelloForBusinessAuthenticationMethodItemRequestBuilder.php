@@ -30,7 +30,7 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,12 +40,12 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
 
     /**
      * Deletes a windowsHelloForBusinessAuthenticationMethod object.
-     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestB_5f73e9f5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?WindowsHelloForBusinessAuthenticationMethodItemRequestB_5f73e9f5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
 
     /**
      * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
-     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestB_4b1df838|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsHelloForBusinessAuthenticationMethod|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?WindowsHelloForBusinessAuthenticationMethodItemRequestB_4b1df838 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,10 +70,10 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
 
     /**
      * Deletes a windowsHelloForBusinessAuthenticationMethod object.
-     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestB_5f73e9f5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WindowsHelloForBusinessAuthenticationMethodItemRequestB_5f73e9f5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -88,10 +88,10 @@ class WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder extends Base
 
     /**
      * Read the properties and relationships of a windowsHelloForBusinessAuthenticationMethod object.
-     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsHelloForBusinessAuthenticationMethodItemRequestB_4b1df838|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WindowsHelloForBusinessAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WindowsHelloForBusinessAuthenticationMethodItemRequestB_4b1df838 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

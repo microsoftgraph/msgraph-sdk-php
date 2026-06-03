@@ -22,7 +22,7 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/storage/fileStorage/containerTypes/{fileStorageContainerType%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/storage/fileStorage/containerTypes/{fileStorageContainerType%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a fileStorageContainerType object from the tenant. A fileStorageContainerType can only be deleted if no registrations are associated with it in any tenant.
-     * @param FileStorageContainerTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeItemRequestBuilderDeleteRequest_0fac8bee|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestorage-delete-containertypes?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?FileStorageContainerTypeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?FileStorageContainerTypeItemRequestBuilderDeleteRequest_0fac8bee $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a fileStorageContainerType using its ID.
-     * @param FileStorageContainerTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeItemRequestBuilderGetRequestCon_39af8538|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerType|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestoragecontainertype-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?FileStorageContainerTypeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?FileStorageContainerTypeItemRequestBuilderGetRequestCon_39af8538 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a fileStorageContainerType object. The properties updated are reflected in each registered fileStorageContainerTypeRegistration in a maximum of 24 hours. Settings overridden in a tenant aren't updated. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param FileStorageContainerType $body The request body
-     * @param FileStorageContainerTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeItemRequestBuilderPatchRequestC_69c2bf1a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerType|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestoragecontainertype-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(FileStorageContainerType $body, ?FileStorageContainerTypeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(FileStorageContainerType $body, ?FileStorageContainerTypeItemRequestBuilderPatchRequestC_69c2bf1a $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a fileStorageContainerType object from the tenant. A fileStorageContainerType can only be deleted if no registrations are associated with it in any tenant.
-     * @param FileStorageContainerTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeItemRequestBuilderDeleteRequest_0fac8bee|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?FileStorageContainerTypeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?FileStorageContainerTypeItemRequestBuilderDeleteRequest_0fac8bee $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a fileStorageContainerType using its ID.
-     * @param FileStorageContainerTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeItemRequestBuilderGetRequestCon_39af8538|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FileStorageContainerTypeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FileStorageContainerTypeItemRequestBuilderGetRequestCon_39af8538 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a fileStorageContainerType object. The properties updated are reflected in each registered fileStorageContainerTypeRegistration in a maximum of 24 hours. Settings overridden in a tenant aren't updated. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param FileStorageContainerType $body The request body
-     * @param FileStorageContainerTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeItemRequestBuilderPatchRequestC_69c2bf1a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(FileStorageContainerType $body, ?FileStorageContainerTypeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(FileStorageContainerType $body, ?FileStorageContainerTypeItemRequestBuilderPatchRequestC_69c2bf1a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

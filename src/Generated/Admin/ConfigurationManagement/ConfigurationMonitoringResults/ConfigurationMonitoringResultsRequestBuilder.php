@@ -43,7 +43,7 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/configurationManagement/configurationMonitoringResults{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,12 +53,12 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the configurationMonitoringResult objects and their properties.
-     * @param ConfigurationMonitoringResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultsRequestBuilderGetRequestC_d7f52ef4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationMonitoringResultCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/configurationmanagement-list-configurationmonitoringresults?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ConfigurationMonitoringResultsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ConfigurationMonitoringResultsRequestBuilderGetRequestC_d7f52ef4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to configurationMonitoringResults for admin
      * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultsRequestBuilderPostRequest_cb2b93f9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationMonitoringResult|null>
      * @throws Exception
     */
-    public function post(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultsRequestBuilderPostRequest_cb2b93f9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the configurationMonitoringResult objects and their properties.
-     * @param ConfigurationMonitoringResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultsRequestBuilderGetRequestC_d7f52ef4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ConfigurationMonitoringResultsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ConfigurationMonitoringResultsRequestBuilderGetRequestC_d7f52ef4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to configurationMonitoringResults for admin
      * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultsRequestBuilderPostRequest_cb2b93f9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultsRequestBuilderPostRequest_cb2b93f9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

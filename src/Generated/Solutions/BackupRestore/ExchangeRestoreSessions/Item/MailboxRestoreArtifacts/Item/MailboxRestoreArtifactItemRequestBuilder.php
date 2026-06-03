@@ -30,7 +30,7 @@ class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/exchangeRestoreSessions/{exchangeRestoreSession%2Did}/mailboxRestoreArtifacts/{mailboxRestoreArtifact%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/exchangeRestoreSessions/{exchangeRestoreSession%2Did}/mailboxRestoreArtifacts/{mailboxRestoreArtifact%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mailboxRestoreArtifacts for solutions
-     * @param MailboxRestoreArtifactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactItemRequestBuilderDeleteRequestCo_c3fd24f7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MailboxRestoreArtifactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?MailboxRestoreArtifactItemRequestBuilderDeleteRequestCo_c3fd24f7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property mailboxRestoreArtifacts in solutions
      * @param MailboxRestoreArtifact $body The request body
-     * @param MailboxRestoreArtifactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactItemRequestBuilderPatchRequestCon_337d6ed5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxRestoreArtifact|null>
      * @throws Exception
     */
-    public function patch(MailboxRestoreArtifact $body, ?MailboxRestoreArtifactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(MailboxRestoreArtifact $body, ?MailboxRestoreArtifactItemRequestBuilderPatchRequestCon_337d6ed5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mailboxRestoreArtifacts for solutions
-     * @param MailboxRestoreArtifactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactItemRequestBuilderDeleteRequestCo_c3fd24f7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MailboxRestoreArtifactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MailboxRestoreArtifactItemRequestBuilderDeleteRequestCo_c3fd24f7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property mailboxRestoreArtifacts in solutions
      * @param MailboxRestoreArtifact $body The request body
-     * @param MailboxRestoreArtifactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactItemRequestBuilderPatchRequestCon_337d6ed5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MailboxRestoreArtifact $body, ?MailboxRestoreArtifactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MailboxRestoreArtifact $body, ?MailboxRestoreArtifactItemRequestBuilderPatchRequestCon_337d6ed5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

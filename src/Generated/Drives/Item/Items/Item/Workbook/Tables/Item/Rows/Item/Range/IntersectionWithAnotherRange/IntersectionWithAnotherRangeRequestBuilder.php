@@ -35,11 +35,11 @@ class IntersectionWithAnotherRangeRequestBuilder extends BaseRequestBuilder
 
     /**
      * Invoke function intersection
-     * @param IntersectionWithAnotherRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntersectionWithAnotherRangeRequestBuilderGetRequestCon_f18cd173|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookRange|null>
      * @throws Exception
     */
-    public function get(?IntersectionWithAnotherRangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?IntersectionWithAnotherRangeRequestBuilderGetRequestCon_f18cd173 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class IntersectionWithAnotherRangeRequestBuilder extends BaseRequestBuilder
 
     /**
      * Invoke function intersection
-     * @param IntersectionWithAnotherRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntersectionWithAnotherRangeRequestBuilderGetRequestCon_f18cd173|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?IntersectionWithAnotherRangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?IntersectionWithAnotherRangeRequestBuilderGetRequestCon_f18cd173 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

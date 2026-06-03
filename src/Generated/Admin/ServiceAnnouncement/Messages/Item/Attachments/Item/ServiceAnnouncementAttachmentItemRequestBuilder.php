@@ -30,7 +30,7 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/serviceAnnouncement/messages/{serviceUpdateMessage%2Did}/attachments/{serviceAnnouncementAttachment%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/serviceAnnouncement/messages/{serviceUpdateMessage%2Did}/attachments/{serviceAnnouncementAttachment%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property attachments for admin
-     * @param ServiceAnnouncementAttachmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceAnnouncementAttachmentItemRequestBuilderDeleteRe_84607edc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ServiceAnnouncementAttachmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ServiceAnnouncementAttachmentItemRequestBuilderDeleteRe_84607edc $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,12 +54,12 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a serviceAnnouncementAttachment object.
-     * @param ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceAnnouncementAttachmentItemRequestBuilderGetReque_33c2225e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceAnnouncementAttachment|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceannouncementattachment-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ServiceAnnouncementAttachmentItemRequestBuilderGetReque_33c2225e $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property attachments in admin
      * @param ServiceAnnouncementAttachment $body The request body
-     * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchReq_e7a32a61|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceAnnouncementAttachment|null>
      * @throws Exception
     */
-    public function patch(ServiceAnnouncementAttachment $body, ?ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ServiceAnnouncementAttachment $body, ?ServiceAnnouncementAttachmentItemRequestBuilderPatchReq_e7a32a61 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property attachments for admin
-     * @param ServiceAnnouncementAttachmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceAnnouncementAttachmentItemRequestBuilderDeleteRe_84607edc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ServiceAnnouncementAttachmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ServiceAnnouncementAttachmentItemRequestBuilderDeleteRe_84607edc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -102,10 +102,10 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a serviceAnnouncementAttachment object.
-     * @param ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceAnnouncementAttachmentItemRequestBuilderGetReque_33c2225e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ServiceAnnouncementAttachmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ServiceAnnouncementAttachmentItemRequestBuilderGetReque_33c2225e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class ServiceAnnouncementAttachmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property attachments in admin
      * @param ServiceAnnouncementAttachment $body The request body
-     * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchReq_e7a32a61|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ServiceAnnouncementAttachment $body, ?ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ServiceAnnouncementAttachment $body, ?ServiceAnnouncementAttachmentItemRequestBuilderPatchReq_e7a32a61 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -43,7 +43,7 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/mobileAppTroubleshootingEvents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection property of MobileAppTroubleshootingEvent.
-     * @param MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventsRequestBuilderGetRequestC_791f0fe3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppTroubleshootingEventCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MobileAppTroubleshootingEventsRequestBuilderGetRequestC_791f0fe3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
      * @param MobileAppTroubleshootingEvent $body The request body
-     * @param MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventsRequestBuilderPostRequest_03852608|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppTroubleshootingEvent|null>
      * @throws Exception
     */
-    public function post(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventsRequestBuilderPostRequest_03852608 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection property of MobileAppTroubleshootingEvent.
-     * @param MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventsRequestBuilderGetRequestC_791f0fe3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MobileAppTroubleshootingEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MobileAppTroubleshootingEventsRequestBuilderGetRequestC_791f0fe3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class MobileAppTroubleshootingEventsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to mobileAppTroubleshootingEvents for deviceManagement
      * @param MobileAppTroubleshootingEvent $body The request body
-     * @param MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventsRequestBuilderPostRequest_03852608|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventsRequestBuilderPostRequest_03852608 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

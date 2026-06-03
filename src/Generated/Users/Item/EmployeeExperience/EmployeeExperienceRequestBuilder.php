@@ -8,7 +8,7 @@ use Microsoft\Graph\Generated\Models\EmployeeExperienceUser;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\AssignedRoles\AssignedRolesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -39,7 +39,7 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/employeeExperience{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/employeeExperience');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -78,10 +78,10 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
      * @param string $externalcourseActivityId Alternate key of learningCourseActivity
-     * @return LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     * @return LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b
     */
-    public function learningCourseActivitiesWithExternalcourseActivityId(string $externalcourseActivityId): LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder {
-        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder($this->pathParameters, $this->requestAdapter, $externalcourseActivityId);
+    public function learningCourseActivitiesWithExternalcourseActivityId(string $externalcourseActivityId): LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b {
+        return new LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b($this->pathParameters, $this->requestAdapter, $externalcourseActivityId);
     }
 
     /**

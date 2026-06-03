@@ -22,7 +22,7 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/identities/sensorCandidateActivationConfiguration{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/identities/sensorCandidateActivationConfiguration');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property sensorCandidateActivationConfiguration for security
-     * @param SensorCandidateActivationConfigurationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SensorCandidateActivationConfigurationRequestBuilderDel_21cd205f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SensorCandidateActivationConfigurationRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SensorCandidateActivationConfigurationRequestBuilderDel_21cd205f $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
 
     /**
      * Read the properties and relationships of microsoft.graph.security.sensorCandidateActivationConfiguration object.
-     * @param SensorCandidateActivationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SensorCandidateActivationConfigurationRequestBuilderGet_66bcccad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SensorCandidateActivationConfiguration|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-sensorcandidateactivationconfiguration-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SensorCandidateActivationConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SensorCandidateActivationConfigurationRequestBuilderGet_66bcccad $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property sensorCandidateActivationConfiguration in security
      * @param SensorCandidateActivationConfiguration $body The request body
-     * @param SensorCandidateActivationConfigurationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SensorCandidateActivationConfigurationRequestBuilderPat_4d40d2e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SensorCandidateActivationConfiguration|null>
      * @throws Exception
     */
-    public function patch(SensorCandidateActivationConfiguration $body, ?SensorCandidateActivationConfigurationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SensorCandidateActivationConfiguration $body, ?SensorCandidateActivationConfigurationRequestBuilderPat_4d40d2e6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property sensorCandidateActivationConfiguration for security
-     * @param SensorCandidateActivationConfigurationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SensorCandidateActivationConfigurationRequestBuilderDel_21cd205f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SensorCandidateActivationConfigurationRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SensorCandidateActivationConfigurationRequestBuilderDel_21cd205f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
 
     /**
      * Read the properties and relationships of microsoft.graph.security.sensorCandidateActivationConfiguration object.
-     * @param SensorCandidateActivationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SensorCandidateActivationConfigurationRequestBuilderGet_66bcccad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SensorCandidateActivationConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SensorCandidateActivationConfigurationRequestBuilderGet_66bcccad $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class SensorCandidateActivationConfigurationRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property sensorCandidateActivationConfiguration in security
      * @param SensorCandidateActivationConfiguration $body The request body
-     * @param SensorCandidateActivationConfigurationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SensorCandidateActivationConfigurationRequestBuilderPat_4d40d2e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SensorCandidateActivationConfiguration $body, ?SensorCandidateActivationConfigurationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SensorCandidateActivationConfiguration $body, ?SensorCandidateActivationConfigurationRequestBuilderPat_4d40d2e6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

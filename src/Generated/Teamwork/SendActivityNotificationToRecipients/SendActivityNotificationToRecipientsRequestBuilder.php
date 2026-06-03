@@ -32,12 +32,12 @@ class SendActivityNotificationToRecipientsRequestBuilder extends BaseRequestBuil
     /**
      * Send activity feed notifications to multiple users, in bulk.  For more information, see sending Teams activity notifications.
      * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
-     * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SendActivityNotificationToRecipientsRequestBuilderPostR_5bf1ade9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/teamwork-sendactivitynotificationtorecipients?view=graph-rest-1.0 Find more info here
     */
-    public function post(SendActivityNotificationToRecipientsPostRequestBody $body, ?SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(SendActivityNotificationToRecipientsPostRequestBody $body, ?SendActivityNotificationToRecipientsRequestBuilderPostR_5bf1ade9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class SendActivityNotificationToRecipientsRequestBuilder extends BaseRequestBuil
     /**
      * Send activity feed notifications to multiple users, in bulk.  For more information, see sending Teams activity notifications.
      * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
-     * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SendActivityNotificationToRecipientsRequestBuilderPostR_5bf1ade9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SendActivityNotificationToRecipientsPostRequestBody $body, ?SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SendActivityNotificationToRecipientsPostRequestBody $body, ?SendActivityNotificationToRecipientsRequestBuilderPostR_5bf1ade9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

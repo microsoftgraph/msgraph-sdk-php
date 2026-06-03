@@ -30,7 +30,7 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/authenticationMethodsPolicy{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -55,11 +55,11 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update authenticationMethodsPolicy
      * @param AuthenticationMethodsPolicy $body The request body
-     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodsPolicy|null>
      * @throws Exception
     */
-    public function patch(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -91,10 +91,10 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update authenticationMethodsPolicy
      * @param AuthenticationMethodsPolicy $body The request body
-     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -22,7 +22,7 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningCourseActivities/{learningCourseActivity%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/learningCourseActivities/{learningCourseActivity%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property learningCourseActivities for employeeExperience
-     * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property learningCourseActivities in employeeExperience
      * @param LearningCourseActivity $body The request body
-     * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningCourseActivity|null>
      * @throws Exception
     */
-    public function patch(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property learningCourseActivities for employeeExperience
-     * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property learningCourseActivities in employeeExperience
      * @param LearningCourseActivity $body The request body
-     * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

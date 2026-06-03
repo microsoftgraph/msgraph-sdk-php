@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppH
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Item\UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthDevicePerformance\Item\UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformance;
-use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse;
+use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthDevicePerformanceCollec_0d701336;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -29,12 +29,12 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder extends Ba
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformance property of the microsoft.graph.deviceManagement entity.
      * @param string $userExperienceAnalyticsAppHealthDevicePerformanceId The unique identifier of userExperienceAnalyticsAppHealthDevicePerformance
-     * @return UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder
+     * @return UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e
     */
-    public function byUserExperienceAnalyticsAppHealthDevicePerformanceId(string $userExperienceAnalyticsAppHealthDevicePerformanceId): UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder {
+    public function byUserExperienceAnalyticsAppHealthDevicePerformanceId(string $userExperienceAnalyticsAppHealthDevicePerformanceId): UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userExperienceAnalyticsAppHealthDevicePerformance%2Did'] = $userExperienceAnalyticsAppHealthDevicePerformanceId;
-        return new UserExperienceAnalyticsAppHealthDevicePerformanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new UserExperienceAnalyticsAppHealthDevicePerformanceItemRe_ef0ccf8e($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -43,7 +43,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder extends Ba
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthDevicePerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,26 +53,26 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder extends Ba
 
     /**
      * User experience analytics appHealth Device Performance
-     * @param UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse|null>
+     * @param UserExperienceAnalyticsAppHealthDevicePerformanceReques_75510853|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<UserExperienceAnalyticsAppHealthDevicePerformanceCollec_0d701336|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsAppHealthDevicePerformanceReques_75510853 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsAppHealthDevicePerformanceCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsAppHealthDevicePerformanceCollec_0d701336::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthDevicePerformance for deviceManagement
      * @param UserExperienceAnalyticsAppHealthDevicePerformance $body The request body
-     * @param UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsAppHealthDevicePerformanceReques_27ce2e9c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsAppHealthDevicePerformance|null>
      * @throws Exception
     */
-    public function post(UserExperienceAnalyticsAppHealthDevicePerformance $body, ?UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(UserExperienceAnalyticsAppHealthDevicePerformance $body, ?UserExperienceAnalyticsAppHealthDevicePerformanceReques_27ce2e9c $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder extends Ba
 
     /**
      * User experience analytics appHealth Device Performance
-     * @param UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsAppHealthDevicePerformanceReques_75510853|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsAppHealthDevicePerformanceReques_75510853 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder extends Ba
     /**
      * Create new navigation property to userExperienceAnalyticsAppHealthDevicePerformance for deviceManagement
      * @param UserExperienceAnalyticsAppHealthDevicePerformance $body The request body
-     * @param UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsAppHealthDevicePerformanceReques_27ce2e9c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UserExperienceAnalyticsAppHealthDevicePerformance $body, ?UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UserExperienceAnalyticsAppHealthDevicePerformance $body, ?UserExperienceAnalyticsAppHealthDevicePerformanceReques_27ce2e9c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

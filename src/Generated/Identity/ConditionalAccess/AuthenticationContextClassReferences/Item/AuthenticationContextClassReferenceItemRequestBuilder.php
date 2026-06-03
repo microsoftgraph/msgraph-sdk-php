@@ -22,7 +22,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences/{authenticationContextClassReference%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences/{authenticationContextClassReference%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
-     * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferenceItemRequestBuilderDe_734db8d1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationContextClassReferenceItemRequestBuilderDe_734db8d1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
 
     /**
      * Retrieve the properties and relationships of a authenticationContextClassReference object.
-     * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferenceItemRequestBuilderGe_f1eeae04|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReference|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationContextClassReferenceItemRequestBuilderGe_f1eeae04 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     /**
      * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param AuthenticationContextClassReference $body The request body
-     * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferenceItemRequestBuilderPa_6db84e26|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReference|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferenceItemRequestBuilderPa_6db84e26 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
-     * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferenceItemRequestBuilderDe_734db8d1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationContextClassReferenceItemRequestBuilderDe_734db8d1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
 
     /**
      * Retrieve the properties and relationships of a authenticationContextClassReference object.
-     * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferenceItemRequestBuilderGe_f1eeae04|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationContextClassReferenceItemRequestBuilderGe_f1eeae04 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     /**
      * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param AuthenticationContextClassReference $body The request body
-     * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferenceItemRequestBuilderPa_6db84e26|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferenceItemRequestBuilderPa_6db84e26 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,11 +32,11 @@ class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the password registered to a user for authentication. For security, the password itself is never returned in the object, but action can be taken to reset a password.
-     * @param PasswordAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PasswordAuthenticationMethodItemRequestBuilderGetReques_eeb83783|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PasswordAuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?PasswordAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?PasswordAuthenticationMethodItemRequestBuilderGetReques_eeb83783 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class PasswordAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the password registered to a user for authentication. For security, the password itself is never returned in the object, but action can be taken to reset a password.
-     * @param PasswordAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PasswordAuthenticationMethodItemRequestBuilderGetReques_eeb83783|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?PasswordAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?PasswordAuthenticationMethodItemRequestBuilderGetReques_eeb83783 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

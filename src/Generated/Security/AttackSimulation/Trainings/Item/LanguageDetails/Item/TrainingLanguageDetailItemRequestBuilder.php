@@ -22,7 +22,7 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/attackSimulation/trainings/{training%2Did}/languageDetails/{trainingLanguageDetail%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/attackSimulation/trainings/{training%2Did}/languageDetails/{trainingLanguageDetail%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property languageDetails for security
-     * @param TrainingLanguageDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrainingLanguageDetailItemRequestBuilderDeleteRequestCo_8fbd0de7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TrainingLanguageDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?TrainingLanguageDetailItemRequestBuilderDeleteRequestCo_8fbd0de7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property languageDetails in security
      * @param TrainingLanguageDetail $body The request body
-     * @param TrainingLanguageDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrainingLanguageDetailItemRequestBuilderPatchRequestCon_5fef3593|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TrainingLanguageDetail|null>
      * @throws Exception
     */
-    public function patch(TrainingLanguageDetail $body, ?TrainingLanguageDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(TrainingLanguageDetail $body, ?TrainingLanguageDetailItemRequestBuilderPatchRequestCon_5fef3593 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property languageDetails for security
-     * @param TrainingLanguageDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrainingLanguageDetailItemRequestBuilderDeleteRequestCo_8fbd0de7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TrainingLanguageDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TrainingLanguageDetailItemRequestBuilderDeleteRequestCo_8fbd0de7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property languageDetails in security
      * @param TrainingLanguageDetail $body The request body
-     * @param TrainingLanguageDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TrainingLanguageDetailItemRequestBuilderPatchRequestCon_5fef3593|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TrainingLanguageDetail $body, ?TrainingLanguageDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TrainingLanguageDetail $body, ?TrainingLanguageDetailItemRequestBuilderPatchRequestCon_5fef3593 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

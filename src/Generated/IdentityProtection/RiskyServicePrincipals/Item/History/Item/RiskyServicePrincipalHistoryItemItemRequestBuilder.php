@@ -22,7 +22,7 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history/{riskyServicePrincipalHistoryItem%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}/history/{riskyServicePrincipalHistoryItem%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property history for identityProtection
-     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderDelet_668715b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?RiskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?RiskyServicePrincipalHistoryItemItemRequestBuilderDelet_668715b9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Represents the risk history of Microsoft Entra service principals.
-     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderGetRe_4632e16d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RiskyServicePrincipalHistoryItem|null>
      * @throws Exception
     */
-    public function get(?RiskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?RiskyServicePrincipalHistoryItemItemRequestBuilderGetRe_4632e16d $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property history in identityProtection
      * @param RiskyServicePrincipalHistoryItem $body The request body
-     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderPatch_0b4693be|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RiskyServicePrincipalHistoryItem|null>
      * @throws Exception
     */
-    public function patch(RiskyServicePrincipalHistoryItem $body, ?RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(RiskyServicePrincipalHistoryItem $body, ?RiskyServicePrincipalHistoryItemItemRequestBuilderPatch_0b4693be $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property history for identityProtection
-     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderDelet_668715b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?RiskyServicePrincipalHistoryItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?RiskyServicePrincipalHistoryItemItemRequestBuilderDelet_668715b9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Represents the risk history of Microsoft Entra service principals.
-     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderGetRe_4632e16d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RiskyServicePrincipalHistoryItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RiskyServicePrincipalHistoryItemItemRequestBuilderGetRe_4632e16d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property history in identityProtection
      * @param RiskyServicePrincipalHistoryItem $body The request body
-     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalHistoryItemItemRequestBuilderPatch_0b4693be|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(RiskyServicePrincipalHistoryItem $body, ?RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(RiskyServicePrincipalHistoryItem $body, ?RiskyServicePrincipalHistoryItemItemRequestBuilderPatch_0b4693be $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -22,7 +22,7 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/reports/authenticationMethods/userRegistrationDetails/{userRegistrationDetails%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/authenticationMethods/userRegistrationDetails/{userRegistrationDetails%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userRegistrationDetails for reports
-     * @param UserRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserRegistrationDetailsItemRequestBuilderDeleteRequestC_641a4409|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserRegistrationDetailsItemRequestBuilderDeleteRequestC_641a4409 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userRegistrationDetails in reports
      * @param UserRegistrationDetails $body The request body
-     * @param UserRegistrationDetailsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserRegistrationDetailsItemRequestBuilderPatchRequestCo_e0896cf5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserRegistrationDetails|null>
      * @throws Exception
     */
-    public function patch(UserRegistrationDetails $body, ?UserRegistrationDetailsItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserRegistrationDetails $body, ?UserRegistrationDetailsItemRequestBuilderPatchRequestCo_e0896cf5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userRegistrationDetails for reports
-     * @param UserRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserRegistrationDetailsItemRequestBuilderDeleteRequestC_641a4409|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserRegistrationDetailsItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserRegistrationDetailsItemRequestBuilderDeleteRequestC_641a4409 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class UserRegistrationDetailsItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userRegistrationDetails in reports
      * @param UserRegistrationDetails $body The request body
-     * @param UserRegistrationDetailsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserRegistrationDetailsItemRequestBuilderPatchRequestCo_e0896cf5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserRegistrationDetails $body, ?UserRegistrationDetailsItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserRegistrationDetails $body, ?UserRegistrationDetailsItemRequestBuilderPatchRequestCo_e0896cf5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

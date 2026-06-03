@@ -43,7 +43,7 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,12 +53,12 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
-     * @param DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationsRequestBuilderGetRequ_eb704ed7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassificationCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-list-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DelegatedPermissionClassificationsRequestBuilderGetRequ_eb704ed7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param DelegatedPermissionClassification $body The request body
-     * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationsRequestBuilderPostReq_908aa5a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassification|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-post-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
     */
-    public function post(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationsRequestBuilderPostReq_908aa5a7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Retrieve the list of delegatedPermissionClassification currently configured for the delegated permissions exposed by an API.
-     * @param DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationsRequestBuilderGetRequ_eb704ed7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DelegatedPermissionClassificationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DelegatedPermissionClassificationsRequestBuilderGetRequ_eb704ed7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class DelegatedPermissionClassificationsRequestBuilder extends BaseRequestBuilde
     /**
      * Classify a delegated permission by adding a delegatedPermissionClassification to the servicePrincipal representing the API.
      * @param DelegatedPermissionClassification $body The request body
-     * @param DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationsRequestBuilderPostReq_908aa5a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationsRequestBuilderPostReq_908aa5a7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -22,7 +22,7 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/virtualEndpoint/userSettings/{cloudPcUserSetting%2Did}/assignments/{cloudPcUserSettingAssignment%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/virtualEndpoint/userSettings/{cloudPcUserSetting%2Did}/assignments/{cloudPcUserSettingAssignment%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param CloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcUserSettingAssignmentItemRequestBuilderDeleteReq_1a5ea312|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CloudPcUserSettingAssignmentItemRequestBuilderDeleteReq_1a5ea312 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSetting.
-     * @param CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcUserSettingAssignmentItemRequestBuilderGetReques_d48d3930|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcUserSettingAssignment|null>
      * @throws Exception
     */
-    public function get(?CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CloudPcUserSettingAssignmentItemRequestBuilderGetReques_d48d3930 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property assignments in deviceManagement
      * @param CloudPcUserSettingAssignment $body The request body
-     * @param CloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcUserSettingAssignmentItemRequestBuilderPatchRequ_3b423bde|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcUserSettingAssignment|null>
      * @throws Exception
     */
-    public function patch(CloudPcUserSettingAssignment $body, ?CloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CloudPcUserSettingAssignment $body, ?CloudPcUserSettingAssignmentItemRequestBuilderPatchRequ_3b423bde $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param CloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcUserSettingAssignmentItemRequestBuilderDeleteReq_1a5ea312|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CloudPcUserSettingAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CloudPcUserSettingAssignmentItemRequestBuilderDeleteReq_1a5ea312 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSetting.
-     * @param CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcUserSettingAssignmentItemRequestBuilderGetReques_d48d3930|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CloudPcUserSettingAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CloudPcUserSettingAssignmentItemRequestBuilderGetReques_d48d3930 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class CloudPcUserSettingAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property assignments in deviceManagement
      * @param CloudPcUserSettingAssignment $body The request body
-     * @param CloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcUserSettingAssignmentItemRequestBuilderPatchRequ_3b423bde|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CloudPcUserSettingAssignment $body, ?CloudPcUserSettingAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CloudPcUserSettingAssignment $body, ?CloudPcUserSettingAssignmentItemRequestBuilderPatchRequ_3b423bde $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

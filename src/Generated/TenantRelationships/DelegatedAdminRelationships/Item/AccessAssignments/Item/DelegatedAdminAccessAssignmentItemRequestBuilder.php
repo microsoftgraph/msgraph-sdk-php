@@ -22,7 +22,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments/{delegatedAdminAccessAssignment%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments/{delegatedAdminAccessAssignment%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete a delegatedAdminAccessAssignment object.
-     * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteR_6cacb3fa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DelegatedAdminAccessAssignmentItemRequestBuilderDeleteR_6cacb3fa $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Read the properties of a delegatedAdminAccessAssignment object.
-     * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequ_1fdff2ab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminAccessAssignment|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DelegatedAdminAccessAssignmentItemRequestBuilderGetRequ_1fdff2ab $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
-     * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRe_b46fe207|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminAccessAssignment|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(DelegatedAdminAccessAssignment $body, ?DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(DelegatedAdminAccessAssignment $body, ?DelegatedAdminAccessAssignmentItemRequestBuilderPatchRe_b46fe207 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete a delegatedAdminAccessAssignment object.
-     * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminAccessAssignmentItemRequestBuilderDeleteR_6cacb3fa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DelegatedAdminAccessAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DelegatedAdminAccessAssignmentItemRequestBuilderDeleteR_6cacb3fa $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Read the properties of a delegatedAdminAccessAssignment object.
-     * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequ_1fdff2ab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DelegatedAdminAccessAssignmentItemRequestBuilderGetRequ_1fdff2ab $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
-     * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRe_b46fe207|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DelegatedAdminAccessAssignment $body, ?DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DelegatedAdminAccessAssignment $body, ?DelegatedAdminAccessAssignmentItemRequestBuilderPatchRe_b46fe207 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

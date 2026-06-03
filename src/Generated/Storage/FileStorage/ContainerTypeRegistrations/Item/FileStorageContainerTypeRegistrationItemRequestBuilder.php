@@ -30,7 +30,7 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/storage/fileStorage/containerTypeRegistrations/{fileStorageContainerTypeRegistration%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/storage/fileStorage/containerTypeRegistrations/{fileStorageContainerTypeRegistration%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,12 +40,12 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
 
     /**
      * Delete a fileStorageContainerTypeRegistration object. A registration can only be deleted if it has neither containers nor deleted containers
-     * @param FileStorageContainerTypeRegistrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeRegistrationItemRequestBuilderD_3f05b64c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestorage-delete-containertyperegistrations?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?FileStorageContainerTypeRegistrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?FileStorageContainerTypeRegistrationItemRequestBuilderD_3f05b64c $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
 
     /**
      * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
-     * @param FileStorageContainerTypeRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeRegistrationItemRequestBuilderG_be31b242|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerTypeRegistration|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?FileStorageContainerTypeRegistrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?FileStorageContainerTypeRegistrationItemRequestBuilderG_be31b242 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,12 +71,12 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
     /**
      * Create or replace a fileStorageContainerTypeRegistration object. This method registers a fileStorageContainerType in the tenant.  For standard containers, billing must be valid for the registration to complete successfully. Settings can't be modified during registration.
      * @param FileStorageContainerTypeRegistration $body The request body
-     * @param FileStorageContainerTypeRegistrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeRegistrationItemRequestBuilderP_7a6f51cd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerTypeRegistration|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestorage-post-containertyperegistrations?view=graph-rest-1.0 Find more info here
     */
-    public function patch(FileStorageContainerTypeRegistration $body, ?FileStorageContainerTypeRegistrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(FileStorageContainerTypeRegistration $body, ?FileStorageContainerTypeRegistrationItemRequestBuilderP_7a6f51cd $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,10 +86,10 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
 
     /**
      * Delete a fileStorageContainerTypeRegistration object. A registration can only be deleted if it has neither containers nor deleted containers
-     * @param FileStorageContainerTypeRegistrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeRegistrationItemRequestBuilderD_3f05b64c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?FileStorageContainerTypeRegistrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?FileStorageContainerTypeRegistrationItemRequestBuilderD_3f05b64c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
 
     /**
      * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
-     * @param FileStorageContainerTypeRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeRegistrationItemRequestBuilderG_be31b242|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FileStorageContainerTypeRegistrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FileStorageContainerTypeRegistrationItemRequestBuilderG_be31b242 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -126,10 +126,10 @@ class FileStorageContainerTypeRegistrationItemRequestBuilder extends BaseRequest
     /**
      * Create or replace a fileStorageContainerTypeRegistration object. This method registers a fileStorageContainerType in the tenant.  For standard containers, billing must be valid for the registration to complete successfully. Settings can't be modified during registration.
      * @param FileStorageContainerTypeRegistration $body The request body
-     * @param FileStorageContainerTypeRegistrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeRegistrationItemRequestBuilderP_7a6f51cd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(FileStorageContainerTypeRegistration $body, ?FileStorageContainerTypeRegistrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(FileStorageContainerTypeRegistration $body, ?FileStorageContainerTypeRegistrationItemRequestBuilderP_7a6f51cd $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

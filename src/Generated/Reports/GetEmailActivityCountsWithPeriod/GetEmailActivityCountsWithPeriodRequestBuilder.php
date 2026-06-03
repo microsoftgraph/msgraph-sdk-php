@@ -35,12 +35,12 @@ class GetEmailActivityCountsWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Enables you to understand the trends of email activity (like how many were sent, read, and received) in your organization.
-     * @param GetEmailActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetEmailActivityCountsWithPeriodRequestBuilderGetReques_0503532a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getemailactivitycounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetEmailActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetEmailActivityCountsWithPeriodRequestBuilderGetReques_0503532a $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetEmailActivityCountsWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Enables you to understand the trends of email activity (like how many were sent, read, and received) in your organization.
-     * @param GetEmailActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetEmailActivityCountsWithPeriodRequestBuilderGetReques_0503532a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetEmailActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetEmailActivityCountsWithPeriodRequestBuilderGetReques_0503532a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

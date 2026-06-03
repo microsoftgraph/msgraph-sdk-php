@@ -22,7 +22,7 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/team/schedule/swapShiftsChangeRequests/{swapShiftsChangeRequest%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/team/schedule/swapShiftsChangeRequests/{swapShiftsChangeRequest%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property swapShiftsChangeRequests for groups
-     * @param SwapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SwapShiftsChangeRequestItemRequestBuilderDeleteRequestC_2471b0ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SwapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SwapShiftsChangeRequestItemRequestBuilderDeleteRequestC_2471b0ce $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property swapShiftsChangeRequests in groups
      * @param SwapShiftsChangeRequest $body The request body
-     * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestCo_e515cfb2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SwapShiftsChangeRequest|null>
      * @throws Exception
     */
-    public function patch(SwapShiftsChangeRequest $body, ?SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SwapShiftsChangeRequest $body, ?SwapShiftsChangeRequestItemRequestBuilderPatchRequestCo_e515cfb2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property swapShiftsChangeRequests for groups
-     * @param SwapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SwapShiftsChangeRequestItemRequestBuilderDeleteRequestC_2471b0ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SwapShiftsChangeRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SwapShiftsChangeRequestItemRequestBuilderDeleteRequestC_2471b0ce $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class SwapShiftsChangeRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property swapShiftsChangeRequests in groups
      * @param SwapShiftsChangeRequest $body The request body
-     * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestCo_e515cfb2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SwapShiftsChangeRequest $body, ?SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SwapShiftsChangeRequest $body, ?SwapShiftsChangeRequestItemRequestBuilderPatchRequestCo_e515cfb2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

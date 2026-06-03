@@ -30,7 +30,7 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/file/localizations/{agreementFileLocalization%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}/file/localizations/{agreementFileLocalization%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property localizations for identityGovernance
-     * @param AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AgreementFileLocalizationItemRequestBuilderDeleteReques_ef9ab2fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AgreementFileLocalizationItemRequestBuilderDeleteReques_ef9ab2fb $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
-     * @param AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AgreementFileLocalizationItemRequestBuilderGetRequestCo_9baf87e8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementFileLocalization|null>
      * @throws Exception
     */
-    public function get(?AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AgreementFileLocalizationItemRequestBuilderGetRequestCo_9baf87e8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property localizations in identityGovernance
      * @param AgreementFileLocalization $body The request body
-     * @param AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AgreementFileLocalizationItemRequestBuilderPatchRequest_0a82654d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AgreementFileLocalization|null>
      * @throws Exception
     */
-    public function patch(AgreementFileLocalization $body, ?AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AgreementFileLocalization $body, ?AgreementFileLocalizationItemRequestBuilderPatchRequest_0a82654d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property localizations for identityGovernance
-     * @param AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AgreementFileLocalizationItemRequestBuilderDeleteReques_ef9ab2fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AgreementFileLocalizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AgreementFileLocalizationItemRequestBuilderDeleteReques_ef9ab2fb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
-     * @param AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AgreementFileLocalizationItemRequestBuilderGetRequestCo_9baf87e8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AgreementFileLocalizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AgreementFileLocalizationItemRequestBuilderGetRequestCo_9baf87e8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class AgreementFileLocalizationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property localizations in identityGovernance
      * @param AgreementFileLocalization $body The request body
-     * @param AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AgreementFileLocalizationItemRequestBuilderPatchRequest_0a82654d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AgreementFileLocalization $body, ?AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AgreementFileLocalization $body, ?AgreementFileLocalizationItemRequestBuilderPatchRequest_0a82654d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

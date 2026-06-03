@@ -32,11 +32,11 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRequestBu
     /**
      * Issues a wipe operation on an app registration with specified device tag.
      * @param WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body The request body
-     * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPos_91c251a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body, ?WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body, ?WipeManagedAppRegistrationsByDeviceTagRequestBuilderPos_91c251a7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRequestBu
     /**
      * Issues a wipe operation on an app registration with specified device tag.
      * @param WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body The request body
-     * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPos_91c251a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body, ?WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body, ?WipeManagedAppRegistrationsByDeviceTagRequestBuilderPos_91c251a7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -22,7 +22,7 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/userExperienceAnalyticsScoreHistory/{userExperienceAnalyticsScoreHistory%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/userExperienceAnalyticsScoreHistory/{userExperienceAnalyticsScoreHistory%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property userExperienceAnalyticsScoreHistory for deviceManagement
-     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderDe_a860f441|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderDe_a860f441 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
 
     /**
      * User experience analytics device Startup Score History
-     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderGe_1d67e993|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsScoreHistory|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderGe_1d67e993 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property userExperienceAnalyticsScoreHistory in deviceManagement
      * @param UserExperienceAnalyticsScoreHistory $body The request body
-     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderPa_c8bc3a86|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsScoreHistory|null>
      * @throws Exception
     */
-    public function patch(UserExperienceAnalyticsScoreHistory $body, ?UserExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserExperienceAnalyticsScoreHistory $body, ?UserExperienceAnalyticsScoreHistoryItemRequestBuilderPa_c8bc3a86 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property userExperienceAnalyticsScoreHistory for deviceManagement
-     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderDe_a860f441|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderDe_a860f441 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
 
     /**
      * User experience analytics device Startup Score History
-     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderGe_1d67e993|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsScoreHistoryItemRequestBuilderGe_1d67e993 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class UserExperienceAnalyticsScoreHistoryItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property userExperienceAnalyticsScoreHistory in deviceManagement
      * @param UserExperienceAnalyticsScoreHistory $body The request body
-     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsScoreHistoryItemRequestBuilderPa_c8bc3a86|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserExperienceAnalyticsScoreHistory $body, ?UserExperienceAnalyticsScoreHistoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserExperienceAnalyticsScoreHistory $body, ?UserExperienceAnalyticsScoreHistoryItemRequestBuilderPa_c8bc3a86 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

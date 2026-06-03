@@ -62,7 +62,7 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -72,11 +72,11 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property roleAssignmentScheduleInstances for roleManagement
-     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_13f27927|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_13f27927 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,12 +86,12 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
 
     /**
      * Get the instance of an active role assignment.
-     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_d8bb4796|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentScheduleInstance|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_d8bb4796 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -102,11 +102,11 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property roleAssignmentScheduleInstances in roleManagement
      * @param UnifiedRoleAssignmentScheduleInstance $body The request body
-     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_e5e7bd03|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentScheduleInstance|null>
      * @throws Exception
     */
-    public function patch(UnifiedRoleAssignmentScheduleInstance $body, ?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UnifiedRoleAssignmentScheduleInstance $body, ?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_e5e7bd03 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -116,10 +116,10 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property roleAssignmentScheduleInstances for roleManagement
-     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_13f27927|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_13f27927 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
 
     /**
      * Get the instance of an active role assignment.
-     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_d8bb4796|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_d8bb4796 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -156,10 +156,10 @@ class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property roleAssignmentScheduleInstances in roleManagement
      * @param UnifiedRoleAssignmentScheduleInstance $body The request body
-     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_e5e7bd03|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UnifiedRoleAssignmentScheduleInstance $body, ?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UnifiedRoleAssignmentScheduleInstance $body, ?UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder_e5e7bd03 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

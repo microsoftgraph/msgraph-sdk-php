@@ -7,6 +7,9 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserTeamwork;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\AssociatedTeamsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\DeleteTargetedMessage\DeleteTargetedMessageRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\GetAllRetainedTargetedMessages\GetAllRetainedTargetedMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\GetAllTargetedMessages\GetAllTargetedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -24,6 +27,27 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     */
     public function associatedTeams(): AssociatedTeamsRequestBuilder {
         return new AssociatedTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the deleteTargetedMessage method.
+    */
+    public function deleteTargetedMessage(): DeleteTargetedMessageRequestBuilder {
+        return new DeleteTargetedMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllRetainedTargetedMessages method.
+    */
+    public function getAllRetainedTargetedMessages(): GetAllRetainedTargetedMessagesRequestBuilder {
+        return new GetAllRetainedTargetedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllTargetedMessages method.
+    */
+    public function getAllTargetedMessages(): GetAllTargetedMessagesRequestBuilder {
+        return new GetAllTargetedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -46,7 +70,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/teamwork{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/teamwork');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

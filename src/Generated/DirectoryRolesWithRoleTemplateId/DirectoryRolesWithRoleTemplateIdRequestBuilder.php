@@ -23,7 +23,7 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $roleTemplateId Alternate key of directoryRole
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $roleTemplateId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/directoryRoles(roleTemplateId=\'{roleTemplateId}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['roleTemplateId'] = $roleTemplateId;
@@ -35,11 +35,11 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete entity from directoryRoles by roleTemplateId
-     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteReq_539751e5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteReq_539751e5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,12 +49,12 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of a directoryRole object. The role must be activated in tenant for a successful response. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
-     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderGetReques_4080592c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryRole|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryrole-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DirectoryRolesWithRoleTemplateIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DirectoryRolesWithRoleTemplateIdRequestBuilderGetReques_4080592c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -65,11 +65,11 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update entity in directoryRoles by roleTemplateId
      * @param DirectoryRole $body The request body
-     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequ_716e3046|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryRole|null>
      * @throws Exception
     */
-    public function patch(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequ_716e3046 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,10 +79,10 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete entity from directoryRoles by roleTemplateId
-     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteReq_539751e5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DirectoryRolesWithRoleTemplateIdRequestBuilderDeleteReq_539751e5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -97,10 +97,10 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of a directoryRole object. The role must be activated in tenant for a successful response. You can use both the object ID and template ID of the directoryRole with this API. The template ID of a built-in role is immutable and can be seen in the role description on the Microsoft Entra admin center. For details, see Role template IDs.
-     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderGetReques_4080592c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DirectoryRolesWithRoleTemplateIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DirectoryRolesWithRoleTemplateIdRequestBuilderGetReques_4080592c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -119,10 +119,10 @@ class DirectoryRolesWithRoleTemplateIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update entity in directoryRoles by roleTemplateId
      * @param DirectoryRole $body The request body
-     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequ_716e3046|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DirectoryRole $body, ?DirectoryRolesWithRoleTemplateIdRequestBuilderPatchRequ_716e3046 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

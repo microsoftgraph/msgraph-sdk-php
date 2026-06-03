@@ -22,7 +22,7 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}/assignments/{enrollmentConfigurationAssignment%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}/assignments/{enrollmentConfigurationAssignment%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EnrollmentConfigurationAssignmentItemRequestBuilderDele_0a371cd0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EnrollmentConfigurationAssignmentItemRequestBuilderDele_0a371cd0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
 
     /**
      * The list of group assignments for the device configuration profile
-     * @param EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EnrollmentConfigurationAssignmentItemRequestBuilderGetR_2c753eeb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EnrollmentConfigurationAssignment|null>
      * @throws Exception
     */
-    public function get(?EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EnrollmentConfigurationAssignmentItemRequestBuilderGetR_2c753eeb $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property assignments in deviceManagement
      * @param EnrollmentConfigurationAssignment $body The request body
-     * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatc_9b579106|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EnrollmentConfigurationAssignment|null>
      * @throws Exception
     */
-    public function patch(EnrollmentConfigurationAssignment $body, ?EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EnrollmentConfigurationAssignment $body, ?EnrollmentConfigurationAssignmentItemRequestBuilderPatc_9b579106 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EnrollmentConfigurationAssignmentItemRequestBuilderDele_0a371cd0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EnrollmentConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EnrollmentConfigurationAssignmentItemRequestBuilderDele_0a371cd0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
 
     /**
      * The list of group assignments for the device configuration profile
-     * @param EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EnrollmentConfigurationAssignmentItemRequestBuilderGetR_2c753eeb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EnrollmentConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EnrollmentConfigurationAssignmentItemRequestBuilderGetR_2c753eeb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property assignments in deviceManagement
      * @param EnrollmentConfigurationAssignment $body The request body
-     * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatc_9b579106|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EnrollmentConfigurationAssignment $body, ?EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EnrollmentConfigurationAssignment $body, ?EnrollmentConfigurationAssignmentItemRequestBuilderPatc_9b579106 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

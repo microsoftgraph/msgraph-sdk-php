@@ -22,7 +22,7 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identity/authenticationEventListeners/{authenticationEventListener%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identity/authenticationEventListeners/{authenticationEventListener%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an authenticationEventListener object. The following derived types are currently supported.
-     * @param AuthenticationEventListenerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenerItemRequestBuilderDeleteRequ_75111d79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?AuthenticationEventListenerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationEventListenerItemRequestBuilderDeleteRequ_75111d79 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
-     * @param AuthenticationEventListenerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenerItemRequestBuilderGetRequest_8b46b507|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventListener|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationEventListenerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationEventListenerItemRequestBuilderGetRequest_8b46b507 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. The following derived types are currently supported.
      * @param AuthenticationEventListener $body The request body
-     * @param AuthenticationEventListenerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenerItemRequestBuilderPatchReque_5809799a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventListener|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationeventlistener-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(AuthenticationEventListener $body, ?AuthenticationEventListenerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AuthenticationEventListener $body, ?AuthenticationEventListenerItemRequestBuilderPatchReque_5809799a $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an authenticationEventListener object. The following derived types are currently supported.
-     * @param AuthenticationEventListenerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenerItemRequestBuilderDeleteRequ_75111d79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationEventListenerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationEventListenerItemRequestBuilderDeleteRequ_75111d79 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
-     * @param AuthenticationEventListenerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenerItemRequestBuilderGetRequest_8b46b507|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationEventListenerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationEventListenerItemRequestBuilderGetRequest_8b46b507 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. The following derived types are currently supported.
      * @param AuthenticationEventListener $body The request body
-     * @param AuthenticationEventListenerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenerItemRequestBuilderPatchReque_5809799a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationEventListener $body, ?AuthenticationEventListenerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationEventListener $body, ?AuthenticationEventListenerItemRequestBuilderPatchReque_5809799a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

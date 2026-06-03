@@ -46,7 +46,7 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicy%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicy%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -56,11 +56,11 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property exchangeProtectionPolicies for solutions
-     * @param ExchangeProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeProtectionPolicyItemRequestBuilderDeleteRequest_b83f7775|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ExchangeProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ExchangeProtectionPolicyItemRequestBuilderDeleteRequest_b83f7775 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Exchange protection policies in the tenant.
-     * @param ExchangeProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeProtectionPolicyItemRequestBuilderGetRequestCon_364255e4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExchangeProtectionPolicy|null>
      * @throws Exception
     */
-    public function get(?ExchangeProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ExchangeProtectionPolicyItemRequestBuilderGetRequestCon_364255e4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,12 +85,12 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
      * @param ExchangeProtectionPolicy $body The request body
-     * @param ExchangeProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeProtectionPolicyItemRequestBuilderPatchRequestC_b8b0b969|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExchangeProtectionPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ExchangeProtectionPolicy $body, ?ExchangeProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ExchangeProtectionPolicy $body, ?ExchangeProtectionPolicyItemRequestBuilderPatchRequestC_b8b0b969 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -100,10 +100,10 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property exchangeProtectionPolicies for solutions
-     * @param ExchangeProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeProtectionPolicyItemRequestBuilderDeleteRequest_b83f7775|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ExchangeProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ExchangeProtectionPolicyItemRequestBuilderDeleteRequest_b83f7775 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Exchange protection policies in the tenant.
-     * @param ExchangeProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeProtectionPolicyItemRequestBuilderGetRequestCon_364255e4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ExchangeProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ExchangeProtectionPolicyItemRequestBuilderGetRequestCon_364255e4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -140,10 +140,10 @@ class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
      * @param ExchangeProtectionPolicy $body The request body
-     * @param ExchangeProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeProtectionPolicyItemRequestBuilderPatchRequestC_b8b0b969|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ExchangeProtectionPolicy $body, ?ExchangeProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ExchangeProtectionPolicy $body, ?ExchangeProtectionPolicyItemRequestBuilderPatchRequestC_b8b0b969 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

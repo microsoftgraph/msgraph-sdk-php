@@ -46,7 +46,7 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -56,11 +56,11 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property iosManagedAppProtections for deviceAppManagement
-     * @param IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IosManagedAppProtectionItemRequestBuilderDeleteRequestC_ff12b436|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?IosManagedAppProtectionItemRequestBuilderDeleteRequestC_ff12b436 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param IosManagedAppProtection $body The request body
-     * @param IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IosManagedAppProtectionItemRequestBuilderPatchRequestCo_f03cb96f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IosManagedAppProtection|null>
      * @throws Exception
     */
-    public function patch(IosManagedAppProtection $body, ?IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(IosManagedAppProtection $body, ?IosManagedAppProtectionItemRequestBuilderPatchRequestCo_f03cb96f $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property iosManagedAppProtections for deviceAppManagement
-     * @param IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IosManagedAppProtectionItemRequestBuilderDeleteRequestC_ff12b436|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?IosManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?IosManagedAppProtectionItemRequestBuilderDeleteRequestC_ff12b436 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -139,10 +139,10 @@ class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param IosManagedAppProtection $body The request body
-     * @param IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IosManagedAppProtectionItemRequestBuilderPatchRequestCo_f03cb96f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(IosManagedAppProtection $body, ?IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(IosManagedAppProtection $body, ?IosManagedAppProtectionItemRequestBuilderPatchRequestCo_f03cb96f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

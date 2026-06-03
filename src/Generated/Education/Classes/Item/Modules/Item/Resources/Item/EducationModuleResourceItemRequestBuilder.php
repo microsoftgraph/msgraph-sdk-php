@@ -22,7 +22,7 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/education/classes/{educationClass%2Did}/modules/{educationModule%2Did}/resources/{educationModuleResource%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/education/classes/{educationClass%2Did}/modules/{educationModule%2Did}/resources/{educationModuleResource%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
-     * @param EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationModuleResourceItemRequestBuilderDeleteRequestC_af028172|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationmoduleresource-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EducationModuleResourceItemRequestBuilderDeleteRequestC_af028172 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
      * @param EducationModuleResource $body The request body
-     * @param EducationModuleResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationModuleResourceItemRequestBuilderPatchRequestCo_ff53031e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationModuleResource|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(EducationModuleResource $body, ?EducationModuleResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EducationModuleResource $body, ?EducationModuleResourceItemRequestBuilderPatchRequestCo_ff53031e $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
-     * @param EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationModuleResourceItemRequestBuilderDeleteRequestC_af028172|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EducationModuleResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EducationModuleResourceItemRequestBuilderDeleteRequestC_af028172 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
      * @param EducationModuleResource $body The request body
-     * @param EducationModuleResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationModuleResourceItemRequestBuilderPatchRequestCo_ff53031e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EducationModuleResource $body, ?EducationModuleResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EducationModuleResource $body, ?EducationModuleResourceItemRequestBuilderPatchRequestCo_ff53031e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

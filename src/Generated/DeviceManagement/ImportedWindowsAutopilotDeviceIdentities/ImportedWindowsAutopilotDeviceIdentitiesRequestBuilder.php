@@ -51,7 +51,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/importedWindowsAutopilotDeviceIdentities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -61,11 +61,11 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
 
     /**
      * Collection of imported Windows autopilot devices.
-     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderG_e4a972a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentityCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderG_e4a972a8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,11 +76,11 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     /**
      * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
-     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderP_489ffef5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentity|null>
      * @throws Exception
     */
-    public function post(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderP_489ffef5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -90,10 +90,10 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
 
     /**
      * Collection of imported Windows autopilot devices.
-     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderG_e4a972a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderG_e4a972a8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -112,10 +112,10 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequest
     /**
      * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
-     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderP_489ffef5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderP_489ffef5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

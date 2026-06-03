@@ -22,7 +22,7 @@ class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/identities/settings/autoAuditingConfiguration{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/identities/settings/autoAuditingConfiguration');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property autoAuditingConfiguration for security
-     * @param AutoAuditingConfigurationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AutoAuditingConfigurationRequestBuilderDeleteRequestCon_6881e2d2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AutoAuditingConfigurationRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AutoAuditingConfigurationRequestBuilderDeleteRequestCon_6881e2d2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property autoAuditingConfiguration for security
-     * @param AutoAuditingConfigurationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AutoAuditingConfigurationRequestBuilderDeleteRequestCon_6881e2d2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AutoAuditingConfigurationRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AutoAuditingConfigurationRequestBuilderDeleteRequestCon_6881e2d2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

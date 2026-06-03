@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Models\OnlineMeetingCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_be4c23e9\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_37aeadf4;
+use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_056e0011\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_f6fef853;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -39,15 +39,15 @@ class OnlineMeetingsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getAllRecordings method.
     */
-    public function getAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_37aeadf4 {
+        return new GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_37aeadf4($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAllTranscripts method.
     */
-    public function getAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_f6fef853 {
+        return new GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_f6fef853($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -67,7 +67,7 @@ class OnlineMeetingsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/onlineMeetings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

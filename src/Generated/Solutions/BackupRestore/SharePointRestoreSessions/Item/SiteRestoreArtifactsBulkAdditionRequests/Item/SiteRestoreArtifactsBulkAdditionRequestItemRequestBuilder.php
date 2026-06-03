@@ -22,7 +22,7 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession%2Did}/siteRestoreArtifactsBulkAdditionRequests/{siteRestoreArtifactsBulkAdditionRequest%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSession%2Did}/siteRestoreArtifactsBulkAdditionRequests/{siteRestoreArtifactsBulkAdditionRequest%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
 
     /**
      * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
-     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_a2abc6bd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_a2abc6bd $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
 
     /**
      * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
-     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_cc7ab423|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/siterestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_cc7ab423 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property siteRestoreArtifactsBulkAdditionRequests in solutions
      * @param SiteRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_306f2b38|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
     */
-    public function patch(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_306f2b38 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
 
     /**
      * Delete a siteRestoreArtifactsBulkAdditionRequest object associated with a sharepointRestoreSession.
-     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_a2abc6bd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_a2abc6bd $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
 
     /**
      * Get a siteRestoreArtifactsBulkAdditionRequest object by its id, associated with a sharePointRestoreSession.
-     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_cc7ab423|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_cc7ab423 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property siteRestoreArtifactsBulkAdditionRequests in solutions
      * @param SiteRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_306f2b38|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestItemRequestBuild_306f2b38 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

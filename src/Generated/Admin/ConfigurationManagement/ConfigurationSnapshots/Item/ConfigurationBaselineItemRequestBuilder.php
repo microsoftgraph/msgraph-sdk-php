@@ -22,7 +22,7 @@ class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/configurationManagement/configurationSnapshots/{configurationBaseline%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/configurationManagement/configurationSnapshots/{configurationBaseline%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property configurationSnapshots for admin
-     * @param ConfigurationBaselineItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationBaselineItemRequestBuilderDeleteRequestCon_379df0ef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ConfigurationBaselineItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ConfigurationBaselineItemRequestBuilderDeleteRequestCon_379df0ef $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property configurationSnapshots for admin
-     * @param ConfigurationBaselineItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationBaselineItemRequestBuilderDeleteRequestCon_379df0ef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ConfigurationBaselineItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ConfigurationBaselineItemRequestBuilderDeleteRequestCon_379df0ef $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

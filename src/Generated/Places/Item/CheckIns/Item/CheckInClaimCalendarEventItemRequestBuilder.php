@@ -22,7 +22,7 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/places/{place%2Did}/checkIns/{checkInClaim%2DcalendarEventId}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/places/{place%2Did}/checkIns/{checkInClaim%2DcalendarEventId}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property checkIns for places
-     * @param CheckInClaimCalendarEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CheckInClaimCalendarEventItemRequestBuilderDeleteReques_08e33824|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CheckInClaimCalendarEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CheckInClaimCalendarEventItemRequestBuilderDeleteReques_08e33824 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
-     * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestCo_212480ae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckInClaim|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/checkinclaim-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CheckInClaimCalendarEventItemRequestBuilderGetRequestCo_212480ae $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property checkIns in places
      * @param CheckInClaim $body The request body
-     * @param CheckInClaimCalendarEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CheckInClaimCalendarEventItemRequestBuilderPatchRequest_326df292|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CheckInClaim|null>
      * @throws Exception
     */
-    public function patch(CheckInClaim $body, ?CheckInClaimCalendarEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CheckInClaim $body, ?CheckInClaimCalendarEventItemRequestBuilderPatchRequest_326df292 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property checkIns for places
-     * @param CheckInClaimCalendarEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CheckInClaimCalendarEventItemRequestBuilderDeleteReques_08e33824|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CheckInClaimCalendarEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CheckInClaimCalendarEventItemRequestBuilderDeleteReques_08e33824 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a checkInClaim object. This API provides the check-in status for a specific place, such as a desk, room, or workspace, associated with a particular reservation.
-     * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CheckInClaimCalendarEventItemRequestBuilderGetRequestCo_212480ae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CheckInClaimCalendarEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CheckInClaimCalendarEventItemRequestBuilderGetRequestCo_212480ae $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class CheckInClaimCalendarEventItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property checkIns in places
      * @param CheckInClaim $body The request body
-     * @param CheckInClaimCalendarEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CheckInClaimCalendarEventItemRequestBuilderPatchRequest_326df292|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CheckInClaim $body, ?CheckInClaimCalendarEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CheckInClaim $body, ?CheckInClaimCalendarEventItemRequestBuilderPatchRequest_326df292 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

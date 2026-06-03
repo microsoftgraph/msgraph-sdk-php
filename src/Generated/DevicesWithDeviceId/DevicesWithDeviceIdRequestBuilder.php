@@ -23,7 +23,7 @@ class DevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $deviceId Alternate key of device
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $deviceId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/devices(deviceId=\'{deviceId}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/devices(deviceId=\'{deviceId}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['deviceId'] = $deviceId;

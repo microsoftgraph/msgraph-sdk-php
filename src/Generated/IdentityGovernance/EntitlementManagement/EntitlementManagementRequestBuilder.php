@@ -16,6 +16,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceR
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\ResourceRoleScopesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Settings\SettingsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Subjects\SubjectsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\SubjectsWithObjectId\SubjectsWithObjectIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\EntitlementManagement;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -113,12 +115,19 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
+    */
+    public function subjects(): SubjectsRequestBuilder {
+        return new SubjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Instantiates a new EntitlementManagementRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -167,6 +176,15 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [EntitlementManagement::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
+     * @param string $objectId Alternate key of accessPackageSubject
+     * @return SubjectsWithObjectIdRequestBuilder
+    */
+    public function subjectsWithObjectId(string $objectId): SubjectsWithObjectIdRequestBuilder {
+        return new SubjectsWithObjectIdRequestBuilder($this->pathParameters, $this->requestAdapter, $objectId);
     }
 
     /**

@@ -43,7 +43,7 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/defaultManagedAppProtections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Default managed app policies.
-     * @param DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultManagedAppProtectionsRequestBuilderGetRequestCon_543f1a10|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DefaultManagedAppProtectionCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DefaultManagedAppProtectionsRequestBuilderGetRequestCon_543f1a10 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param DefaultManagedAppProtection $body The request body
-     * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultManagedAppProtectionsRequestBuilderPostRequestCo_12e2ce4d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DefaultManagedAppProtection|null>
      * @throws Exception
     */
-    public function post(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionsRequestBuilderPostRequestCo_12e2ce4d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Default managed app policies.
-     * @param DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultManagedAppProtectionsRequestBuilderGetRequestCon_543f1a10|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DefaultManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DefaultManagedAppProtectionsRequestBuilderGetRequestCon_543f1a10 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param DefaultManagedAppProtection $body The request body
-     * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultManagedAppProtectionsRequestBuilderPostRequestCo_12e2ce4d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionsRequestBuilderPostRequestCo_12e2ce4d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

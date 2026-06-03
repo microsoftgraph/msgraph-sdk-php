@@ -36,12 +36,12 @@ class GetOneDriveUsageAccountDetailWithDateRequestBuilder extends BaseRequestBui
 
     /**
      * Get details about OneDrive usage by account.
-     * @param GetOneDriveUsageAccountDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOneDriveUsageAccountDetailWithDateRequestBuilderGetR_16560817|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveusageaccountdetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetOneDriveUsageAccountDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetOneDriveUsageAccountDetailWithDateRequestBuilderGetR_16560817 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -53,10 +53,10 @@ class GetOneDriveUsageAccountDetailWithDateRequestBuilder extends BaseRequestBui
 
     /**
      * Get details about OneDrive usage by account.
-     * @param GetOneDriveUsageAccountDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOneDriveUsageAccountDetailWithDateRequestBuilderGetR_16560817|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetOneDriveUsageAccountDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetOneDriveUsageAccountDetailWithDateRequestBuilderGetR_16560817 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

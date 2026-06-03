@@ -43,7 +43,7 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/androidManagedAppProtections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Android managed app policies.
-     * @param AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionsRequestBuilderGetRequestCon_63f60ef4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AndroidManagedAppProtectionCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AndroidManagedAppProtectionsRequestBuilderGetRequestCon_63f60ef4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to androidManagedAppProtections for deviceAppManagement
      * @param AndroidManagedAppProtection $body The request body
-     * @param AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionsRequestBuilderPostRequestCo_a50f1c57|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AndroidManagedAppProtection|null>
      * @throws Exception
     */
-    public function post(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionsRequestBuilderPostRequestCo_a50f1c57 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Android managed app policies.
-     * @param AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionsRequestBuilderGetRequestCon_63f60ef4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AndroidManagedAppProtectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AndroidManagedAppProtectionsRequestBuilderGetRequestCon_63f60ef4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class AndroidManagedAppProtectionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to androidManagedAppProtections for deviceAppManagement
      * @param AndroidManagedAppProtection $body The request body
-     * @param AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionsRequestBuilderPostRequestCo_a50f1c57|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionsRequestBuilderPostRequestCo_a50f1c57 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

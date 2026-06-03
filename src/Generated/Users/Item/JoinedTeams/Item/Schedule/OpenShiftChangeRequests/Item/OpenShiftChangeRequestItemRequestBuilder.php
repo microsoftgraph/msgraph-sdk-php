@@ -22,7 +22,7 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property openShiftChangeRequests for users
-     * @param OpenShiftChangeRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OpenShiftChangeRequestItemRequestBuilderDeleteRequestCo_a530bb5a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?OpenShiftChangeRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?OpenShiftChangeRequestItemRequestBuilderDeleteRequestCo_a530bb5a $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property openShiftChangeRequests in users
      * @param OpenShiftChangeRequest $body The request body
-     * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestCon_bfc3a206|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OpenShiftChangeRequest|null>
      * @throws Exception
     */
-    public function patch(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestItemRequestBuilderPatchRequestCon_bfc3a206 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property openShiftChangeRequests for users
-     * @param OpenShiftChangeRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OpenShiftChangeRequestItemRequestBuilderDeleteRequestCo_a530bb5a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OpenShiftChangeRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OpenShiftChangeRequestItemRequestBuilderDeleteRequestCo_a530bb5a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class OpenShiftChangeRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property openShiftChangeRequests in users
      * @param OpenShiftChangeRequest $body The request body
-     * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestCon_bfc3a206|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OpenShiftChangeRequest $body, ?OpenShiftChangeRequestItemRequestBuilderPatchRequestCon_bfc3a206 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

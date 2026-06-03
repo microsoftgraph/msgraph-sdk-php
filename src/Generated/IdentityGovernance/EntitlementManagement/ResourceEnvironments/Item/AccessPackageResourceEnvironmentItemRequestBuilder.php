@@ -30,7 +30,7 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement/resourceEnvironments/{accessPackageResourceEnvironment%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement/resourceEnvironments/{accessPackageResourceEnvironment%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property resourceEnvironments for identityGovernance
-     * @param AccessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceEnvironmentItemRequestBuilderDelet_2c42067e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AccessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AccessPackageResourceEnvironmentItemRequestBuilderDelet_2c42067e $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * A reference to the geolocation environments in which a resource is located.
-     * @param AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceEnvironmentItemRequestBuilderGetRe_9d34d0e7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceEnvironment|null>
      * @throws Exception
     */
-    public function get(?AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AccessPackageResourceEnvironmentItemRequestBuilderGetRe_9d34d0e7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property resourceEnvironments in identityGovernance
      * @param AccessPackageResourceEnvironment $body The request body
-     * @param AccessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceEnvironmentItemRequestBuilderPatch_03da93cf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceEnvironment|null>
      * @throws Exception
     */
-    public function patch(AccessPackageResourceEnvironment $body, ?AccessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AccessPackageResourceEnvironment $body, ?AccessPackageResourceEnvironmentItemRequestBuilderPatch_03da93cf $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property resourceEnvironments for identityGovernance
-     * @param AccessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceEnvironmentItemRequestBuilderDelet_2c42067e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessPackageResourceEnvironmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessPackageResourceEnvironmentItemRequestBuilderDelet_2c42067e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * A reference to the geolocation environments in which a resource is located.
-     * @param AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceEnvironmentItemRequestBuilderGetRe_9d34d0e7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackageResourceEnvironmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackageResourceEnvironmentItemRequestBuilderGetRe_9d34d0e7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class AccessPackageResourceEnvironmentItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property resourceEnvironments in identityGovernance
      * @param AccessPackageResourceEnvironment $body The request body
-     * @param AccessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceEnvironmentItemRequestBuilderPatch_03da93cf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessPackageResourceEnvironment $body, ?AccessPackageResourceEnvironmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AccessPackageResourceEnvironment $body, ?AccessPackageResourceEnvironmentItemRequestBuilderPatch_03da93cf $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

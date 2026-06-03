@@ -22,7 +22,7 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}/localizedNotificationMessages/{localizedNotificationMessage%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}/localizedNotificationMessages/{localizedNotificationMessage%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property localizedNotificationMessages for deviceManagement
-     * @param LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LocalizedNotificationMessageItemRequestBuilderDeleteReq_3c007c64|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?LocalizedNotificationMessageItemRequestBuilderDeleteReq_3c007c64 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of localized messages for this Notification Message Template.
-     * @param LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LocalizedNotificationMessageItemRequestBuilderGetReques_c787a4a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LocalizedNotificationMessage|null>
      * @throws Exception
     */
-    public function get(?LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?LocalizedNotificationMessageItemRequestBuilderGetReques_c787a4a8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
      * @param LocalizedNotificationMessage $body The request body
-     * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LocalizedNotificationMessageItemRequestBuilderPatchRequ_d6971a2c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LocalizedNotificationMessage|null>
      * @throws Exception
     */
-    public function patch(LocalizedNotificationMessage $body, ?LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(LocalizedNotificationMessage $body, ?LocalizedNotificationMessageItemRequestBuilderPatchRequ_d6971a2c $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property localizedNotificationMessages for deviceManagement
-     * @param LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LocalizedNotificationMessageItemRequestBuilderDeleteReq_3c007c64|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?LocalizedNotificationMessageItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?LocalizedNotificationMessageItemRequestBuilderDeleteReq_3c007c64 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of localized messages for this Notification Message Template.
-     * @param LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LocalizedNotificationMessageItemRequestBuilderGetReques_c787a4a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?LocalizedNotificationMessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?LocalizedNotificationMessageItemRequestBuilderGetReques_c787a4a8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
      * @param LocalizedNotificationMessage $body The request body
-     * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LocalizedNotificationMessageItemRequestBuilderPatchRequ_d6971a2c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(LocalizedNotificationMessage $body, ?LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(LocalizedNotificationMessage $body, ?LocalizedNotificationMessageItemRequestBuilderPatchRequ_d6971a2c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -38,7 +38,7 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -48,12 +48,12 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
-     * @param CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequ_88d44ec9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequ_88d44ec9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of the cloudPcOnPremisesConnection object.
-     * @param CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcOnPremisesConnectionItemRequestBuilderGetRequest_b4bc95fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcOnPremisesConnection|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CloudPcOnPremisesConnectionItemRequestBuilderGetRequest_b4bc95fb $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a cloudPcOnPremisesConnection object.
      * @param CloudPcOnPremisesConnection $body The request body
-     * @param CloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcOnPremisesConnectionItemRequestBuilderPatchReque_f6536ea5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcOnPremisesConnection|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(CloudPcOnPremisesConnection $body, ?CloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CloudPcOnPremisesConnection $body, ?CloudPcOnPremisesConnectionItemRequestBuilderPatchReque_f6536ea5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
-     * @param CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequ_88d44ec9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CloudPcOnPremisesConnectionItemRequestBuilderDeleteRequ_88d44ec9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -112,10 +112,10 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of the cloudPcOnPremisesConnection object.
-     * @param CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcOnPremisesConnectionItemRequestBuilderGetRequest_b4bc95fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CloudPcOnPremisesConnectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CloudPcOnPremisesConnectionItemRequestBuilderGetRequest_b4bc95fb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a cloudPcOnPremisesConnection object.
      * @param CloudPcOnPremisesConnection $body The request body
-     * @param CloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcOnPremisesConnectionItemRequestBuilderPatchReque_f6536ea5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CloudPcOnPremisesConnection $body, ?CloudPcOnPremisesConnectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CloudPcOnPremisesConnection $body, ?CloudPcOnPremisesConnectionItemRequestBuilderPatchReque_f6536ea5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

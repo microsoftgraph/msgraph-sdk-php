@@ -1054,6 +1054,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.synchronizationSchema': return new SynchronizationSchema();
                 case '#microsoft.graph.synchronizationTemplate': return new SynchronizationTemplate();
                 case '#microsoft.graph.targetDeviceGroup': return new TargetDeviceGroup();
+                case '#microsoft.graph.targetedChatMessage': return new TargetedChatMessage();
                 case '#microsoft.graph.targetedManagedAppConfiguration': return new TargetedManagedAppConfiguration();
                 case '#microsoft.graph.targetedManagedAppPolicyAssignment': return new TargetedManagedAppPolicyAssignment();
                 case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();
@@ -1142,8 +1143,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.userConsentRequest': return new UserConsentRequest();
                 case '#microsoft.graph.userDataSecurityAndGovernance': return new UserDataSecurityAndGovernance();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance': return new UserExperienceAnalyticsAppHealthApplicationPerformance();
-                case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails': return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails();
-                case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId': return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId();
+                case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails': return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_d22979be();
+                case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId': return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_666db35f();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByOSVersion': return new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthDeviceModelPerformance': return new UserExperienceAnalyticsAppHealthDeviceModelPerformance();
                 case '#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformance': return new UserExperienceAnalyticsAppHealthDevicePerformance();
