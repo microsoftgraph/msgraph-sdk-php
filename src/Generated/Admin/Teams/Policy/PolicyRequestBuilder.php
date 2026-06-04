@@ -4,7 +4,7 @@ namespace Microsoft\Graph\Generated\Admin\Teams\Policy;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\Teams\Policy\MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName\MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder;
+use Microsoft\Graph\Generated\Admin\Teams\Policy\MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName\MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_e9330116;
 use Microsoft\Graph\Generated\Admin\Teams\Policy\UserAssignments\UserAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsAdministration\TeamsPolicyAssignment;
@@ -31,7 +31,7 @@ class PolicyRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/teams/policy{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/teams/policy');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -71,10 +71,10 @@ class PolicyRequestBuilder extends BaseRequestBuilder
      * Provides operations to call the getPolicyId method.
      * @param string $name Usage: name='{name}'
      * @param string $type Usage: type='{type}'
-     * @return MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder
+     * @return MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_e9330116
     */
-    public function microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(string $name, string $type): MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder {
-        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder($this->pathParameters, $this->requestAdapter, $name, $type);
+    public function microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(string $name, string $type): MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_e9330116 {
+        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWit_e9330116($this->pathParameters, $this->requestAdapter, $name, $type);
     }
 
     /**
@@ -117,7 +117,7 @@ class PolicyRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?PolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/admin/teams/policy{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

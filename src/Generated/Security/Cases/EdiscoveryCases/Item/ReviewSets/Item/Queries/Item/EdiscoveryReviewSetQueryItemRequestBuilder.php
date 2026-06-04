@@ -38,7 +38,7 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -48,12 +48,12 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an ediscoveryReviewSetQuery object.
-     * @param EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequest_72e2d97b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-delete-queries?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequest_72e2d97b $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of an ediscoveryReviewSetQuery object.
-     * @param EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryReviewSetQueryItemRequestBuilderGetRequestCon_5ec52a77|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewSetQuery|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EdiscoveryReviewSetQueryItemRequestBuilderGetRequestCon_5ec52a77 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an ediscoveryReviewSetQuery object.
      * @param EdiscoveryReviewSetQuery $body The request body
-     * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestC_ef4cbc90|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryReviewSetQuery|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(EdiscoveryReviewSetQuery $body, ?EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EdiscoveryReviewSetQuery $body, ?EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestC_ef4cbc90 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an ediscoveryReviewSetQuery object.
-     * @param EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequest_72e2d97b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EdiscoveryReviewSetQueryItemRequestBuilderDeleteRequest_72e2d97b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -112,12 +112,12 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of an ediscoveryReviewSetQuery object.
-     * @param EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryReviewSetQueryItemRequestBuilderGetRequestCon_5ec52a77|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EdiscoveryReviewSetQueryItemRequestBuilderGetRequestCon_5ec52a77 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -134,10 +134,10 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an ediscoveryReviewSetQuery object.
      * @param EdiscoveryReviewSetQuery $body The request body
-     * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestC_ef4cbc90|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EdiscoveryReviewSetQuery $body, ?EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EdiscoveryReviewSetQuery $body, ?EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestC_ef4cbc90 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

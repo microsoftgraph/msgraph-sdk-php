@@ -22,7 +22,7 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property speakerAssignmentSubmissions for education
-     * @param SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequ_8040e587|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequ_8040e587 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Details of submitted speaker assignments.
-     * @param SpeakerAssignmentSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionItemRequestBuilderGetRequest_d45cb119|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SpeakerAssignmentSubmission|null>
      * @throws Exception
     */
-    public function get(?SpeakerAssignmentSubmissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SpeakerAssignmentSubmissionItemRequestBuilderGetRequest_d45cb119 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property speakerAssignmentSubmissions in education
      * @param SpeakerAssignmentSubmission $body The request body
-     * @param SpeakerAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionItemRequestBuilderPatchReque_4d2f9976|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SpeakerAssignmentSubmission|null>
      * @throws Exception
     */
-    public function patch(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionItemRequestBuilderPatchReque_4d2f9976 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property speakerAssignmentSubmissions for education
-     * @param SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequ_8040e587|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SpeakerAssignmentSubmissionItemRequestBuilderDeleteRequ_8040e587 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,12 +93,12 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Details of submitted speaker assignments.
-     * @param SpeakerAssignmentSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionItemRequestBuilderGetRequest_d45cb119|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SpeakerAssignmentSubmissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SpeakerAssignmentSubmissionItemRequestBuilderGetRequest_d45cb119 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/education/reports/speakerAssignmentSubmissions/{speakerAssignmentSubmission%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -115,10 +115,10 @@ class SpeakerAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property speakerAssignmentSubmissions in education
      * @param SpeakerAssignmentSubmission $body The request body
-     * @param SpeakerAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionItemRequestBuilderPatchReque_4d2f9976|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionItemRequestBuilderPatchReque_4d2f9976 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

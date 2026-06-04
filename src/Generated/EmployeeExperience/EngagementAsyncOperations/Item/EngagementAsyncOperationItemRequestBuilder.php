@@ -22,7 +22,7 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/engagementAsyncOperations/{engagementAsyncOperation%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/employeeExperience/engagementAsyncOperations/{engagementAsyncOperation%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property engagementAsyncOperations for employeeExperience
-     * @param EngagementAsyncOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementAsyncOperationItemRequestBuilderDeleteRequest_de1246a4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EngagementAsyncOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EngagementAsyncOperationItemRequestBuilderDeleteRequest_de1246a4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get an engagementAsyncOperation to track a long-running operation request.
-     * @param EngagementAsyncOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementAsyncOperationItemRequestBuilderGetRequestCon_c01d83ed|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EngagementAsyncOperation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/engagementasyncoperation-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?EngagementAsyncOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EngagementAsyncOperationItemRequestBuilderGetRequestCon_c01d83ed $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property engagementAsyncOperations in employeeExperience
      * @param EngagementAsyncOperation $body The request body
-     * @param EngagementAsyncOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementAsyncOperationItemRequestBuilderPatchRequestC_694b577d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EngagementAsyncOperation|null>
      * @throws Exception
     */
-    public function patch(EngagementAsyncOperation $body, ?EngagementAsyncOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EngagementAsyncOperation $body, ?EngagementAsyncOperationItemRequestBuilderPatchRequestC_694b577d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property engagementAsyncOperations for employeeExperience
-     * @param EngagementAsyncOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementAsyncOperationItemRequestBuilderDeleteRequest_de1246a4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EngagementAsyncOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EngagementAsyncOperationItemRequestBuilderDeleteRequest_de1246a4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,12 +94,12 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get an engagementAsyncOperation to track a long-running operation request.
-     * @param EngagementAsyncOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementAsyncOperationItemRequestBuilderGetRequestCon_c01d83ed|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EngagementAsyncOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EngagementAsyncOperationItemRequestBuilderGetRequestCon_c01d83ed $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/employeeExperience/engagementAsyncOperations/{engagementAsyncOperation%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -116,10 +116,10 @@ class EngagementAsyncOperationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property engagementAsyncOperations in employeeExperience
      * @param EngagementAsyncOperation $body The request body
-     * @param EngagementAsyncOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementAsyncOperationItemRequestBuilderPatchRequestC_694b577d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EngagementAsyncOperation $body, ?EngagementAsyncOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EngagementAsyncOperation $body, ?EngagementAsyncOperationItemRequestBuilderPatchRequestC_694b577d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -43,7 +43,7 @@ class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/threatIntelligence/intelligenceProfileIndicators{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a intelligenceProfileIndicator object.
-     * @param IntelligenceProfileIndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntelligenceProfileIndicatorsRequestBuilderGetRequestCo_a0f2d905|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IntelligenceProfileIndicatorCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?IntelligenceProfileIndicatorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?IntelligenceProfileIndicatorsRequestBuilderGetRequestCo_a0f2d905 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to intelligenceProfileIndicators for security
      * @param IntelligenceProfileIndicator $body The request body
-     * @param IntelligenceProfileIndicatorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntelligenceProfileIndicatorsRequestBuilderPostRequestC_d69b3cf1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IntelligenceProfileIndicator|null>
      * @throws Exception
     */
-    public function post(IntelligenceProfileIndicator $body, ?IntelligenceProfileIndicatorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(IntelligenceProfileIndicator $body, ?IntelligenceProfileIndicatorsRequestBuilderPostRequestC_d69b3cf1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,12 +82,12 @@ class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a intelligenceProfileIndicator object.
-     * @param IntelligenceProfileIndicatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntelligenceProfileIndicatorsRequestBuilderGetRequestCo_a0f2d905|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?IntelligenceProfileIndicatorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?IntelligenceProfileIndicatorsRequestBuilderGetRequestCo_a0f2d905 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/intelligenceProfileIndicators{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -104,12 +104,12 @@ class IntelligenceProfileIndicatorsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to intelligenceProfileIndicators for security
      * @param IntelligenceProfileIndicator $body The request body
-     * @param IntelligenceProfileIndicatorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntelligenceProfileIndicatorsRequestBuilderPostRequestC_d69b3cf1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(IntelligenceProfileIndicator $body, ?IntelligenceProfileIndicatorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(IntelligenceProfileIndicator $body, ?IntelligenceProfileIndicatorsRequestBuilderPostRequestC_d69b3cf1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/threatIntelligence/intelligenceProfileIndicators';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -11,7 +11,7 @@ use Microsoft\Graph\Generated\Security\Identities\Sensors\Count\CountRequestBuil
 use Microsoft\Graph\Generated\Security\Identities\Sensors\Item\SensorItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityGetDeploymentAccessKey\MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder;
 use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityGetDeploymentPackageUri\MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder;
-use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityRegenerateDeploymentAccessKey\MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder;
+use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityRegenerateDeploymentAccessKey\MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -46,8 +46,8 @@ class SensorsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the regenerateDeploymentAccessKey method.
     */
-    public function microsoftGraphSecurityRegenerateDeploymentAccessKey(): MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder {
-        return new MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRegenerateDeploymentAccessKey(): MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4 {
+        return new MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -67,7 +67,7 @@ class SensorsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/identities/sensors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -112,7 +112,7 @@ class SensorsRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?SensorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/identities/sensors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -134,7 +134,7 @@ class SensorsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Sensor $body, ?SensorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/identities/sensors';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

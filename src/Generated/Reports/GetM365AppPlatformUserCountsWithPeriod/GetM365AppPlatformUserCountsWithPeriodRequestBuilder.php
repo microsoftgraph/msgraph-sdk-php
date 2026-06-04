@@ -35,12 +35,12 @@ class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRequestBu
 
     /**
      * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
-     * @param GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetM365AppPlatformUserCountsWithPeriodRequestBuilderGet_bef6fd2a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getm365appplatformusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetM365AppPlatformUserCountsWithPeriodRequestBuilderGet_bef6fd2a $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetM365AppPlatformUserCountsWithPeriodRequestBuilder extends BaseRequestBu
 
     /**
      * Get a report that provides the trend of active users across all apps for each platform (Windows, Mac, web, and mobile) in your organization.
-     * @param GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetM365AppPlatformUserCountsWithPeriodRequestBuilderGet_bef6fd2a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetM365AppPlatformUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetM365AppPlatformUserCountsWithPeriodRequestBuilderGet_bef6fd2a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

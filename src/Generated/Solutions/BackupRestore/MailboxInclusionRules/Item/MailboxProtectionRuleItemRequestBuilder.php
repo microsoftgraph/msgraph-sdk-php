@@ -22,7 +22,7 @@ class MailboxProtectionRuleItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/mailboxInclusionRules/{mailboxProtectionRule%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/mailboxInclusionRules/{mailboxProtectionRule%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class MailboxProtectionRuleItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mailboxInclusionRules for solutions
-     * @param MailboxProtectionRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionRuleItemRequestBuilderDeleteRequestCon_d86e6027|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MailboxProtectionRuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?MailboxProtectionRuleItemRequestBuilderDeleteRequestCon_d86e6027 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class MailboxProtectionRuleItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mailboxInclusionRules for solutions
-     * @param MailboxProtectionRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionRuleItemRequestBuilderDeleteRequestCon_d86e6027|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MailboxProtectionRuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MailboxProtectionRuleItemRequestBuilderDeleteRequestCon_d86e6027 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -98,7 +98,7 @@ class MailboxProtectionRuleItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?MailboxProtectionRuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/backupRestore/mailboxInclusionRules/{mailboxProtectionRule%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

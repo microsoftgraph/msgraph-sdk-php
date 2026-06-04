@@ -31,7 +31,7 @@ class RegistrationsWithUserIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $userId Alternate key of virtualEventRegistration
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $userId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId=\'{userId}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId=\'{userId}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['userId'] = $userId;
@@ -110,7 +110,7 @@ class RegistrationsWithUserIdRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?RegistrationsWithUserIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(userId=\'{userId}\'){?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

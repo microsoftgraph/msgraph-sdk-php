@@ -22,7 +22,7 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/directory/onPremisesSynchronization/{onPremisesDirectorySynchronization%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/directory/onPremisesSynchronization/{onPremisesDirectorySynchronization%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property onPremisesSynchronization for directory
-     * @param OnPremisesDirectorySynchronizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnPremisesDirectorySynchronizationItemRequestBuilderDel_2c398d3c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?OnPremisesDirectorySynchronizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?OnPremisesDirectorySynchronizationItemRequestBuilderDel_2c398d3c $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
-     * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnPremisesDirectorySynchronizationItemRequestBuilderGet_357c99cf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronization|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?OnPremisesDirectorySynchronizationItemRequestBuilderGet_357c99cf $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronization $body The request body
-     * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnPremisesDirectorySynchronizationItemRequestBuilderPat_0afbb261|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnPremisesDirectorySynchronization|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onpremisesdirectorysynchronization-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPat_0afbb261 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property onPremisesSynchronization for directory
-     * @param OnPremisesDirectorySynchronizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnPremisesDirectorySynchronizationItemRequestBuilderDel_2c398d3c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OnPremisesDirectorySynchronizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OnPremisesDirectorySynchronizationItemRequestBuilderDel_2c398d3c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,12 +95,12 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Read the properties and relationships of an onPremisesDirectorySynchronization object.
-     * @param OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnPremisesDirectorySynchronizationItemRequestBuilderGet_357c99cf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OnPremisesDirectorySynchronizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OnPremisesDirectorySynchronizationItemRequestBuilderGet_357c99cf $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/directory/onPremisesSynchronization/{onPremisesDirectorySynchronization%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -117,10 +117,10 @@ class OnPremisesDirectorySynchronizationItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of an onPremisesDirectorySynchronization object.
      * @param OnPremisesDirectorySynchronization $body The request body
-     * @param OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnPremisesDirectorySynchronizationItemRequestBuilderPat_0afbb261|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OnPremisesDirectorySynchronization $body, ?OnPremisesDirectorySynchronizationItemRequestBuilderPat_0afbb261 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

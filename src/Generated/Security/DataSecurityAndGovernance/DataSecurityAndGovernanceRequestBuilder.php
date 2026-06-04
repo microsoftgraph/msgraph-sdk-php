@@ -46,7 +46,7 @@ class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/dataSecurityAndGovernance{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/dataSecurityAndGovernance');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -56,11 +56,11 @@ class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property dataSecurityAndGovernance for security
-     * @param DataSecurityAndGovernanceRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DataSecurityAndGovernanceRequestBuilderDeleteRequestCon_f3d099a2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DataSecurityAndGovernanceRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DataSecurityAndGovernanceRequestBuilderDeleteRequestCon_f3d099a2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property dataSecurityAndGovernance for security
-     * @param DataSecurityAndGovernanceRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DataSecurityAndGovernanceRequestBuilderDeleteRequestCon_f3d099a2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DataSecurityAndGovernanceRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DataSecurityAndGovernanceRequestBuilderDeleteRequestCon_f3d099a2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -122,7 +122,7 @@ class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?DataSecurityAndGovernanceRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/dataSecurityAndGovernance{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

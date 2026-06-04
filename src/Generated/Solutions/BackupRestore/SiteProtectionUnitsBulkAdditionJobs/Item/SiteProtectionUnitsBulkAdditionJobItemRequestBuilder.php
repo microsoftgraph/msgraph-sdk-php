@@ -22,7 +22,7 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/siteProtectionUnitsBulkAdditionJobs/{siteProtectionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/siteProtectionUnitsBulkAdditionJobs/{siteProtectionUnitsBulkAdditionJob%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property siteProtectionUnitsBulkAdditionJobs for solutions
-     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDel_283f0026|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDel_283f0026 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
 
     /**
      * Get siteProtectionUnitsBulkAdditionJobs from solutions
-     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGet_de084565|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function get(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGet_de084565 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property siteProtectionUnitsBulkAdditionJobs in solutions
      * @param SiteProtectionUnitsBulkAdditionJob $body The request body
-     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPat_dcc9ecae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function patch(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPat_dcc9ecae $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property siteProtectionUnitsBulkAdditionJobs for solutions
-     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDel_283f0026|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderDel_283f0026 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,12 +93,12 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
 
     /**
      * Get siteProtectionUnitsBulkAdditionJobs from solutions
-     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGet_de084565|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderGet_de084565 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/backupRestore/siteProtectionUnitsBulkAdditionJobs/{siteProtectionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -115,10 +115,10 @@ class SiteProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property siteProtectionUnitsBulkAdditionJobs in solutions
      * @param SiteProtectionUnitsBulkAdditionJob $body The request body
-     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPat_dcc9ecae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobItemRequestBuilderPat_dcc9ecae $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

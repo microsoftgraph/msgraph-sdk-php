@@ -22,7 +22,7 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/mailboxProtectionUnitsBulkAdditionJobs/{mailboxProtectionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/mailboxProtectionUnitsBulkAdditionJobs/{mailboxProtectionUnitsBulkAdditionJob%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property mailboxProtectionUnitsBulkAdditionJobs for solutions
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_e9fc4f02|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_e9fc4f02 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
 
     /**
      * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function get(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property mailboxProtectionUnitsBulkAdditionJobs in solutions
      * @param MailboxProtectionUnitsBulkAdditionJob $body The request body
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_fdbab71e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function patch(MailboxProtectionUnitsBulkAdditionJob $body, ?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(MailboxProtectionUnitsBulkAdditionJob $body, ?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_fdbab71e $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property mailboxProtectionUnitsBulkAdditionJobs for solutions
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_e9fc4f02|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_e9fc4f02 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,12 +93,12 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
 
     /**
      * Get mailboxProtectionUnitsBulkAdditionJobs from solutions
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/backupRestore/mailboxProtectionUnitsBulkAdditionJobs/{mailboxProtectionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -115,10 +115,10 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property mailboxProtectionUnitsBulkAdditionJobs in solutions
      * @param MailboxProtectionUnitsBulkAdditionJob $body The request body
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_fdbab71e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MailboxProtectionUnitsBulkAdditionJob $body, ?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MailboxProtectionUnitsBulkAdditionJob $body, ?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_fdbab71e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

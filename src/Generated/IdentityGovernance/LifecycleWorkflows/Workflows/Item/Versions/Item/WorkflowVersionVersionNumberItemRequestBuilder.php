@@ -64,12 +64,12 @@ class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a workflowVersion object.
-     * @param WorkflowVersionVersionNumberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WorkflowVersionVersionNumberItemRequestBuilderGetReques_983c64c5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkflowVersion|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitygovernance-workflowversion-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?WorkflowVersionVersionNumberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?WorkflowVersionVersionNumberItemRequestBuilderGetReques_983c64c5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,10 +79,10 @@ class WorkflowVersionVersionNumberItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a workflowVersion object.
-     * @param WorkflowVersionVersionNumberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WorkflowVersionVersionNumberItemRequestBuilderGetReques_983c64c5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WorkflowVersionVersionNumberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WorkflowVersionVersionNumberItemRequestBuilderGetReques_983c64c5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -33,11 +33,11 @@ class GetConfigurationPolicyNonComplianceReportRequestBuilder extends BaseReques
     /**
      * Invoke action getConfigurationPolicyNonComplianceReport
      * @param GetConfigurationPolicyNonComplianceReportPostRequestBody $body The request body
-     * @param GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetConfigurationPolicyNonComplianceReportRequestBuilder_98615001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function post(GetConfigurationPolicyNonComplianceReportPostRequestBody $body, ?GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(GetConfigurationPolicyNonComplianceReportPostRequestBody $body, ?GetConfigurationPolicyNonComplianceReportRequestBuilder_98615001 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class GetConfigurationPolicyNonComplianceReportRequestBuilder extends BaseReques
     /**
      * Invoke action getConfigurationPolicyNonComplianceReport
      * @param GetConfigurationPolicyNonComplianceReportPostRequestBody $body The request body
-     * @param GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetConfigurationPolicyNonComplianceReportRequestBuilder_98615001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetConfigurationPolicyNonComplianceReportPostRequestBody $body, ?GetConfigurationPolicyNonComplianceReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetConfigurationPolicyNonComplianceReportPostRequestBody $body, ?GetConfigurationPolicyNonComplianceReportRequestBuilder_98615001 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

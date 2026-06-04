@@ -43,7 +43,7 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,12 +53,12 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
 
     /**
      * Retrieve a list of authenticationContextClassReference objects.
-     * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReferenceCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-authenticationcontextclassreferences?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
      * @param AuthenticationContextClassReference $body The request body
-     * @param AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReference|null>
      * @throws Exception
     */
-    public function post(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,12 +83,12 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
 
     /**
      * Retrieve a list of authenticationContextClassReference objects.
-     * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -105,12 +105,12 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
      * @param AuthenticationContextClassReference $body The request body
-     * @param AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

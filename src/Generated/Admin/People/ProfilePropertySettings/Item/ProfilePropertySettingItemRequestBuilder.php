@@ -22,7 +22,7 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/admin/people/profilePropertySettings/{profilePropertySetting%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/admin/people/profilePropertySettings/{profilePropertySetting%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a profilePropertySetting object.
-     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/profilepropertysetting-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a profilePropertySetting object.
      * @param ProfilePropertySetting $body The request body
-     * @param ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfilePropertySetting|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/profilepropertysetting-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a profilePropertySetting object.
-     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,7 +101,7 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?ProfilePropertySettingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/admin/people/profilePropertySettings/{profilePropertySetting%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -118,10 +118,10 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a profilePropertySetting object.
      * @param ProfilePropertySetting $body The request body
-     * @param ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

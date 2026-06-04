@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Communications\AdhocCalls;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Communications\AdhocCalls\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\AdhocCalls\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Communications\AdhocCalls\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Communications\AdhocCalls\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d;
+use Microsoft\Graph\Generated\Communications\AdhocCalls\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382;
 use Microsoft\Graph\Generated\Communications\AdhocCalls\Item\AdhocCallItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AdhocCall;
 use Microsoft\Graph\Generated\Models\AdhocCallCollectionResponse;
@@ -31,15 +31,15 @@ class AdhocCallsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getAllRecordings method.
     */
-    public function getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAllTranscripts method.
     */
-    public function getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382 {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -59,7 +59,7 @@ class AdhocCallsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/communications/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -103,7 +103,7 @@ class AdhocCallsRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?AdhocCallsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/communications/adhocCalls{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -125,7 +125,7 @@ class AdhocCallsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(AdhocCall $body, ?AdhocCallsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/communications/adhocCalls';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -21,7 +21,7 @@ use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserCountsWithPeriod\GetEm
 use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserDetailWithDate\GetEmailAppUsageUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserDetailWithPeriod\GetEmailAppUsageUserDetailWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetEmailAppUsageVersionsUserCountsWithPeriod\GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_e2eac30b\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_01fd158b;
 use Microsoft\Graph\Generated\Reports\GetM365AppPlatformUserCountsWithPeriod\GetM365AppPlatformUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetM365AppUserCountsWithPeriod\GetM365AppUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetM365AppUserDetailWithDate\GetM365AppUserDetailWithDateRequestBuilder;
@@ -52,7 +52,7 @@ use Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountDetailWithDate\GetO
 use Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountDetailWithPeriod\GetOneDriveUsageAccountDetailWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetOneDriveUsageFileCountsWithPeriod\GetOneDriveUsageFileCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetOneDriveUsageStorageWithPeriod\GetOneDriveUsageStorageWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_41d6f486\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_bd69f5f6;
 use Microsoft\Graph\Generated\Reports\GetRelyingPartyDetailedSummaryWithPeriod\GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSharePointActivityFileCountsWithPeriod\GetSharePointActivityFileCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSharePointActivityPagesWithPeriod\GetSharePointActivityPagesWithPeriodRequestBuilder;
@@ -69,20 +69,20 @@ use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityCountsWithPerio
 use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityUserCountsWithPeriod\GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityUserDetailWithDate\GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityUserDetailWithPeriod\GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_4726146d;
 use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserDetailWithDate\GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserDetailWithPeriod\GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityCountsWithPeriod\GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityUserCountsWithPeriod\GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityCountsWithPeriod\GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriod\GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityUserCountsWithPeriod\GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageDistributionUserCountsWithPeriod\GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityCountsWithPeriod\GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_e5222af8;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_b58e4151;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityUserCountsWithPeriod\GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a85b07ed;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityCountsWithPeriod\GetSkypeForBusinessParticipantActivityCountsWithPeriodR_998b51e6;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriod\GetSkypeForBusinessParticipantActivityMinuteCountsWithP_d62f033b;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityUserCountsWithPeriod\GetSkypeForBusinessParticipantActivityUserCountsWithPer_4831cff2;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_577a6467;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_d28c5738;
+use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_8a78900b;
+use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageDistributionUserCountsWithPeriod\GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_99d1b1cb;
 use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserCountsWithPeriod\GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithDate\GetTeamsDeviceUsageUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithPeriod\GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder;
@@ -95,12 +95,12 @@ use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityCountsWithPeriod\GetTe
 use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserCountsWithPeriod\GetTeamsUserActivityUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserDetailWithDate\GetTeamsUserActivityUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserDetailWithPeriod\GetTeamsUserActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_2be0aad7\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_5a78ce2a;
 use Microsoft\Graph\Generated\Reports\GetYammerActivityCountsWithPeriod\GetYammerActivityCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetYammerActivityUserCountsWithPeriod\GetYammerActivityUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetYammerActivityUserDetailWithDate\GetYammerActivityUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetYammerActivityUserDetailWithPeriod\GetYammerActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageDistributionUserCountsWithPeriod\GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageDistributionUserCountsWithPeriod\GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_c33fc442;
 use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserCountsWithPeriod\GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserDetailWithDate\GetYammerDeviceUsageUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserDetailWithPeriod\GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder;
@@ -109,7 +109,7 @@ use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityDetailWithDate\GetY
 use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityDetailWithPeriod\GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityGroupCountsWithPeriod\GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetails\ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
+use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_5d97720e\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_269357fa;
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailures\ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailuresWithPeriod\ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\MonthlyPrintUsageByPrinterRequestBuilder;
@@ -231,7 +231,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/reports{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -339,10 +339,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
      * @param DateTime $endDateTime Usage: endDateTime={endDateTime}
      * @param string $groupId Usage: groupId='{groupId}'
      * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
-     * @return GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_01fd158b
     */
-    public function getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $groupId, DateTime $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $groupId, $startDateTime);
+    public function getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $groupId, DateTime $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_01fd158b {
+        return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_01fd158b($this->pathParameters, $this->requestAdapter, $endDateTime, $groupId, $startDateTime);
     }
 
     /**
@@ -593,10 +593,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
      * @param DateTime $endDateTime Usage: endDateTime={endDateTime}
      * @param string $printerId Usage: printerId='{printerId}'
      * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
-     * @return GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_bd69f5f6
     */
-    public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $printerId, $startDateTime);
+    public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_bd69f5f6 {
+        return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_bd69f5f6($this->pathParameters, $this->requestAdapter, $endDateTime, $printerId, $startDateTime);
     }
 
     /**
@@ -746,10 +746,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageDistributionUserCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_4726146d
     */
-    public function getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(string $period): GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(string $period): GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_4726146d {
+        return new GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_4726146d($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
@@ -782,91 +782,91 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_e5222af8
     */
-    public function getSkypeForBusinessOrganizerActivityCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessOrganizerActivityCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_e5222af8 {
+        return new GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_e5222af8($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityMinuteCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_b58e4151
     */
-    public function getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_b58e4151 {
+        return new GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_b58e4151($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityUserCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a85b07ed
     */
-    public function getSkypeForBusinessOrganizerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessOrganizerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a85b07ed {
+        return new GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a85b07ed($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessParticipantActivityCountsWithPeriodR_998b51e6
     */
-    public function getSkypeForBusinessParticipantActivityCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessParticipantActivityCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityCountsWithPeriodR_998b51e6 {
+        return new GetSkypeForBusinessParticipantActivityCountsWithPeriodR_998b51e6($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityMinuteCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessParticipantActivityMinuteCountsWithP_d62f033b
     */
-    public function getSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityMinuteCountsWithP_d62f033b {
+        return new GetSkypeForBusinessParticipantActivityMinuteCountsWithP_d62f033b($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityUserCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessParticipantActivityUserCountsWithPer_4831cff2
     */
-    public function getSkypeForBusinessParticipantActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessParticipantActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityUserCountsWithPer_4831cff2 {
+        return new GetSkypeForBusinessParticipantActivityUserCountsWithPer_4831cff2($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_577a6467
     */
-    public function getSkypeForBusinessPeerToPeerActivityCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessPeerToPeerActivityCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_577a6467 {
+        return new GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_577a6467($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityMinuteCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_d28c5738
     */
-    public function getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_d28c5738 {
+        return new GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_d28c5738($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityUserCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder
+     * @return GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_8a78900b
     */
-    public function getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder {
-        return new GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_8a78900b {
+        return new GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_8a78900b($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
      * Provides operations to call the getTeamsDeviceUsageDistributionUserCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+     * @return GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_99d1b1cb
     */
-    public function getTeamsDeviceUsageDistributionUserCountsWithPeriod(string $period): GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
-        return new GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getTeamsDeviceUsageDistributionUserCountsWithPeriod(string $period): GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_99d1b1cb {
+        return new GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_99d1b1cb($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
@@ -982,10 +982,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
      * @param DateTime $endDateTime Usage: endDateTime={endDateTime}
      * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
      * @param string $userId Usage: userId='{userId}'
-     * @return GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_5a78ce2a
     */
-    public function getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, DateTime $startDateTime, string $userId): GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $startDateTime, $userId);
+    public function getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, DateTime $startDateTime, string $userId): GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_5a78ce2a {
+        return new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_5a78ce2a($this->pathParameters, $this->requestAdapter, $endDateTime, $startDateTime, $userId);
     }
 
     /**
@@ -1027,10 +1027,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getYammerDeviceUsageDistributionUserCounts method.
      * @param string $period Usage: period='{period}'
-     * @return GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+     * @return GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_c33fc442
     */
-    public function getYammerDeviceUsageDistributionUserCountsWithPeriod(string $period): GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
-        return new GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    public function getYammerDeviceUsageDistributionUserCountsWithPeriod(string $period): GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_c33fc442 {
+        return new GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_c33fc442($this->pathParameters, $this->requestAdapter, $period);
     }
 
     /**
@@ -1102,10 +1102,10 @@ class ReportsRequestBuilder extends BaseRequestBuilder
      * @param int $skip Usage: skip={skip}
      * @param string $skipToken Usage: skipToken='{skipToken}'
      * @param int $top Usage: top={top}
-     * @return ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
+     * @return ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_269357fa
     */
-    public function managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(string $filter, int $skip, string $skipToken, int $top): ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder {
-        return new ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $filter, $skip, $skipToken, $top);
+    public function managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(string $filter, int $skip, string $skipToken, int $top): ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_269357fa {
+        return new ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_269357fa($this->pathParameters, $this->requestAdapter, $filter, $skip, $skipToken, $top);
     }
 
     /**
@@ -1139,7 +1139,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?ReportsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/reports{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -1161,7 +1161,7 @@ class ReportsRequestBuilder extends BaseRequestBuilder
     */
     public function toPatchRequestInformation(ReportRoot $body, ?ReportsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/reports';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::PATCH;
         if ($requestConfiguration !== null) {

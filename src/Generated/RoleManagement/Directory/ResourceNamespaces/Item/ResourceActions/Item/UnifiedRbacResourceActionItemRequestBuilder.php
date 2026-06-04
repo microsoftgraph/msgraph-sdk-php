@@ -22,7 +22,7 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/roleManagement/directory/resourceNamespaces/{unifiedRbacResourceNamespace%2Did}/resourceActions/{unifiedRbacResourceAction%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/roleManagement/directory/resourceNamespaces/{unifiedRbacResourceNamespace%2Did}/resourceActions/{unifiedRbacResourceAction%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceActions for roleManagement
-     * @param UnifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceActionItemRequestBuilderDeleteReques_164a0a1b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UnifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UnifiedRbacResourceActionItemRequestBuilderDeleteReques_164a0a1b $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get resourceActions from roleManagement
-     * @param UnifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceActionItemRequestBuilderGetRequestCo_f1530e90|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRbacResourceAction|null>
      * @throws Exception
     */
-    public function get(?UnifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UnifiedRbacResourceActionItemRequestBuilderGetRequestCo_f1530e90 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceActions in roleManagement
      * @param UnifiedRbacResourceAction $body The request body
-     * @param UnifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceActionItemRequestBuilderPatchRequest_b427e104|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRbacResourceAction|null>
      * @throws Exception
     */
-    public function patch(UnifiedRbacResourceAction $body, ?UnifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UnifiedRbacResourceAction $body, ?UnifiedRbacResourceActionItemRequestBuilderPatchRequest_b427e104 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceActions for roleManagement
-     * @param UnifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceActionItemRequestBuilderDeleteReques_164a0a1b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UnifiedRbacResourceActionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UnifiedRbacResourceActionItemRequestBuilderDeleteReques_164a0a1b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,12 +93,12 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get resourceActions from roleManagement
-     * @param UnifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceActionItemRequestBuilderGetRequestCo_f1530e90|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UnifiedRbacResourceActionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UnifiedRbacResourceActionItemRequestBuilderGetRequestCo_f1530e90 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/roleManagement/directory/resourceNamespaces/{unifiedRbacResourceNamespace%2Did}/resourceActions/{unifiedRbacResourceAction%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -115,10 +115,10 @@ class UnifiedRbacResourceActionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceActions in roleManagement
      * @param UnifiedRbacResourceAction $body The request body
-     * @param UnifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceActionItemRequestBuilderPatchRequest_b427e104|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UnifiedRbacResourceAction $body, ?UnifiedRbacResourceActionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UnifiedRbacResourceAction $body, ?UnifiedRbacResourceActionItemRequestBuilderPatchRequest_b427e104 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

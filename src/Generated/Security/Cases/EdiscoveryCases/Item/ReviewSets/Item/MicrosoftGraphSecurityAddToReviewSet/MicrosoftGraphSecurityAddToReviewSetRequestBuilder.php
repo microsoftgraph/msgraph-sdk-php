@@ -32,12 +32,12 @@ class MicrosoftGraphSecurityAddToReviewSetRequestBuilder extends BaseRequestBuil
     /**
      * Start the process of adding a collection from Microsoft 365 services to a review set. After the operation is created, you can get the status of the operation by retrieving the Location parameter from the response headers. The location provides a URL that returns an Add to review set operation.
      * @param AddToReviewSetPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostR_f36e3ad8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-addtoreviewset?view=graph-rest-1.0 Find more info here
     */
-    public function post(AddToReviewSetPostRequestBody $body, ?MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(AddToReviewSetPostRequestBody $body, ?MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostR_f36e3ad8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphSecurityAddToReviewSetRequestBuilder extends BaseRequestBuil
     /**
      * Start the process of adding a collection from Microsoft 365 services to a review set. After the operation is created, you can get the status of the operation by retrieving the Location parameter from the response headers. The location provides a URL that returns an Add to review set operation.
      * @param AddToReviewSetPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostR_f36e3ad8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AddToReviewSetPostRequestBody $body, ?MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AddToReviewSetPostRequestBody $body, ?MicrosoftGraphSecurityAddToReviewSetRequestBuilderPostR_f36e3ad8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

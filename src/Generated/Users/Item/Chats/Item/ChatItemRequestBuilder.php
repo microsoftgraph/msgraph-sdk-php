@@ -20,6 +20,7 @@ use Microsoft\Graph\Generated\Users\Item\Chats\Item\RemoveAllAccessForUser\Remov
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\StartMigration\StartMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\TargetedMessages\TargetedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -130,6 +131,13 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the targetedMessages property of the microsoft.graph.chat entity.
+    */
+    public function targetedMessages(): TargetedMessagesRequestBuilder {
+        return new TargetedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the unhideForUser method.
     */
     public function unhideForUser(): UnhideForUserRequestBuilder {
@@ -142,7 +150,7 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/chats/{chat%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/chats/{chat%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -219,7 +227,7 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?ChatItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/chats/{chat%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

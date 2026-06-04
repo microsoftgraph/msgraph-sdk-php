@@ -125,7 +125,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Gets the publicKeyCredential property value. The publicKeyCredential property
+     * Gets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. This property is used only for write requests and isn't returned on read operations.
      * @return WebauthnPublicKeyCredential|null
     */
     public function getPublicKeyCredential(): ?WebauthnPublicKeyCredential {
@@ -200,7 +200,7 @@ class Fido2AuthenticationMethod extends AuthenticationMethod implements Parsable
     }
 
     /**
-     * Sets the publicKeyCredential property value. The publicKeyCredential property
+     * Sets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. This property is used only for write requests and isn't returned on read operations.
      * @param WebauthnPublicKeyCredential|null $value Value to set for the publicKeyCredential property.
     */
     public function setPublicKeyCredential(?WebauthnPublicKeyCredential $value): void {

@@ -22,7 +22,7 @@ class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/subscribedSkus/{subscribedSku%2Did}{?%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/subscribedSkus/{subscribedSku%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -99,7 +99,7 @@ class SubscribedSkuItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?SubscribedSkuItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/subscribedSkus/{subscribedSku%2Did}{?%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

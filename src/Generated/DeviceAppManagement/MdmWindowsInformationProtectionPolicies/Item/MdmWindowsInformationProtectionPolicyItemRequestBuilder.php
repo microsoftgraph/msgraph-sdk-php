@@ -46,7 +46,7 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -56,11 +56,11 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
-     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilder_431b0302|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?MdmWindowsInformationProtectionPolicyItemRequestBuilder_431b0302 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
 
     /**
      * Windows information protection for apps running on devices which are MDM enrolled.
-     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilder_9ad9e786|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MdmWindowsInformationProtectionPolicy|null>
      * @throws Exception
     */
-    public function get(?MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MdmWindowsInformationProtectionPolicyItemRequestBuilder_9ad9e786 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
      * @param MdmWindowsInformationProtectionPolicy $body The request body
-     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilder_20a02363|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MdmWindowsInformationProtectionPolicy|null>
      * @throws Exception
     */
-    public function patch(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPolicyItemRequestBuilder_20a02363 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property mdmWindowsInformationProtectionPolicies for deviceAppManagement
-     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilder_431b0302|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MdmWindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MdmWindowsInformationProtectionPolicyItemRequestBuilder_431b0302 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,12 +117,12 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
 
     /**
      * Windows information protection for apps running on devices which are MDM enrolled.
-     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilder_9ad9e786|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MdmWindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MdmWindowsInformationProtectionPolicyItemRequestBuilder_9ad9e786 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -139,10 +139,10 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
      * @param MdmWindowsInformationProtectionPolicy $body The request body
-     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPolicyItemRequestBuilder_20a02363|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPolicyItemRequestBuilder_20a02363 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

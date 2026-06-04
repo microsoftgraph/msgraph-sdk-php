@@ -22,7 +22,7 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property identitySecurityDefaultsEnforcementPolicy for policies
-     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_7c7c2057|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_7c7c2057 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
 
     /**
      * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
-     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_97030dd1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentitySecurityDefaultsEnforcementPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_97030dd1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     /**
      * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param IdentitySecurityDefaultsEnforcementPolicy $body The request body
-     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_39166018|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentitySecurityDefaultsEnforcementPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(IdentitySecurityDefaultsEnforcementPolicy $body, ?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(IdentitySecurityDefaultsEnforcementPolicy $body, ?IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_39166018 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property identitySecurityDefaultsEnforcementPolicy for policies
-     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_7c7c2057|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_7c7c2057 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,12 +95,12 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
 
     /**
      * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
-     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_97030dd1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_97030dd1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/policies/identitySecurityDefaultsEnforcementPolicy{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -117,10 +117,10 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     /**
      * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param IdentitySecurityDefaultsEnforcementPolicy $body The request body
-     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_39166018|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(IdentitySecurityDefaultsEnforcementPolicy $body, ?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(IdentitySecurityDefaultsEnforcementPolicy $body, ?IdentitySecurityDefaultsEnforcementPolicyRequestBuilder_39166018 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

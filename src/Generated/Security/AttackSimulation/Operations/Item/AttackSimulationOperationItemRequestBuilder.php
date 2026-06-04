@@ -22,7 +22,7 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/attackSimulation/operations/{attackSimulationOperation%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/security/attackSimulation/operations/{attackSimulationOperation%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property operations for security
-     * @param AttackSimulationOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttackSimulationOperationItemRequestBuilderDeleteReques_c3e2b798|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AttackSimulationOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AttackSimulationOperationItemRequestBuilderDeleteReques_c3e2b798 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get an attack simulation operation to track a long-running operation request for a tenant.
-     * @param AttackSimulationOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttackSimulationOperationItemRequestBuilderGetRequestCo_b914d2c7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttackSimulationOperation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/attacksimulationoperation-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AttackSimulationOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AttackSimulationOperationItemRequestBuilderGetRequestCo_b914d2c7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property operations in security
      * @param AttackSimulationOperation $body The request body
-     * @param AttackSimulationOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttackSimulationOperationItemRequestBuilderPatchRequest_2e9383eb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttackSimulationOperation|null>
      * @throws Exception
     */
-    public function patch(AttackSimulationOperation $body, ?AttackSimulationOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AttackSimulationOperation $body, ?AttackSimulationOperationItemRequestBuilderPatchRequest_2e9383eb $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property operations for security
-     * @param AttackSimulationOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttackSimulationOperationItemRequestBuilderDeleteReques_c3e2b798|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AttackSimulationOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AttackSimulationOperationItemRequestBuilderDeleteReques_c3e2b798 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,12 +94,12 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get an attack simulation operation to track a long-running operation request for a tenant.
-     * @param AttackSimulationOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttackSimulationOperationItemRequestBuilderGetRequestCo_b914d2c7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AttackSimulationOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AttackSimulationOperationItemRequestBuilderGetRequestCo_b914d2c7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/attackSimulation/operations/{attackSimulationOperation%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -116,10 +116,10 @@ class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property operations in security
      * @param AttackSimulationOperation $body The request body
-     * @param AttackSimulationOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttackSimulationOperationItemRequestBuilderPatchRequest_2e9383eb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AttackSimulationOperation $body, ?AttackSimulationOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AttackSimulationOperation $body, ?AttackSimulationOperationItemRequestBuilderPatchRequest_2e9383eb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

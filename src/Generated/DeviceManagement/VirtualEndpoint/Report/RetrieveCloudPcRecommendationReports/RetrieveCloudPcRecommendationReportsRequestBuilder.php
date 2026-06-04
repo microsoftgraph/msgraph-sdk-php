@@ -33,12 +33,12 @@ class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve Cloud PC recommendation reports for usage optimization and cost savings. The usage category report categorizes a Cloud PC as Undersized, Oversized, Rightsized, or Underutilized, and also provides the recommended SKU when the Cloud PC isn't Rightsized.
      * @param RetrieveCloudPcRecommendationReportsPostRequestBody $body The request body
-     * @param RetrieveCloudPcRecommendationReportsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RetrieveCloudPcRecommendationReportsRequestBuilderPostR_8bdb680c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpcreport-retrievecloudpcrecommendationreports?view=graph-rest-1.0 Find more info here
     */
-    public function post(RetrieveCloudPcRecommendationReportsPostRequestBody $body, ?RetrieveCloudPcRecommendationReportsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(RetrieveCloudPcRecommendationReportsPostRequestBody $body, ?RetrieveCloudPcRecommendationReportsRequestBuilderPostR_8bdb680c $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequestBuil
     /**
      * Retrieve Cloud PC recommendation reports for usage optimization and cost savings. The usage category report categorizes a Cloud PC as Undersized, Oversized, Rightsized, or Underutilized, and also provides the recommended SKU when the Cloud PC isn't Rightsized.
      * @param RetrieveCloudPcRecommendationReportsPostRequestBody $body The request body
-     * @param RetrieveCloudPcRecommendationReportsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RetrieveCloudPcRecommendationReportsRequestBuilderPostR_8bdb680c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(RetrieveCloudPcRecommendationReportsPostRequestBody $body, ?RetrieveCloudPcRecommendationReportsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(RetrieveCloudPcRecommendationReportsPostRequestBody $body, ?RetrieveCloudPcRecommendationReportsRequestBuilderPostR_8bdb680c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

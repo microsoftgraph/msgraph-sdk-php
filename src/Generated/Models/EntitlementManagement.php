@@ -142,6 +142,7 @@ class EntitlementManagement extends Entity implements Parsable
             'resourceRoleScopes' => fn(ParseNode $n) => $o->setResourceRoleScopes($n->getCollectionOfObjectValues([AccessPackageResourceRoleScope::class, 'createFromDiscriminatorValue'])),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([EntitlementManagementSettings::class, 'createFromDiscriminatorValue'])),
+            'subjects' => fn(ParseNode $n) => $o->setSubjects($n->getCollectionOfObjectValues([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -214,6 +215,20 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the subjects property value. The subjects property
+     * @return array<AccessPackageSubject>|null
+    */
+    public function getSubjects(): ?array {
+        $val = $this->getBackingStore()->get('subjects');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageSubject::class);
+            /** @var array<AccessPackageSubject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjects'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -231,6 +246,7 @@ class EntitlementManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('resourceRoleScopes', $this->getResourceRoleScopes());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeObjectValue('settings', $this->getSettings());
+        $writer->writeCollectionOfObjectValues('subjects', $this->getSubjects());
     }
 
     /**
@@ -327,6 +343,14 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function setSettings(?EntitlementManagementSettings $value): void {
         $this->getBackingStore()->set('settings', $value);
+    }
+
+    /**
+     * Sets the subjects property value. The subjects property
+     * @param array<AccessPackageSubject>|null $value Value to set for the subjects property.
+    */
+    public function setSubjects(?array $value): void {
+        $this->getBackingStore()->set('subjects', $value);
     }
 
 }

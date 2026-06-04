@@ -22,7 +22,7 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/functions/{attributeMappingFunctionSchema%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/functions/{attributeMappingFunctionSchema%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete entity from functions
-     * @param AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttributeMappingFunctionSchemaItemRequestBuilderDeleteR_796232ac|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AttributeMappingFunctionSchemaItemRequestBuilderDeleteR_796232ac $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get entity from functions by key
-     * @param AttributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttributeMappingFunctionSchemaItemRequestBuilderGetRequ_deb8d23a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttributeMappingFunctionSchema|null>
      * @throws Exception
     */
-    public function get(?AttributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AttributeMappingFunctionSchemaItemRequestBuilderGetRequ_deb8d23a $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update entity in functions
      * @param AttributeMappingFunctionSchema $body The request body
-     * @param AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttributeMappingFunctionSchemaItemRequestBuilderPatchRe_1e5e1d05|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AttributeMappingFunctionSchema|null>
      * @throws Exception
     */
-    public function patch(AttributeMappingFunctionSchema $body, ?AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AttributeMappingFunctionSchema $body, ?AttributeMappingFunctionSchemaItemRequestBuilderPatchRe_1e5e1d05 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete entity from functions
-     * @param AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttributeMappingFunctionSchemaItemRequestBuilderDeleteR_796232ac|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AttributeMappingFunctionSchemaItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AttributeMappingFunctionSchemaItemRequestBuilderDeleteR_796232ac $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,12 +93,12 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get entity from functions by key
-     * @param AttributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttributeMappingFunctionSchemaItemRequestBuilderGetRequ_deb8d23a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AttributeMappingFunctionSchemaItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AttributeMappingFunctionSchemaItemRequestBuilderGetRequ_deb8d23a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/functions/{attributeMappingFunctionSchema%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -115,10 +115,10 @@ class AttributeMappingFunctionSchemaItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update entity in functions
      * @param AttributeMappingFunctionSchema $body The request body
-     * @param AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AttributeMappingFunctionSchemaItemRequestBuilderPatchRe_1e5e1d05|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AttributeMappingFunctionSchema $body, ?AttributeMappingFunctionSchemaItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AttributeMappingFunctionSchema $body, ?AttributeMappingFunctionSchemaItemRequestBuilderPatchRe_1e5e1d05 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

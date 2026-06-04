@@ -30,7 +30,7 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings/{customExtensionStageSetting%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings/{customExtensionStageSetting%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property customExtensionStageSettings for identityGovernance
-     * @param CustomExtensionStageSettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingItemRequestBuilderDeleteRequ_28f63a5d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CustomExtensionStageSettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CustomExtensionStageSettingItemRequestBuilderDeleteRequ_28f63a5d $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @param CustomExtensionStageSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingItemRequestBuilderGetRequest_62f606a9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomExtensionStageSetting|null>
      * @throws Exception
     */
-    public function get(?CustomExtensionStageSettingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CustomExtensionStageSettingItemRequestBuilderGetRequest_62f606a9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property customExtensionStageSettings in identityGovernance
      * @param CustomExtensionStageSetting $body The request body
-     * @param CustomExtensionStageSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingItemRequestBuilderPatchReque_97eb6bc1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomExtensionStageSetting|null>
      * @throws Exception
     */
-    public function patch(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingItemRequestBuilderPatchReque_97eb6bc1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property customExtensionStageSettings for identityGovernance
-     * @param CustomExtensionStageSettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingItemRequestBuilderDeleteRequ_28f63a5d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CustomExtensionStageSettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CustomExtensionStageSettingItemRequestBuilderDeleteRequ_28f63a5d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,12 +101,12 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @param CustomExtensionStageSettingItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingItemRequestBuilderGetRequest_62f606a9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CustomExtensionStageSettingItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CustomExtensionStageSettingItemRequestBuilderGetRequest_62f606a9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}/customExtensionStageSettings/{customExtensionStageSetting%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -123,10 +123,10 @@ class CustomExtensionStageSettingItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property customExtensionStageSettings in identityGovernance
      * @param CustomExtensionStageSetting $body The request body
-     * @param CustomExtensionStageSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingItemRequestBuilderPatchReque_97eb6bc1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingItemRequestBuilderPatchReque_97eb6bc1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

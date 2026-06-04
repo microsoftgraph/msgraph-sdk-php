@@ -28,6 +28,8 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setIsOrganizerOptional(false);
+        $this->setReturnSuggestionReasons(false);
     }
 
     /**

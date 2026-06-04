@@ -22,7 +22,7 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/operations/{richLongRunningOperation%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/operations/{richLongRunningOperation%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property operations for sites
-     * @param RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderDeleteRequest_f422e67c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?RichLongRunningOperationItemRequestBuilderDeleteRequest_f422e67c $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the status of a rich long-running operation on a site or a list.
-     * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderGetRequestCon_0e31a55c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RichLongRunningOperation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?RichLongRunningOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?RichLongRunningOperationItemRequestBuilderGetRequestCon_0e31a55c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property operations in sites
      * @param RichLongRunningOperation $body The request body
-     * @param RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderPatchRequestC_8f2c2a64|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RichLongRunningOperation|null>
      * @throws Exception
     */
-    public function patch(RichLongRunningOperation $body, ?RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(RichLongRunningOperation $body, ?RichLongRunningOperationItemRequestBuilderPatchRequestC_8f2c2a64 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property operations for sites
-     * @param RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderDeleteRequest_f422e67c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?RichLongRunningOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?RichLongRunningOperationItemRequestBuilderDeleteRequest_f422e67c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,12 +94,12 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the status of a rich long-running operation on a site or a list.
-     * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderGetRequestCon_0e31a55c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RichLongRunningOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RichLongRunningOperationItemRequestBuilderGetRequestCon_0e31a55c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/sites/{site%2Did}/operations/{richLongRunningOperation%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -116,10 +116,10 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property operations in sites
      * @param RichLongRunningOperation $body The request body
-     * @param RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RichLongRunningOperationItemRequestBuilderPatchRequestC_8f2c2a64|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(RichLongRunningOperation $body, ?RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(RichLongRunningOperation $body, ?RichLongRunningOperationItemRequestBuilderPatchRequestC_8f2c2a64 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

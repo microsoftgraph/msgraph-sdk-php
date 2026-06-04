@@ -43,7 +43,7 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
 
     /**
      * Windows information protection for apps running on devices which are MDM enrolled.
-     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderGe_600b79d3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MdmWindowsInformationProtectionPolicyCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MdmWindowsInformationProtectionPoliciesRequestBuilderGe_600b79d3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
      * @param MdmWindowsInformationProtectionPolicy $body The request body
-     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPo_71a4cdd4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MdmWindowsInformationProtectionPolicy|null>
      * @throws Exception
     */
-    public function post(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPoliciesRequestBuilderPo_71a4cdd4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,12 +82,12 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
 
     /**
      * Windows information protection for apps running on devices which are MDM enrolled.
-     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderGe_600b79d3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MdmWindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MdmWindowsInformationProtectionPoliciesRequestBuilderGe_600b79d3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -104,12 +104,12 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
      * @param MdmWindowsInformationProtectionPolicy $body The request body
-     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPo_71a4cdd4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(MdmWindowsInformationProtectionPolicy $body, ?MdmWindowsInformationProtectionPoliciesRequestBuilderPo_71a4cdd4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

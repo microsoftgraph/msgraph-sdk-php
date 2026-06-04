@@ -43,7 +43,7 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/backupRestore/siteProtectionUnitsBulkAdditionJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
 
     /**
      * Get siteProtectionUnitsBulkAdditionJobs from solutions
-     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitsBulkAdditionJobCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to siteProtectionUnitsBulkAdditionJobs for solutions
      * @param SiteProtectionUnitsBulkAdditionJob $body The request body
-     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRe_5e8b840e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function post(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRe_5e8b840e $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,12 +82,12 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
 
     /**
      * Get siteProtectionUnitsBulkAdditionJobs from solutions
-     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/backupRestore/siteProtectionUnitsBulkAdditionJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -104,12 +104,12 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to siteProtectionUnitsBulkAdditionJobs for solutions
      * @param SiteProtectionUnitsBulkAdditionJob $body The request body
-     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRe_5e8b840e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SiteProtectionUnitsBulkAdditionJob $body, ?SiteProtectionUnitsBulkAdditionJobsRequestBuilderPostRe_5e8b840e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/backupRestore/siteProtectionUnitsBulkAdditionJobs';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

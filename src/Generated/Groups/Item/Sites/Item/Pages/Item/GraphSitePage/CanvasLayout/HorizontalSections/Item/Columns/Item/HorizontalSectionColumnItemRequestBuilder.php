@@ -30,7 +30,7 @@ class HorizontalSectionColumnItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}/columns/{horizontalSectionColumn%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}/columns/{horizontalSectionColumn%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class HorizontalSectionColumnItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property columns for groups
-     * @param HorizontalSectionColumnItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HorizontalSectionColumnItemRequestBuilderDeleteRequestC_2bf37104|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?HorizontalSectionColumnItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?HorizontalSectionColumnItemRequestBuilderDeleteRequestC_2bf37104 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class HorizontalSectionColumnItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property columns in groups
      * @param HorizontalSectionColumn $body The request body
-     * @param HorizontalSectionColumnItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HorizontalSectionColumnItemRequestBuilderPatchRequestCo_8eb70bba|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HorizontalSectionColumn|null>
      * @throws Exception
     */
-    public function patch(HorizontalSectionColumn $body, ?HorizontalSectionColumnItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(HorizontalSectionColumn $body, ?HorizontalSectionColumnItemRequestBuilderPatchRequestCo_8eb70bba $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class HorizontalSectionColumnItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property columns for groups
-     * @param HorizontalSectionColumnItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HorizontalSectionColumnItemRequestBuilderDeleteRequestC_2bf37104|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?HorizontalSectionColumnItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?HorizontalSectionColumnItemRequestBuilderDeleteRequestC_2bf37104 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,7 +106,7 @@ class HorizontalSectionColumnItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?HorizontalSectionColumnItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/pages/{baseSitePage%2Did}/graph.sitePage/canvasLayout/horizontalSections/{horizontalSection%2Did}/columns/{horizontalSectionColumn%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -123,10 +123,10 @@ class HorizontalSectionColumnItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property columns in groups
      * @param HorizontalSectionColumn $body The request body
-     * @param HorizontalSectionColumnItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HorizontalSectionColumnItemRequestBuilderPatchRequestCo_8eb70bba|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(HorizontalSectionColumn $body, ?HorizontalSectionColumnItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(HorizontalSectionColumn $body, ?HorizontalSectionColumnItemRequestBuilderPatchRequestCo_8eb70bba $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

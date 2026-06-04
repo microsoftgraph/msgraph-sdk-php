@@ -130,6 +130,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
             'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'resourceAccessEvents' => fn(ParseNode $n) => $o->setResourceAccessEvents($n->getCollectionOfObjectValues([ResourceAccessEvent::class, 'createFromDiscriminatorValue'])),
+            'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
             'userSid' => fn(ParseNode $n) => $o->setUserSid($n->getStringValue()),
         ];
@@ -159,6 +160,18 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceAccessEvents'");
+    }
+
+    /**
+     * Gets the tenantId property value. The tenantId property
+     * @return string|null
+    */
+    public function getTenantId(): ?string {
+        $val = $this->getBackingStore()->get('tenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantId'");
     }
 
     /**
@@ -197,6 +210,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('domainName', $this->getDomainName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('resourceAccessEvents', $this->getResourceAccessEvents());
+        $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
         $writer->writeStringValue('userSid', $this->getUserSid());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -272,6 +286,14 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setResourceAccessEvents(?array $value): void {
         $this->getBackingStore()->set('resourceAccessEvents', $value);
+    }
+
+    /**
+     * Sets the tenantId property value. The tenantId property
+     * @param string|null $value Value to set for the tenantId property.
+    */
+    public function setTenantId(?string $value): void {
+        $this->getBackingStore()->set('tenantId', $value);
     }
 
     /**

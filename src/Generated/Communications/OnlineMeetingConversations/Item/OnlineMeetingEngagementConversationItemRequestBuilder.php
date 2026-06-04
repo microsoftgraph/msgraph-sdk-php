@@ -46,7 +46,7 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -56,11 +56,11 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property onlineMeetingConversations for communications
-     * @param OnlineMeetingEngagementConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnlineMeetingEngagementConversationItemRequestBuilderDe_cafd99e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?OnlineMeetingEngagementConversationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?OnlineMeetingEngagementConversationItemRequestBuilderDe_cafd99e2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
 
     /**
      * A collection of structured question-and-answer (Q&A) threads in Teams directly associated with online meetings.
-     * @param OnlineMeetingEngagementConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnlineMeetingEngagementConversationItemRequestBuilderGe_7ce5221f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnlineMeetingEngagementConversation|null>
      * @throws Exception
     */
-    public function get(?OnlineMeetingEngagementConversationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?OnlineMeetingEngagementConversationItemRequestBuilderGe_7ce5221f $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property onlineMeetingConversations in communications
      * @param OnlineMeetingEngagementConversation $body The request body
-     * @param OnlineMeetingEngagementConversationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnlineMeetingEngagementConversationItemRequestBuilderPa_7bc99d42|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnlineMeetingEngagementConversation|null>
      * @throws Exception
     */
-    public function patch(OnlineMeetingEngagementConversation $body, ?OnlineMeetingEngagementConversationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(OnlineMeetingEngagementConversation $body, ?OnlineMeetingEngagementConversationItemRequestBuilderPa_7bc99d42 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property onlineMeetingConversations for communications
-     * @param OnlineMeetingEngagementConversationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnlineMeetingEngagementConversationItemRequestBuilderDe_cafd99e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OnlineMeetingEngagementConversationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OnlineMeetingEngagementConversationItemRequestBuilderDe_cafd99e2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,12 +117,12 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
 
     /**
      * A collection of structured question-and-answer (Q&A) threads in Teams directly associated with online meetings.
-     * @param OnlineMeetingEngagementConversationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnlineMeetingEngagementConversationItemRequestBuilderGe_7ce5221f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OnlineMeetingEngagementConversationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OnlineMeetingEngagementConversationItemRequestBuilderGe_7ce5221f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/communications/onlineMeetingConversations/{onlineMeetingEngagementConversation%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -139,10 +139,10 @@ class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property onlineMeetingConversations in communications
      * @param OnlineMeetingEngagementConversation $body The request body
-     * @param OnlineMeetingEngagementConversationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnlineMeetingEngagementConversationItemRequestBuilderPa_7bc99d42|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OnlineMeetingEngagementConversation $body, ?OnlineMeetingEngagementConversationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OnlineMeetingEngagementConversation $body, ?OnlineMeetingEngagementConversationItemRequestBuilderPa_7bc99d42 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

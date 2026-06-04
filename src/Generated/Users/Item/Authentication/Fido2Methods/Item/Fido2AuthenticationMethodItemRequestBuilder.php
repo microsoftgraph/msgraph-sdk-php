@@ -22,7 +22,7 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Deletes a user's FIDO2 security key authentication method object.
-     * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param Fido2AuthenticationMethodItemRequestBuilderDeleteReques_f43fe1eb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/fido2authenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?Fido2AuthenticationMethodItemRequestBuilderDeleteReques_f43fe1eb $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the FIDO2 security keys registered to a user for authentication.
-     * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestCo_b29db3ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Fido2AuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?Fido2AuthenticationMethodItemRequestBuilderGetRequestCo_b29db3ff $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,12 +61,12 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Deletes a user's FIDO2 security key authentication method object.
-     * @param Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param Fido2AuthenticationMethodItemRequestBuilderDeleteReques_f43fe1eb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?Fido2AuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?Fido2AuthenticationMethodItemRequestBuilderDeleteReques_f43fe1eb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
@@ -79,12 +79,12 @@ class Fido2AuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the FIDO2 security keys registered to a user for authentication.
-     * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param Fido2AuthenticationMethodItemRequestBuilderGetRequestCo_b29db3ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?Fido2AuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?Fido2AuthenticationMethodItemRequestBuilderGetRequestCo_b29db3ff $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/fido2Methods/{fido2AuthenticationMethod%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

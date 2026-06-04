@@ -22,7 +22,7 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/authentication/emailMethods/{emailAuthenticationMethod%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/users/{user%2Did}/authentication/emailMethods/{emailAuthenticationMethod%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,12 +32,12 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Deletes a user's emailAuthenticationMethod object.
-     * @param EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EmailAuthenticationMethodItemRequestBuilderDeleteReques_37852b9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EmailAuthenticationMethodItemRequestBuilderDeleteReques_37852b9b $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The email address registered to a user for authentication.
-     * @param EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EmailAuthenticationMethodItemRequestBuilderGetRequestCo_6d9021a4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmailAuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EmailAuthenticationMethodItemRequestBuilderGetRequestCo_6d9021a4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a user's email address represented by an emailAuthenticationMethod object. Self-service operations aren't supported.
      * @param EmailAuthenticationMethod $body The request body
-     * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EmailAuthenticationMethodItemRequestBuilderPatchRequest_81553b09|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmailAuthenticationMethod|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/emailauthenticationmethod-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(EmailAuthenticationMethod $body, ?EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EmailAuthenticationMethod $body, ?EmailAuthenticationMethodItemRequestBuilderPatchRequest_81553b09 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Deletes a user's emailAuthenticationMethod object.
-     * @param EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EmailAuthenticationMethodItemRequestBuilderDeleteReques_37852b9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EmailAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EmailAuthenticationMethodItemRequestBuilderDeleteReques_37852b9b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,12 +95,12 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The email address registered to a user for authentication.
-     * @param EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EmailAuthenticationMethodItemRequestBuilderGetRequestCo_6d9021a4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EmailAuthenticationMethodItemRequestBuilderGetRequestCo_6d9021a4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/emailMethods/{emailAuthenticationMethod%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -117,10 +117,10 @@ class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a user's email address represented by an emailAuthenticationMethod object. Self-service operations aren't supported.
      * @param EmailAuthenticationMethod $body The request body
-     * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EmailAuthenticationMethodItemRequestBuilderPatchRequest_81553b09|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EmailAuthenticationMethod $body, ?EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EmailAuthenticationMethod $body, ?EmailAuthenticationMethodItemRequestBuilderPatchRequest_81553b09 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

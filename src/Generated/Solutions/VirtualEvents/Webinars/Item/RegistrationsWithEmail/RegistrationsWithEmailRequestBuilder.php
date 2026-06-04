@@ -31,7 +31,7 @@ class RegistrationsWithEmailRequestBuilder extends BaseRequestBuilder
      * @param string|null $email Alternate key of virtualEventRegistration
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $email = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(email=\'{email}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(email=\'{email}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['email'] = $email;
@@ -110,7 +110,7 @@ class RegistrationsWithEmailRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?RegistrationsWithEmailRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations(email=\'{email}\'){?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

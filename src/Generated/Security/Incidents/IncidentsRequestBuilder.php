@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\Security\Incident;
 use Microsoft\Graph\Generated\Models\Security\IncidentCollectionResponse;
 use Microsoft\Graph\Generated\Security\Incidents\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
+use Microsoft\Graph\Generated\Security\Incidents\MicrosoftGraphSecurityMergeIncidents\MicrosoftGraphSecurityMergeIncidentsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -24,6 +25,13 @@ class IncidentsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the mergeIncidents method.
+    */
+    public function microsoftGraphSecurityMergeIncidents(): MicrosoftGraphSecurityMergeIncidentsRequestBuilder {
+        return new MicrosoftGraphSecurityMergeIncidentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -43,7 +51,7 @@ class IncidentsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/security/incidents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -88,7 +96,7 @@ class IncidentsRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?IncidentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/incidents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -110,7 +118,7 @@ class IncidentsRequestBuilder extends BaseRequestBuilder
     */
     public function toPostRequestInformation(Incident $body, ?IncidentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/security/incidents';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

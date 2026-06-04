@@ -38,7 +38,7 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -48,11 +48,11 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property notificationMessageTemplates for deviceManagement
-     * @param NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param NotificationMessageTemplateItemRequestBuilderDeleteRequ_62b44718|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?NotificationMessageTemplateItemRequestBuilderDeleteRequ_62b44718 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The Notification Message Templates.
-     * @param NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param NotificationMessageTemplateItemRequestBuilderGetRequest_a90e9236|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NotificationMessageTemplate|null>
      * @throws Exception
     */
-    public function get(?NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?NotificationMessageTemplateItemRequestBuilderGetRequest_a90e9236 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,11 +77,11 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property notificationMessageTemplates in deviceManagement
      * @param NotificationMessageTemplate $body The request body
-     * @param NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param NotificationMessageTemplateItemRequestBuilderPatchReque_0a64fd1d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<NotificationMessageTemplate|null>
      * @throws Exception
     */
-    public function patch(NotificationMessageTemplate $body, ?NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(NotificationMessageTemplate $body, ?NotificationMessageTemplateItemRequestBuilderPatchReque_0a64fd1d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -91,10 +91,10 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property notificationMessageTemplates for deviceManagement
-     * @param NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param NotificationMessageTemplateItemRequestBuilderDeleteRequ_62b44718|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?NotificationMessageTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?NotificationMessageTemplateItemRequestBuilderDeleteRequ_62b44718 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -109,12 +109,12 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The Notification Message Templates.
-     * @param NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param NotificationMessageTemplateItemRequestBuilderGetRequest_a90e9236|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?NotificationMessageTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?NotificationMessageTemplateItemRequestBuilderGetRequest_a90e9236 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -131,10 +131,10 @@ class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property notificationMessageTemplates in deviceManagement
      * @param NotificationMessageTemplate $body The request body
-     * @param NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param NotificationMessageTemplateItemRequestBuilderPatchReque_0a64fd1d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(NotificationMessageTemplate $body, ?NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(NotificationMessageTemplate $body, ?NotificationMessageTemplateItemRequestBuilderPatchReque_0a64fd1d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

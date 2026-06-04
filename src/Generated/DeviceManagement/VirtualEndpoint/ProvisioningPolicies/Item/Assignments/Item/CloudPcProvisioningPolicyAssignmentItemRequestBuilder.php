@@ -40,7 +40,7 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -50,11 +50,11 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderDe_686b6c17|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderDe_686b6c17 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -64,11 +64,11 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
 
     /**
      * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
-     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderGe_2af0d243|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcProvisioningPolicyAssignment|null>
      * @throws Exception
     */
-    public function get(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderGe_2af0d243 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,11 +79,11 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property assignments in deviceManagement
      * @param CloudPcProvisioningPolicyAssignment $body The request body
-     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderPa_75b525d9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcProvisioningPolicyAssignment|null>
      * @throws Exception
     */
-    public function patch(CloudPcProvisioningPolicyAssignment $body, ?CloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CloudPcProvisioningPolicyAssignment $body, ?CloudPcProvisioningPolicyAssignmentItemRequestBuilderPa_75b525d9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -93,10 +93,10 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderDe_686b6c17|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderDe_686b6c17 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -111,12 +111,12 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
 
     /**
      * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
-     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderGe_2af0d243|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CloudPcProvisioningPolicyAssignmentItemRequestBuilderGe_2af0d243 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -133,10 +133,10 @@ class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property assignments in deviceManagement
      * @param CloudPcProvisioningPolicyAssignment $body The request body
-     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyAssignmentItemRequestBuilderPa_75b525d9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CloudPcProvisioningPolicyAssignment $body, ?CloudPcProvisioningPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CloudPcProvisioningPolicyAssignment $body, ?CloudPcProvisioningPolicyAssignmentItemRequestBuilderPa_75b525d9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -43,7 +43,7 @@ class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/education/reports/readingAssignmentSubmissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,12 +53,12 @@ class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of reading assignments that were submitted by a student.
-     * @param ReadingAssignmentSubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionsRequestBuilderGetRequestCon_0b749ae1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReadingAssignmentSubmissionCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportsroot-list-readingassignmentsubmissions?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ReadingAssignmentSubmissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ReadingAssignmentSubmissionsRequestBuilderGetRequestCon_0b749ae1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to readingAssignmentSubmissions for education
      * @param ReadingAssignmentSubmission $body The request body
-     * @param ReadingAssignmentSubmissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionsRequestBuilderPostRequestCo_bff82ce2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReadingAssignmentSubmission|null>
      * @throws Exception
     */
-    public function post(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionsRequestBuilderPostRequestCo_bff82ce2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,12 +83,12 @@ class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of reading assignments that were submitted by a student.
-     * @param ReadingAssignmentSubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionsRequestBuilderGetRequestCon_0b749ae1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ReadingAssignmentSubmissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ReadingAssignmentSubmissionsRequestBuilderGetRequestCon_0b749ae1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/education/reports/readingAssignmentSubmissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -105,12 +105,12 @@ class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to readingAssignmentSubmissions for education
      * @param ReadingAssignmentSubmission $body The request body
-     * @param ReadingAssignmentSubmissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionsRequestBuilderPostRequestCo_bff82ce2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionsRequestBuilderPostRequestCo_bff82ce2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/education/reports/readingAssignmentSubmissions';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -34,11 +34,11 @@ class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder extends B
 
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
-     * @param VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameReque_b664cf05|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameGetResponse|null>
      * @throws Exception
     */
-    public function get(?VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameReque_b664cf05 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder extends B
 
     /**
      * Invoke function verifyWindowsEnrollmentAutoDiscovery
-     * @param VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameReque_b664cf05|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameReque_b664cf05 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

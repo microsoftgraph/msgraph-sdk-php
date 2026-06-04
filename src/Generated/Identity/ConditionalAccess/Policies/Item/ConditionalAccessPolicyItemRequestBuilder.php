@@ -30,7 +30,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identity/conditionalAccess/policies/{conditionalAccessPolicy%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identity/conditionalAccess/policies/{conditionalAccessPolicy%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,12 +40,12 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a conditionalAccessPolicy object.
-     * @param ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConditionalAccessPolicyItemRequestBuilderDeleteRequestC_d7a824da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/conditionalaccesspolicy-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ConditionalAccessPolicyItemRequestBuilderDeleteRequestC_d7a824da $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,12 +71,12 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a conditionalAccessPolicy object.
      * @param ConditionalAccessPolicy $body The request body
-     * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestCo_6b948ff6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConditionalAccessPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/conditionalaccesspolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ConditionalAccessPolicy $body, ?ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ConditionalAccessPolicy $body, ?ConditionalAccessPolicyItemRequestBuilderPatchRequestCo_6b948ff6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,10 +86,10 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a conditionalAccessPolicy object.
-     * @param ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConditionalAccessPolicyItemRequestBuilderDeleteRequestC_d7a824da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ConditionalAccessPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ConditionalAccessPolicyItemRequestBuilderDeleteRequestC_d7a824da $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -109,7 +109,7 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identity/conditionalAccess/policies/{conditionalAccessPolicy%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -126,10 +126,10 @@ class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a conditionalAccessPolicy object.
      * @param ConditionalAccessPolicy $body The request body
-     * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestCo_6b948ff6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ConditionalAccessPolicy $body, ?ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ConditionalAccessPolicy $body, ?ConditionalAccessPolicyItemRequestBuilderPatchRequestCo_6b948ff6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

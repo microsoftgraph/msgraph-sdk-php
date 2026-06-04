@@ -22,7 +22,7 @@ class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}/results/{threatAssessmentResult%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}/results/{threatAssessmentResult%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -32,11 +32,11 @@ class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property results for informationProtection
-     * @param ThreatAssessmentResultItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentResultItemRequestBuilderDeleteRequestCo_6d99204a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ThreatAssessmentResultItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ThreatAssessmentResultItemRequestBuilderDeleteRequestCo_6d99204a $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property results in informationProtection
      * @param ThreatAssessmentResult $body The request body
-     * @param ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentResultItemRequestBuilderPatchRequestCon_16effce7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ThreatAssessmentResult|null>
      * @throws Exception
     */
-    public function patch(ThreatAssessmentResult $body, ?ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ThreatAssessmentResult $body, ?ThreatAssessmentResultItemRequestBuilderPatchRequestCon_16effce7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property results for informationProtection
-     * @param ThreatAssessmentResultItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentResultItemRequestBuilderDeleteRequestCo_6d99204a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ThreatAssessmentResultItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ThreatAssessmentResultItemRequestBuilderDeleteRequestCo_6d99204a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -98,7 +98,7 @@ class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?ThreatAssessmentResultItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}/results/{threatAssessmentResult%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -115,10 +115,10 @@ class ThreatAssessmentResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property results in informationProtection
      * @param ThreatAssessmentResult $body The request body
-     * @param ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentResultItemRequestBuilderPatchRequestCon_16effce7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ThreatAssessmentResult $body, ?ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ThreatAssessmentResult $body, ?ThreatAssessmentResultItemRequestBuilderPatchRequestCon_16effce7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

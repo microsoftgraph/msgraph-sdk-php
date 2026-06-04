@@ -31,12 +31,12 @@ class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseRequestBuilde
 
     /**
      * List the tenant users who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
-     * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequ_32061572|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAttackSimulationRepeatOffendersGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationrepeatoffenders?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetAttackSimulationRepeatOffendersRequestBuilderGetRequ_32061572 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseRequestBuilde
 
     /**
      * List the tenant users who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
-     * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetAttackSimulationRepeatOffendersRequestBuilderGetRequ_32061572|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetAttackSimulationRepeatOffendersRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetAttackSimulationRepeatOffendersRequestBuilderGetRequ_32061572 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

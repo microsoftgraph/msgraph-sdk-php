@@ -30,7 +30,7 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications/{webApplicationFirewallVerificationModel%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications/{webApplicationFirewallVerificationModel%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,12 +40,12 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
 
     /**
      * Delete a webApplicationFirewallVerificationModel object.
-     * @param WebApplicationFirewallVerificationModelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationModelItemRequestBuild_050a76d2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-webapplicationfirewallverifications?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?WebApplicationFirewallVerificationModelItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?WebApplicationFirewallVerificationModelItemRequestBuild_050a76d2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
 
     /**
      * Read the properties and relationships of webApplicationFirewallVerificationModel object.
-     * @param WebApplicationFirewallVerificationModelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationModelItemRequestBuild_cead9d0a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallVerificationModel|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/webapplicationfirewallverificationmodel-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?WebApplicationFirewallVerificationModelItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?WebApplicationFirewallVerificationModelItemRequestBuild_cead9d0a $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,11 +71,11 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property webApplicationFirewallVerifications in identity
      * @param WebApplicationFirewallVerificationModel $body The request body
-     * @param WebApplicationFirewallVerificationModelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationModelItemRequestBuild_e1b75707|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallVerificationModel|null>
      * @throws Exception
     */
-    public function patch(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationModelItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationModelItemRequestBuild_e1b75707 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,10 +85,10 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
 
     /**
      * Delete a webApplicationFirewallVerificationModel object.
-     * @param WebApplicationFirewallVerificationModelItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationModelItemRequestBuild_050a76d2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WebApplicationFirewallVerificationModelItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WebApplicationFirewallVerificationModelItemRequestBuild_050a76d2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -103,12 +103,12 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
 
     /**
      * Read the properties and relationships of webApplicationFirewallVerificationModel object.
-     * @param WebApplicationFirewallVerificationModelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationModelItemRequestBuild_cead9d0a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WebApplicationFirewallVerificationModelItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WebApplicationFirewallVerificationModelItemRequestBuild_cead9d0a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications/{webApplicationFirewallVerificationModel%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -125,10 +125,10 @@ class WebApplicationFirewallVerificationModelItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property webApplicationFirewallVerifications in identity
      * @param WebApplicationFirewallVerificationModel $body The request body
-     * @param WebApplicationFirewallVerificationModelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationModelItemRequestBuild_e1b75707|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationModelItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationModelItemRequestBuild_e1b75707 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

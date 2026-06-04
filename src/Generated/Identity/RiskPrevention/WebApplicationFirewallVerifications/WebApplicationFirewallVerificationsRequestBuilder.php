@@ -43,7 +43,7 @@ class WebApplicationFirewallVerificationsRequestBuilder extends BaseRequestBuild
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,12 +53,12 @@ class WebApplicationFirewallVerificationsRequestBuilder extends BaseRequestBuild
 
     /**
      * Get a list of the webApplicationFirewallVerificationModel objects and their properties.
-     * @param WebApplicationFirewallVerificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationsRequestBuilderGetReq_b2310bc5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallVerificationModelCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/riskpreventioncontainer-list-webapplicationfirewallverifications?view=graph-rest-1.0 Find more info here
     */
-    public function get(?WebApplicationFirewallVerificationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?WebApplicationFirewallVerificationsRequestBuilderGetReq_b2310bc5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class WebApplicationFirewallVerificationsRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to webApplicationFirewallVerifications for identity
      * @param WebApplicationFirewallVerificationModel $body The request body
-     * @param WebApplicationFirewallVerificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationsRequestBuilderPostRe_5720667b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallVerificationModel|null>
      * @throws Exception
     */
-    public function post(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationsRequestBuilderPostRe_5720667b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,12 +83,12 @@ class WebApplicationFirewallVerificationsRequestBuilder extends BaseRequestBuild
 
     /**
      * Get a list of the webApplicationFirewallVerificationModel objects and their properties.
-     * @param WebApplicationFirewallVerificationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationsRequestBuilderGetReq_b2310bc5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WebApplicationFirewallVerificationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WebApplicationFirewallVerificationsRequestBuilderGetReq_b2310bc5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -105,12 +105,12 @@ class WebApplicationFirewallVerificationsRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to webApplicationFirewallVerifications for identity
      * @param WebApplicationFirewallVerificationModel $body The request body
-     * @param WebApplicationFirewallVerificationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallVerificationsRequestBuilderPostRe_5720667b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(WebApplicationFirewallVerificationModel $body, ?WebApplicationFirewallVerificationsRequestBuilderPostRe_5720667b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identity/riskPrevention/webApplicationFirewallVerifications';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

@@ -30,7 +30,7 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}{?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -40,11 +40,11 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property historyDefinitions for identityGovernance
-     * @param AccessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewHistoryDefinitionItemRequestBuilderDeleteRe_a306aff3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AccessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AccessReviewHistoryDefinitionItemRequestBuilderDeleteRe_a306aff3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,12 +54,12 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a 404 Not Found error is returned.
-     * @param AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewHistoryDefinitionItemRequestBuilderGetReque_66aac46c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewHistoryDefinition|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accessreviewhistorydefinition-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AccessReviewHistoryDefinitionItemRequestBuilderGetReque_66aac46c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property historyDefinitions in identityGovernance
      * @param AccessReviewHistoryDefinition $body The request body
-     * @param AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewHistoryDefinitionItemRequestBuilderPatchReq_8bdb04e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewHistoryDefinition|null>
      * @throws Exception
     */
-    public function patch(AccessReviewHistoryDefinition $body, ?AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AccessReviewHistoryDefinition $body, ?AccessReviewHistoryDefinitionItemRequestBuilderPatchReq_8bdb04e2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property historyDefinitions for identityGovernance
-     * @param AccessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewHistoryDefinitionItemRequestBuilderDeleteRe_a306aff3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessReviewHistoryDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessReviewHistoryDefinitionItemRequestBuilderDeleteRe_a306aff3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -102,12 +102,12 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a 404 Not Found error is returned.
-     * @param AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewHistoryDefinitionItemRequestBuilderGetReque_66aac46c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessReviewHistoryDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessReviewHistoryDefinitionItemRequestBuilderGetReque_66aac46c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}{?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -124,10 +124,10 @@ class AccessReviewHistoryDefinitionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property historyDefinitions in identityGovernance
      * @param AccessReviewHistoryDefinition $body The request body
-     * @param AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewHistoryDefinitionItemRequestBuilderPatchReq_8bdb04e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessReviewHistoryDefinition $body, ?AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AccessReviewHistoryDefinition $body, ?AccessReviewHistoryDefinitionItemRequestBuilderPatchReq_8bdb04e2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

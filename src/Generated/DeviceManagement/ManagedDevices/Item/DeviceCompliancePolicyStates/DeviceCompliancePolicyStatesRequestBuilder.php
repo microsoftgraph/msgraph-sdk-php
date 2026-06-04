@@ -43,7 +43,7 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCompliancePolicyStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Device compliance policy states for this device.
-     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyStateCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param DeviceCompliancePolicyState $body The request body
-     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyState|null>
      * @throws Exception
     */
-    public function post(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,12 +82,12 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Device compliance policy states for this device.
-     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCompliancePolicyStates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -104,12 +104,12 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to deviceCompliancePolicyStates for deviceManagement
      * @param DeviceCompliancePolicyState $body The request body
-     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}/deviceCompliancePolicyStates';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {

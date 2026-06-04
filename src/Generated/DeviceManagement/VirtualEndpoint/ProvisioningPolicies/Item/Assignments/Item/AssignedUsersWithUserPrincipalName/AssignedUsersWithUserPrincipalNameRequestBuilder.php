@@ -35,11 +35,11 @@ class AssignedUsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
 
     /**
      * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. Read-only. Supports$expand.
-     * @param AssignedUsersWithUserPrincipalNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AssignedUsersWithUserPrincipalNameRequestBuilderGetRequ_704a8b96|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
     */
-    public function get(?AssignedUsersWithUserPrincipalNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AssignedUsersWithUserPrincipalNameRequestBuilderGetRequ_704a8b96 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class AssignedUsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
 
     /**
      * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. Read-only. Supports$expand.
-     * @param AssignedUsersWithUserPrincipalNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AssignedUsersWithUserPrincipalNameRequestBuilderGetRequ_704a8b96|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AssignedUsersWithUserPrincipalNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AssignedUsersWithUserPrincipalNameRequestBuilderGetRequ_704a8b96 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

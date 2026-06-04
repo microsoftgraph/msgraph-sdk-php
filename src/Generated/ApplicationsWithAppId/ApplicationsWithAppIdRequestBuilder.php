@@ -23,7 +23,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
      * @param string|null $appId Alternate key of application
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $appId = null) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/applications(appId=\'{appId}\'){?%24expand,%24select}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/applications(appId=\'{appId}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['appId'] = $appId;
@@ -104,7 +104,7 @@ class ApplicationsWithAppIdRequestBuilder extends BaseRequestBuilder
     */
     public function toGetRequestInformation(?ApplicationsWithAppIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/applications(appId=\'{appId}\'){?%24expand,%24select}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {

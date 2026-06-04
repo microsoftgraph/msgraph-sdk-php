@@ -43,7 +43,7 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/complianceManagementPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        parent::__construct($requestAdapter, [], '');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -53,11 +53,11 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Compliance Management Partners configured by the tenant.
-     * @param ComplianceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnersRequestBuilderGetRequestCon_10c13cf2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartnerCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?ComplianceManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ComplianceManagementPartnersRequestBuilderGetRequestCon_10c13cf2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to complianceManagementPartners for deviceManagement
      * @param ComplianceManagementPartner $body The request body
-     * @param ComplianceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnersRequestBuilderPostRequestCo_f27c9c70|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartner|null>
      * @throws Exception
     */
-    public function post(ComplianceManagementPartner $body, ?ComplianceManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ComplianceManagementPartner $body, ?ComplianceManagementPartnersRequestBuilderPostRequestCo_f27c9c70 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,12 +82,12 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Compliance Management Partners configured by the tenant.
-     * @param ComplianceManagementPartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnersRequestBuilderGetRequestCon_10c13cf2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ComplianceManagementPartnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ComplianceManagementPartnersRequestBuilderGetRequestCon_10c13cf2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/complianceManagementPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::GET;
         if ($requestConfiguration !== null) {
@@ -104,12 +104,12 @@ class ComplianceManagementPartnersRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to complianceManagementPartners for deviceManagement
      * @param ComplianceManagementPartner $body The request body
-     * @param ComplianceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnersRequestBuilderPostRequestCo_f27c9c70|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ComplianceManagementPartner $body, ?ComplianceManagementPartnersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ComplianceManagementPartner $body, ?ComplianceManagementPartnersRequestBuilderPostRequestCo_f27c9c70 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->urlTemplate = '{+baseurl}/deviceManagement/complianceManagementPartners';
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::POST;
         if ($requestConfiguration !== null) {
