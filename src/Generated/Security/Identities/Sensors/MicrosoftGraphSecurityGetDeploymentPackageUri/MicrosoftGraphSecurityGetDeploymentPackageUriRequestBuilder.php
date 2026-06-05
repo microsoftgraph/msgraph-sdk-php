@@ -32,11 +32,11 @@ class MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder extends BaseRe
 
     /**
      * Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.
-     * @param MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityGetDeploymentPackageUriRequestBui_8d779932|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SensorDeploymentPackage|null>
      * @throws Exception
     */
-    public function get(?MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MicrosoftGraphSecurityGetDeploymentPackageUriRequestBui_8d779932 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder extends BaseRe
 
     /**
      * Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.
-     * @param MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityGetDeploymentPackageUriRequestBui_8d779932|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MicrosoftGraphSecurityGetDeploymentPackageUriRequestBui_8d779932 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

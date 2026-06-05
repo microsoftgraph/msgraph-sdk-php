@@ -72,11 +72,11 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete entity from permissionGrants
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,11 +86,11 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Get entity from permissionGrants by key
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceSpecificPermissionGrant|null>
      * @throws Exception
     */
-    public function get(?ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -101,11 +101,11 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in permissionGrants
      * @param ResourceSpecificPermissionGrant $body The request body
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceSpecificPermissionGrant|null>
      * @throws Exception
     */
-    public function patch(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -115,10 +115,10 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete entity from permissionGrants
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -133,10 +133,10 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Get entity from permissionGrants by key
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -155,10 +155,10 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in permissionGrants
      * @param ResourceSpecificPermissionGrant $body The request body
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

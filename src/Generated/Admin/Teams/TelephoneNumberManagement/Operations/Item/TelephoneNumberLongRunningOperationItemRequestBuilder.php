@@ -32,11 +32,11 @@ class TelephoneNumberLongRunningOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property operations for admin
-     * @param TelephoneNumberLongRunningOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TelephoneNumberLongRunningOperationItemRequestBuilderDe_cf339917|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TelephoneNumberLongRunningOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?TelephoneNumberLongRunningOperationItemRequestBuilderDe_cf339917 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class TelephoneNumberLongRunningOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Read the properties and relationships of microsoft.graph.teamsAdministration.telephoneNumberLongRunningOperation object. This method is used to query the status of an assign or unassign number action using Graph API. This link is returned in the Location response header found in assign or unassign operation result.
-     * @param TelephoneNumberLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TelephoneNumberLongRunningOperationItemRequestBuilderGe_b0fdba2d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TelephoneNumberLongRunningOperation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/teamsadministration-telephonenumberlongrunningoperation-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?TelephoneNumberLongRunningOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?TelephoneNumberLongRunningOperationItemRequestBuilderGe_b0fdba2d $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class TelephoneNumberLongRunningOperationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property operations in admin
      * @param TelephoneNumberLongRunningOperation $body The request body
-     * @param TelephoneNumberLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TelephoneNumberLongRunningOperationItemRequestBuilderPa_f14cbd97|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TelephoneNumberLongRunningOperation|null>
      * @throws Exception
     */
-    public function patch(TelephoneNumberLongRunningOperation $body, ?TelephoneNumberLongRunningOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(TelephoneNumberLongRunningOperation $body, ?TelephoneNumberLongRunningOperationItemRequestBuilderPa_f14cbd97 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class TelephoneNumberLongRunningOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property operations for admin
-     * @param TelephoneNumberLongRunningOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TelephoneNumberLongRunningOperationItemRequestBuilderDe_cf339917|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TelephoneNumberLongRunningOperationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TelephoneNumberLongRunningOperationItemRequestBuilderDe_cf339917 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class TelephoneNumberLongRunningOperationItemRequestBuilder extends BaseRequestB
 
     /**
      * Read the properties and relationships of microsoft.graph.teamsAdministration.telephoneNumberLongRunningOperation object. This method is used to query the status of an assign or unassign number action using Graph API. This link is returned in the Location response header found in assign or unassign operation result.
-     * @param TelephoneNumberLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TelephoneNumberLongRunningOperationItemRequestBuilderGe_b0fdba2d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?TelephoneNumberLongRunningOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?TelephoneNumberLongRunningOperationItemRequestBuilderGe_b0fdba2d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class TelephoneNumberLongRunningOperationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property operations in admin
      * @param TelephoneNumberLongRunningOperation $body The request body
-     * @param TelephoneNumberLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TelephoneNumberLongRunningOperationItemRequestBuilderPa_f14cbd97|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TelephoneNumberLongRunningOperation $body, ?TelephoneNumberLongRunningOperationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TelephoneNumberLongRunningOperation $body, ?TelephoneNumberLongRunningOperationItemRequestBuilderPa_f14cbd97 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

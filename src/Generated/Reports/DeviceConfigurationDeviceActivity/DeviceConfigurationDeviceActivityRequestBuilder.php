@@ -32,11 +32,11 @@ class DeviceConfigurationDeviceActivityRequestBuilder extends BaseRequestBuilder
 
     /**
      * Metadata for the device configuration device activity report
-     * @param DeviceConfigurationDeviceActivityRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceConfigurationDeviceActivityRequestBuilderGetReque_95e74523|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Report|null>
      * @throws Exception
     */
-    public function get(?DeviceConfigurationDeviceActivityRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DeviceConfigurationDeviceActivityRequestBuilderGetReque_95e74523 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class DeviceConfigurationDeviceActivityRequestBuilder extends BaseRequestBuilder
 
     /**
      * Metadata for the device configuration device activity report
-     * @param DeviceConfigurationDeviceActivityRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceConfigurationDeviceActivityRequestBuilderGetReque_95e74523|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceConfigurationDeviceActivityRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceConfigurationDeviceActivityRequestBuilderGetReque_95e74523 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

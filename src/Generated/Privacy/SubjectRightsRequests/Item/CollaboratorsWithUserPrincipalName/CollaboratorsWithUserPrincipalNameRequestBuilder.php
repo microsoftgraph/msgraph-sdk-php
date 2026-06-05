@@ -35,11 +35,11 @@ class CollaboratorsWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
 
     /**
      * Collection of users who can collaborate on the request.
-     * @param CollaboratorsWithUserPrincipalNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CollaboratorsWithUserPrincipalNameRequestBuilderGetRequ_a92ea57c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
     */
-    public function get(?CollaboratorsWithUserPrincipalNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CollaboratorsWithUserPrincipalNameRequestBuilderGetRequ_a92ea57c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class CollaboratorsWithUserPrincipalNameRequestBuilder extends BaseRequestBuilde
 
     /**
      * Collection of users who can collaborate on the request.
-     * @param CollaboratorsWithUserPrincipalNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CollaboratorsWithUserPrincipalNameRequestBuilderGetRequ_a92ea57c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CollaboratorsWithUserPrincipalNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CollaboratorsWithUserPrincipalNameRequestBuilderGetRequ_a92ea57c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

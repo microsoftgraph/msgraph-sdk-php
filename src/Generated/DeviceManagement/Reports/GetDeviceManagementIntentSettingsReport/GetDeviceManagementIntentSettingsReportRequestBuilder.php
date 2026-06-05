@@ -33,11 +33,11 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder extends BaseRequestB
     /**
      * Invoke action getDeviceManagementIntentSettingsReport
      * @param GetDeviceManagementIntentSettingsReportPostRequestBody $body The request body
-     * @param GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetDeviceManagementIntentSettingsReportRequestBuilderPo_bf3439b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function post(GetDeviceManagementIntentSettingsReportPostRequestBody $body, ?GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(GetDeviceManagementIntentSettingsReportPostRequestBody $body, ?GetDeviceManagementIntentSettingsReportRequestBuilderPo_bf3439b9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder extends BaseRequestB
     /**
      * Invoke action getDeviceManagementIntentSettingsReport
      * @param GetDeviceManagementIntentSettingsReportPostRequestBody $body The request body
-     * @param GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetDeviceManagementIntentSettingsReportRequestBuilderPo_bf3439b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetDeviceManagementIntentSettingsReportPostRequestBody $body, ?GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetDeviceManagementIntentSettingsReportPostRequestBody $body, ?GetDeviceManagementIntentSettingsReportRequestBuilderPo_bf3439b9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -53,11 +53,11 @@ class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuil
 
     /**
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
-     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitsBulkAdditionJobCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to driveProtectionUnitsBulkAdditionJobs for solutions
      * @param DriveProtectionUnitsBulkAdditionJob $body The request body
-     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostR_57f9aace|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function post(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostR_57f9aace $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuil
 
     /**
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
-     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to driveProtectionUnitsBulkAdditionJobs for solutions
      * @param DriveProtectionUnitsBulkAdditionJob $body The request body
-     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostR_57f9aace|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobsRequestBuilderPostR_57f9aace $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

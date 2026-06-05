@@ -32,11 +32,11 @@ class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBuilder
     /**
      * Activate Microsoft Defender for Identity sensors.
      * @param ActivatePostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(ActivatePostRequestBody $body, ?MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ActivatePostRequestBody $body, ?MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBuilder
     /**
      * Activate Microsoft Defender for Identity sensors.
      * @param ActivatePostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ActivatePostRequestBody $body, ?MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ActivatePostRequestBody $body, ?MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

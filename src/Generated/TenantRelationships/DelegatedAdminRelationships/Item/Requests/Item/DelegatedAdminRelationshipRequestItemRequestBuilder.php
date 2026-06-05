@@ -32,11 +32,11 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property requests for tenantRelationships
-     * @param DelegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipRequestItemRequestBuilderDele_9b7d1820|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DelegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DelegatedAdminRelationshipRequestItemRequestBuilderDele_9b7d1820 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
 
     /**
      * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
-     * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetR_bca14499|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/delegatedadminrelationshiprequest-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DelegatedAdminRelationshipRequestItemRequestBuilderGetR_bca14499 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property requests in tenantRelationships
      * @param DelegatedAdminRelationshipRequest $body The request body
-     * @param DelegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipRequestItemRequestBuilderPatc_9143dc3e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationshipRequest|null>
      * @throws Exception
     */
-    public function patch(DelegatedAdminRelationshipRequest $body, ?DelegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(DelegatedAdminRelationshipRequest $body, ?DelegatedAdminRelationshipRequestItemRequestBuilderPatc_9143dc3e $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property requests for tenantRelationships
-     * @param DelegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipRequestItemRequestBuilderDele_9b7d1820|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DelegatedAdminRelationshipRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DelegatedAdminRelationshipRequestItemRequestBuilderDele_9b7d1820 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
 
     /**
      * Read the properties and relationships of a delegatedAdminRelationshipRequest object.
-     * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetR_bca14499|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DelegatedAdminRelationshipRequestItemRequestBuilderGetR_bca14499 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property requests in tenantRelationships
      * @param DelegatedAdminRelationshipRequest $body The request body
-     * @param DelegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipRequestItemRequestBuilderPatc_9143dc3e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DelegatedAdminRelationshipRequest $body, ?DelegatedAdminRelationshipRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DelegatedAdminRelationshipRequest $body, ?DelegatedAdminRelationshipRequestItemRequestBuilderPatc_9143dc3e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

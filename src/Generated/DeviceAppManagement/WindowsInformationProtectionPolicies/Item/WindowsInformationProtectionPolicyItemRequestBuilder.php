@@ -56,11 +56,11 @@ class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property windowsInformationProtectionPolicies for deviceAppManagement
-     * @param WindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPolicyItemRequestBuilderDel_a76f04f4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?WindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?WindowsInformationProtectionPolicyItemRequestBuilderDel_a76f04f4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBu
 
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
-     * @param WindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPolicyItemRequestBuilderGet_a2790c14|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionPolicy|null>
      * @throws Exception
     */
-    public function get(?WindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?WindowsInformationProtectionPolicyItemRequestBuilderGet_a2790c14 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
      * @param WindowsInformationProtectionPolicy $body The request body
-     * @param WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPolicyItemRequestBuilderPat_e479e419|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionPolicy|null>
      * @throws Exception
     */
-    public function patch(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPolicyItemRequestBuilderPat_e479e419 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property windowsInformationProtectionPolicies for deviceAppManagement
-     * @param WindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPolicyItemRequestBuilderDel_a76f04f4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WindowsInformationProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WindowsInformationProtectionPolicyItemRequestBuilderDel_a76f04f4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBu
 
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
-     * @param WindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPolicyItemRequestBuilderGet_a2790c14|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WindowsInformationProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WindowsInformationProtectionPolicyItemRequestBuilderGet_a2790c14 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -139,10 +139,10 @@ class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
      * @param WindowsInformationProtectionPolicy $body The request body
-     * @param WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPolicyItemRequestBuilderPat_e479e419|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPolicyItemRequestBuilderPat_e479e419 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

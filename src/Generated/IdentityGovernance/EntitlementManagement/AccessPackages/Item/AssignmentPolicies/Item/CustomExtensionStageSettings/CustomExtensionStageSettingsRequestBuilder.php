@@ -53,11 +53,11 @@ class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @param CustomExtensionStageSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingsRequestBuilderGetRequestCon_f44a05ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomExtensionStageSettingCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?CustomExtensionStageSettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CustomExtensionStageSettingsRequestBuilderGetRequestCon_f44a05ce $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to customExtensionStageSettings for identityGovernance
      * @param CustomExtensionStageSetting $body The request body
-     * @param CustomExtensionStageSettingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingsRequestBuilderPostRequestCo_ad7350ec|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomExtensionStageSetting|null>
      * @throws Exception
     */
-    public function post(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingsRequestBuilderPostRequestCo_ad7350ec $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @param CustomExtensionStageSettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingsRequestBuilderGetRequestCon_f44a05ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CustomExtensionStageSettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CustomExtensionStageSettingsRequestBuilderGetRequestCon_f44a05ce $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to customExtensionStageSettings for identityGovernance
      * @param CustomExtensionStageSetting $body The request body
-     * @param CustomExtensionStageSettingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomExtensionStageSettingsRequestBuilderPostRequestCo_ad7350ec|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(CustomExtensionStageSetting $body, ?CustomExtensionStageSettingsRequestBuilderPostRequestCo_ad7350ec $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -6,10 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\Item\PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\Item\PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleRequest;
-use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse;
+use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d3ec0aa4;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,12 +30,12 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the eligibilityScheduleRequests property of the microsoft.graph.privilegedAccessGroup entity.
      * @param string $privilegedAccessGroupEligibilityScheduleRequestId The unique identifier of privilegedAccessGroupEligibilityScheduleRequest
-     * @return PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder
+     * @return PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31
     */
-    public function byPrivilegedAccessGroupEligibilityScheduleRequestId(string $privilegedAccessGroupEligibilityScheduleRequestId): PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder {
+    public function byPrivilegedAccessGroupEligibilityScheduleRequestId(string $privilegedAccessGroupEligibilityScheduleRequestId): PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31 {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['privilegedAccessGroupEligibilityScheduleRequest%2Did'] = $privilegedAccessGroupEligibilityScheduleRequestId;
-        return new PrivilegedAccessGroupEligibilityScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PrivilegedAccessGroupEligibilityScheduleRequestItemRequ_ae87ea31($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -64,7 +64,7 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param EligibilityScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse|null>
+     * @return Promise<PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d3ec0aa4|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0 Find more info here
     */
@@ -73,18 +73,18 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [PrivilegedAccessGroupEligibilityScheduleRequestCollecti_d3ec0aa4::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param PrivilegedAccessGroupEligibilityScheduleRequest $body The request body
-     * @param EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EligibilityScheduleRequestsRequestBuilderPostRequestCon_c57559bf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0 Find more info here
     */
-    public function post(PrivilegedAccessGroupEligibilityScheduleRequest $body, ?EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(PrivilegedAccessGroupEligibilityScheduleRequest $body, ?EligibilityScheduleRequestsRequestBuilderPostRequestCon_c57559bf $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -116,10 +116,10 @@ class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param PrivilegedAccessGroupEligibilityScheduleRequest $body The request body
-     * @param EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EligibilityScheduleRequestsRequestBuilderPostRequestCon_c57559bf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(PrivilegedAccessGroupEligibilityScheduleRequest $body, ?EligibilityScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(PrivilegedAccessGroupEligibilityScheduleRequest $body, ?EligibilityScheduleRequestsRequestBuilderPostRequestCon_c57559bf $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

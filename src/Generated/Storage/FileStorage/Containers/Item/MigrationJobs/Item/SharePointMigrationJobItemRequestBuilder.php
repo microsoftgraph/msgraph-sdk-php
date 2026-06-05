@@ -40,11 +40,11 @@ class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property migrationJobs for storage
-     * @param SharePointMigrationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationJobItemRequestBuilderDeleteRequestCo_24793097|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SharePointMigrationJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SharePointMigrationJobItemRequestBuilderDeleteRequestCo_24793097 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property migrationJobs in storage
      * @param SharePointMigrationJob $body The request body
-     * @param SharePointMigrationJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationJobItemRequestBuilderPatchRequestCon_f7a12a66|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointMigrationJob|null>
      * @throws Exception
     */
-    public function patch(SharePointMigrationJob $body, ?SharePointMigrationJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SharePointMigrationJob $body, ?SharePointMigrationJobItemRequestBuilderPatchRequestCon_f7a12a66 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property migrationJobs for storage
-     * @param SharePointMigrationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationJobItemRequestBuilderDeleteRequestCo_24793097|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SharePointMigrationJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SharePointMigrationJobItemRequestBuilderDeleteRequestCo_24793097 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property migrationJobs in storage
      * @param SharePointMigrationJob $body The request body
-     * @param SharePointMigrationJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointMigrationJobItemRequestBuilderPatchRequestCon_f7a12a66|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SharePointMigrationJob $body, ?SharePointMigrationJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SharePointMigrationJob $body, ?SharePointMigrationJobItemRequestBuilderPatchRequestCon_f7a12a66 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
