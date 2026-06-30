@@ -32,11 +32,11 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
-     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_49791ff7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_49791ff7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
 
     /**
      * Collection of imported Windows autopilot devices.
-     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_e74bc228|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentity|null>
      * @throws Exception
     */
-    public function get(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_e74bc228 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
-     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_07c60258|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ImportedWindowsAutopilotDeviceIdentity|null>
      * @throws Exception
     */
-    public function patch(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_07c60258 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
-     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_49791ff7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_49791ff7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
 
     /**
      * Collection of imported Windows autopilot devices.
-     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_e74bc228|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_e74bc228 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
-     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_07c60258|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ImportedWindowsAutopilotDeviceIdentity $body, ?ImportedWindowsAutopilotDeviceIdentityItemRequestBuilde_07c60258 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -63,11 +63,11 @@ class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Instances for active role assignments.
-     * @param RoleAssignmentScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleInstancesRequestBuilderGetRequest_a4d177e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentScheduleInstanceCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?RoleAssignmentScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?RoleAssignmentScheduleInstancesRequestBuilderGetRequest_a4d177e0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param UnifiedRoleAssignmentScheduleInstance $body The request body
-     * @param RoleAssignmentScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleInstancesRequestBuilderPostReques_7d3977a0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentScheduleInstance|null>
      * @throws Exception
     */
-    public function post(UnifiedRoleAssignmentScheduleInstance $body, ?RoleAssignmentScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(UnifiedRoleAssignmentScheduleInstance $body, ?RoleAssignmentScheduleInstancesRequestBuilderPostReques_7d3977a0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Instances for active role assignments.
-     * @param RoleAssignmentScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleInstancesRequestBuilderGetRequest_a4d177e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RoleAssignmentScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RoleAssignmentScheduleInstancesRequestBuilderGetRequest_a4d177e0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -114,10 +114,10 @@ class RoleAssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
      * @param UnifiedRoleAssignmentScheduleInstance $body The request body
-     * @param RoleAssignmentScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleInstancesRequestBuilderPostReques_7d3977a0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UnifiedRoleAssignmentScheduleInstance $body, ?RoleAssignmentScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UnifiedRoleAssignmentScheduleInstance $body, ?RoleAssignmentScheduleInstancesRequestBuilderPostReques_7d3977a0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

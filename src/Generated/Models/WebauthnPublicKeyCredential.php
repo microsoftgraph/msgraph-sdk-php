@@ -56,7 +56,7 @@ class WebauthnPublicKeyCredential implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the clientExtensionResults property value. The clientExtensionResults property
+     * Gets the clientExtensionResults property value. The output of the WebAuthn extension processing.
      * @return WebauthnAuthenticationExtensionsClientOutputs|null
     */
     public function getClientExtensionResults(): ?WebauthnAuthenticationExtensionsClientOutputs {
@@ -82,7 +82,7 @@ class WebauthnPublicKeyCredential implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The credential ID created by the WebAuthn Authenticator. This value is Base64URL-encoded without padding.
      * @return string|null
     */
     public function getId(): ?string {
@@ -106,7 +106,7 @@ class WebauthnPublicKeyCredential implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the response property value. The response property
+     * Gets the response property value. The response from the WebAuthn Authenticator after generating an attestation.
      * @return WebauthnAuthenticatorAttestationResponse|null
     */
     public function getResponse(): ?WebauthnAuthenticatorAttestationResponse {
@@ -146,7 +146,7 @@ class WebauthnPublicKeyCredential implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the clientExtensionResults property value. The clientExtensionResults property
+     * Sets the clientExtensionResults property value. The output of the WebAuthn extension processing.
      * @param WebauthnAuthenticationExtensionsClientOutputs|null $value Value to set for the clientExtensionResults property.
     */
     public function setClientExtensionResults(?WebauthnAuthenticationExtensionsClientOutputs $value): void {
@@ -154,7 +154,7 @@ class WebauthnPublicKeyCredential implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The credential ID created by the WebAuthn Authenticator. This value is Base64URL-encoded without padding.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -170,7 +170,7 @@ class WebauthnPublicKeyCredential implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the response property value. The response property
+     * Sets the response property value. The response from the WebAuthn Authenticator after generating an attestation.
      * @param WebauthnAuthenticatorAttestationResponse|null $value Value to set for the response property.
     */
     public function setResponse(?WebauthnAuthenticatorAttestationResponse $value): void {

@@ -63,11 +63,11 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Instances for role eligibility requests.
-     * @param RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleEligibilityScheduleInstancesRequestBuilderGetReques_4ad01c2c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleInstanceCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?RoleEligibilityScheduleInstancesRequestBuilderGetReques_4ad01c2c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
      * @param UnifiedRoleEligibilityScheduleInstance $body The request body
-     * @param RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleEligibilityScheduleInstancesRequestBuilderPostReque_0b05f439|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleInstance|null>
      * @throws Exception
     */
-    public function post(UnifiedRoleEligibilityScheduleInstance $body, ?RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(UnifiedRoleEligibilityScheduleInstance $body, ?RoleEligibilityScheduleInstancesRequestBuilderPostReque_0b05f439 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Instances for role eligibility requests.
-     * @param RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleEligibilityScheduleInstancesRequestBuilderGetReques_4ad01c2c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RoleEligibilityScheduleInstancesRequestBuilderGetReques_4ad01c2c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -114,10 +114,10 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
      * @param UnifiedRoleEligibilityScheduleInstance $body The request body
-     * @param RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleEligibilityScheduleInstancesRequestBuilderPostReque_0b05f439|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UnifiedRoleEligibilityScheduleInstance $body, ?RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UnifiedRoleEligibilityScheduleInstance $body, ?RoleEligibilityScheduleInstancesRequestBuilderPostReque_0b05f439 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

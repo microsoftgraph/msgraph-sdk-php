@@ -63,11 +63,11 @@ class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for Groups, providing the identifier of the assignment schedule request.
-     * @param AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentApprovalsRequestBuilderGetReques_aed2b56b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ApprovalCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AccessPackageAssignmentApprovalsRequestBuilderGetReques_aed2b56b $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
      * @param Approval $body The request body
-     * @param AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentApprovalsRequestBuilderPostReque_1600f47e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Approval|null>
      * @throws Exception
     */
-    public function post(Approval $body, ?AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(Approval $body, ?AccessPackageAssignmentApprovalsRequestBuilderPostReque_1600f47e $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of an approval object. This API request is made by an approver in the following scenarios: In Microsoft Entra entitlement management, providing the identifier of the access package assignment request.In PIM for Groups, providing the identifier of the assignment schedule request.
-     * @param AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentApprovalsRequestBuilderGetReques_aed2b56b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackageAssignmentApprovalsRequestBuilderGetReques_aed2b56b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -114,10 +114,10 @@ class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
      * @param Approval $body The request body
-     * @param AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentApprovalsRequestBuilderPostReque_1600f47e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(Approval $body, ?AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(Approval $body, ?AccessPackageAssignmentApprovalsRequestBuilderPostReque_1600f47e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

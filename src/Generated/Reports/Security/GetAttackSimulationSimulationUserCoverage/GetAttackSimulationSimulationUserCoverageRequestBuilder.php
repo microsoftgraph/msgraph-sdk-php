@@ -31,12 +31,12 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilder extends BaseReques
 
     /**
      * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
-     * @param GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetAttackSimulationSimulationUserCoverageRequestBuilder_189dacfb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAttackSimulationSimulationUserCoverageGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/securityreportsroot-getattacksimulationsimulationusercoverage?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetAttackSimulationSimulationUserCoverageRequestBuilder_189dacfb $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class GetAttackSimulationSimulationUserCoverageRequestBuilder extends BaseReques
 
     /**
      * List training coverage for each tenant user in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
-     * @param GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetAttackSimulationSimulationUserCoverageRequestBuilder_189dacfb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetAttackSimulationSimulationUserCoverageRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetAttackSimulationSimulationUserCoverageRequestBuilder_189dacfb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

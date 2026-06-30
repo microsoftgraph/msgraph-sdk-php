@@ -35,12 +35,12 @@ class GetOneDriveActivityUserCountsWithPeriodRequestBuilder extends BaseRequestB
 
     /**
      * Get the trend in the number of active OneDrive users.
-     * @param GetOneDriveActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOneDriveActivityUserCountsWithPeriodRequestBuilderGe_644fe121|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveactivityusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetOneDriveActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetOneDriveActivityUserCountsWithPeriodRequestBuilderGe_644fe121 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetOneDriveActivityUserCountsWithPeriodRequestBuilder extends BaseRequestB
 
     /**
      * Get the trend in the number of active OneDrive users.
-     * @param GetOneDriveActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOneDriveActivityUserCountsWithPeriodRequestBuilderGe_644fe121|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetOneDriveActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetOneDriveActivityUserCountsWithPeriodRequestBuilderGe_644fe121 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

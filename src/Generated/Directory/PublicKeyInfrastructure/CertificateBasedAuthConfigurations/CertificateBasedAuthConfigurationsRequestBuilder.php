@@ -53,12 +53,12 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get a list of the certificateBasedAuthPki objects and their properties.
-     * @param CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationsRequestBuilderGetRequ_b106e427|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPkiCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-list-certificatebasedauthconfigurations?view=graph-rest-1.0 Find more info here
     */
-    public function get(?CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CertificateBasedAuthConfigurationsRequestBuilderGetRequ_b106e427 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
     /**
      * Create a new certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
-     * @param CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationsRequestBuilderPostReq_92ff299d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPki|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-post-certificatebasedauthconfigurations?view=graph-rest-1.0 Find more info here
     */
-    public function post(CertificateBasedAuthPki $body, ?CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(CertificateBasedAuthPki $body, ?CertificateBasedAuthConfigurationsRequestBuilderPostReq_92ff299d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get a list of the certificateBasedAuthPki objects and their properties.
-     * @param CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationsRequestBuilderGetRequ_b106e427|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CertificateBasedAuthConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CertificateBasedAuthConfigurationsRequestBuilderGetRequ_b106e427 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class CertificateBasedAuthConfigurationsRequestBuilder extends BaseRequestBuilde
     /**
      * Create a new certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
-     * @param CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationsRequestBuilderPostReq_92ff299d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(CertificateBasedAuthPki $body, ?CertificateBasedAuthConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(CertificateBasedAuthPki $body, ?CertificateBasedAuthConfigurationsRequestBuilderPostReq_92ff299d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

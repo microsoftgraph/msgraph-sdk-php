@@ -32,11 +32,11 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property secureScoreControlProfiles for security
-     * @param SecureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SecureScoreControlProfileItemRequestBuilderDeleteReques_95e1ceba|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SecureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SecureScoreControlProfileItemRequestBuilderDeleteReques_95e1ceba $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
-     * @param SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SecureScoreControlProfileItemRequestBuilderGetRequestCo_f46f23bc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecureScoreControlProfile|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/securescorecontrolprofile-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SecureScoreControlProfileItemRequestBuilderGetRequestCo_f46f23bc $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as tenantNote.
      * @param SecureScoreControlProfile $body The request body
-     * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SecureScoreControlProfileItemRequestBuilderPatchRequest_d895d00d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecureScoreControlProfile|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/securescorecontrolprofile-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(SecureScoreControlProfile $body, ?SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SecureScoreControlProfile $body, ?SecureScoreControlProfileItemRequestBuilderPatchRequest_d895d00d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property secureScoreControlProfiles for security
-     * @param SecureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SecureScoreControlProfileItemRequestBuilderDeleteReques_95e1ceba|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SecureScoreControlProfileItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SecureScoreControlProfileItemRequestBuilderDeleteReques_95e1ceba $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of an securescorecontrolprofile object.
-     * @param SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SecureScoreControlProfileItemRequestBuilderGetRequestCo_f46f23bc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SecureScoreControlProfileItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SecureScoreControlProfileItemRequestBuilderGetRequestCo_f46f23bc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update an editable secureScoreControlProfile object within any integrated solution to change various properties, such as tenantNote.
      * @param SecureScoreControlProfile $body The request body
-     * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SecureScoreControlProfileItemRequestBuilderPatchRequest_d895d00d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SecureScoreControlProfile $body, ?SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SecureScoreControlProfile $body, ?SecureScoreControlProfileItemRequestBuilderPatchRequest_d895d00d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

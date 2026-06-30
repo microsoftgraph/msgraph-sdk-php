@@ -31,11 +31,11 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequestBuil
 
     /**
      * Invoke function getUserIdsWithFlaggedAppRegistration
-     * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRe_173aa30f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetUserIdsWithFlaggedAppRegistrationGetResponse|null>
      * @throws Exception
     */
-    public function get(?GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRe_173aa30f $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -45,10 +45,10 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder extends BaseRequestBuil
 
     /**
      * Invoke function getUserIdsWithFlaggedAppRegistration
-     * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRe_173aa30f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetUserIdsWithFlaggedAppRegistrationRequestBuilderGetRe_173aa30f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

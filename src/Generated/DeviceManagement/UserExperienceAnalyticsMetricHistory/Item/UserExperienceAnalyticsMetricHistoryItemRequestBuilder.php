@@ -32,11 +32,11 @@ class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property userExperienceAnalyticsMetricHistory for deviceManagement
-     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderD_9460cc89|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderD_9460cc89 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends BaseRequest
 
     /**
      * User experience analytics metric history
-     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderG_6162dd6e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsMetricHistory|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderG_6162dd6e $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property userExperienceAnalyticsMetricHistory in deviceManagement
      * @param UserExperienceAnalyticsMetricHistory $body The request body
-     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderP_0ff3e5c0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsMetricHistory|null>
      * @throws Exception
     */
-    public function patch(UserExperienceAnalyticsMetricHistory $body, ?UserExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserExperienceAnalyticsMetricHistory $body, ?UserExperienceAnalyticsMetricHistoryItemRequestBuilderP_0ff3e5c0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property userExperienceAnalyticsMetricHistory for deviceManagement
-     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderD_9460cc89|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderD_9460cc89 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends BaseRequest
 
     /**
      * User experience analytics metric history
-     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderG_6162dd6e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsMetricHistoryItemRequestBuilderG_6162dd6e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class UserExperienceAnalyticsMetricHistoryItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property userExperienceAnalyticsMetricHistory in deviceManagement
      * @param UserExperienceAnalyticsMetricHistory $body The request body
-     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsMetricHistoryItemRequestBuilderP_0ff3e5c0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserExperienceAnalyticsMetricHistory $body, ?UserExperienceAnalyticsMetricHistoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserExperienceAnalyticsMetricHistory $body, ?UserExperienceAnalyticsMetricHistoryItemRequestBuilderP_0ff3e5c0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

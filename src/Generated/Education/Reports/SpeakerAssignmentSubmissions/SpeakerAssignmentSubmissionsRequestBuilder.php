@@ -53,12 +53,12 @@ class SpeakerAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of speaker assignments that were submitted by a student.
-     * @param SpeakerAssignmentSubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionsRequestBuilderGetRequestCon_b5c00cb5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SpeakerAssignmentSubmissionCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportsroot-list-speakerassignmentsubmissions?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SpeakerAssignmentSubmissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SpeakerAssignmentSubmissionsRequestBuilderGetRequestCon_b5c00cb5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class SpeakerAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to speakerAssignmentSubmissions for education
      * @param SpeakerAssignmentSubmission $body The request body
-     * @param SpeakerAssignmentSubmissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionsRequestBuilderPostRequestCo_4b8025c2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SpeakerAssignmentSubmission|null>
      * @throws Exception
     */
-    public function post(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionsRequestBuilderPostRequestCo_4b8025c2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class SpeakerAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of speaker assignments that were submitted by a student.
-     * @param SpeakerAssignmentSubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionsRequestBuilderGetRequestCon_b5c00cb5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SpeakerAssignmentSubmissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SpeakerAssignmentSubmissionsRequestBuilderGetRequestCon_b5c00cb5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class SpeakerAssignmentSubmissionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to speakerAssignmentSubmissions for education
      * @param SpeakerAssignmentSubmission $body The request body
-     * @param SpeakerAssignmentSubmissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SpeakerAssignmentSubmissionsRequestBuilderPostRequestCo_4b8025c2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SpeakerAssignmentSubmission $body, ?SpeakerAssignmentSubmissionsRequestBuilderPostRequestCo_4b8025c2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

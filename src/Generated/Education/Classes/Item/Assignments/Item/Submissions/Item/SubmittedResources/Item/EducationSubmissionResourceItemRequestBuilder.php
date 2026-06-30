@@ -40,11 +40,11 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property submittedResources for education
-     * @param EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationSubmissionResourceItemRequestBuilderDeleteRequ_425b7a15|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EducationSubmissionResourceItemRequestBuilderDeleteRequ_425b7a15 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,12 +54,12 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve a submitted resource. Only teachers, students, and applications with application permissions can perform this operation. Resources are available to a teacher or an application with application permissions after a student submits it, and are available to the student after the teacher returns the submission. Teachers can leave notes in some resources.
-     * @param EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationSubmissionResourceItemRequestBuilderGetRequest_9a05f9a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSubmissionResource|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationsubmittedsubmissionresource-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EducationSubmissionResourceItemRequestBuilderGetRequest_9a05f9a7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property submittedResources in education
      * @param EducationSubmissionResource $body The request body
-     * @param EducationSubmissionResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationSubmissionResourceItemRequestBuilderPatchReque_6dd6ea50|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationSubmissionResource|null>
      * @throws Exception
     */
-    public function patch(EducationSubmissionResource $body, ?EducationSubmissionResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EducationSubmissionResource $body, ?EducationSubmissionResourceItemRequestBuilderPatchReque_6dd6ea50 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property submittedResources for education
-     * @param EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationSubmissionResourceItemRequestBuilderDeleteRequ_425b7a15|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EducationSubmissionResourceItemRequestBuilderDeleteRequ_425b7a15 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -102,10 +102,10 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve a submitted resource. Only teachers, students, and applications with application permissions can perform this operation. Resources are available to a teacher or an application with application permissions after a student submits it, and are available to the student after the teacher returns the submission. Teachers can leave notes in some resources.
-     * @param EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationSubmissionResourceItemRequestBuilderGetRequest_9a05f9a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EducationSubmissionResourceItemRequestBuilderGetRequest_9a05f9a7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property submittedResources in education
      * @param EducationSubmissionResource $body The request body
-     * @param EducationSubmissionResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationSubmissionResourceItemRequestBuilderPatchReque_6dd6ea50|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EducationSubmissionResource $body, ?EducationSubmissionResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EducationSubmissionResource $body, ?EducationSubmissionResourceItemRequestBuilderPatchReque_6dd6ea50 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

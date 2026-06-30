@@ -23,6 +23,7 @@ class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setShouldSetSpoSiteReadOnlyForMembers(false);
     }
 
     /**

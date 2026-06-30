@@ -48,12 +48,12 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a certificateBasedAuthPki object.
-     * @param CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthPkiItemRequestBuilderDeleteRequestC_c2d9813e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/publickeyinfrastructureroot-delete-certificatebasedauthconfigurations?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CertificateBasedAuthPkiItemRequestBuilderDeleteRequestC_c2d9813e $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
-     * @param CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthPkiItemRequestBuilderPatchRequestCo_228ca685|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthPki|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(CertificateBasedAuthPki $body, ?CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CertificateBasedAuthPki $body, ?CertificateBasedAuthPkiItemRequestBuilderPatchRequestCo_228ca685 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a certificateBasedAuthPki object.
-     * @param CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthPkiItemRequestBuilderDeleteRequestC_c2d9813e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CertificateBasedAuthPkiItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CertificateBasedAuthPkiItemRequestBuilderDeleteRequestC_c2d9813e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class CertificateBasedAuthPkiItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a certificateBasedAuthPki object.
      * @param CertificateBasedAuthPki $body The request body
-     * @param CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthPkiItemRequestBuilderPatchRequestCo_228ca685|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CertificateBasedAuthPki $body, ?CertificateBasedAuthPkiItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CertificateBasedAuthPki $body, ?CertificateBasedAuthPkiItemRequestBuilderPatchRequestCo_228ca685 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

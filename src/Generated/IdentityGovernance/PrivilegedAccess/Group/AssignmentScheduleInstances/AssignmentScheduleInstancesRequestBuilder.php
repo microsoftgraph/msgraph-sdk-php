@@ -6,10 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\AssignmentScheduleInstances\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\AssignmentScheduleInstances\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\AssignmentScheduleInstances\Item\PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\AssignmentScheduleInstances\Item\PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupAssignmentScheduleInstance;
-use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse;
+use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_f295a386;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,12 +30,12 @@ class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the assignmentScheduleInstances property of the microsoft.graph.privilegedAccessGroup entity.
      * @param string $privilegedAccessGroupAssignmentScheduleInstanceId The unique identifier of privilegedAccessGroupAssignmentScheduleInstance
-     * @return PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder
+     * @return PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223
     */
-    public function byPrivilegedAccessGroupAssignmentScheduleInstanceId(string $privilegedAccessGroupAssignmentScheduleInstanceId): PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder {
+    public function byPrivilegedAccessGroupAssignmentScheduleInstanceId(string $privilegedAccessGroupAssignmentScheduleInstanceId): PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223 {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['privilegedAccessGroupAssignmentScheduleInstance%2Did'] = $privilegedAccessGroupAssignmentScheduleInstanceId;
-        return new PrivilegedAccessGroupAssignmentScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PrivilegedAccessGroupAssignmentScheduleInstanceItemRequ_595d3223($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -64,7 +64,7 @@ class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
      * @param AssignmentScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse|null>
+     * @return Promise<PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_f295a386|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentscheduleinstances?view=graph-rest-1.0 Find more info here
     */
@@ -73,17 +73,17 @@ class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [PrivilegedAccessGroupAssignmentScheduleInstanceCollecti_f295a386::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create new navigation property to assignmentScheduleInstances for identityGovernance
      * @param PrivilegedAccessGroupAssignmentScheduleInstance $body The request body
-     * @param AssignmentScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AssignmentScheduleInstancesRequestBuilderPostRequestCon_5a23a96b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleInstance|null>
      * @throws Exception
     */
-    public function post(PrivilegedAccessGroupAssignmentScheduleInstance $body, ?AssignmentScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(PrivilegedAccessGroupAssignmentScheduleInstance $body, ?AssignmentScheduleInstancesRequestBuilderPostRequestCon_5a23a96b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -115,10 +115,10 @@ class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to assignmentScheduleInstances for identityGovernance
      * @param PrivilegedAccessGroupAssignmentScheduleInstance $body The request body
-     * @param AssignmentScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AssignmentScheduleInstancesRequestBuilderPostRequestCon_5a23a96b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(PrivilegedAccessGroupAssignmentScheduleInstance $body, ?AssignmentScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(PrivilegedAccessGroupAssignmentScheduleInstance $body, ?AssignmentScheduleInstancesRequestBuilderPostRequestCon_5a23a96b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

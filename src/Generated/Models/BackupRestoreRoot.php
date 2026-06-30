@@ -82,6 +82,18 @@ class BackupRestoreRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the emailNotificationsSetting property value. The email notification settings in the tenant.
+     * @return EmailNotificationsSetting|null
+    */
+    public function getEmailNotificationsSetting(): ?EmailNotificationsSetting {
+        $val = $this->getBackingStore()->get('emailNotificationsSetting');
+        if (is_null($val) || $val instanceof EmailNotificationsSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailNotificationsSetting'");
+    }
+
+    /**
      * Gets the exchangeProtectionPolicies property value. The list of Exchange protection policies in the tenant.
      * @return array<ExchangeProtectionPolicy>|null
     */
@@ -120,6 +132,7 @@ class BackupRestoreRoot extends Entity implements Parsable
             'driveInclusionRules' => fn(ParseNode $n) => $o->setDriveInclusionRules($n->getCollectionOfObjectValues([DriveProtectionRule::class, 'createFromDiscriminatorValue'])),
             'driveProtectionUnits' => fn(ParseNode $n) => $o->setDriveProtectionUnits($n->getCollectionOfObjectValues([DriveProtectionUnit::class, 'createFromDiscriminatorValue'])),
             'driveProtectionUnitsBulkAdditionJobs' => fn(ParseNode $n) => $o->setDriveProtectionUnitsBulkAdditionJobs($n->getCollectionOfObjectValues([DriveProtectionUnitsBulkAdditionJob::class, 'createFromDiscriminatorValue'])),
+            'emailNotificationsSetting' => fn(ParseNode $n) => $o->setEmailNotificationsSetting($n->getObjectValue([EmailNotificationsSetting::class, 'createFromDiscriminatorValue'])),
             'exchangeProtectionPolicies' => fn(ParseNode $n) => $o->setExchangeProtectionPolicies($n->getCollectionOfObjectValues([ExchangeProtectionPolicy::class, 'createFromDiscriminatorValue'])),
             'exchangeRestoreSessions' => fn(ParseNode $n) => $o->setExchangeRestoreSessions($n->getCollectionOfObjectValues([ExchangeRestoreSession::class, 'createFromDiscriminatorValue'])),
             'mailboxInclusionRules' => fn(ParseNode $n) => $o->setMailboxInclusionRules($n->getCollectionOfObjectValues([MailboxProtectionRule::class, 'createFromDiscriminatorValue'])),
@@ -403,6 +416,7 @@ class BackupRestoreRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('driveInclusionRules', $this->getDriveInclusionRules());
         $writer->writeCollectionOfObjectValues('driveProtectionUnits', $this->getDriveProtectionUnits());
         $writer->writeCollectionOfObjectValues('driveProtectionUnitsBulkAdditionJobs', $this->getDriveProtectionUnitsBulkAdditionJobs());
+        $writer->writeObjectValue('emailNotificationsSetting', $this->getEmailNotificationsSetting());
         $writer->writeCollectionOfObjectValues('exchangeProtectionPolicies', $this->getExchangeProtectionPolicies());
         $writer->writeCollectionOfObjectValues('exchangeRestoreSessions', $this->getExchangeRestoreSessions());
         $writer->writeCollectionOfObjectValues('mailboxInclusionRules', $this->getMailboxInclusionRules());
@@ -455,6 +469,14 @@ class BackupRestoreRoot extends Entity implements Parsable
     */
     public function setDriveProtectionUnitsBulkAdditionJobs(?array $value): void {
         $this->getBackingStore()->set('driveProtectionUnitsBulkAdditionJobs', $value);
+    }
+
+    /**
+     * Sets the emailNotificationsSetting property value. The email notification settings in the tenant.
+     * @param EmailNotificationsSetting|null $value Value to set for the emailNotificationsSetting property.
+    */
+    public function setEmailNotificationsSetting(?EmailNotificationsSetting $value): void {
+        $this->getBackingStore()->set('emailNotificationsSetting', $value);
     }
 
     /**

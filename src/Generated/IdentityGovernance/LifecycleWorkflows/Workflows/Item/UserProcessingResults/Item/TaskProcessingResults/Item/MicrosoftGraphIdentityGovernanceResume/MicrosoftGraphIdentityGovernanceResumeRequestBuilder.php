@@ -32,12 +32,12 @@ class MicrosoftGraphIdentityGovernanceResumeRequestBuilder extends BaseRequestBu
     /**
      * Resume a task processing result that's inProgress. In the default case an Azure Logic Apps system-assigned managed identity calls this API. For more information, see: Lifecycle Workflows extensibility approach.
      * @param ResumePostRequestBody $body The request body
-     * @param MicrosoftGraphIdentityGovernanceResumeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphIdentityGovernanceResumeRequestBuilderPos_c3c7310b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitygovernance-taskprocessingresult-resume?view=graph-rest-1.0 Find more info here
     */
-    public function post(ResumePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceResumeRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ResumePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceResumeRequestBuilderPos_c3c7310b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphIdentityGovernanceResumeRequestBuilder extends BaseRequestBu
     /**
      * Resume a task processing result that's inProgress. In the default case an Azure Logic Apps system-assigned managed identity calls this API. For more information, see: Lifecycle Workflows extensibility approach.
      * @param ResumePostRequestBody $body The request body
-     * @param MicrosoftGraphIdentityGovernanceResumeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphIdentityGovernanceResumeRequestBuilderPos_c3c7310b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ResumePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceResumeRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ResumePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceResumeRequestBuilderPos_c3c7310b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

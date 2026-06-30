@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccess\AdditionalAccessRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_de2a04b0\AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_5f00a31b;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackageAssignmentItemRequestBuilder;
@@ -40,10 +40,10 @@ class AssignmentsRequestBuilder extends BaseRequestBuilder
      * Provides operations to call the additionalAccess method.
      * @param string $accessPackageId Usage: accessPackageId='{accessPackageId}'
      * @param string $incompatibleAccessPackageId Usage: incompatibleAccessPackageId='{incompatibleAccessPackageId}'
-     * @return AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
+     * @return AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_5f00a31b
     */
-    public function additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(string $accessPackageId, string $incompatibleAccessPackageId): AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder {
-        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder($this->pathParameters, $this->requestAdapter, $accessPackageId, $incompatibleAccessPackageId);
+    public function additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(string $accessPackageId, string $incompatibleAccessPackageId): AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_5f00a31b {
+        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAcce_5f00a31b($this->pathParameters, $this->requestAdapter, $accessPackageId, $incompatibleAccessPackageId);
     }
 
     /**

@@ -35,7 +35,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
-                case '#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource': return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
+                case '#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource': return new AccessReviewInstanceDecisionItemAccessPackageAssignment_1e65d5a7();
                 case '#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource': return new AccessReviewInstanceDecisionItemAzureRoleResource();
                 case '#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource': return new AccessReviewInstanceDecisionItemServicePrincipalResource();
             }

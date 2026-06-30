@@ -32,12 +32,12 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
-     * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/learningcourseactivity-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a learningCourseActivity object. 
      * @param LearningCourseActivity $body The request body
-     * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningCourseActivity|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/learningcourseactivity-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a learningCourseActivity object using the course activity ID of either an assignment or a self-initiated activity.
-     * @param LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?LearningCourseActivityItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?LearningCourseActivityItemRequestBuilderDeleteRequestCo_c96f16da $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class LearningCourseActivityItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a learningCourseActivity object. 
      * @param LearningCourseActivity $body The request body
-     * @param LearningCourseActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(LearningCourseActivity $body, ?LearningCourseActivityItemRequestBuilderPatchRequestCon_1d9e9f79 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

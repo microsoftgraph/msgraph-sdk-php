@@ -35,12 +35,12 @@ class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a user object.   When deleted, user resources, including their mailbox and license assignments, are moved to a temporary container and if the user is restored within 30 days, these objects are restored to them. The user is also restored to any groups they were a member of. After 30 days and if not restored, the user object is permanently deleted and their assigned resources freed. To manage the deleted user object, see deletedItems.
-     * @param UsersWithUserPrincipalNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UsersWithUserPrincipalNameRequestBuilderDeleteRequestCo_8e1a1403|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/user-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?UsersWithUserPrincipalNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UsersWithUserPrincipalNameRequestBuilderDeleteRequestCo_8e1a1403 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -66,12 +66,12 @@ class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a user object.
      * @param User $body The request body
-     * @param UsersWithUserPrincipalNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UsersWithUserPrincipalNameRequestBuilderPatchRequestCon_7be42db8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/user-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(User $body, ?UsersWithUserPrincipalNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(User $body, ?UsersWithUserPrincipalNameRequestBuilderPatchRequestCon_7be42db8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -81,10 +81,10 @@ class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a user object.   When deleted, user resources, including their mailbox and license assignments, are moved to a temporary container and if the user is restored within 30 days, these objects are restored to them. The user is also restored to any groups they were a member of. After 30 days and if not restored, the user object is permanently deleted and their assigned resources freed. To manage the deleted user object, see deletedItems.
-     * @param UsersWithUserPrincipalNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UsersWithUserPrincipalNameRequestBuilderDeleteRequestCo_8e1a1403|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UsersWithUserPrincipalNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UsersWithUserPrincipalNameRequestBuilderDeleteRequestCo_8e1a1403 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -121,10 +121,10 @@ class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a user object.
      * @param User $body The request body
-     * @param UsersWithUserPrincipalNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UsersWithUserPrincipalNameRequestBuilderPatchRequestCon_7be42db8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(User $body, ?UsersWithUserPrincipalNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(User $body, ?UsersWithUserPrincipalNameRequestBuilderPatchRequestCon_7be42db8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

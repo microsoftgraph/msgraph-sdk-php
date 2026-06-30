@@ -70,10 +70,11 @@ class RetentionLabelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Read the properties and relationships of a retentionLabel object.
      * @param RetentionLabelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RetentionLabel|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/security-retentionlabel-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RetentionLabelItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -118,7 +119,7 @@ class RetentionLabelItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents how customers can manage their data, whether and for how long to retain or delete it.
+     * Read the properties and relationships of a retentionLabel object.
      * @param RetentionLabelItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

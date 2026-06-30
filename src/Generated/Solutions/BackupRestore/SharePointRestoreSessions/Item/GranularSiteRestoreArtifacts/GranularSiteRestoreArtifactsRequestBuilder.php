@@ -53,12 +53,12 @@ class GranularSiteRestoreArtifactsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the granularSiteRestoreArtifact objects and their properties.
-     * @param GranularSiteRestoreArtifactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactsRequestBuilderGetRequestCon_0f504054|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularSiteRestoreArtifactCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sharepointrestoresession-list-granularsiterestoreartifacts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GranularSiteRestoreArtifactsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GranularSiteRestoreArtifactsRequestBuilderGetRequestCon_0f504054 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class GranularSiteRestoreArtifactsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to granularSiteRestoreArtifacts for solutions
      * @param GranularSiteRestoreArtifact $body The request body
-     * @param GranularSiteRestoreArtifactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactsRequestBuilderPostRequestCo_4978d431|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularSiteRestoreArtifact|null>
      * @throws Exception
     */
-    public function post(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactsRequestBuilderPostRequestCo_4978d431 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class GranularSiteRestoreArtifactsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the granularSiteRestoreArtifact objects and their properties.
-     * @param GranularSiteRestoreArtifactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactsRequestBuilderGetRequestCon_0f504054|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GranularSiteRestoreArtifactsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GranularSiteRestoreArtifactsRequestBuilderGetRequestCon_0f504054 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class GranularSiteRestoreArtifactsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to granularSiteRestoreArtifacts for solutions
      * @param GranularSiteRestoreArtifact $body The request body
-     * @param GranularSiteRestoreArtifactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularSiteRestoreArtifactsRequestBuilderPostRequestCo_4978d431|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GranularSiteRestoreArtifact $body, ?GranularSiteRestoreArtifactsRequestBuilderPostRequestCo_4978d431 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

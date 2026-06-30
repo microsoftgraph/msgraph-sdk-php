@@ -32,12 +32,12 @@ class MicrosoftGraphTeamsAdministrationUpdateNumberRequestBuilder extends BaseRe
     /**
      * This method is used to update an existing number with optional attributes. Currently supported attributes are locationId, networkSiteId, and reverseNumberLookupOptions.
      * @param UpdateNumberPostRequestBody $body The request body
-     * @param MicrosoftGraphTeamsAdministrationUpdateNumberRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphTeamsAdministrationUpdateNumberRequestBui_3b23e0f6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/teamsadministration-numberassignment-updatenumber?view=graph-rest-1.0 Find more info here
     */
-    public function post(UpdateNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUpdateNumberRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(UpdateNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUpdateNumberRequestBui_3b23e0f6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphTeamsAdministrationUpdateNumberRequestBuilder extends BaseRe
     /**
      * This method is used to update an existing number with optional attributes. Currently supported attributes are locationId, networkSiteId, and reverseNumberLookupOptions.
      * @param UpdateNumberPostRequestBody $body The request body
-     * @param MicrosoftGraphTeamsAdministrationUpdateNumberRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphTeamsAdministrationUpdateNumberRequestBui_3b23e0f6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UpdateNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUpdateNumberRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UpdateNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUpdateNumberRequestBui_3b23e0f6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

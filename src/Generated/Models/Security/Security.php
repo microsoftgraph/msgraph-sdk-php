@@ -85,6 +85,18 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the collaboration property value. The collaboration property
+     * @return CollaborationRoot|null
+    */
+    public function getCollaboration(): ?CollaborationRoot {
+        $val = $this->getBackingStore()->get('collaboration');
+        if (is_null($val) || $val instanceof CollaborationRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'collaboration'");
+    }
+
+    /**
      * Gets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
      * @return TenantDataSecurityAndGovernance|null
     */
@@ -107,6 +119,7 @@ class Security extends Entity implements Parsable
             'alerts_v2' => fn(ParseNode $n) => $o->setAlertsV2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
+            'collaboration' => fn(ParseNode $n) => $o->setCollaboration($n->getObjectValue([CollaborationRoot::class, 'createFromDiscriminatorValue'])),
             'dataSecurityAndGovernance' => fn(ParseNode $n) => $o->setDataSecurityAndGovernance($n->getObjectValue([TenantDataSecurityAndGovernance::class, 'createFromDiscriminatorValue'])),
             'identities' => fn(ParseNode $n) => $o->setIdentities($n->getObjectValue([IdentityContainer::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
@@ -246,6 +259,7 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlertsV2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
+        $writer->writeObjectValue('collaboration', $this->getCollaboration());
         $writer->writeObjectValue('dataSecurityAndGovernance', $this->getDataSecurityAndGovernance());
         $writer->writeObjectValue('identities', $this->getIdentities());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
@@ -288,6 +302,14 @@ class Security extends Entity implements Parsable
     */
     public function setCases(?CasesRoot $value): void {
         $this->getBackingStore()->set('cases', $value);
+    }
+
+    /**
+     * Sets the collaboration property value. The collaboration property
+     * @param CollaborationRoot|null $value Value to set for the collaboration property.
+    */
+    public function setCollaboration(?CollaborationRoot $value): void {
+        $this->getBackingStore()->set('collaboration', $value);
     }
 
     /**

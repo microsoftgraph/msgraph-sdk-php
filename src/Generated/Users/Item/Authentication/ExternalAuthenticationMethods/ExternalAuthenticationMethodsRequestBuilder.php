@@ -53,11 +53,11 @@ class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the external MFA registered to a user for authentication using an external identity provider.
-     * @param ExternalAuthenticationMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodsRequestBuilderGetRequestCo_5f6e9dfc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalAuthenticationMethodCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?ExternalAuthenticationMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ExternalAuthenticationMethodsRequestBuilderGetRequestCo_5f6e9dfc $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,12 +68,12 @@ class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new externalAuthenticationMethod object. This API doesn't support self-service operations.
      * @param ExternalAuthenticationMethod $body The request body
-     * @param ExternalAuthenticationMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodsRequestBuilderPostRequestC_0befb231|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalAuthenticationMethod|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authentication-post-externalauthenticationmethods?view=graph-rest-1.0 Find more info here
     */
-    public function post(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodsRequestBuilderPostRequestC_0befb231 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the external MFA registered to a user for authentication using an external identity provider.
-     * @param ExternalAuthenticationMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodsRequestBuilderGetRequestCo_5f6e9dfc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ExternalAuthenticationMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ExternalAuthenticationMethodsRequestBuilderGetRequestCo_5f6e9dfc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new externalAuthenticationMethod object. This API doesn't support self-service operations.
      * @param ExternalAuthenticationMethod $body The request body
-     * @param ExternalAuthenticationMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodsRequestBuilderPostRequestC_0befb231|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodsRequestBuilderPostRequestC_0befb231 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

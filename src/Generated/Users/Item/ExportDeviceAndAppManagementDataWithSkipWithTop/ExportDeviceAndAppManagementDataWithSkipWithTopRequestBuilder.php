@@ -37,11 +37,11 @@ class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder extends Base
 
     /**
      * Invoke function exportDeviceAndAppManagementData
-     * @param ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExportDeviceAndAppManagementDataWithSkipWithTopRequestB_241194b5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementData|null>
      * @throws Exception
     */
-    public function get(?ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ExportDeviceAndAppManagementDataWithSkipWithTopRequestB_241194b5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder extends Base
 
     /**
      * Invoke function exportDeviceAndAppManagementData
-     * @param ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExportDeviceAndAppManagementDataWithSkipWithTopRequestB_241194b5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ExportDeviceAndAppManagementDataWithSkipWithTopRequestB_241194b5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

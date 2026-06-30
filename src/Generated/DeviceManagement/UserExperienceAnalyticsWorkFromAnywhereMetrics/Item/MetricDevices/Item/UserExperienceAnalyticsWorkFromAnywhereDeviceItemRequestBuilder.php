@@ -32,11 +32,11 @@ class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder extends Ba
 
     /**
      * Delete navigation property metricDevices for deviceManagement
-     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_03a76cd9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_03a76cd9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder extends Ba
 
     /**
      * The work from anywhere metric devices. Read-only.
-     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_76b6570c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsWorkFromAnywhereDevice|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_76b6570c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder extends Ba
     /**
      * Update the navigation property metricDevices in deviceManagement
      * @param UserExperienceAnalyticsWorkFromAnywhereDevice $body The request body
-     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_e406a4eb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsWorkFromAnywhereDevice|null>
      * @throws Exception
     */
-    public function patch(UserExperienceAnalyticsWorkFromAnywhereDevice $body, ?UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserExperienceAnalyticsWorkFromAnywhereDevice $body, ?UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_e406a4eb $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder extends Ba
 
     /**
      * Delete navigation property metricDevices for deviceManagement
-     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_03a76cd9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_03a76cd9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder extends Ba
 
     /**
      * The work from anywhere metric devices. Read-only.
-     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_76b6570c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_76b6570c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilder extends Ba
     /**
      * Update the navigation property metricDevices in deviceManagement
      * @param UserExperienceAnalyticsWorkFromAnywhereDevice $body The request body
-     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_e406a4eb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserExperienceAnalyticsWorkFromAnywhereDevice $body, ?UserExperienceAnalyticsWorkFromAnywhereDeviceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserExperienceAnalyticsWorkFromAnywhereDevice $body, ?UserExperienceAnalyticsWorkFromAnywhereDeviceItemReques_e406a4eb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
