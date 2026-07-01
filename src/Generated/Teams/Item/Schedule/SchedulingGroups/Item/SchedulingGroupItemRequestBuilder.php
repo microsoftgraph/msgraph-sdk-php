@@ -31,7 +31,7 @@ class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method doesn't remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
      * @param SchedulingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -77,7 +77,7 @@ class SchedulingGroupItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Mark a schedulingGroup as inactive by setting its isActive property.This method does not remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
+     * Mark a schedulingGroup as inactive by setting its isActive property.This method doesn't remove the schedulingGroup from the schedule. Existing shift instances assigned to the scheduling group remain part of the group.
      * @param SchedulingGroupItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

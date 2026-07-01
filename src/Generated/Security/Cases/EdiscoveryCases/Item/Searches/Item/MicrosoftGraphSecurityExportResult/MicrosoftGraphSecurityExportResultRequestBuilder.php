@@ -32,12 +32,12 @@ class MicrosoftGraphSecurityExportResultRequestBuilder extends BaseRequestBuilde
     /**
      * Export results from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param ExportResultPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityExportResultRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityExportResultRequestBuilderPostReq_3550bc11|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-exportresult?view=graph-rest-1.0 Find more info here
     */
-    public function post(ExportResultPostRequestBody $body, ?MicrosoftGraphSecurityExportResultRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ExportResultPostRequestBody $body, ?MicrosoftGraphSecurityExportResultRequestBuilderPostReq_3550bc11 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphSecurityExportResultRequestBuilder extends BaseRequestBuilde
     /**
      * Export results from an estimated ediscoverySearch. For details, see Manage a collection estimate.
      * @param ExportResultPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityExportResultRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityExportResultRequestBuilderPostReq_3550bc11|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ExportResultPostRequestBody $body, ?MicrosoftGraphSecurityExportResultRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ExportResultPostRequestBody $body, ?MicrosoftGraphSecurityExportResultRequestBuilderPostReq_3550bc11 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

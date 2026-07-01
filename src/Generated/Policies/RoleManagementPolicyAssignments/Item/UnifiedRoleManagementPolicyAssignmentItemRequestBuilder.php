@@ -40,11 +40,11 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property roleManagementPolicyAssignments for policies
-     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_8ccb0759|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_8ccb0759 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,12 +54,12 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
 
     /**
      * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
-     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_07248b89|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyAssignment|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/unifiedrolemanagementpolicyassignment-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_07248b89 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property roleManagementPolicyAssignments in policies
      * @param UnifiedRoleManagementPolicyAssignment $body The request body
-     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_ec4782a9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyAssignment|null>
      * @throws Exception
     */
-    public function patch(UnifiedRoleManagementPolicyAssignment $body, ?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UnifiedRoleManagementPolicyAssignment $body, ?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_ec4782a9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property roleManagementPolicyAssignments for policies
-     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_8ccb0759|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_8ccb0759 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -102,10 +102,10 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
 
     /**
      * Get the details of a policy assignment in PIM that's assigned to Microsoft Entra roles or group membership or ownership.
-     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_07248b89|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_07248b89 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property roleManagementPolicyAssignments in policies
      * @param UnifiedRoleManagementPolicyAssignment $body The request body
-     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_ec4782a9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UnifiedRoleManagementPolicyAssignment $body, ?UnifiedRoleManagementPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UnifiedRoleManagementPolicyAssignment $body, ?UnifiedRoleManagementPolicyAssignmentItemRequestBuilder_ec4782a9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

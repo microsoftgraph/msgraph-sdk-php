@@ -32,12 +32,12 @@ class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a conditionalAccessTemplate object.
-     * @param ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConditionalAccessTemplateItemRequestBuilderGetRequestCo_1fc739bd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConditionalAccessTemplate|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ConditionalAccessTemplateItemRequestBuilderGetRequestCo_1fc739bd $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a conditionalAccessTemplate object.
-     * @param ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConditionalAccessTemplateItemRequestBuilderGetRequestCo_1fc739bd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ConditionalAccessTemplateItemRequestBuilderGetRequestCo_1fc739bd $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_be4c23e9\GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_37aeadf4;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_056e0011\GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_f6fef853;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
@@ -39,15 +39,15 @@ class OnlineMeetingsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getAllRecordings method.
     */
-    public function getAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllRecordingsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_37aeadf4 {
+        return new GetAllRecordingsmeetingOrganizerUserIdMeetingOrganizerU_37aeadf4($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAllTranscripts method.
     */
-    public function getAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
-        return new GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllTranscriptsmeetingOrganizerUserIdMeetingOrganizerUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_f6fef853 {
+        return new GetAllTranscriptsmeetingOrganizerUserIdMeetingOrganizer_f6fef853($this->pathParameters, $this->requestAdapter);
     }
     
     /**

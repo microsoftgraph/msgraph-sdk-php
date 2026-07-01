@@ -53,12 +53,12 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
-     * @param AuthenticationEventListenersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenersRequestBuilderGetRequestCon_a9694c26|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventListenerCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationEventListenersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationEventListenersRequestBuilderGetRequestCon_a9694c26 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param AuthenticationEventListener $body The request body
-     * @param AuthenticationEventListenersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenersRequestBuilderPostRequestCo_546f29cc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventListener|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0 Find more info here
     */
-    public function post(AuthenticationEventListener $body, ?AuthenticationEventListenersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(AuthenticationEventListener $body, ?AuthenticationEventListenersRequestBuilderPostRequestCo_546f29cc $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
-     * @param AuthenticationEventListenersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenersRequestBuilderGetRequestCon_a9694c26|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationEventListenersRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationEventListenersRequestBuilderGetRequestCon_a9694c26 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class AuthenticationEventListenersRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
      * @param AuthenticationEventListener $body The request body
-     * @param AuthenticationEventListenersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventListenersRequestBuilderPostRequestCo_546f29cc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AuthenticationEventListener $body, ?AuthenticationEventListenersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AuthenticationEventListener $body, ?AuthenticationEventListenersRequestBuilderPostRequestCo_546f29cc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

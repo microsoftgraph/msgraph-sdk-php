@@ -41,7 +41,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
+     * Gets the createdDateTime property value. Read-only. Timestamp at which the channel was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -345,7 +345,7 @@ class Channel extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.
+     * Sets the createdDateTime property value. Read-only. Timestamp at which the channel was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {

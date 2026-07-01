@@ -32,12 +32,12 @@ class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder extends Ba
     /**
      * Run a workflow object on-demand with a specific scope. You can run any workflow on-demand, including scheduled workflows. Workflows created from the 'Real-time employee termination' template are run on-demand only. When you run a workflow on demand, the tasks are executed regardless of whether the user state matches the scope and trigger execution conditions.
      * @param ActivateWithScopePostRequestBody $body The request body
-     * @param MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphIdentityGovernanceActivateWithScopeReques_64d5d944|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-activatewithscope?view=graph-rest-1.0 Find more info here
     */
-    public function post(ActivateWithScopePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ActivateWithScopePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceActivateWithScopeReques_64d5d944 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder extends Ba
     /**
      * Run a workflow object on-demand with a specific scope. You can run any workflow on-demand, including scheduled workflows. Workflows created from the 'Real-time employee termination' template are run on-demand only. When you run a workflow on demand, the tasks are executed regardless of whether the user state matches the scope and trigger execution conditions.
      * @param ActivateWithScopePostRequestBody $body The request body
-     * @param MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphIdentityGovernanceActivateWithScopeReques_64d5d944|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ActivateWithScopePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ActivateWithScopePostRequestBody $body, ?MicrosoftGraphIdentityGovernanceActivateWithScopeReques_64d5d944 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

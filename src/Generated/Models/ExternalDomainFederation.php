@@ -26,7 +26,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name of the identity source, typically also the domain name. Read only.
+     * Gets the displayName property value. The name of the identity source, typically also the domain name. Read-only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -38,7 +38,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     }
 
     /**
-     * Gets the domainName property value. The domain name. Read only.
+     * Gets the domainName property value. The domain name. Read-only.
      * @return string|null
     */
     public function getDomainName(): ?string {
@@ -63,7 +63,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     }
 
     /**
-     * Gets the issuerUri property value. The issuerURI of the incoming federation. Read only.
+     * Gets the issuerUri property value. The issuerURI of the incoming federation. Read-only.
      * @return string|null
     */
     public function getIssuerUri(): ?string {
@@ -86,7 +86,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The name of the identity source, typically also the domain name. Read only.
+     * Sets the displayName property value. The name of the identity source, typically also the domain name. Read-only.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -94,7 +94,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     }
 
     /**
-     * Sets the domainName property value. The domain name. Read only.
+     * Sets the domainName property value. The domain name. Read-only.
      * @param string|null $value Value to set for the domainName property.
     */
     public function setDomainName(?string $value): void {
@@ -102,7 +102,7 @@ class ExternalDomainFederation extends IdentitySource implements Parsable
     }
 
     /**
-     * Sets the issuerUri property value. The issuerURI of the incoming federation. Read only.
+     * Sets the issuerUri property value. The issuerURI of the incoming federation. Read-only.
      * @param string|null $value Value to set for the issuerUri property.
     */
     public function setIssuerUri(?string $value): void {

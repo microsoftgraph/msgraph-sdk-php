@@ -53,11 +53,11 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     * @param ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ScheduledActionConfigurationsRequestBuilderGetRequestCo_b2c4cc6f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceActionItemCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ScheduledActionConfigurationsRequestBuilderGetRequestCo_b2c4cc6f $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param DeviceComplianceActionItem $body The request body
-     * @param ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ScheduledActionConfigurationsRequestBuilderPostRequestC_5bf6c35e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceActionItem|null>
      * @throws Exception
     */
-    public function post(DeviceComplianceActionItem $body, ?ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DeviceComplianceActionItem $body, ?ScheduledActionConfigurationsRequestBuilderPostRequestC_5bf6c35e $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     * @param ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ScheduledActionConfigurationsRequestBuilderGetRequestCo_b2c4cc6f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ScheduledActionConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ScheduledActionConfigurationsRequestBuilderGetRequestCo_b2c4cc6f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param DeviceComplianceActionItem $body The request body
-     * @param ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ScheduledActionConfigurationsRequestBuilderPostRequestC_5bf6c35e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DeviceComplianceActionItem $body, ?ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DeviceComplianceActionItem $body, ?ScheduledActionConfigurationsRequestBuilderPostRequestC_5bf6c35e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

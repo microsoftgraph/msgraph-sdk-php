@@ -32,12 +32,12 @@ class ValidateAuthenticationConfigurationRequestBuilder extends BaseRequestBuild
 
     /**
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension object, which can represent one of the following derived types:
-     * @param ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationConfigurationValidation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0 Find more info here
     */
-    public function post(?ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(?ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class ValidateAuthenticationConfigurationRequestBuilder extends BaseRequestBuild
 
     /**
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension object, which can represent one of the following derived types:
-     * @param ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

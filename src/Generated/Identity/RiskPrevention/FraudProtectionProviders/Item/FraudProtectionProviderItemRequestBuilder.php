@@ -32,12 +32,12 @@ class FraudProtectionProviderItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a fraudProtectionProvider object.
-     * @param FraudProtectionProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FraudProtectionProviderItemRequestBuilderDeleteRequestC_4fe6c243|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-fraudprotectionproviders?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?FraudProtectionProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?FraudProtectionProviderItemRequestBuilderDeleteRequestC_4fe6c243 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class FraudProtectionProviderItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a fraudProtectionProvider object. The following derived types are currently supported.
      * @param FraudProtectionProvider $body The request body
-     * @param FraudProtectionProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FraudProtectionProviderItemRequestBuilderPatchRequestCo_6073b441|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FraudProtectionProvider|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/fraudprotectionprovider-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(FraudProtectionProvider $body, ?FraudProtectionProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(FraudProtectionProvider $body, ?FraudProtectionProviderItemRequestBuilderPatchRequestCo_6073b441 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class FraudProtectionProviderItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a fraudProtectionProvider object.
-     * @param FraudProtectionProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FraudProtectionProviderItemRequestBuilderDeleteRequestC_4fe6c243|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?FraudProtectionProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?FraudProtectionProviderItemRequestBuilderDeleteRequestC_4fe6c243 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class FraudProtectionProviderItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a fraudProtectionProvider object. The following derived types are currently supported.
      * @param FraudProtectionProvider $body The request body
-     * @param FraudProtectionProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FraudProtectionProviderItemRequestBuilderPatchRequestCo_6073b441|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(FraudProtectionProvider $body, ?FraudProtectionProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(FraudProtectionProvider $body, ?FraudProtectionProviderItemRequestBuilderPatchRequestCo_6073b441 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

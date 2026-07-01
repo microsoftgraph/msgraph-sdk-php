@@ -53,11 +53,11 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get entities from authenticationMethodConfigurations
-     * @param AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodConfigurationsRequestBuilderGetRequ_d01e9a86|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodConfigurationCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationMethodConfigurationsRequestBuilderGetRequ_d01e9a86 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
     /**
      * Add new entity to authenticationMethodConfigurations
      * @param AuthenticationMethodConfiguration $body The request body
-     * @param AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodConfigurationsRequestBuilderPostReq_a49eaffe|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodConfiguration|null>
      * @throws Exception
     */
-    public function post(AuthenticationMethodConfiguration $body, ?AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(AuthenticationMethodConfiguration $body, ?AuthenticationMethodConfigurationsRequestBuilderPostReq_a49eaffe $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get entities from authenticationMethodConfigurations
-     * @param AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodConfigurationsRequestBuilderGetRequ_d01e9a86|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationMethodConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationMethodConfigurationsRequestBuilderGetRequ_d01e9a86 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class AuthenticationMethodConfigurationsRequestBuilder extends BaseRequestBuilde
     /**
      * Add new entity to authenticationMethodConfigurations
      * @param AuthenticationMethodConfiguration $body The request body
-     * @param AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodConfigurationsRequestBuilderPostReq_a49eaffe|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AuthenticationMethodConfiguration $body, ?AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AuthenticationMethodConfiguration $body, ?AuthenticationMethodConfigurationsRequestBuilderPostReq_a49eaffe $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

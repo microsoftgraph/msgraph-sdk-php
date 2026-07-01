@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SensitivityLabel;
 use Microsoft\Graph\Generated\Models\SensitivityLabelCollectionResponse;
-use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormats\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeInheritanceWithLabelIdsWithLocaleWithContentFormats\ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_2b72dc93;
 use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\ComputeRightsAndInheritance\ComputeRightsAndInheritanceRequestBuilder;
 use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\DataSecurityAndGovernance\SensitivityLabels\Item\SensitivityLabelItemRequestBuilder;
@@ -51,10 +51,10 @@ class SensitivityLabelsRequestBuilder extends BaseRequestBuilder
      * @param string $contentFormats Usage: contentFormats={contentFormats}
      * @param string $labelIds Usage: labelIds={labelIds}
      * @param string $locale Usage: locale='{locale}'
-     * @return ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder
+     * @return ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_2b72dc93
     */
-    public function computeInheritanceWithLabelIdsWithLocaleWithContentFormats(string $contentFormats, string $labelIds, string $locale): ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder {
-        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder($this->pathParameters, $this->requestAdapter, $contentFormats, $labelIds, $locale);
+    public function computeInheritanceWithLabelIdsWithLocaleWithContentFormats(string $contentFormats, string $labelIds, string $locale): ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_2b72dc93 {
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_2b72dc93($this->pathParameters, $this->requestAdapter, $contentFormats, $labelIds, $locale);
     }
 
     /**

@@ -35,12 +35,12 @@ class GetSharePointActivityPagesWithPeriodRequestBuilder extends BaseRequestBuil
 
     /**
      * Get the number of unique pages visited by users.
-     * @param GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityPagesWithPeriodRequestBuilderGetRe_a88320ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointactivitypages?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetSharePointActivityPagesWithPeriodRequestBuilderGetRe_a88320ce $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetSharePointActivityPagesWithPeriodRequestBuilder extends BaseRequestBuil
 
     /**
      * Get the number of unique pages visited by users.
-     * @param GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityPagesWithPeriodRequestBuilderGetRe_a88320ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointActivityPagesWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointActivityPagesWithPeriodRequestBuilderGetRe_a88320ce $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

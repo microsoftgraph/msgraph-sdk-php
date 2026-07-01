@@ -32,12 +32,12 @@ class AuthenticationConditionApplicationAppItemRequestBuilder extends BaseReques
 
     /**
      * Remove or unlink an application from an authenticationEventsFlow object. This disables the customized authentication experience defined for the application.
-     * @param AuthenticationConditionApplicationAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationConditionApplicationAppItemRequestBuilder_68754499|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationconditionapplication-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?AuthenticationConditionApplicationAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationConditionApplicationAppItemRequestBuilder_68754499 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class AuthenticationConditionApplicationAppItemRequestBuilder extends BaseReques
 
     /**
      * Get includeApplications from identity
-     * @param AuthenticationConditionApplicationAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationConditionApplicationAppItemRequestBuilder_73d1b507|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationConditionApplication|null>
      * @throws Exception
     */
-    public function get(?AuthenticationConditionApplicationAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationConditionApplicationAppItemRequestBuilder_73d1b507 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class AuthenticationConditionApplicationAppItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property includeApplications in identity
      * @param AuthenticationConditionApplication $body The request body
-     * @param AuthenticationConditionApplicationAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationConditionApplicationAppItemRequestBuilder_a9e6a187|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationConditionApplication|null>
      * @throws Exception
     */
-    public function patch(AuthenticationConditionApplication $body, ?AuthenticationConditionApplicationAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AuthenticationConditionApplication $body, ?AuthenticationConditionApplicationAppItemRequestBuilder_a9e6a187 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class AuthenticationConditionApplicationAppItemRequestBuilder extends BaseReques
 
     /**
      * Remove or unlink an application from an authenticationEventsFlow object. This disables the customized authentication experience defined for the application.
-     * @param AuthenticationConditionApplicationAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationConditionApplicationAppItemRequestBuilder_68754499|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationConditionApplicationAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationConditionApplicationAppItemRequestBuilder_68754499 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class AuthenticationConditionApplicationAppItemRequestBuilder extends BaseReques
 
     /**
      * Get includeApplications from identity
-     * @param AuthenticationConditionApplicationAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationConditionApplicationAppItemRequestBuilder_73d1b507|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationConditionApplicationAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationConditionApplicationAppItemRequestBuilder_73d1b507 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class AuthenticationConditionApplicationAppItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property includeApplications in identity
      * @param AuthenticationConditionApplication $body The request body
-     * @param AuthenticationConditionApplicationAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationConditionApplicationAppItemRequestBuilder_a9e6a187|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationConditionApplication $body, ?AuthenticationConditionApplicationAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationConditionApplication $body, ?AuthenticationConditionApplicationAppItemRequestBuilder_a9e6a187 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,12 +32,12 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
 
     /**
      * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
-     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderD_b48129c2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualeventregistrationquestionbase-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?VirtualEventRegistrationQuestionBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?VirtualEventRegistrationQuestionBaseItemRequestBuilderD_b48129c2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
 
     /**
      * Registration questions.
-     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderG_3a17e904|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistrationQuestionBase|null>
      * @throws Exception
     */
-    public function get(?VirtualEventRegistrationQuestionBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?VirtualEventRegistrationQuestionBaseItemRequestBuilderG_3a17e904 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property questions in solutions
      * @param VirtualEventRegistrationQuestionBase $body The request body
-     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderP_a29fcbb1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistrationQuestionBase|null>
      * @throws Exception
     */
-    public function patch(VirtualEventRegistrationQuestionBase $body, ?VirtualEventRegistrationQuestionBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(VirtualEventRegistrationQuestionBase $body, ?VirtualEventRegistrationQuestionBaseItemRequestBuilderP_a29fcbb1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
 
     /**
      * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
-     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderD_b48129c2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?VirtualEventRegistrationQuestionBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?VirtualEventRegistrationQuestionBaseItemRequestBuilderD_b48129c2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
 
     /**
      * Registration questions.
-     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderG_3a17e904|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?VirtualEventRegistrationQuestionBaseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?VirtualEventRegistrationQuestionBaseItemRequestBuilderG_3a17e904 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property questions in solutions
      * @param VirtualEventRegistrationQuestionBase $body The request body
-     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderP_a29fcbb1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(VirtualEventRegistrationQuestionBase $body, ?VirtualEventRegistrationQuestionBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(VirtualEventRegistrationQuestionBase $body, ?VirtualEventRegistrationQuestionBaseItemRequestBuilderP_a29fcbb1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

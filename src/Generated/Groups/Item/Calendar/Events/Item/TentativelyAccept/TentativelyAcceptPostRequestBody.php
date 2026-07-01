@@ -24,6 +24,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setSendResponse(false);
     }
 
     /**

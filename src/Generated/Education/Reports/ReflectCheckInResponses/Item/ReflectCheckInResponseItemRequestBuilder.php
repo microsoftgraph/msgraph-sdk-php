@@ -32,11 +32,11 @@ class ReflectCheckInResponseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property reflectCheckInResponses for education
-     * @param ReflectCheckInResponseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReflectCheckInResponseItemRequestBuilderDeleteRequestCo_c6a88da6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ReflectCheckInResponseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ReflectCheckInResponseItemRequestBuilderDeleteRequestCo_c6a88da6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ReflectCheckInResponseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property reflectCheckInResponses in education
      * @param ReflectCheckInResponse $body The request body
-     * @param ReflectCheckInResponseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReflectCheckInResponseItemRequestBuilderPatchRequestCon_7e7e55a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReflectCheckInResponse|null>
      * @throws Exception
     */
-    public function patch(ReflectCheckInResponse $body, ?ReflectCheckInResponseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ReflectCheckInResponse $body, ?ReflectCheckInResponseItemRequestBuilderPatchRequestCon_7e7e55a8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ReflectCheckInResponseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property reflectCheckInResponses for education
-     * @param ReflectCheckInResponseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReflectCheckInResponseItemRequestBuilderDeleteRequestCo_c6a88da6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ReflectCheckInResponseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ReflectCheckInResponseItemRequestBuilderDeleteRequestCo_c6a88da6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ReflectCheckInResponseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property reflectCheckInResponses in education
      * @param ReflectCheckInResponse $body The request body
-     * @param ReflectCheckInResponseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReflectCheckInResponseItemRequestBuilderPatchRequestCon_7e7e55a8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ReflectCheckInResponse $body, ?ReflectCheckInResponseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ReflectCheckInResponse $body, ?ReflectCheckInResponseItemRequestBuilderPatchRequestCon_7e7e55a8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

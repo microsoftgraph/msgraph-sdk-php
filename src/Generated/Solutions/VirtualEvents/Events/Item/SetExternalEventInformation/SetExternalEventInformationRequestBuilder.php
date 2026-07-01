@@ -32,11 +32,11 @@ class SetExternalEventInformationRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action setExternalEventInformation
      * @param SetExternalEventInformationPostRequestBody $body The request body
-     * @param SetExternalEventInformationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SetExternalEventInformationRequestBuilderPostRequestCon_d49ac9fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(SetExternalEventInformationPostRequestBody $body, ?SetExternalEventInformationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(SetExternalEventInformationPostRequestBody $body, ?SetExternalEventInformationRequestBuilderPostRequestCon_d49ac9fb $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class SetExternalEventInformationRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action setExternalEventInformation
      * @param SetExternalEventInformationPostRequestBody $body The request body
-     * @param SetExternalEventInformationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SetExternalEventInformationRequestBuilderPostRequestCon_d49ac9fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SetExternalEventInformationPostRequestBody $body, ?SetExternalEventInformationRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SetExternalEventInformationPostRequestBody $body, ?SetExternalEventInformationRequestBuilderPostRequestCon_d49ac9fb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -40,12 +40,12 @@ class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Unpin a message from a chat.
-     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/chat-delete-pinnedmessages?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Unpin a message from a chat.
-     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

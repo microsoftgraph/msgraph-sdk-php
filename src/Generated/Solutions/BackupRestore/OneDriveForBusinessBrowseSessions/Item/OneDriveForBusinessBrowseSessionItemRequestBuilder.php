@@ -32,11 +32,11 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property oneDriveForBusinessBrowseSessions for solutions
-     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderDelet_3f385265|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?OneDriveForBusinessBrowseSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?OneDriveForBusinessBrowseSessionItemRequestBuilderDelet_3f385265 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
-     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderGetRe_d3b10beb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessBrowseSession|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onedriveforbusinessbrowsesession-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?OneDriveForBusinessBrowseSessionItemRequestBuilderGetRe_d3b10beb $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property oneDriveForBusinessBrowseSessions in solutions
      * @param OneDriveForBusinessBrowseSession $body The request body
-     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderPatch_bb1d10bc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessBrowseSession|null>
      * @throws Exception
     */
-    public function patch(OneDriveForBusinessBrowseSession $body, ?OneDriveForBusinessBrowseSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(OneDriveForBusinessBrowseSession $body, ?OneDriveForBusinessBrowseSessionItemRequestBuilderPatch_bb1d10bc $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property oneDriveForBusinessBrowseSessions for solutions
-     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderDelet_3f385265|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OneDriveForBusinessBrowseSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OneDriveForBusinessBrowseSessionItemRequestBuilderDelet_3f385265 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Read the properties and relationships of oneDriveForBusinessBrowseSession object.
-     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderGetRe_d3b10beb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OneDriveForBusinessBrowseSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OneDriveForBusinessBrowseSessionItemRequestBuilderGetRe_d3b10beb $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class OneDriveForBusinessBrowseSessionItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property oneDriveForBusinessBrowseSessions in solutions
      * @param OneDriveForBusinessBrowseSession $body The request body
-     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessBrowseSessionItemRequestBuilderPatch_bb1d10bc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OneDriveForBusinessBrowseSession $body, ?OneDriveForBusinessBrowseSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OneDriveForBusinessBrowseSession $body, ?OneDriveForBusinessBrowseSessionItemRequestBuilderPatch_bb1d10bc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

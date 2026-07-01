@@ -72,11 +72,11 @@ class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
-     * @param TargetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppConfigurationItemRequestBuilderDelete_4887b09f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TargetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?TargetedManagedAppConfigurationItemRequestBuilderDelete_4887b09f $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,11 +86,11 @@ class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Targeted managed app configurations.
-     * @param TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppConfigurationItemRequestBuilderGetReq_bcbe9f25|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppConfiguration|null>
      * @throws Exception
     */
-    public function get(?TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?TargetedManagedAppConfigurationItemRequestBuilderGetReq_bcbe9f25 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -101,11 +101,11 @@ class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param TargetedManagedAppConfiguration $body The request body
-     * @param TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppConfigurationItemRequestBuilderPatchR_0fcf7bae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppConfiguration|null>
      * @throws Exception
     */
-    public function patch(TargetedManagedAppConfiguration $body, ?TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(TargetedManagedAppConfiguration $body, ?TargetedManagedAppConfigurationItemRequestBuilderPatchR_0fcf7bae $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -115,10 +115,10 @@ class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property targetedManagedAppConfigurations for deviceAppManagement
-     * @param TargetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppConfigurationItemRequestBuilderDelete_4887b09f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TargetedManagedAppConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TargetedManagedAppConfigurationItemRequestBuilderDelete_4887b09f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -133,10 +133,10 @@ class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Targeted managed app configurations.
-     * @param TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppConfigurationItemRequestBuilderGetReq_bcbe9f25|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?TargetedManagedAppConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?TargetedManagedAppConfigurationItemRequestBuilderGetReq_bcbe9f25 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -155,10 +155,10 @@ class TargetedManagedAppConfigurationItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param TargetedManagedAppConfiguration $body The request body
-     * @param TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppConfigurationItemRequestBuilderPatchR_0fcf7bae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TargetedManagedAppConfiguration $body, ?TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TargetedManagedAppConfiguration $body, ?TargetedManagedAppConfigurationItemRequestBuilderPatchR_0fcf7bae $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

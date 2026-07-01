@@ -48,11 +48,11 @@ class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property phoneMethods for users
-     * @param PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PhoneAuthenticationMethodItemRequestBuilderDeleteReques_6665f772|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?PhoneAuthenticationMethodItemRequestBuilderDeleteReques_6665f772 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The phone numbers registered to a user for authentication.
-     * @param PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PhoneAuthenticationMethodItemRequestBuilderGetRequestCo_cd07a701|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PhoneAuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?PhoneAuthenticationMethodItemRequestBuilderGetRequestCo_cd07a701 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,12 +77,12 @@ class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a user's phone number associated with a phone authentication method object. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system will attempt to register the number for use in that system. Self-service operations aren't supported.
      * @param PhoneAuthenticationMethod $body The request body
-     * @param PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PhoneAuthenticationMethodItemRequestBuilderPatchRequest_e8c28793|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PhoneAuthenticationMethod|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/phoneauthenticationmethod-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(PhoneAuthenticationMethod $body, ?PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(PhoneAuthenticationMethod $body, ?PhoneAuthenticationMethodItemRequestBuilderPatchRequest_e8c28793 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property phoneMethods for users
-     * @param PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PhoneAuthenticationMethodItemRequestBuilderDeleteReques_6665f772|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PhoneAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PhoneAuthenticationMethodItemRequestBuilderDeleteReques_6665f772 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -110,10 +110,10 @@ class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The phone numbers registered to a user for authentication.
-     * @param PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PhoneAuthenticationMethodItemRequestBuilderGetRequestCo_cd07a701|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?PhoneAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?PhoneAuthenticationMethodItemRequestBuilderGetRequestCo_cd07a701 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -132,10 +132,10 @@ class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a user's phone number associated with a phone authentication method object. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system will attempt to register the number for use in that system. Self-service operations aren't supported.
      * @param PhoneAuthenticationMethod $body The request body
-     * @param PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PhoneAuthenticationMethodItemRequestBuilderPatchRequest_e8c28793|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(PhoneAuthenticationMethod $body, ?PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(PhoneAuthenticationMethod $body, ?PhoneAuthenticationMethodItemRequestBuilderPatchRequest_e8c28793 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

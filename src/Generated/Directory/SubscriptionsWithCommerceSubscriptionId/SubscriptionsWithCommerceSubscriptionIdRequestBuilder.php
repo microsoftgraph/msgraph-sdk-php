@@ -35,11 +35,11 @@ class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property subscriptions for directory
-     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderDe_966b33aa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderDe_966b33aa $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,12 +49,12 @@ class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseRequestB
 
     /**
      * Get a specific commercial subscription that an organization acquired.
-     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderGe_ec4a3f11|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CompanySubscription|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/companysubscription-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderGe_ec4a3f11 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -65,11 +65,11 @@ class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property subscriptions in directory
      * @param CompanySubscription $body The request body
-     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderPa_cc663628|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CompanySubscription|null>
      * @throws Exception
     */
-    public function patch(CompanySubscription $body, ?SubscriptionsWithCommerceSubscriptionIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CompanySubscription $body, ?SubscriptionsWithCommerceSubscriptionIdRequestBuilderPa_cc663628 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,10 +79,10 @@ class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property subscriptions for directory
-     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderDe_966b33aa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderDe_966b33aa $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -97,10 +97,10 @@ class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseRequestB
 
     /**
      * Get a specific commercial subscription that an organization acquired.
-     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderGe_ec4a3f11|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SubscriptionsWithCommerceSubscriptionIdRequestBuilderGe_ec4a3f11 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -119,10 +119,10 @@ class SubscriptionsWithCommerceSubscriptionIdRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property subscriptions in directory
      * @param CompanySubscription $body The request body
-     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SubscriptionsWithCommerceSubscriptionIdRequestBuilderPa_cc663628|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CompanySubscription $body, ?SubscriptionsWithCommerceSubscriptionIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CompanySubscription $body, ?SubscriptionsWithCommerceSubscriptionIdRequestBuilderPa_cc663628 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

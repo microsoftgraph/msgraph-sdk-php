@@ -48,12 +48,12 @@ class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a cloudPcProvisioningPolicy object. You can’t delete a policy that’s in use.
-     * @param CloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyItemRequestBuilderDeleteReques_127f8eca|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?CloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CloudPcProvisioningPolicyItemRequestBuilderDeleteReques_127f8eca $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a cloudPcProvisioningPolicy object.
-     * @param CloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyItemRequestBuilderGetRequestCo_d4bdb7e8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcProvisioningPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?CloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CloudPcProvisioningPolicyItemRequestBuilderGetRequestCo_d4bdb7e8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a cloudPcProvisioningPolicy object.
      * @param CloudPcProvisioningPolicy $body The request body
-     * @param CloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyItemRequestBuilderPatchRequest_c000f7e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudPcProvisioningPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(CloudPcProvisioningPolicy $body, ?CloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CloudPcProvisioningPolicy $body, ?CloudPcProvisioningPolicyItemRequestBuilderPatchRequest_c000f7e2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a cloudPcProvisioningPolicy object. You can’t delete a policy that’s in use.
-     * @param CloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyItemRequestBuilderDeleteReques_127f8eca|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CloudPcProvisioningPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CloudPcProvisioningPolicyItemRequestBuilderDeleteReques_127f8eca $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -112,10 +112,10 @@ class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a cloudPcProvisioningPolicy object.
-     * @param CloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyItemRequestBuilderGetRequestCo_d4bdb7e8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CloudPcProvisioningPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CloudPcProvisioningPolicyItemRequestBuilderGetRequestCo_d4bdb7e8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a cloudPcProvisioningPolicy object.
      * @param CloudPcProvisioningPolicy $body The request body
-     * @param CloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CloudPcProvisioningPolicyItemRequestBuilderPatchRequest_c000f7e2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CloudPcProvisioningPolicy $body, ?CloudPcProvisioningPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CloudPcProvisioningPolicy $body, ?CloudPcProvisioningPolicyItemRequestBuilderPatchRequest_c000f7e2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
