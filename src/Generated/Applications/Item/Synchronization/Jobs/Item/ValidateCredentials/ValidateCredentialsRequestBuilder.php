@@ -30,7 +30,7 @@ class ValidateCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Validate that the credentials are valid in the tenant.
+     * Validate that the credentials are valid in the tenant for a synchronizationJob.
      * @param ValidateCredentialsPostRequestBody $body The request body
      * @param ValidateCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -46,7 +46,7 @@ class ValidateCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Validate that the credentials are valid in the tenant.
+     * Validate that the credentials are valid in the tenant for a synchronizationJob.
      * @param ValidateCredentialsPostRequestBody $body The request body
      * @param ValidateCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

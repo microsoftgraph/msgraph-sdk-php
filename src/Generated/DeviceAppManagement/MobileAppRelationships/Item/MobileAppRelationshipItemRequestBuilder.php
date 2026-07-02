@@ -32,11 +32,11 @@ class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mobileAppRelationships for deviceAppManagement
-     * @param MobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppRelationshipItemRequestBuilderDeleteRequestCon_b1176a70|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?MobileAppRelationshipItemRequestBuilderDeleteRequestCon_b1176a70 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mobileAppRelationships for deviceAppManagement
-     * @param MobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppRelationshipItemRequestBuilderDeleteRequestCon_b1176a70|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MobileAppRelationshipItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MobileAppRelationshipItemRequestBuilderDeleteRequestCon_b1176a70 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

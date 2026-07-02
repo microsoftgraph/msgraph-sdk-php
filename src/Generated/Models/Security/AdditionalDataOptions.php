@@ -14,4 +14,5 @@ class AdditionalDataOptions extends Enum {
     public const MESSAGE_CONVERSATION_EXPANSION = "messageConversationExpansion";
     public const LOCATIONS_WITHOUT_HITS = "locationsWithoutHits";
     public const ALL_ITEMS_IN_FOLDER = "allItemsInFolder";
+    public const CLOUD_NATIVE_HTML_CONVERSION = "cloudNativeHtmlConversion";
 }

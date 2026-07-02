@@ -32,11 +32,11 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property customWorkflowExtensions for identityGovernance
-     * @param CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomCalloutExtensionItemRequestBuilderDeleteRequestCo_6c86c983|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CustomCalloutExtensionItemRequestBuilderDeleteRequestCo_6c86c983 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property customWorkflowExtensions in identityGovernance
      * @param CustomCalloutExtension $body The request body
-     * @param CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomCalloutExtensionItemRequestBuilderPatchRequestCon_10c07001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomCalloutExtension|null>
      * @throws Exception
     */
-    public function patch(CustomCalloutExtension $body, ?CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CustomCalloutExtension $body, ?CustomCalloutExtensionItemRequestBuilderPatchRequestCon_10c07001 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property customWorkflowExtensions for identityGovernance
-     * @param CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomCalloutExtensionItemRequestBuilderDeleteRequestCo_6c86c983|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CustomCalloutExtensionItemRequestBuilderDeleteRequestCo_6c86c983 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property customWorkflowExtensions in identityGovernance
      * @param CustomCalloutExtension $body The request body
-     * @param CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomCalloutExtensionItemRequestBuilderPatchRequestCon_10c07001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CustomCalloutExtension $body, ?CustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CustomCalloutExtension $body, ?CustomCalloutExtensionItemRequestBuilderPatchRequestCon_10c07001 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

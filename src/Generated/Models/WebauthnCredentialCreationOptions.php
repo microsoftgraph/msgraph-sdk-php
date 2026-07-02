@@ -57,7 +57,7 @@ class WebauthnCredentialCreationOptions implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the challengeTimeoutDateTime property value. The challengeTimeoutDateTime property
+     * Gets the challengeTimeoutDateTime property value. The date and time when the challenge times out and can no longer be used to create a credential.
      * @return DateTime|null
     */
     public function getChallengeTimeoutDateTime(): ?DateTime {
@@ -94,7 +94,7 @@ class WebauthnCredentialCreationOptions implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the publicKey property value. The publicKey property
+     * Gets the publicKey property value. The WebAuthn public key creation options.
      * @return WebauthnPublicKeyCredentialCreationOptions|null
     */
     public function getPublicKey(): ?WebauthnPublicKeyCredentialCreationOptions {
@@ -133,7 +133,7 @@ class WebauthnCredentialCreationOptions implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the challengeTimeoutDateTime property value. The challengeTimeoutDateTime property
+     * Sets the challengeTimeoutDateTime property value. The date and time when the challenge times out and can no longer be used to create a credential.
      * @param DateTime|null $value Value to set for the challengeTimeoutDateTime property.
     */
     public function setChallengeTimeoutDateTime(?DateTime $value): void {
@@ -149,7 +149,7 @@ class WebauthnCredentialCreationOptions implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the publicKey property value. The publicKey property
+     * Sets the publicKey property value. The WebAuthn public key creation options.
      * @param WebauthnPublicKeyCredentialCreationOptions|null $value Value to set for the publicKey property.
     */
     public function setPublicKey(?WebauthnPublicKeyCredentialCreationOptions $value): void {

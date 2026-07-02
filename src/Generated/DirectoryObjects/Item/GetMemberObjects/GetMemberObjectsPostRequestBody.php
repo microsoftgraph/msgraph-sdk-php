@@ -23,6 +23,7 @@ class GetMemberObjectsPostRequestBody implements AdditionalDataHolder, BackedMod
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setSecurityEnabledOnly(false);
     }
 
     /**

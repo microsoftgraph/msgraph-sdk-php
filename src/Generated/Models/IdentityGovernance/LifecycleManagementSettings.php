@@ -46,8 +46,21 @@ class LifecycleManagementSettings extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'emailSettings' => fn(ParseNode $n) => $o->setEmailSettings($n->getObjectValue([EmailSettings::class, 'createFromDiscriminatorValue'])),
+            'quarantineConfiguration' => fn(ParseNode $n) => $o->setQuarantineConfiguration($n->getObjectValue([QuarantineConfiguration::class, 'createFromDiscriminatorValue'])),
             'workflowScheduleIntervalInHours' => fn(ParseNode $n) => $o->setWorkflowScheduleIntervalInHours($n->getIntegerValue()),
         ]);
+    }
+
+    /**
+     * Gets the quarantineConfiguration property value. The tenant-level quarantine configuration that automatically halts a workflow when its threshold conditions are met. Optional.
+     * @return QuarantineConfiguration|null
+    */
+    public function getQuarantineConfiguration(): ?QuarantineConfiguration {
+        $val = $this->getBackingStore()->get('quarantineConfiguration');
+        if (is_null($val) || $val instanceof QuarantineConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quarantineConfiguration'");
     }
 
     /**
@@ -69,6 +82,7 @@ class LifecycleManagementSettings extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('emailSettings', $this->getEmailSettings());
+        $writer->writeObjectValue('quarantineConfiguration', $this->getQuarantineConfiguration());
         $writer->writeIntegerValue('workflowScheduleIntervalInHours', $this->getWorkflowScheduleIntervalInHours());
     }
 
@@ -78,6 +92,14 @@ class LifecycleManagementSettings extends Entity implements Parsable
     */
     public function setEmailSettings(?EmailSettings $value): void {
         $this->getBackingStore()->set('emailSettings', $value);
+    }
+
+    /**
+     * Sets the quarantineConfiguration property value. The tenant-level quarantine configuration that automatically halts a workflow when its threshold conditions are met. Optional.
+     * @param QuarantineConfiguration|null $value Value to set for the quarantineConfiguration property.
+    */
+    public function setQuarantineConfiguration(?QuarantineConfiguration $value): void {
+        $this->getBackingStore()->set('quarantineConfiguration', $value);
     }
 
     /**

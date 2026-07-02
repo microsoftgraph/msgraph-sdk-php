@@ -53,11 +53,11 @@ class DeviceManagementTroubleshootingEventsRequestBuilder extends BaseRequestBui
 
     /**
      * The list of troubleshooting events for this user.
-     * @param DeviceManagementTroubleshootingEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventsRequestBuilderGetR_4f240d0b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementTroubleshootingEventCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DeviceManagementTroubleshootingEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DeviceManagementTroubleshootingEventsRequestBuilderGetR_4f240d0b $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class DeviceManagementTroubleshootingEventsRequestBuilder extends BaseRequestBui
     /**
      * Create new navigation property to deviceManagementTroubleshootingEvents for users
      * @param DeviceManagementTroubleshootingEvent $body The request body
-     * @param DeviceManagementTroubleshootingEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventsRequestBuilderPost_f789db19|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementTroubleshootingEvent|null>
      * @throws Exception
     */
-    public function post(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventsRequestBuilderPost_f789db19 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class DeviceManagementTroubleshootingEventsRequestBuilder extends BaseRequestBui
 
     /**
      * The list of troubleshooting events for this user.
-     * @param DeviceManagementTroubleshootingEventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventsRequestBuilderGetR_4f240d0b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceManagementTroubleshootingEventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceManagementTroubleshootingEventsRequestBuilderGetR_4f240d0b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class DeviceManagementTroubleshootingEventsRequestBuilder extends BaseRequestBui
     /**
      * Create new navigation property to deviceManagementTroubleshootingEvents for users
      * @param DeviceManagementTroubleshootingEvent $body The request body
-     * @param DeviceManagementTroubleshootingEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventsRequestBuilderPost_f789db19|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventsRequestBuilderPost_f789db19 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

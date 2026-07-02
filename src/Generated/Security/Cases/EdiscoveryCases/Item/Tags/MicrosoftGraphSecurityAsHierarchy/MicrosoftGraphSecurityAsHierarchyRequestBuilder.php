@@ -31,11 +31,11 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequestBuilder
 
     /**
      * List eDiscovery review tags with the tag hierarchy shown.
-     * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetReque_760f3085|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AsHierarchyGetResponse|null>
      * @throws Exception
     */
-    public function get(?MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MicrosoftGraphSecurityAsHierarchyRequestBuilderGetReque_760f3085 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -45,10 +45,10 @@ class MicrosoftGraphSecurityAsHierarchyRequestBuilder extends BaseRequestBuilder
 
     /**
      * List eDiscovery review tags with the tag hierarchy shown.
-     * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityAsHierarchyRequestBuilderGetReque_760f3085|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MicrosoftGraphSecurityAsHierarchyRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MicrosoftGraphSecurityAsHierarchyRequestBuilderGetReque_760f3085 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

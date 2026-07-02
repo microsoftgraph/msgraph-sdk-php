@@ -32,12 +32,12 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
 
     /**
      * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
-     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_0f97ccef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_0f97ccef $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
 
     /**
      * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
-     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_72e910e5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/mailboxrestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_72e910e5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
     /**
      * Update the navigation property mailboxRestoreArtifactsBulkAdditionRequests in solutions
      * @param MailboxRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_5440a18b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
     */
-    public function patch(MailboxRestoreArtifactsBulkAdditionRequest $body, ?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(MailboxRestoreArtifactsBulkAdditionRequest $body, ?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_5440a18b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
 
     /**
      * Delete a mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession.
-     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_0f97ccef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_0f97ccef $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
 
     /**
      * Get a mailboxRestoreArtifactsBulkAdditionRequest object by its id, associated with an exchangeRestoreSession.
-     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_72e910e5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_72e910e5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseR
     /**
      * Update the navigation property mailboxRestoreArtifactsBulkAdditionRequests in solutions
      * @param MailboxRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_5440a18b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MailboxRestoreArtifactsBulkAdditionRequest $body, ?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MailboxRestoreArtifactsBulkAdditionRequest $body, ?MailboxRestoreArtifactsBulkAdditionRequestItemRequestBu_5440a18b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

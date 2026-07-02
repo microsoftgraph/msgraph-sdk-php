@@ -32,11 +32,11 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property gradingCategories for education
-     * @param EducationGradingCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingCategoryItemRequestBuilderDeleteRequest_8862e060|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EducationGradingCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EducationGradingCategoryItemRequestBuilderDeleteRequest_8862e060 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * When set, enables users to weight assignments differently when computing a class average grade.
-     * @param EducationGradingCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingCategoryItemRequestBuilderGetRequestCon_def654be|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationGradingCategory|null>
      * @throws Exception
     */
-    public function get(?EducationGradingCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EducationGradingCategoryItemRequestBuilderGetRequestCon_def654be $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,12 +61,12 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
      * @param EducationGradingCategory $body The request body
-     * @param EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingCategoryItemRequestBuilderPatchRequestC_9df67d6b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationGradingCategory|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationgradingcategory-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(EducationGradingCategory $body, ?EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EducationGradingCategory $body, ?EducationGradingCategoryItemRequestBuilderPatchRequestC_9df67d6b $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property gradingCategories for education
-     * @param EducationGradingCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingCategoryItemRequestBuilderDeleteRequest_8862e060|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EducationGradingCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EducationGradingCategoryItemRequestBuilderDeleteRequest_8862e060 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * When set, enables users to weight assignments differently when computing a class average grade.
-     * @param EducationGradingCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingCategoryItemRequestBuilderGetRequestCon_def654be|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EducationGradingCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EducationGradingCategoryItemRequestBuilderGetRequestCon_def654be $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a single gradingCategory on the educationAssignmentSettings. Only teachers can perform this operation.
      * @param EducationGradingCategory $body The request body
-     * @param EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingCategoryItemRequestBuilderPatchRequestC_9df67d6b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EducationGradingCategory $body, ?EducationGradingCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EducationGradingCategory $body, ?EducationGradingCategoryItemRequestBuilderPatchRequestC_9df67d6b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

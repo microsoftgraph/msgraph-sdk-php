@@ -32,11 +32,11 @@ class MicrosoftGraphSecurityRemoveHoldRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action removeHold
      * @param RemoveHoldPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityRemoveHoldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityRemoveHoldRequestBuilderPostReque_ca5f08a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(RemoveHoldPostRequestBody $body, ?MicrosoftGraphSecurityRemoveHoldRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(RemoveHoldPostRequestBody $body, ?MicrosoftGraphSecurityRemoveHoldRequestBuilderPostReque_ca5f08a7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class MicrosoftGraphSecurityRemoveHoldRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action removeHold
      * @param RemoveHoldPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityRemoveHoldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityRemoveHoldRequestBuilderPostReque_ca5f08a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(RemoveHoldPostRequestBody $body, ?MicrosoftGraphSecurityRemoveHoldRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(RemoveHoldPostRequestBody $body, ?MicrosoftGraphSecurityRemoveHoldRequestBuilderPostReque_ca5f08a7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

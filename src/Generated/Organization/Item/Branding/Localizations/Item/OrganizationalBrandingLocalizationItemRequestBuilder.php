@@ -88,12 +88,12 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
-     * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OrganizationalBrandingLocalizationItemRequestBuilderDel_bb6b9ab7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?OrganizationalBrandingLocalizationItemRequestBuilderDel_bb6b9ab7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -103,12 +103,12 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
-     * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OrganizationalBrandingLocalizationItemRequestBuilderGet_7851102f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OrganizationalBrandingLocalization|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?OrganizationalBrandingLocalizationItemRequestBuilderGet_7851102f $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -119,12 +119,12 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param OrganizationalBrandingLocalization $body The request body
-     * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OrganizationalBrandingLocalizationItemRequestBuilderPat_e1e38754|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OrganizationalBrandingLocalization|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(OrganizationalBrandingLocalization $body, ?OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(OrganizationalBrandingLocalization $body, ?OrganizationalBrandingLocalizationItemRequestBuilderPat_e1e38754 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -134,10 +134,10 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
-     * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OrganizationalBrandingLocalizationItemRequestBuilderDel_bb6b9ab7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OrganizationalBrandingLocalizationItemRequestBuilderDel_bb6b9ab7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -152,10 +152,10 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
 
     /**
      * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of id in the URL.
-     * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OrganizationalBrandingLocalizationItemRequestBuilderGet_7851102f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OrganizationalBrandingLocalizationItemRequestBuilderGet_7851102f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -174,10 +174,10 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param OrganizationalBrandingLocalization $body The request body
-     * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OrganizationalBrandingLocalizationItemRequestBuilderPat_e1e38754|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OrganizationalBrandingLocalization $body, ?OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OrganizationalBrandingLocalization $body, ?OrganizationalBrandingLocalizationItemRequestBuilderPat_e1e38754 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

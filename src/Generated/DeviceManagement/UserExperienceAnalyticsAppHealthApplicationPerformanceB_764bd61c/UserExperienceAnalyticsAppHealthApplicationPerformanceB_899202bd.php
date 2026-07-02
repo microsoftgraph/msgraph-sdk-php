@@ -1,0 +1,133 @@
+<?php
+
+namespace Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceB_764bd61c;
+
+use Exception;
+use Http\Promise\Promise;
+use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceB_764bd61c\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\UserExperienceAnalyticsAppHealthApplicationPerformanceB_764bd61c\Item\UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_067d4f71;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_f8b46917;
+use Microsoft\Graph\Generated\Models\UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
+use Microsoft\Kiota\Abstractions\HttpMethod;
+use Microsoft\Kiota\Abstractions\RequestAdapter;
+use Microsoft\Kiota\Abstractions\RequestInformation;
+
+/**
+ * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property of the microsoft.graph.deviceManagement entity. Original name: UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder
+*/
+class UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd extends BaseRequestBuilder 
+{
+    /**
+     * Provides operations to count the resources in the collection.
+    */
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property of the microsoft.graph.deviceManagement entity.
+     * @param string $userExperienceAnalyticsAppHealthAppPerformanceByOSVersionId The unique identifier of userExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     * @return UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_067d4f71
+    */
+    public function byUserExperienceAnalyticsAppHealthAppPerformanceByOSVersionId(string $userExperienceAnalyticsAppHealthAppPerformanceByOSVersionId): UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_067d4f71 {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['userExperienceAnalyticsAppHealthAppPerformanceByOSVersion%2Did'] = $userExperienceAnalyticsAppHealthAppPerformanceByOSVersionId;
+        return new UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_067d4f71($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Instantiates a new UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd and sets the default values.
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
+     * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
+    }
+
+    /**
+     * User experience analytics appHealth Application Performance by OS Version
+     * @param UserExperienceAnalyticsAppHealthApplicationPerformanceB_c03d6086|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_f8b46917|null>
+     * @throws Exception
+    */
+    public function get(?UserExperienceAnalyticsAppHealthApplicationPerformanceB_c03d6086 $requestConfiguration = null): Promise {
+        $requestInfo = $this->toGetRequestInformation($requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsAppHealthAppPerformanceByOSVersi_f8b46917::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion for deviceManagement
+     * @param UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion $body The request body
+     * @param UserExperienceAnalyticsAppHealthApplicationPerformanceB_e6fb1e9f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion|null>
+     * @throws Exception
+    */
+    public function post(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion $body, ?UserExperienceAnalyticsAppHealthApplicationPerformanceB_e6fb1e9f $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * User experience analytics appHealth Application Performance by OS Version
+     * @param UserExperienceAnalyticsAppHealthApplicationPerformanceB_c03d6086|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toGetRequestInformation(?UserExperienceAnalyticsAppHealthApplicationPerformanceB_c03d6086 $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::GET;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        return $requestInfo;
+    }
+
+    /**
+     * Create new navigation property to userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion for deviceManagement
+     * @param UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion $body The request body
+     * @param UserExperienceAnalyticsAppHealthApplicationPerformanceB_e6fb1e9f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPostRequestInformation(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion $body, ?UserExperienceAnalyticsAppHealthApplicationPerformanceB_e6fb1e9f $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::POST;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd
+    */
+    public function withUrl(string $rawUrl): UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd($rawUrl, $this->requestAdapter);
+    }
+
+}

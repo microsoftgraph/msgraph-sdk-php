@@ -32,11 +32,11 @@ class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequestBuil
 
     /**
      * noncustodialDataSource sources that are included in the eDiscovery search
-     * @param EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRe_27426977|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryNoncustodialDataSource|null>
      * @throws Exception
     */
-    public function get(?EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRe_27426977 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class EdiscoveryNoncustodialDataSourceItemRequestBuilder extends BaseRequestBuil
 
     /**
      * noncustodialDataSource sources that are included in the eDiscovery search
-     * @param EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRe_27426977|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EdiscoveryNoncustodialDataSourceItemRequestBuilderGetRe_27426977 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

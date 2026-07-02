@@ -48,12 +48,12 @@ class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific authenticationEventsFlow resource by ID. This operation also removes or unlinks all applications from the flow, which disables the customized authentication experience defined for the application.  The following derived subtypes are supported:- externalUsersSelfServiceSignupEventsFlow
-     * @param AuthenticationEventsFlowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventsFlowItemRequestBuilderDeleteRequest_cb9519a4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationeventsflow-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?AuthenticationEventsFlowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationEventsFlowItemRequestBuilderDeleteRequest_cb9519a4 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. The @odata.type property in the response object indicates the type of the object, which can be one of the following derived subtypes:- externalUsersSelfServiceSignupEventsFlow
-     * @param AuthenticationEventsFlowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventsFlowItemRequestBuilderGetRequestCon_9d6a8018|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventsFlow|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationeventsflow-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationEventsFlowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationEventsFlowItemRequestBuilderGetRequestCon_9d6a8018 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an authenticationEventsFlow object by ID. You must specify the @odata.type property and the value of the authenticationEventsFlow object type to update. The following derived subtypes are supported:- externalUsersSelfServiceSignupEventsFlow
      * @param AuthenticationEventsFlow $body The request body
-     * @param AuthenticationEventsFlowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventsFlowItemRequestBuilderPatchRequestC_64fa94f1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationEventsFlow|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationeventsflow-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(AuthenticationEventsFlow $body, ?AuthenticationEventsFlowItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AuthenticationEventsFlow $body, ?AuthenticationEventsFlowItemRequestBuilderPatchRequestC_64fa94f1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific authenticationEventsFlow resource by ID. This operation also removes or unlinks all applications from the flow, which disables the customized authentication experience defined for the application.  The following derived subtypes are supported:- externalUsersSelfServiceSignupEventsFlow
-     * @param AuthenticationEventsFlowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventsFlowItemRequestBuilderDeleteRequest_cb9519a4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationEventsFlowItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationEventsFlowItemRequestBuilderDeleteRequest_cb9519a4 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -112,10 +112,10 @@ class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of a specific authenticationEventsFlow object by ID. The @odata.type property in the response object indicates the type of the object, which can be one of the following derived subtypes:- externalUsersSelfServiceSignupEventsFlow
-     * @param AuthenticationEventsFlowItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventsFlowItemRequestBuilderGetRequestCon_9d6a8018|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationEventsFlowItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationEventsFlowItemRequestBuilderGetRequestCon_9d6a8018 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class AuthenticationEventsFlowItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an authenticationEventsFlow object by ID. You must specify the @odata.type property and the value of the authenticationEventsFlow object type to update. The following derived subtypes are supported:- externalUsersSelfServiceSignupEventsFlow
      * @param AuthenticationEventsFlow $body The request body
-     * @param AuthenticationEventsFlowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationEventsFlowItemRequestBuilderPatchRequestC_64fa94f1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationEventsFlow $body, ?AuthenticationEventsFlowItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationEventsFlow $body, ?AuthenticationEventsFlowItemRequestBuilderPatchRequestC_64fa94f1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

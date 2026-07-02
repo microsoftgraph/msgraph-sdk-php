@@ -32,11 +32,11 @@ class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends BaseReq
 
     /**
      * Get the deployment access key for Microsoft Defender for Identity that is required to install sensors associated with the workspace.
-     * @param MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuil_900547f2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeploymentAccessKeyType|null>
      * @throws Exception
     */
-    public function get(?MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuil_900547f2 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends BaseReq
 
     /**
      * Get the deployment access key for Microsoft Defender for Identity that is required to install sensors associated with the workspace.
-     * @param MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuil_900547f2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuil_900547f2 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

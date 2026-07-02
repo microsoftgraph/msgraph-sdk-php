@@ -60,7 +60,20 @@ class ProfileCardProperty extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'annotations' => fn(ParseNode $n) => $o->setAnnotations($n->getCollectionOfObjectValues([ProfileCardAnnotation::class, 'createFromDiscriminatorValue'])),
             'directoryPropertyName' => fn(ParseNode $n) => $o->setDirectoryPropertyName($n->getStringValue()),
+            'isVisible' => fn(ParseNode $n) => $o->setIsVisible($n->getBooleanValue()),
         ]);
+    }
+
+    /**
+     * Gets the isVisible property value. Indicates whether the given directory property should be shown on a user’s profile card.
+     * @return bool|null
+    */
+    public function getIsVisible(): ?bool {
+        $val = $this->getBackingStore()->get('isVisible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isVisible'");
     }
 
     /**
@@ -71,6 +84,7 @@ class ProfileCardProperty extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('annotations', $this->getAnnotations());
         $writer->writeStringValue('directoryPropertyName', $this->getDirectoryPropertyName());
+        $writer->writeBooleanValue('isVisible', $this->getIsVisible());
     }
 
     /**
@@ -87,6 +101,14 @@ class ProfileCardProperty extends Entity implements Parsable
     */
     public function setDirectoryPropertyName(?string $value): void {
         $this->getBackingStore()->set('directoryPropertyName', $value);
+    }
+
+    /**
+     * Sets the isVisible property value. Indicates whether the given directory property should be shown on a user’s profile card.
+     * @param bool|null $value Value to set for the isVisible property.
+    */
+    public function setIsVisible(?bool $value): void {
+        $this->getBackingStore()->set('isVisible', $value);
     }
 
 }

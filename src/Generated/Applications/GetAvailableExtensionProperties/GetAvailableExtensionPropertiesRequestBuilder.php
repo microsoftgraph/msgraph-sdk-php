@@ -32,12 +32,12 @@ class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     /**
      * Return all directory extension definitions that are registered in a directory, including through multitenant apps. The following entities support extension properties:
      * @param GetAvailableExtensionPropertiesPostRequestBody $body The request body
-     * @param GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetAvailableExtensionPropertiesRequestBuilderPostReques_d16b5c79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAvailableExtensionPropertiesPostResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0 Find more info here
     */
-    public function post(GetAvailableExtensionPropertiesPostRequestBody $body, ?GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(GetAvailableExtensionPropertiesPostRequestBody $body, ?GetAvailableExtensionPropertiesRequestBuilderPostReques_d16b5c79 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBuilder
     /**
      * Return all directory extension definitions that are registered in a directory, including through multitenant apps. The following entities support extension properties:
      * @param GetAvailableExtensionPropertiesPostRequestBody $body The request body
-     * @param GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetAvailableExtensionPropertiesRequestBuilderPostReques_d16b5c79|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetAvailableExtensionPropertiesPostRequestBody $body, ?GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetAvailableExtensionPropertiesPostRequestBody $body, ?GetAvailableExtensionPropertiesRequestBuilderPostReques_d16b5c79 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

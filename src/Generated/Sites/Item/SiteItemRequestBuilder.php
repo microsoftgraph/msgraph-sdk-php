@@ -14,7 +14,7 @@ use Microsoft\Graph\Generated\Sites\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_58a4aa2a\GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_be68aff7;
 use Microsoft\Graph\Generated\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPathRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Items\ItemsRequestBuilder;
@@ -197,10 +197,10 @@ class SiteItemRequestBuilder extends BaseRequestBuilder
      * @param string $endDateTime Usage: endDateTime='{endDateTime}'
      * @param string $interval Usage: interval='{interval}'
      * @param string $startDateTime Usage: startDateTime='{startDateTime}'
-     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_be68aff7
     */
-    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_be68aff7 {
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTime_be68aff7($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
     }
 
     /**

@@ -32,11 +32,11 @@ class AuthenticationMethodModeDetailItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete navigation property authenticationMethodModes for identity
-     * @param AuthenticationMethodModeDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodModeDetailItemRequestBuilderDeleteR_6656d2c0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AuthenticationMethodModeDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationMethodModeDetailItemRequestBuilderDeleteR_6656d2c0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class AuthenticationMethodModeDetailItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Names and descriptions of all valid authentication method modes in the system.
-     * @param AuthenticationMethodModeDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodModeDetailItemRequestBuilderGetRequ_6a9fddee|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodModeDetail|null>
      * @throws Exception
     */
-    public function get(?AuthenticationMethodModeDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?AuthenticationMethodModeDetailItemRequestBuilderGetRequ_6a9fddee $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class AuthenticationMethodModeDetailItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property authenticationMethodModes in identity
      * @param AuthenticationMethodModeDetail $body The request body
-     * @param AuthenticationMethodModeDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodModeDetailItemRequestBuilderPatchRe_7e2a944d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodModeDetail|null>
      * @throws Exception
     */
-    public function patch(AuthenticationMethodModeDetail $body, ?AuthenticationMethodModeDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AuthenticationMethodModeDetail $body, ?AuthenticationMethodModeDetailItemRequestBuilderPatchRe_7e2a944d $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class AuthenticationMethodModeDetailItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete navigation property authenticationMethodModes for identity
-     * @param AuthenticationMethodModeDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodModeDetailItemRequestBuilderDeleteR_6656d2c0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationMethodModeDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationMethodModeDetailItemRequestBuilderDeleteR_6656d2c0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class AuthenticationMethodModeDetailItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Names and descriptions of all valid authentication method modes in the system.
-     * @param AuthenticationMethodModeDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodModeDetailItemRequestBuilderGetRequ_6a9fddee|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationMethodModeDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationMethodModeDetailItemRequestBuilderGetRequ_6a9fddee $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class AuthenticationMethodModeDetailItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property authenticationMethodModes in identity
      * @param AuthenticationMethodModeDetail $body The request body
-     * @param AuthenticationMethodModeDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodModeDetailItemRequestBuilderPatchRe_7e2a944d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationMethodModeDetail $body, ?AuthenticationMethodModeDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationMethodModeDetail $body, ?AuthenticationMethodModeDetailItemRequestBuilderPatchRe_7e2a944d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

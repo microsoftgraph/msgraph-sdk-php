@@ -4,7 +4,7 @@ namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Grap
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\GraphExternalUsersSelfServiceSignUpEventsFlow\OnAttributeCollection\GraphOnAttributeCollectionExternalUsersSelfServiceSignUp\GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder;
+use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\GraphExternalUsersSelfServiceSignUpEventsFlow\OnAttributeCollection\GraphOnAttributeCollectionExternalUsersSelfServiceSignUp\GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnAttributeCollectionHandler;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -20,8 +20,8 @@ class OnAttributeCollectionRequestBuilder extends BaseRequestBuilder
     /**
      * Casts the previous resource to onAttributeCollectionExternalUsersSelfServiceSignUp.
     */
-    public function graphOnAttributeCollectionExternalUsersSelfServiceSignUp(): GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder {
-        return new GraphOnAttributeCollectionExternalUsersSelfServiceSignUpRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphOnAttributeCollectionExternalUsersSelfServiceSignUp(): GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba {
+        return new GraphOnAttributeCollectionExternalUsersSelfServiceSignU_8d1599ba($this->pathParameters, $this->requestAdapter);
     }
     
     /**
