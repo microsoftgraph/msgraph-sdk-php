@@ -32,12 +32,12 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
 
     /**
      * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
-     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_ecf41c95|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_ecf41c95 $requestConfiguration = null): Promise {
+    public function delete(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
 
     /**
      * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
-     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_fb92c3b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/driverestoreartifactsbulkadditionrequest-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_fb92c3b1 $requestConfiguration = null): Promise {
+    public function get(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property driveRestoreArtifactsBulkAdditionRequests in solutions
      * @param DriveRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_700124ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
     */
-    public function patch(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_700124ce $requestConfiguration = null): Promise {
+    public function patch(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
 
     /**
      * Delete a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession.
-     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_ecf41c95|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_ecf41c95 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
 
     /**
      * Get a driveRestoreArtifactsBulkAdditionRequest object by its id, associated with a oneDriveForBusinessRestoreSession.
-     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_fb92c3b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_fb92c3b1 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property driveRestoreArtifactsBulkAdditionRequests in solutions
      * @param DriveRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_700124ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuil_700124ce $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

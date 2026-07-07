@@ -31,12 +31,12 @@ class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends BaseRequest
 
     /**
      * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium).
-     * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderP_8aea583b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-estimatestatistics?view=graph-rest-1.0 Find more info here
     */
-    public function post(?MicrosoftGraphSecurityEstimateStatisticsRequestBuilderP_8aea583b $requestConfiguration = null): Promise {
+    public function post(?MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityEstimateStatisticsRequestBuilder extends BaseRequest
 
     /**
      * Run an estimate of the number of emails and documents in the eDiscovery search. To learn more about searches in eDiscovery, see Collect data for a case in eDiscovery (Premium).
-     * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderP_8aea583b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?MicrosoftGraphSecurityEstimateStatisticsRequestBuilderP_8aea583b $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?MicrosoftGraphSecurityEstimateStatisticsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

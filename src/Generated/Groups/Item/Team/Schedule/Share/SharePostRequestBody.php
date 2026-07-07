@@ -24,7 +24,6 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setNotifyTeam(false);
     }
 
     /**

@@ -2,7 +2,6 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use Microsoft\Graph\Generated\Models\EntraRecoveryServices\Recovery;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -125,7 +124,6 @@ class Directory extends Entity implements Parsable
             'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
             'publicKeyInfrastructure' => fn(ParseNode $n) => $o->setPublicKeyInfrastructure($n->getObjectValue([PublicKeyInfrastructureRoot::class, 'createFromDiscriminatorValue'])),
-            'recovery' => fn(ParseNode $n) => $o->setRecovery($n->getObjectValue([Recovery::class, 'createFromDiscriminatorValue'])),
             'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([CompanySubscription::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -157,18 +155,6 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Gets the recovery property value. The recovery property
-     * @return Recovery|null
-    */
-    public function getRecovery(): ?Recovery {
-        $val = $this->getBackingStore()->get('recovery');
-        if (is_null($val) || $val instanceof Recovery) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'recovery'");
-    }
-
-    /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @return array<CompanySubscription>|null
     */
@@ -196,7 +182,6 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
         $writer->writeObjectValue('publicKeyInfrastructure', $this->getPublicKeyInfrastructure());
-        $writer->writeObjectValue('recovery', $this->getRecovery());
         $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());
     }
 
@@ -262,14 +247,6 @@ class Directory extends Entity implements Parsable
     */
     public function setPublicKeyInfrastructure(?PublicKeyInfrastructureRoot $value): void {
         $this->getBackingStore()->set('publicKeyInfrastructure', $value);
-    }
-
-    /**
-     * Sets the recovery property value. The recovery property
-     * @param Recovery|null $value Value to set for the recovery property.
-    */
-    public function setRecovery(?Recovery $value): void {
-        $this->getBackingStore()->set('recovery', $value);
     }
 
     /**

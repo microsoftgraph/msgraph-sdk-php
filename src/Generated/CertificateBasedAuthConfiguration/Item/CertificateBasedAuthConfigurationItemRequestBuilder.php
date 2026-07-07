@@ -32,11 +32,11 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete entity from certificateBasedAuthConfiguration
-     * @param CertificateBasedAuthConfigurationItemRequestBuilderDele_e1905528|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CertificateBasedAuthConfigurationItemRequestBuilderDele_e1905528 $requestConfiguration = null): Promise {
+    public function delete(?CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Get entity from certificateBasedAuthConfiguration by key
-     * @param CertificateBasedAuthConfigurationItemRequestBuilderGetR_efb67019|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthConfiguration|null>
      * @throws Exception
     */
-    public function get(?CertificateBasedAuthConfigurationItemRequestBuilderGetR_efb67019 $requestConfiguration = null): Promise {
+    public function get(?CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     /**
      * Update entity in certificateBasedAuthConfiguration
      * @param CertificateBasedAuthConfiguration $body The request body
-     * @param CertificateBasedAuthConfigurationItemRequestBuilderPatc_430b1e94|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateBasedAuthConfiguration|null>
      * @throws Exception
     */
-    public function patch(CertificateBasedAuthConfiguration $body, ?CertificateBasedAuthConfigurationItemRequestBuilderPatc_430b1e94 $requestConfiguration = null): Promise {
+    public function patch(CertificateBasedAuthConfiguration $body, ?CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete entity from certificateBasedAuthConfiguration
-     * @param CertificateBasedAuthConfigurationItemRequestBuilderDele_e1905528|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CertificateBasedAuthConfigurationItemRequestBuilderDele_e1905528 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Get entity from certificateBasedAuthConfiguration by key
-     * @param CertificateBasedAuthConfigurationItemRequestBuilderGetR_efb67019|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CertificateBasedAuthConfigurationItemRequestBuilderGetR_efb67019 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     /**
      * Update entity in certificateBasedAuthConfiguration
      * @param CertificateBasedAuthConfiguration $body The request body
-     * @param CertificateBasedAuthConfigurationItemRequestBuilderPatc_430b1e94|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CertificateBasedAuthConfiguration $body, ?CertificateBasedAuthConfigurationItemRequestBuilderPatc_430b1e94 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CertificateBasedAuthConfiguration $body, ?CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

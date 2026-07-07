@@ -56,11 +56,11 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property oneDriveForBusinessProtectionPolicies for solutions
-     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderDe_8d8ec62e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?OneDriveForBusinessProtectionPolicyItemRequestBuilderDe_8d8ec62e $requestConfiguration = null): Promise {
+    public function delete(?OneDriveForBusinessProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
 
     /**
      * The list of OneDrive for Business protection policies in the tenant.
-     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderGe_889f2f6e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessProtectionPolicy|null>
      * @throws Exception
     */
-    public function get(?OneDriveForBusinessProtectionPolicyItemRequestBuilderGe_889f2f6e $requestConfiguration = null): Promise {
+    public function get(?OneDriveForBusinessProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,12 +85,12 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
     /**
      * Update the protection policy for the OneDrive service in Microsoft 365. This method adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
      * @param OneDriveForBusinessProtectionPolicy $body The request body
-     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderPa_530f4627|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessProtectionPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onedriveforbusinessprotectionpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPolicyItemRequestBuilderPa_530f4627 $requestConfiguration = null): Promise {
+    public function patch(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -100,10 +100,10 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property oneDriveForBusinessProtectionPolicies for solutions
-     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderDe_8d8ec62e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OneDriveForBusinessProtectionPolicyItemRequestBuilderDe_8d8ec62e $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OneDriveForBusinessProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
 
     /**
      * The list of OneDrive for Business protection policies in the tenant.
-     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderGe_889f2f6e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OneDriveForBusinessProtectionPolicyItemRequestBuilderGe_889f2f6e $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OneDriveForBusinessProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -140,10 +140,10 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
     /**
      * Update the protection policy for the OneDrive service in Microsoft 365. This method adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
      * @param OneDriveForBusinessProtectionPolicy $body The request body
-     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderPa_530f4627|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPolicyItemRequestBuilderPa_530f4627 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

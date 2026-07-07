@@ -34,12 +34,12 @@ class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends BaseReques
 
     /**
      * Get a list of exchangeMessageTraceDetail objects filtered on the recipient.
-     * @param GetDetailsByRecipientWithRecipientAddressRequestBuilder_00612b39|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetDetailsByRecipientWithRecipientAddressRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetDetailsByRecipientWithRecipientAddressGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/exchangemessagetrace-getdetailsbyrecipient?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetDetailsByRecipientWithRecipientAddressRequestBuilder_00612b39 $requestConfiguration = null): Promise {
+    public function get(?GetDetailsByRecipientWithRecipientAddressRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class GetDetailsByRecipientWithRecipientAddressRequestBuilder extends BaseReques
 
     /**
      * Get a list of exchangeMessageTraceDetail objects filtered on the recipient.
-     * @param GetDetailsByRecipientWithRecipientAddressRequestBuilder_00612b39|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetDetailsByRecipientWithRecipientAddressRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetDetailsByRecipientWithRecipientAddressRequestBuilder_00612b39 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetDetailsByRecipientWithRecipientAddressRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

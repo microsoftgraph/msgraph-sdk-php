@@ -32,11 +32,11 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderDelet_b10e0e71|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceCompliancePolicyAssignmentItemRequestBuilderDelet_b10e0e71 $requestConfiguration = null): Promise {
+    public function delete(?DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * The collection of assignments for this compliance policy.
-     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderGetRe_9c901faf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyAssignment|null>
      * @throws Exception
     */
-    public function get(?DeviceCompliancePolicyAssignmentItemRequestBuilderGetRe_9c901faf $requestConfiguration = null): Promise {
+    public function get(?DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property assignments in deviceManagement
      * @param DeviceCompliancePolicyAssignment $body The request body
-     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatch_ed89c223|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyAssignment|null>
      * @throws Exception
     */
-    public function patch(DeviceCompliancePolicyAssignment $body, ?DeviceCompliancePolicyAssignmentItemRequestBuilderPatch_ed89c223 $requestConfiguration = null): Promise {
+    public function patch(DeviceCompliancePolicyAssignment $body, ?DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderDelet_b10e0e71|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceCompliancePolicyAssignmentItemRequestBuilderDelet_b10e0e71 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceCompliancePolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
 
     /**
      * The collection of assignments for this compliance policy.
-     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderGetRe_9c901faf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceCompliancePolicyAssignmentItemRequestBuilderGetRe_9c901faf $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceCompliancePolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property assignments in deviceManagement
      * @param DeviceCompliancePolicyAssignment $body The request body
-     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatch_ed89c223|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceCompliancePolicyAssignment $body, ?DeviceCompliancePolicyAssignmentItemRequestBuilderPatch_ed89c223 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceCompliancePolicyAssignment $body, ?DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

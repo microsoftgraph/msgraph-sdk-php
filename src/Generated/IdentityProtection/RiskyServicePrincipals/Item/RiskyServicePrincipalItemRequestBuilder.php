@@ -40,11 +40,11 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property riskyServicePrincipals for identityProtection
-     * @param RiskyServicePrincipalItemRequestBuilderDeleteRequestCon_553fd0a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?RiskyServicePrincipalItemRequestBuilderDeleteRequestCon_553fd0a7 $requestConfiguration = null): Promise {
+    public function delete(?RiskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property riskyServicePrincipals for identityProtection
-     * @param RiskyServicePrincipalItemRequestBuilderDeleteRequestCon_553fd0a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RiskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?RiskyServicePrincipalItemRequestBuilderDeleteRequestCon_553fd0a7 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?RiskyServicePrincipalItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -72,11 +72,11 @@ class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete entity from directoryRoleTemplates
-     * @param DirectoryRoleTemplateItemRequestBuilderDeleteRequestCon_ad24657a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DirectoryRoleTemplateItemRequestBuilderDeleteRequestCon_ad24657a $requestConfiguration = null): Promise {
+    public function delete(?DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -116,10 +116,10 @@ class DirectoryRoleTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete entity from directoryRoleTemplates
-     * @param DirectoryRoleTemplateItemRequestBuilderDeleteRequestCon_ad24657a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DirectoryRoleTemplateItemRequestBuilderDeleteRequestCon_ad24657a $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DirectoryRoleTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

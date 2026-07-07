@@ -47,7 +47,6 @@ class DirectoryObject extends Entity implements Parsable
                 case '#microsoft.graph.directoryRoleTemplate': return new DirectoryRoleTemplate();
                 case '#microsoft.graph.endpoint': return new Endpoint();
                 case '#microsoft.graph.extensionProperty': return new ExtensionProperty();
-                case '#microsoft.graph.federatedTokenValidationPolicy': return new FederatedTokenValidationPolicy();
                 case '#microsoft.graph.group': return new Group();
                 case '#microsoft.graph.groupSettingTemplate': return new GroupSettingTemplate();
                 case '#microsoft.graph.homeRealmDiscoveryPolicy': return new HomeRealmDiscoveryPolicy();

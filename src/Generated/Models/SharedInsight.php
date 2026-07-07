@@ -42,7 +42,7 @@ class SharedInsight extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastShared property value. Details about the shared item. Read-only.
+     * Gets the lastShared property value. Details about the shared item. Read only.
      * @return SharingDetail|null
     */
     public function getLastShared(): ?SharingDetail {
@@ -128,7 +128,7 @@ class SharedInsight extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastShared property value. Details about the shared item. Read-only.
+     * Sets the lastShared property value. Details about the shared item. Read only.
      * @param SharingDetail|null $value Value to set for the lastShared property.
     */
     public function setLastShared(?SharingDetail $value): void {

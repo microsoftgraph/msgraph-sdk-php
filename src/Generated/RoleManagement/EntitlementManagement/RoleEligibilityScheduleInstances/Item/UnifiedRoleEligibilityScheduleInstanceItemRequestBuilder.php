@@ -64,11 +64,11 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement
-     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_b4cb509e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_b4cb509e $requestConfiguration = null): Promise {
+    public function delete(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
 
     /**
      * Instances for role eligibility requests.
-     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_8d40a679|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleInstance|null>
      * @throws Exception
     */
-    public function get(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_8d40a679 $requestConfiguration = null): Promise {
+    public function get(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -93,11 +93,11 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
      * @param UnifiedRoleEligibilityScheduleInstance $body The request body
-     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_3cc9bd89|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleEligibilityScheduleInstance|null>
      * @throws Exception
     */
-    public function patch(UnifiedRoleEligibilityScheduleInstance $body, ?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_3cc9bd89 $requestConfiguration = null): Promise {
+    public function patch(UnifiedRoleEligibilityScheduleInstance $body, ?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -107,10 +107,10 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property roleEligibilityScheduleInstances for roleManagement
-     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_b4cb509e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_b4cb509e $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -125,10 +125,10 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
 
     /**
      * Instances for role eligibility requests.
-     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_8d40a679|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_8d40a679 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -147,10 +147,10 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
      * @param UnifiedRoleEligibilityScheduleInstance $body The request body
-     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_3cc9bd89|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UnifiedRoleEligibilityScheduleInstance $body, ?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilde_3cc9bd89 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UnifiedRoleEligibilityScheduleInstance $body, ?UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -56,7 +56,7 @@ class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the displayName property value. A human-readable name for the user account, intended for display.
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -82,7 +82,7 @@ class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the id property value. A user identifier, determined by the relying party. This value is opaque to the authenticator and is Base64URL-encoded without padding.
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -94,7 +94,7 @@ class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the name property value. A human-readable identifier for the user account, such as a username or email address.
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -146,7 +146,7 @@ class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the displayName property value. A human-readable name for the user account, intended for display.
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -154,7 +154,7 @@ class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the id property value. A user identifier, determined by the relying party. This value is opaque to the authenticator and is Base64URL-encoded without padding.
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -162,7 +162,7 @@ class WebauthnPublicKeyCredentialUserEntity implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the name property value. A human-readable identifier for the user account, such as a username or email address.
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

@@ -32,11 +32,11 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param TermsAndConditionsAssignmentItemRequestBuilderDeleteReq_f11939ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TermsAndConditionsAssignmentItemRequestBuilderDeleteReq_f11939ce $requestConfiguration = null): Promise {
+    public function delete(?TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of assignments for this T&C policy.
-     * @param TermsAndConditionsAssignmentItemRequestBuilderGetReques_7a9821e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermsAndConditionsAssignment|null>
      * @throws Exception
     */
-    public function get(?TermsAndConditionsAssignmentItemRequestBuilderGetReques_7a9821e0 $requestConfiguration = null): Promise {
+    public function get(?TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property assignments in deviceManagement
      * @param TermsAndConditionsAssignment $body The request body
-     * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequ_c19e623c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TermsAndConditionsAssignment|null>
      * @throws Exception
     */
-    public function patch(TermsAndConditionsAssignment $body, ?TermsAndConditionsAssignmentItemRequestBuilderPatchRequ_c19e623c $requestConfiguration = null): Promise {
+    public function patch(TermsAndConditionsAssignment $body, ?TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property assignments for deviceManagement
-     * @param TermsAndConditionsAssignmentItemRequestBuilderDeleteReq_f11939ce|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TermsAndConditionsAssignmentItemRequestBuilderDeleteReq_f11939ce $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TermsAndConditionsAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of assignments for this T&C policy.
-     * @param TermsAndConditionsAssignmentItemRequestBuilderGetReques_7a9821e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?TermsAndConditionsAssignmentItemRequestBuilderGetReques_7a9821e0 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?TermsAndConditionsAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property assignments in deviceManagement
      * @param TermsAndConditionsAssignment $body The request body
-     * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequ_c19e623c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TermsAndConditionsAssignment $body, ?TermsAndConditionsAssignmentItemRequestBuilderPatchRequ_c19e623c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TermsAndConditionsAssignment $body, ?TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

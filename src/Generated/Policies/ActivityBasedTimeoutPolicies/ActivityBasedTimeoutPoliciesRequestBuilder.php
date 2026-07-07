@@ -53,12 +53,12 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
-     * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestCon_071db6fd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicyCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-list?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ActivityBasedTimeoutPoliciesRequestBuilderGetRequestCon_071db6fd $requestConfiguration = null): Promise {
+    public function get(?ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body The request body
-     * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestCo_2479a378|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0 Find more info here
     */
-    public function post(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPoliciesRequestBuilderPostRequestCo_2479a378 $requestConfiguration = null): Promise {
+    public function post(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of activityBasedTimeoutPolicy objects.
-     * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestCon_071db6fd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ActivityBasedTimeoutPoliciesRequestBuilderGetRequestCon_071db6fd $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ActivityBasedTimeoutPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class ActivityBasedTimeoutPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body The request body
-     * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestCo_2479a378|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPoliciesRequestBuilderPostRequestCo_2479a378 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

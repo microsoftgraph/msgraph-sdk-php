@@ -37,11 +37,11 @@ class OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilder extends BaseRequest
 
     /**
      * Invoke function offsetRange
-     * @param OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderG_d43f144c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookRange|null>
      * @throws Exception
     */
-    public function get(?OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderG_d43f144c $requestConfiguration = null): Promise {
+    public function get(?OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilder extends BaseRequest
 
     /**
      * Invoke function offsetRange
-     * @param OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderG_d43f144c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderG_d43f144c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OffsetRangeWithRowOffsetWithColumnOffsetRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

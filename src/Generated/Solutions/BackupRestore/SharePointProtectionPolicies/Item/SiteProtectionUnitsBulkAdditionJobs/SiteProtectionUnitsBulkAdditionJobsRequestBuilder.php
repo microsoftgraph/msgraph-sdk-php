@@ -52,12 +52,12 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
 
     /**
      * Get a list of siteProtectionUnitsBulkAdditionJobs objects associated with a sharePointProtectionPolicy.
-     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteProtectionUnitsBulkAdditionJobCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sharepointprotectionpolicy-list-siteprotectionunitsbulkadditionjobs?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7 $requestConfiguration = null): Promise {
+    public function get(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -67,10 +67,10 @@ class SiteProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuild
 
     /**
      * Get a list of siteProtectionUnitsBulkAdditionJobs objects associated with a sharePointProtectionPolicy.
-     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetReq_3a9850f7 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SiteProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

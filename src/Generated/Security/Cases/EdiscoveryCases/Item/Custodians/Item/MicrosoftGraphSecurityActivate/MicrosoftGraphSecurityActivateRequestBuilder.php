@@ -31,12 +31,12 @@ class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBuilder
 
     /**
      * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
-     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycustodian-activate?view=graph-rest-1.0 Find more info here
     */
-    public function post(?MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062 $requestConfiguration = null): Promise {
+    public function post(?MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityActivateRequestBuilder extends BaseRequestBuilder
 
     /**
      * Activate a custodian that has been released from a case to make them part of the case again. For details, see Manage custodians in an eDiscovery (Premium) case.
-     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?MicrosoftGraphSecurityActivateRequestBuilderPostRequest_7e9dd062 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?MicrosoftGraphSecurityActivateRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

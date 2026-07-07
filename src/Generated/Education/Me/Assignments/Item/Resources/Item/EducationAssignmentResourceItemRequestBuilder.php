@@ -40,11 +40,11 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resources for education
-     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628 $requestConfiguration = null): Promise {
+    public function delete(?EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Learning objects that are associated with this assignment. Only teachers can modify this list. Nullable.
-     * @param EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignmentResource|null>
      * @throws Exception
     */
-    public function get(?EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760 $requestConfiguration = null): Promise {
+    public function get(?EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resources in education
      * @param EducationAssignmentResource $body The request body
-     * @param EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignmentResource|null>
      * @throws Exception
     */
-    public function patch(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6 $requestConfiguration = null): Promise {
+    public function patch(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resources for education
-     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Learning objects that are associated with this assignment. Only teachers can modify this list. Nullable.
-     * @param EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resources in education
      * @param EducationAssignmentResource $body The request body
-     * @param EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

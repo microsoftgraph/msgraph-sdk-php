@@ -32,12 +32,12 @@ class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an educationGradingScheme object.
-     * @param EducationGradingSchemeItemRequestBuilderDeleteRequestCo_6d641b35|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingSchemeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationgradingscheme-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?EducationGradingSchemeItemRequestBuilderDeleteRequestCo_6d641b35 $requestConfiguration = null): Promise {
+    public function delete(?EducationGradingSchemeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property gradingSchemes in education
      * @param EducationGradingScheme $body The request body
-     * @param EducationGradingSchemeItemRequestBuilderPatchRequestCon_f5ca3cb4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingSchemeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationGradingScheme|null>
      * @throws Exception
     */
-    public function patch(EducationGradingScheme $body, ?EducationGradingSchemeItemRequestBuilderPatchRequestCon_f5ca3cb4 $requestConfiguration = null): Promise {
+    public function patch(EducationGradingScheme $body, ?EducationGradingSchemeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an educationGradingScheme object.
-     * @param EducationGradingSchemeItemRequestBuilderDeleteRequestCo_6d641b35|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingSchemeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EducationGradingSchemeItemRequestBuilderDeleteRequestCo_6d641b35 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EducationGradingSchemeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class EducationGradingSchemeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property gradingSchemes in education
      * @param EducationGradingScheme $body The request body
-     * @param EducationGradingSchemeItemRequestBuilderPatchRequestCon_f5ca3cb4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationGradingSchemeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EducationGradingScheme $body, ?EducationGradingSchemeItemRequestBuilderPatchRequestCon_f5ca3cb4 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EducationGradingScheme $body, ?EducationGradingSchemeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,12 +32,12 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
 
     /**
      * Get a mailboxProtectionUnitsBulkAdditionJob object by the ID associated with an exchangeProtectionPolicy.
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/mailboxprotectionunitsbulkadditionjobs-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c $requestConfiguration = null): Promise {
+    public function get(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseReques
 
     /**
      * Get a mailboxProtectionUnitsBulkAdditionJob object by the ID associated with an exchangeProtectionPolicy.
-     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilder_c4cffa6c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MailboxProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

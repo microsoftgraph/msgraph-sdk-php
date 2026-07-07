@@ -35,12 +35,12 @@ class GetMailboxUsageMailboxCountsWithPeriodRequestBuilder extends BaseRequestBu
 
     /**
      * Get the total number of user mailboxes in your organization and how many are active each day of the reporting period. A mailbox is considered active if the user sent or read any email.
-     * @param GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGet_2d09a054|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getmailboxusagemailboxcounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGet_2d09a054 $requestConfiguration = null): Promise {
+    public function get(?GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetMailboxUsageMailboxCountsWithPeriodRequestBuilder extends BaseRequestBu
 
     /**
      * Get the total number of user mailboxes in your organization and how many are active each day of the reporting period. A mailbox is considered active if the user sent or read any email.
-     * @param GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGet_2d09a054|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGet_2d09a054 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetMailboxUsageMailboxCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

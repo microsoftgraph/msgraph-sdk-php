@@ -48,7 +48,7 @@ class WebauthnPublicKeyCredentialParameters implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the alg property value. A COSE algorithm identifier representing the cryptographic algorithm to use for this credential type. For example, -7 represents ES256.
+     * Gets the alg property value. The alg property
      * @return int|null
     */
     public function getAlg(): ?int {
@@ -93,7 +93,7 @@ class WebauthnPublicKeyCredentialParameters implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the type property value. The type of credential to create. Currently, the only supported value is public-key.
+     * Gets the type property value. The type property
      * @return string|null
     */
     public function getType(): ?string {
@@ -124,7 +124,7 @@ class WebauthnPublicKeyCredentialParameters implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the alg property value. A COSE algorithm identifier representing the cryptographic algorithm to use for this credential type. For example, -7 represents ES256.
+     * Sets the alg property value. The alg property
      * @param int|null $value Value to set for the alg property.
     */
     public function setAlg(?int $value): void {
@@ -148,7 +148,7 @@ class WebauthnPublicKeyCredentialParameters implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the type property value. The type of credential to create. Currently, the only supported value is public-key.
+     * Sets the type property value. The type property
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

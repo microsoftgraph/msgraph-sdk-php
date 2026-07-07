@@ -56,11 +56,11 @@ class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property managedAppRegistrations for deviceAppManagement
-     * @param ManagedAppRegistrationItemRequestBuilderDeleteRequestCo_3bc3fb2c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ManagedAppRegistrationItemRequestBuilderDeleteRequestCo_3bc3fb2c $requestConfiguration = null): Promise {
+    public function delete(?ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param ManagedAppRegistration $body The request body
-     * @param ManagedAppRegistrationItemRequestBuilderPatchRequestCon_1a15ef4c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedAppRegistration|null>
      * @throws Exception
     */
-    public function patch(ManagedAppRegistration $body, ?ManagedAppRegistrationItemRequestBuilderPatchRequestCon_1a15ef4c $requestConfiguration = null): Promise {
+    public function patch(ManagedAppRegistration $body, ?ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property managedAppRegistrations for deviceAppManagement
-     * @param ManagedAppRegistrationItemRequestBuilderDeleteRequestCo_3bc3fb2c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ManagedAppRegistrationItemRequestBuilderDeleteRequestCo_3bc3fb2c $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ManagedAppRegistrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -139,10 +139,10 @@ class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param ManagedAppRegistration $body The request body
-     * @param ManagedAppRegistrationItemRequestBuilderPatchRequestCon_1a15ef4c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ManagedAppRegistration $body, ?ManagedAppRegistrationItemRequestBuilderPatchRequestCon_1a15ef4c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ManagedAppRegistration $body, ?ManagedAppRegistrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

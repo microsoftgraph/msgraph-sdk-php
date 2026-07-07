@@ -10,13 +10,8 @@ use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\It
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\LastModifiedBy\LastModifiedByRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivate\MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivateWithScope\MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceCancelProcessing\MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceClearQuarantine\MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceCreateNewVersion\MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernancePreviewTaskFailures\MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernancePreviewWorkflow\MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceRestore\MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\PreviewScope\PreviewScopeRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Runs\RunsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\TaskReports\TaskReportsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Tasks\TasksRequestBuilder;
@@ -77,20 +72,6 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to call the cancelProcessing method.
-    */
-    public function microsoftGraphIdentityGovernanceCancelProcessing(): MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder {
-        return new MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the clearQuarantine method.
-    */
-    public function microsoftGraphIdentityGovernanceClearQuarantine(): MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder {
-        return new MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the createNewVersion method.
     */
     public function microsoftGraphIdentityGovernanceCreateNewVersion(): MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder {
@@ -98,31 +79,10 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to call the previewTaskFailures method.
-    */
-    public function microsoftGraphIdentityGovernancePreviewTaskFailures(): MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef {
-        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the previewWorkflow method.
-    */
-    public function microsoftGraphIdentityGovernancePreviewWorkflow(): MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder {
-        return new MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the restore method.
     */
     public function microsoftGraphIdentityGovernanceRestore(): MicrosoftGraphIdentityGovernanceRestoreRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the previewScope property of the microsoft.graph.identityGovernance.workflow entity.
-    */
-    public function previewScope(): PreviewScopeRequestBuilder {
-        return new PreviewScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -175,7 +135,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. The deleted workflow is sent to the deleted workflows container. You can restore a deleted workflow and its associated objects within 30 days of deletion.
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -221,7 +181,7 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. The deleted workflow is sent to the deleted workflows container. You can restore a deleted workflow and its associated objects within 30 days of deletion.
+     * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param WorkflowItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

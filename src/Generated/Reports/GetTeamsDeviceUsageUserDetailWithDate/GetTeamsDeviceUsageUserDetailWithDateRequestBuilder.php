@@ -36,11 +36,11 @@ class GetTeamsDeviceUsageUserDetailWithDateRequestBuilder extends BaseRequestBui
 
     /**
      * Get details about Microsoft Teams device usage by user.
-     * @param GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetR_db231289|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function get(?GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetR_db231289 $requestConfiguration = null): Promise {
+    public function get(?GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetTeamsDeviceUsageUserDetailWithDateRequestBuilder extends BaseRequestBui
 
     /**
      * Get details about Microsoft Teams device usage by user.
-     * @param GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetR_db231289|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetR_db231289 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetTeamsDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

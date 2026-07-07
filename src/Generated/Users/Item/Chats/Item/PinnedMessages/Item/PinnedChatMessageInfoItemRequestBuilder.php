@@ -40,11 +40,11 @@ class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property pinnedMessages for users
-     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6 $requestConfiguration = null): Promise {
+    public function delete(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class PinnedChatMessageInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property pinnedMessages for users
-     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestCon_1922b6e6 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PinnedChatMessageInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

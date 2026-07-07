@@ -35,12 +35,12 @@ class GetSharePointSiteUsagePagesWithPeriodRequestBuilder extends BaseRequestBui
 
     /**
      * Get the number of pages viewed across all sites.
-     * @param GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetR_8cbcd571|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagepages?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetR_8cbcd571 $requestConfiguration = null): Promise {
+    public function get(?GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetSharePointSiteUsagePagesWithPeriodRequestBuilder extends BaseRequestBui
 
     /**
      * Get the number of pages viewed across all sites.
-     * @param GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetR_8cbcd571|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetR_8cbcd571 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointSiteUsagePagesWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

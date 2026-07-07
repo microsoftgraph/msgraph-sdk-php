@@ -19,7 +19,6 @@ use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\CrossTenantAccess
 use Microsoft\Graph\Generated\Policies\DefaultAppManagementPolicy\DefaultAppManagementPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\DeviceRegistrationPolicy\DeviceRegistrationPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\FeatureRolloutPoliciesRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FederatedTokenValidationPolicy\FederatedTokenValidationPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\IdentitySecurityDefaultsEnforcementPolicy\IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\OwnerlessGroupPolicy\OwnerlessGroupPolicyRequestBuilder;
@@ -127,13 +126,6 @@ class PoliciesRequestBuilder extends BaseRequestBuilder
     */
     public function featureRolloutPolicies(): FeatureRolloutPoliciesRequestBuilder {
         return new FeatureRolloutPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the federatedTokenValidationPolicy property of the microsoft.graph.policyRoot entity.
-    */
-    public function federatedTokenValidationPolicy(): FederatedTokenValidationPolicyRequestBuilder {
-        return new FederatedTokenValidationPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

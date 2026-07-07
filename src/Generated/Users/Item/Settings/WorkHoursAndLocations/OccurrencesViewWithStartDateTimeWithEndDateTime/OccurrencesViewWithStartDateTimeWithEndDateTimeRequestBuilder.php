@@ -36,12 +36,12 @@ class OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilder extends Base
 
     /**
      * Get work plan occurrences from your own work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
-     * @param OccurrencesViewWithStartDateTimeWithEndDateTimeRequestB_7a94bd80|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OccurrencesViewWithStartDateTimeWithEndDateTimeGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/workhoursandlocationssetting-occurrencesview?view=graph-rest-1.0 Find more info here
     */
-    public function get(?OccurrencesViewWithStartDateTimeWithEndDateTimeRequestB_7a94bd80 $requestConfiguration = null): Promise {
+    public function get(?OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilder extends Base
 
     /**
      * Get work plan occurrences from your own work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
-     * @param OccurrencesViewWithStartDateTimeWithEndDateTimeRequestB_7a94bd80|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OccurrencesViewWithStartDateTimeWithEndDateTimeRequestB_7a94bd80 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

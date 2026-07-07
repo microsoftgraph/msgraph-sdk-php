@@ -40,11 +40,11 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceScopes for identityGovernance
-     * @param AccessPackageResourceScopeItemRequestBuilderDeleteReque_e94723aa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AccessPackageResourceScopeItemRequestBuilderDeleteReque_e94723aa $requestConfiguration = null): Promise {
+    public function delete(?AccessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get resourceScopes from identityGovernance
-     * @param AccessPackageResourceScopeItemRequestBuilderGetRequestC_7d4f7e7e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceScope|null>
      * @throws Exception
     */
-    public function get(?AccessPackageResourceScopeItemRequestBuilderGetRequestC_7d4f7e7e $requestConfiguration = null): Promise {
+    public function get(?AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceScopes in identityGovernance
      * @param AccessPackageResourceScope $body The request body
-     * @param AccessPackageResourceScopeItemRequestBuilderPatchReques_c1eb615c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceScope|null>
      * @throws Exception
     */
-    public function patch(AccessPackageResourceScope $body, ?AccessPackageResourceScopeItemRequestBuilderPatchReques_c1eb615c $requestConfiguration = null): Promise {
+    public function patch(AccessPackageResourceScope $body, ?AccessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceScopes for identityGovernance
-     * @param AccessPackageResourceScopeItemRequestBuilderDeleteReque_e94723aa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessPackageResourceScopeItemRequestBuilderDeleteReque_e94723aa $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessPackageResourceScopeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get resourceScopes from identityGovernance
-     * @param AccessPackageResourceScopeItemRequestBuilderGetRequestC_7d4f7e7e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackageResourceScopeItemRequestBuilderGetRequestC_7d4f7e7e $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackageResourceScopeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceScopes in identityGovernance
      * @param AccessPackageResourceScope $body The request body
-     * @param AccessPackageResourceScopeItemRequestBuilderPatchReques_c1eb615c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessPackageResourceScope $body, ?AccessPackageResourceScopeItemRequestBuilderPatchReques_c1eb615c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AccessPackageResourceScope $body, ?AccessPackageResourceScopeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

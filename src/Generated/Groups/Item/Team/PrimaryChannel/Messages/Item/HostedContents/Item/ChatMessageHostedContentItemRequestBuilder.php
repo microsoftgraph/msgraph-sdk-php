@@ -40,11 +40,11 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property hostedContents for groups
-     * @param ChatMessageHostedContentItemRequestBuilderDeleteRequest_0ed74d66|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ChatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ChatMessageHostedContentItemRequestBuilderDeleteRequest_0ed74d66 $requestConfiguration = null): Promise {
+    public function delete(?ChatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
-     * @param ChatMessageHostedContentItemRequestBuilderGetRequestCon_96800328|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessageHostedContent|null>
      * @throws Exception
     */
-    public function get(?ChatMessageHostedContentItemRequestBuilderGetRequestCon_96800328 $requestConfiguration = null): Promise {
+    public function get(?ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property hostedContents in groups
      * @param ChatMessageHostedContent $body The request body
-     * @param ChatMessageHostedContentItemRequestBuilderPatchRequestC_68abf659|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ChatMessageHostedContent|null>
      * @throws Exception
     */
-    public function patch(ChatMessageHostedContent $body, ?ChatMessageHostedContentItemRequestBuilderPatchRequestC_68abf659 $requestConfiguration = null): Promise {
+    public function patch(ChatMessageHostedContent $body, ?ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property hostedContents for groups
-     * @param ChatMessageHostedContentItemRequestBuilderDeleteRequest_0ed74d66|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ChatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ChatMessageHostedContentItemRequestBuilderDeleteRequest_0ed74d66 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ChatMessageHostedContentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
-     * @param ChatMessageHostedContentItemRequestBuilderGetRequestCon_96800328|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ChatMessageHostedContentItemRequestBuilderGetRequestCon_96800328 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class ChatMessageHostedContentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property hostedContents in groups
      * @param ChatMessageHostedContent $body The request body
-     * @param ChatMessageHostedContentItemRequestBuilderPatchRequestC_68abf659|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ChatMessageHostedContent $body, ?ChatMessageHostedContentItemRequestBuilderPatchRequestC_68abf659 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ChatMessageHostedContent $body, ?ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

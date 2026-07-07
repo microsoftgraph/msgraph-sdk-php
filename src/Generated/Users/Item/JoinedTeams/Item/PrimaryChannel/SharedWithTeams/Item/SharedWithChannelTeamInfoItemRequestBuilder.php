@@ -48,11 +48,11 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharedWithTeams for users
-     * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteReques_3afe3b39|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SharedWithChannelTeamInfoItemRequestBuilderDeleteReques_3afe3b39 $requestConfiguration = null): Promise {
+    public function delete(?SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of teams with which a channel is shared.
-     * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestCo_1d5b8884|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharedWithChannelTeamInfo|null>
      * @throws Exception
     */
-    public function get(?SharedWithChannelTeamInfoItemRequestBuilderGetRequestCo_1d5b8884 $requestConfiguration = null): Promise {
+    public function get(?SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,11 +77,11 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property sharedWithTeams in users
      * @param SharedWithChannelTeamInfo $body The request body
-     * @param SharedWithChannelTeamInfoItemRequestBuilderPatchRequest_f233dfff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharedWithChannelTeamInfo|null>
      * @throws Exception
     */
-    public function patch(SharedWithChannelTeamInfo $body, ?SharedWithChannelTeamInfoItemRequestBuilderPatchRequest_f233dfff $requestConfiguration = null): Promise {
+    public function patch(SharedWithChannelTeamInfo $body, ?SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -91,10 +91,10 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharedWithTeams for users
-     * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteReques_3afe3b39|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SharedWithChannelTeamInfoItemRequestBuilderDeleteReques_3afe3b39 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SharedWithChannelTeamInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -109,10 +109,10 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of teams with which a channel is shared.
-     * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestCo_1d5b8884|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SharedWithChannelTeamInfoItemRequestBuilderGetRequestCo_1d5b8884 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SharedWithChannelTeamInfoItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -131,10 +131,10 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property sharedWithTeams in users
      * @param SharedWithChannelTeamInfo $body The request body
-     * @param SharedWithChannelTeamInfoItemRequestBuilderPatchRequest_f233dfff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SharedWithChannelTeamInfo $body, ?SharedWithChannelTeamInfoItemRequestBuilderPatchRequest_f233dfff $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SharedWithChannelTeamInfo $body, ?SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

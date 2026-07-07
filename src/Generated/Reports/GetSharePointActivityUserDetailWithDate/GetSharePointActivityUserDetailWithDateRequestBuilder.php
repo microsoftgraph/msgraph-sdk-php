@@ -36,12 +36,12 @@ class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseRequestB
 
     /**
      * Get details about SharePoint activity by user.
-     * @param GetSharePointActivityUserDetailWithDateRequestBuilderGe_7b77174d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointactivityuserdetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointActivityUserDetailWithDateRequestBuilderGe_7b77174d $requestConfiguration = null): Promise {
+    public function get(?GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -53,10 +53,10 @@ class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseRequestB
 
     /**
      * Get details about SharePoint activity by user.
-     * @param GetSharePointActivityUserDetailWithDateRequestBuilderGe_7b77174d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointActivityUserDetailWithDateRequestBuilderGe_7b77174d $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

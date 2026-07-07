@@ -6,21 +6,16 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\AccessPackageAssignmentApprovalsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\AccessPackagesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageSuggestions\AccessPackageSuggestionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentPolicies\AssignmentPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\AssignmentRequestsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AvailableAccessPackages\AvailableAccessPackagesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\CatalogsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\ConnectedOrganizationsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ControlConfigurations\ControlConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceEnvironments\ResourceEnvironmentsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRequests\ResourceRequestsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\ResourceRoleScopesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Settings\SettingsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Subjects\SubjectsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\SubjectsWithObjectId\SubjectsWithObjectIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\EntitlementManagement;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -48,13 +43,6 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the accessPackageSuggestions property of the microsoft.graph.entitlementManagement entity.
-    */
-    public function accessPackageSuggestions(): AccessPackageSuggestionsRequestBuilder {
-        return new AccessPackageSuggestionsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the assignmentPolicies property of the microsoft.graph.entitlementManagement entity.
     */
     public function assignmentPolicies(): AssignmentPoliciesRequestBuilder {
@@ -76,13 +64,6 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the availableAccessPackages property of the microsoft.graph.entitlementManagement entity.
-    */
-    public function availableAccessPackages(): AvailableAccessPackagesRequestBuilder {
-        return new AvailableAccessPackagesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
     */
     public function catalogs(): CatalogsRequestBuilder {
@@ -94,13 +75,6 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
     */
     public function connectedOrganizations(): ConnectedOrganizationsRequestBuilder {
         return new ConnectedOrganizationsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the controlConfigurations property of the microsoft.graph.entitlementManagement entity.
-    */
-    public function controlConfigurations(): ControlConfigurationsRequestBuilder {
-        return new ControlConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -136,13 +110,6 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
     */
     public function settings(): SettingsRequestBuilder {
         return new SettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
-    */
-    public function subjects(): SubjectsRequestBuilder {
-        return new SubjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -200,15 +167,6 @@ class EntitlementManagementRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [EntitlementManagement::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Provides operations to manage the subjects property of the microsoft.graph.entitlementManagement entity.
-     * @param string $objectId Alternate key of accessPackageSubject
-     * @return SubjectsWithObjectIdRequestBuilder
-    */
-    public function subjectsWithObjectId(string $objectId): SubjectsWithObjectIdRequestBuilder {
-        return new SubjectsWithObjectIdRequestBuilder($this->pathParameters, $this->requestAdapter, $objectId);
     }
 
     /**

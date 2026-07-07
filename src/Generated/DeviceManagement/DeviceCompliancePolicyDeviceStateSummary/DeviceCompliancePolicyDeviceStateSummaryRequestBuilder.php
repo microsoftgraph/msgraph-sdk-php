@@ -32,11 +32,11 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property deviceCompliancePolicyDeviceStateSummary for deviceManagement
-     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderD_2792e6ae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderD_2792e6ae $requestConfiguration = null): Promise {
+    public function delete(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
 
     /**
      * The device compliance state summary for this account.
-     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderG_d0f94b34|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyDeviceStateSummary|null>
      * @throws Exception
     */
-    public function get(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderG_d0f94b34 $requestConfiguration = null): Promise {
+    public function get(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
     /**
      * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param DeviceCompliancePolicyDeviceStateSummary $body The request body
-     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderP_29f28600|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyDeviceStateSummary|null>
      * @throws Exception
     */
-    public function patch(DeviceCompliancePolicyDeviceStateSummary $body, ?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderP_29f28600 $requestConfiguration = null): Promise {
+    public function patch(DeviceCompliancePolicyDeviceStateSummary $body, ?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property deviceCompliancePolicyDeviceStateSummary for deviceManagement
-     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderD_2792e6ae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderD_2792e6ae $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
 
     /**
      * The device compliance state summary for this account.
-     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderG_d0f94b34|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderG_d0f94b34 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequest
     /**
      * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param DeviceCompliancePolicyDeviceStateSummary $body The request body
-     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderP_29f28600|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceCompliancePolicyDeviceStateSummary $body, ?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderP_29f28600 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceCompliancePolicyDeviceStateSummary $body, ?DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

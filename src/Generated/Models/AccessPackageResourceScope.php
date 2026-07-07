@@ -77,7 +77,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the originId property value. The unique identifier of the resource in the origin system. If a Microsoft Entra group, originId is the identifier of the group. Supports $filter (eq).
+     * Gets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @return string|null
     */
     public function getOriginId(): ?string {
@@ -89,7 +89,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup, AzureResources, or CustomDataProvidedResource. Supports $filter (eq).
+     * Gets the originSystem property value. The origin system for the scope.
      * @return string|null
     */
     public function getOriginSystem(): ?string {
@@ -151,7 +151,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the originId property value. The unique identifier of the resource in the origin system. If a Microsoft Entra group, originId is the identifier of the group. Supports $filter (eq).
+     * Sets the originId property value. The unique identifier for the scope in the resource as defined in the origin system.
      * @param string|null $value Value to set for the originId property.
     */
     public function setOriginId(?string $value): void {
@@ -159,7 +159,7 @@ class AccessPackageResourceScope extends Entity implements Parsable
     }
 
     /**
-     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup, AzureResources, or CustomDataProvidedResource. Supports $filter (eq).
+     * Sets the originSystem property value. The origin system for the scope.
      * @param string|null $value Value to set for the originSystem property.
     */
     public function setOriginSystem(?string $value): void {

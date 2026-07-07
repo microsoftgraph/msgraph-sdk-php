@@ -63,12 +63,12 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.
-     * @param RoleAssignmentScheduleRequestsRequestBuilderGetRequestC_e1cd74d1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentScheduleRequestCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedulerequests?view=graph-rest-1.0 Find more info here
     */
-    public function get(?RoleAssignmentScheduleRequestsRequestBuilderGetRequestC_e1cd74d1 $requestConfiguration = null): Promise {
+    public function get(?RoleAssignmentScheduleRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     /**
      * In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object: To call this API to update, renew, and extend assignments for yourself, you must have multifactor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Microsoft Entra multifactor authentication to secure sign-in events.
      * @param UnifiedRoleAssignmentScheduleRequest $body The request body
-     * @param RoleAssignmentScheduleRequestsRequestBuilderPostRequest_37839fcb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentScheduleRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/rbacapplication-post-roleassignmentschedulerequests?view=graph-rest-1.0 Find more info here
     */
-    public function post(UnifiedRoleAssignmentScheduleRequest $body, ?RoleAssignmentScheduleRequestsRequestBuilderPostRequest_37839fcb $requestConfiguration = null): Promise {
+    public function post(UnifiedRoleAssignmentScheduleRequest $body, ?RoleAssignmentScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.
-     * @param RoleAssignmentScheduleRequestsRequestBuilderGetRequestC_e1cd74d1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RoleAssignmentScheduleRequestsRequestBuilderGetRequestC_e1cd74d1 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RoleAssignmentScheduleRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class RoleAssignmentScheduleRequestsRequestBuilder extends BaseRequestBuilder
     /**
      * In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object: To call this API to update, renew, and extend assignments for yourself, you must have multifactor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Microsoft Entra multifactor authentication to secure sign-in events.
      * @param UnifiedRoleAssignmentScheduleRequest $body The request body
-     * @param RoleAssignmentScheduleRequestsRequestBuilderPostRequest_37839fcb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleAssignmentScheduleRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UnifiedRoleAssignmentScheduleRequest $body, ?RoleAssignmentScheduleRequestsRequestBuilderPostRequest_37839fcb $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UnifiedRoleAssignmentScheduleRequest $body, ?RoleAssignmentScheduleRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

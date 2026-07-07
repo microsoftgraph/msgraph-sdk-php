@@ -36,12 +36,12 @@ class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseRequestBui
 
     /**
      * Get details about Yammer groups activity by group.
-     * @param GetYammerGroupsActivityDetailWithDateRequestBuilderGetR_c2dacc4c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getyammergroupsactivitydetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetYammerGroupsActivityDetailWithDateRequestBuilderGetR_c2dacc4c $requestConfiguration = null): Promise {
+    public function get(?GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -53,10 +53,10 @@ class GetYammerGroupsActivityDetailWithDateRequestBuilder extends BaseRequestBui
 
     /**
      * Get details about Yammer groups activity by group.
-     * @param GetYammerGroupsActivityDetailWithDateRequestBuilderGetR_c2dacc4c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetYammerGroupsActivityDetailWithDateRequestBuilderGetR_c2dacc4c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetYammerGroupsActivityDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

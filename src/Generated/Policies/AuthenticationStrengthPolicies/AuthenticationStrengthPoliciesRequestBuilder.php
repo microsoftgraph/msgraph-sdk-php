@@ -53,12 +53,12 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
-     * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestC_fbb5675b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthPolicyCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationStrengthPoliciesRequestBuilderGetRequestC_fbb5675b $requestConfiguration = null): Promise {
+    public function get(?AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new custom authenticationStrengthPolicy object.
      * @param AuthenticationStrengthPolicy $body The request body
-     * @param AuthenticationStrengthPoliciesRequestBuilderPostRequest_83c1385e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0 Find more info here
     */
-    public function post(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPoliciesRequestBuilderPostRequest_83c1385e $requestConfiguration = null): Promise {
+    public function post(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
-     * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestC_fbb5675b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationStrengthPoliciesRequestBuilderGetRequestC_fbb5675b $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationStrengthPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new custom authenticationStrengthPolicy object.
      * @param AuthenticationStrengthPolicy $body The request body
-     * @param AuthenticationStrengthPoliciesRequestBuilderPostRequest_83c1385e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPoliciesRequestBuilderPostRequest_83c1385e $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

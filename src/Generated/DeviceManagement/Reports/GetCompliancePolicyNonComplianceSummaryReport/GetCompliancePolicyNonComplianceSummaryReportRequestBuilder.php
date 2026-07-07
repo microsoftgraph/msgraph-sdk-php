@@ -33,11 +33,11 @@ class GetCompliancePolicyNonComplianceSummaryReportRequestBuilder extends BaseRe
     /**
      * Invoke action getCompliancePolicyNonComplianceSummaryReport
      * @param GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body The request body
-     * @param GetCompliancePolicyNonComplianceSummaryReportRequestBui_31eb092b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function post(GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body, ?GetCompliancePolicyNonComplianceSummaryReportRequestBui_31eb092b $requestConfiguration = null): Promise {
+    public function post(GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body, ?GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class GetCompliancePolicyNonComplianceSummaryReportRequestBuilder extends BaseRe
     /**
      * Invoke action getCompliancePolicyNonComplianceSummaryReport
      * @param GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body The request body
-     * @param GetCompliancePolicyNonComplianceSummaryReportRequestBui_31eb092b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body, ?GetCompliancePolicyNonComplianceSummaryReportRequestBui_31eb092b $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetCompliancePolicyNonComplianceSummaryReportPostRequestBody $body, ?GetCompliancePolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

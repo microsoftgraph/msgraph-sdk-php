@@ -19,5 +19,4 @@ class ServiceSource extends Enum {
     public const MICROSOFT_SENTINEL = "microsoftSentinel";
     public const MICROSOFT_INSIDER_RISK_MANAGEMENT = "microsoftInsiderRiskManagement";
     public const MICROSOFT_THREAT_INTELLIGENCE = "microsoftThreatIntelligence";
-    public const MICROSOFT_SECURITY_FOR_A_I = "microsoftSecurityForAI";
 }

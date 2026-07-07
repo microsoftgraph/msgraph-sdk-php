@@ -208,7 +208,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status of the relationship. Read-only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
+     * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      * @return DelegatedAdminRelationshipStatus|null
     */
     public function getStatus(): ?DelegatedAdminRelationshipStatus {
@@ -337,7 +337,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status of the relationship. Read-only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
+     * Sets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
      * @param DelegatedAdminRelationshipStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DelegatedAdminRelationshipStatus $value): void {

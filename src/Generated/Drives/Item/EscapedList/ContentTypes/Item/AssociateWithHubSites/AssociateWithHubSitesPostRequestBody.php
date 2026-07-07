@@ -24,7 +24,6 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setPropagateToExistingLists(false);
     }
 
     /**

@@ -38,7 +38,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Provide credentials for establishing connectivity with the target system and store them in the synchronization resource.
+     * Provide credentials for establishing connectivity with the target system.
      * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SecretsPutResponse|null>
@@ -54,7 +54,7 @@ class SecretsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Provide credentials for establishing connectivity with the target system and store them in the synchronization resource.
+     * Provide credentials for establishing connectivity with the target system.
      * @param SecretsPutRequestBody $body The request body
      * @param SecretsRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

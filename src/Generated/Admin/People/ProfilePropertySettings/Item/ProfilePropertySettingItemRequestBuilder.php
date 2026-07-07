@@ -32,12 +32,12 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a profilePropertySetting object.
-     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/profilepropertysetting-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c $requestConfiguration = null): Promise {
+    public function delete(?ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a profilePropertySetting object.
      * @param ProfilePropertySetting $body The request body
-     * @param ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProfilePropertySetting|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/profilepropertysetting-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06 $requestConfiguration = null): Promise {
+    public function patch(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a profilePropertySetting object.
-     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ProfilePropertySettingItemRequestBuilderDeleteRequestCo_6421911c $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ProfilePropertySettingItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class ProfilePropertySettingItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a profilePropertySetting object.
      * @param ProfilePropertySetting $body The request body
-     * @param ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestCon_d6fd7f06 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ProfilePropertySetting $body, ?ProfilePropertySettingItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

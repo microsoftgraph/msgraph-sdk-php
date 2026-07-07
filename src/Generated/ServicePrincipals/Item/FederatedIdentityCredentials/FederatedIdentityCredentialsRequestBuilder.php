@@ -53,11 +53,11 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @param FederatedIdentityCredentialsRequestBuilderGetRequestCon_21e5dc7c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredentialCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?FederatedIdentityCredentialsRequestBuilderGetRequestCon_21e5dc7c $requestConfiguration = null): Promise {
+    public function get(?FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to federatedIdentityCredentials for servicePrincipals
      * @param FederatedIdentityCredential $body The request body
-     * @param FederatedIdentityCredentialsRequestBuilderPostRequestCo_1eb4f8d0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FederatedIdentityCredential|null>
      * @throws Exception
     */
-    public function post(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestCo_1eb4f8d0 $requestConfiguration = null): Promise {
+    public function post(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Federated identities for a specific type of service principal - managed identity. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @param FederatedIdentityCredentialsRequestBuilderGetRequestCon_21e5dc7c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FederatedIdentityCredentialsRequestBuilderGetRequestCon_21e5dc7c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to federatedIdentityCredentials for servicePrincipals
      * @param FederatedIdentityCredential $body The request body
-     * @param FederatedIdentityCredentialsRequestBuilderPostRequestCo_1eb4f8d0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestCo_1eb4f8d0 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

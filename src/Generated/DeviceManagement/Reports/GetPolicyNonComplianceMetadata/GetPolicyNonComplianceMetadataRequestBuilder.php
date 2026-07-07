@@ -33,11 +33,11 @@ class GetPolicyNonComplianceMetadataRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action getPolicyNonComplianceMetadata
      * @param GetPolicyNonComplianceMetadataPostRequestBody $body The request body
-     * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequest_81dfc7fe|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function post(GetPolicyNonComplianceMetadataPostRequestBody $body, ?GetPolicyNonComplianceMetadataRequestBuilderPostRequest_81dfc7fe $requestConfiguration = null): Promise {
+    public function post(GetPolicyNonComplianceMetadataPostRequestBody $body, ?GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class GetPolicyNonComplianceMetadataRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action getPolicyNonComplianceMetadata
      * @param GetPolicyNonComplianceMetadataPostRequestBody $body The request body
-     * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequest_81dfc7fe|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetPolicyNonComplianceMetadataPostRequestBody $body, ?GetPolicyNonComplianceMetadataRequestBuilderPostRequest_81dfc7fe $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetPolicyNonComplianceMetadataPostRequestBody $body, ?GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

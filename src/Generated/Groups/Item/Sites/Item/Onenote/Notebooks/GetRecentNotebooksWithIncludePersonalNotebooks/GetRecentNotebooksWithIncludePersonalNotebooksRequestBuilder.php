@@ -34,12 +34,12 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extends BaseR
 
     /**
      * Get a list of recentNotebook instances that have been accessed by the signed-in user.
-     * @param GetRecentNotebooksWithIncludePersonalNotebooksRequestBu_fcb1070d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetRecentNotebooksWithIncludePersonalNotebooksGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/notebook-getrecentnotebooks?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetRecentNotebooksWithIncludePersonalNotebooksRequestBu_fcb1070d $requestConfiguration = null): Promise {
+    public function get(?GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extends BaseR
 
     /**
      * Get a list of recentNotebook instances that have been accessed by the signed-in user.
-     * @param GetRecentNotebooksWithIncludePersonalNotebooksRequestBu_fcb1070d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetRecentNotebooksWithIncludePersonalNotebooksRequestBu_fcb1070d $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

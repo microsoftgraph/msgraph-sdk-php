@@ -32,12 +32,12 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a bookingStaffMember in the specified bookingBusiness.
-     * @param BookingStaffMemberBaseItemRequestBuilderDeleteRequestCo_4343dfb8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param BookingStaffMemberBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/bookingstaffmember-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?BookingStaffMemberBaseItemRequestBuilderDeleteRequestCo_4343dfb8 $requestConfiguration = null): Promise {
+    public function delete(?BookingStaffMemberBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param BookingStaffMemberBase $body The request body
-     * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestCon_67c82277|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BookingStaffMemberBase|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/bookingstaffmember-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(BookingStaffMemberBase $body, ?BookingStaffMemberBaseItemRequestBuilderPatchRequestCon_67c82277 $requestConfiguration = null): Promise {
+    public function patch(BookingStaffMemberBase $body, ?BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a bookingStaffMember in the specified bookingBusiness.
-     * @param BookingStaffMemberBaseItemRequestBuilderDeleteRequestCo_4343dfb8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param BookingStaffMemberBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?BookingStaffMemberBaseItemRequestBuilderDeleteRequestCo_4343dfb8 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?BookingStaffMemberBaseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class BookingStaffMemberBaseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a bookingStaffMember in the specified bookingBusiness.
      * @param BookingStaffMemberBase $body The request body
-     * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestCon_67c82277|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(BookingStaffMemberBase $body, ?BookingStaffMemberBaseItemRequestBuilderPatchRequestCon_67c82277 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(BookingStaffMemberBase $body, ?BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

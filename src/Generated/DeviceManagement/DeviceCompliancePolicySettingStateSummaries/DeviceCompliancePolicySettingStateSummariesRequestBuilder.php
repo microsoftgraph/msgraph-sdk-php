@@ -53,11 +53,11 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends BaseRequ
 
     /**
      * The summary states of compliance policy settings for this account.
-     * @param DeviceCompliancePolicySettingStateSummariesRequestBuild_38b3b381|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicySettingStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicySettingStateSummaryCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DeviceCompliancePolicySettingStateSummariesRequestBuild_38b3b381 $requestConfiguration = null): Promise {
+    public function get(?DeviceCompliancePolicySettingStateSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
      * @param DeviceCompliancePolicySettingStateSummary $body The request body
-     * @param DeviceCompliancePolicySettingStateSummariesRequestBuild_4f2a27db|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicySettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicySettingStateSummary|null>
      * @throws Exception
     */
-    public function post(DeviceCompliancePolicySettingStateSummary $body, ?DeviceCompliancePolicySettingStateSummariesRequestBuild_4f2a27db $requestConfiguration = null): Promise {
+    public function post(DeviceCompliancePolicySettingStateSummary $body, ?DeviceCompliancePolicySettingStateSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends BaseRequ
 
     /**
      * The summary states of compliance policy settings for this account.
-     * @param DeviceCompliancePolicySettingStateSummariesRequestBuild_38b3b381|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicySettingStateSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceCompliancePolicySettingStateSummariesRequestBuild_38b3b381 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceCompliancePolicySettingStateSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
      * @param DeviceCompliancePolicySettingStateSummary $body The request body
-     * @param DeviceCompliancePolicySettingStateSummariesRequestBuild_4f2a27db|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicySettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DeviceCompliancePolicySettingStateSummary $body, ?DeviceCompliancePolicySettingStateSummariesRequestBuild_4f2a27db $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DeviceCompliancePolicySettingStateSummary $body, ?DeviceCompliancePolicySettingStateSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

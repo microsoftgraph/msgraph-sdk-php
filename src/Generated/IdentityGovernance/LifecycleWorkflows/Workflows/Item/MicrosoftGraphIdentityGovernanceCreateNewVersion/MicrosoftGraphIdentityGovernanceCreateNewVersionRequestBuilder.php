@@ -33,12 +33,12 @@ class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder extends Bas
     /**
      * Create a new version of the workflow object.
      * @param CreateNewVersionPostRequestBody $body The request body
-     * @param MicrosoftGraphIdentityGovernanceCreateNewVersionRequest_b395d4e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Workflow|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitygovernance-workflow-createnewversion?view=graph-rest-1.0 Find more info here
     */
-    public function post(CreateNewVersionPostRequestBody $body, ?MicrosoftGraphIdentityGovernanceCreateNewVersionRequest_b395d4e0 $requestConfiguration = null): Promise {
+    public function post(CreateNewVersionPostRequestBody $body, ?MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder extends Bas
     /**
      * Create a new version of the workflow object.
      * @param CreateNewVersionPostRequestBody $body The request body
-     * @param MicrosoftGraphIdentityGovernanceCreateNewVersionRequest_b395d4e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(CreateNewVersionPostRequestBody $body, ?MicrosoftGraphIdentityGovernanceCreateNewVersionRequest_b395d4e0 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(CreateNewVersionPostRequestBody $body, ?MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

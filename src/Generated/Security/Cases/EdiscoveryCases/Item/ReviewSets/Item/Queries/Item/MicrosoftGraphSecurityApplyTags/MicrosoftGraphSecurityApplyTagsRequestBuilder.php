@@ -32,12 +32,12 @@ class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBuilder
     /**
      * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
      * @param ApplyTagsPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityApplyTagsRequestBuilderPostReques_e1adc678|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityApplyTagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoveryreviewsetquery-applytags?view=graph-rest-1.0 Find more info here
     */
-    public function post(ApplyTagsPostRequestBody $body, ?MicrosoftGraphSecurityApplyTagsRequestBuilderPostReques_e1adc678 $requestConfiguration = null): Promise {
+    public function post(ApplyTagsPostRequestBody $body, ?MicrosoftGraphSecurityApplyTagsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphSecurityApplyTagsRequestBuilder extends BaseRequestBuilder
     /**
      * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
      * @param ApplyTagsPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityApplyTagsRequestBuilderPostReques_e1adc678|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityApplyTagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ApplyTagsPostRequestBody $body, ?MicrosoftGraphSecurityApplyTagsRequestBuilderPostReques_e1adc678 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ApplyTagsPostRequestBody $body, ?MicrosoftGraphSecurityApplyTagsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

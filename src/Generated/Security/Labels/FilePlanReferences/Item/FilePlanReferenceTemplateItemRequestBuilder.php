@@ -32,12 +32,12 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a filePlanReferenceTemplate object.
-     * @param FilePlanReferenceTemplateItemRequestBuilderDeleteReques_94d5f1ab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-labelsroot-delete-fileplanreferences?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?FilePlanReferenceTemplateItemRequestBuilderDeleteReques_94d5f1ab $requestConfiguration = null): Promise {
+    public function delete(?FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a filePlanReferenceTemplate object.
-     * @param FilePlanReferenceTemplateItemRequestBuilderGetRequestCo_2269ad99|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilePlanReferenceTemplate|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?FilePlanReferenceTemplateItemRequestBuilderGetRequestCo_2269ad99 $requestConfiguration = null): Promise {
+    public function get(?FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property filePlanReferences in security
      * @param FilePlanReferenceTemplate $body The request body
-     * @param FilePlanReferenceTemplateItemRequestBuilderPatchRequest_547b581f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FilePlanReferenceTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilePlanReferenceTemplate|null>
      * @throws Exception
     */
-    public function patch(FilePlanReferenceTemplate $body, ?FilePlanReferenceTemplateItemRequestBuilderPatchRequest_547b581f $requestConfiguration = null): Promise {
+    public function patch(FilePlanReferenceTemplate $body, ?FilePlanReferenceTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a filePlanReferenceTemplate object.
-     * @param FilePlanReferenceTemplateItemRequestBuilderDeleteReques_94d5f1ab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?FilePlanReferenceTemplateItemRequestBuilderDeleteReques_94d5f1ab $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?FilePlanReferenceTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a filePlanReferenceTemplate object.
-     * @param FilePlanReferenceTemplateItemRequestBuilderGetRequestCo_2269ad99|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FilePlanReferenceTemplateItemRequestBuilderGetRequestCo_2269ad99 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FilePlanReferenceTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property filePlanReferences in security
      * @param FilePlanReferenceTemplate $body The request body
-     * @param FilePlanReferenceTemplateItemRequestBuilderPatchRequest_547b581f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FilePlanReferenceTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(FilePlanReferenceTemplate $body, ?FilePlanReferenceTemplateItemRequestBuilderPatchRequest_547b581f $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(FilePlanReferenceTemplate $body, ?FilePlanReferenceTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

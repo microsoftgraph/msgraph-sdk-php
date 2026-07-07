@@ -36,12 +36,12 @@ class GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder extends Bas
 
     /**
      * Get details about Skype for Business device usage by user.
-     * @param GetSkypeForBusinessDeviceUsageUserDetailWithDateRequest_24214aa3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getskypeforbusinessdeviceusageuserdetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSkypeForBusinessDeviceUsageUserDetailWithDateRequest_24214aa3 $requestConfiguration = null): Promise {
+    public function get(?GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -53,10 +53,10 @@ class GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder extends Bas
 
     /**
      * Get details about Skype for Business device usage by user.
-     * @param GetSkypeForBusinessDeviceUsageUserDetailWithDateRequest_24214aa3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSkypeForBusinessDeviceUsageUserDetailWithDateRequest_24214aa3 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -69,11 +69,11 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
      * @param DomainDnsRecord $body The request body
-     * @param ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DomainDnsRecord|null>
      * @throws Exception
     */
-    public function post(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02 $requestConfiguration = null): Promise {
+    public function post(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -105,10 +105,10 @@ class ServiceConfigurationRecordsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
      * @param DomainDnsRecord $body The request body
-     * @param ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestCon_25a5bb02 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DomainDnsRecord $body, ?ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

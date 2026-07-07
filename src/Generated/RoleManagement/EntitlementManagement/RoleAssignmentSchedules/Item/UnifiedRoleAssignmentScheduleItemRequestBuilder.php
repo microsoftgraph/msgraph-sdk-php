@@ -72,11 +72,11 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property roleAssignmentSchedules for roleManagement
-     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRe_daff3d9c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRe_daff3d9c $requestConfiguration = null): Promise {
+    public function delete(?UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,11 +86,11 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Schedules for active role assignment operations.
-     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderGetReque_840013ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentSchedule|null>
      * @throws Exception
     */
-    public function get(?UnifiedRoleAssignmentScheduleItemRequestBuilderGetReque_840013ff $requestConfiguration = null): Promise {
+    public function get(?UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -101,11 +101,11 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
      * @param UnifiedRoleAssignmentSchedule $body The request body
-     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchReq_f5a7156d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleAssignmentSchedule|null>
      * @throws Exception
     */
-    public function patch(UnifiedRoleAssignmentSchedule $body, ?UnifiedRoleAssignmentScheduleItemRequestBuilderPatchReq_f5a7156d $requestConfiguration = null): Promise {
+    public function patch(UnifiedRoleAssignmentSchedule $body, ?UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -115,10 +115,10 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property roleAssignmentSchedules for roleManagement
-     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRe_daff3d9c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRe_daff3d9c $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UnifiedRoleAssignmentScheduleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -133,10 +133,10 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Schedules for active role assignment operations.
-     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderGetReque_840013ff|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UnifiedRoleAssignmentScheduleItemRequestBuilderGetReque_840013ff $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UnifiedRoleAssignmentScheduleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -155,10 +155,10 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
      * @param UnifiedRoleAssignmentSchedule $body The request body
-     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchReq_f5a7156d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UnifiedRoleAssignmentSchedule $body, ?UnifiedRoleAssignmentScheduleItemRequestBuilderPatchReq_f5a7156d $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UnifiedRoleAssignmentSchedule $body, ?UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

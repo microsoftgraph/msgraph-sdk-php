@@ -32,11 +32,11 @@ class SimulationAutomationRunItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property runs for security
-     * @param SimulationAutomationRunItemRequestBuilderDeleteRequestC_6a2c6502|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SimulationAutomationRunItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SimulationAutomationRunItemRequestBuilderDeleteRequestC_6a2c6502 $requestConfiguration = null): Promise {
+    public function delete(?SimulationAutomationRunItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class SimulationAutomationRunItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property runs in security
      * @param SimulationAutomationRun $body The request body
-     * @param SimulationAutomationRunItemRequestBuilderPatchRequestCo_7225d503|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SimulationAutomationRun|null>
      * @throws Exception
     */
-    public function patch(SimulationAutomationRun $body, ?SimulationAutomationRunItemRequestBuilderPatchRequestCo_7225d503 $requestConfiguration = null): Promise {
+    public function patch(SimulationAutomationRun $body, ?SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class SimulationAutomationRunItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property runs for security
-     * @param SimulationAutomationRunItemRequestBuilderDeleteRequestC_6a2c6502|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SimulationAutomationRunItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SimulationAutomationRunItemRequestBuilderDeleteRequestC_6a2c6502 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SimulationAutomationRunItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class SimulationAutomationRunItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property runs in security
      * @param SimulationAutomationRun $body The request body
-     * @param SimulationAutomationRunItemRequestBuilderPatchRequestCo_7225d503|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SimulationAutomationRun $body, ?SimulationAutomationRunItemRequestBuilderPatchRequestCo_7225d503 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SimulationAutomationRun $body, ?SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

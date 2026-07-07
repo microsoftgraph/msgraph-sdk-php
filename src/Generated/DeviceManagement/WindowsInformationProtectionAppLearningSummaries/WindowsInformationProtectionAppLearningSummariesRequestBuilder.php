@@ -53,11 +53,11 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
 
     /**
      * The windows information protection app learning summaries.
-     * @param WindowsInformationProtectionAppLearningSummariesRequest_31b60079|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLearningSummaryCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?WindowsInformationProtectionAppLearningSummariesRequest_31b60079 $requestConfiguration = null): Promise {
+    public function get(?WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     /**
      * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param WindowsInformationProtectionAppLearningSummary $body The request body
-     * @param WindowsInformationProtectionAppLearningSummariesRequest_f48e635c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLearningSummary|null>
      * @throws Exception
     */
-    public function post(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummariesRequest_f48e635c $requestConfiguration = null): Promise {
+    public function post(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
 
     /**
      * The windows information protection app learning summaries.
-     * @param WindowsInformationProtectionAppLearningSummariesRequest_31b60079|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WindowsInformationProtectionAppLearningSummariesRequest_31b60079 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WindowsInformationProtectionAppLearningSummariesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder extends Bas
     /**
      * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
      * @param WindowsInformationProtectionAppLearningSummary $body The request body
-     * @param WindowsInformationProtectionAppLearningSummariesRequest_f48e635c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummariesRequest_f48e635c $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,12 +32,12 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Deletes a permissionGrantConditionSet from the excludes collection of a permissionGrantPolicy.
-     * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequ_0e0ac440|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete-excludes?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?PermissionGrantConditionSetItemRequestBuilderDeleteRequ_0e0ac440 $requestConfiguration = null): Promise {
+    public function delete(?PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
-     * @param PermissionGrantConditionSetItemRequestBuilderGetRequest_718d77de|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionGrantConditionSet|null>
      * @throws Exception
     */
-    public function get(?PermissionGrantConditionSetItemRequestBuilderGetRequest_718d77de $requestConfiguration = null): Promise {
+    public function get(?PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property excludes in policies
      * @param PermissionGrantConditionSet $body The request body
-     * @param PermissionGrantConditionSetItemRequestBuilderPatchReque_17c76d83|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PermissionGrantConditionSet|null>
      * @throws Exception
     */
-    public function patch(PermissionGrantConditionSet $body, ?PermissionGrantConditionSetItemRequestBuilderPatchReque_17c76d83 $requestConfiguration = null): Promise {
+    public function patch(PermissionGrantConditionSet $body, ?PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Deletes a permissionGrantConditionSet from the excludes collection of a permissionGrantPolicy.
-     * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequ_0e0ac440|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PermissionGrantConditionSetItemRequestBuilderDeleteRequ_0e0ac440 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Condition sets that are excluded in this permission grant policy. Automatically expanded on GET.
-     * @param PermissionGrantConditionSetItemRequestBuilderGetRequest_718d77de|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?PermissionGrantConditionSetItemRequestBuilderGetRequest_718d77de $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?PermissionGrantConditionSetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property excludes in policies
      * @param PermissionGrantConditionSet $body The request body
-     * @param PermissionGrantConditionSetItemRequestBuilderPatchReque_17c76d83|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(PermissionGrantConditionSet $body, ?PermissionGrantConditionSetItemRequestBuilderPatchReque_17c76d83 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(PermissionGrantConditionSet $body, ?PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

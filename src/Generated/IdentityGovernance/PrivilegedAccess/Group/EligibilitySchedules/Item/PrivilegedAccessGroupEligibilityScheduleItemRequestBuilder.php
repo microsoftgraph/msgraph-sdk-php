@@ -48,11 +48,11 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
 
     /**
      * Delete navigation property eligibilitySchedules for identityGovernance
-     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_521ecabf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_521ecabf $requestConfiguration = null): Promise {
+    public function delete(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
 
     /**
      * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
-     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_7da6e110|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilitySchedule|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupeligibilityschedule-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_7da6e110 $requestConfiguration = null): Promise {
+    public function get(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property eligibilitySchedules in identityGovernance
      * @param PrivilegedAccessGroupEligibilitySchedule $body The request body
-     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_e151418f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilitySchedule|null>
      * @throws Exception
     */
-    public function patch(PrivilegedAccessGroupEligibilitySchedule $body, ?PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_e151418f $requestConfiguration = null): Promise {
+    public function patch(PrivilegedAccessGroupEligibilitySchedule $body, ?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
 
     /**
      * Delete navigation property eligibilitySchedules for identityGovernance
-     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_521ecabf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_521ecabf $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -110,10 +110,10 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
 
     /**
      * Read the properties and relationships of a privilegedAccessGroupEligibilitySchedule object.
-     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_7da6e110|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_7da6e110 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -132,10 +132,10 @@ class PrivilegedAccessGroupEligibilityScheduleItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property eligibilitySchedules in identityGovernance
      * @param PrivilegedAccessGroupEligibilitySchedule $body The request body
-     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_e151418f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(PrivilegedAccessGroupEligibilitySchedule $body, ?PrivilegedAccessGroupEligibilityScheduleItemRequestBuil_e151418f $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(PrivilegedAccessGroupEligibilitySchedule $body, ?PrivilegedAccessGroupEligibilityScheduleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

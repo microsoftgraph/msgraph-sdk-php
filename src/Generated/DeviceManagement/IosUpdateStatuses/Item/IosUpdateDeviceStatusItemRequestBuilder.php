@@ -32,11 +32,11 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property iosUpdateStatuses for deviceManagement
-     * @param IosUpdateDeviceStatusItemRequestBuilderDeleteRequestCon_6357ebb5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?IosUpdateDeviceStatusItemRequestBuilderDeleteRequestCon_6357ebb5 $requestConfiguration = null): Promise {
+    public function delete(?IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property iosUpdateStatuses for deviceManagement
-     * @param IosUpdateDeviceStatusItemRequestBuilderDeleteRequestCon_6357ebb5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?IosUpdateDeviceStatusItemRequestBuilderDeleteRequestCon_6357ebb5 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?IosUpdateDeviceStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -36,12 +36,12 @@ class GetYammerActivityUserDetailWithDateRequestBuilder extends BaseRequestBuild
 
     /**
      * Get details about Yammer activity by user.
-     * @param GetYammerActivityUserDetailWithDateRequestBuilderGetReq_f5c1afaa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getyammeractivityuserdetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetYammerActivityUserDetailWithDateRequestBuilderGetReq_f5c1afaa $requestConfiguration = null): Promise {
+    public function get(?GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -53,10 +53,10 @@ class GetYammerActivityUserDetailWithDateRequestBuilder extends BaseRequestBuild
 
     /**
      * Get details about Yammer activity by user.
-     * @param GetYammerActivityUserDetailWithDateRequestBuilderGetReq_f5c1afaa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetYammerActivityUserDetailWithDateRequestBuilderGetReq_f5c1afaa $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetYammerActivityUserDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

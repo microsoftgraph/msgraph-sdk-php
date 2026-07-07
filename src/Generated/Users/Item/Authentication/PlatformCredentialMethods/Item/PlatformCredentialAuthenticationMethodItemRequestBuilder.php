@@ -40,12 +40,12 @@ class PlatformCredentialAuthenticationMethodItemRequestBuilder extends BaseReque
 
     /**
      * Delete a platformCredentialAuthenticationMethod object.
-     * @param PlatformCredentialAuthenticationMethodItemRequestBuilde_3a4834f8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PlatformCredentialAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/platformcredentialauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?PlatformCredentialAuthenticationMethodItemRequestBuilde_3a4834f8 $requestConfiguration = null): Promise {
+    public function delete(?PlatformCredentialAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,11 +55,11 @@ class PlatformCredentialAuthenticationMethodItemRequestBuilder extends BaseReque
 
     /**
      * Represents a platform credential instance registered to a user on Mac OS.
-     * @param PlatformCredentialAuthenticationMethodItemRequestBuilde_8e9971e3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PlatformCredentialAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PlatformCredentialAuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?PlatformCredentialAuthenticationMethodItemRequestBuilde_8e9971e3 $requestConfiguration = null): Promise {
+    public function get(?PlatformCredentialAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,10 +69,10 @@ class PlatformCredentialAuthenticationMethodItemRequestBuilder extends BaseReque
 
     /**
      * Delete a platformCredentialAuthenticationMethod object.
-     * @param PlatformCredentialAuthenticationMethodItemRequestBuilde_3a4834f8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PlatformCredentialAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PlatformCredentialAuthenticationMethodItemRequestBuilde_3a4834f8 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PlatformCredentialAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -87,10 +87,10 @@ class PlatformCredentialAuthenticationMethodItemRequestBuilder extends BaseReque
 
     /**
      * Represents a platform credential instance registered to a user on Mac OS.
-     * @param PlatformCredentialAuthenticationMethodItemRequestBuilde_8e9971e3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PlatformCredentialAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?PlatformCredentialAuthenticationMethodItemRequestBuilde_8e9971e3 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?PlatformCredentialAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

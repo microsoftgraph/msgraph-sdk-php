@@ -31,11 +31,11 @@ class LogoutSharedAppleDeviceActiveUserRequestBuilder extends BaseRequestBuilder
 
     /**
      * Logout shared Apple device active user
-     * @param LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequ_90e40a2f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(?LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequ_90e40a2f $requestConfiguration = null): Promise {
+    public function post(?LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -45,10 +45,10 @@ class LogoutSharedAppleDeviceActiveUserRequestBuilder extends BaseRequestBuilder
 
     /**
      * Logout shared Apple device active user
-     * @param LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequ_90e40a2f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequ_90e40a2f $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?LogoutSharedAppleDeviceActiveUserRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

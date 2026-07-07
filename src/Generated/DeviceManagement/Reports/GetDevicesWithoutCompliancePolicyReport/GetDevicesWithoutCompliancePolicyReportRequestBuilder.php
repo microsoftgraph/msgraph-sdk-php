@@ -33,11 +33,11 @@ class GetDevicesWithoutCompliancePolicyReportRequestBuilder extends BaseRequestB
     /**
      * Invoke action getDevicesWithoutCompliancePolicyReport
      * @param GetDevicesWithoutCompliancePolicyReportPostRequestBody $body The request body
-     * @param GetDevicesWithoutCompliancePolicyReportRequestBuilderPo_43e0ead9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function post(GetDevicesWithoutCompliancePolicyReportPostRequestBody $body, ?GetDevicesWithoutCompliancePolicyReportRequestBuilderPo_43e0ead9 $requestConfiguration = null): Promise {
+    public function post(GetDevicesWithoutCompliancePolicyReportPostRequestBody $body, ?GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class GetDevicesWithoutCompliancePolicyReportRequestBuilder extends BaseRequestB
     /**
      * Invoke action getDevicesWithoutCompliancePolicyReport
      * @param GetDevicesWithoutCompliancePolicyReportPostRequestBody $body The request body
-     * @param GetDevicesWithoutCompliancePolicyReportRequestBuilderPo_43e0ead9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetDevicesWithoutCompliancePolicyReportPostRequestBody $body, ?GetDevicesWithoutCompliancePolicyReportRequestBuilderPo_43e0ead9 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetDevicesWithoutCompliancePolicyReportPostRequestBody $body, ?GetDevicesWithoutCompliancePolicyReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

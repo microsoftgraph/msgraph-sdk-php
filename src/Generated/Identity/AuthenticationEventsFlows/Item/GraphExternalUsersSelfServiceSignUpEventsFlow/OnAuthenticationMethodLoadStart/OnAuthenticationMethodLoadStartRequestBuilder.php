@@ -4,7 +4,7 @@ namespace Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\Grap
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\GraphExternalUsersSelfServiceSignUpEventsFlow\OnAuthenticationMethodLoadStart\GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_495b9e69\GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155;
+use Microsoft\Graph\Generated\Identity\AuthenticationEventsFlows\Item\GraphExternalUsersSelfServiceSignUpEventsFlow\OnAuthenticationMethodLoadStart\GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp\GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnAuthenticationMethodLoadStartHandler;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -20,8 +20,8 @@ class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder
     /**
      * Casts the previous resource to onAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp.
     */
-    public function graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp(): GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155 {
-        return new GraphOnAuthenticationMethodLoadStartExternalUsersSelfSe_42e72155($this->pathParameters, $this->requestAdapter);
+    public function graphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUp(): GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder {
+        return new GraphOnAuthenticationMethodLoadStartExternalUsersSelfServiceSignUpRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -40,11 +40,11 @@ class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder
 
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
-     * @param OnAuthenticationMethodLoadStartRequestBuilderGetRequest_edad32a6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnAuthenticationMethodLoadStartRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OnAuthenticationMethodLoadStartHandler|null>
      * @throws Exception
     */
-    public function get(?OnAuthenticationMethodLoadStartRequestBuilderGetRequest_edad32a6 $requestConfiguration = null): Promise {
+    public function get(?OnAuthenticationMethodLoadStartRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,10 +54,10 @@ class OnAuthenticationMethodLoadStartRequestBuilder extends BaseRequestBuilder
 
     /**
      * Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
-     * @param OnAuthenticationMethodLoadStartRequestBuilderGetRequest_edad32a6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OnAuthenticationMethodLoadStartRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OnAuthenticationMethodLoadStartRequestBuilderGetRequest_edad32a6 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OnAuthenticationMethodLoadStartRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

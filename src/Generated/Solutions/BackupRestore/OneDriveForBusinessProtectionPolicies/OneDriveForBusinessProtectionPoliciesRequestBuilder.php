@@ -53,11 +53,11 @@ class OneDriveForBusinessProtectionPoliciesRequestBuilder extends BaseRequestBui
 
     /**
      * The list of OneDrive for Business protection policies in the tenant.
-     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderGetR_438da6fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessProtectionPolicyCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?OneDriveForBusinessProtectionPoliciesRequestBuilderGetR_438da6fb $requestConfiguration = null): Promise {
+    public function get(?OneDriveForBusinessProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,12 +68,12 @@ class OneDriveForBusinessProtectionPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Create a protection policy for the OneDrive service in Microsoft 365. When the policy is created, its state is set to inactive. Users can also provide a list of protection units under the policy.
      * @param OneDriveForBusinessProtectionPolicy $body The request body
-     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderPost_37571801|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessProtectionPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/backuprestoreroot-post-onedriveforbusinessprotectionpolicies?view=graph-rest-1.0 Find more info here
     */
-    public function post(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPoliciesRequestBuilderPost_37571801 $requestConfiguration = null): Promise {
+    public function post(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class OneDriveForBusinessProtectionPoliciesRequestBuilder extends BaseRequestBui
 
     /**
      * The list of OneDrive for Business protection policies in the tenant.
-     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderGetR_438da6fb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OneDriveForBusinessProtectionPoliciesRequestBuilderGetR_438da6fb $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OneDriveForBusinessProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class OneDriveForBusinessProtectionPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Create a protection policy for the OneDrive service in Microsoft 365. When the policy is created, its state is set to inactive. Users can also provide a list of protection units under the policy.
      * @param OneDriveForBusinessProtectionPolicy $body The request body
-     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderPost_37571801|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPoliciesRequestBuilderPost_37571801 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(OneDriveForBusinessProtectionPolicy $body, ?OneDriveForBusinessProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

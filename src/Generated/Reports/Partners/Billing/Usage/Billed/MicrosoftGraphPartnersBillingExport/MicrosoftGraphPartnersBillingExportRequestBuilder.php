@@ -33,12 +33,12 @@ class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseRequestBuild
     /**
      * Export the billed Azure usage data.
      * @param ExportPostRequestBody $body The request body
-     * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRe_f8319b59|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Operation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/partners-billing-billedusage-export?view=graph-rest-1.0 Find more info here
     */
-    public function post(ExportPostRequestBody $body, ?MicrosoftGraphPartnersBillingExportRequestBuilderPostRe_f8319b59 $requestConfiguration = null): Promise {
+    public function post(ExportPostRequestBody $body, ?MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class MicrosoftGraphPartnersBillingExportRequestBuilder extends BaseRequestBuild
     /**
      * Export the billed Azure usage data.
      * @param ExportPostRequestBody $body The request body
-     * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRe_f8319b59|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ExportPostRequestBody $body, ?MicrosoftGraphPartnersBillingExportRequestBuilderPostRe_f8319b59 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ExportPostRequestBody $body, ?MicrosoftGraphPartnersBillingExportRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

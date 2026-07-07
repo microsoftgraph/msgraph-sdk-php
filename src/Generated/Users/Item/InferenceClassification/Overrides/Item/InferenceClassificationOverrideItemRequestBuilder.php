@@ -32,11 +32,11 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property overrides for users
-     * @param InferenceClassificationOverrideItemRequestBuilderDelete_b3cb6e58|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?InferenceClassificationOverrideItemRequestBuilderDelete_b3cb6e58 $requestConfiguration = null): Promise {
+    public function delete(?InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
 
     /**
      * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
-     * @param InferenceClassificationOverrideItemRequestBuilderGetReq_37385710|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InferenceClassificationOverride|null>
      * @throws Exception
     */
-    public function get(?InferenceClassificationOverrideItemRequestBuilderGetReq_37385710 $requestConfiguration = null): Promise {
+    public function get(?InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property overrides in users
      * @param InferenceClassificationOverride $body The request body
-     * @param InferenceClassificationOverrideItemRequestBuilderPatchR_8af6744f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InferenceClassificationOverride|null>
      * @throws Exception
     */
-    public function patch(InferenceClassificationOverride $body, ?InferenceClassificationOverrideItemRequestBuilderPatchR_8af6744f $requestConfiguration = null): Promise {
+    public function patch(InferenceClassificationOverride $body, ?InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property overrides for users
-     * @param InferenceClassificationOverrideItemRequestBuilderDelete_b3cb6e58|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?InferenceClassificationOverrideItemRequestBuilderDelete_b3cb6e58 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
 
     /**
      * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
-     * @param InferenceClassificationOverrideItemRequestBuilderGetReq_37385710|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?InferenceClassificationOverrideItemRequestBuilderGetReq_37385710 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property overrides in users
      * @param InferenceClassificationOverride $body The request body
-     * @param InferenceClassificationOverrideItemRequestBuilderPatchR_8af6744f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(InferenceClassificationOverride $body, ?InferenceClassificationOverrideItemRequestBuilderPatchR_8af6744f $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(InferenceClassificationOverride $body, ?InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

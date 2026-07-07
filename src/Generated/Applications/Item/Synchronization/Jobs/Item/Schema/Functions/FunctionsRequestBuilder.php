@@ -30,7 +30,7 @@ class FunctionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all the functions currently supported in the attributeMappingSource for a synchronizationSchema.
+     * List all the functions currently supported in the attributeMappingSource.
      * @param FunctionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FunctionsGetResponse|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class FunctionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all the functions currently supported in the attributeMappingSource for a synchronizationSchema.
+     * List all the functions currently supported in the attributeMappingSource.
      * @param FunctionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -35,11 +35,11 @@ class GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder extends B
 
     /**
      * Invoke function getSkypeForBusinessDeviceUsageUserDetail
-     * @param GetSkypeForBusinessDeviceUsageUserDetailWithPeriodReque_8014fc9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function get(?GetSkypeForBusinessDeviceUsageUserDetailWithPeriodReque_8014fc9b $requestConfiguration = null): Promise {
+    public function get(?GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder extends B
 
     /**
      * Invoke function getSkypeForBusinessDeviceUsageUserDetail
-     * @param GetSkypeForBusinessDeviceUsageUserDetailWithPeriodReque_8014fc9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSkypeForBusinessDeviceUsageUserDetailWithPeriodReque_8014fc9b $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

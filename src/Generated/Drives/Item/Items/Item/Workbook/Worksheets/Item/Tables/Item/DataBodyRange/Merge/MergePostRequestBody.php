@@ -22,7 +22,6 @@ class MergePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
-        $this->setAcross(false);
         $this->setAdditionalData([]);
     }
 

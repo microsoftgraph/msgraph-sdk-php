@@ -35,12 +35,12 @@ class GetOffice365ServicesUserCountsWithPeriodRequestBuilder extends BaseRequest
 
     /**
      * Get the count of users by activity type and service.
-     * @param GetOffice365ServicesUserCountsWithPeriodRequestBuilderG_c15a1fe2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOffice365ServicesUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365servicesusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetOffice365ServicesUserCountsWithPeriodRequestBuilderG_c15a1fe2 $requestConfiguration = null): Promise {
+    public function get(?GetOffice365ServicesUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetOffice365ServicesUserCountsWithPeriodRequestBuilder extends BaseRequest
 
     /**
      * Get the count of users by activity type and service.
-     * @param GetOffice365ServicesUserCountsWithPeriodRequestBuilderG_c15a1fe2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOffice365ServicesUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetOffice365ServicesUserCountsWithPeriodRequestBuilderG_c15a1fe2 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetOffice365ServicesUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

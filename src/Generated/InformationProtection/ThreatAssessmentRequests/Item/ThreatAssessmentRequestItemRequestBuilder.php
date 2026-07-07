@@ -40,11 +40,11 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection
-     * @param ThreatAssessmentRequestItemRequestBuilderDeleteRequestC_7c7bbbf3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ThreatAssessmentRequestItemRequestBuilderDeleteRequestC_7c7bbbf3 $requestConfiguration = null): Promise {
+    public function delete(?ThreatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param ThreatAssessmentRequest $body The request body
-     * @param ThreatAssessmentRequestItemRequestBuilderPatchRequestCo_fdf61d1b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ThreatAssessmentRequest|null>
      * @throws Exception
     */
-    public function patch(ThreatAssessmentRequest $body, ?ThreatAssessmentRequestItemRequestBuilderPatchRequestCo_fdf61d1b $requestConfiguration = null): Promise {
+    public function patch(ThreatAssessmentRequest $body, ?ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property threatAssessmentRequests for informationProtection
-     * @param ThreatAssessmentRequestItemRequestBuilderDeleteRequestC_7c7bbbf3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ThreatAssessmentRequestItemRequestBuilderDeleteRequestC_7c7bbbf3 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ThreatAssessmentRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
      * @param ThreatAssessmentRequest $body The request body
-     * @param ThreatAssessmentRequestItemRequestBuilderPatchRequestCo_fdf61d1b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ThreatAssessmentRequest $body, ?ThreatAssessmentRequestItemRequestBuilderPatchRequestCo_fdf61d1b $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ThreatAssessmentRequest $body, ?ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

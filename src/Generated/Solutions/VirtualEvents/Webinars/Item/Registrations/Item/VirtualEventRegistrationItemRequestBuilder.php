@@ -48,11 +48,11 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property registrations for solutions
-     * @param VirtualEventRegistrationItemRequestBuilderDeleteRequest_fc727713|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?VirtualEventRegistrationItemRequestBuilderDeleteRequest_fc727713 $requestConfiguration = null): Promise {
+    public function delete(?VirtualEventRegistrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the properties and relationships of a virtualEventRegistration object.
-     * @param VirtualEventRegistrationItemRequestBuilderGetRequestCon_8494d062|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistration|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?VirtualEventRegistrationItemRequestBuilderGetRequestCon_8494d062 $requestConfiguration = null): Promise {
+    public function get(?VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property registrations in solutions
      * @param VirtualEventRegistration $body The request body
-     * @param VirtualEventRegistrationItemRequestBuilderPatchRequestC_a4545a86|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistration|null>
      * @throws Exception
     */
-    public function patch(VirtualEventRegistration $body, ?VirtualEventRegistrationItemRequestBuilderPatchRequestC_a4545a86 $requestConfiguration = null): Promise {
+    public function patch(VirtualEventRegistration $body, ?VirtualEventRegistrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property registrations for solutions
-     * @param VirtualEventRegistrationItemRequestBuilderDeleteRequest_fc727713|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?VirtualEventRegistrationItemRequestBuilderDeleteRequest_fc727713 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?VirtualEventRegistrationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -110,10 +110,10 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the properties and relationships of a virtualEventRegistration object.
-     * @param VirtualEventRegistrationItemRequestBuilderGetRequestCon_8494d062|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?VirtualEventRegistrationItemRequestBuilderGetRequestCon_8494d062 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?VirtualEventRegistrationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -132,10 +132,10 @@ class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property registrations in solutions
      * @param VirtualEventRegistration $body The request body
-     * @param VirtualEventRegistrationItemRequestBuilderPatchRequestC_a4545a86|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventRegistrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(VirtualEventRegistration $body, ?VirtualEventRegistrationItemRequestBuilderPatchRequestC_a4545a86 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(VirtualEventRegistration $body, ?VirtualEventRegistrationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

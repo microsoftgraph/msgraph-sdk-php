@@ -48,12 +48,12 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a connectedOrganization object.
-     * @param ConnectedOrganizationItemRequestBuilderDeleteRequestCon_48494dae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ConnectedOrganizationItemRequestBuilderDeleteRequestCon_48494dae $requestConfiguration = null): Promise {
+    public function delete(?ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class ConnectedOrganizationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a connectedOrganization object.
-     * @param ConnectedOrganizationItemRequestBuilderDeleteRequestCon_48494dae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ConnectedOrganizationItemRequestBuilderDeleteRequestCon_48494dae $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ConnectedOrganizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

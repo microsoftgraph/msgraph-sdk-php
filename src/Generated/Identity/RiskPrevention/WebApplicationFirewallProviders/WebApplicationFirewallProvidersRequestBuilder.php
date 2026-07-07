@@ -53,12 +53,12 @@ class WebApplicationFirewallProvidersRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the webApplicationFirewallProvider objects and their properties.
-     * @param WebApplicationFirewallProvidersRequestBuilderGetRequest_aaee69d8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallProviderCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/riskpreventioncontainer-list-webapplicationfirewallproviders?view=graph-rest-1.0 Find more info here
     */
-    public function get(?WebApplicationFirewallProvidersRequestBuilderGetRequest_aaee69d8 $requestConfiguration = null): Promise {
+    public function get(?WebApplicationFirewallProvidersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class WebApplicationFirewallProvidersRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new webApplicationFirewallProvider object. You can create one of the following subtypes that are derived from webApplicationFirewallProvider.
      * @param WebApplicationFirewallProvider $body The request body
-     * @param WebApplicationFirewallProvidersRequestBuilderPostReques_1dc7cd07|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallProvider|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/riskpreventioncontainer-post-webapplicationfirewallproviders?view=graph-rest-1.0 Find more info here
     */
-    public function post(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProvidersRequestBuilderPostReques_1dc7cd07 $requestConfiguration = null): Promise {
+    public function post(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProvidersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class WebApplicationFirewallProvidersRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the webApplicationFirewallProvider objects and their properties.
-     * @param WebApplicationFirewallProvidersRequestBuilderGetRequest_aaee69d8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProvidersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WebApplicationFirewallProvidersRequestBuilderGetRequest_aaee69d8 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WebApplicationFirewallProvidersRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class WebApplicationFirewallProvidersRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new webApplicationFirewallProvider object. You can create one of the following subtypes that are derived from webApplicationFirewallProvider.
      * @param WebApplicationFirewallProvider $body The request body
-     * @param WebApplicationFirewallProvidersRequestBuilderPostReques_1dc7cd07|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProvidersRequestBuilderPostReques_1dc7cd07 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProvidersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

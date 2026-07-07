@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Templ
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all the functions currently supported in the attributeMappingSource for a synchronizationSchema.
+ * List all the functions currently supported in the attributeMappingSource.
 */
 class FunctionsRequestBuilderGetQueryParameters 
 {

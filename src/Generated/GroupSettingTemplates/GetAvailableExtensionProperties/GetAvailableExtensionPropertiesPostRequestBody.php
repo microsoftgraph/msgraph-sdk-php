@@ -23,7 +23,6 @@ class GetAvailableExtensionPropertiesPostRequestBody implements AdditionalDataHo
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setIsSyncedFromOnPremises(false);
     }
 
     /**

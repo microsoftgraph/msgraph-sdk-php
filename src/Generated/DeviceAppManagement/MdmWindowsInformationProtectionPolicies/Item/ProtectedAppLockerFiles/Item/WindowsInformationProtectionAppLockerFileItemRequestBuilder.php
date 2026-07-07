@@ -32,11 +32,11 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
 
     /**
      * Delete navigation property protectedAppLockerFiles for deviceAppManagement
-     * @param WindowsInformationProtectionAppLockerFileItemRequestBui_d88e57bf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?WindowsInformationProtectionAppLockerFileItemRequestBui_d88e57bf $requestConfiguration = null): Promise {
+    public function delete(?WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
 
     /**
      * Another way to input protected apps through xml files
-     * @param WindowsInformationProtectionAppLockerFileItemRequestBui_e312558c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLockerFile|null>
      * @throws Exception
     */
-    public function get(?WindowsInformationProtectionAppLockerFileItemRequestBui_e312558c $requestConfiguration = null): Promise {
+    public function get(?WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property protectedAppLockerFiles in deviceAppManagement
      * @param WindowsInformationProtectionAppLockerFile $body The request body
-     * @param WindowsInformationProtectionAppLockerFileItemRequestBui_a5740d1e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLockerFile|null>
      * @throws Exception
     */
-    public function patch(WindowsInformationProtectionAppLockerFile $body, ?WindowsInformationProtectionAppLockerFileItemRequestBui_a5740d1e $requestConfiguration = null): Promise {
+    public function patch(WindowsInformationProtectionAppLockerFile $body, ?WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
 
     /**
      * Delete navigation property protectedAppLockerFiles for deviceAppManagement
-     * @param WindowsInformationProtectionAppLockerFileItemRequestBui_d88e57bf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WindowsInformationProtectionAppLockerFileItemRequestBui_d88e57bf $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WindowsInformationProtectionAppLockerFileItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
 
     /**
      * Another way to input protected apps through xml files
-     * @param WindowsInformationProtectionAppLockerFileItemRequestBui_e312558c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WindowsInformationProtectionAppLockerFileItemRequestBui_e312558c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WindowsInformationProtectionAppLockerFileItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class WindowsInformationProtectionAppLockerFileItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property protectedAppLockerFiles in deviceAppManagement
      * @param WindowsInformationProtectionAppLockerFile $body The request body
-     * @param WindowsInformationProtectionAppLockerFileItemRequestBui_a5740d1e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(WindowsInformationProtectionAppLockerFile $body, ?WindowsInformationProtectionAppLockerFileItemRequestBui_a5740d1e $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(WindowsInformationProtectionAppLockerFile $body, ?WindowsInformationProtectionAppLockerFileItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

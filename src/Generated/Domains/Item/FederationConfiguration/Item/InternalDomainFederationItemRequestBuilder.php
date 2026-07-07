@@ -32,12 +32,12 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an internalDomainFederation object.
-     * @param InternalDomainFederationItemRequestBuilderDeleteRequest_a32a2001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/internaldomainfederation-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?InternalDomainFederationItemRequestBuilderDeleteRequest_a32a2001 $requestConfiguration = null): Promise {
+    public function delete(?InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of an internalDomainFederation object.
-     * @param InternalDomainFederationItemRequestBuilderGetRequestCon_3b4e2569|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InternalDomainFederationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/internaldomainfederation-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?InternalDomainFederationItemRequestBuilderGetRequestCon_3b4e2569 $requestConfiguration = null): Promise {
+    public function get(?InternalDomainFederationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an internalDomainFederation object.
      * @param InternalDomainFederation $body The request body
-     * @param InternalDomainFederationItemRequestBuilderPatchRequestC_6a232c0d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InternalDomainFederation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/internaldomainfederation-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(InternalDomainFederation $body, ?InternalDomainFederationItemRequestBuilderPatchRequestC_6a232c0d $requestConfiguration = null): Promise {
+    public function patch(InternalDomainFederation $body, ?InternalDomainFederationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an internalDomainFederation object.
-     * @param InternalDomainFederationItemRequestBuilderDeleteRequest_a32a2001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?InternalDomainFederationItemRequestBuilderDeleteRequest_a32a2001 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?InternalDomainFederationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of an internalDomainFederation object.
-     * @param InternalDomainFederationItemRequestBuilderGetRequestCon_3b4e2569|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InternalDomainFederationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?InternalDomainFederationItemRequestBuilderGetRequestCon_3b4e2569 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?InternalDomainFederationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class InternalDomainFederationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an internalDomainFederation object.
      * @param InternalDomainFederation $body The request body
-     * @param InternalDomainFederationItemRequestBuilderPatchRequestC_6a232c0d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(InternalDomainFederation $body, ?InternalDomainFederationItemRequestBuilderPatchRequestC_6a232c0d $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(InternalDomainFederation $body, ?InternalDomainFederationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

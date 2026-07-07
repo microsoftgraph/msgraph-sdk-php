@@ -56,11 +56,11 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property androidManagedAppProtections for deviceAppManagement
-     * @param AndroidManagedAppProtectionItemRequestBuilderDeleteRequ_ec275975|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AndroidManagedAppProtectionItemRequestBuilderDeleteRequ_ec275975 $requestConfiguration = null): Promise {
+    public function delete(?AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Android managed app policies.
-     * @param AndroidManagedAppProtectionItemRequestBuilderGetRequest_dcae54fc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AndroidManagedAppProtection|null>
      * @throws Exception
     */
-    public function get(?AndroidManagedAppProtectionItemRequestBuilderGetRequest_dcae54fc $requestConfiguration = null): Promise {
+    public function get(?AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property androidManagedAppProtections in deviceAppManagement
      * @param AndroidManagedAppProtection $body The request body
-     * @param AndroidManagedAppProtectionItemRequestBuilderPatchReque_c27171c4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AndroidManagedAppProtection|null>
      * @throws Exception
     */
-    public function patch(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionItemRequestBuilderPatchReque_c27171c4 $requestConfiguration = null): Promise {
+    public function patch(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property androidManagedAppProtections for deviceAppManagement
-     * @param AndroidManagedAppProtectionItemRequestBuilderDeleteRequ_ec275975|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AndroidManagedAppProtectionItemRequestBuilderDeleteRequ_ec275975 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AndroidManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Android managed app policies.
-     * @param AndroidManagedAppProtectionItemRequestBuilderGetRequest_dcae54fc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AndroidManagedAppProtectionItemRequestBuilderGetRequest_dcae54fc $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AndroidManagedAppProtectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -139,10 +139,10 @@ class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property androidManagedAppProtections in deviceAppManagement
      * @param AndroidManagedAppProtection $body The request body
-     * @param AndroidManagedAppProtectionItemRequestBuilderPatchReque_c27171c4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionItemRequestBuilderPatchReque_c27171c4 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AndroidManagedAppProtection $body, ?AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

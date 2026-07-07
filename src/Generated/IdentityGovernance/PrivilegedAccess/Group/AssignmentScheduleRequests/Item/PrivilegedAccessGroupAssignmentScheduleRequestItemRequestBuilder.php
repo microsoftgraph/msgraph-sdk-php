@@ -72,11 +72,11 @@ class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder extends B
 
     /**
      * Delete navigation property assignmentScheduleRequests for identityGovernance
-     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemReque_85ad502f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?PrivilegedAccessGroupAssignmentScheduleRequestItemReque_85ad502f $requestConfiguration = null): Promise {
+    public function delete(?PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,12 +86,12 @@ class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder extends B
 
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
-     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d226b149|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d226b149 $requestConfiguration = null): Promise {
+    public function get(?PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -102,11 +102,11 @@ class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder extends B
     /**
      * Update the navigation property assignmentScheduleRequests in identityGovernance
      * @param PrivilegedAccessGroupAssignmentScheduleRequest $body The request body
-     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d6214cf3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleRequest|null>
      * @throws Exception
     */
-    public function patch(PrivilegedAccessGroupAssignmentScheduleRequest $body, ?PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d6214cf3 $requestConfiguration = null): Promise {
+    public function patch(PrivilegedAccessGroupAssignmentScheduleRequest $body, ?PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -116,10 +116,10 @@ class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder extends B
 
     /**
      * Delete navigation property assignmentScheduleRequests for identityGovernance
-     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemReque_85ad502f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PrivilegedAccessGroupAssignmentScheduleRequestItemReque_85ad502f $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder extends B
 
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
-     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d226b149|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d226b149 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -156,10 +156,10 @@ class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder extends B
     /**
      * Update the navigation property assignmentScheduleRequests in identityGovernance
      * @param PrivilegedAccessGroupAssignmentScheduleRequest $body The request body
-     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d6214cf3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(PrivilegedAccessGroupAssignmentScheduleRequest $body, ?PrivilegedAccessGroupAssignmentScheduleRequestItemReque_d6214cf3 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(PrivilegedAccessGroupAssignmentScheduleRequest $body, ?PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

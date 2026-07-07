@@ -31,7 +31,7 @@ class DiscoverRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Discover the latest schema definition for provisioning to an application for the directoryDefinition.
+     * Discover the latest schema definition for provisioning to an application. 
      * @param DiscoverRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DirectoryDefinition|null>
      * @throws Exception
@@ -46,7 +46,7 @@ class DiscoverRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Discover the latest schema definition for provisioning to an application for the directoryDefinition.
+     * Discover the latest schema definition for provisioning to an application. 
      * @param DiscoverRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

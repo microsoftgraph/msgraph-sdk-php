@@ -64,12 +64,12 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
-     * @param AccessPackageAssignmentPolicyItemRequestBuilderDeleteRe_861269ac|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?AccessPackageAssignmentPolicyItemRequestBuilderDeleteRe_861269ac $requestConfiguration = null): Promise {
+    public function delete(?AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
-     * @param AccessPackageAssignmentPolicyItemRequestBuilderGetReque_4d932dbc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageAssignmentPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AccessPackageAssignmentPolicyItemRequestBuilderGetReque_4d932dbc $requestConfiguration = null): Promise {
+    public function get(?AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -95,12 +95,12 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
      * @param AccessPackageAssignmentPolicy $body The request body
-     * @param AccessPackageAssignmentPolicyItemRequestBuilderPutReque_b1fa5056|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageAssignmentPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackageassignmentpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function put(AccessPackageAssignmentPolicy $body, ?AccessPackageAssignmentPolicyItemRequestBuilderPutReque_b1fa5056 $requestConfiguration = null): Promise {
+    public function put(AccessPackageAssignmentPolicy $body, ?AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -110,10 +110,10 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * In Microsoft Entra entitlement management, delete an accessPackageAssignmentPolicy.
-     * @param AccessPackageAssignmentPolicyItemRequestBuilderDeleteRe_861269ac|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessPackageAssignmentPolicyItemRequestBuilderDeleteRe_861269ac $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessPackageAssignmentPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -128,10 +128,10 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an accessPackageAssignmentPolicy object.
-     * @param AccessPackageAssignmentPolicyItemRequestBuilderGetReque_4d932dbc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackageAssignmentPolicyItemRequestBuilderGetReque_4d932dbc $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackageAssignmentPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -150,10 +150,10 @@ class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update an existing accessPackageAssignmentPolicy object to change one or more of its properties, such as the display name or description.
      * @param AccessPackageAssignmentPolicy $body The request body
-     * @param AccessPackageAssignmentPolicyItemRequestBuilderPutReque_b1fa5056|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPutRequestInformation(AccessPackageAssignmentPolicy $body, ?AccessPackageAssignmentPolicyItemRequestBuilderPutReque_b1fa5056 $requestConfiguration = null): RequestInformation {
+    public function toPutRequestInformation(AccessPackageAssignmentPolicy $body, ?AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

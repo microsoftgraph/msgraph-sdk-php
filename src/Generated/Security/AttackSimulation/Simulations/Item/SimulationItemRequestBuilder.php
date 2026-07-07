@@ -85,7 +85,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an attack simulation campaign for a tenant. You can only update simulations that are in draft status.
+     * Update an attack simulation campaign for a tenant.
      * @param Simulation $body The request body
      * @param SimulationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Simulation|null>
@@ -140,7 +140,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update an attack simulation campaign for a tenant. You can only update simulations that are in draft status.
+     * Update an attack simulation campaign for a tenant.
      * @param Simulation $body The request body
      * @param SimulationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

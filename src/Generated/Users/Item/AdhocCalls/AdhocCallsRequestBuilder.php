@@ -8,8 +8,8 @@ use Microsoft\Graph\Generated\Models\AdhocCall;
 use Microsoft\Graph\Generated\Models\AdhocCallCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\AdhocCalls\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\AdhocCalls\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d;
-use Microsoft\Graph\Generated\Users\Item\AdhocCalls\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382;
+use Microsoft\Graph\Generated\Users\Item\AdhocCalls\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\AdhocCalls\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime\GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\AdhocCalls\Item\AdhocCallItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,15 +31,15 @@ class AdhocCallsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the getAllRecordings method.
     */
-    public function getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d {
-        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDat_5a15ee1d($this->pathParameters, $this->requestAdapter);
+    public function getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAllTranscripts method.
     */
-    public function getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382 {
-        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDa_d83c3382($this->pathParameters, $this->requestAdapter);
+    public function getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime(): GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

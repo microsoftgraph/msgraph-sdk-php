@@ -53,11 +53,11 @@ class GranularMailboxRestoreArtifactsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get granularMailboxRestoreArtifacts from solutions
-     * @param GranularMailboxRestoreArtifactsRequestBuilderGetRequest_3cb82a5b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularMailboxRestoreArtifactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularMailboxRestoreArtifactCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?GranularMailboxRestoreArtifactsRequestBuilderGetRequest_3cb82a5b $requestConfiguration = null): Promise {
+    public function get(?GranularMailboxRestoreArtifactsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class GranularMailboxRestoreArtifactsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to granularMailboxRestoreArtifacts for solutions
      * @param GranularMailboxRestoreArtifact $body The request body
-     * @param GranularMailboxRestoreArtifactsRequestBuilderPostReques_3aa06b5b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularMailboxRestoreArtifactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularMailboxRestoreArtifact|null>
      * @throws Exception
     */
-    public function post(GranularMailboxRestoreArtifact $body, ?GranularMailboxRestoreArtifactsRequestBuilderPostReques_3aa06b5b $requestConfiguration = null): Promise {
+    public function post(GranularMailboxRestoreArtifact $body, ?GranularMailboxRestoreArtifactsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class GranularMailboxRestoreArtifactsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get granularMailboxRestoreArtifacts from solutions
-     * @param GranularMailboxRestoreArtifactsRequestBuilderGetRequest_3cb82a5b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularMailboxRestoreArtifactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GranularMailboxRestoreArtifactsRequestBuilderGetRequest_3cb82a5b $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GranularMailboxRestoreArtifactsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class GranularMailboxRestoreArtifactsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to granularMailboxRestoreArtifacts for solutions
      * @param GranularMailboxRestoreArtifact $body The request body
-     * @param GranularMailboxRestoreArtifactsRequestBuilderPostReques_3aa06b5b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularMailboxRestoreArtifactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GranularMailboxRestoreArtifact $body, ?GranularMailboxRestoreArtifactsRequestBuilderPostReques_3aa06b5b $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GranularMailboxRestoreArtifact $body, ?GranularMailboxRestoreArtifactsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

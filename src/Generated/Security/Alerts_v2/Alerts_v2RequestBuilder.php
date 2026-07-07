@@ -9,7 +9,6 @@ use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\AlertCollectionResponse;
 use Microsoft\Graph\Generated\Security\Alerts_v2\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Alerts_v2\MicrosoftGraphSecurityMoveAlerts\MicrosoftGraphSecurityMoveAlertsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -25,13 +24,6 @@ class Alerts_v2RequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the moveAlerts method.
-    */
-    public function microsoftGraphSecurityMoveAlerts(): MicrosoftGraphSecurityMoveAlertsRequestBuilder {
-        return new MicrosoftGraphSecurityMoveAlertsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

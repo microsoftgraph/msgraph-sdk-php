@@ -49,7 +49,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the attestation property value. Specifies the relying party's preference for attestation conveyance.
+     * Gets the attestation property value. The attestation property
      * @return string|null
     */
     public function getAttestation(): ?string {
@@ -61,7 +61,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the authenticatorSelection property value. Criteria for selecting an appropriate authenticator for credential creation.
+     * Gets the authenticatorSelection property value. The authenticatorSelection property
      * @return WebauthnAuthenticatorSelectionCriteria|null
     */
     public function getAuthenticatorSelection(): ?WebauthnAuthenticatorSelectionCriteria {
@@ -81,7 +81,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the challenge property value. The challenge that the authenticator must sign to prove possession of the credential. This value is Base64URL-encoded without padding.
+     * Gets the challenge property value. The challenge property
      * @return string|null
     */
     public function getChallenge(): ?string {
@@ -93,7 +93,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the excludeCredentials property value. A list of credentials that are already registered for this user, which should be excluded from selection.
+     * Gets the excludeCredentials property value. The excludeCredentials property
      * @return array<WebauthnPublicKeyCredentialDescriptor>|null
     */
     public function getExcludeCredentials(): ?array {
@@ -107,7 +107,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the extensions property value. Inputs for requested WebAuthn extensions.
+     * Gets the extensions property value. The extensions property
      * @return WebauthnAuthenticationExtensionsClientInputs|null
     */
     public function getExtensions(): ?WebauthnAuthenticationExtensionsClientInputs {
@@ -151,7 +151,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the pubKeyCredParams property value. The cryptographic parameters that the relying party supports, in order of preference.
+     * Gets the pubKeyCredParams property value. The pubKeyCredParams property
      * @return array<WebauthnPublicKeyCredentialParameters>|null
     */
     public function getPubKeyCredParams(): ?array {
@@ -165,7 +165,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the rp property value. Information about the relying party (RP) requesting credential creation.
+     * Gets the rp property value. The rp property
      * @return WebauthnPublicKeyCredentialRpEntity|null
     */
     public function getRp(): ?WebauthnPublicKeyCredentialRpEntity {
@@ -177,7 +177,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the timeout property value. The time, in milliseconds, that the caller is willing to wait for the operation to complete.
+     * Gets the timeout property value. The timeout property
      * @return int|null
     */
     public function getTimeout(): ?int {
@@ -189,7 +189,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Gets the user property value. Information about the user account for which the credential is being created.
+     * Gets the user property value. The user property
      * @return WebauthnPublicKeyCredentialUserEntity|null
     */
     public function getUser(): ?WebauthnPublicKeyCredentialUserEntity {
@@ -227,7 +227,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the attestation property value. Specifies the relying party's preference for attestation conveyance.
+     * Sets the attestation property value. The attestation property
      * @param string|null $value Value to set for the attestation property.
     */
     public function setAttestation(?string $value): void {
@@ -235,7 +235,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the authenticatorSelection property value. Criteria for selecting an appropriate authenticator for credential creation.
+     * Sets the authenticatorSelection property value. The authenticatorSelection property
      * @param WebauthnAuthenticatorSelectionCriteria|null $value Value to set for the authenticatorSelection property.
     */
     public function setAuthenticatorSelection(?WebauthnAuthenticatorSelectionCriteria $value): void {
@@ -251,7 +251,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the challenge property value. The challenge that the authenticator must sign to prove possession of the credential. This value is Base64URL-encoded without padding.
+     * Sets the challenge property value. The challenge property
      * @param string|null $value Value to set for the challenge property.
     */
     public function setChallenge(?string $value): void {
@@ -259,7 +259,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the excludeCredentials property value. A list of credentials that are already registered for this user, which should be excluded from selection.
+     * Sets the excludeCredentials property value. The excludeCredentials property
      * @param array<WebauthnPublicKeyCredentialDescriptor>|null $value Value to set for the excludeCredentials property.
     */
     public function setExcludeCredentials(?array $value): void {
@@ -267,7 +267,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the extensions property value. Inputs for requested WebAuthn extensions.
+     * Sets the extensions property value. The extensions property
      * @param WebauthnAuthenticationExtensionsClientInputs|null $value Value to set for the extensions property.
     */
     public function setExtensions(?WebauthnAuthenticationExtensionsClientInputs $value): void {
@@ -283,7 +283,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the pubKeyCredParams property value. The cryptographic parameters that the relying party supports, in order of preference.
+     * Sets the pubKeyCredParams property value. The pubKeyCredParams property
      * @param array<WebauthnPublicKeyCredentialParameters>|null $value Value to set for the pubKeyCredParams property.
     */
     public function setPubKeyCredParams(?array $value): void {
@@ -291,7 +291,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the rp property value. Information about the relying party (RP) requesting credential creation.
+     * Sets the rp property value. The rp property
      * @param WebauthnPublicKeyCredentialRpEntity|null $value Value to set for the rp property.
     */
     public function setRp(?WebauthnPublicKeyCredentialRpEntity $value): void {
@@ -299,7 +299,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the timeout property value. The time, in milliseconds, that the caller is willing to wait for the operation to complete.
+     * Sets the timeout property value. The timeout property
      * @param int|null $value Value to set for the timeout property.
     */
     public function setTimeout(?int $value): void {
@@ -307,7 +307,7 @@ class WebauthnPublicKeyCredentialCreationOptions implements AdditionalDataHolder
     }
 
     /**
-     * Sets the user property value. Information about the user account for which the credential is being created.
+     * Sets the user property value. The user property
      * @param WebauthnPublicKeyCredentialUserEntity|null $value Value to set for the user property.
     */
     public function setUser(?WebauthnPublicKeyCredentialUserEntity $value): void {

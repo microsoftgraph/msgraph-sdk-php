@@ -35,12 +35,12 @@ class GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder extends BaseReq
 
     /**
      * Get the total number of groups that existed and how many included group conversation activities.
-     * @param GetYammerGroupsActivityGroupCountsWithPeriodRequestBuil_f5361b92|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getyammergroupsactivitygroupcounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetYammerGroupsActivityGroupCountsWithPeriodRequestBuil_f5361b92 $requestConfiguration = null): Promise {
+    public function get(?GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder extends BaseReq
 
     /**
      * Get the total number of groups that existed and how many included group conversation activities.
-     * @param GetYammerGroupsActivityGroupCountsWithPeriodRequestBuil_f5361b92|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetYammerGroupsActivityGroupCountsWithPeriodRequestBuil_f5361b92 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

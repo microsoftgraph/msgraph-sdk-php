@@ -34,11 +34,11 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieves the effective permissions of the currently authenticated user
-     * @param GetEffectivePermissionsWithScopeRequestBuilderGetReques_e7b2a0b3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetEffectivePermissionsWithScopeGetResponse|null>
      * @throws Exception
     */
-    public function get(?GetEffectivePermissionsWithScopeRequestBuilderGetReques_e7b2a0b3 $requestConfiguration = null): Promise {
+    public function get(?GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieves the effective permissions of the currently authenticated user
-     * @param GetEffectivePermissionsWithScopeRequestBuilderGetReques_e7b2a0b3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetEffectivePermissionsWithScopeRequestBuilderGetReques_e7b2a0b3 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetEffectivePermissionsWithScopeRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

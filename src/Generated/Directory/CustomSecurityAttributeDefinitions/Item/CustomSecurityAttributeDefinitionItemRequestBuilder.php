@@ -40,11 +40,11 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property customSecurityAttributeDefinitions for directory
-     * @param CustomSecurityAttributeDefinitionItemRequestBuilderDele_7a85dc21|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?CustomSecurityAttributeDefinitionItemRequestBuilderDele_7a85dc21 $requestConfiguration = null): Promise {
+    public function delete(?CustomSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,12 +54,12 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
 
     /**
      * Read the properties and relationships of a customSecurityAttributeDefinition object.
-     * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetR_c14f2000|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomSecurityAttributeDefinition|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/customsecurityattributedefinition-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?CustomSecurityAttributeDefinitionItemRequestBuilderGetR_c14f2000 $requestConfiguration = null): Promise {
+    public function get(?CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,12 +70,12 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     /**
      * Update the properties of a customSecurityAttributeDefinition object.
      * @param CustomSecurityAttributeDefinition $body The request body
-     * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatc_9bc684f1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomSecurityAttributeDefinition|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/customsecurityattributedefinition-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(CustomSecurityAttributeDefinition $body, ?CustomSecurityAttributeDefinitionItemRequestBuilderPatc_9bc684f1 $requestConfiguration = null): Promise {
+    public function patch(CustomSecurityAttributeDefinition $body, ?CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,10 +85,10 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property customSecurityAttributeDefinitions for directory
-     * @param CustomSecurityAttributeDefinitionItemRequestBuilderDele_7a85dc21|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CustomSecurityAttributeDefinitionItemRequestBuilderDele_7a85dc21 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CustomSecurityAttributeDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -103,10 +103,10 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
 
     /**
      * Read the properties and relationships of a customSecurityAttributeDefinition object.
-     * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetR_c14f2000|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CustomSecurityAttributeDefinitionItemRequestBuilderGetR_c14f2000 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CustomSecurityAttributeDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -125,10 +125,10 @@ class CustomSecurityAttributeDefinitionItemRequestBuilder extends BaseRequestBui
     /**
      * Update the properties of a customSecurityAttributeDefinition object.
      * @param CustomSecurityAttributeDefinition $body The request body
-     * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatc_9bc684f1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CustomSecurityAttributeDefinition $body, ?CustomSecurityAttributeDefinitionItemRequestBuilderPatc_9bc684f1 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CustomSecurityAttributeDefinition $body, ?CustomSecurityAttributeDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

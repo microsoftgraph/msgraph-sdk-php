@@ -35,12 +35,12 @@ class GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder extends BaseReq
 
     /**
      * Get the count of unique users by Outlook desktop version.
-     * @param GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuil_36a54a03|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getemailappusageversionsusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuil_36a54a03 $requestConfiguration = null): Promise {
+    public function get(?GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder extends BaseReq
 
     /**
      * Get the count of unique users by Outlook desktop version.
-     * @param GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuil_36a54a03|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuil_36a54a03 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

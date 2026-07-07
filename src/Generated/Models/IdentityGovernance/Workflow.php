@@ -3,7 +3,6 @@
 namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
 
 use DateTime;
-use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -65,10 +64,7 @@ class Workflow extends WorkflowBase implements Parsable
             'executionScope' => fn(ParseNode $n) => $o->setExecutionScope($n->getCollectionOfObjectValues([UserProcessingResult::class, 'createFromDiscriminatorValue'])),
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             'nextScheduleRunDateTime' => fn(ParseNode $n) => $o->setNextScheduleRunDateTime($n->getDateTimeValue()),
-            'previewScope' => fn(ParseNode $n) => $o->setPreviewScope($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
-            'quarantineDetails' => fn(ParseNode $n) => $o->setQuarantineDetails($n->getObjectValue([QuarantineDetails::class, 'createFromDiscriminatorValue'])),
             'runs' => fn(ParseNode $n) => $o->setRuns($n->getCollectionOfObjectValues([Run::class, 'createFromDiscriminatorValue'])),
-            'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([WorkflowSetting::class, 'createFromDiscriminatorValue'])),
             'taskReports' => fn(ParseNode $n) => $o->setTaskReports($n->getCollectionOfObjectValues([TaskReport::class, 'createFromDiscriminatorValue'])),
             'userProcessingResults' => fn(ParseNode $n) => $o->setUserProcessingResults($n->getCollectionOfObjectValues([UserProcessingResult::class, 'createFromDiscriminatorValue'])),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getIntegerValue()),
@@ -101,32 +97,6 @@ class Workflow extends WorkflowBase implements Parsable
     }
 
     /**
-     * Gets the previewScope property value. The preview scope for the workflow.
-     * @return array<DirectoryObject>|null
-    */
-    public function getPreviewScope(): ?array {
-        $val = $this->getBackingStore()->get('previewScope');
-        if (is_array($val) || is_null($val)) {
-            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
-            /** @var array<DirectoryObject>|null $val */
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'previewScope'");
-    }
-
-    /**
-     * Gets the quarantineDetails property value. The quarantineDetails property
-     * @return QuarantineDetails|null
-    */
-    public function getQuarantineDetails(): ?QuarantineDetails {
-        $val = $this->getBackingStore()->get('quarantineDetails');
-        if (is_null($val) || $val instanceof QuarantineDetails) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'quarantineDetails'");
-    }
-
-    /**
      * Gets the runs property value. Workflow runs.
      * @return array<Run>|null
     */
@@ -138,18 +108,6 @@ class Workflow extends WorkflowBase implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'runs'");
-    }
-
-    /**
-     * Gets the settings property value. The settings property
-     * @return WorkflowSetting|null
-    */
-    public function getSettings(): ?WorkflowSetting {
-        $val = $this->getBackingStore()->get('settings');
-        if (is_null($val) || $val instanceof WorkflowSetting) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
     }
 
     /**
@@ -216,10 +174,7 @@ class Workflow extends WorkflowBase implements Parsable
         $writer->writeCollectionOfObjectValues('executionScope', $this->getExecutionScope());
         $writer->writeStringValue('id', $this->getId());
         $writer->writeDateTimeValue('nextScheduleRunDateTime', $this->getNextScheduleRunDateTime());
-        $writer->writeCollectionOfObjectValues('previewScope', $this->getPreviewScope());
-        $writer->writeObjectValue('quarantineDetails', $this->getQuarantineDetails());
         $writer->writeCollectionOfObjectValues('runs', $this->getRuns());
-        $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeCollectionOfObjectValues('taskReports', $this->getTaskReports());
         $writer->writeCollectionOfObjectValues('userProcessingResults', $this->getUserProcessingResults());
         $writer->writeIntegerValue('version', $this->getVersion());
@@ -259,35 +214,11 @@ class Workflow extends WorkflowBase implements Parsable
     }
 
     /**
-     * Sets the previewScope property value. The preview scope for the workflow.
-     * @param array<DirectoryObject>|null $value Value to set for the previewScope property.
-    */
-    public function setPreviewScope(?array $value): void {
-        $this->getBackingStore()->set('previewScope', $value);
-    }
-
-    /**
-     * Sets the quarantineDetails property value. The quarantineDetails property
-     * @param QuarantineDetails|null $value Value to set for the quarantineDetails property.
-    */
-    public function setQuarantineDetails(?QuarantineDetails $value): void {
-        $this->getBackingStore()->set('quarantineDetails', $value);
-    }
-
-    /**
      * Sets the runs property value. Workflow runs.
      * @param array<Run>|null $value Value to set for the runs property.
     */
     public function setRuns(?array $value): void {
         $this->getBackingStore()->set('runs', $value);
-    }
-
-    /**
-     * Sets the settings property value. The settings property
-     * @param WorkflowSetting|null $value Value to set for the settings property.
-    */
-    public function setSettings(?WorkflowSetting $value): void {
-        $this->getBackingStore()->set('settings', $value);
     }
 
     /**

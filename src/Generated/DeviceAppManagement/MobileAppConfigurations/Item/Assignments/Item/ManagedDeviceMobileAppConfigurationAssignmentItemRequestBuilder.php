@@ -32,11 +32,11 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
 
     /**
      * Delete navigation property assignments for deviceAppManagement
-     * @param ManagedDeviceMobileAppConfigurationAssignmentItemReques_1343f3a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ManagedDeviceMobileAppConfigurationAssignmentItemReques_1343f3a7 $requestConfiguration = null): Promise {
+    public function delete(?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
 
     /**
      * The list of group assignemenets for app configration.
-     * @param ManagedDeviceMobileAppConfigurationAssignmentItemReques_259986e4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationAssignment|null>
      * @throws Exception
     */
-    public function get(?ManagedDeviceMobileAppConfigurationAssignmentItemReques_259986e4 $requestConfiguration = null): Promise {
+    public function get(?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationAssignment $body The request body
-     * @param ManagedDeviceMobileAppConfigurationAssignmentItemReques_68109779|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfigurationAssignment|null>
      * @throws Exception
     */
-    public function patch(ManagedDeviceMobileAppConfigurationAssignment $body, ?ManagedDeviceMobileAppConfigurationAssignmentItemReques_68109779 $requestConfiguration = null): Promise {
+    public function patch(ManagedDeviceMobileAppConfigurationAssignment $body, ?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
 
     /**
      * Delete navigation property assignments for deviceAppManagement
-     * @param ManagedDeviceMobileAppConfigurationAssignmentItemReques_1343f3a7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ManagedDeviceMobileAppConfigurationAssignmentItemReques_1343f3a7 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
 
     /**
      * The list of group assignemenets for app configration.
-     * @param ManagedDeviceMobileAppConfigurationAssignmentItemReques_259986e4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ManagedDeviceMobileAppConfigurationAssignmentItemReques_259986e4 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder extends Ba
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param ManagedDeviceMobileAppConfigurationAssignment $body The request body
-     * @param ManagedDeviceMobileAppConfigurationAssignmentItemReques_68109779|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ManagedDeviceMobileAppConfigurationAssignment $body, ?ManagedDeviceMobileAppConfigurationAssignmentItemReques_68109779 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ManagedDeviceMobileAppConfigurationAssignment $body, ?ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -40,11 +40,11 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mobileAppTroubleshootingEvents for deviceManagement
-     * @param MobileAppTroubleshootingEventItemRequestBuilderDeleteRe_9cbd443e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MobileAppTroubleshootingEventItemRequestBuilderDeleteRe_9cbd443e $requestConfiguration = null): Promise {
+    public function delete(?MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection property of MobileAppTroubleshootingEvent.
-     * @param MobileAppTroubleshootingEventItemRequestBuilderGetReque_653f2825|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppTroubleshootingEvent|null>
      * @throws Exception
     */
-    public function get(?MobileAppTroubleshootingEventItemRequestBuilderGetReque_653f2825 $requestConfiguration = null): Promise {
+    public function get(?MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property mobileAppTroubleshootingEvents in deviceManagement
      * @param MobileAppTroubleshootingEvent $body The request body
-     * @param MobileAppTroubleshootingEventItemRequestBuilderPatchReq_111213ad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileAppTroubleshootingEvent|null>
      * @throws Exception
     */
-    public function patch(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventItemRequestBuilderPatchReq_111213ad $requestConfiguration = null): Promise {
+    public function patch(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mobileAppTroubleshootingEvents for deviceManagement
-     * @param MobileAppTroubleshootingEventItemRequestBuilderDeleteRe_9cbd443e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MobileAppTroubleshootingEventItemRequestBuilderDeleteRe_9cbd443e $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MobileAppTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection property of MobileAppTroubleshootingEvent.
-     * @param MobileAppTroubleshootingEventItemRequestBuilderGetReque_653f2825|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MobileAppTroubleshootingEventItemRequestBuilderGetReque_653f2825 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MobileAppTroubleshootingEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property mobileAppTroubleshootingEvents in deviceManagement
      * @param MobileAppTroubleshootingEvent $body The request body
-     * @param MobileAppTroubleshootingEventItemRequestBuilderPatchReq_111213ad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventItemRequestBuilderPatchReq_111213ad $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MobileAppTroubleshootingEvent $body, ?MobileAppTroubleshootingEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

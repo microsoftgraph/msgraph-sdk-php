@@ -32,11 +32,11 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property deviceManagementTroubleshootingEvents for users
-     * @param DeviceManagementTroubleshootingEventItemRequestBuilderD_f828cc80|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceManagementTroubleshootingEventItemRequestBuilderD_f828cc80 $requestConfiguration = null): Promise {
+    public function delete(?DeviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder extends BaseRequest
 
     /**
      * The list of troubleshooting events for this user.
-     * @param DeviceManagementTroubleshootingEventItemRequestBuilderG_6af9753f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementTroubleshootingEvent|null>
      * @throws Exception
     */
-    public function get(?DeviceManagementTroubleshootingEventItemRequestBuilderG_6af9753f $requestConfiguration = null): Promise {
+    public function get(?DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property deviceManagementTroubleshootingEvents in users
      * @param DeviceManagementTroubleshootingEvent $body The request body
-     * @param DeviceManagementTroubleshootingEventItemRequestBuilderP_e69dc31a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementTroubleshootingEvent|null>
      * @throws Exception
     */
-    public function patch(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventItemRequestBuilderP_e69dc31a $requestConfiguration = null): Promise {
+    public function patch(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property deviceManagementTroubleshootingEvents for users
-     * @param DeviceManagementTroubleshootingEventItemRequestBuilderD_f828cc80|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceManagementTroubleshootingEventItemRequestBuilderD_f828cc80 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceManagementTroubleshootingEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder extends BaseRequest
 
     /**
      * The list of troubleshooting events for this user.
-     * @param DeviceManagementTroubleshootingEventItemRequestBuilderG_6af9753f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceManagementTroubleshootingEventItemRequestBuilderG_6af9753f $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property deviceManagementTroubleshootingEvents in users
      * @param DeviceManagementTroubleshootingEvent $body The request body
-     * @param DeviceManagementTroubleshootingEventItemRequestBuilderP_e69dc31a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventItemRequestBuilderP_e69dc31a $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceManagementTroubleshootingEvent $body, ?DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

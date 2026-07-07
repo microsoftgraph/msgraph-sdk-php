@@ -52,12 +52,12 @@ class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
-     * @param MicrosoftAuthenticatorMethodsRequestBuilderGetRequestCo_14480b21|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MicrosoftAuthenticatorAuthenticationMethodCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0 Find more info here
     */
-    public function get(?MicrosoftAuthenticatorMethodsRequestBuilderGetRequestCo_14480b21 $requestConfiguration = null): Promise {
+    public function get(?MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -67,10 +67,10 @@ class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
-     * @param MicrosoftAuthenticatorMethodsRequestBuilderGetRequestCo_14480b21|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MicrosoftAuthenticatorMethodsRequestBuilderGetRequestCo_14480b21 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

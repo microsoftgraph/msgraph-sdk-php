@@ -31,12 +31,12 @@ class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuilder
 
     /**
      * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
-     * @param MicrosoftGraphSecurityReopenRequestBuilderPostRequestCo_92653f9c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityReopenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycase-reopen?view=graph-rest-1.0 Find more info here
     */
-    public function post(?MicrosoftGraphSecurityReopenRequestBuilderPostRequestCo_92653f9c $requestConfiguration = null): Promise {
+    public function post(?MicrosoftGraphSecurityReopenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityReopenRequestBuilder extends BaseRequestBuilder
 
     /**
      * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
-     * @param MicrosoftGraphSecurityReopenRequestBuilderPostRequestCo_92653f9c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityReopenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?MicrosoftGraphSecurityReopenRequestBuilderPostRequestCo_92653f9c $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?MicrosoftGraphSecurityReopenRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

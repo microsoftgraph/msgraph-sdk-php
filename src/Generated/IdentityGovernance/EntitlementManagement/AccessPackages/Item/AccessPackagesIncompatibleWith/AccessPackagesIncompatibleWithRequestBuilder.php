@@ -52,12 +52,12 @@ class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
-     * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestC_49b096d2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AccessPackagesIncompatibleWithRequestBuilderGetRequestC_49b096d2 $requestConfiguration = null): Promise {
+    public function get(?AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -67,10 +67,10 @@ class AccessPackagesIncompatibleWithRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
-     * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestC_49b096d2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackagesIncompatibleWithRequestBuilderGetRequestC_49b096d2 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackagesIncompatibleWithRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

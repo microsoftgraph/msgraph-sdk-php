@@ -80,11 +80,11 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property mobileAppConfigurations for deviceAppManagement
-     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderDe_5669619b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ManagedDeviceMobileAppConfigurationItemRequestBuilderDe_5669619b $requestConfiguration = null): Promise {
+    public function delete(?ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,11 +94,11 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
 
     /**
      * The Managed Device Mobile Application Configurations.
-     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGe_dad7c2b8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfiguration|null>
      * @throws Exception
     */
-    public function get(?ManagedDeviceMobileAppConfigurationItemRequestBuilderGe_dad7c2b8 $requestConfiguration = null): Promise {
+    public function get(?ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -109,11 +109,11 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param ManagedDeviceMobileAppConfiguration $body The request body
-     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPa_2723b18c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ManagedDeviceMobileAppConfiguration|null>
      * @throws Exception
     */
-    public function patch(ManagedDeviceMobileAppConfiguration $body, ?ManagedDeviceMobileAppConfigurationItemRequestBuilderPa_2723b18c $requestConfiguration = null): Promise {
+    public function patch(ManagedDeviceMobileAppConfiguration $body, ?ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -123,10 +123,10 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property mobileAppConfigurations for deviceAppManagement
-     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderDe_5669619b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ManagedDeviceMobileAppConfigurationItemRequestBuilderDe_5669619b $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ManagedDeviceMobileAppConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -141,10 +141,10 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
 
     /**
      * The Managed Device Mobile Application Configurations.
-     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGe_dad7c2b8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ManagedDeviceMobileAppConfigurationItemRequestBuilderGe_dad7c2b8 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ManagedDeviceMobileAppConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -163,10 +163,10 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property mobileAppConfigurations in deviceAppManagement
      * @param ManagedDeviceMobileAppConfiguration $body The request body
-     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPa_2723b18c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ManagedDeviceMobileAppConfiguration $body, ?ManagedDeviceMobileAppConfigurationItemRequestBuilderPa_2723b18c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ManagedDeviceMobileAppConfiguration $body, ?ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
