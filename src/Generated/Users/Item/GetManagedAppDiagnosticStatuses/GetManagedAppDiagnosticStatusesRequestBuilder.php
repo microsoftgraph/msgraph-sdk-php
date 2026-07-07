@@ -31,11 +31,11 @@ class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Gets diagnostics validation status for a given user.
-     * @param GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetManagedAppDiagnosticStatusesRequestBuilderGetRequest_22370001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetManagedAppDiagnosticStatusesGetResponse|null>
      * @throws Exception
     */
-    public function get(?GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetManagedAppDiagnosticStatusesRequestBuilderGetRequest_22370001 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -45,10 +45,10 @@ class GetManagedAppDiagnosticStatusesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Gets diagnostics validation status for a given user.
-     * @param GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetManagedAppDiagnosticStatusesRequestBuilderGetRequest_22370001|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetManagedAppDiagnosticStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetManagedAppDiagnosticStatusesRequestBuilderGetRequest_22370001 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

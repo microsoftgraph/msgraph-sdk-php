@@ -69,11 +69,11 @@ class ApplicationPermissionGrantsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to applicationPermissionGrants for storage
      * @param FileStorageContainerTypeAppPermissionGrant $body The request body
-     * @param ApplicationPermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ApplicationPermissionGrantsRequestBuilderPostRequestCon_92ca5124|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerTypeAppPermissionGrant|null>
      * @throws Exception
     */
-    public function post(FileStorageContainerTypeAppPermissionGrant $body, ?ApplicationPermissionGrantsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(FileStorageContainerTypeAppPermissionGrant $body, ?ApplicationPermissionGrantsRequestBuilderPostRequestCon_92ca5124 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -105,10 +105,10 @@ class ApplicationPermissionGrantsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to applicationPermissionGrants for storage
      * @param FileStorageContainerTypeAppPermissionGrant $body The request body
-     * @param ApplicationPermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ApplicationPermissionGrantsRequestBuilderPostRequestCon_92ca5124|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(FileStorageContainerTypeAppPermissionGrant $body, ?ApplicationPermissionGrantsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(FileStorageContainerTypeAppPermissionGrant $body, ?ApplicationPermissionGrantsRequestBuilderPostRequestCon_92ca5124 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

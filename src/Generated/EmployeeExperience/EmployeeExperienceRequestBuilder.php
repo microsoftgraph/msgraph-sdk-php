@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\EmployeeExperience\Communities\CommunitiesRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\EngagementAsyncOperations\EngagementAsyncOperationsRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivities\LearningCourseActivitiesRequestBuilder;
-use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningCourseActivitiesWithExternalcourseActivityId\LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\LearningProvidersRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\Roles\RolesRequestBuilder;
 use Microsoft\Graph\Generated\Models\EmployeeExperience;
@@ -88,15 +88,15 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperience entity.
      * @param string $externalcourseActivityId Alternate key of learningCourseActivity
-     * @return LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder
+     * @return LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b
     */
-    public function learningCourseActivitiesWithExternalcourseActivityId(string $externalcourseActivityId): LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder {
-        return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder($this->pathParameters, $this->requestAdapter, $externalcourseActivityId);
+    public function learningCourseActivitiesWithExternalcourseActivityId(string $externalcourseActivityId): LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b {
+        return new LearningCourseActivitiesWithExternalcourseActivityIdReq_fbf0436b($this->pathParameters, $this->requestAdapter, $externalcourseActivityId);
     }
 
     /**
      * Update employeeExperience
-     * @param EmployeeExperience $body Represents a container that exposes navigation properties for employee experience resources.
+     * @param EmployeeExperience $body The request body
      * @param EmployeeExperienceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmployeeExperience|null>
      * @throws Exception
@@ -132,7 +132,7 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update employeeExperience
-     * @param EmployeeExperience $body Represents a container that exposes navigation properties for employee experience resources.
+     * @param EmployeeExperience $body The request body
      * @param EmployeeExperienceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

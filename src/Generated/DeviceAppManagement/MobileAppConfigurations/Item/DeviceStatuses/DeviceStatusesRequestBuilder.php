@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Item\ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Item\ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e;
 use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationDeviceStatus;
-use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
+use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_2cd5277e;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -29,12 +29,12 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
      * @param string $managedDeviceMobileAppConfigurationDeviceStatusId The unique identifier of managedDeviceMobileAppConfigurationDeviceStatus
-     * @return ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder
+     * @return ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e
     */
-    public function byManagedDeviceMobileAppConfigurationDeviceStatusId(string $managedDeviceMobileAppConfigurationDeviceStatusId): ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder {
+    public function byManagedDeviceMobileAppConfigurationDeviceStatusId(string $managedDeviceMobileAppConfigurationDeviceStatusId): ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDeviceMobileAppConfigurationDeviceStatus%2Did'] = $managedDeviceMobileAppConfigurationDeviceStatusId;
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequ_fe086f3e($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -54,7 +54,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
     /**
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      * @param DeviceStatusesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse|null>
+     * @return Promise<ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_2cd5277e|null>
      * @throws Exception
     */
     public function get(?DeviceStatusesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
@@ -62,7 +62,7 @@ class DeviceStatusesRequestBuilder extends BaseRequestBuilder
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [ManagedDeviceMobileAppConfigurationDeviceStatusCollecti_2cd5277e::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**

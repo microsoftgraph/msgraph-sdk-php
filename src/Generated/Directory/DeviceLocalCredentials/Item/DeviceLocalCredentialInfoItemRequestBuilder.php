@@ -32,11 +32,11 @@ class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property deviceLocalCredentials for directory
-     * @param DeviceLocalCredentialInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLocalCredentialInfoItemRequestBuilderDeleteReques_9178df60|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceLocalCredentialInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DeviceLocalCredentialInfoItemRequestBuilderDeleteReques_9178df60 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
-     * @param DeviceLocalCredentialInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLocalCredentialInfoItemRequestBuilderGetRequestCo_e311dfa8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceLocalCredentialInfo|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DeviceLocalCredentialInfoItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DeviceLocalCredentialInfoItemRequestBuilderGetRequestCo_e311dfa8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property deviceLocalCredentials in directory
      * @param DeviceLocalCredentialInfo $body The request body
-     * @param DeviceLocalCredentialInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLocalCredentialInfoItemRequestBuilderPatchRequest_6c6d5569|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceLocalCredentialInfo|null>
      * @throws Exception
     */
-    public function patch(DeviceLocalCredentialInfo $body, ?DeviceLocalCredentialInfoItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(DeviceLocalCredentialInfo $body, ?DeviceLocalCredentialInfoItemRequestBuilderPatchRequest_6c6d5569 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property deviceLocalCredentials for directory
-     * @param DeviceLocalCredentialInfoItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLocalCredentialInfoItemRequestBuilderDeleteReques_9178df60|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceLocalCredentialInfoItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceLocalCredentialInfoItemRequestBuilderDeleteReques_9178df60 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
-     * @param DeviceLocalCredentialInfoItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLocalCredentialInfoItemRequestBuilderGetRequestCo_e311dfa8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceLocalCredentialInfoItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceLocalCredentialInfoItemRequestBuilderGetRequestCo_e311dfa8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property deviceLocalCredentials in directory
      * @param DeviceLocalCredentialInfo $body The request body
-     * @param DeviceLocalCredentialInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLocalCredentialInfoItemRequestBuilderPatchRequest_6c6d5569|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceLocalCredentialInfo $body, ?DeviceLocalCredentialInfoItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceLocalCredentialInfo $body, ?DeviceLocalCredentialInfoItemRequestBuilderPatchRequest_6c6d5569 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

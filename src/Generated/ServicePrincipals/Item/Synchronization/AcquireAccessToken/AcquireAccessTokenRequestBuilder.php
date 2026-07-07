@@ -30,7 +30,7 @@ class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application.
+     * Acquire an OAuth access token from the synchronization resource to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param AcquireAccessTokenPostRequestBody $body The request body
      * @param AcquireAccessTokenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -46,7 +46,7 @@ class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Acquire an OAuth access token to authorize the Microsoft Entra provisioning service to provision users into an application.
+     * Acquire an OAuth access token from the synchronization resource to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param AcquireAccessTokenPostRequestBody $body The request body
      * @param AcquireAccessTokenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

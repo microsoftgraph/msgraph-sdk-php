@@ -34,12 +34,12 @@ class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends BaseRequest
 
     /**
      * Get a summary of AD FS relying parties information.
-     * @param GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderG_91959eb7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetRelyingPartyDetailedSummaryWithPeriodGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getrelyingpartydetailedsummary?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderG_91959eb7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends BaseRequest
 
     /**
      * Get a summary of AD FS relying parties information.
-     * @param GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderG_91959eb7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetRelyingPartyDetailedSummaryWithPeriodRequestBuilderG_91959eb7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -52,7 +52,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the details of the built-in tasks in Lifecycle Workflows.
+     * Retrieve the details of the built-in task objects in a workflow.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TaskCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class TasksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the details of the built-in tasks in Lifecycle Workflows.
+     * Retrieve the details of the built-in task objects in a workflow.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -18,6 +18,7 @@ use Microsoft\Graph\Generated\Chats\Item\RemoveAllAccessForUser\RemoveAllAccessF
 use Microsoft\Graph\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\StartMigration\StartMigrationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\TabsRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\TargetedMessages\TargetedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -127,6 +128,13 @@ class ChatItemRequestBuilder extends BaseRequestBuilder
     */
     public function tabs(): TabsRequestBuilder {
         return new TabsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the targetedMessages property of the microsoft.graph.chat entity.
+    */
+    public function targetedMessages(): TargetedMessagesRequestBuilder {
+        return new TargetedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

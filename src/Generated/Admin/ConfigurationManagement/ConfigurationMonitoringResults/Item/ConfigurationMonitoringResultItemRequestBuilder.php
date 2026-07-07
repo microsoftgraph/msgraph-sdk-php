@@ -32,11 +32,11 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property configurationMonitoringResults for admin
-     * @param ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultItemRequestBuilderDeleteRe_d4b30f6a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ConfigurationMonitoringResultItemRequestBuilderDeleteRe_d4b30f6a $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a configurationMonitoringResult object.
-     * @param ConfigurationMonitoringResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultItemRequestBuilderGetReque_ce22d56e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationMonitoringResult|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/configurationmonitoringresult-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ConfigurationMonitoringResultItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ConfigurationMonitoringResultItemRequestBuilderGetReque_ce22d56e $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property configurationMonitoringResults in admin
      * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultItemRequestBuilderPatchReq_91cee601|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationMonitoringResult|null>
      * @throws Exception
     */
-    public function patch(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultItemRequestBuilderPatchReq_91cee601 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property configurationMonitoringResults for admin
-     * @param ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultItemRequestBuilderDeleteRe_d4b30f6a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ConfigurationMonitoringResultItemRequestBuilderDeleteRe_d4b30f6a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a configurationMonitoringResult object.
-     * @param ConfigurationMonitoringResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultItemRequestBuilderGetReque_ce22d56e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ConfigurationMonitoringResultItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ConfigurationMonitoringResultItemRequestBuilderGetReque_ce22d56e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property configurationMonitoringResults in admin
      * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ConfigurationMonitoringResultItemRequestBuilderPatchReq_91cee601|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultItemRequestBuilderPatchReq_91cee601 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,11 +32,11 @@ class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property services for users
-     * @param ServiceStorageQuotaBreakdownItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceStorageQuotaBreakdownItemRequestBuilderDeleteReq_e6329b34|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ServiceStorageQuotaBreakdownItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ServiceStorageQuotaBreakdownItemRequestBuilderDeleteReq_e6329b34 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get services from users
-     * @param ServiceStorageQuotaBreakdownItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceStorageQuotaBreakdownItemRequestBuilderGetReques_5c69abc0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceStorageQuotaBreakdown|null>
      * @throws Exception
     */
-    public function get(?ServiceStorageQuotaBreakdownItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ServiceStorageQuotaBreakdownItemRequestBuilderGetReques_5c69abc0 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property services in users
      * @param ServiceStorageQuotaBreakdown $body The request body
-     * @param ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequ_cf4aa4b6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServiceStorageQuotaBreakdown|null>
      * @throws Exception
     */
-    public function patch(ServiceStorageQuotaBreakdown $body, ?ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ServiceStorageQuotaBreakdown $body, ?ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequ_cf4aa4b6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property services for users
-     * @param ServiceStorageQuotaBreakdownItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceStorageQuotaBreakdownItemRequestBuilderDeleteReq_e6329b34|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ServiceStorageQuotaBreakdownItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ServiceStorageQuotaBreakdownItemRequestBuilderDeleteReq_e6329b34 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get services from users
-     * @param ServiceStorageQuotaBreakdownItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceStorageQuotaBreakdownItemRequestBuilderGetReques_5c69abc0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ServiceStorageQuotaBreakdownItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ServiceStorageQuotaBreakdownItemRequestBuilderGetReques_5c69abc0 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property services in users
      * @param ServiceStorageQuotaBreakdown $body The request body
-     * @param ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequ_cf4aa4b6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ServiceStorageQuotaBreakdown $body, ?ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ServiceStorageQuotaBreakdown $body, ?ServiceStorageQuotaBreakdownItemRequestBuilderPatchRequ_cf4aa4b6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

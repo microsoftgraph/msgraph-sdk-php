@@ -32,12 +32,12 @@ class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the last  ediscoveryEstimateOperation objects and their properties.
-     * @param LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LastEstimateStatisticsOperationRequestBuilderGetRequest_fb9af55d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EdiscoveryEstimateOperation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverysearch-list-lastestimatestatisticsoperation?view=graph-rest-1.0 Find more info here
     */
-    public function get(?LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?LastEstimateStatisticsOperationRequestBuilderGetRequest_fb9af55d $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the last  ediscoveryEstimateOperation objects and their properties.
-     * @param LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LastEstimateStatisticsOperationRequestBuilderGetRequest_fb9af55d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?LastEstimateStatisticsOperationRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?LastEstimateStatisticsOperationRequestBuilderGetRequest_fb9af55d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

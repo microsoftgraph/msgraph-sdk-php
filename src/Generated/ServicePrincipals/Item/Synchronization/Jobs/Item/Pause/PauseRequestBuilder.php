@@ -30,7 +30,7 @@ class PauseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
+     * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @param PauseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class PauseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Temporarily stop a running synchronization job. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
+     * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job will continue from where it left off when a start call is made.
      * @param PauseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

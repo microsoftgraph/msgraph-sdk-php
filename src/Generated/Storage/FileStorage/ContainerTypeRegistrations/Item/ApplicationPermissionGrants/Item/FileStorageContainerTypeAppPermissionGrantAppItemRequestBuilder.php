@@ -32,12 +32,12 @@ class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder extends Ba
 
     /**
      * Delete a fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
-     * @param FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeAppPermissionGrantAppItemReques_7c6ae3e7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-delete-applicationpermissiongrants?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?FileStorageContainerTypeAppPermissionGrantAppItemReques_7c6ae3e7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder extends Ba
 
     /**
      * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
-     * @param FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeAppPermissionGrantAppItemReques_1ab15327|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerTypeAppPermissionGrant|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestoragecontainertypeapppermissiongrant-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?FileStorageContainerTypeAppPermissionGrantAppItemReques_1ab15327 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder extends Ba
     /**
      * Update the properties of a fileStorageContainerTypeAppPermissionGrant object.
      * @param FileStorageContainerTypeAppPermissionGrant $body The request body
-     * @param FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeAppPermissionGrantAppItemReques_e6e423f5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FileStorageContainerTypeAppPermissionGrant|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/filestoragecontainertypeapppermissiongrant-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(FileStorageContainerTypeAppPermissionGrant $body, ?FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(FileStorageContainerTypeAppPermissionGrant $body, ?FileStorageContainerTypeAppPermissionGrantAppItemReques_e6e423f5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder extends Ba
 
     /**
      * Delete a fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
-     * @param FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeAppPermissionGrantAppItemReques_7c6ae3e7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?FileStorageContainerTypeAppPermissionGrantAppItemReques_7c6ae3e7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder extends Ba
 
     /**
      * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
-     * @param FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeAppPermissionGrantAppItemReques_1ab15327|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FileStorageContainerTypeAppPermissionGrantAppItemReques_1ab15327 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder extends Ba
     /**
      * Update the properties of a fileStorageContainerTypeAppPermissionGrant object.
      * @param FileStorageContainerTypeAppPermissionGrant $body The request body
-     * @param FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FileStorageContainerTypeAppPermissionGrantAppItemReques_e6e423f5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(FileStorageContainerTypeAppPermissionGrant $body, ?FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(FileStorageContainerTypeAppPermissionGrant $body, ?FileStorageContainerTypeAppPermissionGrantAppItemReques_e6e423f5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

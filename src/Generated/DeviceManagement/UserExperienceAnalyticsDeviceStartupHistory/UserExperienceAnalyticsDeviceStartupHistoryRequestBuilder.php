@@ -53,11 +53,11 @@ class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends BaseRequ
 
     /**
      * User experience analytics device Startup History
-     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_d1de06f3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsDeviceStartupHistoryCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_d1de06f3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupHistory for deviceManagement
      * @param UserExperienceAnalyticsDeviceStartupHistory $body The request body
-     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_a8e556e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsDeviceStartupHistory|null>
      * @throws Exception
     */
-    public function post(UserExperienceAnalyticsDeviceStartupHistory $body, ?UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(UserExperienceAnalyticsDeviceStartupHistory $body, ?UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_a8e556e6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends BaseRequ
 
     /**
      * User experience analytics device Startup History
-     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_d1de06f3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_d1de06f3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceStartupHistory for deviceManagement
      * @param UserExperienceAnalyticsDeviceStartupHistory $body The request body
-     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_a8e556e6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UserExperienceAnalyticsDeviceStartupHistory $body, ?UserExperienceAnalyticsDeviceStartupHistoryRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UserExperienceAnalyticsDeviceStartupHistory $body, ?UserExperienceAnalyticsDeviceStartupHistoryRequestBuild_a8e556e6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

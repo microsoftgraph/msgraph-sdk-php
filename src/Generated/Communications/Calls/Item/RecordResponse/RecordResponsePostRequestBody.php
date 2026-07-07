@@ -25,6 +25,8 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setBargeInAllowed(false);
+        $this->setPlayBeep(false);
     }
 
     /**

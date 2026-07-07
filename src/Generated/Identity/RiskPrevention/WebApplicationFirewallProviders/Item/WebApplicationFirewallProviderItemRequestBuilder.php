@@ -40,12 +40,12 @@ class WebApplicationFirewallProviderItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete a webApplicationFirewallProvider object.
-     * @param WebApplicationFirewallProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProviderItemRequestBuilderDeleteR_5071a702|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/riskpreventioncontainer-delete-webapplicationfirewallproviders?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?WebApplicationFirewallProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?WebApplicationFirewallProviderItemRequestBuilderDeleteR_5071a702 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class WebApplicationFirewallProviderItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Read the properties and relationships of webApplicationFirewallProvider object.
-     * @param WebApplicationFirewallProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProviderItemRequestBuilderGetRequ_2960549c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallProvider|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/webapplicationfirewallprovider-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?WebApplicationFirewallProviderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?WebApplicationFirewallProviderItemRequestBuilderGetRequ_2960549c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,12 +71,12 @@ class WebApplicationFirewallProviderItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a webApplicationFirewallProvider object.
      * @param WebApplicationFirewallProvider $body The request body
-     * @param WebApplicationFirewallProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProviderItemRequestBuilderPatchRe_a1daba53|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WebApplicationFirewallProvider|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/webapplicationfirewallprovider-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProviderItemRequestBuilderPatchRe_a1daba53 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,10 +86,10 @@ class WebApplicationFirewallProviderItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete a webApplicationFirewallProvider object.
-     * @param WebApplicationFirewallProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProviderItemRequestBuilderDeleteR_5071a702|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WebApplicationFirewallProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WebApplicationFirewallProviderItemRequestBuilderDeleteR_5071a702 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class WebApplicationFirewallProviderItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Read the properties and relationships of webApplicationFirewallProvider object.
-     * @param WebApplicationFirewallProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProviderItemRequestBuilderGetRequ_2960549c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WebApplicationFirewallProviderItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WebApplicationFirewallProviderItemRequestBuilderGetRequ_2960549c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -126,10 +126,10 @@ class WebApplicationFirewallProviderItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a webApplicationFirewallProvider object.
      * @param WebApplicationFirewallProvider $body The request body
-     * @param WebApplicationFirewallProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WebApplicationFirewallProviderItemRequestBuilderPatchRe_a1daba53|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProviderItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(WebApplicationFirewallProvider $body, ?WebApplicationFirewallProviderItemRequestBuilderPatchRe_a1daba53 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

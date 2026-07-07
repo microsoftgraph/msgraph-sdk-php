@@ -31,12 +31,12 @@ class GetVirtualAppointmentJoinWebUrlRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a join web URL for a Microsoft Virtual Appointment. This web URL includes enhanced business-to-customer experiences such as mobile browser join and virtual lobby rooms. With Teams Premium, you can configure a custom lobby room experience for attendees by adding your company logo and access the Virtual Appointments usage report for organizational analytics.
-     * @param GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequest_6b9e555b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetVirtualAppointmentJoinWebUrlGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualappointment-getvirtualappointmentjoinweburl?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequest_6b9e555b $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class GetVirtualAppointmentJoinWebUrlRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a join web URL for a Microsoft Virtual Appointment. This web URL includes enhanced business-to-customer experiences such as mobile browser join and virtual lobby rooms. With Teams Premium, you can configure a custom lobby room experience for attendees by adding your company logo and access the Virtual Appointments usage report for organizational analytics.
-     * @param GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequest_6b9e555b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetVirtualAppointmentJoinWebUrlRequestBuilderGetRequest_6b9e555b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -35,12 +35,12 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
-     * @param LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningContentsWithExternalIdRequestBuilderDeleteReque_a4251ff7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?LearningContentsWithExternalIdRequestBuilderDeleteReque_a4251ff7 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,12 +50,12 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
-     * @param LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningContentsWithExternalIdRequestBuilderGetRequestC_de82a102|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningContent|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?LearningContentsWithExternalIdRequestBuilderGetRequestC_de82a102 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -66,11 +66,11 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property learningContents in employeeExperience
      * @param LearningContent $body The request body
-     * @param LearningContentsWithExternalIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningContentsWithExternalIdRequestBuilderPatchReques_225a8d30|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<LearningContent|null>
      * @throws Exception
     */
-    public function patch(LearningContent $body, ?LearningContentsWithExternalIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(LearningContent $body, ?LearningContentsWithExternalIdRequestBuilderPatchReques_225a8d30 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -80,10 +80,10 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
-     * @param LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningContentsWithExternalIdRequestBuilderDeleteReque_a4251ff7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?LearningContentsWithExternalIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?LearningContentsWithExternalIdRequestBuilderDeleteReque_a4251ff7 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -98,10 +98,10 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
-     * @param LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningContentsWithExternalIdRequestBuilderGetRequestC_de82a102|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?LearningContentsWithExternalIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?LearningContentsWithExternalIdRequestBuilderGetRequestC_de82a102 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -120,10 +120,10 @@ class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property learningContents in employeeExperience
      * @param LearningContent $body The request body
-     * @param LearningContentsWithExternalIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param LearningContentsWithExternalIdRequestBuilderPatchReques_225a8d30|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(LearningContent $body, ?LearningContentsWithExternalIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(LearningContent $body, ?LearningContentsWithExternalIdRequestBuilderPatchReques_225a8d30 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

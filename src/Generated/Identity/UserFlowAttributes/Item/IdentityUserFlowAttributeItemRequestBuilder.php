@@ -32,12 +32,12 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a custom identityUserFlowAttribute.
-     * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentityUserFlowAttributeItemRequestBuilderDeleteReques_1146f46c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?IdentityUserFlowAttributeItemRequestBuilderDeleteReques_1146f46c $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
-     * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestCo_16d18457|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityUserFlowAttribute|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?IdentityUserFlowAttributeItemRequestBuilderGetRequestCo_16d18457 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a custom identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body The request body
-     * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequest_500f71a9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IdentityUserFlowAttribute|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(IdentityUserFlowAttribute $body, ?IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(IdentityUserFlowAttribute $body, ?IdentityUserFlowAttributeItemRequestBuilderPatchRequest_500f71a9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a custom identityUserFlowAttribute.
-     * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentityUserFlowAttributeItemRequestBuilderDeleteReques_1146f46c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?IdentityUserFlowAttributeItemRequestBuilderDeleteReques_1146f46c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -96,10 +96,10 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of a identityUserFlowAttribute object.
-     * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestCo_16d18457|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?IdentityUserFlowAttributeItemRequestBuilderGetRequestCo_16d18457 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a custom identityUserFlowAttribute object.
      * @param IdentityUserFlowAttribute $body The request body
-     * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequest_500f71a9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(IdentityUserFlowAttribute $body, ?IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(IdentityUserFlowAttribute $body, ?IdentityUserFlowAttributeItemRequestBuilderPatchRequest_500f71a9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

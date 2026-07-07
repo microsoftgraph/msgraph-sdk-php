@@ -32,11 +32,11 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property userExperienceAnalyticsModelScores for deviceManagement
-     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderDel_8adee077|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserExperienceAnalyticsModelScoresItemRequestBuilderDel_8adee077 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
 
     /**
      * User experience analytics model scores
-     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderGet_8d9662fc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsModelScores|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsModelScoresItemRequestBuilderGet_8d9662fc $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property userExperienceAnalyticsModelScores in deviceManagement
      * @param UserExperienceAnalyticsModelScores $body The request body
-     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderPat_1ff7828f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsModelScores|null>
      * @throws Exception
     */
-    public function patch(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresItemRequestBuilderPat_1ff7828f $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property userExperienceAnalyticsModelScores for deviceManagement
-     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderDel_8adee077|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserExperienceAnalyticsModelScoresItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserExperienceAnalyticsModelScoresItemRequestBuilderDel_8adee077 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
 
     /**
      * User experience analytics model scores
-     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderGet_8d9662fc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsModelScoresItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsModelScoresItemRequestBuilderGet_8d9662fc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class UserExperienceAnalyticsModelScoresItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property userExperienceAnalyticsModelScores in deviceManagement
      * @param UserExperienceAnalyticsModelScores $body The request body
-     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresItemRequestBuilderPat_1ff7828f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresItemRequestBuilderPat_1ff7828f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

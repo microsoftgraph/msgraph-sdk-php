@@ -32,12 +32,12 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete a user's Software OATH token authentication method object.
-     * @param SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SoftwareOathAuthenticationMethodItemRequestBuilderDelet_d9d235bc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/softwareoathauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SoftwareOathAuthenticationMethodItemRequestBuilderDelet_d9d235bc $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
 
     /**
      * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
-     * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRe_b8bb5d28|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SoftwareOathAuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SoftwareOathAuthenticationMethodItemRequestBuilderGetRe_b8bb5d28 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,10 +61,10 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete a user's Software OATH token authentication method object.
-     * @param SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SoftwareOathAuthenticationMethodItemRequestBuilderDelet_d9d235bc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SoftwareOathAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SoftwareOathAuthenticationMethodItemRequestBuilderDelet_d9d235bc $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -79,10 +79,10 @@ class SoftwareOathAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
 
     /**
      * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
-     * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SoftwareOathAuthenticationMethodItemRequestBuilderGetRe_b8bb5d28|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SoftwareOathAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SoftwareOathAuthenticationMethodItemRequestBuilderGetRe_b8bb5d28 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

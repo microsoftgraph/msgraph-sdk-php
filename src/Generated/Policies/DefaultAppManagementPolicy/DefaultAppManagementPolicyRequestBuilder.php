@@ -32,11 +32,11 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property defaultAppManagementPolicy for policies
-     * @param DefaultAppManagementPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultAppManagementPolicyRequestBuilderDeleteRequestCo_28e309de|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DefaultAppManagementPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DefaultAppManagementPolicyRequestBuilderDeleteRequestCo_28e309de $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a tenantAppManagementPolicy object.
      * @param TenantAppManagementPolicy $body The request body
-     * @param DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultAppManagementPolicyRequestBuilderPatchRequestCon_8d015d4c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantAppManagementPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/tenantappmanagementpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(TenantAppManagementPolicy $body, ?DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(TenantAppManagementPolicy $body, ?DefaultAppManagementPolicyRequestBuilderPatchRequestCon_8d015d4c $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property defaultAppManagementPolicy for policies
-     * @param DefaultAppManagementPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultAppManagementPolicyRequestBuilderDeleteRequestCo_28e309de|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DefaultAppManagementPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DefaultAppManagementPolicyRequestBuilderDeleteRequestCo_28e309de $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class DefaultAppManagementPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a tenantAppManagementPolicy object.
      * @param TenantAppManagementPolicy $body The request body
-     * @param DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DefaultAppManagementPolicyRequestBuilderPatchRequestCon_8d015d4c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TenantAppManagementPolicy $body, ?DefaultAppManagementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TenantAppManagementPolicy $body, ?DefaultAppManagementPolicyRequestBuilderPatchRequestCon_8d015d4c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

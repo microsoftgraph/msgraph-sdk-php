@@ -40,12 +40,12 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific educationAssignmentResource attached to an assignment. In general, only teachers in the class can remove a resource. However, teachers can't remove resources marked as 'distributeToStudents', after the assignment has been published to students.
-     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationassignmentresource-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
-     * @param EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignmentResource|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationassignmentresource-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,11 +71,11 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resources in education
      * @param EducationAssignmentResource $body The request body
-     * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignmentResource|null>
      * @throws Exception
     */
-    public function patch(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,10 +85,10 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a specific educationAssignmentResource attached to an assignment. In general, only teachers in the class can remove a resource. However, teachers can't remove resources marked as 'distributeToStudents', after the assignment has been published to students.
-     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EducationAssignmentResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EducationAssignmentResourceItemRequestBuilderDeleteRequ_1395b628 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -103,10 +103,10 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the properties of an education assignment resource associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
-     * @param EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EducationAssignmentResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EducationAssignmentResourceItemRequestBuilderGetRequest_a8431760 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -125,10 +125,10 @@ class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resources in education
      * @param EducationAssignmentResource $body The request body
-     * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EducationAssignmentResource $body, ?EducationAssignmentResourceItemRequestBuilderPatchReque_ebfcffc6 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

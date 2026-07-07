@@ -77,7 +77,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the schema for a given synchronization job or template.
+     * Retrieve the synchronizationSchema for a given synchronization job or template.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationSchema|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
+     * Update the synchronizationSchema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param SynchronizationSchema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationSchema|null>
@@ -126,7 +126,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the schema for a given synchronization job or template.
+     * Retrieve the synchronizationSchema for a given synchronization job or template.
      * @param SchemaRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,7 +147,7 @@ class SchemaRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the synchronization schema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
+     * Update the synchronizationSchema for a given job or template. This method fully replaces the current schema with the one provided in the request. To update the schema of a template, make the call on the application object. You must be the owner of the application.
      * @param SynchronizationSchema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

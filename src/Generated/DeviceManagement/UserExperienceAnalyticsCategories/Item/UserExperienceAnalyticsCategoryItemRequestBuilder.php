@@ -40,11 +40,11 @@ class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property userExperienceAnalyticsCategories for deviceManagement
-     * @param UserExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsCategoryItemRequestBuilderDelete_ff912d31|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserExperienceAnalyticsCategoryItemRequestBuilderDelete_ff912d31 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseRequestBuild
 
     /**
      * User experience analytics categories
-     * @param UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsCategoryItemRequestBuilderGetReq_4063cbc5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsCategory|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsCategoryItemRequestBuilderGetReq_4063cbc5 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property userExperienceAnalyticsCategories in deviceManagement
      * @param UserExperienceAnalyticsCategory $body The request body
-     * @param UserExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsCategoryItemRequestBuilderPatchR_5959dd84|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsCategory|null>
      * @throws Exception
     */
-    public function patch(UserExperienceAnalyticsCategory $body, ?UserExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserExperienceAnalyticsCategory $body, ?UserExperienceAnalyticsCategoryItemRequestBuilderPatchR_5959dd84 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property userExperienceAnalyticsCategories for deviceManagement
-     * @param UserExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsCategoryItemRequestBuilderDelete_ff912d31|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserExperienceAnalyticsCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserExperienceAnalyticsCategoryItemRequestBuilderDelete_ff912d31 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseRequestBuild
 
     /**
      * User experience analytics categories
-     * @param UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsCategoryItemRequestBuilderGetReq_4063cbc5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsCategoryItemRequestBuilderGetReq_4063cbc5 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class UserExperienceAnalyticsCategoryItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property userExperienceAnalyticsCategories in deviceManagement
      * @param UserExperienceAnalyticsCategory $body The request body
-     * @param UserExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsCategoryItemRequestBuilderPatchR_5959dd84|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserExperienceAnalyticsCategory $body, ?UserExperienceAnalyticsCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserExperienceAnalyticsCategory $body, ?UserExperienceAnalyticsCategoryItemRequestBuilderPatchR_5959dd84 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

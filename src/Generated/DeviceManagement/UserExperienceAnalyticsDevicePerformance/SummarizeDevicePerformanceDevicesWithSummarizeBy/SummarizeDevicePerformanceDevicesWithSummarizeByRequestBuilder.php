@@ -34,11 +34,11 @@ class SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder extends Bas
 
     /**
      * Invoke function summarizeDevicePerformanceDevices
-     * @param SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SummarizeDevicePerformanceDevicesWithSummarizeByRequest_57dc2366|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SummarizeDevicePerformanceDevicesWithSummarizeByGetResponse|null>
      * @throws Exception
     */
-    public function get(?SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SummarizeDevicePerformanceDevicesWithSummarizeByRequest_57dc2366 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilder extends Bas
 
     /**
      * Invoke function summarizeDevicePerformanceDevices
-     * @param SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SummarizeDevicePerformanceDevicesWithSummarizeByRequest_57dc2366|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SummarizeDevicePerformanceDevicesWithSummarizeByRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SummarizeDevicePerformanceDevicesWithSummarizeByRequest_57dc2366 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

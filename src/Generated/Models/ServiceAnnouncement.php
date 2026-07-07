@@ -39,7 +39,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     }
 
     /**
-     * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @return array<ServiceHealth>|null
     */
     public function getHealthOverviews(): ?array {
@@ -53,7 +53,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     }
 
     /**
-     * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Gets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @return array<ServiceHealthIssue>|null
     */
     public function getIssues(): ?array {
@@ -67,7 +67,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     }
 
     /**
-     * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Gets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @return array<ServiceUpdateMessage>|null
     */
     public function getMessages(): ?array {
@@ -92,7 +92,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     }
 
     /**
-     * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @param array<ServiceHealth>|null $value Value to set for the healthOverviews property.
     */
     public function setHealthOverviews(?array $value): void {
@@ -100,7 +100,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     }
 
     /**
-     * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
     */
     public function setIssues(?array $value): void {
@@ -108,7 +108,7 @@ class ServiceAnnouncement extends Entity implements Parsable
     }
 
     /**
-     * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and read-only.
      * @param array<ServiceUpdateMessage>|null $value Value to set for the messages property.
     */
     public function setMessages(?array $value): void {
