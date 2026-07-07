@@ -32,12 +32,12 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a certificateAuthorityDetail object.
-     * @param CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateAuthorityDetailItemRequestBuilderDeleteReque_431f450a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/certificatebasedauthpki-delete-certificateauthorities?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?CertificateAuthorityDetailItemRequestBuilderDeleteReque_431f450a $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of certificate authorities contained in this public key infrastructure resource.
-     * @param CertificateAuthorityDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateAuthorityDetailItemRequestBuilderGetRequestC_b36cd385|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateAuthorityDetail|null>
      * @throws Exception
     */
-    public function get(?CertificateAuthorityDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?CertificateAuthorityDetailItemRequestBuilderGetRequestC_b36cd385 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,12 +62,12 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update certificateAuthorityDetail
      * @param CertificateAuthorityDetail $body The request body
-     * @param CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateAuthorityDetailItemRequestBuilderPatchReques_c1b5096f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CertificateAuthorityDetail|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/certificateauthoritydetail-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(CertificateAuthorityDetail $body, ?CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(CertificateAuthorityDetail $body, ?CertificateAuthorityDetailItemRequestBuilderPatchReques_c1b5096f $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a certificateAuthorityDetail object.
-     * @param CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateAuthorityDetailItemRequestBuilderDeleteReque_431f450a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?CertificateAuthorityDetailItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?CertificateAuthorityDetailItemRequestBuilderDeleteReque_431f450a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -95,10 +95,10 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of certificate authorities contained in this public key infrastructure resource.
-     * @param CertificateAuthorityDetailItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateAuthorityDetailItemRequestBuilderGetRequestC_b36cd385|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CertificateAuthorityDetailItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CertificateAuthorityDetailItemRequestBuilderGetRequestC_b36cd385 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class CertificateAuthorityDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update certificateAuthorityDetail
      * @param CertificateAuthorityDetail $body The request body
-     * @param CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CertificateAuthorityDetailItemRequestBuilderPatchReques_c1b5096f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(CertificateAuthorityDetail $body, ?CertificateAuthorityDetailItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(CertificateAuthorityDetail $body, ?CertificateAuthorityDetailItemRequestBuilderPatchReques_c1b5096f $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

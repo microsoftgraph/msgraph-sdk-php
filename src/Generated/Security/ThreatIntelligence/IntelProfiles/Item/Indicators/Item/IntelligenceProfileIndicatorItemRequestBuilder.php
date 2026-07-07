@@ -32,11 +32,11 @@ class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
-     * @param IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntelligenceProfileIndicatorItemRequestBuilderGetReques_071f181d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<IntelligenceProfileIndicator|null>
      * @throws Exception
     */
-    public function get(?IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?IntelligenceProfileIndicatorItemRequestBuilderGetReques_071f181d $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
-     * @param IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param IntelligenceProfileIndicatorItemRequestBuilderGetReques_071f181d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?IntelligenceProfileIndicatorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?IntelligenceProfileIndicatorItemRequestBuilderGetReques_071f181d $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

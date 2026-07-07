@@ -56,11 +56,11 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharePointRestoreSessions for solutions
-     * @param SharePointRestoreSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointRestoreSessionItemRequestBuilderDeleteRequest_b97bc306|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SharePointRestoreSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?SharePointRestoreSessionItemRequestBuilderDeleteRequest_b97bc306 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of SharePoint restore sessions available in the tenant.
-     * @param SharePointRestoreSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointRestoreSessionItemRequestBuilderGetRequestCon_f1a2a58c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointRestoreSession|null>
      * @throws Exception
     */
-    public function get(?SharePointRestoreSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?SharePointRestoreSessionItemRequestBuilderGetRequestCon_f1a2a58c $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,12 +85,12 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a sharePointRestoreSession object.
      * @param SharePointRestoreSession $body The request body
-     * @param SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointRestoreSessionItemRequestBuilderPatchRequestC_52897f88|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointRestoreSession|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sharepointrestoresession-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(SharePointRestoreSession $body, ?SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(SharePointRestoreSession $body, ?SharePointRestoreSessionItemRequestBuilderPatchRequestC_52897f88 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -100,10 +100,10 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharePointRestoreSessions for solutions
-     * @param SharePointRestoreSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointRestoreSessionItemRequestBuilderDeleteRequest_b97bc306|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SharePointRestoreSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SharePointRestoreSessionItemRequestBuilderDeleteRequest_b97bc306 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of SharePoint restore sessions available in the tenant.
-     * @param SharePointRestoreSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointRestoreSessionItemRequestBuilderGetRequestCon_f1a2a58c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SharePointRestoreSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SharePointRestoreSessionItemRequestBuilderGetRequestCon_f1a2a58c $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -140,10 +140,10 @@ class SharePointRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a sharePointRestoreSession object.
      * @param SharePointRestoreSession $body The request body
-     * @param SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointRestoreSessionItemRequestBuilderPatchRequestC_52897f88|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SharePointRestoreSession $body, ?SharePointRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SharePointRestoreSession $body, ?SharePointRestoreSessionItemRequestBuilderPatchRequestC_52897f88 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

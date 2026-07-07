@@ -52,7 +52,7 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the synchronization templates associated with a given application or service principal.
+     * List synchronizationTemplate objects associated with a given application or service principal.
      * @param TemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationTemplateCollectionResponse|null>
      * @throws Exception
@@ -82,7 +82,7 @@ class TemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List the synchronization templates associated with a given application or service principal.
+     * List synchronizationTemplate objects associated with a given application or service principal.
      * @param TemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -56,11 +56,11 @@ class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property exchangeRestoreSessions for solutions
-     * @param ExchangeRestoreSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeRestoreSessionItemRequestBuilderDeleteRequestCo_a11c421b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ExchangeRestoreSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ExchangeRestoreSessionItemRequestBuilderDeleteRequestCo_a11c421b $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,12 +85,12 @@ class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an exchangeRestoreSession.
      * @param ExchangeRestoreSession $body The request body
-     * @param ExchangeRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeRestoreSessionItemRequestBuilderPatchRequestCon_1acdc4b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExchangeRestoreSession|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/exchangerestoresession-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ExchangeRestoreSession $body, ?ExchangeRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ExchangeRestoreSession $body, ?ExchangeRestoreSessionItemRequestBuilderPatchRequestCon_1acdc4b9 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -100,10 +100,10 @@ class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property exchangeRestoreSessions for solutions
-     * @param ExchangeRestoreSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeRestoreSessionItemRequestBuilderDeleteRequestCo_a11c421b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ExchangeRestoreSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ExchangeRestoreSessionItemRequestBuilderDeleteRequestCo_a11c421b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -140,10 +140,10 @@ class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an exchangeRestoreSession.
      * @param ExchangeRestoreSession $body The request body
-     * @param ExchangeRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExchangeRestoreSessionItemRequestBuilderPatchRequestCon_1acdc4b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ExchangeRestoreSession $body, ?ExchangeRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ExchangeRestoreSession $body, ?ExchangeRestoreSessionItemRequestBuilderPatchRequestCon_1acdc4b9 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

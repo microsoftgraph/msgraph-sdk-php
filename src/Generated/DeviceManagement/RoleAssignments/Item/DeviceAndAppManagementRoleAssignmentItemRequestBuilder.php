@@ -40,11 +40,11 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property roleAssignments for deviceManagement
-     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderD_939024ea|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderD_939024ea $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
 
     /**
      * The Role Assignments.
-     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderG_9a3ef038|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementRoleAssignment|null>
      * @throws Exception
     */
-    public function get(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderG_9a3ef038 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property roleAssignments in deviceManagement
      * @param DeviceAndAppManagementRoleAssignment $body The request body
-     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderP_7472aa2a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAndAppManagementRoleAssignment|null>
      * @throws Exception
     */
-    public function patch(DeviceAndAppManagementRoleAssignment $body, ?DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(DeviceAndAppManagementRoleAssignment $body, ?DeviceAndAppManagementRoleAssignmentItemRequestBuilderP_7472aa2a $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
 
     /**
      * Delete navigation property roleAssignments for deviceManagement
-     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderD_939024ea|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderD_939024ea $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
 
     /**
      * The Role Assignments.
-     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderG_9a3ef038|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceAndAppManagementRoleAssignmentItemRequestBuilderG_9a3ef038 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property roleAssignments in deviceManagement
      * @param DeviceAndAppManagementRoleAssignment $body The request body
-     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceAndAppManagementRoleAssignmentItemRequestBuilderP_7472aa2a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceAndAppManagementRoleAssignment $body, ?DeviceAndAppManagementRoleAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceAndAppManagementRoleAssignment $body, ?DeviceAndAppManagementRoleAssignmentItemRequestBuilderP_7472aa2a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

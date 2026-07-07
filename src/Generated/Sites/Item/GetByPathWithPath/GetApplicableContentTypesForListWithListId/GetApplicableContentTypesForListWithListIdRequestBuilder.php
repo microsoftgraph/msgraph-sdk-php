@@ -34,12 +34,12 @@ class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseReque
 
     /**
      * Get site contentTypes that can be added to a list.
-     * @param GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetApplicableContentTypesForListWithListIdRequestBuilde_f825687e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetApplicableContentTypesForListWithListIdGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/site-getapplicablecontenttypesforlist?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetApplicableContentTypesForListWithListIdRequestBuilde_f825687e $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseReque
 
     /**
      * Get site contentTypes that can be added to a list.
-     * @param GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetApplicableContentTypesForListWithListIdRequestBuilde_f825687e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetApplicableContentTypesForListWithListIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetApplicableContentTypesForListWithListIdRequestBuilde_f825687e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

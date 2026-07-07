@@ -55,7 +55,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserProcessingResult|null>
      * @throws Exception
@@ -70,7 +70,7 @@ class UserProcessingResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get the user processing result of a user processing result of a run.
+     * Get a userProcessingResult for a run.
      * @param UserProcessingResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

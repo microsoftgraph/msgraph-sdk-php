@@ -32,11 +32,11 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property readingAssignmentSubmissions for education
-     * @param ReadingAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionItemRequestBuilderDeleteRequ_c7000282|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ReadingAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ReadingAssignmentSubmissionItemRequestBuilderDeleteRequ_c7000282 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Details of submitted reading assignments.
-     * @param ReadingAssignmentSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionItemRequestBuilderGetRequest_2f3886ef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReadingAssignmentSubmission|null>
      * @throws Exception
     */
-    public function get(?ReadingAssignmentSubmissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ReadingAssignmentSubmissionItemRequestBuilderGetRequest_2f3886ef $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property readingAssignmentSubmissions in education
      * @param ReadingAssignmentSubmission $body The request body
-     * @param ReadingAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionItemRequestBuilderPatchReque_927dea73|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ReadingAssignmentSubmission|null>
      * @throws Exception
     */
-    public function patch(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionItemRequestBuilderPatchReque_927dea73 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property readingAssignmentSubmissions for education
-     * @param ReadingAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionItemRequestBuilderDeleteRequ_c7000282|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ReadingAssignmentSubmissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ReadingAssignmentSubmissionItemRequestBuilderDeleteRequ_c7000282 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Details of submitted reading assignments.
-     * @param ReadingAssignmentSubmissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionItemRequestBuilderGetRequest_2f3886ef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ReadingAssignmentSubmissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ReadingAssignmentSubmissionItemRequestBuilderGetRequest_2f3886ef $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ReadingAssignmentSubmissionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property readingAssignmentSubmissions in education
      * @param ReadingAssignmentSubmission $body The request body
-     * @param ReadingAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ReadingAssignmentSubmissionItemRequestBuilderPatchReque_927dea73|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ReadingAssignmentSubmission $body, ?ReadingAssignmentSubmissionItemRequestBuilderPatchReque_927dea73 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

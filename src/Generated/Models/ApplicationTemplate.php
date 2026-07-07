@@ -2,9 +2,11 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\Date;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ApplicationTemplate extends Entity implements Parsable 
@@ -40,6 +42,18 @@ class ApplicationTemplate extends Entity implements Parsable
     }
 
     /**
+     * Gets the deprecationDate property value. Deprecation date for this application. If specified, the application will be removed from the Microsoft Entra application gallery on this date.
+     * @return Date|null
+    */
+    public function getDeprecationDate(): ?Date {
+        $val = $this->getBackingStore()->get('deprecationDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deprecationDate'");
+    }
+
+    /**
      * Gets the description property value. A description of the application.
      * @return string|null
     */
@@ -64,6 +78,20 @@ class ApplicationTemplate extends Entity implements Parsable
     }
 
     /**
+     * Gets the endpoints property value. A collection of string URLs representing various domains that are used by this application.
+     * @return array<string>|null
+    */
+    public function getEndpoints(): ?array {
+        $val = $this->getBackingStore()->get('endpoints');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endpoints'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -78,11 +106,24 @@ class ApplicationTemplate extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setCategories($val);
             },
+            'deprecationDate' => fn(ParseNode $n) => $o->setDeprecationDate($n->getDateValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'endpoints' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setEndpoints($val);
+            },
             'homePageUrl' => fn(ParseNode $n) => $o->setHomePageUrl($n->getStringValue()),
+            'isEntraIntegrated' => fn(ParseNode $n) => $o->setIsEntraIntegrated($n->getBooleanValue()),
+            'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'logoUrl' => fn(ParseNode $n) => $o->setLogoUrl($n->getStringValue()),
             'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
+            'riskFactors' => fn(ParseNode $n) => $o->setRiskFactors($n->getObjectValue([ApplicationRiskFactors::class, 'createFromDiscriminatorValue'])),
+            'riskScore' => fn(ParseNode $n) => $o->setRiskScore($n->getObjectValue([ApplicationRiskScore::class, 'createFromDiscriminatorValue'])),
             'supportedProvisioningTypes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -115,6 +156,30 @@ class ApplicationTemplate extends Entity implements Parsable
     }
 
     /**
+     * Gets the isEntraIntegrated property value. Indicates whether the application is integrated with Entra ID (for example, through single sign-on or user provisioning).
+     * @return bool|null
+    */
+    public function getIsEntraIntegrated(): ?bool {
+        $val = $this->getBackingStore()->get('isEntraIntegrated');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEntraIntegrated'");
+    }
+
+    /**
+     * Gets the lastModifiedDateTime property value. The date and time when the data for the application was last updated, represented using ISO 8601 format and always in UTC time.
+     * @return DateTime|null
+    */
+    public function getLastModifiedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
+    }
+
+    /**
      * Gets the logoUrl property value. The URL to get the logo for this application.
      * @return string|null
     */
@@ -136,6 +201,30 @@ class ApplicationTemplate extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'publisher'");
+    }
+
+    /**
+     * Gets the riskFactors property value. A comprehensive set of risk assessment data for the application, including general, security, compliance, and legal dimensions. Returned only when $select is used.
+     * @return ApplicationRiskFactors|null
+    */
+    public function getRiskFactors(): ?ApplicationRiskFactors {
+        $val = $this->getBackingStore()->get('riskFactors');
+        if (is_null($val) || $val instanceof ApplicationRiskFactors) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskFactors'");
+    }
+
+    /**
+     * Gets the riskScore property value. Represents the Microsoft-generated numerical risk score assessment for the application. Supported $orderby on total (for example, $orderby=riskScore/total desc). Returned only when $select is used.
+     * @return ApplicationRiskScore|null
+    */
+    public function getRiskScore(): ?ApplicationRiskScore {
+        $val = $this->getBackingStore()->get('riskScore');
+        if (is_null($val) || $val instanceof ApplicationRiskScore) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskScore'");
     }
 
     /**
@@ -173,11 +262,17 @@ class ApplicationTemplate extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfPrimitiveValues('categories', $this->getCategories());
+        $writer->writeDateValue('deprecationDate', $this->getDeprecationDate());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfPrimitiveValues('endpoints', $this->getEndpoints());
         $writer->writeStringValue('homePageUrl', $this->getHomePageUrl());
+        $writer->writeBooleanValue('isEntraIntegrated', $this->getIsEntraIntegrated());
+        $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeStringValue('logoUrl', $this->getLogoUrl());
         $writer->writeStringValue('publisher', $this->getPublisher());
+        $writer->writeObjectValue('riskFactors', $this->getRiskFactors());
+        $writer->writeObjectValue('riskScore', $this->getRiskScore());
         $writer->writeCollectionOfPrimitiveValues('supportedProvisioningTypes', $this->getSupportedProvisioningTypes());
         $writer->writeCollectionOfPrimitiveValues('supportedSingleSignOnModes', $this->getSupportedSingleSignOnModes());
     }
@@ -188,6 +283,14 @@ class ApplicationTemplate extends Entity implements Parsable
     */
     public function setCategories(?array $value): void {
         $this->getBackingStore()->set('categories', $value);
+    }
+
+    /**
+     * Sets the deprecationDate property value. Deprecation date for this application. If specified, the application will be removed from the Microsoft Entra application gallery on this date.
+     * @param Date|null $value Value to set for the deprecationDate property.
+    */
+    public function setDeprecationDate(?Date $value): void {
+        $this->getBackingStore()->set('deprecationDate', $value);
     }
 
     /**
@@ -207,11 +310,35 @@ class ApplicationTemplate extends Entity implements Parsable
     }
 
     /**
+     * Sets the endpoints property value. A collection of string URLs representing various domains that are used by this application.
+     * @param array<string>|null $value Value to set for the endpoints property.
+    */
+    public function setEndpoints(?array $value): void {
+        $this->getBackingStore()->set('endpoints', $value);
+    }
+
+    /**
      * Sets the homePageUrl property value. The home page URL of the application.
      * @param string|null $value Value to set for the homePageUrl property.
     */
     public function setHomePageUrl(?string $value): void {
         $this->getBackingStore()->set('homePageUrl', $value);
+    }
+
+    /**
+     * Sets the isEntraIntegrated property value. Indicates whether the application is integrated with Entra ID (for example, through single sign-on or user provisioning).
+     * @param bool|null $value Value to set for the isEntraIntegrated property.
+    */
+    public function setIsEntraIntegrated(?bool $value): void {
+        $this->getBackingStore()->set('isEntraIntegrated', $value);
+    }
+
+    /**
+     * Sets the lastModifiedDateTime property value. The date and time when the data for the application was last updated, represented using ISO 8601 format and always in UTC time.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+    */
+    public function setLastModifiedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('lastModifiedDateTime', $value);
     }
 
     /**
@@ -228,6 +355,22 @@ class ApplicationTemplate extends Entity implements Parsable
     */
     public function setPublisher(?string $value): void {
         $this->getBackingStore()->set('publisher', $value);
+    }
+
+    /**
+     * Sets the riskFactors property value. A comprehensive set of risk assessment data for the application, including general, security, compliance, and legal dimensions. Returned only when $select is used.
+     * @param ApplicationRiskFactors|null $value Value to set for the riskFactors property.
+    */
+    public function setRiskFactors(?ApplicationRiskFactors $value): void {
+        $this->getBackingStore()->set('riskFactors', $value);
+    }
+
+    /**
+     * Sets the riskScore property value. Represents the Microsoft-generated numerical risk score assessment for the application. Supported $orderby on total (for example, $orderby=riskScore/total desc). Returned only when $select is used.
+     * @param ApplicationRiskScore|null $value Value to set for the riskScore property.
+    */
+    public function setRiskScore(?ApplicationRiskScore $value): void {
+        $this->getBackingStore()->set('riskScore', $value);
     }
 
     /**

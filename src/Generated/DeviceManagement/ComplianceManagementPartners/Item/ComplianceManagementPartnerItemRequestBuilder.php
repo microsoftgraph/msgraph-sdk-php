@@ -32,11 +32,11 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property complianceManagementPartners for deviceManagement
-     * @param ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnerItemRequestBuilderDeleteRequ_805e39d8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?ComplianceManagementPartnerItemRequestBuilderDeleteRequ_805e39d8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Compliance Management Partners configured by the tenant.
-     * @param ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnerItemRequestBuilderGetRequest_ff63ed61|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartner|null>
      * @throws Exception
     */
-    public function get(?ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ComplianceManagementPartnerItemRequestBuilderGetRequest_ff63ed61 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property complianceManagementPartners in deviceManagement
      * @param ComplianceManagementPartner $body The request body
-     * @param ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnerItemRequestBuilderPatchReque_7d242cf3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComplianceManagementPartner|null>
      * @throws Exception
     */
-    public function patch(ComplianceManagementPartner $body, ?ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(ComplianceManagementPartner $body, ?ComplianceManagementPartnerItemRequestBuilderPatchReque_7d242cf3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property complianceManagementPartners for deviceManagement
-     * @param ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnerItemRequestBuilderDeleteRequ_805e39d8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ComplianceManagementPartnerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ComplianceManagementPartnerItemRequestBuilderDeleteRequ_805e39d8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Compliance Management Partners configured by the tenant.
-     * @param ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnerItemRequestBuilderGetRequest_ff63ed61|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ComplianceManagementPartnerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ComplianceManagementPartnerItemRequestBuilderGetRequest_ff63ed61 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property complianceManagementPartners in deviceManagement
      * @param ComplianceManagementPartner $body The request body
-     * @param ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComplianceManagementPartnerItemRequestBuilderPatchReque_7d242cf3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ComplianceManagementPartner $body, ?ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ComplianceManagementPartner $body, ?ComplianceManagementPartnerItemRequestBuilderPatchReque_7d242cf3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

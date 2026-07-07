@@ -56,11 +56,11 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property oneDriveForBusinessRestoreSessions for solutions
-     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderDele_5d29ee3e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?OneDriveForBusinessRestoreSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?OneDriveForBusinessRestoreSessionItemRequestBuilderDele_5d29ee3e $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
 
     /**
      * The list of OneDrive for Business restore sessions available in the tenant.
-     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderGetR_1bc53d82|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessRestoreSession|null>
      * @throws Exception
     */
-    public function get(?OneDriveForBusinessRestoreSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?OneDriveForBusinessRestoreSessionItemRequestBuilderGetR_1bc53d82 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,12 +85,12 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
     /**
      * Update the properties of a oneDriveForBusinessRestoreSession object.
      * @param OneDriveForBusinessRestoreSession $body The request body
-     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderPatc_21ad7a35|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessRestoreSession|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(OneDriveForBusinessRestoreSession $body, ?OneDriveForBusinessRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(OneDriveForBusinessRestoreSession $body, ?OneDriveForBusinessRestoreSessionItemRequestBuilderPatc_21ad7a35 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -100,10 +100,10 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property oneDriveForBusinessRestoreSessions for solutions
-     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderDele_5d29ee3e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?OneDriveForBusinessRestoreSessionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?OneDriveForBusinessRestoreSessionItemRequestBuilderDele_5d29ee3e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
 
     /**
      * The list of OneDrive for Business restore sessions available in the tenant.
-     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderGetR_1bc53d82|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?OneDriveForBusinessRestoreSessionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?OneDriveForBusinessRestoreSessionItemRequestBuilderGetR_1bc53d82 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -140,10 +140,10 @@ class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseRequestBui
     /**
      * Update the properties of a oneDriveForBusinessRestoreSession object.
      * @param OneDriveForBusinessRestoreSession $body The request body
-     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param OneDriveForBusinessRestoreSessionItemRequestBuilderPatc_21ad7a35|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(OneDriveForBusinessRestoreSession $body, ?OneDriveForBusinessRestoreSessionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(OneDriveForBusinessRestoreSession $body, ?OneDriveForBusinessRestoreSessionItemRequestBuilderPatc_21ad7a35 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

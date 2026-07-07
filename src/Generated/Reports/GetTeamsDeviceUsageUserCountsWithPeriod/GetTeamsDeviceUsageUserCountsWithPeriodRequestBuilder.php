@@ -35,12 +35,12 @@ class GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder extends BaseRequestB
 
     /**
      * Get the number of Microsoft Teams daily unique users by device type.
-     * @param GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGe_5c1943e8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getteamsdeviceusageusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGe_5c1943e8 $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder extends BaseRequestB
 
     /**
      * Get the number of Microsoft Teams daily unique users by device type.
-     * @param GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGe_5c1943e8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilderGe_5c1943e8 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -53,12 +53,12 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
-     * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestC_6f044b8a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalRiskDetectionCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identityprotectionroot-list-serviceprincipalriskdetections?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?ServicePrincipalRiskDetectionsRequestBuilderGetRequestC_6f044b8a $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to servicePrincipalRiskDetections for identityProtection
      * @param ServicePrincipalRiskDetection $body The request body
-     * @param ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionsRequestBuilderPostRequest_538a3cc1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalRiskDetection|null>
      * @throws Exception
     */
-    public function post(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionsRequestBuilderPostRequest_538a3cc1 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties of a collection of servicePrincipalRiskDetection objects.
-     * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionsRequestBuilderGetRequestC_6f044b8a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ServicePrincipalRiskDetectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ServicePrincipalRiskDetectionsRequestBuilderGetRequestC_6f044b8a $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class ServicePrincipalRiskDetectionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to servicePrincipalRiskDetections for identityProtection
      * @param ServicePrincipalRiskDetection $body The request body
-     * @param ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionsRequestBuilderPostRequest_538a3cc1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionsRequestBuilderPostRequest_538a3cc1 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

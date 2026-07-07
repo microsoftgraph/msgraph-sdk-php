@@ -33,12 +33,12 @@ class MicrosoftGraphSecurityInvokeActionRequestBuilder extends BaseRequestBuilde
     /**
      * Perform actions such as revoking accounts and forcing password reset for identity accounts that are observed in Microsoft Defender for Identity. This action allows reading and performing identity security actions on behalf of the signed-in identity.
      * @param InvokeActionPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityInvokeActionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityInvokeActionRequestBuilderPostReq_8a9a3568|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<InvokeActionResult|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-identityaccounts-invokeaction?view=graph-rest-1.0 Find more info here
     */
-    public function post(InvokeActionPostRequestBody $body, ?MicrosoftGraphSecurityInvokeActionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+    public function post(InvokeActionPostRequestBody $body, ?MicrosoftGraphSecurityInvokeActionRequestBuilderPostReq_8a9a3568 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class MicrosoftGraphSecurityInvokeActionRequestBuilder extends BaseRequestBuilde
     /**
      * Perform actions such as revoking accounts and forcing password reset for identity accounts that are observed in Microsoft Defender for Identity. This action allows reading and performing identity security actions on behalf of the signed-in identity.
      * @param InvokeActionPostRequestBody $body The request body
-     * @param MicrosoftGraphSecurityInvokeActionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityInvokeActionRequestBuilderPostReq_8a9a3568|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(InvokeActionPostRequestBody $body, ?MicrosoftGraphSecurityInvokeActionRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(InvokeActionPostRequestBody $body, ?MicrosoftGraphSecurityInvokeActionRequestBuilderPostReq_8a9a3568 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

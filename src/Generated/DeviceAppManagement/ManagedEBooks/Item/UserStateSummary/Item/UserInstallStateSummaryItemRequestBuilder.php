@@ -40,11 +40,11 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userStateSummary for deviceAppManagement
-     * @param UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserInstallStateSummaryItemRequestBuilderDeleteRequestC_f91985f3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?UserInstallStateSummaryItemRequestBuilderDeleteRequestC_f91985f3 $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userStateSummary in deviceAppManagement
      * @param UserInstallStateSummary $body The request body
-     * @param UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserInstallStateSummaryItemRequestBuilderPatchRequestCo_17ddbf60|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserInstallStateSummary|null>
      * @throws Exception
     */
-    public function patch(UserInstallStateSummary $body, ?UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(UserInstallStateSummary $body, ?UserInstallStateSummaryItemRequestBuilderPatchRequestCo_17ddbf60 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userStateSummary for deviceAppManagement
-     * @param UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserInstallStateSummaryItemRequestBuilderDeleteRequestC_f91985f3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserInstallStateSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserInstallStateSummaryItemRequestBuilderDeleteRequestC_f91985f3 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userStateSummary in deviceAppManagement
      * @param UserInstallStateSummary $body The request body
-     * @param UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserInstallStateSummaryItemRequestBuilderPatchRequestCo_17ddbf60|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserInstallStateSummary $body, ?UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserInstallStateSummary $body, ?UserInstallStateSummaryItemRequestBuilderPatchRequestCo_17ddbf60 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

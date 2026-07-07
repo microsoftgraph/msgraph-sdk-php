@@ -54,6 +54,20 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the accessPackageSuggestions property value. Suggested access packages for end users based on various criteria such as related people insights and assignment history.
+     * @return array<AccessPackageSuggestion>|null
+    */
+    public function getAccessPackageSuggestions(): ?array {
+        $val = $this->getBackingStore()->get('accessPackageSuggestions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageSuggestion::class);
+            /** @var array<AccessPackageSuggestion>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessPackageSuggestions'");
+    }
+
+    /**
      * Gets the assignmentPolicies property value. Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
      * @return array<AccessPackageAssignmentPolicy>|null
     */
@@ -96,6 +110,20 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the availableAccessPackages property value. Access packages available for end users to browse and request.
+     * @return array<AvailableAccessPackage>|null
+    */
+    public function getAvailableAccessPackages(): ?array {
+        $val = $this->getBackingStore()->get('availableAccessPackages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AvailableAccessPackage::class);
+            /** @var array<AvailableAccessPackage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availableAccessPackages'");
+    }
+
+    /**
      * Gets the catalogs property value. A container for access packages.
      * @return array<AccessPackageCatalog>|null
     */
@@ -124,6 +152,20 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the controlConfigurations property value. Configuration settings that control the lifecycle and access policies of entitlement management within a tenant.
+     * @return array<ControlConfiguration>|null
+    */
+    public function getControlConfigurations(): ?array {
+        $val = $this->getBackingStore()->get('controlConfigurations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ControlConfiguration::class);
+            /** @var array<ControlConfiguration>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'controlConfigurations'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -132,16 +174,20 @@ class EntitlementManagement extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'accessPackageAssignmentApprovals' => fn(ParseNode $n) => $o->setAccessPackageAssignmentApprovals($n->getCollectionOfObjectValues([Approval::class, 'createFromDiscriminatorValue'])),
             'accessPackages' => fn(ParseNode $n) => $o->setAccessPackages($n->getCollectionOfObjectValues([AccessPackage::class, 'createFromDiscriminatorValue'])),
+            'accessPackageSuggestions' => fn(ParseNode $n) => $o->setAccessPackageSuggestions($n->getCollectionOfObjectValues([AccessPackageSuggestion::class, 'createFromDiscriminatorValue'])),
             'assignmentPolicies' => fn(ParseNode $n) => $o->setAssignmentPolicies($n->getCollectionOfObjectValues([AccessPackageAssignmentPolicy::class, 'createFromDiscriminatorValue'])),
             'assignmentRequests' => fn(ParseNode $n) => $o->setAssignmentRequests($n->getCollectionOfObjectValues([AccessPackageAssignmentRequest::class, 'createFromDiscriminatorValue'])),
             'assignments' => fn(ParseNode $n) => $o->setAssignments($n->getCollectionOfObjectValues([AccessPackageAssignment::class, 'createFromDiscriminatorValue'])),
+            'availableAccessPackages' => fn(ParseNode $n) => $o->setAvailableAccessPackages($n->getCollectionOfObjectValues([AvailableAccessPackage::class, 'createFromDiscriminatorValue'])),
             'catalogs' => fn(ParseNode $n) => $o->setCatalogs($n->getCollectionOfObjectValues([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'connectedOrganizations' => fn(ParseNode $n) => $o->setConnectedOrganizations($n->getCollectionOfObjectValues([ConnectedOrganization::class, 'createFromDiscriminatorValue'])),
+            'controlConfigurations' => fn(ParseNode $n) => $o->setControlConfigurations($n->getCollectionOfObjectValues([ControlConfiguration::class, 'createFromDiscriminatorValue'])),
             'resourceEnvironments' => fn(ParseNode $n) => $o->setResourceEnvironments($n->getCollectionOfObjectValues([AccessPackageResourceEnvironment::class, 'createFromDiscriminatorValue'])),
             'resourceRequests' => fn(ParseNode $n) => $o->setResourceRequests($n->getCollectionOfObjectValues([AccessPackageResourceRequest::class, 'createFromDiscriminatorValue'])),
             'resourceRoleScopes' => fn(ParseNode $n) => $o->setResourceRoleScopes($n->getCollectionOfObjectValues([AccessPackageResourceRoleScope::class, 'createFromDiscriminatorValue'])),
             'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([EntitlementManagementSettings::class, 'createFromDiscriminatorValue'])),
+            'subjects' => fn(ParseNode $n) => $o->setSubjects($n->getCollectionOfObjectValues([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -214,6 +260,20 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the subjects property value. The subjects property
+     * @return array<AccessPackageSubject>|null
+    */
+    public function getSubjects(): ?array {
+        $val = $this->getBackingStore()->get('subjects');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageSubject::class);
+            /** @var array<AccessPackageSubject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjects'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -221,16 +281,20 @@ class EntitlementManagement extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('accessPackageAssignmentApprovals', $this->getAccessPackageAssignmentApprovals());
         $writer->writeCollectionOfObjectValues('accessPackages', $this->getAccessPackages());
+        $writer->writeCollectionOfObjectValues('accessPackageSuggestions', $this->getAccessPackageSuggestions());
         $writer->writeCollectionOfObjectValues('assignmentPolicies', $this->getAssignmentPolicies());
         $writer->writeCollectionOfObjectValues('assignmentRequests', $this->getAssignmentRequests());
         $writer->writeCollectionOfObjectValues('assignments', $this->getAssignments());
+        $writer->writeCollectionOfObjectValues('availableAccessPackages', $this->getAvailableAccessPackages());
         $writer->writeCollectionOfObjectValues('catalogs', $this->getCatalogs());
         $writer->writeCollectionOfObjectValues('connectedOrganizations', $this->getConnectedOrganizations());
+        $writer->writeCollectionOfObjectValues('controlConfigurations', $this->getControlConfigurations());
         $writer->writeCollectionOfObjectValues('resourceEnvironments', $this->getResourceEnvironments());
         $writer->writeCollectionOfObjectValues('resourceRequests', $this->getResourceRequests());
         $writer->writeCollectionOfObjectValues('resourceRoleScopes', $this->getResourceRoleScopes());
         $writer->writeCollectionOfObjectValues('resources', $this->getResources());
         $writer->writeObjectValue('settings', $this->getSettings());
+        $writer->writeCollectionOfObjectValues('subjects', $this->getSubjects());
     }
 
     /**
@@ -247,6 +311,14 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function setAccessPackages(?array $value): void {
         $this->getBackingStore()->set('accessPackages', $value);
+    }
+
+    /**
+     * Sets the accessPackageSuggestions property value. Suggested access packages for end users based on various criteria such as related people insights and assignment history.
+     * @param array<AccessPackageSuggestion>|null $value Value to set for the accessPackageSuggestions property.
+    */
+    public function setAccessPackageSuggestions(?array $value): void {
+        $this->getBackingStore()->set('accessPackageSuggestions', $value);
     }
 
     /**
@@ -274,6 +346,14 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Sets the availableAccessPackages property value. Access packages available for end users to browse and request.
+     * @param array<AvailableAccessPackage>|null $value Value to set for the availableAccessPackages property.
+    */
+    public function setAvailableAccessPackages(?array $value): void {
+        $this->getBackingStore()->set('availableAccessPackages', $value);
+    }
+
+    /**
      * Sets the catalogs property value. A container for access packages.
      * @param array<AccessPackageCatalog>|null $value Value to set for the catalogs property.
     */
@@ -287,6 +367,14 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function setConnectedOrganizations(?array $value): void {
         $this->getBackingStore()->set('connectedOrganizations', $value);
+    }
+
+    /**
+     * Sets the controlConfigurations property value. Configuration settings that control the lifecycle and access policies of entitlement management within a tenant.
+     * @param array<ControlConfiguration>|null $value Value to set for the controlConfigurations property.
+    */
+    public function setControlConfigurations(?array $value): void {
+        $this->getBackingStore()->set('controlConfigurations', $value);
     }
 
     /**
@@ -327,6 +415,14 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function setSettings(?EntitlementManagementSettings $value): void {
         $this->getBackingStore()->set('settings', $value);
+    }
+
+    /**
+     * Sets the subjects property value. The subjects property
+     * @param array<AccessPackageSubject>|null $value Value to set for the subjects property.
+    */
+    public function setSubjects(?array $value): void {
+        $this->getBackingStore()->set('subjects', $value);
     }
 
 }

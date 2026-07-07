@@ -14,6 +14,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Security singleton providing access to audit log resources.
+*/
 class Security extends Entity implements Parsable 
 {
     /**
@@ -73,6 +76,18 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the auditLog property value. The auditLog property
+     * @return AuditCoreRoot|null
+    */
+    public function getAuditLog(): ?AuditCoreRoot {
+        $val = $this->getBackingStore()->get('auditLog');
+        if (is_null($val) || $val instanceof AuditCoreRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'auditLog'");
+    }
+
+    /**
      * Gets the cases property value. The cases property
      * @return CasesRoot|null
     */
@@ -82,6 +97,18 @@ class Security extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'cases'");
+    }
+
+    /**
+     * Gets the collaboration property value. The collaboration property
+     * @return CollaborationRoot|null
+    */
+    public function getCollaboration(): ?CollaborationRoot {
+        $val = $this->getBackingStore()->get('collaboration');
+        if (is_null($val) || $val instanceof CollaborationRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'collaboration'");
     }
 
     /**
@@ -106,7 +133,9 @@ class Security extends Entity implements Parsable
             'alerts' => fn(ParseNode $n) => $o->setAlerts($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'alerts_v2' => fn(ParseNode $n) => $o->setAlertsV2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
+            'auditLog' => fn(ParseNode $n) => $o->setAuditLog($n->getObjectValue([AuditCoreRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
+            'collaboration' => fn(ParseNode $n) => $o->setCollaboration($n->getObjectValue([CollaborationRoot::class, 'createFromDiscriminatorValue'])),
             'dataSecurityAndGovernance' => fn(ParseNode $n) => $o->setDataSecurityAndGovernance($n->getObjectValue([TenantDataSecurityAndGovernance::class, 'createFromDiscriminatorValue'])),
             'identities' => fn(ParseNode $n) => $o->setIdentities($n->getObjectValue([IdentityContainer::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
@@ -245,7 +274,9 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('alerts', $this->getAlerts());
         $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlertsV2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
+        $writer->writeObjectValue('auditLog', $this->getAuditLog());
         $writer->writeObjectValue('cases', $this->getCases());
+        $writer->writeObjectValue('collaboration', $this->getCollaboration());
         $writer->writeObjectValue('dataSecurityAndGovernance', $this->getDataSecurityAndGovernance());
         $writer->writeObjectValue('identities', $this->getIdentities());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
@@ -283,11 +314,27 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Sets the auditLog property value. The auditLog property
+     * @param AuditCoreRoot|null $value Value to set for the auditLog property.
+    */
+    public function setAuditLog(?AuditCoreRoot $value): void {
+        $this->getBackingStore()->set('auditLog', $value);
+    }
+
+    /**
      * Sets the cases property value. The cases property
      * @param CasesRoot|null $value Value to set for the cases property.
     */
     public function setCases(?CasesRoot $value): void {
         $this->getBackingStore()->set('cases', $value);
+    }
+
+    /**
+     * Sets the collaboration property value. The collaboration property
+     * @param CollaborationRoot|null $value Value to set for the collaboration property.
+    */
+    public function setCollaboration(?CollaborationRoot $value): void {
+        $this->getBackingStore()->set('collaboration', $value);
     }
 
     /**

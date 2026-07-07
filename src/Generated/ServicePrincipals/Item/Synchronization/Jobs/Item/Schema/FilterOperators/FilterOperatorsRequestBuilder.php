@@ -30,7 +30,7 @@ class FilterOperatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all operators supported in the scoping filters.
+     * List all operators supported in the scoping filters for a synchronizationSchema.
      * @param FilterOperatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<FilterOperatorsGetResponse|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class FilterOperatorsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List all operators supported in the scoping filters.
+     * List all operators supported in the scoping filters for a synchronizationSchema.
      * @param FilterOperatorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

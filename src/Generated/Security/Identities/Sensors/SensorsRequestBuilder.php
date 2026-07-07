@@ -11,7 +11,7 @@ use Microsoft\Graph\Generated\Security\Identities\Sensors\Count\CountRequestBuil
 use Microsoft\Graph\Generated\Security\Identities\Sensors\Item\SensorItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityGetDeploymentAccessKey\MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder;
 use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityGetDeploymentPackageUri\MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder;
-use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityRegenerateDeploymentAccessKey\MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder;
+use Microsoft\Graph\Generated\Security\Identities\Sensors\MicrosoftGraphSecurityRegenerateDeploymentAccessKey\MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -46,8 +46,8 @@ class SensorsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the regenerateDeploymentAccessKey method.
     */
-    public function microsoftGraphSecurityRegenerateDeploymentAccessKey(): MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder {
-        return new MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRegenerateDeploymentAccessKey(): MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4 {
+        return new MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequ_9ca57bf4($this->pathParameters, $this->requestAdapter);
     }
     
     /**

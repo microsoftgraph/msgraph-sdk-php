@@ -87,7 +87,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Stop the synchronizationJob, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param SynchronizationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -102,7 +102,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Retrieve an existing synchronizationJob and its properties.
      * @param SynchronizationJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationJob|null>
      * @throws Exception
@@ -132,7 +132,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Stop the synchronization job, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
+     * Stop the synchronizationJob, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param SynchronizationJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -150,7 +150,7 @@ class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the existing synchronization job and its properties.
+     * Retrieve an existing synchronizationJob and its properties.
      * @param SynchronizationJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

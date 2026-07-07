@@ -36,12 +36,12 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuil
 
     /**
      * Get a list of virtualEventTownhall objects where the specified user is either the organizer or a coorganizer.
-     * @param GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRe_eeb0097e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetByUserIdAndRoleWithUserIdWithRoleGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualeventtownhall-getbyuseridandrole?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+    public function get(?GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRe_eeb0097e $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder extends BaseRequestBuil
 
     /**
      * Get a list of virtualEventTownhall objects where the specified user is either the organizer or a coorganizer.
-     * @param GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRe_eeb0097e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetByUserIdAndRoleWithUserIdWithRoleRequestBuilderGetRe_eeb0097e $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

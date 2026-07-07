@@ -40,11 +40,11 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property appLogCollectionRequests for deviceManagement
-     * @param AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AppLogCollectionRequestItemRequestBuilderDeleteRequestC_cb45ee2b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+    public function delete(?AppLogCollectionRequestItemRequestBuilderDeleteRequestC_cb45ee2b $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property appLogCollectionRequests in deviceManagement
      * @param AppLogCollectionRequest $body The request body
-     * @param AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AppLogCollectionRequestItemRequestBuilderPatchRequestCo_01d53b25|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AppLogCollectionRequest|null>
      * @throws Exception
     */
-    public function patch(AppLogCollectionRequest $body, ?AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+    public function patch(AppLogCollectionRequest $body, ?AppLogCollectionRequestItemRequestBuilderPatchRequestCo_01d53b25 $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property appLogCollectionRequests for deviceManagement
-     * @param AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AppLogCollectionRequestItemRequestBuilderDeleteRequestC_cb45ee2b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AppLogCollectionRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AppLogCollectionRequestItemRequestBuilderDeleteRequestC_cb45ee2b $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property appLogCollectionRequests in deviceManagement
      * @param AppLogCollectionRequest $body The request body
-     * @param AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AppLogCollectionRequestItemRequestBuilderPatchRequestCo_01d53b25|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AppLogCollectionRequest $body, ?AppLogCollectionRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AppLogCollectionRequest $body, ?AppLogCollectionRequestItemRequestBuilderPatchRequestCo_01d53b25 $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

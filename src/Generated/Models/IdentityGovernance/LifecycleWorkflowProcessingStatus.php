@@ -12,4 +12,6 @@ class LifecycleWorkflowProcessingStatus extends Enum {
     public const CANCELED = "canceled";
     public const FAILED = "failed";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const CANCELING = "canceling";
+    public const QUARANTINED = "quarantined";
 }
