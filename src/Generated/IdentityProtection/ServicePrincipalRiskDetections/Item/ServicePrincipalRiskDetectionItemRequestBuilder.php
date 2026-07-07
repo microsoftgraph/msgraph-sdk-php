@@ -32,11 +32,11 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property servicePrincipalRiskDetections for identityProtection
-     * @param ServicePrincipalRiskDetectionItemRequestBuilderDeleteRe_e9d4faeb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ServicePrincipalRiskDetectionItemRequestBuilderDeleteRe_e9d4faeb $requestConfiguration = null): Promise {
+    public function delete(?ServicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,12 +46,12 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a servicePrincipalRiskDetection object.
-     * @param ServicePrincipalRiskDetectionItemRequestBuilderGetReque_2aff0314|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalRiskDetection|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipalriskdetection-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ServicePrincipalRiskDetectionItemRequestBuilderGetReque_2aff0314 $requestConfiguration = null): Promise {
+    public function get(?ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property servicePrincipalRiskDetections in identityProtection
      * @param ServicePrincipalRiskDetection $body The request body
-     * @param ServicePrincipalRiskDetectionItemRequestBuilderPatchReq_b3e1bbae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipalRiskDetection|null>
      * @throws Exception
     */
-    public function patch(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionItemRequestBuilderPatchReq_b3e1bbae $requestConfiguration = null): Promise {
+    public function patch(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property servicePrincipalRiskDetections for identityProtection
-     * @param ServicePrincipalRiskDetectionItemRequestBuilderDeleteRe_e9d4faeb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ServicePrincipalRiskDetectionItemRequestBuilderDeleteRe_e9d4faeb $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ServicePrincipalRiskDetectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Read the properties and relationships of a servicePrincipalRiskDetection object.
-     * @param ServicePrincipalRiskDetectionItemRequestBuilderGetReque_2aff0314|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ServicePrincipalRiskDetectionItemRequestBuilderGetReque_2aff0314 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property servicePrincipalRiskDetections in identityProtection
      * @param ServicePrincipalRiskDetection $body The request body
-     * @param ServicePrincipalRiskDetectionItemRequestBuilderPatchReq_b3e1bbae|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionItemRequestBuilderPatchReq_b3e1bbae $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ServicePrincipalRiskDetection $body, ?ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

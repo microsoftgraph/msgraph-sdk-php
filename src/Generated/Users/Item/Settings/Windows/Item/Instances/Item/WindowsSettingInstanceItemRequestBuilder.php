@@ -32,11 +32,11 @@ class WindowsSettingInstanceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property instances for users
-     * @param WindowsSettingInstanceItemRequestBuilderDeleteRequestCo_d4d7ad35|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsSettingInstanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?WindowsSettingInstanceItemRequestBuilderDeleteRequestCo_d4d7ad35 $requestConfiguration = null): Promise {
+    public function delete(?WindowsSettingInstanceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class WindowsSettingInstanceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property instances in users
      * @param WindowsSettingInstance $body The request body
-     * @param WindowsSettingInstanceItemRequestBuilderPatchRequestCon_ee1db0df|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsSettingInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsSettingInstance|null>
      * @throws Exception
     */
-    public function patch(WindowsSettingInstance $body, ?WindowsSettingInstanceItemRequestBuilderPatchRequestCon_ee1db0df $requestConfiguration = null): Promise {
+    public function patch(WindowsSettingInstance $body, ?WindowsSettingInstanceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class WindowsSettingInstanceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property instances for users
-     * @param WindowsSettingInstanceItemRequestBuilderDeleteRequestCo_d4d7ad35|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsSettingInstanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WindowsSettingInstanceItemRequestBuilderDeleteRequestCo_d4d7ad35 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WindowsSettingInstanceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class WindowsSettingInstanceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property instances in users
      * @param WindowsSettingInstance $body The request body
-     * @param WindowsSettingInstanceItemRequestBuilderPatchRequestCon_ee1db0df|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsSettingInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(WindowsSettingInstance $body, ?WindowsSettingInstanceItemRequestBuilderPatchRequestCon_ee1db0df $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(WindowsSettingInstance $body, ?WindowsSettingInstanceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

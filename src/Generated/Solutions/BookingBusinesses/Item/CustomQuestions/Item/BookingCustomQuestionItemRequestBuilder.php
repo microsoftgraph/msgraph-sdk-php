@@ -32,12 +32,12 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a bookingCustomQuestion object.
-     * @param BookingCustomQuestionItemRequestBuilderDeleteRequestCon_dc757cd9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/bookingcustomquestion-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?BookingCustomQuestionItemRequestBuilderDeleteRequestCon_dc757cd9 $requestConfiguration = null): Promise {
+    public function delete(?BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,10 +78,10 @@ class BookingCustomQuestionItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a bookingCustomQuestion object.
-     * @param BookingCustomQuestionItemRequestBuilderDeleteRequestCon_dc757cd9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?BookingCustomQuestionItemRequestBuilderDeleteRequestCon_dc757cd9 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?BookingCustomQuestionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

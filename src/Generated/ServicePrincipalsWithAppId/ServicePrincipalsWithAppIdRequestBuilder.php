@@ -35,12 +35,12 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
-     * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestCo_a8dbdfeb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestCo_a8dbdfeb $requestConfiguration = null): Promise {
+    public function delete(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -66,12 +66,12 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn't exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipal $body The request body
-     * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestCon_a8b396c3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ServicePrincipal|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestCon_a8b396c3 $requestConfiguration = null): Promise {
+    public function patch(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -81,10 +81,10 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
-     * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestCo_a8dbdfeb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestCo_a8dbdfeb $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ServicePrincipalsWithAppIdRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -121,10 +121,10 @@ class ServicePrincipalsWithAppIdRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new servicePrincipal object if it doesn't exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn't exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param ServicePrincipal $body The request body
-     * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestCon_a8b396c3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestCon_a8b396c3 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ServicePrincipal $body, ?ServicePrincipalsWithAppIdRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

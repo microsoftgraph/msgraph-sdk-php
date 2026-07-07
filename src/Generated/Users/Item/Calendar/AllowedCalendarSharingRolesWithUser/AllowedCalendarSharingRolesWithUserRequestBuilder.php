@@ -34,11 +34,11 @@ class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseRequestBuild
 
     /**
      * Invoke function allowedCalendarSharingRoles
-     * @param AllowedCalendarSharingRolesWithUserRequestBuilderGetReq_ad88b888|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AllowedCalendarSharingRolesWithUserGetResponse|null>
      * @throws Exception
     */
-    public function get(?AllowedCalendarSharingRolesWithUserRequestBuilderGetReq_ad88b888 $requestConfiguration = null): Promise {
+    public function get(?AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class AllowedCalendarSharingRolesWithUserRequestBuilder extends BaseRequestBuild
 
     /**
      * Invoke function allowedCalendarSharingRoles
-     * @param AllowedCalendarSharingRolesWithUserRequestBuilderGetReq_ad88b888|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AllowedCalendarSharingRolesWithUserRequestBuilderGetReq_ad88b888 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AllowedCalendarSharingRolesWithUserRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

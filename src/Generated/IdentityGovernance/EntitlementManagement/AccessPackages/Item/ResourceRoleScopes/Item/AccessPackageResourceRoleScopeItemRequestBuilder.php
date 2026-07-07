@@ -48,12 +48,12 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Remove an accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
-     * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteR_56c76b05|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accesspackage-delete-resourcerolescopes?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?AccessPackageResourceRoleScopeItemRequestBuilderDeleteR_56c76b05 $requestConfiguration = null): Promise {
+    public function delete(?AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,11 +63,11 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * The resource roles and scopes in this access package.
-     * @param AccessPackageResourceRoleScopeItemRequestBuilderGetRequ_7497f8c7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceRoleScope|null>
      * @throws Exception
     */
-    public function get(?AccessPackageResourceRoleScopeItemRequestBuilderGetRequ_7497f8c7 $requestConfiguration = null): Promise {
+    public function get(?AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -78,11 +78,11 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param AccessPackageResourceRoleScope $body The request body
-     * @param AccessPackageResourceRoleScopeItemRequestBuilderPatchRe_05da9444|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceRoleScope|null>
      * @throws Exception
     */
-    public function patch(AccessPackageResourceRoleScope $body, ?AccessPackageResourceRoleScopeItemRequestBuilderPatchRe_05da9444 $requestConfiguration = null): Promise {
+    public function patch(AccessPackageResourceRoleScope $body, ?AccessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * Remove an accessPackageResourceRoleScope from an accessPackage list of resource role scopes.
-     * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteR_56c76b05|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessPackageResourceRoleScopeItemRequestBuilderDeleteR_56c76b05 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessPackageResourceRoleScopeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -110,10 +110,10 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
 
     /**
      * The resource roles and scopes in this access package.
-     * @param AccessPackageResourceRoleScopeItemRequestBuilderGetRequ_7497f8c7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackageResourceRoleScopeItemRequestBuilderGetRequ_7497f8c7 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackageResourceRoleScopeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -132,10 +132,10 @@ class AccessPackageResourceRoleScopeItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property resourceRoleScopes in identityGovernance
      * @param AccessPackageResourceRoleScope $body The request body
-     * @param AccessPackageResourceRoleScopeItemRequestBuilderPatchRe_05da9444|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessPackageResourceRoleScope $body, ?AccessPackageResourceRoleScopeItemRequestBuilderPatchRe_05da9444 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AccessPackageResourceRoleScope $body, ?AccessPackageResourceRoleScopeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

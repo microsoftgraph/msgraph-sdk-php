@@ -23,13 +23,6 @@ class ChatMessage extends Entity implements Parsable
      * @return ChatMessage
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ChatMessage {
-        $mappingValueNode = $parseNode->getChildNode("@odata.type");
-        if ($mappingValueNode !== null) {
-            $mappingValue = $mappingValueNode->getStringValue();
-            switch ($mappingValue) {
-                case '#microsoft.graph.targetedChatMessage': return new TargetedChatMessage();
-            }
-        }
         return new ChatMessage();
     }
 
@@ -96,7 +89,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the deletedDateTime property value. Read-only. Timestamp at which the chat message was deleted, or null if not deleted.
+     * Gets the deletedDateTime property value. Read only. Timestamp at which the chat message was deleted, or null if not deleted.
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
@@ -204,7 +197,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastEditedDateTime property value. Read-only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     * Gets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
      * @return DateTime|null
     */
     public function getLastEditedDateTime(): ?DateTime {
@@ -216,7 +209,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. Read-only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
+     * Gets the lastModifiedDateTime property value. Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -440,7 +433,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the deletedDateTime property value. Read-only. Timestamp at which the chat message was deleted, or null if not deleted.
+     * Sets the deletedDateTime property value. Read only. Timestamp at which the chat message was deleted, or null if not deleted.
      * @param DateTime|null $value Value to set for the deletedDateTime property.
     */
     public function setDeletedDateTime(?DateTime $value): void {
@@ -488,7 +481,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastEditedDateTime property value. Read-only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
+     * Sets the lastEditedDateTime property value. Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
      * @param DateTime|null $value Value to set for the lastEditedDateTime property.
     */
     public function setLastEditedDateTime(?DateTime $value): void {
@@ -496,7 +489,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. Read-only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
+     * Sets the lastModifiedDateTime property value. Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

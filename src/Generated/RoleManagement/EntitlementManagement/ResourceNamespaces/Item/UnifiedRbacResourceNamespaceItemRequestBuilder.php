@@ -40,11 +40,11 @@ class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceNamespaces for roleManagement
-     * @param UnifiedRbacResourceNamespaceItemRequestBuilderDeleteReq_5300f63a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UnifiedRbacResourceNamespaceItemRequestBuilderDeleteReq_5300f63a $requestConfiguration = null): Promise {
+    public function delete(?UnifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get resourceNamespaces from roleManagement
-     * @param UnifiedRbacResourceNamespaceItemRequestBuilderGetReques_b956a444|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRbacResourceNamespace|null>
      * @throws Exception
     */
-    public function get(?UnifiedRbacResourceNamespaceItemRequestBuilderGetReques_b956a444 $requestConfiguration = null): Promise {
+    public function get(?UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceNamespaces in roleManagement
      * @param UnifiedRbacResourceNamespace $body The request body
-     * @param UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequ_3afc8bbb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRbacResourceNamespace|null>
      * @throws Exception
     */
-    public function patch(UnifiedRbacResourceNamespace $body, ?UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequ_3afc8bbb $requestConfiguration = null): Promise {
+    public function patch(UnifiedRbacResourceNamespace $body, ?UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceNamespaces for roleManagement
-     * @param UnifiedRbacResourceNamespaceItemRequestBuilderDeleteReq_5300f63a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UnifiedRbacResourceNamespaceItemRequestBuilderDeleteReq_5300f63a $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UnifiedRbacResourceNamespaceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get resourceNamespaces from roleManagement
-     * @param UnifiedRbacResourceNamespaceItemRequestBuilderGetReques_b956a444|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UnifiedRbacResourceNamespaceItemRequestBuilderGetReques_b956a444 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UnifiedRbacResourceNamespaceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceNamespaces in roleManagement
      * @param UnifiedRbacResourceNamespace $body The request body
-     * @param UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequ_3afc8bbb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UnifiedRbacResourceNamespace $body, ?UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequ_3afc8bbb $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UnifiedRbacResourceNamespace $body, ?UnifiedRbacResourceNamespaceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

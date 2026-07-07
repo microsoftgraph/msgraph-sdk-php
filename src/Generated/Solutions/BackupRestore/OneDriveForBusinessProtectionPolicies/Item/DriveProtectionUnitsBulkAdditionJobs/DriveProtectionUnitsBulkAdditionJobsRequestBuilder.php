@@ -52,12 +52,12 @@ class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuil
 
     /**
      * Get a list of driveProtectionUnitsBulkAdditionJobs objects associated with a oneDriveForBusinessProtectionPolicy.
-     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitsBulkAdditionJobCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onedriveforbusinessprotectionpolicy-list-driveprotectionunitsbulkadditionjobs?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c $requestConfiguration = null): Promise {
+    public function get(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -67,10 +67,10 @@ class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequestBuil
 
     /**
      * Get a list of driveProtectionUnitsBulkAdditionJobs objects associated with a oneDriveForBusinessProtectionPolicy.
-     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRe_5271b05c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DriveProtectionUnitsBulkAdditionJobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

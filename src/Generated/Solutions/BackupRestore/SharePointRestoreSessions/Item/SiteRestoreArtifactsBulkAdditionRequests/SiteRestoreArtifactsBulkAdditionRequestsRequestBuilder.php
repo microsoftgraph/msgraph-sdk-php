@@ -53,12 +53,12 @@ class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequest
 
     /**
      * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
-     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderG_dd4808c2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteRestoreArtifactsBulkAdditionRequestCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sharepointrestoresession-list-siterestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
-    public function get(?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderG_dd4808c2 $requestConfiguration = null): Promise {
+    public function get(?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequest
     /**
      * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param SiteRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderP_b837dd9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SiteRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sharepointrestoresession-post-siterestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
-    public function post(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderP_b837dd9b $requestConfiguration = null): Promise {
+    public function post(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequest
 
     /**
      * Get a list of the siteRestoreArtifactsBulkAdditionRequest objects associated with a sharePointRestoreSession. The siteWebUrls property is deliberately omitted from the response body in order to limit the response size.
-     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderG_dd4808c2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderG_dd4808c2 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseRequest
     /**
      * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param SiteRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderP_b837dd9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderP_b837dd9b $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SiteRestoreArtifactsBulkAdditionRequest $body, ?SiteRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

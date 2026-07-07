@@ -33,11 +33,11 @@ class GetNoncompliantDevicesAndSettingsReportRequestBuilder extends BaseRequestB
     /**
      * Invoke action getNoncompliantDevicesAndSettingsReport
      * @param GetNoncompliantDevicesAndSettingsReportPostRequestBody $body The request body
-     * @param GetNoncompliantDevicesAndSettingsReportRequestBuilderPo_3676fec4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetNoncompliantDevicesAndSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function post(GetNoncompliantDevicesAndSettingsReportPostRequestBody $body, ?GetNoncompliantDevicesAndSettingsReportRequestBuilderPo_3676fec4 $requestConfiguration = null): Promise {
+    public function post(GetNoncompliantDevicesAndSettingsReportPostRequestBody $body, ?GetNoncompliantDevicesAndSettingsReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class GetNoncompliantDevicesAndSettingsReportRequestBuilder extends BaseRequestB
     /**
      * Invoke action getNoncompliantDevicesAndSettingsReport
      * @param GetNoncompliantDevicesAndSettingsReportPostRequestBody $body The request body
-     * @param GetNoncompliantDevicesAndSettingsReportRequestBuilderPo_3676fec4|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetNoncompliantDevicesAndSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(GetNoncompliantDevicesAndSettingsReportPostRequestBody $body, ?GetNoncompliantDevicesAndSettingsReportRequestBuilderPo_3676fec4 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(GetNoncompliantDevicesAndSettingsReportPostRequestBody $body, ?GetNoncompliantDevicesAndSettingsReportRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

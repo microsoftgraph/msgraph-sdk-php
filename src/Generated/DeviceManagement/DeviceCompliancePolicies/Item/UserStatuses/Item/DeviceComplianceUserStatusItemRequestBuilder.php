@@ -32,11 +32,11 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userStatuses for deviceManagement
-     * @param DeviceComplianceUserStatusItemRequestBuilderDeleteReque_96186228|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceComplianceUserStatusItemRequestBuilderDeleteReque_96186228 $requestConfiguration = null): Promise {
+    public function delete(?DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * List of DeviceComplianceUserStatus.
-     * @param DeviceComplianceUserStatusItemRequestBuilderGetRequestC_5d8e05da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceUserStatus|null>
      * @throws Exception
     */
-    public function get(?DeviceComplianceUserStatusItemRequestBuilderGetRequestC_5d8e05da $requestConfiguration = null): Promise {
+    public function get(?DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userStatuses in deviceManagement
      * @param DeviceComplianceUserStatus $body The request body
-     * @param DeviceComplianceUserStatusItemRequestBuilderPatchReques_d8112186|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceUserStatus|null>
      * @throws Exception
     */
-    public function patch(DeviceComplianceUserStatus $body, ?DeviceComplianceUserStatusItemRequestBuilderPatchReques_d8112186 $requestConfiguration = null): Promise {
+    public function patch(DeviceComplianceUserStatus $body, ?DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userStatuses for deviceManagement
-     * @param DeviceComplianceUserStatusItemRequestBuilderDeleteReque_96186228|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceComplianceUserStatusItemRequestBuilderDeleteReque_96186228 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceComplianceUserStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * List of DeviceComplianceUserStatus.
-     * @param DeviceComplianceUserStatusItemRequestBuilderGetRequestC_5d8e05da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceComplianceUserStatusItemRequestBuilderGetRequestC_5d8e05da $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceComplianceUserStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DeviceComplianceUserStatusItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userStatuses in deviceManagement
      * @param DeviceComplianceUserStatus $body The request body
-     * @param DeviceComplianceUserStatusItemRequestBuilderPatchReques_d8112186|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceComplianceUserStatus $body, ?DeviceComplianceUserStatusItemRequestBuilderPatchReques_d8112186 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceComplianceUserStatus $body, ?DeviceComplianceUserStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

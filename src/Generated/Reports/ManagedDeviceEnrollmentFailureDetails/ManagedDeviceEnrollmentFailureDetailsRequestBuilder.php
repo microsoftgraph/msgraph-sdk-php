@@ -32,11 +32,11 @@ class ManagedDeviceEnrollmentFailureDetailsRequestBuilder extends BaseRequestBui
 
     /**
      * Invoke function managedDeviceEnrollmentFailureDetails
-     * @param ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetR_ffa7be54|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Report|null>
      * @throws Exception
     */
-    public function get(?ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetR_ffa7be54 $requestConfiguration = null): Promise {
+    public function get(?ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class ManagedDeviceEnrollmentFailureDetailsRequestBuilder extends BaseRequestBui
 
     /**
      * Invoke function managedDeviceEnrollmentFailureDetails
-     * @param ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetR_ffa7be54|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetR_ffa7be54 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ManagedDeviceEnrollmentFailureDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

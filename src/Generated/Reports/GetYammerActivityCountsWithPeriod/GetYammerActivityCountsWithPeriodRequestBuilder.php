@@ -35,12 +35,12 @@ class GetYammerActivityCountsWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the trends on the amount of Yammer activity in your organization by how many messages were posted, read, and liked.
-     * @param GetYammerActivityCountsWithPeriodRequestBuilderGetReque_385b9f7c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getyammeractivitycounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetYammerActivityCountsWithPeriodRequestBuilderGetReque_385b9f7c $requestConfiguration = null): Promise {
+    public function get(?GetYammerActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetYammerActivityCountsWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the trends on the amount of Yammer activity in your organization by how many messages were posted, read, and liked.
-     * @param GetYammerActivityCountsWithPeriodRequestBuilderGetReque_385b9f7c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerActivityCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetYammerActivityCountsWithPeriodRequestBuilderGetReque_385b9f7c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetYammerActivityCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

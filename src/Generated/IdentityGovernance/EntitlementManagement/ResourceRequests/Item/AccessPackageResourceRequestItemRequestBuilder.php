@@ -48,11 +48,11 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceRequests for identityGovernance
-     * @param AccessPackageResourceRequestItemRequestBuilderDeleteReq_3cb6661b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AccessPackageResourceRequestItemRequestBuilderDeleteReq_3cb6661b $requestConfiguration = null): Promise {
+    public function delete(?AccessPackageResourceRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents a request to add or remove a resource to or from a catalog respectively.
-     * @param AccessPackageResourceRequestItemRequestBuilderGetReques_508925c8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceRequest|null>
      * @throws Exception
     */
-    public function get(?AccessPackageResourceRequestItemRequestBuilderGetReques_508925c8 $requestConfiguration = null): Promise {
+    public function get(?AccessPackageResourceRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,11 +77,11 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceRequests in identityGovernance
      * @param AccessPackageResourceRequest $body The request body
-     * @param AccessPackageResourceRequestItemRequestBuilderPatchRequ_9826c982|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessPackageResourceRequest|null>
      * @throws Exception
     */
-    public function patch(AccessPackageResourceRequest $body, ?AccessPackageResourceRequestItemRequestBuilderPatchRequ_9826c982 $requestConfiguration = null): Promise {
+    public function patch(AccessPackageResourceRequest $body, ?AccessPackageResourceRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -91,10 +91,10 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property resourceRequests for identityGovernance
-     * @param AccessPackageResourceRequestItemRequestBuilderDeleteReq_3cb6661b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRequestItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessPackageResourceRequestItemRequestBuilderDeleteReq_3cb6661b $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessPackageResourceRequestItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -109,10 +109,10 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents a request to add or remove a resource to or from a catalog respectively.
-     * @param AccessPackageResourceRequestItemRequestBuilderGetReques_508925c8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessPackageResourceRequestItemRequestBuilderGetReques_508925c8 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessPackageResourceRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -131,10 +131,10 @@ class AccessPackageResourceRequestItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property resourceRequests in identityGovernance
      * @param AccessPackageResourceRequest $body The request body
-     * @param AccessPackageResourceRequestItemRequestBuilderPatchRequ_9826c982|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessPackageResourceRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessPackageResourceRequest $body, ?AccessPackageResourceRequestItemRequestBuilderPatchRequ_9826c982 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AccessPackageResourceRequest $body, ?AccessPackageResourceRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,11 +32,11 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property assignments for deviceAppManagement
-     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderDel_8d6a9bcf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TargetedManagedAppPolicyAssignmentItemRequestBuilderDel_8d6a9bcf $requestConfiguration = null): Promise {
+    public function delete(?TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
 
     /**
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderGet_c4dcecda|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppPolicyAssignment|null>
      * @throws Exception
     */
-    public function get(?TargetedManagedAppPolicyAssignmentItemRequestBuilderGet_c4dcecda $requestConfiguration = null): Promise {
+    public function get(?TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param TargetedManagedAppPolicyAssignment $body The request body
-     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPat_d6467e3c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedManagedAppPolicyAssignment|null>
      * @throws Exception
     */
-    public function patch(TargetedManagedAppPolicyAssignment $body, ?TargetedManagedAppPolicyAssignmentItemRequestBuilderPat_d6467e3c $requestConfiguration = null): Promise {
+    public function patch(TargetedManagedAppPolicyAssignment $body, ?TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
 
     /**
      * Delete navigation property assignments for deviceAppManagement
-     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderDel_8d6a9bcf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TargetedManagedAppPolicyAssignmentItemRequestBuilderDel_8d6a9bcf $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TargetedManagedAppPolicyAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
 
     /**
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderGet_c4dcecda|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?TargetedManagedAppPolicyAssignmentItemRequestBuilderGet_c4dcecda $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param TargetedManagedAppPolicyAssignment $body The request body
-     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPat_d6467e3c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TargetedManagedAppPolicyAssignment $body, ?TargetedManagedAppPolicyAssignmentItemRequestBuilderPat_d6467e3c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TargetedManagedAppPolicyAssignment $body, ?TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

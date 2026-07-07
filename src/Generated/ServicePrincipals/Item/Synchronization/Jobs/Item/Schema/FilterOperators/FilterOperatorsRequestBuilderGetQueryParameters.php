@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\Jobs\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all operators supported in the scoping filters for a synchronizationSchema.
+ * List all operators supported in the scoping filters.
 */
 class FilterOperatorsRequestBuilderGetQueryParameters 
 {

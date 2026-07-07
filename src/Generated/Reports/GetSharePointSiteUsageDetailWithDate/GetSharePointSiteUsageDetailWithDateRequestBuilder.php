@@ -36,12 +36,12 @@ class GetSharePointSiteUsageDetailWithDateRequestBuilder extends BaseRequestBuil
 
     /**
      * Get details about SharePoint site usage.
-     * @param GetSharePointSiteUsageDetailWithDateRequestBuilderGetRe_0cd1f80e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagedetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointSiteUsageDetailWithDateRequestBuilderGetRe_0cd1f80e $requestConfiguration = null): Promise {
+    public function get(?GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -53,10 +53,10 @@ class GetSharePointSiteUsageDetailWithDateRequestBuilder extends BaseRequestBuil
 
     /**
      * Get details about SharePoint site usage.
-     * @param GetSharePointSiteUsageDetailWithDateRequestBuilderGetRe_0cd1f80e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointSiteUsageDetailWithDateRequestBuilderGetRe_0cd1f80e $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointSiteUsageDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

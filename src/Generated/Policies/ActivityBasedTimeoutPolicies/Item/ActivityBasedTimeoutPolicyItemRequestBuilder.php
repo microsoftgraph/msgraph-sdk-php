@@ -40,12 +40,12 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an activityBasedTimeoutPolicy object.
-     * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteReque_acfe0703|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ActivityBasedTimeoutPolicyItemRequestBuilderDeleteReque_acfe0703 $requestConfiguration = null): Promise {
+    public function delete(?ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the properties of an activityBasedTimeoutPolicy object.
-     * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestC_41a3a235|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestC_41a3a235 $requestConfiguration = null): Promise {
+    public function get(?ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,12 +71,12 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body The request body
-     * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchReques_0a17e780|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ActivityBasedTimeoutPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/activitybasedtimeoutpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPolicyItemRequestBuilderPatchReques_0a17e780 $requestConfiguration = null): Promise {
+    public function patch(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,10 +86,10 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an activityBasedTimeoutPolicy object.
-     * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteReque_acfe0703|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ActivityBasedTimeoutPolicyItemRequestBuilderDeleteReque_acfe0703 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ActivityBasedTimeoutPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the properties of an activityBasedTimeoutPolicy object.
-     * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestC_41a3a235|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestC_41a3a235 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ActivityBasedTimeoutPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -126,10 +126,10 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an activityBasedTimeoutPolicy object.
      * @param ActivityBasedTimeoutPolicy $body The request body
-     * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchReques_0a17e780|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPolicyItemRequestBuilderPatchReques_0a17e780 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ActivityBasedTimeoutPolicy $body, ?ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -40,11 +40,11 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property decisions for identityGovernance
-     * @param AccessReviewInstanceDecisionItemItemRequestBuilderDelet_9912c74d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AccessReviewInstanceDecisionItemItemRequestBuilderDelet_9912c74d $requestConfiguration = null): Promise {
+    public function delete(?AccessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,12 +54,12 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
-     * @param AccessReviewInstanceDecisionItemItemRequestBuilderGetRe_6d4f61fd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewInstanceDecisionItem|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AccessReviewInstanceDecisionItemItemRequestBuilderGetRe_6d4f61fd $requestConfiguration = null): Promise {
+    public function get(?AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property decisions in identityGovernance
      * @param AccessReviewInstanceDecisionItem $body The request body
-     * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatch_ba1f9a23|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewInstanceDecisionItem|null>
      * @throws Exception
     */
-    public function patch(AccessReviewInstanceDecisionItem $body, ?AccessReviewInstanceDecisionItemItemRequestBuilderPatch_ba1f9a23 $requestConfiguration = null): Promise {
+    public function patch(AccessReviewInstanceDecisionItem $body, ?AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Delete navigation property decisions for identityGovernance
-     * @param AccessReviewInstanceDecisionItemItemRequestBuilderDelet_9912c74d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AccessReviewInstanceDecisionItemItemRequestBuilderDelet_9912c74d $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AccessReviewInstanceDecisionItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -102,10 +102,10 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
 
     /**
      * Read the properties and relationships of an accessReviewInstanceDecisionItem object.
-     * @param AccessReviewInstanceDecisionItemItemRequestBuilderGetRe_6d4f61fd|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AccessReviewInstanceDecisionItemItemRequestBuilderGetRe_6d4f61fd $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AccessReviewInstanceDecisionItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property decisions in identityGovernance
      * @param AccessReviewInstanceDecisionItem $body The request body
-     * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatch_ba1f9a23|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AccessReviewInstanceDecisionItem $body, ?AccessReviewInstanceDecisionItemItemRequestBuilderPatch_ba1f9a23 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AccessReviewInstanceDecisionItem $body, ?AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

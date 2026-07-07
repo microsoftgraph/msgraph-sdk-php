@@ -53,11 +53,11 @@ class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseRequestBuilde
 
     /**
      * User experience analytics model scores
-     * @param UserExperienceAnalyticsModelScoresRequestBuilderGetRequ_5cfafff0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsModelScoresCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsModelScoresRequestBuilderGetRequ_5cfafff0 $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsModelScoresRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
      * @param UserExperienceAnalyticsModelScores $body The request body
-     * @param UserExperienceAnalyticsModelScoresRequestBuilderPostReq_7ad773b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsModelScores|null>
      * @throws Exception
     */
-    public function post(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresRequestBuilderPostReq_7ad773b9 $requestConfiguration = null): Promise {
+    public function post(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseRequestBuilde
 
     /**
      * User experience analytics model scores
-     * @param UserExperienceAnalyticsModelScoresRequestBuilderGetRequ_5cfafff0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsModelScoresRequestBuilderGetRequ_5cfafff0 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsModelScoresRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class UserExperienceAnalyticsModelScoresRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to userExperienceAnalyticsModelScores for deviceManagement
      * @param UserExperienceAnalyticsModelScores $body The request body
-     * @param UserExperienceAnalyticsModelScoresRequestBuilderPostReq_7ad773b9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsModelScoresRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresRequestBuilderPostReq_7ad773b9 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UserExperienceAnalyticsModelScores $body, ?UserExperienceAnalyticsModelScoresRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

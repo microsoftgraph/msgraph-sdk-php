@@ -40,11 +40,11 @@ class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property delegatedAdminCustomers for tenantRelationships
-     * @param DelegatedAdminCustomerItemRequestBuilderDeleteRequestCo_8712c83f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DelegatedAdminCustomerItemRequestBuilderDeleteRequestCo_8712c83f $requestConfiguration = null): Promise {
+    public function delete(?DelegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property delegatedAdminCustomers in tenantRelationships
      * @param DelegatedAdminCustomer $body The request body
-     * @param DelegatedAdminCustomerItemRequestBuilderPatchRequestCon_3c7a8827|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminCustomer|null>
      * @throws Exception
     */
-    public function patch(DelegatedAdminCustomer $body, ?DelegatedAdminCustomerItemRequestBuilderPatchRequestCon_3c7a8827 $requestConfiguration = null): Promise {
+    public function patch(DelegatedAdminCustomer $body, ?DelegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property delegatedAdminCustomers for tenantRelationships
-     * @param DelegatedAdminCustomerItemRequestBuilderDeleteRequestCo_8712c83f|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DelegatedAdminCustomerItemRequestBuilderDeleteRequestCo_8712c83f $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DelegatedAdminCustomerItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property delegatedAdminCustomers in tenantRelationships
      * @param DelegatedAdminCustomer $body The request body
-     * @param DelegatedAdminCustomerItemRequestBuilderPatchRequestCon_3c7a8827|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DelegatedAdminCustomer $body, ?DelegatedAdminCustomerItemRequestBuilderPatchRequestCon_3c7a8827 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DelegatedAdminCustomer $body, ?DelegatedAdminCustomerItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

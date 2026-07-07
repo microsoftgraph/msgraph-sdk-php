@@ -32,11 +32,11 @@ class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property exportJobs for deviceManagement
-     * @param DeviceManagementExportJobItemRequestBuilderDeleteReques_9bd23106|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceManagementExportJobItemRequestBuilderDeleteReques_9bd23106 $requestConfiguration = null): Promise {
+    public function delete(?DeviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Entity representing a job to export a report.
-     * @param DeviceManagementExportJobItemRequestBuilderGetRequestCo_6f349afe|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExportJob|null>
      * @throws Exception
     */
-    public function get(?DeviceManagementExportJobItemRequestBuilderGetRequestCo_6f349afe $requestConfiguration = null): Promise {
+    public function get(?DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property exportJobs in deviceManagement
      * @param DeviceManagementExportJob $body The request body
-     * @param DeviceManagementExportJobItemRequestBuilderPatchRequest_74ee3728|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceManagementExportJob|null>
      * @throws Exception
     */
-    public function patch(DeviceManagementExportJob $body, ?DeviceManagementExportJobItemRequestBuilderPatchRequest_74ee3728 $requestConfiguration = null): Promise {
+    public function patch(DeviceManagementExportJob $body, ?DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property exportJobs for deviceManagement
-     * @param DeviceManagementExportJobItemRequestBuilderDeleteReques_9bd23106|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceManagementExportJobItemRequestBuilderDeleteReques_9bd23106 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceManagementExportJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Entity representing a job to export a report.
-     * @param DeviceManagementExportJobItemRequestBuilderGetRequestCo_6f349afe|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceManagementExportJobItemRequestBuilderGetRequestCo_6f349afe $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceManagementExportJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property exportJobs in deviceManagement
      * @param DeviceManagementExportJob $body The request body
-     * @param DeviceManagementExportJobItemRequestBuilderPatchRequest_74ee3728|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceManagementExportJob $body, ?DeviceManagementExportJobItemRequestBuilderPatchRequest_74ee3728 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceManagementExportJob $body, ?DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -68,11 +68,11 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param SettingStateDeviceSummary $body The request body
-     * @param DeviceSettingStateSummariesRequestBuilderPostRequestCon_21d47a29|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SettingStateDeviceSummary|null>
      * @throws Exception
     */
-    public function post(SettingStateDeviceSummary $body, ?DeviceSettingStateSummariesRequestBuilderPostRequestCon_21d47a29 $requestConfiguration = null): Promise {
+    public function post(SettingStateDeviceSummary $body, ?DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -104,10 +104,10 @@ class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to deviceSettingStateSummaries for deviceManagement
      * @param SettingStateDeviceSummary $body The request body
-     * @param DeviceSettingStateSummariesRequestBuilderPostRequestCon_21d47a29|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SettingStateDeviceSummary $body, ?DeviceSettingStateSummariesRequestBuilderPostRequestCon_21d47a29 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SettingStateDeviceSummary $body, ?DeviceSettingStateSummariesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

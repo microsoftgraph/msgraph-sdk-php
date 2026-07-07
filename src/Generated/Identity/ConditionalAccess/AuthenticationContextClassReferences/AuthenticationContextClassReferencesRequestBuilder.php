@@ -53,12 +53,12 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
 
     /**
      * Retrieve a list of authenticationContextClassReference objects.
-     * @param AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReferenceCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/conditionalaccessroot-list-authenticationcontextclassreferences?view=graph-rest-1.0 Find more info here
     */
-    public function get(?AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004 $requestConfiguration = null): Promise {
+    public function get(?AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
      * @param AuthenticationContextClassReference $body The request body
-     * @param AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationContextClassReference|null>
      * @throws Exception
     */
-    public function post(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7 $requestConfiguration = null): Promise {
+    public function post(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
 
     /**
      * Retrieve a list of authenticationContextClassReference objects.
-     * @param AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationContextClassReferencesRequestBuilderGetRe_b558e004 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationContextClassReferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class AuthenticationContextClassReferencesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
      * @param AuthenticationContextClassReference $body The request body
-     * @param AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostR_6b7dc4d7 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

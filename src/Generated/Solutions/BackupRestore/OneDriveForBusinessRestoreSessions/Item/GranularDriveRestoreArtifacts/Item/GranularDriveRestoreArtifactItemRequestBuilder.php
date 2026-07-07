@@ -32,11 +32,11 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property granularDriveRestoreArtifacts for solutions
-     * @param GranularDriveRestoreArtifactItemRequestBuilderDeleteReq_42dee1b2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularDriveRestoreArtifactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?GranularDriveRestoreArtifactItemRequestBuilderDeleteReq_42dee1b2 $requestConfiguration = null): Promise {
+    public function delete(?GranularDriveRestoreArtifactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
-     * @param GranularDriveRestoreArtifactItemRequestBuilderGetReques_8012add7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularDriveRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularDriveRestoreArtifact|null>
      * @throws Exception
     */
-    public function get(?GranularDriveRestoreArtifactItemRequestBuilderGetReques_8012add7 $requestConfiguration = null): Promise {
+    public function get(?GranularDriveRestoreArtifactItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property granularDriveRestoreArtifacts in solutions
      * @param GranularDriveRestoreArtifact $body The request body
-     * @param GranularDriveRestoreArtifactItemRequestBuilderPatchRequ_1c9c4589|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularDriveRestoreArtifactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GranularDriveRestoreArtifact|null>
      * @throws Exception
     */
-    public function patch(GranularDriveRestoreArtifact $body, ?GranularDriveRestoreArtifactItemRequestBuilderPatchRequ_1c9c4589 $requestConfiguration = null): Promise {
+    public function patch(GranularDriveRestoreArtifact $body, ?GranularDriveRestoreArtifactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property granularDriveRestoreArtifacts for solutions
-     * @param GranularDriveRestoreArtifactItemRequestBuilderDeleteReq_42dee1b2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularDriveRestoreArtifactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?GranularDriveRestoreArtifactItemRequestBuilderDeleteReq_42dee1b2 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?GranularDriveRestoreArtifactItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of browse session ID and item key details that can be used to restore OneDrive for work or school files and folders.
-     * @param GranularDriveRestoreArtifactItemRequestBuilderGetReques_8012add7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularDriveRestoreArtifactItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GranularDriveRestoreArtifactItemRequestBuilderGetReques_8012add7 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GranularDriveRestoreArtifactItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class GranularDriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property granularDriveRestoreArtifacts in solutions
      * @param GranularDriveRestoreArtifact $body The request body
-     * @param GranularDriveRestoreArtifactItemRequestBuilderPatchRequ_1c9c4589|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GranularDriveRestoreArtifactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(GranularDriveRestoreArtifact $body, ?GranularDriveRestoreArtifactItemRequestBuilderPatchRequ_1c9c4589 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(GranularDriveRestoreArtifact $body, ?GranularDriveRestoreArtifactItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

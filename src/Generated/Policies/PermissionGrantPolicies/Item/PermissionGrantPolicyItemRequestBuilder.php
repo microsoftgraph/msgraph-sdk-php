@@ -48,12 +48,12 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a permissionGrantPolicy object.
-     * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestCon_a23d1ca5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?PermissionGrantPolicyItemRequestBuilderDeleteRequestCon_a23d1ca5 $requestConfiguration = null): Promise {
+    public function delete(?PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a permissionGrantPolicy object.
-     * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestCon_a23d1ca5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?PermissionGrantPolicyItemRequestBuilderDeleteRequestCon_a23d1ca5 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

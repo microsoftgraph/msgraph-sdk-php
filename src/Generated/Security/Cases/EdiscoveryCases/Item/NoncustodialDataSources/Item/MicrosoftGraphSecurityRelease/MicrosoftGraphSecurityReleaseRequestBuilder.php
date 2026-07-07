@@ -31,12 +31,12 @@ class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuilder
 
     /**
      * Release the non-custodial data source from the case.
-     * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestC_10ec20b5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverynoncustodialdatasource-release?view=graph-rest-1.0 Find more info here
     */
-    public function post(?MicrosoftGraphSecurityReleaseRequestBuilderPostRequestC_10ec20b5 $requestConfiguration = null): Promise {
+    public function post(?MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityReleaseRequestBuilder extends BaseRequestBuilder
 
     /**
      * Release the non-custodial data source from the case.
-     * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestC_10ec20b5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?MicrosoftGraphSecurityReleaseRequestBuilderPostRequestC_10ec20b5 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?MicrosoftGraphSecurityReleaseRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

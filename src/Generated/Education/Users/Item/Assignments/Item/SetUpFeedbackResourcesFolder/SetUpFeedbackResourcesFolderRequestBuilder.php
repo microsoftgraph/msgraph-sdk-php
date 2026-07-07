@@ -32,12 +32,12 @@ class SetUpFeedbackResourcesFolderRequestBuilder extends BaseRequestBuilder
 
     /**
      * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
-     * @param SetUpFeedbackResourcesFolderRequestBuilderPostRequestCo_dde0d19b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EducationAssignment|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationassignment-setupfeedbackresourcesfolder?view=graph-rest-1.0 Find more info here
     */
-    public function post(?SetUpFeedbackResourcesFolderRequestBuilderPostRequestCo_dde0d19b $requestConfiguration = null): Promise {
+    public function post(?SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class SetUpFeedbackResourcesFolderRequestBuilder extends BaseRequestBuilder
 
     /**
      * Create a SharePoint folder to upload feedback files for a given educationSubmission. Only teachers can perform this operation. The teacher determines the resources to upload in the feedback resources folder of a submission.
-     * @param SetUpFeedbackResourcesFolderRequestBuilderPostRequestCo_dde0d19b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?SetUpFeedbackResourcesFolderRequestBuilderPostRequestCo_dde0d19b $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?SetUpFeedbackResourcesFolderRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -94,7 +94,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Gets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value can be Fido2 or microsoftAuthenticator.
+     * Gets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
      * @return string|null
     */
     public function getTargetedAuthenticationMethod(): ?string {
@@ -162,7 +162,7 @@ class AuthenticationMethodsRegistrationCampaignIncludeTarget implements Addition
     }
 
     /**
-     * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value can be Fido2 or microsoftAuthenticator.
+     * Sets the targetedAuthenticationMethod property value. The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
      * @param string|null $value Value to set for the targetedAuthenticationMethod property.
     */
     public function setTargetedAuthenticationMethod(?string $value): void {

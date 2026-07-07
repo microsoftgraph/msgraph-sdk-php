@@ -40,11 +40,11 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property attendanceReports for solutions
-     * @param MeetingAttendanceReportItemRequestBuilderDeleteRequestC_f9e3ed15|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MeetingAttendanceReportItemRequestBuilderDeleteRequestC_f9e3ed15 $requestConfiguration = null): Promise {
+    public function delete(?MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property attendanceReports in solutions
      * @param MeetingAttendanceReport $body The request body
-     * @param MeetingAttendanceReportItemRequestBuilderPatchRequestCo_1b936968|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MeetingAttendanceReport|null>
      * @throws Exception
     */
-    public function patch(MeetingAttendanceReport $body, ?MeetingAttendanceReportItemRequestBuilderPatchRequestCo_1b936968 $requestConfiguration = null): Promise {
+    public function patch(MeetingAttendanceReport $body, ?MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property attendanceReports for solutions
-     * @param MeetingAttendanceReportItemRequestBuilderDeleteRequestC_f9e3ed15|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MeetingAttendanceReportItemRequestBuilderDeleteRequestC_f9e3ed15 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MeetingAttendanceReportItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -124,10 +124,10 @@ class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property attendanceReports in solutions
      * @param MeetingAttendanceReport $body The request body
-     * @param MeetingAttendanceReportItemRequestBuilderPatchRequestCo_1b936968|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MeetingAttendanceReport $body, ?MeetingAttendanceReportItemRequestBuilderPatchRequestCo_1b936968 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MeetingAttendanceReport $body, ?MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

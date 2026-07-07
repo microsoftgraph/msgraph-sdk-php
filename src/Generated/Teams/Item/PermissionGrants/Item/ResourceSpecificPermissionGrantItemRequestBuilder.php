@@ -32,11 +32,11 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property permissionGrants for teams
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38 $requestConfiguration = null): Promise {
+    public function delete(?ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * A collection of permissions granted to apps to access the team.
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceSpecificPermissionGrant|null>
      * @throws Exception
     */
-    public function get(?ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef $requestConfiguration = null): Promise {
+    public function get(?ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property permissionGrants in teams
      * @param ResourceSpecificPermissionGrant $body The request body
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ResourceSpecificPermissionGrant|null>
      * @throws Exception
     */
-    public function patch(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389 $requestConfiguration = null): Promise {
+    public function patch(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * Delete navigation property permissionGrants for teams
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderDelete_a741ca38 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
 
     /**
      * A collection of permissions granted to apps to access the team.
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderGetReq_c7368aef $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class ResourceSpecificPermissionGrantItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property permissionGrants in teams
      * @param ResourceSpecificPermissionGrant $body The request body
-     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchR_fe12a389 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ResourceSpecificPermissionGrant $body, ?ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

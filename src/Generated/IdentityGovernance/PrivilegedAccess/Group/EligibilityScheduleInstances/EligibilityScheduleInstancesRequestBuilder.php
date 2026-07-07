@@ -6,10 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleInstances\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleInstances\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleInstances\Item\PrivilegedAccessGroupEligibilityScheduleInstanceItemReq_24448360;
+use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleInstances\Item\PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleInstance;
-use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleInstanceCollect_df2a8b1b;
+use Microsoft\Graph\Generated\Models\PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -30,12 +30,12 @@ class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the eligibilityScheduleInstances property of the microsoft.graph.privilegedAccessGroup entity.
      * @param string $privilegedAccessGroupEligibilityScheduleInstanceId The unique identifier of privilegedAccessGroupEligibilityScheduleInstance
-     * @return PrivilegedAccessGroupEligibilityScheduleInstanceItemReq_24448360
+     * @return PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder
     */
-    public function byPrivilegedAccessGroupEligibilityScheduleInstanceId(string $privilegedAccessGroupEligibilityScheduleInstanceId): PrivilegedAccessGroupEligibilityScheduleInstanceItemReq_24448360 {
+    public function byPrivilegedAccessGroupEligibilityScheduleInstanceId(string $privilegedAccessGroupEligibilityScheduleInstanceId): PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['privilegedAccessGroupEligibilityScheduleInstance%2Did'] = $privilegedAccessGroupEligibilityScheduleInstanceId;
-        return new PrivilegedAccessGroupEligibilityScheduleInstanceItemReq_24448360($urlTplParams, $this->requestAdapter);
+        return new PrivilegedAccessGroupEligibilityScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -63,27 +63,27 @@ class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
-     * @param EligibilityScheduleInstancesRequestBuilderGetRequestCon_9985eb71|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<PrivilegedAccessGroupEligibilityScheduleInstanceCollect_df2a8b1b|null>
+     * @param EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityscheduleinstances?view=graph-rest-1.0 Find more info here
     */
-    public function get(?EligibilityScheduleInstancesRequestBuilderGetRequestCon_9985eb71 $requestConfiguration = null): Promise {
+    public function get(?EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
-        return $this->requestAdapter->sendAsync($requestInfo, [PrivilegedAccessGroupEligibilityScheduleInstanceCollect_df2a8b1b::class, 'createFromDiscriminatorValue'], $errorMappings);
+        return $this->requestAdapter->sendAsync($requestInfo, [PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
     }
 
     /**
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
      * @param PrivilegedAccessGroupEligibilityScheduleInstance $body The request body
-     * @param EligibilityScheduleInstancesRequestBuilderPostRequestCo_fae8661b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EligibilityScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupEligibilityScheduleInstance|null>
      * @throws Exception
     */
-    public function post(PrivilegedAccessGroupEligibilityScheduleInstance $body, ?EligibilityScheduleInstancesRequestBuilderPostRequestCo_fae8661b $requestConfiguration = null): Promise {
+    public function post(PrivilegedAccessGroupEligibilityScheduleInstance $body, ?EligibilityScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -93,10 +93,10 @@ class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleInstance objects and their properties.
-     * @param EligibilityScheduleInstancesRequestBuilderGetRequestCon_9985eb71|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EligibilityScheduleInstancesRequestBuilderGetRequestCon_9985eb71 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EligibilityScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
      * @param PrivilegedAccessGroupEligibilityScheduleInstance $body The request body
-     * @param EligibilityScheduleInstancesRequestBuilderPostRequestCo_fae8661b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EligibilityScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(PrivilegedAccessGroupEligibilityScheduleInstance $body, ?EligibilityScheduleInstancesRequestBuilderPostRequestCo_fae8661b $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(PrivilegedAccessGroupEligibilityScheduleInstance $body, ?EligibilityScheduleInstancesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

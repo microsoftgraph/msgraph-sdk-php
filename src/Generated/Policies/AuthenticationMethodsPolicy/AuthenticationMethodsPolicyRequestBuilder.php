@@ -40,11 +40,11 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property authenticationMethodsPolicy for policies
-     * @param AuthenticationMethodsPolicyRequestBuilderDeleteRequestC_18457a62|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodsPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AuthenticationMethodsPolicyRequestBuilderDeleteRequestC_18457a62 $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationMethodsPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,12 +70,12 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicy $body The request body
-     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationMethodsPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b $requestConfiguration = null): Promise {
+    public function patch(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,10 +85,10 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property authenticationMethodsPolicy for policies
-     * @param AuthenticationMethodsPolicyRequestBuilderDeleteRequestC_18457a62|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodsPolicyRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationMethodsPolicyRequestBuilderDeleteRequestC_18457a62 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationMethodsPolicyRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -125,10 +125,10 @@ class AuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an authenticationMethodsPolicy object.
      * @param AuthenticationMethodsPolicy $body The request body
-     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestCo_5e295d9b $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationMethodsPolicy $body, ?AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

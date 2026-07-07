@@ -53,12 +53,12 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for Groups.
-     * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequest_c0f1b99c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyAssignmentCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0 Find more info here
     */
-    public function get(?RoleManagementPolicyAssignmentsRequestBuilderGetRequest_c0f1b99c $requestConfiguration = null): Promise {
+    public function get(?RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
      * @param UnifiedRoleManagementPolicyAssignment $body The request body
-     * @param RoleManagementPolicyAssignmentsRequestBuilderPostReques_e55d8565|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleManagementPolicyAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UnifiedRoleManagementPolicyAssignment|null>
      * @throws Exception
     */
-    public function post(UnifiedRoleManagementPolicyAssignment $body, ?RoleManagementPolicyAssignmentsRequestBuilderPostReques_e55d8565 $requestConfiguration = null): Promise {
+    public function post(UnifiedRoleManagementPolicyAssignment $body, ?RoleManagementPolicyAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the details of all role management policy assignments made in PIM for Microsoft Entra roles and PIM for Groups.
-     * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequest_c0f1b99c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RoleManagementPolicyAssignmentsRequestBuilderGetRequest_c0f1b99c $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -105,10 +105,10 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
      * @param UnifiedRoleManagementPolicyAssignment $body The request body
-     * @param RoleManagementPolicyAssignmentsRequestBuilderPostReques_e55d8565|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RoleManagementPolicyAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UnifiedRoleManagementPolicyAssignment $body, ?RoleManagementPolicyAssignmentsRequestBuilderPostReques_e55d8565 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UnifiedRoleManagementPolicyAssignment $body, ?RoleManagementPolicyAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

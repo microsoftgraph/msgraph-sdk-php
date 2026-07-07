@@ -40,11 +40,11 @@ class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property logCollectionRequests for deviceManagement
-     * @param DeviceLogCollectionResponseItemRequestBuilderDeleteRequ_ac8e9f42|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceLogCollectionResponseItemRequestBuilderDeleteRequ_ac8e9f42 $requestConfiguration = null): Promise {
+    public function delete(?DeviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * List of log collection requests
-     * @param DeviceLogCollectionResponseItemRequestBuilderGetRequest_8ef0c152|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceLogCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DeviceLogCollectionResponseItemRequestBuilderGetRequest_8ef0c152 $requestConfiguration = null): Promise {
+    public function get(?DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property logCollectionRequests in deviceManagement
      * @param DeviceLogCollectionResponse $body The request body
-     * @param DeviceLogCollectionResponseItemRequestBuilderPatchReque_7cda4e2b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceLogCollectionResponse|null>
      * @throws Exception
     */
-    public function patch(DeviceLogCollectionResponse $body, ?DeviceLogCollectionResponseItemRequestBuilderPatchReque_7cda4e2b $requestConfiguration = null): Promise {
+    public function patch(DeviceLogCollectionResponse $body, ?DeviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property logCollectionRequests for deviceManagement
-     * @param DeviceLogCollectionResponseItemRequestBuilderDeleteRequ_ac8e9f42|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceLogCollectionResponseItemRequestBuilderDeleteRequ_ac8e9f42 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceLogCollectionResponseItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * List of log collection requests
-     * @param DeviceLogCollectionResponseItemRequestBuilderGetRequest_8ef0c152|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceLogCollectionResponseItemRequestBuilderGetRequest_8ef0c152 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceLogCollectionResponseItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class DeviceLogCollectionResponseItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property logCollectionRequests in deviceManagement
      * @param DeviceLogCollectionResponse $body The request body
-     * @param DeviceLogCollectionResponseItemRequestBuilderPatchReque_7cda4e2b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceLogCollectionResponse $body, ?DeviceLogCollectionResponseItemRequestBuilderPatchReque_7cda4e2b $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceLogCollectionResponse $body, ?DeviceLogCollectionResponseItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

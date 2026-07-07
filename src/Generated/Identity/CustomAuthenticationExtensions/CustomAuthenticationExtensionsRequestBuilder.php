@@ -61,12 +61,12 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
-     * @param CustomAuthenticationExtensionsRequestBuilderGetRequestC_3f961b87|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomAuthenticationExtensionCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0 Find more info here
     */
-    public function get(?CustomAuthenticationExtensionsRequestBuilderGetRequestC_3f961b87 $requestConfiguration = null): Promise {
+    public function get(?CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,12 +77,12 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param CustomAuthenticationExtension $body The request body
-     * @param CustomAuthenticationExtensionsRequestBuilderPostRequest_86738dab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CustomAuthenticationExtension|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0 Find more info here
     */
-    public function post(CustomAuthenticationExtension $body, ?CustomAuthenticationExtensionsRequestBuilderPostRequest_86738dab $requestConfiguration = null): Promise {
+    public function post(CustomAuthenticationExtension $body, ?CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -92,10 +92,10 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a list of the customAuthenticationExtension objects and their properties. The following derived types are supported.
-     * @param CustomAuthenticationExtensionsRequestBuilderGetRequestC_3f961b87|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?CustomAuthenticationExtensionsRequestBuilderGetRequestC_3f961b87 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?CustomAuthenticationExtensionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -114,10 +114,10 @@ class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new customAuthenticationExtension object. The following derived types are currently supported.
      * @param CustomAuthenticationExtension $body The request body
-     * @param CustomAuthenticationExtensionsRequestBuilderPostRequest_86738dab|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(CustomAuthenticationExtension $body, ?CustomAuthenticationExtensionsRequestBuilderPostRequest_86738dab $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(CustomAuthenticationExtension $body, ?CustomAuthenticationExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

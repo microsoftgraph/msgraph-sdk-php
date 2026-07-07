@@ -53,11 +53,11 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
 
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
-     * @param WindowsInformationProtectionPoliciesRequestBuilderGetRe_11f965b8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionPolicyCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?WindowsInformationProtectionPoliciesRequestBuilderGetRe_11f965b8 $requestConfiguration = null): Promise {
+    public function get(?WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
      * @param WindowsInformationProtectionPolicy $body The request body
-     * @param WindowsInformationProtectionPoliciesRequestBuilderPostR_1510c04c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionPolicy|null>
      * @throws Exception
     */
-    public function post(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPoliciesRequestBuilderPostR_1510c04c $requestConfiguration = null): Promise {
+    public function post(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
 
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
-     * @param WindowsInformationProtectionPoliciesRequestBuilderGetRe_11f965b8|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WindowsInformationProtectionPoliciesRequestBuilderGetRe_11f965b8 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
      * @param WindowsInformationProtectionPolicy $body The request body
-     * @param WindowsInformationProtectionPoliciesRequestBuilderPostR_1510c04c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPoliciesRequestBuilderPostR_1510c04c $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

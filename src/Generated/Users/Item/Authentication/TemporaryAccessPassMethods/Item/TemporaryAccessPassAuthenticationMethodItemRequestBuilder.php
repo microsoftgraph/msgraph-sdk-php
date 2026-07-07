@@ -32,12 +32,12 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
 
     /**
      * Delete a users's temporaryAccessPassAuthenticationMethod object.
-     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuild_2e9ba0e9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?TemporaryAccessPassAuthenticationMethodItemRequestBuild_2e9ba0e9 $requestConfiguration = null): Promise {
+    public function delete(?TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,12 +47,12 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
 
     /**
      * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
-     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuild_c5f795b2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TemporaryAccessPassAuthenticationMethod|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/temporaryaccesspassauthenticationmethod-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?TemporaryAccessPassAuthenticationMethodItemRequestBuild_c5f795b2 $requestConfiguration = null): Promise {
+    public function get(?TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,10 +62,10 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
 
     /**
      * Delete a users's temporaryAccessPassAuthenticationMethod object.
-     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuild_2e9ba0e9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TemporaryAccessPassAuthenticationMethodItemRequestBuild_2e9ba0e9 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TemporaryAccessPassAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -80,10 +80,10 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilder extends BaseRequ
 
     /**
      * Retrieve a user's single temporaryAccessPassAuthenticationMethod object.
-     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuild_c5f795b2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?TemporaryAccessPassAuthenticationMethodItemRequestBuild_c5f795b2 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

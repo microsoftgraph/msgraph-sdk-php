@@ -56,11 +56,11 @@ class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends BaseRe
 
     /**
      * Get the item of type microsoft.graph.authenticationEventsFlow as microsoft.graph.externalUsersSelfServiceSignUpEventsFlow
-     * @param GraphExternalUsersSelfServiceSignUpEventsFlowRequestBui_cd19276a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalUsersSelfServiceSignUpEventsFlow|null>
      * @throws Exception
     */
-    public function get(?GraphExternalUsersSelfServiceSignUpEventsFlowRequestBui_cd19276a $requestConfiguration = null): Promise {
+    public function get(?GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,10 +70,10 @@ class GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilder extends BaseRe
 
     /**
      * Get the item of type microsoft.graph.authenticationEventsFlow as microsoft.graph.externalUsersSelfServiceSignUpEventsFlow
-     * @param GraphExternalUsersSelfServiceSignUpEventsFlowRequestBui_cd19276a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GraphExternalUsersSelfServiceSignUpEventsFlowRequestBui_cd19276a $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GraphExternalUsersSelfServiceSignUpEventsFlowRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

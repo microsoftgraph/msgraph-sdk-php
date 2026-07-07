@@ -56,11 +56,11 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharePointProtectionPolicies for solutions
-     * @param SharePointProtectionPolicyItemRequestBuilderDeleteReque_91c0af0d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?SharePointProtectionPolicyItemRequestBuilderDeleteReque_91c0af0d $requestConfiguration = null): Promise {
+    public function delete(?SharePointProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of SharePoint protection policies in the tenant.
-     * @param SharePointProtectionPolicyItemRequestBuilderGetRequestC_1ddc7617|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointProtectionPolicy|null>
      * @throws Exception
     */
-    public function get(?SharePointProtectionPolicyItemRequestBuilderGetRequestC_1ddc7617 $requestConfiguration = null): Promise {
+    public function get(?SharePointProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,12 +85,12 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
      * @param SharePointProtectionPolicy $body The request body
-     * @param SharePointProtectionPolicyItemRequestBuilderPatchReques_3a0e92c6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointProtectionPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sharepointprotectionpolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(SharePointProtectionPolicy $body, ?SharePointProtectionPolicyItemRequestBuilderPatchReques_3a0e92c6 $requestConfiguration = null): Promise {
+    public function patch(SharePointProtectionPolicy $body, ?SharePointProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -100,10 +100,10 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property sharePointProtectionPolicies for solutions
-     * @param SharePointProtectionPolicyItemRequestBuilderDeleteReque_91c0af0d|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?SharePointProtectionPolicyItemRequestBuilderDeleteReque_91c0af0d $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?SharePointProtectionPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -118,10 +118,10 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of SharePoint protection policies in the tenant.
-     * @param SharePointProtectionPolicyItemRequestBuilderGetRequestC_1ddc7617|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SharePointProtectionPolicyItemRequestBuilderGetRequestC_1ddc7617 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SharePointProtectionPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -140,10 +140,10 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
      * @param SharePointProtectionPolicy $body The request body
-     * @param SharePointProtectionPolicyItemRequestBuilderPatchReques_3a0e92c6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SharePointProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(SharePointProtectionPolicy $body, ?SharePointProtectionPolicyItemRequestBuilderPatchReques_3a0e92c6 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(SharePointProtectionPolicy $body, ?SharePointProtectionPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

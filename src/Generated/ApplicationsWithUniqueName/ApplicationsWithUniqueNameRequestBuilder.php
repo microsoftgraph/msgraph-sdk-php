@@ -35,12 +35,12 @@ class ApplicationsWithUniqueNameRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
-     * @param ApplicationsWithUniqueNameRequestBuilderDeleteRequestCo_b6bdb2ad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ApplicationsWithUniqueNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/application-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ApplicationsWithUniqueNameRequestBuilderDeleteRequestCo_b6bdb2ad $requestConfiguration = null): Promise {
+    public function delete(?ApplicationsWithUniqueNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -66,12 +66,12 @@ class ApplicationsWithUniqueNameRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new application object if it doesn't exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn't exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param Application $body The request body
-     * @param ApplicationsWithUniqueNameRequestBuilderPatchRequestCon_f87d295c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ApplicationsWithUniqueNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Application|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/application-upsert?view=graph-rest-1.0 Find more info here
     */
-    public function patch(Application $body, ?ApplicationsWithUniqueNameRequestBuilderPatchRequestCon_f87d295c $requestConfiguration = null): Promise {
+    public function patch(Application $body, ?ApplicationsWithUniqueNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -81,10 +81,10 @@ class ApplicationsWithUniqueNameRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an application object. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This API can also delete an agentIdentityBlueprint object by its ID.
-     * @param ApplicationsWithUniqueNameRequestBuilderDeleteRequestCo_b6bdb2ad|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ApplicationsWithUniqueNameRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ApplicationsWithUniqueNameRequestBuilderDeleteRequestCo_b6bdb2ad $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ApplicationsWithUniqueNameRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -121,10 +121,10 @@ class ApplicationsWithUniqueNameRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new application object if it doesn't exist, or update the properties of an existing application object. This API can also create an agentIdentityBlueprint object if it doesn't exist, or update properties of an existing agentIdentityBlueprint, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprint.
      * @param Application $body The request body
-     * @param ApplicationsWithUniqueNameRequestBuilderPatchRequestCon_f87d295c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ApplicationsWithUniqueNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(Application $body, ?ApplicationsWithUniqueNameRequestBuilderPatchRequestCon_f87d295c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(Application $body, ?ApplicationsWithUniqueNameRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

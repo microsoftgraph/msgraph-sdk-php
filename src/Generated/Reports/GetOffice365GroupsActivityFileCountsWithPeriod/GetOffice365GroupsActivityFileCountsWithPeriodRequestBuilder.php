@@ -35,12 +35,12 @@ class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extends BaseR
 
     /**
      * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
-     * @param GetOffice365GroupsActivityFileCountsWithPeriodRequestBu_9af29684|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivityfilecounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetOffice365GroupsActivityFileCountsWithPeriodRequestBu_9af29684 $requestConfiguration = null): Promise {
+    public function get(?GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder extends BaseR
 
     /**
      * Get the total number of files and how many of them were active across all group sites associated with a Microsoft 365 group.
-     * @param GetOffice365GroupsActivityFileCountsWithPeriodRequestBu_9af29684|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetOffice365GroupsActivityFileCountsWithPeriodRequestBu_9af29684 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

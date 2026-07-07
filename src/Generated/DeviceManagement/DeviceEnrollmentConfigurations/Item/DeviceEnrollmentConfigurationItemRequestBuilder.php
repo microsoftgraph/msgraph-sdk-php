@@ -56,11 +56,11 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
-     * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRe_5263c575|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceEnrollmentConfigurationItemRequestBuilderDeleteRe_5263c575 $requestConfiguration = null): Promise {
+    public function delete(?DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of device enrollment configurations
-     * @param DeviceEnrollmentConfigurationItemRequestBuilderGetReque_b20a4176|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceEnrollmentConfiguration|null>
      * @throws Exception
     */
-    public function get(?DeviceEnrollmentConfigurationItemRequestBuilderGetReque_b20a4176 $requestConfiguration = null): Promise {
+    public function get(?DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param DeviceEnrollmentConfiguration $body The request body
-     * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchReq_4dc28999|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceEnrollmentConfiguration|null>
      * @throws Exception
     */
-    public function patch(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchReq_4dc28999 $requestConfiguration = null): Promise {
+    public function patch(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property deviceEnrollmentConfigurations for deviceManagement
-     * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRe_5263c575|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceEnrollmentConfigurationItemRequestBuilderDeleteRe_5263c575 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceEnrollmentConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of device enrollment configurations
-     * @param DeviceEnrollmentConfigurationItemRequestBuilderGetReque_b20a4176|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceEnrollmentConfigurationItemRequestBuilderGetReque_b20a4176 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceEnrollmentConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -139,10 +139,10 @@ class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param DeviceEnrollmentConfiguration $body The request body
-     * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchReq_4dc28999|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchReq_4dc28999 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

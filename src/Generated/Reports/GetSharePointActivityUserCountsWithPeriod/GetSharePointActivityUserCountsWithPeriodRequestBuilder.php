@@ -35,12 +35,12 @@ class GetSharePointActivityUserCountsWithPeriodRequestBuilder extends BaseReques
 
     /**
      * Get the trend in the number of active users. A user is considered active if they have executed a file activity (save, sync, modify, or share) or visited a page within the specified time period.
-     * @param GetSharePointActivityUserCountsWithPeriodRequestBuilder_1b7c5bde|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointactivityusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointActivityUserCountsWithPeriodRequestBuilder_1b7c5bde $requestConfiguration = null): Promise {
+    public function get(?GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetSharePointActivityUserCountsWithPeriodRequestBuilder extends BaseReques
 
     /**
      * Get the trend in the number of active users. A user is considered active if they have executed a file activity (save, sync, modify, or share) or visited a page within the specified time period.
-     * @param GetSharePointActivityUserCountsWithPeriodRequestBuilder_1b7c5bde|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointActivityUserCountsWithPeriodRequestBuilder_1b7c5bde $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

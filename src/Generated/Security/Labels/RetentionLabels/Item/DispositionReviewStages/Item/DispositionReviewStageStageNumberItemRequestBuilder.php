@@ -32,11 +32,11 @@ class DispositionReviewStageStageNumberItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property dispositionReviewStages for security
-     * @param DispositionReviewStageStageNumberItemRequestBuilderDele_61ff8616|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DispositionReviewStageStageNumberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DispositionReviewStageStageNumberItemRequestBuilderDele_61ff8616 $requestConfiguration = null): Promise {
+    public function delete(?DispositionReviewStageStageNumberItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DispositionReviewStageStageNumberItemRequestBuilder extends BaseRequestBui
 
     /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
-     * @param DispositionReviewStageStageNumberItemRequestBuilderGetR_30df4f99|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DispositionReviewStageStageNumberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DispositionReviewStage|null>
      * @throws Exception
     */
-    public function get(?DispositionReviewStageStageNumberItemRequestBuilderGetR_30df4f99 $requestConfiguration = null): Promise {
+    public function get(?DispositionReviewStageStageNumberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DispositionReviewStageStageNumberItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property dispositionReviewStages in security
      * @param DispositionReviewStage $body The request body
-     * @param DispositionReviewStageStageNumberItemRequestBuilderPatc_d914968e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DispositionReviewStageStageNumberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DispositionReviewStage|null>
      * @throws Exception
     */
-    public function patch(DispositionReviewStage $body, ?DispositionReviewStageStageNumberItemRequestBuilderPatc_d914968e $requestConfiguration = null): Promise {
+    public function patch(DispositionReviewStage $body, ?DispositionReviewStageStageNumberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DispositionReviewStageStageNumberItemRequestBuilder extends BaseRequestBui
 
     /**
      * Delete navigation property dispositionReviewStages for security
-     * @param DispositionReviewStageStageNumberItemRequestBuilderDele_61ff8616|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DispositionReviewStageStageNumberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DispositionReviewStageStageNumberItemRequestBuilderDele_61ff8616 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DispositionReviewStageStageNumberItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DispositionReviewStageStageNumberItemRequestBuilder extends BaseRequestBui
 
     /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
-     * @param DispositionReviewStageStageNumberItemRequestBuilderGetR_30df4f99|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DispositionReviewStageStageNumberItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DispositionReviewStageStageNumberItemRequestBuilderGetR_30df4f99 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DispositionReviewStageStageNumberItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DispositionReviewStageStageNumberItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property dispositionReviewStages in security
      * @param DispositionReviewStage $body The request body
-     * @param DispositionReviewStageStageNumberItemRequestBuilderPatc_d914968e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DispositionReviewStageStageNumberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DispositionReviewStage $body, ?DispositionReviewStageStageNumberItemRequestBuilderPatc_d914968e $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DispositionReviewStage $body, ?DispositionReviewStageStageNumberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

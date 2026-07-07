@@ -35,12 +35,12 @@ class GetMailboxUsageDetailWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get details about mailbox usage.
-     * @param GetMailboxUsageDetailWithPeriodRequestBuilderGetRequest_1dcb63cc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetMailboxUsageDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getmailboxusagedetail?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetMailboxUsageDetailWithPeriodRequestBuilderGetRequest_1dcb63cc $requestConfiguration = null): Promise {
+    public function get(?GetMailboxUsageDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetMailboxUsageDetailWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get details about mailbox usage.
-     * @param GetMailboxUsageDetailWithPeriodRequestBuilderGetRequest_1dcb63cc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetMailboxUsageDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetMailboxUsageDetailWithPeriodRequestBuilderGetRequest_1dcb63cc $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetMailboxUsageDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

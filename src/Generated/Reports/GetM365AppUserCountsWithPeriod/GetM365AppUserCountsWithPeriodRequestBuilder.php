@@ -35,12 +35,12 @@ class GetM365AppUserCountsWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a report that provides the trend in the number of active users for each app (Outlook, Word, Excel, PowerPoint, OneNote, and Teams) in your organization.
-     * @param GetM365AppUserCountsWithPeriodRequestBuilderGetRequestC_61d39af9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getm365appusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetM365AppUserCountsWithPeriodRequestBuilderGetRequestC_61d39af9 $requestConfiguration = null): Promise {
+    public function get(?GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetM365AppUserCountsWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a report that provides the trend in the number of active users for each app (Outlook, Word, Excel, PowerPoint, OneNote, and Teams) in your organization.
-     * @param GetM365AppUserCountsWithPeriodRequestBuilderGetRequestC_61d39af9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetM365AppUserCountsWithPeriodRequestBuilderGetRequestC_61d39af9 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetM365AppUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

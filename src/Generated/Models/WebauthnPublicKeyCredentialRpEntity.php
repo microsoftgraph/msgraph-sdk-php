@@ -69,7 +69,7 @@ class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the id property value. The relying party identifier. For web applications, this value is typically the domain name.
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -81,7 +81,7 @@ class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the name property value. The human-readable name for the relying party.
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -132,7 +132,7 @@ class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the id property value. The relying party identifier. For web applications, this value is typically the domain name.
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -140,7 +140,7 @@ class WebauthnPublicKeyCredentialRpEntity implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the name property value. The human-readable name for the relying party.
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

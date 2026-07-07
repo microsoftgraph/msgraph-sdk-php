@@ -31,11 +31,11 @@ class SyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Syncs Intune account with Microsoft Store For Business
-     * @param SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequ_44b88b80|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(?SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequ_44b88b80 $requestConfiguration = null): Promise {
+    public function post(?SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -45,10 +45,10 @@ class SyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Syncs Intune account with Microsoft Store For Business
-     * @param SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequ_44b88b80|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequ_44b88b80 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?SyncMicrosoftStoreForBusinessAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

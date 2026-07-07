@@ -24,7 +24,6 @@ class EndBreakPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
-        $this->setIsAtApprovedLocation(false);
     }
 
     /**

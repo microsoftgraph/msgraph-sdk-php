@@ -78,7 +78,7 @@ class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the id property value. The credential ID of the credential being described. This value is Base64URL-encoded without padding.
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -102,7 +102,7 @@ class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the transports property value. A hint about the types of transport that the authenticator supports. Possible values include: usb, nfc, ble, internal.
+     * Gets the transports property value. The transports property
      * @return array<string>|null
     */
     public function getTransports(): ?array {
@@ -116,7 +116,7 @@ class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the type property value. The type of credential. Currently, the only supported value is public-key.
+     * Gets the type property value. The type property
      * @return string|null
     */
     public function getType(): ?string {
@@ -156,7 +156,7 @@ class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the id property value. The credential ID of the credential being described. This value is Base64URL-encoded without padding.
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -172,7 +172,7 @@ class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the transports property value. A hint about the types of transport that the authenticator supports. Possible values include: usb, nfc, ble, internal.
+     * Sets the transports property value. The transports property
      * @param array<string>|null $value Value to set for the transports property.
     */
     public function setTransports(?array $value): void {
@@ -180,7 +180,7 @@ class WebauthnPublicKeyCredentialDescriptor implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the type property value. The type of credential. Currently, the only supported value is public-key.
+     * Sets the type property value. The type property
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

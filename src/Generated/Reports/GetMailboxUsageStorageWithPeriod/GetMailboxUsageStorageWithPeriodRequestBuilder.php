@@ -35,12 +35,12 @@ class GetMailboxUsageStorageWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the amount of storage used in your organization.
-     * @param GetMailboxUsageStorageWithPeriodRequestBuilderGetReques_67dae145|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetMailboxUsageStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getmailboxusagestorage?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetMailboxUsageStorageWithPeriodRequestBuilderGetReques_67dae145 $requestConfiguration = null): Promise {
+    public function get(?GetMailboxUsageStorageWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetMailboxUsageStorageWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get the amount of storage used in your organization.
-     * @param GetMailboxUsageStorageWithPeriodRequestBuilderGetReques_67dae145|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetMailboxUsageStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetMailboxUsageStorageWithPeriodRequestBuilderGetReques_67dae145 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetMailboxUsageStorageWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

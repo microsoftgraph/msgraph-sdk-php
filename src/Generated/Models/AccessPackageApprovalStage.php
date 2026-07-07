@@ -57,18 +57,6 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the approverInformationVisibility property value. The approverInformationVisibility property
-     * @return ApproverInformationVisibility|null
-    */
-    public function getApproverInformationVisibility(): ?ApproverInformationVisibility {
-        $val = $this->getBackingStore()->get('approverInformationVisibility');
-        if (is_null($val) || $val instanceof ApproverInformationVisibility) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'approverInformationVisibility'");
-    }
-
-    /**
      * Gets the BackingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -101,7 +89,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who are asked to approve requests.
+     * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      * @return array<SubjectSet>|null
     */
     public function getEscalationApprovers(): ?array {
@@ -149,7 +137,6 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'approverInformationVisibility' => fn(ParseNode $n) => $o->setApproverInformationVisibility($n->getEnumValue(ApproverInformationVisibility::class)),
             'durationBeforeAutomaticDenial' => fn(ParseNode $n) => $o->setDurationBeforeAutomaticDenial($n->getDateIntervalValue()),
             'durationBeforeEscalation' => fn(ParseNode $n) => $o->setDurationBeforeEscalation($n->getDateIntervalValue()),
             'escalationApprovers' => fn(ParseNode $n) => $o->setEscalationApprovers($n->getCollectionOfObjectValues([SubjectSet::class, 'createFromDiscriminatorValue'])),
@@ -199,7 +186,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the primaryApprovers property value. The subjects, typically users, who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
+     * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @return array<SubjectSet>|null
     */
     public function getPrimaryApprovers(): ?array {
@@ -217,7 +204,6 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        $writer->writeEnumValue('approverInformationVisibility', $this->getApproverInformationVisibility());
         $writer->writeDateIntervalValue('durationBeforeAutomaticDenial', $this->getDurationBeforeAutomaticDenial());
         $writer->writeDateIntervalValue('durationBeforeEscalation', $this->getDurationBeforeEscalation());
         $writer->writeCollectionOfObjectValues('escalationApprovers', $this->getEscalationApprovers());
@@ -236,14 +222,6 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
-    }
-
-    /**
-     * Sets the approverInformationVisibility property value. The approverInformationVisibility property
-     * @param ApproverInformationVisibility|null $value Value to set for the approverInformationVisibility property.
-    */
-    public function setApproverInformationVisibility(?ApproverInformationVisibility $value): void {
-        $this->getBackingStore()->set('approverInformationVisibility', $value);
     }
 
     /**
@@ -271,7 +249,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who are asked to approve requests.
+     * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
      * @param array<SubjectSet>|null $value Value to set for the escalationApprovers property.
     */
     public function setEscalationApprovers(?array $value): void {
@@ -319,7 +297,7 @@ class AccessPackageApprovalStage implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the primaryApprovers property value. The subjects, typically users, who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
+     * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @param array<SubjectSet>|null $value Value to set for the primaryApprovers property.
     */
     public function setPrimaryApprovers(?array $value): void {

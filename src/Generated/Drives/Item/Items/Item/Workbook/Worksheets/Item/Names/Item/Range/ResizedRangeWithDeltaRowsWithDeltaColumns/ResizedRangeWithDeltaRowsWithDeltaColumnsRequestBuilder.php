@@ -37,11 +37,11 @@ class ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder extends BaseReques
 
     /**
      * Invoke function resizedRange
-     * @param ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder_d8bf9ae2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkbookRange|null>
      * @throws Exception
     */
-    public function get(?ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder_d8bf9ae2 $requestConfiguration = null): Promise {
+    public function get(?ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder extends BaseReques
 
     /**
      * Invoke function resizedRange
-     * @param ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder_d8bf9ae2|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilder_d8bf9ae2 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ResizedRangeWithDeltaRowsWithDeltaColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

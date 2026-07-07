@@ -34,11 +34,11 @@ class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRequestBu
 
     /**
      * Invoke function supportedTimeZones
-     * @param SupportedTimeZonesWithTimeZoneStandardRequestBuilderGet_ee9fb0f6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SupportedTimeZonesWithTimeZoneStandardGetResponse|null>
      * @throws Exception
     */
-    public function get(?SupportedTimeZonesWithTimeZoneStandardRequestBuilderGet_ee9fb0f6 $requestConfiguration = null): Promise {
+    public function get(?SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class SupportedTimeZonesWithTimeZoneStandardRequestBuilder extends BaseRequestBu
 
     /**
      * Invoke function supportedTimeZones
-     * @param SupportedTimeZonesWithTimeZoneStandardRequestBuilderGet_ee9fb0f6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?SupportedTimeZonesWithTimeZoneStandardRequestBuilderGet_ee9fb0f6 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?SupportedTimeZonesWithTimeZoneStandardRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

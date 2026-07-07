@@ -35,12 +35,12 @@ class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends BaseRequ
 
     /**
      * Given a tenant ID, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant cross-tenant access settings between you and the tenant.
-     * @param FindTenantInformationByTenantIdWithTenantIdRequestBuild_bc9c3231|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FindTenantInformationByTenantIdWithTenantIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantInformation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/tenantrelationship-findtenantinformationbytenantid?view=graph-rest-1.0 Find more info here
     */
-    public function get(?FindTenantInformationByTenantIdWithTenantIdRequestBuild_bc9c3231 $requestConfiguration = null): Promise {
+    public function get(?FindTenantInformationByTenantIdWithTenantIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class FindTenantInformationByTenantIdWithTenantIdRequestBuilder extends BaseRequ
 
     /**
      * Given a tenant ID, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant cross-tenant access settings between you and the tenant.
-     * @param FindTenantInformationByTenantIdWithTenantIdRequestBuild_bc9c3231|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FindTenantInformationByTenantIdWithTenantIdRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FindTenantInformationByTenantIdWithTenantIdRequestBuild_bc9c3231 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FindTenantInformationByTenantIdWithTenantIdRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

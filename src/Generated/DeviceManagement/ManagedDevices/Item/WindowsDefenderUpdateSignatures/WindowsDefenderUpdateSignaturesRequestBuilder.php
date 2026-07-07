@@ -31,11 +31,11 @@ class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Invoke action windowsDefenderUpdateSignatures
-     * @param WindowsDefenderUpdateSignaturesRequestBuilderPostReques_320fae78|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsDefenderUpdateSignaturesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(?WindowsDefenderUpdateSignaturesRequestBuilderPostReques_320fae78 $requestConfiguration = null): Promise {
+    public function post(?WindowsDefenderUpdateSignaturesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -45,10 +45,10 @@ class WindowsDefenderUpdateSignaturesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Invoke action windowsDefenderUpdateSignatures
-     * @param WindowsDefenderUpdateSignaturesRequestBuilderPostReques_320fae78|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsDefenderUpdateSignaturesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?WindowsDefenderUpdateSignaturesRequestBuilderPostReques_320fae78 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?WindowsDefenderUpdateSignaturesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

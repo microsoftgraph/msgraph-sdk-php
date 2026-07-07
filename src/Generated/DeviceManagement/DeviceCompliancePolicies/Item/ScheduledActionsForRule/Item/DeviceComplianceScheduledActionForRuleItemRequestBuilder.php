@@ -40,11 +40,11 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property scheduledActionsForRule for deviceManagement
-     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilde_ebdc3e09|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DeviceComplianceScheduledActionForRuleItemRequestBuilde_ebdc3e09 $requestConfiguration = null): Promise {
+    public function delete(?DeviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -54,11 +54,11 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseReque
 
     /**
      * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
-     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilde_a3fadd2b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceScheduledActionForRule|null>
      * @throws Exception
     */
-    public function get(?DeviceComplianceScheduledActionForRuleItemRequestBuilde_a3fadd2b $requestConfiguration = null): Promise {
+    public function get(?DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,11 +69,11 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property scheduledActionsForRule in deviceManagement
      * @param DeviceComplianceScheduledActionForRule $body The request body
-     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilde_0e5b5c5c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceComplianceScheduledActionForRule|null>
      * @throws Exception
     */
-    public function patch(DeviceComplianceScheduledActionForRule $body, ?DeviceComplianceScheduledActionForRuleItemRequestBuilde_0e5b5c5c $requestConfiguration = null): Promise {
+    public function patch(DeviceComplianceScheduledActionForRule $body, ?DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -83,10 +83,10 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property scheduledActionsForRule for deviceManagement
-     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilde_ebdc3e09|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DeviceComplianceScheduledActionForRuleItemRequestBuilde_ebdc3e09 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DeviceComplianceScheduledActionForRuleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -101,10 +101,10 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseReque
 
     /**
      * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
-     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilde_a3fadd2b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceComplianceScheduledActionForRuleItemRequestBuilde_a3fadd2b $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceComplianceScheduledActionForRuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -123,10 +123,10 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property scheduledActionsForRule in deviceManagement
      * @param DeviceComplianceScheduledActionForRule $body The request body
-     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilde_0e5b5c5c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DeviceComplianceScheduledActionForRule $body, ?DeviceComplianceScheduledActionForRuleItemRequestBuilde_0e5b5c5c $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DeviceComplianceScheduledActionForRule $body, ?DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

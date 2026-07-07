@@ -32,11 +32,11 @@ class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userAssignments for admin
-     * @param TeamsPolicyUserAssignmentItemRequestBuilderDeleteReques_3c5cd3d0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsPolicyUserAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?TeamsPolicyUserAssignmentItemRequestBuilderDeleteReques_3c5cd3d0 $requestConfiguration = null): Promise {
+    public function delete(?TeamsPolicyUserAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of user policy assignments.
-     * @param TeamsPolicyUserAssignmentItemRequestBuilderGetRequestCo_ed287caa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsPolicyUserAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsPolicyUserAssignment|null>
      * @throws Exception
     */
-    public function get(?TeamsPolicyUserAssignmentItemRequestBuilderGetRequestCo_ed287caa $requestConfiguration = null): Promise {
+    public function get(?TeamsPolicyUserAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userAssignments in admin
      * @param TeamsPolicyUserAssignment $body The request body
-     * @param TeamsPolicyUserAssignmentItemRequestBuilderPatchRequest_9d09fb27|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsPolicyUserAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TeamsPolicyUserAssignment|null>
      * @throws Exception
     */
-    public function patch(TeamsPolicyUserAssignment $body, ?TeamsPolicyUserAssignmentItemRequestBuilderPatchRequest_9d09fb27 $requestConfiguration = null): Promise {
+    public function patch(TeamsPolicyUserAssignment $body, ?TeamsPolicyUserAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userAssignments for admin
-     * @param TeamsPolicyUserAssignmentItemRequestBuilderDeleteReques_3c5cd3d0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsPolicyUserAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?TeamsPolicyUserAssignmentItemRequestBuilderDeleteReques_3c5cd3d0 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?TeamsPolicyUserAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The collection of user policy assignments.
-     * @param TeamsPolicyUserAssignmentItemRequestBuilderGetRequestCo_ed287caa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsPolicyUserAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?TeamsPolicyUserAssignmentItemRequestBuilderGetRequestCo_ed287caa $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?TeamsPolicyUserAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userAssignments in admin
      * @param TeamsPolicyUserAssignment $body The request body
-     * @param TeamsPolicyUserAssignmentItemRequestBuilderPatchRequest_9d09fb27|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param TeamsPolicyUserAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(TeamsPolicyUserAssignment $body, ?TeamsPolicyUserAssignmentItemRequestBuilderPatchRequest_9d09fb27 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(TeamsPolicyUserAssignment $body, ?TeamsPolicyUserAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

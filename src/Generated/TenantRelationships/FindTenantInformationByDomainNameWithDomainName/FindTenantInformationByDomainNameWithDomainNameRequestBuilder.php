@@ -35,12 +35,12 @@ class FindTenantInformationByDomainNameWithDomainNameRequestBuilder extends Base
 
     /**
      * Given a domain name, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant access settings between you and the tenant.
-     * @param FindTenantInformationByDomainNameWithDomainNameRequestB_d4ca1a94|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantInformation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/tenantrelationship-findtenantinformationbydomainname?view=graph-rest-1.0 Find more info here
     */
-    public function get(?FindTenantInformationByDomainNameWithDomainNameRequestB_d4ca1a94 $requestConfiguration = null): Promise {
+    public function get(?FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -50,10 +50,10 @@ class FindTenantInformationByDomainNameWithDomainNameRequestBuilder extends Base
 
     /**
      * Given a domain name, search for a tenant and read its tenantInformation. You can use this API to validate tenant information and use the tenantId to configure cross-tenant access settings between you and the tenant.
-     * @param FindTenantInformationByDomainNameWithDomainNameRequestB_d4ca1a94|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?FindTenantInformationByDomainNameWithDomainNameRequestB_d4ca1a94 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?FindTenantInformationByDomainNameWithDomainNameRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

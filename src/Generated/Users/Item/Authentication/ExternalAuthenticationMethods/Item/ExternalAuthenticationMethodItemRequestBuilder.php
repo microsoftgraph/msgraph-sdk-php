@@ -32,12 +32,12 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an externalAuthenticationMethod object. This API doesn't support self-service operations.
-     * @param ExternalAuthenticationMethodItemRequestBuilderDeleteReq_2d98ab75|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/authentication-delete-externalauthenticationmethods?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?ExternalAuthenticationMethodItemRequestBuilderDeleteReq_2d98ab75 $requestConfiguration = null): Promise {
+    public function delete(?ExternalAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the external MFA registered to a user for authentication using an external identity provider.
-     * @param ExternalAuthenticationMethodItemRequestBuilderGetReques_bc17777a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalAuthenticationMethod|null>
      * @throws Exception
     */
-    public function get(?ExternalAuthenticationMethodItemRequestBuilderGetReques_bc17777a $requestConfiguration = null): Promise {
+    public function get(?ExternalAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property externalAuthenticationMethods in users
      * @param ExternalAuthenticationMethod $body The request body
-     * @param ExternalAuthenticationMethodItemRequestBuilderPatchRequ_0a0fa356|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ExternalAuthenticationMethod|null>
      * @throws Exception
     */
-    public function patch(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodItemRequestBuilderPatchRequ_0a0fa356 $requestConfiguration = null): Promise {
+    public function patch(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete an externalAuthenticationMethod object. This API doesn't support self-service operations.
-     * @param ExternalAuthenticationMethodItemRequestBuilderDeleteReq_2d98ab75|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?ExternalAuthenticationMethodItemRequestBuilderDeleteReq_2d98ab75 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?ExternalAuthenticationMethodItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Represents the external MFA registered to a user for authentication using an external identity provider.
-     * @param ExternalAuthenticationMethodItemRequestBuilderGetReques_bc17777a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?ExternalAuthenticationMethodItemRequestBuilderGetReques_bc17777a $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?ExternalAuthenticationMethodItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property externalAuthenticationMethods in users
      * @param ExternalAuthenticationMethod $body The request body
-     * @param ExternalAuthenticationMethodItemRequestBuilderPatchRequ_0a0fa356|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ExternalAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodItemRequestBuilderPatchRequ_0a0fa356 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(ExternalAuthenticationMethod $body, ?ExternalAuthenticationMethodItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

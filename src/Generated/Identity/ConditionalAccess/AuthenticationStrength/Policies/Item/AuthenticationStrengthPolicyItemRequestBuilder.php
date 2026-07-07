@@ -56,11 +56,11 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property policies for identity
-     * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteReq_7d9f39aa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AuthenticationStrengthPolicyItemRequestBuilderDeleteReq_7d9f39aa $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -70,11 +70,11 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @param AuthenticationStrengthPolicyItemRequestBuilderGetReques_40301840|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthPolicy|null>
      * @throws Exception
     */
-    public function get(?AuthenticationStrengthPolicyItemRequestBuilderGetReques_40301840 $requestConfiguration = null): Promise {
+    public function get(?AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -85,11 +85,11 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property policies in identity
      * @param AuthenticationStrengthPolicy $body The request body
-     * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequ_5537f285|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationStrengthPolicy|null>
      * @throws Exception
     */
-    public function patch(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPolicyItemRequestBuilderPatchRequ_5537f285 $requestConfiguration = null): Promise {
+    public function patch(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -99,10 +99,10 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property policies for identity
-     * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteReq_7d9f39aa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationStrengthPolicyItemRequestBuilderDeleteReq_7d9f39aa $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -117,10 +117,10 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @param AuthenticationStrengthPolicyItemRequestBuilderGetReques_40301840|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationStrengthPolicyItemRequestBuilderGetReques_40301840 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -139,10 +139,10 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property policies in identity
      * @param AuthenticationStrengthPolicy $body The request body
-     * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequ_5537f285|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPolicyItemRequestBuilderPatchRequ_5537f285 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

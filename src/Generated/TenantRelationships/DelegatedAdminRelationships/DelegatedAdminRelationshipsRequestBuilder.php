@@ -69,12 +69,12 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new delegatedAdminRelationship object.
      * @param DelegatedAdminRelationship $body The request body
-     * @param DelegatedAdminRelationshipsRequestBuilderPostRequestCon_92e93e6a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedAdminRelationship|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/tenantrelationship-post-delegatedadminrelationships?view=graph-rest-1.0 Find more info here
     */
-    public function post(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipsRequestBuilderPostRequestCon_92e93e6a $requestConfiguration = null): Promise {
+    public function post(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -106,10 +106,10 @@ class DelegatedAdminRelationshipsRequestBuilder extends BaseRequestBuilder
     /**
      * Create a new delegatedAdminRelationship object.
      * @param DelegatedAdminRelationship $body The request body
-     * @param DelegatedAdminRelationshipsRequestBuilderPostRequestCon_92e93e6a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipsRequestBuilderPostRequestCon_92e93e6a $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DelegatedAdminRelationship $body, ?DelegatedAdminRelationshipsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

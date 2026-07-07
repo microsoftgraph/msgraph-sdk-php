@@ -32,11 +32,11 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property combinationConfigurations for policies
-     * @param AuthenticationCombinationConfigurationItemRequestBuilde_29d3a8bf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?AuthenticationCombinationConfigurationItemRequestBuilde_29d3a8bf $requestConfiguration = null): Promise {
+    public function delete(?AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
 
     /**
      * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
-     * @param AuthenticationCombinationConfigurationItemRequestBuilde_8017c223|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationCombinationConfiguration|null>
      * @throws Exception
     */
-    public function get(?AuthenticationCombinationConfigurationItemRequestBuilde_8017c223 $requestConfiguration = null): Promise {
+    public function get(?AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property combinationConfigurations in policies
      * @param AuthenticationCombinationConfiguration $body The request body
-     * @param AuthenticationCombinationConfigurationItemRequestBuilde_9496bdfa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationCombinationConfiguration|null>
      * @throws Exception
     */
-    public function patch(AuthenticationCombinationConfiguration $body, ?AuthenticationCombinationConfigurationItemRequestBuilde_9496bdfa $requestConfiguration = null): Promise {
+    public function patch(AuthenticationCombinationConfiguration $body, ?AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
 
     /**
      * Delete navigation property combinationConfigurations for policies
-     * @param AuthenticationCombinationConfigurationItemRequestBuilde_29d3a8bf|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?AuthenticationCombinationConfigurationItemRequestBuilde_29d3a8bf $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?AuthenticationCombinationConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
 
     /**
      * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
-     * @param AuthenticationCombinationConfigurationItemRequestBuilde_8017c223|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?AuthenticationCombinationConfigurationItemRequestBuilde_8017c223 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?AuthenticationCombinationConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class AuthenticationCombinationConfigurationItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property combinationConfigurations in policies
      * @param AuthenticationCombinationConfiguration $body The request body
-     * @param AuthenticationCombinationConfigurationItemRequestBuilde_9496bdfa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(AuthenticationCombinationConfiguration $body, ?AuthenticationCombinationConfigurationItemRequestBuilde_9496bdfa $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(AuthenticationCombinationConfiguration $body, ?AuthenticationCombinationConfigurationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

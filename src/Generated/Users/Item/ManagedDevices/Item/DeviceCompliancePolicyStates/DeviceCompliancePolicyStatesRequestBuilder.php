@@ -53,11 +53,11 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Device compliance policy states for this device.
-     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyStateCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb $requestConfiguration = null): Promise {
+    public function get(?DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to deviceCompliancePolicyStates for users
      * @param DeviceCompliancePolicyState $body The request body
-     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceCompliancePolicyState|null>
      * @throws Exception
     */
-    public function post(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1 $requestConfiguration = null): Promise {
+    public function post(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Device compliance policy states for this device.
-     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DeviceCompliancePolicyStatesRequestBuilderGetRequestCon_d1ddd7bb $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DeviceCompliancePolicyStatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class DeviceCompliancePolicyStatesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to deviceCompliancePolicyStates for users
      * @param DeviceCompliancePolicyState $body The request body
-     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestCo_17a3c8b1 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DeviceCompliancePolicyState $body, ?DeviceCompliancePolicyStatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

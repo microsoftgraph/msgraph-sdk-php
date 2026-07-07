@@ -32,11 +32,11 @@ class EngagementConversationMessageReactionItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property reactions for communications
-     * @param EngagementConversationMessageReactionItemRequestBuilder_0354f9e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementConversationMessageReactionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?EngagementConversationMessageReactionItemRequestBuilder_0354f9e0 $requestConfiguration = null): Promise {
+    public function delete(?EngagementConversationMessageReactionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class EngagementConversationMessageReactionItemRequestBuilder extends BaseReques
 
     /**
      * A collection of reactions (such as like and smile) that users have applied to this message.
-     * @param EngagementConversationMessageReactionItemRequestBuilder_bc16aa40|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementConversationMessageReactionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EngagementConversationMessageReaction|null>
      * @throws Exception
     */
-    public function get(?EngagementConversationMessageReactionItemRequestBuilder_bc16aa40 $requestConfiguration = null): Promise {
+    public function get(?EngagementConversationMessageReactionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class EngagementConversationMessageReactionItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property reactions in communications
      * @param EngagementConversationMessageReaction $body The request body
-     * @param EngagementConversationMessageReactionItemRequestBuilder_758648b3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementConversationMessageReactionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EngagementConversationMessageReaction|null>
      * @throws Exception
     */
-    public function patch(EngagementConversationMessageReaction $body, ?EngagementConversationMessageReactionItemRequestBuilder_758648b3 $requestConfiguration = null): Promise {
+    public function patch(EngagementConversationMessageReaction $body, ?EngagementConversationMessageReactionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class EngagementConversationMessageReactionItemRequestBuilder extends BaseReques
 
     /**
      * Delete navigation property reactions for communications
-     * @param EngagementConversationMessageReactionItemRequestBuilder_0354f9e0|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementConversationMessageReactionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?EngagementConversationMessageReactionItemRequestBuilder_0354f9e0 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?EngagementConversationMessageReactionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class EngagementConversationMessageReactionItemRequestBuilder extends BaseReques
 
     /**
      * A collection of reactions (such as like and smile) that users have applied to this message.
-     * @param EngagementConversationMessageReactionItemRequestBuilder_bc16aa40|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementConversationMessageReactionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?EngagementConversationMessageReactionItemRequestBuilder_bc16aa40 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?EngagementConversationMessageReactionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class EngagementConversationMessageReactionItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property reactions in communications
      * @param EngagementConversationMessageReaction $body The request body
-     * @param EngagementConversationMessageReactionItemRequestBuilder_758648b3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param EngagementConversationMessageReactionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(EngagementConversationMessageReaction $body, ?EngagementConversationMessageReactionItemRequestBuilder_758648b3 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(EngagementConversationMessageReaction $body, ?EngagementConversationMessageReactionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

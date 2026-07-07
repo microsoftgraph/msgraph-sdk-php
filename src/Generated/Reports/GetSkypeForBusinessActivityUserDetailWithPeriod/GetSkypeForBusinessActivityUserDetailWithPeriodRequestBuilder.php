@@ -35,11 +35,11 @@ class GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder extends Base
 
     /**
      * Invoke function getSkypeForBusinessActivityUserDetail
-     * @param GetSkypeForBusinessActivityUserDetailWithPeriodRequestB_a77aa6da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function get(?GetSkypeForBusinessActivityUserDetailWithPeriodRequestB_a77aa6da $requestConfiguration = null): Promise {
+    public function get(?GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder extends Base
 
     /**
      * Invoke function getSkypeForBusinessActivityUserDetail
-     * @param GetSkypeForBusinessActivityUserDetailWithPeriodRequestB_a77aa6da|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSkypeForBusinessActivityUserDetailWithPeriodRequestB_a77aa6da $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

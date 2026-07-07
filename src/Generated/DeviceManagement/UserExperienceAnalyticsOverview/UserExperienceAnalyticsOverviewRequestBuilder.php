@@ -32,11 +32,11 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userExperienceAnalyticsOverview for deviceManagement
-     * @param UserExperienceAnalyticsOverviewRequestBuilderDeleteRequ_06a60518|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsOverviewRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?UserExperienceAnalyticsOverviewRequestBuilderDeleteRequ_06a60518 $requestConfiguration = null): Promise {
+    public function delete(?UserExperienceAnalyticsOverviewRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
 
     /**
      * User experience analytics overview
-     * @param UserExperienceAnalyticsOverviewRequestBuilderGetRequest_567170b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsOverview|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsOverviewRequestBuilderGetRequest_567170b1 $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userExperienceAnalyticsOverview in deviceManagement
      * @param UserExperienceAnalyticsOverview $body The request body
-     * @param UserExperienceAnalyticsOverviewRequestBuilderPatchReque_016a03d5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsOverview|null>
      * @throws Exception
     */
-    public function patch(UserExperienceAnalyticsOverview $body, ?UserExperienceAnalyticsOverviewRequestBuilderPatchReque_016a03d5 $requestConfiguration = null): Promise {
+    public function patch(UserExperienceAnalyticsOverview $body, ?UserExperienceAnalyticsOverviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property userExperienceAnalyticsOverview for deviceManagement
-     * @param UserExperienceAnalyticsOverviewRequestBuilderDeleteRequ_06a60518|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsOverviewRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserExperienceAnalyticsOverviewRequestBuilderDeleteRequ_06a60518 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserExperienceAnalyticsOverviewRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
 
     /**
      * User experience analytics overview
-     * @param UserExperienceAnalyticsOverviewRequestBuilderGetRequest_567170b1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsOverviewRequestBuilderGetRequest_567170b1 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsOverviewRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property userExperienceAnalyticsOverview in deviceManagement
      * @param UserExperienceAnalyticsOverview $body The request body
-     * @param UserExperienceAnalyticsOverviewRequestBuilderPatchReque_016a03d5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserExperienceAnalyticsOverview $body, ?UserExperienceAnalyticsOverviewRequestBuilderPatchReque_016a03d5 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserExperienceAnalyticsOverview $body, ?UserExperienceAnalyticsOverviewRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

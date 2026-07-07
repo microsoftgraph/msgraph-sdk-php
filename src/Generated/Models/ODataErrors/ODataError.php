@@ -22,6 +22,7 @@ class ODataError extends ApiException implements AdditionalDataHolder, BackedMod
      * Instantiates a new ODataError and sets the default values.
     */
     public function __construct() {
+        parent::__construct();
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
     }

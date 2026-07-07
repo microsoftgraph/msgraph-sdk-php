@@ -31,12 +31,12 @@ class MicrosoftGraphSecurityResetToDefaultRequestBuilder extends BaseRequestBuil
 
     /**
      * Reset a caseSettings object to the default values.
-     * @param MicrosoftGraphSecurityResetToDefaultRequestBuilderPostR_3cb7e0b7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityResetToDefaultRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/security-ediscoverycasesettings-resettodefault?view=graph-rest-1.0 Find more info here
     */
-    public function post(?MicrosoftGraphSecurityResetToDefaultRequestBuilderPostR_3cb7e0b7 $requestConfiguration = null): Promise {
+    public function post(?MicrosoftGraphSecurityResetToDefaultRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class MicrosoftGraphSecurityResetToDefaultRequestBuilder extends BaseRequestBuil
 
     /**
      * Reset a caseSettings object to the default values.
-     * @param MicrosoftGraphSecurityResetToDefaultRequestBuilderPostR_3cb7e0b7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphSecurityResetToDefaultRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(?MicrosoftGraphSecurityResetToDefaultRequestBuilderPostR_3cb7e0b7 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(?MicrosoftGraphSecurityResetToDefaultRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

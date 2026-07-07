@@ -35,12 +35,12 @@ class GetOneDriveUsageFileCountsWithPeriodRequestBuilder extends BaseRequestBuil
 
     /**
      * Get the total number of files across all sites and how many are active files. A file is considered active if it has been saved, synced, modified, or shared within the specified time period.
-     * @param GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRe_1e88a17e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getonedriveusagefilecounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRe_1e88a17e $requestConfiguration = null): Promise {
+    public function get(?GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetOneDriveUsageFileCountsWithPeriodRequestBuilder extends BaseRequestBuil
 
     /**
      * Get the total number of files across all sites and how many are active files. A file is considered active if it has been saved, synced, modified, or shared within the specified time period.
-     * @param GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRe_1e88a17e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRe_1e88a17e $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetOneDriveUsageFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

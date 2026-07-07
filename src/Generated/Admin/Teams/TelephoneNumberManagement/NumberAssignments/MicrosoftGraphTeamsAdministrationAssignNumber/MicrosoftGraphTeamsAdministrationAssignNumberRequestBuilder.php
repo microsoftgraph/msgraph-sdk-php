@@ -32,12 +32,12 @@ class MicrosoftGraphTeamsAdministrationAssignNumberRequestBuilder extends BaseRe
     /**
      * Creates an asynchronous order to assign a telephone number to a user account.
      * @param AssignNumberPostRequestBody $body The request body
-     * @param MicrosoftGraphTeamsAdministrationAssignNumberRequestBui_8d56c8d3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphTeamsAdministrationAssignNumberRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/teamsadministration-numberassignment-assignnumber?view=graph-rest-1.0 Find more info here
     */
-    public function post(AssignNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationAssignNumberRequestBui_8d56c8d3 $requestConfiguration = null): Promise {
+    public function post(AssignNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationAssignNumberRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphTeamsAdministrationAssignNumberRequestBuilder extends BaseRe
     /**
      * Creates an asynchronous order to assign a telephone number to a user account.
      * @param AssignNumberPostRequestBody $body The request body
-     * @param MicrosoftGraphTeamsAdministrationAssignNumberRequestBui_8d56c8d3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphTeamsAdministrationAssignNumberRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(AssignNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationAssignNumberRequestBui_8d56c8d3 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(AssignNumberPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationAssignNumberRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -53,12 +53,12 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
 
     /**
      * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
-     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_3b599f21|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequestCollectionResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-list-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
-    public function get(?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_3b599f21 $requestConfiguration = null): Promise {
+    public function get(?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -69,12 +69,12 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
     /**
      * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param DriveRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_34cb7824|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveRestoreArtifactsBulkAdditionRequest|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-post-driverestoreartifactsbulkadditionrequests?view=graph-rest-1.0 Find more info here
     */
-    public function post(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_34cb7824 $requestConfiguration = null): Promise {
+    public function post(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -84,10 +84,10 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
 
     /**
      * Get a list of the driveRestoreArtifactsBulkAdditionRequest objects associated with a oneDriveForBusinessRestoreSession. The drives property is deliberately omitted from the response body in order to limit the response size.
-     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_3b599f21|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_3b599f21 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -106,10 +106,10 @@ class DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder extends BaseReques
     /**
      * Create a driveRestoreArtifactsBulkAdditionRequest object associated with a oneDriveForBusinessRestoreSession. The following steps describe how to create and manage a oneDriveForBusinessRestoreSession with bulk artifact additions.
      * @param DriveRestoreArtifactsBulkAdditionRequest $body The request body
-     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_34cb7824|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder_34cb7824 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DriveRestoreArtifactsBulkAdditionRequest $body, ?DriveRestoreArtifactsBulkAdditionRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

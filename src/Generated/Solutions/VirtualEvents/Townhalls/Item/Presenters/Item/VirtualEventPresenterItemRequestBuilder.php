@@ -32,12 +32,12 @@ class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event types are:- virtualEventTownhall- virtualEventWebinar
-     * @param VirtualEventPresenterItemRequestBuilderDeleteRequestCon_14516747|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventPresenterItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualeventpresenter-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?VirtualEventPresenterItemRequestBuilderDeleteRequestCon_14516747 $requestConfiguration = null): Promise {
+    public function delete(?VirtualEventPresenterItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -77,10 +77,10 @@ class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a virtualEventPresenter from a virtual event. Currently the supported virtual event types are:- virtualEventTownhall- virtualEventWebinar
-     * @param VirtualEventPresenterItemRequestBuilderDeleteRequestCon_14516747|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param VirtualEventPresenterItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?VirtualEventPresenterItemRequestBuilderDeleteRequestCon_14516747 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?VirtualEventPresenterItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

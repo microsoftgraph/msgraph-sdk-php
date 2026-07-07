@@ -32,12 +32,12 @@ class SendVirtualAppointmentReminderSmsRequestBuilder extends BaseRequestBuilder
     /**
      * Send an SMS reminder to external attendees for a Teams virtual appointment. This feature requires Teams premium and attendees must have a valid United States phone number to receive SMS notifications.
      * @param SendVirtualAppointmentReminderSmsPostRequestBody $body The request body
-     * @param SendVirtualAppointmentReminderSmsRequestBuilderPostRequ_95e10729|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SendVirtualAppointmentReminderSmsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/virtualappointment-sendvirtualappointmentremindersms?view=graph-rest-1.0 Find more info here
     */
-    public function post(SendVirtualAppointmentReminderSmsPostRequestBody $body, ?SendVirtualAppointmentReminderSmsRequestBuilderPostRequ_95e10729 $requestConfiguration = null): Promise {
+    public function post(SendVirtualAppointmentReminderSmsPostRequestBody $body, ?SendVirtualAppointmentReminderSmsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class SendVirtualAppointmentReminderSmsRequestBuilder extends BaseRequestBuilder
     /**
      * Send an SMS reminder to external attendees for a Teams virtual appointment. This feature requires Teams premium and attendees must have a valid United States phone number to receive SMS notifications.
      * @param SendVirtualAppointmentReminderSmsPostRequestBody $body The request body
-     * @param SendVirtualAppointmentReminderSmsRequestBuilderPostRequ_95e10729|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param SendVirtualAppointmentReminderSmsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(SendVirtualAppointmentReminderSmsPostRequestBody $body, ?SendVirtualAppointmentReminderSmsRequestBuilderPostRequ_95e10729 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(SendVirtualAppointmentReminderSmsPostRequestBody $body, ?SendVirtualAppointmentReminderSmsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

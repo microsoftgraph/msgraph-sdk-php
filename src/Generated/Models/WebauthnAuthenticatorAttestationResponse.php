@@ -48,7 +48,7 @@ class WebauthnAuthenticatorAttestationResponse implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the attestationObject property value. A CBOR-encoded attestation object containing the authenticator data and attestation statement. This value is Base64URL-encoded without padding.
+     * Gets the attestationObject property value. The attestationObject property
      * @return string|null
     */
     public function getAttestationObject(): ?string {
@@ -68,7 +68,7 @@ class WebauthnAuthenticatorAttestationResponse implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the clientDataJSON property value. Contains the JSON-compatible serialization of client data passed to the authenticator by the client. This value is Base64URL-encoded without padding.
+     * Gets the clientDataJSON property value. The clientDataJSON property
      * @return string|null
     */
     public function getClientDataJSON(): ?string {
@@ -124,7 +124,7 @@ class WebauthnAuthenticatorAttestationResponse implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the attestationObject property value. A CBOR-encoded attestation object containing the authenticator data and attestation statement. This value is Base64URL-encoded without padding.
+     * Sets the attestationObject property value. The attestationObject property
      * @param string|null $value Value to set for the attestationObject property.
     */
     public function setAttestationObject(?string $value): void {
@@ -140,7 +140,7 @@ class WebauthnAuthenticatorAttestationResponse implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the clientDataJSON property value. Contains the JSON-compatible serialization of client data passed to the authenticator by the client. This value is Base64URL-encoded without padding.
+     * Sets the clientDataJSON property value. The clientDataJSON property
      * @param string|null $value Value to set for the clientDataJSON property.
     */
     public function setClientDataJSON(?string $value): void {

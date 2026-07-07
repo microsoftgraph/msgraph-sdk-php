@@ -32,11 +32,11 @@ class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder extends B
 
     /**
      * Delete navigation property windowsInformationProtectionAppLearningSummaries for deviceManagement
-     * @param WindowsInformationProtectionAppLearningSummaryItemReque_49a2916c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?WindowsInformationProtectionAppLearningSummaryItemReque_49a2916c $requestConfiguration = null): Promise {
+    public function delete(?WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder extends B
 
     /**
      * The windows information protection app learning summaries.
-     * @param WindowsInformationProtectionAppLearningSummaryItemReque_0e4d0920|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLearningSummary|null>
      * @throws Exception
     */
-    public function get(?WindowsInformationProtectionAppLearningSummaryItemReque_0e4d0920 $requestConfiguration = null): Promise {
+    public function get(?WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder extends B
     /**
      * Update the navigation property windowsInformationProtectionAppLearningSummaries in deviceManagement
      * @param WindowsInformationProtectionAppLearningSummary $body The request body
-     * @param WindowsInformationProtectionAppLearningSummaryItemReque_19458147|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WindowsInformationProtectionAppLearningSummary|null>
      * @throws Exception
     */
-    public function patch(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummaryItemReque_19458147 $requestConfiguration = null): Promise {
+    public function patch(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder extends B
 
     /**
      * Delete navigation property windowsInformationProtectionAppLearningSummaries for deviceManagement
-     * @param WindowsInformationProtectionAppLearningSummaryItemReque_49a2916c|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?WindowsInformationProtectionAppLearningSummaryItemReque_49a2916c $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?WindowsInformationProtectionAppLearningSummaryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder extends B
 
     /**
      * The windows information protection app learning summaries.
-     * @param WindowsInformationProtectionAppLearningSummaryItemReque_0e4d0920|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?WindowsInformationProtectionAppLearningSummaryItemReque_0e4d0920 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?WindowsInformationProtectionAppLearningSummaryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class WindowsInformationProtectionAppLearningSummaryItemRequestBuilder extends B
     /**
      * Update the navigation property windowsInformationProtectionAppLearningSummaries in deviceManagement
      * @param WindowsInformationProtectionAppLearningSummary $body The request body
-     * @param WindowsInformationProtectionAppLearningSummaryItemReque_19458147|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummaryItemReque_19458147 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(WindowsInformationProtectionAppLearningSummary $body, ?WindowsInformationProtectionAppLearningSummaryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

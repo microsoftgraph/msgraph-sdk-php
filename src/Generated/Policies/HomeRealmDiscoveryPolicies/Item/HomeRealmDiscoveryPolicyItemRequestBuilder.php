@@ -40,12 +40,12 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a homeRealmDiscoveryPolicy object.
-     * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequest_9d837301|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-delete?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequest_9d837301 $requestConfiguration = null): Promise {
+    public function delete(?HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -55,12 +55,12 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
-     * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestCon_1fc1894a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HomeRealmDiscoveryPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestCon_1fc1894a $requestConfiguration = null): Promise {
+    public function get(?HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,12 +71,12 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body The request body
-     * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestC_35c73ee5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<HomeRealmDiscoveryPolicy|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/homerealmdiscoverypolicy-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestC_35c73ee5 $requestConfiguration = null): Promise {
+    public function patch(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -86,10 +86,10 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete a homeRealmDiscoveryPolicy object.
-     * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequest_9d837301|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequest_9d837301 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?HomeRealmDiscoveryPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
-     * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestCon_1fc1894a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestCon_1fc1894a $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?HomeRealmDiscoveryPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -126,10 +126,10 @@ class HomeRealmDiscoveryPolicyItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of a homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body The request body
-     * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestC_35c73ee5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestC_35c73ee5 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

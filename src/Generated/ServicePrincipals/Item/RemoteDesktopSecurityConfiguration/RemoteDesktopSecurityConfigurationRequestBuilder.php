@@ -48,12 +48,12 @@ class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete a remoteDesktopSecurityConfiguration object on a servicePrincipal. Removing remoteDesktopSecurityConfiguration object on the servicePrincipal disables the Microsoft Entra ID Remote Desktop Services (RDS) authentication protocol to authenticate a user to Microsoft Entra joined or Microsoft Entra hybrid joined devices, and removes any target device groups that you configured for SSO.
-     * @param RemoteDesktopSecurityConfigurationRequestBuilderDeleteR_eda8b751|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RemoteDesktopSecurityConfigurationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-delete-remotedesktopsecurityconfiguration?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?RemoteDesktopSecurityConfigurationRequestBuilderDeleteR_eda8b751 $requestConfiguration = null): Promise {
+    public function delete(?RemoteDesktopSecurityConfigurationRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -63,12 +63,12 @@ class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilde
 
     /**
      * Read the properties and relationships of a remoteDesktopSecurityConfiguration object on a servicePrincipal. Use this configuration to view the Microsoft Entra ID Remote Desktop Services (RDS) authentication protocol to authenticate a user to Microsoft Entra joined or Microsoft Entra hybrid joined devices. Additionally you can view any targetDeviceGroups that have been configured for SSO.
-     * @param RemoteDesktopSecurityConfigurationRequestBuilderGetRequ_a60cc4ea|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RemoteDesktopSecurityConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RemoteDesktopSecurityConfiguration|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-get?view=graph-rest-1.0 Find more info here
     */
-    public function get(?RemoteDesktopSecurityConfigurationRequestBuilderGetRequ_a60cc4ea $requestConfiguration = null): Promise {
+    public function get(?RemoteDesktopSecurityConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -79,12 +79,12 @@ class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a remoteDesktopSecurityConfiguration object on the servicePrincipal. Use this configuration to enable or disable the Microsoft Entra ID Remote Desktop Services (RDS) authentication protocol to authenticate a user to Microsoft Entra joined or Microsoft Entra hybrid joined devices.
      * @param RemoteDesktopSecurityConfiguration $body The request body
-     * @param RemoteDesktopSecurityConfigurationRequestBuilderPatchRe_ec382ec5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RemoteDesktopSecurityConfigurationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RemoteDesktopSecurityConfiguration|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-update?view=graph-rest-1.0 Find more info here
     */
-    public function patch(RemoteDesktopSecurityConfiguration $body, ?RemoteDesktopSecurityConfigurationRequestBuilderPatchRe_ec382ec5 $requestConfiguration = null): Promise {
+    public function patch(RemoteDesktopSecurityConfiguration $body, ?RemoteDesktopSecurityConfigurationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -94,10 +94,10 @@ class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilde
 
     /**
      * Delete a remoteDesktopSecurityConfiguration object on a servicePrincipal. Removing remoteDesktopSecurityConfiguration object on the servicePrincipal disables the Microsoft Entra ID Remote Desktop Services (RDS) authentication protocol to authenticate a user to Microsoft Entra joined or Microsoft Entra hybrid joined devices, and removes any target device groups that you configured for SSO.
-     * @param RemoteDesktopSecurityConfigurationRequestBuilderDeleteR_eda8b751|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RemoteDesktopSecurityConfigurationRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?RemoteDesktopSecurityConfigurationRequestBuilderDeleteR_eda8b751 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?RemoteDesktopSecurityConfigurationRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -112,10 +112,10 @@ class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilde
 
     /**
      * Read the properties and relationships of a remoteDesktopSecurityConfiguration object on a servicePrincipal. Use this configuration to view the Microsoft Entra ID Remote Desktop Services (RDS) authentication protocol to authenticate a user to Microsoft Entra joined or Microsoft Entra hybrid joined devices. Additionally you can view any targetDeviceGroups that have been configured for SSO.
-     * @param RemoteDesktopSecurityConfigurationRequestBuilderGetRequ_a60cc4ea|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RemoteDesktopSecurityConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?RemoteDesktopSecurityConfigurationRequestBuilderGetRequ_a60cc4ea $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?RemoteDesktopSecurityConfigurationRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -134,10 +134,10 @@ class RemoteDesktopSecurityConfigurationRequestBuilder extends BaseRequestBuilde
     /**
      * Update the properties of a remoteDesktopSecurityConfiguration object on the servicePrincipal. Use this configuration to enable or disable the Microsoft Entra ID Remote Desktop Services (RDS) authentication protocol to authenticate a user to Microsoft Entra joined or Microsoft Entra hybrid joined devices.
      * @param RemoteDesktopSecurityConfiguration $body The request body
-     * @param RemoteDesktopSecurityConfigurationRequestBuilderPatchRe_ec382ec5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param RemoteDesktopSecurityConfigurationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(RemoteDesktopSecurityConfiguration $body, ?RemoteDesktopSecurityConfigurationRequestBuilderPatchRe_ec382ec5 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(RemoteDesktopSecurityConfiguration $body, ?RemoteDesktopSecurityConfigurationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

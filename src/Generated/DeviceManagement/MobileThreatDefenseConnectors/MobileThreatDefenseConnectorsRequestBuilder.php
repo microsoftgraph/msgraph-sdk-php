@@ -53,11 +53,11 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestCo_51485967|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileThreatDefenseConnectorCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?MobileThreatDefenseConnectorsRequestBuilderGetRequestCo_51485967 $requestConfiguration = null): Promise {
+    public function get(?MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param MobileThreatDefenseConnector $body The request body
-     * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestC_541b8d26|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileThreatDefenseConnector|null>
      * @throws Exception
     */
-    public function post(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorsRequestBuilderPostRequestC_541b8d26 $requestConfiguration = null): Promise {
+    public function post(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestCo_51485967|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MobileThreatDefenseConnectorsRequestBuilderGetRequestCo_51485967 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MobileThreatDefenseConnectorsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class MobileThreatDefenseConnectorsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to mobileThreatDefenseConnectors for deviceManagement
      * @param MobileThreatDefenseConnector $body The request body
-     * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestC_541b8d26|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorsRequestBuilderPostRequestC_541b8d26 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

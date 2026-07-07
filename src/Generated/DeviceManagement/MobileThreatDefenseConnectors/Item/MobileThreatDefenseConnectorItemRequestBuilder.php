@@ -32,11 +32,11 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mobileThreatDefenseConnectors for deviceManagement
-     * @param MobileThreatDefenseConnectorItemRequestBuilderDeleteReq_9e6c2bc7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?MobileThreatDefenseConnectorItemRequestBuilderDeleteReq_9e6c2bc7 $requestConfiguration = null): Promise {
+    public function delete(?MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @param MobileThreatDefenseConnectorItemRequestBuilderGetReques_0afc252e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileThreatDefenseConnector|null>
      * @throws Exception
     */
-    public function get(?MobileThreatDefenseConnectorItemRequestBuilderGetReques_0afc252e $requestConfiguration = null): Promise {
+    public function get(?MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
      * @param MobileThreatDefenseConnector $body The request body
-     * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequ_d02a48ac|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MobileThreatDefenseConnector|null>
      * @throws Exception
     */
-    public function patch(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorItemRequestBuilderPatchRequ_d02a48ac $requestConfiguration = null): Promise {
+    public function patch(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Delete navigation property mobileThreatDefenseConnectors for deviceManagement
-     * @param MobileThreatDefenseConnectorItemRequestBuilderDeleteReq_9e6c2bc7|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?MobileThreatDefenseConnectorItemRequestBuilderDeleteReq_9e6c2bc7 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @param MobileThreatDefenseConnectorItemRequestBuilderGetReques_0afc252e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?MobileThreatDefenseConnectorItemRequestBuilderGetReques_0afc252e $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
      * @param MobileThreatDefenseConnector $body The request body
-     * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequ_d02a48ac|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorItemRequestBuilderPatchRequ_d02a48ac $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,12 +32,12 @@ class MicrosoftGraphTeamsAdministrationUnassignRequestBuilder extends BaseReques
     /**
      * Unassign a Teams policy from a user using the user ID and policy type.
      * @param UnassignPostRequestBody $body The request body
-     * @param MicrosoftGraphTeamsAdministrationUnassignRequestBuilder_388b8041|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphTeamsAdministrationUnassignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/teamsadministration-teamspolicyuserassignment-unassign?view=graph-rest-1.0 Find more info here
     */
-    public function post(UnassignPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUnassignRequestBuilder_388b8041 $requestConfiguration = null): Promise {
+    public function post(UnassignPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUnassignRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class MicrosoftGraphTeamsAdministrationUnassignRequestBuilder extends BaseReques
     /**
      * Unassign a Teams policy from a user using the user ID and policy type.
      * @param UnassignPostRequestBody $body The request body
-     * @param MicrosoftGraphTeamsAdministrationUnassignRequestBuilder_388b8041|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param MicrosoftGraphTeamsAdministrationUnassignRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UnassignPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUnassignRequestBuilder_388b8041 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UnassignPostRequestBody $body, ?MicrosoftGraphTeamsAdministrationUnassignRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

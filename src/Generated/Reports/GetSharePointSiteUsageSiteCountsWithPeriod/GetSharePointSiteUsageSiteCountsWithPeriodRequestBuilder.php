@@ -35,12 +35,12 @@ class GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder extends BaseReque
 
     /**
      * Get the trend of total and active site count during the reporting period.
-     * @param GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilde_ed1f03f1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointsiteusagesitecounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilde_ed1f03f1 $requestConfiguration = null): Promise {
+    public function get(?GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder extends BaseReque
 
     /**
      * Get the trend of total and active site count during the reporting period.
-     * @param GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilde_ed1f03f1|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilde_ed1f03f1 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

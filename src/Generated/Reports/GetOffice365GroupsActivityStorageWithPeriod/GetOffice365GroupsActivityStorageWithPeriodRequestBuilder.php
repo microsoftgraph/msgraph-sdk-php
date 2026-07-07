@@ -35,12 +35,12 @@ class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends BaseRequ
 
     /**
      * Get the total storage used across all group mailboxes and group sites.
-     * @param GetOffice365GroupsActivityStorageWithPeriodRequestBuild_bc8bc7fa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getoffice365groupsactivitystorage?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetOffice365GroupsActivityStorageWithPeriodRequestBuild_bc8bc7fa $requestConfiguration = null): Promise {
+    public function get(?GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends BaseRequ
 
     /**
      * Get the total storage used across all group mailboxes and group sites.
-     * @param GetOffice365GroupsActivityStorageWithPeriodRequestBuild_bc8bc7fa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetOffice365GroupsActivityStorageWithPeriodRequestBuild_bc8bc7fa $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetOffice365GroupsActivityStorageWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

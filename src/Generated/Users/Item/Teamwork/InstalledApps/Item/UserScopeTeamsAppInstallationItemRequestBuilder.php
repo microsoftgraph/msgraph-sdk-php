@@ -56,12 +56,12 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Uninstall an app from the personal scope of the specified user.
-     * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRe_0a1b7ac6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRe_0a1b7ac6 $requestConfiguration = null): Promise {
+    public function delete(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -71,12 +71,12 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the app installed in the personal scope of the specified user.
-     * @param UserScopeTeamsAppInstallationItemRequestBuilderGetReque_25beaebc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserScopeTeamsAppInstallation|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0 Find more info here
     */
-    public function get(?UserScopeTeamsAppInstallationItemRequestBuilderGetReque_25beaebc $requestConfiguration = null): Promise {
+    public function get(?UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -87,11 +87,11 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property installedApps in users
      * @param UserScopeTeamsAppInstallation $body The request body
-     * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchReq_9a8c427a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserScopeTeamsAppInstallation|null>
      * @throws Exception
     */
-    public function patch(UserScopeTeamsAppInstallation $body, ?UserScopeTeamsAppInstallationItemRequestBuilderPatchReq_9a8c427a $requestConfiguration = null): Promise {
+    public function patch(UserScopeTeamsAppInstallation $body, ?UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -101,10 +101,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Uninstall an app from the personal scope of the specified user.
-     * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRe_0a1b7ac6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRe_0a1b7ac6 $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -119,10 +119,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve the app installed in the personal scope of the specified user.
-     * @param UserScopeTeamsAppInstallationItemRequestBuilderGetReque_25beaebc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserScopeTeamsAppInstallationItemRequestBuilderGetReque_25beaebc $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -141,10 +141,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property installedApps in users
      * @param UserScopeTeamsAppInstallation $body The request body
-     * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchReq_9a8c427a|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(UserScopeTeamsAppInstallation $body, ?UserScopeTeamsAppInstallationItemRequestBuilderPatchReq_9a8c427a $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(UserScopeTeamsAppInstallation $body, ?UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

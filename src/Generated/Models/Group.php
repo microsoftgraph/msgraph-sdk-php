@@ -8,6 +8,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
+/**
+ * Represents a Microsoft Entra group.
+*/
 class Group extends DirectoryObject implements Parsable 
 {
     /**
@@ -39,18 +42,6 @@ class Group extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'acceptedSenders'");
-    }
-
-    /**
-     * Gets the accessType property value. Indicates the type of access to the group. The possible values are: none, private, secret, public, unknownFutureValue. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @return GroupAccessType|null
-    */
-    public function getAccessType(): ?GroupAccessType {
-        $val = $this->getBackingStore()->get('accessType');
-        if (is_null($val) || $val instanceof GroupAccessType) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessType'");
     }
 
     /**
@@ -293,7 +284,6 @@ class Group extends DirectoryObject implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'acceptedSenders' => fn(ParseNode $n) => $o->setAcceptedSenders($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
-            'accessType' => fn(ParseNode $n) => $o->setAccessType($n->getEnumValue(GroupAccessType::class)),
             'allowExternalSenders' => fn(ParseNode $n) => $o->setAllowExternalSenders($n->getBooleanValue()),
             'appRoleAssignments' => fn(ParseNode $n) => $o->setAppRoleAssignments($n->getCollectionOfObjectValues([AppRoleAssignment::class, 'createFromDiscriminatorValue'])),
             'assignedLabels' => fn(ParseNode $n) => $o->setAssignedLabels($n->getCollectionOfObjectValues([AssignedLabel::class, 'createFromDiscriminatorValue'])),
@@ -334,7 +324,6 @@ class Group extends DirectoryObject implements Parsable
             },
             'isArchived' => fn(ParseNode $n) => $o->setIsArchived($n->getBooleanValue()),
             'isAssignableToRole' => fn(ParseNode $n) => $o->setIsAssignableToRole($n->getBooleanValue()),
-            'isFavorite' => fn(ParseNode $n) => $o->setIsFavorite($n->getBooleanValue()),
             'isManagementRestricted' => fn(ParseNode $n) => $o->setIsManagementRestricted($n->getBooleanValue()),
             'isSubscribedByMail' => fn(ParseNode $n) => $o->setIsSubscribedByMail($n->getBooleanValue()),
             'licenseProcessingState' => fn(ParseNode $n) => $o->setLicenseProcessingState($n->getObjectValue([LicenseProcessingState::class, 'createFromDiscriminatorValue'])),
@@ -348,7 +337,6 @@ class Group extends DirectoryObject implements Parsable
             'membersWithLicenseErrors' => fn(ParseNode $n) => $o->setMembersWithLicenseErrors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'onenote' => fn(ParseNode $n) => $o->setOnenote($n->getObjectValue([Onenote::class, 'createFromDiscriminatorValue'])),
             'onPremisesDomainName' => fn(ParseNode $n) => $o->setOnPremisesDomainName($n->getStringValue()),
-            'onPremisesExtensionAttributes' => fn(ParseNode $n) => $o->setOnPremisesExtensionAttributes($n->getObjectValue([OnPremisesExtensionAttributes::class, 'createFromDiscriminatorValue'])),
             'onPremisesLastSyncDateTime' => fn(ParseNode $n) => $o->setOnPremisesLastSyncDateTime($n->getDateTimeValue()),
             'onPremisesNetBiosName' => fn(ParseNode $n) => $o->setOnPremisesNetBiosName($n->getStringValue()),
             'onPremisesProvisioningErrors' => fn(ParseNode $n) => $o->setOnPremisesProvisioningErrors($n->getCollectionOfObjectValues([OnPremisesProvisioningError::class, 'createFromDiscriminatorValue'])),
@@ -400,9 +388,7 @@ class Group extends DirectoryObject implements Parsable
             'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'transitiveMembers' => fn(ParseNode $n) => $o->setTransitiveMembers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'uniqueName' => fn(ParseNode $n) => $o->setUniqueName($n->getStringValue()),
-            'unseenConversationsCount' => fn(ParseNode $n) => $o->setUnseenConversationsCount($n->getIntegerValue()),
             'unseenCount' => fn(ParseNode $n) => $o->setUnseenCount($n->getIntegerValue()),
-            'unseenMessagesCount' => fn(ParseNode $n) => $o->setUnseenMessagesCount($n->getIntegerValue()),
             'visibility' => fn(ParseNode $n) => $o->setVisibility($n->getStringValue()),
             'welcomeMessageEnabled' => fn(ParseNode $n) => $o->setWelcomeMessageEnabled($n->getBooleanValue()),
         ]);
@@ -508,18 +494,6 @@ class Group extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isAssignableToRole'");
-    }
-
-    /**
-     * Gets the isFavorite property value. Indicates whether the user marked the group as favorite. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @return bool|null
-    */
-    public function getIsFavorite(): ?bool {
-        $val = $this->getBackingStore()->get('isFavorite');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'isFavorite'");
     }
 
     /**
@@ -682,18 +656,6 @@ class Group extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesDomainName'");
-    }
-
-    /**
-     * Gets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
-     * @return OnPremisesExtensionAttributes|null
-    */
-    public function getOnPremisesExtensionAttributes(): ?OnPremisesExtensionAttributes {
-        $val = $this->getBackingStore()->get('onPremisesExtensionAttributes');
-        if (is_null($val) || $val instanceof OnPremisesExtensionAttributes) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesExtensionAttributes'");
     }
 
     /**
@@ -1085,19 +1047,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the unseenConversationsCount property value. Count of conversations that have had one or more new posts delivered since the signed-in user's last visit to the group. This property is the same as unseenCount. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @return int|null
-    */
-    public function getUnseenConversationsCount(): ?int {
-        $val = $this->getBackingStore()->get('unseenConversationsCount');
-        if (is_null($val) || is_int($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'unseenConversationsCount'");
-    }
-
-    /**
-     * Gets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * Gets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @return int|null
     */
     public function getUnseenCount(): ?int {
@@ -1106,18 +1056,6 @@ class Group extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'unseenCount'");
-    }
-
-    /**
-     * Gets the unseenMessagesCount property value. Count of new posts that have been delivered to the group's conversations since the signed-in user's last visit to the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @return int|null
-    */
-    public function getUnseenMessagesCount(): ?int {
-        $val = $this->getBackingStore()->get('unseenMessagesCount');
-        if (is_null($val) || is_int($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'unseenMessagesCount'");
     }
 
     /**
@@ -1151,7 +1089,6 @@ class Group extends DirectoryObject implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('acceptedSenders', $this->getAcceptedSenders());
-        $writer->writeEnumValue('accessType', $this->getAccessType());
         $writer->writeBooleanValue('allowExternalSenders', $this->getAllowExternalSenders());
         $writer->writeCollectionOfObjectValues('appRoleAssignments', $this->getAppRoleAssignments());
         $writer->writeCollectionOfObjectValues('assignedLabels', $this->getAssignedLabels());
@@ -1178,7 +1115,6 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeCollectionOfPrimitiveValues('infoCatalogs', $this->getInfoCatalogs());
         $writer->writeBooleanValue('isArchived', $this->getIsArchived());
         $writer->writeBooleanValue('isAssignableToRole', $this->getIsAssignableToRole());
-        $writer->writeBooleanValue('isFavorite', $this->getIsFavorite());
         $writer->writeBooleanValue('isManagementRestricted', $this->getIsManagementRestricted());
         $writer->writeBooleanValue('isSubscribedByMail', $this->getIsSubscribedByMail());
         $writer->writeObjectValue('licenseProcessingState', $this->getLicenseProcessingState());
@@ -1192,7 +1128,6 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('membersWithLicenseErrors', $this->getMembersWithLicenseErrors());
         $writer->writeObjectValue('onenote', $this->getOnenote());
         $writer->writeStringValue('onPremisesDomainName', $this->getOnPremisesDomainName());
-        $writer->writeObjectValue('onPremisesExtensionAttributes', $this->getOnPremisesExtensionAttributes());
         $writer->writeDateTimeValue('onPremisesLastSyncDateTime', $this->getOnPremisesLastSyncDateTime());
         $writer->writeStringValue('onPremisesNetBiosName', $this->getOnPremisesNetBiosName());
         $writer->writeCollectionOfObjectValues('onPremisesProvisioningErrors', $this->getOnPremisesProvisioningErrors());
@@ -1223,9 +1158,7 @@ class Group extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('transitiveMemberOf', $this->getTransitiveMemberOf());
         $writer->writeCollectionOfObjectValues('transitiveMembers', $this->getTransitiveMembers());
         $writer->writeStringValue('uniqueName', $this->getUniqueName());
-        $writer->writeIntegerValue('unseenConversationsCount', $this->getUnseenConversationsCount());
         $writer->writeIntegerValue('unseenCount', $this->getUnseenCount());
-        $writer->writeIntegerValue('unseenMessagesCount', $this->getUnseenMessagesCount());
         $writer->writeStringValue('visibility', $this->getVisibility());
         $writer->writeBooleanValue('welcomeMessageEnabled', $this->getWelcomeMessageEnabled());
     }
@@ -1236,14 +1169,6 @@ class Group extends DirectoryObject implements Parsable
     */
     public function setAcceptedSenders(?array $value): void {
         $this->getBackingStore()->set('acceptedSenders', $value);
-    }
-
-    /**
-     * Sets the accessType property value. Indicates the type of access to the group. The possible values are: none, private, secret, public, unknownFutureValue. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @param GroupAccessType|null $value Value to set for the accessType property.
-    */
-    public function setAccessType(?GroupAccessType $value): void {
-        $this->getBackingStore()->set('accessType', $value);
     }
 
     /**
@@ -1455,14 +1380,6 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the isFavorite property value. Indicates whether the user marked the group as favorite. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @param bool|null $value Value to set for the isFavorite property.
-    */
-    public function setIsFavorite(?bool $value): void {
-        $this->getBackingStore()->set('isFavorite', $value);
-    }
-
-    /**
      * Sets the isManagementRestricted property value. Indicates whether the group is a member of a restricted management administrative unit. If not set, the default value is null and the default behavior is false. Read-only.  To manage a group member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit. Requires $select to retrieve.
      * @param bool|null $value Value to set for the isManagementRestricted property.
     */
@@ -1564,14 +1481,6 @@ class Group extends DirectoryObject implements Parsable
     */
     public function setOnPremisesDomainName(?string $value): void {
         $this->getBackingStore()->set('onPremisesDomainName', $value);
-    }
-
-    /**
-     * Sets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
-     * @param OnPremisesExtensionAttributes|null $value Value to set for the onPremisesExtensionAttributes property.
-    */
-    public function setOnPremisesExtensionAttributes(?OnPremisesExtensionAttributes $value): void {
-        $this->getBackingStore()->set('onPremisesExtensionAttributes', $value);
     }
 
     /**
@@ -1815,27 +1724,11 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the unseenConversationsCount property value. Count of conversations that have had one or more new posts delivered since the signed-in user's last visit to the group. This property is the same as unseenCount. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @param int|null $value Value to set for the unseenConversationsCount property.
-    */
-    public function setUnseenConversationsCount(?int $value): void {
-        $this->getBackingStore()->set('unseenConversationsCount', $value);
-    }
-
-    /**
-     * Sets the unseenCount property value. Count of conversations that have received new posts since the signed-in user last visited the group. This property is the same as unseenConversationsCount.Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
+     * Sets the unseenCount property value. Count of conversations that received new posts since the signed-in user last visited the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
      * @param int|null $value Value to set for the unseenCount property.
     */
     public function setUnseenCount(?int $value): void {
         $this->getBackingStore()->set('unseenCount', $value);
-    }
-
-    /**
-     * Sets the unseenMessagesCount property value. Count of new posts that have been delivered to the group's conversations since the signed-in user's last visit to the group. Requires $select to retrieve. Supported only on the Get group API (GET /groups/{ID}).
-     * @param int|null $value Value to set for the unseenMessagesCount property.
-    */
-    public function setUnseenMessagesCount(?int $value): void {
-        $this->getBackingStore()->set('unseenMessagesCount', $value);
     }
 
     /**

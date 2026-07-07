@@ -9,7 +9,6 @@ use Microsoft\Graph\Generated\Models\Security\Incident;
 use Microsoft\Graph\Generated\Models\Security\IncidentCollectionResponse;
 use Microsoft\Graph\Generated\Security\Incidents\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Incidents\MicrosoftGraphSecurityMergeIncidents\MicrosoftGraphSecurityMergeIncidentsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -25,13 +24,6 @@ class IncidentsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the mergeIncidents method.
-    */
-    public function microsoftGraphSecurityMergeIncidents(): MicrosoftGraphSecurityMergeIncidentsRequestBuilder {
-        return new MicrosoftGraphSecurityMergeIncidentsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

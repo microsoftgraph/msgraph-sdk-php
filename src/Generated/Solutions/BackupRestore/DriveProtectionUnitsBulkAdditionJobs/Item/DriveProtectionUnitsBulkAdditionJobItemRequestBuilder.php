@@ -32,11 +32,11 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property driveProtectionUnitsBulkAdditionJobs for solutions
-     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDe_85be706e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function delete(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDe_85be706e $requestConfiguration = null): Promise {
+    public function delete(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,11 +46,11 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
 
     /**
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
-     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGe_29aa4cd5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function get(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGe_29aa4cd5 $requestConfiguration = null): Promise {
+    public function get(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -61,11 +61,11 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property driveProtectionUnitsBulkAdditionJobs in solutions
      * @param DriveProtectionUnitsBulkAdditionJob $body The request body
-     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPa_5fb089a3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DriveProtectionUnitsBulkAdditionJob|null>
      * @throws Exception
     */
-    public function patch(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPa_5fb089a3 $requestConfiguration = null): Promise {
+    public function patch(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -75,10 +75,10 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
 
     /**
      * Delete navigation property driveProtectionUnitsBulkAdditionJobs for solutions
-     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDe_85be706e|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDe_85be706e $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -93,10 +93,10 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
 
     /**
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
-     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGe_29aa4cd5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGe_29aa4cd5 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -115,10 +115,10 @@ class DriveProtectionUnitsBulkAdditionJobItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property driveProtectionUnitsBulkAdditionJobs in solutions
      * @param DriveProtectionUnitsBulkAdditionJob $body The request body
-     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPa_5fb089a3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPa_5fb089a3 $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DriveProtectionUnitsBulkAdditionJob $body, ?DriveProtectionUnitsBulkAdditionJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

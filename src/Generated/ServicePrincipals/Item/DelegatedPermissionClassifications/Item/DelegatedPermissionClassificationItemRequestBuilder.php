@@ -32,12 +32,12 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
-     * @param DelegatedPermissionClassificationItemRequestBuilderDele_1c69e0cc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/serviceprincipal-delete-delegatedpermissionclassifications?view=graph-rest-1.0 Find more info here
     */
-    public function delete(?DelegatedPermissionClassificationItemRequestBuilderDele_1c69e0cc $requestConfiguration = null): Promise {
+    public function delete(?DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,11 +47,11 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
-     * @param DelegatedPermissionClassificationItemRequestBuilderGetR_4a5d5b08|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassification|null>
      * @throws Exception
     */
-    public function get(?DelegatedPermissionClassificationItemRequestBuilderGetR_4a5d5b08 $requestConfiguration = null): Promise {
+    public function get(?DelegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -62,11 +62,11 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
      * @param DelegatedPermissionClassification $body The request body
-     * @param DelegatedPermissionClassificationItemRequestBuilderPatc_2032969b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DelegatedPermissionClassification|null>
      * @throws Exception
     */
-    public function patch(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationItemRequestBuilderPatc_2032969b $requestConfiguration = null): Promise {
+    public function patch(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -76,10 +76,10 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Deletes a delegatedPermissionClassification which had previously been set for a delegated permission.
-     * @param DelegatedPermissionClassificationItemRequestBuilderDele_1c69e0cc|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toDeleteRequestInformation(?DelegatedPermissionClassificationItemRequestBuilderDele_1c69e0cc $requestConfiguration = null): RequestInformation {
+    public function toDeleteRequestInformation(?DelegatedPermissionClassificationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -94,10 +94,10 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
 
     /**
      * Get delegatedPermissionClassifications from servicePrincipals
-     * @param DelegatedPermissionClassificationItemRequestBuilderGetR_4a5d5b08|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?DelegatedPermissionClassificationItemRequestBuilderGetR_4a5d5b08 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?DelegatedPermissionClassificationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -116,10 +116,10 @@ class DelegatedPermissionClassificationItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
      * @param DelegatedPermissionClassification $body The request body
-     * @param DelegatedPermissionClassificationItemRequestBuilderPatc_2032969b|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPatchRequestInformation(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationItemRequestBuilderPatc_2032969b $requestConfiguration = null): RequestInformation {
+    public function toPatchRequestInformation(DelegatedPermissionClassification $body, ?DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

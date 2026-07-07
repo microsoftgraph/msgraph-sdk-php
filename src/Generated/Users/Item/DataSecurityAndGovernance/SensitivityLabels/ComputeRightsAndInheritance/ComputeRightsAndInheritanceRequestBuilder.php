@@ -33,12 +33,12 @@ class ComputeRightsAndInheritanceRequestBuilder extends BaseRequestBuilder
     /**
      * Computes the rights and inheritance for sensitivity labels based on the input content and labels.
      * @param ComputeRightsAndInheritancePostRequestBody $body The request body
-     * @param ComputeRightsAndInheritanceRequestBuilderPostRequestCon_6e866dd5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComputeRightsAndInheritanceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ComputeRightsAndInheritanceResult|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/sensitivitylabel-computerightsandinheritance?view=graph-rest-1.0 Find more info here
     */
-    public function post(ComputeRightsAndInheritancePostRequestBody $body, ?ComputeRightsAndInheritanceRequestBuilderPostRequestCon_6e866dd5 $requestConfiguration = null): Promise {
+    public function post(ComputeRightsAndInheritancePostRequestBody $body, ?ComputeRightsAndInheritanceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -49,10 +49,10 @@ class ComputeRightsAndInheritanceRequestBuilder extends BaseRequestBuilder
     /**
      * Computes the rights and inheritance for sensitivity labels based on the input content and labels.
      * @param ComputeRightsAndInheritancePostRequestBody $body The request body
-     * @param ComputeRightsAndInheritanceRequestBuilderPostRequestCon_6e866dd5|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ComputeRightsAndInheritanceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ComputeRightsAndInheritancePostRequestBody $body, ?ComputeRightsAndInheritanceRequestBuilderPostRequestCon_6e866dd5 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ComputeRightsAndInheritancePostRequestBody $body, ?ComputeRightsAndInheritanceRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

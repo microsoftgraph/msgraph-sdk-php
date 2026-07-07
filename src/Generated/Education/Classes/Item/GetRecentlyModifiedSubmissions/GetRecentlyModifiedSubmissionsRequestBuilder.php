@@ -31,12 +31,12 @@ class GetRecentlyModifiedSubmissionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve submissions modified in the previous seven days. Only teachers and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent their work. A teacher or application with application permissions has full access to all submission objects. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students can't see the grade or feedback until the assignment is released.
-     * @param GetRecentlyModifiedSubmissionsRequestBuilderGetRequestC_122a2933|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetRecentlyModifiedSubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetRecentlyModifiedSubmissionsGetResponse|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/educationclass-getrecentlymodifiedsubmissions?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetRecentlyModifiedSubmissionsRequestBuilderGetRequestC_122a2933 $requestConfiguration = null): Promise {
+    public function get(?GetRecentlyModifiedSubmissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -46,10 +46,10 @@ class GetRecentlyModifiedSubmissionsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Retrieve submissions modified in the previous seven days. Only teachers and applications with application permissions can perform this operation. A submission object represents a student's work for an assignment. Resources associated with the submission represent their work. A teacher or application with application permissions has full access to all submission objects. The grade and feedback from a teacher are part of the educationOutcome associated with this object. Only teachers or applications with application permissions can add or change grades and feedback. Students can't see the grade or feedback until the assignment is released.
-     * @param GetRecentlyModifiedSubmissionsRequestBuilderGetRequestC_122a2933|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetRecentlyModifiedSubmissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetRecentlyModifiedSubmissionsRequestBuilderGetRequestC_122a2933 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetRecentlyModifiedSubmissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -35,12 +35,12 @@ class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseRequestBui
 
     /**
      * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
-     * @param GetYammerActivityUserCountsWithPeriodRequestBuilderGetR_53466eb9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getyammeractivityusercounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetYammerActivityUserCountsWithPeriodRequestBuilderGetR_53466eb9 $requestConfiguration = null): Promise {
+    public function get(?GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetYammerActivityUserCountsWithPeriodRequestBuilder extends BaseRequestBui
 
     /**
      * Get the trends on the number of unique users who posted, read, and liked Yammer messages.
-     * @param GetYammerActivityUserCountsWithPeriodRequestBuilderGetR_53466eb9|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetYammerActivityUserCountsWithPeriodRequestBuilderGetR_53466eb9 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetYammerActivityUserCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -35,12 +35,12 @@ class GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder extends Bas
 
     /**
      * Get the number of team activities across Microsoft Teams over a selected period.
-     * @param GetTeamsTeamActivityDistributionCountsWithPeriodRequest_dbe81174|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getteamsteamactivitydistributioncounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetTeamsTeamActivityDistributionCountsWithPeriodRequest_dbe81174 $requestConfiguration = null): Promise {
+    public function get(?GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder extends Bas
 
     /**
      * Get the number of team activities across Microsoft Teams over a selected period.
-     * @param GetTeamsTeamActivityDistributionCountsWithPeriodRequest_dbe81174|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetTeamsTeamActivityDistributionCountsWithPeriodRequest_dbe81174 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -32,11 +32,11 @@ class DeleteUserFromSharedAppleDeviceRequestBuilder extends BaseRequestBuilder
     /**
      * Delete user from shared Apple device
      * @param DeleteUserFromSharedAppleDevicePostRequestBody $body The request body
-     * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostReques_7ef6b7f3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
     */
-    public function post(DeleteUserFromSharedAppleDevicePostRequestBody $body, ?DeleteUserFromSharedAppleDeviceRequestBuilderPostReques_7ef6b7f3 $requestConfiguration = null): Promise {
+    public function post(DeleteUserFromSharedAppleDevicePostRequestBody $body, ?DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -47,10 +47,10 @@ class DeleteUserFromSharedAppleDeviceRequestBuilder extends BaseRequestBuilder
     /**
      * Delete user from shared Apple device
      * @param DeleteUserFromSharedAppleDevicePostRequestBody $body The request body
-     * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostReques_7ef6b7f3|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(DeleteUserFromSharedAppleDevicePostRequestBody $body, ?DeleteUserFromSharedAppleDeviceRequestBuilderPostReques_7ef6b7f3 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(DeleteUserFromSharedAppleDevicePostRequestBody $body, ?DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

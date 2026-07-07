@@ -35,11 +35,11 @@ class GetM365AppUserDetailWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a report that provides the details about which apps and platforms users have used.
-     * @param GetM365AppUserDetailWithPeriodRequestBuilderGetRequestC_eeaba331|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetM365AppUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function get(?GetM365AppUserDetailWithPeriodRequestBuilderGetRequestC_eeaba331 $requestConfiguration = null): Promise {
+    public function get(?GetM365AppUserDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -51,10 +51,10 @@ class GetM365AppUserDetailWithPeriodRequestBuilder extends BaseRequestBuilder
 
     /**
      * Get a report that provides the details about which apps and platforms users have used.
-     * @param GetM365AppUserDetailWithPeriodRequestBuilderGetRequestC_eeaba331|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetM365AppUserDetailWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetM365AppUserDetailWithPeriodRequestBuilderGetRequestC_eeaba331 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetM365AppUserDetailWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

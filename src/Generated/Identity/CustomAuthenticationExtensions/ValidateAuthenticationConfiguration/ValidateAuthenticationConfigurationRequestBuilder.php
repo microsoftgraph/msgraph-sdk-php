@@ -33,11 +33,11 @@ class ValidateAuthenticationConfigurationRequestBuilder extends BaseRequestBuild
     /**
      * Invoke action validateAuthenticationConfiguration
      * @param ValidateAuthenticationConfigurationPostRequestBody $body The request body
-     * @param ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuthenticationConfigurationValidation|null>
      * @throws Exception
     */
-    public function post(ValidateAuthenticationConfigurationPostRequestBody $body, ?ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db $requestConfiguration = null): Promise {
+    public function post(ValidateAuthenticationConfigurationPostRequestBody $body, ?ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -48,10 +48,10 @@ class ValidateAuthenticationConfigurationRequestBuilder extends BaseRequestBuild
     /**
      * Invoke action validateAuthenticationConfiguration
      * @param ValidateAuthenticationConfigurationPostRequestBody $body The request body
-     * @param ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(ValidateAuthenticationConfigurationPostRequestBody $body, ?ValidateAuthenticationConfigurationRequestBuilderPostRe_28f4c8db $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(ValidateAuthenticationConfigurationPostRequestBody $body, ?ValidateAuthenticationConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

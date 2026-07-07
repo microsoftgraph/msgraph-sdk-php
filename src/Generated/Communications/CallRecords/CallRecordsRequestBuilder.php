@@ -7,8 +7,8 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Communications\CallRecords\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_0d33e661\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_fa317ebd;
-use Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_03098e60\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_464e9335;
+use Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime\MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime\MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
 use Microsoft\Graph\Generated\Models\CallRecords\CallRecordCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -73,20 +73,20 @@ class CallRecordsRequestBuilder extends BaseRequestBuilder
      * Provides operations to call the getDirectRoutingCalls method.
      * @param DateTime $fromDateTime Usage: fromDateTime={fromDateTime}
      * @param DateTime $toDateTime Usage: toDateTime={toDateTime}
-     * @return MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_fa317ebd
+     * @return MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
     */
-    public function microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(DateTime $fromDateTime, DateTime $toDateTime): MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_fa317ebd {
-        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_fa317ebd($this->pathParameters, $this->requestAdapter, $fromDateTime, $toDateTime);
+    public function microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(DateTime $fromDateTime, DateTime $toDateTime): MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder {
+        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $fromDateTime, $toDateTime);
     }
 
     /**
      * Provides operations to call the getPstnCalls method.
      * @param DateTime $fromDateTime Usage: fromDateTime={fromDateTime}
      * @param DateTime $toDateTime Usage: toDateTime={toDateTime}
-     * @return MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_464e9335
+     * @return MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
     */
-    public function microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(DateTime $fromDateTime, DateTime $toDateTime): MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_464e9335 {
-        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_464e9335($this->pathParameters, $this->requestAdapter, $fromDateTime, $toDateTime);
+    public function microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(DateTime $fromDateTime, DateTime $toDateTime): MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder {
+        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $fromDateTime, $toDateTime);
     }
 
     /**

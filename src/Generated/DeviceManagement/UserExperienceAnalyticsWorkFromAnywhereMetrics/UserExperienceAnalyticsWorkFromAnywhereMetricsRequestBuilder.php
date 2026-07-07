@@ -53,11 +53,11 @@ class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extends BaseR
 
     /**
      * User experience analytics work from anywhere metrics.
-     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_fd6815fa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsWorkFromAnywhereMetricCollectionResponse|null>
      * @throws Exception
     */
-    public function get(?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_fd6815fa $requestConfiguration = null): Promise {
+    public function get(?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -68,11 +68,11 @@ class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extends BaseR
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereMetrics for deviceManagement
      * @param UserExperienceAnalyticsWorkFromAnywhereMetric $body The request body
-     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_26cc7229|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<UserExperienceAnalyticsWorkFromAnywhereMetric|null>
      * @throws Exception
     */
-    public function post(UserExperienceAnalyticsWorkFromAnywhereMetric $body, ?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_26cc7229 $requestConfiguration = null): Promise {
+    public function post(UserExperienceAnalyticsWorkFromAnywhereMetric $body, ?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -82,10 +82,10 @@ class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extends BaseR
 
     /**
      * User experience analytics work from anywhere metrics.
-     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_fd6815fa|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_fd6815fa $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
@@ -104,10 +104,10 @@ class UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder extends BaseR
     /**
      * Create new navigation property to userExperienceAnalyticsWorkFromAnywhereMetrics for deviceManagement
      * @param UserExperienceAnalyticsWorkFromAnywhereMetric $body The request body
-     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_26cc7229|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toPostRequestInformation(UserExperienceAnalyticsWorkFromAnywhereMetric $body, ?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBu_26cc7229 $requestConfiguration = null): RequestInformation {
+    public function toPostRequestInformation(UserExperienceAnalyticsWorkFromAnywhereMetric $body, ?UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

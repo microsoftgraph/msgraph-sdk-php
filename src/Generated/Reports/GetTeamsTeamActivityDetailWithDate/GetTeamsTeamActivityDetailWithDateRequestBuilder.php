@@ -36,11 +36,11 @@ class GetTeamsTeamActivityDetailWithDateRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
-     * @param GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequ_8a127b22|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
     */
-    public function get(?GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequ_8a127b22 $requestConfiguration = null): Promise {
+    public function get(?GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetTeamsTeamActivityDetailWithDateRequestBuilder extends BaseRequestBuilde
 
     /**
      * Get details about Microsoft Teams activity by team. The numbers include activities for both licensed and nonlicensed users.
-     * @param GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequ_8a127b22|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequ_8a127b22 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetTeamsTeamActivityDetailWithDateRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;

@@ -35,12 +35,12 @@ class GetSharePointActivityFileCountsWithPeriodRequestBuilder extends BaseReques
 
     /**
      * Get the number of unique, licensed users who interacted with files stored on SharePoint sites.
-     * @param GetSharePointActivityFileCountsWithPeriodRequestBuilder_cef9cfd6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<StreamInterface|null>
      * @throws Exception
      * @link https://learn.microsoft.com/graph/api/reportroot-getsharepointactivityfilecounts?view=graph-rest-1.0 Find more info here
     */
-    public function get(?GetSharePointActivityFileCountsWithPeriodRequestBuilder_cef9cfd6 $requestConfiguration = null): Promise {
+    public function get(?GetSharePointActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
         $errorMappings = [
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
@@ -52,10 +52,10 @@ class GetSharePointActivityFileCountsWithPeriodRequestBuilder extends BaseReques
 
     /**
      * Get the number of unique, licensed users who interacted with files stored on SharePoint sites.
-     * @param GetSharePointActivityFileCountsWithPeriodRequestBuilder_cef9cfd6|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @param GetSharePointActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
-    public function toGetRequestInformation(?GetSharePointActivityFileCountsWithPeriodRequestBuilder_cef9cfd6 $requestConfiguration = null): RequestInformation {
+    public function toGetRequestInformation(?GetSharePointActivityFileCountsWithPeriodRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
         $requestInfo = new RequestInformation();
         $requestInfo->urlTemplate = $this->urlTemplate;
         $requestInfo->pathParameters = $this->pathParameters;
