@@ -80,7 +80,7 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the eventId property value. The unique ID of the event. Read only.
+     * Gets the eventId property value. The unique ID of the event. Read-only.
      * @return string|null
     */
     public function getEventId(): ?string {
@@ -232,7 +232,7 @@ class Reminder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the eventId property value. The unique ID of the event. Read only.
+     * Sets the eventId property value. The unique ID of the event. Read-only.
      * @param string|null $value Value to set for the eventId property.
     */
     public function setEventId(?string $value): void {

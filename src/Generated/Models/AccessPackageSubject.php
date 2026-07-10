@@ -73,6 +73,7 @@ class AccessPackageSubject extends Entity implements Parsable
             'objectId' => fn(ParseNode $n) => $o->setObjectId($n->getStringValue()),
             'onPremisesSecurityIdentifier' => fn(ParseNode $n) => $o->setOnPremisesSecurityIdentifier($n->getStringValue()),
             'principalName' => fn(ParseNode $n) => $o->setPrincipalName($n->getStringValue()),
+            'subjectLifecycle' => fn(ParseNode $n) => $o->setSubjectLifecycle($n->getEnumValue(AccessPackageSubjectLifecycle::class)),
             'subjectType' => fn(ParseNode $n) => $o->setSubjectType($n->getEnumValue(AccessPackageSubjectType::class)),
         ]);
     }
@@ -114,6 +115,18 @@ class AccessPackageSubject extends Entity implements Parsable
     }
 
     /**
+     * Gets the subjectLifecycle property value. The subjectLifecycle property
+     * @return AccessPackageSubjectLifecycle|null
+    */
+    public function getSubjectLifecycle(): ?AccessPackageSubjectLifecycle {
+        $val = $this->getBackingStore()->get('subjectLifecycle');
+        if (is_null($val) || $val instanceof AccessPackageSubjectLifecycle) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectLifecycle'");
+    }
+
+    /**
      * Gets the subjectType property value. The resource type of the subject. The possible values are: notSpecified, user, servicePrincipal, unknownFutureValue.
      * @return AccessPackageSubjectType|null
     */
@@ -137,6 +150,7 @@ class AccessPackageSubject extends Entity implements Parsable
         $writer->writeStringValue('objectId', $this->getObjectId());
         $writer->writeStringValue('onPremisesSecurityIdentifier', $this->getOnPremisesSecurityIdentifier());
         $writer->writeStringValue('principalName', $this->getPrincipalName());
+        $writer->writeEnumValue('subjectLifecycle', $this->getSubjectLifecycle());
         $writer->writeEnumValue('subjectType', $this->getSubjectType());
     }
 
@@ -186,6 +200,14 @@ class AccessPackageSubject extends Entity implements Parsable
     */
     public function setPrincipalName(?string $value): void {
         $this->getBackingStore()->set('principalName', $value);
+    }
+
+    /**
+     * Sets the subjectLifecycle property value. The subjectLifecycle property
+     * @param AccessPackageSubjectLifecycle|null $value Value to set for the subjectLifecycle property.
+    */
+    public function setSubjectLifecycle(?AccessPackageSubjectLifecycle $value): void {
+        $this->getBackingStore()->set('subjectLifecycle', $value);
     }
 
     /**

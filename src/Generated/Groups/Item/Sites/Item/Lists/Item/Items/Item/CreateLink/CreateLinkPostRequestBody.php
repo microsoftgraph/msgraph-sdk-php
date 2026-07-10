@@ -26,6 +26,8 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setRetainInheritedPermissions(false);
+        $this->setSendNotification(false);
     }
 
     /**

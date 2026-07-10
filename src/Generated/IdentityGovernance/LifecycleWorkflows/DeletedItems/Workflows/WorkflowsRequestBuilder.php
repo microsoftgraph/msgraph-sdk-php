@@ -51,7 +51,7 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Get a list of deleted workflow objects and their properties from the deletedItemContainer.
      * @param WorkflowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkflowCollectionResponse|null>
      * @throws Exception
@@ -66,7 +66,7 @@ class WorkflowsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the deleted workflow objects and their properties.
+     * Get a list of deleted workflow objects and their properties from the deletedItemContainer.
      * @param WorkflowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

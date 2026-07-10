@@ -67,7 +67,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronizationTemplate associated with a given application.
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SynchronizationTemplate|null>
@@ -122,7 +122,7 @@ class SynchronizationTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update (override) the synchronization template associated with a given application.
+     * Update (override) the synchronizationTemplate associated with a given application.
      * @param SynchronizationTemplate $body The request body
      * @param SynchronizationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

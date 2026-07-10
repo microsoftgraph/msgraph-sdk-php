@@ -37,7 +37,7 @@ class MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTime
     }
 
     /**
-     * Provide a summary of all workflows processed within a tenant for a specified period. Because the amount of results for listed workflows as returned by the List workflows does not tell you which workflows were processed from the list of created workflows, this summary gives you a quick overview of processed status based on counts.
+     * Provide a summary from the insights resource of workflow objects processed within a tenant for a specified period. Because the list returned by List workflows doesn't indicate which workflows were processed, this summary gives you a quick overview based on counts.
      * @param MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkflowsInsightsSummary|null>
      * @throws Exception
@@ -52,7 +52,7 @@ class MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTime
     }
 
     /**
-     * Provide a summary of all workflows processed within a tenant for a specified period. Because the amount of results for listed workflows as returned by the List workflows does not tell you which workflows were processed from the list of created workflows, this summary gives you a quick overview of processed status based on counts.
+     * Provide a summary from the insights resource of workflow objects processed within a tenant for a specified period. Because the list returned by List workflows doesn't indicate which workflows were processed, this summary gives you a quick overview based on counts.
      * @param MicrosoftGraphIdentityGovernanceWorkflowsProcessedSummaryWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

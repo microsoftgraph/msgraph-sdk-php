@@ -64,7 +64,7 @@ class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a user object.
+     * Update the properties of a user object. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param User $body The request body
      * @param UsersWithUserPrincipalNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<User|null>
@@ -119,7 +119,7 @@ class UsersWithUserPrincipalNameRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the properties of a user object.
+     * Update the properties of a user object. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param User $body The request body
      * @param UsersWithUserPrincipalNameRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

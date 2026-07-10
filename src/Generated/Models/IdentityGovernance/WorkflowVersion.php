@@ -32,8 +32,21 @@ class WorkflowVersion extends WorkflowBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([WorkflowSetting::class, 'createFromDiscriminatorValue'])),
             'versionNumber' => fn(ParseNode $n) => $o->setVersionNumber($n->getIntegerValue()),
         ]);
+    }
+
+    /**
+     * Gets the settings property value. The settings property
+     * @return WorkflowSetting|null
+    */
+    public function getSettings(): ?WorkflowSetting {
+        $val = $this->getBackingStore()->get('settings');
+        if (is_null($val) || $val instanceof WorkflowSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
     }
 
     /**
@@ -54,7 +67,16 @@ class WorkflowVersion extends WorkflowBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeIntegerValue('versionNumber', $this->getVersionNumber());
+    }
+
+    /**
+     * Sets the settings property value. The settings property
+     * @param WorkflowSetting|null $value Value to set for the settings property.
+    */
+    public function setSettings(?WorkflowSetting $value): void {
+        $this->getBackingStore()->set('settings', $value);
     }
 
     /**

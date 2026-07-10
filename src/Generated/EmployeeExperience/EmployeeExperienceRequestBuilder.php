@@ -96,7 +96,7 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update employeeExperience
-     * @param EmployeeExperience $body Represents a container that exposes navigation properties for employee experience resources.
+     * @param EmployeeExperience $body The request body
      * @param EmployeeExperienceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EmployeeExperience|null>
      * @throws Exception
@@ -132,7 +132,7 @@ class EmployeeExperienceRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update employeeExperience
-     * @param EmployeeExperience $body Represents a container that exposes navigation properties for employee experience resources.
+     * @param EmployeeExperience $body The request body
      * @param EmployeeExperienceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

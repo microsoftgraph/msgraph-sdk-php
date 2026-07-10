@@ -48,7 +48,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * Gets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. When true, allows on-premises directory sync clients to update the onPremisesObjectIdentifier property.
      * @return bool|null
     */
     public function getAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(): ?bool {
@@ -376,7 +376,7 @@ class OnPremisesDirectorySynchronizationFeature implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. The allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property
+     * Sets the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property value. When true, allows on-premises directory sync clients to update the onPremisesObjectIdentifier property.
      * @param bool|null $value Value to set for the allowOnPremUpdateOfOnPremisesObjectIdentifierEnabled property.
     */
     public function setAllowOnPremUpdateOfOnPremisesObjectIdentifierEnabled(?bool $value): void {

@@ -62,7 +62,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AccessReviewStageCollectionResponse|null>
      * @throws Exception
@@ -92,7 +92,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Retrieve the stages in a multi-stage access review instance.
+     * Retrieve the accessReviewStage objects for a specific accessReviewInstance in a multi-stage access review.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

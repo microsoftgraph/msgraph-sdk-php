@@ -9,9 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
-/**
- * Represents a Microsoft online meeting.
-*/
 class OnlineMeeting extends OnlineMeetingBase implements Parsable 
 {
     /**
