@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Directory\DeviceLocalCredentials\DeviceLocalCreden
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
 use Microsoft\Graph\Generated\Directory\PublicKeyInfrastructure\PublicKeyInfrastructureRequestBuilder;
+use Microsoft\Graph\Generated\Directory\Recovery\RecoveryRequestBuilder;
 use Microsoft\Graph\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
@@ -80,6 +81,13 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     */
     public function publicKeyInfrastructure(): PublicKeyInfrastructureRequestBuilder {
         return new PublicKeyInfrastructureRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the recovery property of the microsoft.graph.directory entity.
+    */
+    public function recovery(): RecoveryRequestBuilder {
+        return new RecoveryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

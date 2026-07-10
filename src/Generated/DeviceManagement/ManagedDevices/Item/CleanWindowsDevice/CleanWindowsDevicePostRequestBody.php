@@ -23,6 +23,7 @@ class CleanWindowsDevicePostRequestBody implements AdditionalDataHolder, BackedM
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
         $this->setAdditionalData([]);
+        $this->setKeepUserData(false);
     }
 
     /**

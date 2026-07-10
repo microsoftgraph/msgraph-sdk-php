@@ -48,7 +48,7 @@ class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the authenticatorAttachment property value. The authenticatorAttachment property
+     * Gets the authenticatorAttachment property value. Specifies the preferred attachment modality for the authenticator. Possible values: platform (device-bound authenticator, such as Windows Hello), cross-platform (removable authenticator, such as a USB security key), or null (no preference).
      * @return string|null
     */
     public function getAuthenticatorAttachment(): ?string {
@@ -94,7 +94,7 @@ class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the requireResidentKey property value. The requireResidentKey property
+     * Gets the requireResidentKey property value. Indicates whether the authenticator must create a client-side-resident credential (also known as a discoverable credential). If true, the credential can be used without providing a credential ID.
      * @return bool|null
     */
     public function getRequireResidentKey(): ?bool {
@@ -106,7 +106,7 @@ class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the userVerification property value. The userVerification property
+     * Gets the userVerification property value. Specifies the relying party's preference for user verification during credential creation. Possible values: required, preferred, or discouraged.
      * @return string|null
     */
     public function getUserVerification(): ?string {
@@ -138,7 +138,7 @@ class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the authenticatorAttachment property value. The authenticatorAttachment property
+     * Sets the authenticatorAttachment property value. Specifies the preferred attachment modality for the authenticator. Possible values: platform (device-bound authenticator, such as Windows Hello), cross-platform (removable authenticator, such as a USB security key), or null (no preference).
      * @param string|null $value Value to set for the authenticatorAttachment property.
     */
     public function setAuthenticatorAttachment(?string $value): void {
@@ -162,7 +162,7 @@ class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the requireResidentKey property value. The requireResidentKey property
+     * Sets the requireResidentKey property value. Indicates whether the authenticator must create a client-side-resident credential (also known as a discoverable credential). If true, the credential can be used without providing a credential ID.
      * @param bool|null $value Value to set for the requireResidentKey property.
     */
     public function setRequireResidentKey(?bool $value): void {
@@ -170,7 +170,7 @@ class WebauthnAuthenticatorSelectionCriteria implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the userVerification property value. The userVerification property
+     * Sets the userVerification property value. Specifies the relying party's preference for user verification during credential creation. Possible values: required, preferred, or discouraged.
      * @param string|null $value Value to set for the userVerification property.
     */
     public function setUserVerification(?string $value): void {

@@ -31,7 +31,7 @@ class ParseExpressionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Microsoft Entra ID.
+     * Parse a given string expression into an attributeMappingSource object for a synchronizationSchema. For more information about expressions, see Writing Expressions for Attribute Mappings in Microsoft Entra ID.
      * @param ParseExpressionPostRequestBody $body The request body
      * @param ParseExpressionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ParseExpressionResponse|null>
@@ -47,7 +47,7 @@ class ParseExpressionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Parse a given string expression into an attributeMappingSource object. For more information about expressions, see Writing Expressions for Attribute Mappings in Microsoft Entra ID.
+     * Parse a given string expression into an attributeMappingSource object for a synchronizationSchema. For more information about expressions, see Writing Expressions for Attribute Mappings in Microsoft Entra ID.
      * @param ParseExpressionPostRequestBody $body The request body
      * @param ParseExpressionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

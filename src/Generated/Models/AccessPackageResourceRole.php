@@ -60,6 +60,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
             'originId' => fn(ParseNode $n) => $o->setOriginId($n->getStringValue()),
             'originSystem' => fn(ParseNode $n) => $o->setOriginSystem($n->getStringValue()),
             'resource' => fn(ParseNode $n) => $o->setResource($n->getObjectValue([AccessPackageResource::class, 'createFromDiscriminatorValue'])),
+            'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(RoleType::class)),
         ]);
     }
 
@@ -76,7 +77,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, or AadGroup.
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AzureResources, or AadGroup.
      * @return string|null
     */
     public function getOriginSystem(): ?string {
@@ -100,6 +101,18 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
+     * Gets the type property value. The role type for the Azure resource role. The possible values are: active, eligible, application, delegated, unknownFutureValue. The values active and eligible are only supported where originSystem is AzureResources while application and delegated aren't currently implemented.
+     * @return RoleType|null
+    */
+    public function getType(): ?RoleType {
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof RoleType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -110,6 +123,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
         $writer->writeStringValue('originId', $this->getOriginId());
         $writer->writeStringValue('originSystem', $this->getOriginSystem());
         $writer->writeObjectValue('resource', $this->getResource());
+        $writer->writeEnumValue('type', $this->getType());
     }
 
     /**
@@ -137,7 +151,7 @@ class AccessPackageResourceRole extends Entity implements Parsable
     }
 
     /**
-     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, or AadGroup.
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AzureResources, or AadGroup.
      * @param string|null $value Value to set for the originSystem property.
     */
     public function setOriginSystem(?string $value): void {
@@ -150,6 +164,14 @@ class AccessPackageResourceRole extends Entity implements Parsable
     */
     public function setResource(?AccessPackageResource $value): void {
         $this->getBackingStore()->set('resource', $value);
+    }
+
+    /**
+     * Sets the type property value. The role type for the Azure resource role. The possible values are: active, eligible, application, delegated, unknownFutureValue. The values active and eligible are only supported where originSystem is AzureResources while application and delegated aren't currently implemented.
+     * @param RoleType|null $value Value to set for the type property.
+    */
+    public function setType(?RoleType $value): void {
+        $this->getBackingStore()->set('type', $value);
     }
 
 }

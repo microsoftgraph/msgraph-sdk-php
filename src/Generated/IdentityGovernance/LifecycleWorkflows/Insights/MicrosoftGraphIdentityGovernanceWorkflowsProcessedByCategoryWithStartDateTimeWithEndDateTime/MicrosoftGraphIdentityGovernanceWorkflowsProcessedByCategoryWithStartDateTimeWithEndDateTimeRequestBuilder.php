@@ -37,7 +37,7 @@ class MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateT
     }
 
     /**
-     * Provide a summary of workflows processed, by category, in a tenant. This allows you to quickly get category information, by numerical value, bypassing other information found in the WorkflowsProcessedSummary call.
+     * Provide a summary from the insights resource of workflow objects processed by category in a tenant. This allows you to quickly get category information, by numerical value, without retrieving the other information included in the workflowsProcessedSummary call.
      * @param MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<WorkflowsInsightsByCategory|null>
      * @throws Exception
@@ -52,7 +52,7 @@ class MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateT
     }
 
     /**
-     * Provide a summary of workflows processed, by category, in a tenant. This allows you to quickly get category information, by numerical value, bypassing other information found in the WorkflowsProcessedSummary call.
+     * Provide a summary from the insights resource of workflow objects processed by category in a tenant. This allows you to quickly get category information, by numerical value, without retrieving the other information included in the workflowsProcessedSummary call.
      * @param MicrosoftGraphIdentityGovernanceWorkflowsProcessedByCategoryWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

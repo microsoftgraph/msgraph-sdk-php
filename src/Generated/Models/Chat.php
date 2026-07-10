@@ -71,6 +71,7 @@ class Chat extends Entity implements Parsable
             'permissionGrants' => fn(ParseNode $n) => $o->setPermissionGrants($n->getCollectionOfObjectValues([ResourceSpecificPermissionGrant::class, 'createFromDiscriminatorValue'])),
             'pinnedMessages' => fn(ParseNode $n) => $o->setPinnedMessages($n->getCollectionOfObjectValues([PinnedChatMessageInfo::class, 'createFromDiscriminatorValue'])),
             'tabs' => fn(ParseNode $n) => $o->setTabs($n->getCollectionOfObjectValues([TeamsTab::class, 'createFromDiscriminatorValue'])),
+            'targetedMessages' => fn(ParseNode $n) => $o->setTargetedMessages($n->getCollectionOfObjectValues([TargetedChatMessage::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
             'topic' => fn(ParseNode $n) => $o->setTopic($n->getStringValue()),
             'viewpoint' => fn(ParseNode $n) => $o->setViewpoint($n->getObjectValue([ChatViewpoint::class, 'createFromDiscriminatorValue'])),
@@ -235,6 +236,20 @@ class Chat extends Entity implements Parsable
     }
 
     /**
+     * Gets the targetedMessages property value. The targetedMessages property
+     * @return array<TargetedChatMessage>|null
+    */
+    public function getTargetedMessages(): ?array {
+        $val = $this->getBackingStore()->get('targetedMessages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TargetedChatMessage::class);
+            /** @var array<TargetedChatMessage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetedMessages'");
+    }
+
+    /**
      * Gets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
      * @return string|null
     */
@@ -302,6 +317,7 @@ class Chat extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('permissionGrants', $this->getPermissionGrants());
         $writer->writeCollectionOfObjectValues('pinnedMessages', $this->getPinnedMessages());
         $writer->writeCollectionOfObjectValues('tabs', $this->getTabs());
+        $writer->writeCollectionOfObjectValues('targetedMessages', $this->getTargetedMessages());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeStringValue('topic', $this->getTopic());
         $writer->writeObjectValue('viewpoint', $this->getViewpoint());
@@ -418,6 +434,14 @@ class Chat extends Entity implements Parsable
     */
     public function setTabs(?array $value): void {
         $this->getBackingStore()->set('tabs', $value);
+    }
+
+    /**
+     * Sets the targetedMessages property value. The targetedMessages property
+     * @param array<TargetedChatMessage>|null $value Value to set for the targetedMessages property.
+    */
+    public function setTargetedMessages(?array $value): void {
+        $this->getBackingStore()->set('targetedMessages', $value);
     }
 
     /**

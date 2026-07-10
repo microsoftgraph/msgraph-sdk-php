@@ -53,7 +53,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the run objects and their properties for a lifecycle workflow.
+     * Get a list of run objects and their properties for a workflow.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RunCollectionResponse|null>
      * @throws Exception
@@ -78,7 +78,7 @@ class RunsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of the run objects and their properties for a lifecycle workflow.
+     * Get a list of run objects and their properties for a workflow.
      * @param RunsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

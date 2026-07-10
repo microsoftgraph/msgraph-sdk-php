@@ -25,12 +25,25 @@ class CopilotAdmin extends Entity implements Parsable
     }
 
     /**
+     * Gets the catalog property value. The catalog property
+     * @return CopilotAdminCatalog|null
+    */
+    public function getCatalog(): ?CopilotAdminCatalog {
+        $val = $this->getBackingStore()->get('catalog');
+        if (is_null($val) || $val instanceof CopilotAdminCatalog) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'catalog'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'catalog' => fn(ParseNode $n) => $o->setCatalog($n->getObjectValue([CopilotAdminCatalog::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([CopilotAdminSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -53,7 +66,16 @@ class CopilotAdmin extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('catalog', $this->getCatalog());
         $writer->writeObjectValue('settings', $this->getSettings());
+    }
+
+    /**
+     * Sets the catalog property value. The catalog property
+     * @param CopilotAdminCatalog|null $value Value to set for the catalog property.
+    */
+    public function setCatalog(?CopilotAdminCatalog $value): void {
+        $this->getBackingStore()->set('catalog', $value);
     }
 
     /**
