@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\GalleryImages\Gal
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\OnPremisesConnections\OnPremisesConnectionsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\ProvisioningPolicies\ProvisioningPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\Report\ReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\ServicePlans\ServicePlansRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VirtualEndpoint\UserSettings\UserSettingsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VirtualEndpoint;
@@ -71,6 +72,13 @@ class VirtualEndpointRequestBuilder extends BaseRequestBuilder
     */
     public function report(): ReportRequestBuilder {
         return new ReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the servicePlans property of the microsoft.graph.virtualEndpoint entity.
+    */
+    public function servicePlans(): ServicePlansRequestBuilder {
+        return new ServicePlansRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

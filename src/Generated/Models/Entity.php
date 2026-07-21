@@ -359,6 +359,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.cloudPcProvisioningPolicy': return new CloudPcProvisioningPolicy();
                 case '#microsoft.graph.cloudPcProvisioningPolicyAssignment': return new CloudPcProvisioningPolicyAssignment();
                 case '#microsoft.graph.cloudPcReport': return new CloudPcReport();
+                case '#microsoft.graph.cloudPcServicePlan': return new CloudPcServicePlan();
                 case '#microsoft.graph.cloudPcUserSetting': return new CloudPcUserSetting();
                 case '#microsoft.graph.cloudPcUserSettingAssignment': return new CloudPcUserSettingAssignment();
                 case '#microsoft.graph.columnDefinition': return new ColumnDefinition();

@@ -104,6 +104,7 @@ class EscapedList extends BaseItem implements Parsable
             'list' => fn(ParseNode $n) => $o->setEscapedList($n->getObjectValue([ListInfo::class, 'createFromDiscriminatorValue'])),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([ListItem::class, 'createFromDiscriminatorValue'])),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([RichLongRunningOperation::class, 'createFromDiscriminatorValue'])),
+            'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfObjectValues([Permission::class, 'createFromDiscriminatorValue'])),
             'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
             'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([Subscription::class, 'createFromDiscriminatorValue'])),
             'system' => fn(ParseNode $n) => $o->setSystem($n->getObjectValue([SystemFacet::class, 'createFromDiscriminatorValue'])),
@@ -136,6 +137,20 @@ class EscapedList extends BaseItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
+    }
+
+    /**
+     * Gets the permissions property value. The permissions property
+     * @return array<Permission>|null
+    */
+    public function getPermissions(): ?array {
+        $val = $this->getBackingStore()->get('permissions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Permission::class);
+            /** @var array<Permission>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissions'");
     }
 
     /**
@@ -189,6 +204,7 @@ class EscapedList extends BaseItem implements Parsable
         $writer->writeObjectValue('list', $this->getEscapedList());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
+        $writer->writeCollectionOfObjectValues('permissions', $this->getPermissions());
         $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
         $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());
         $writer->writeObjectValue('system', $this->getSystem());
@@ -248,6 +264,14 @@ class EscapedList extends BaseItem implements Parsable
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
+    }
+
+    /**
+     * Sets the permissions property value. The permissions property
+     * @param array<Permission>|null $value Value to set for the permissions property.
+    */
+    public function setPermissions(?array $value): void {
+        $this->getBackingStore()->set('permissions', $value);
     }
 
     /**

@@ -101,6 +101,7 @@ class ListItem extends BaseItem implements Parsable
             'documentSetVersions' => fn(ParseNode $n) => $o->setDocumentSetVersions($n->getCollectionOfObjectValues([DocumentSetVersion::class, 'createFromDiscriminatorValue'])),
             'driveItem' => fn(ParseNode $n) => $o->setDriveItem($n->getObjectValue([DriveItem::class, 'createFromDiscriminatorValue'])),
             'fields' => fn(ParseNode $n) => $o->setFields($n->getObjectValue([FieldValueSet::class, 'createFromDiscriminatorValue'])),
+            'permissions' => fn(ParseNode $n) => $o->setPermissions($n->getCollectionOfObjectValues([Permission::class, 'createFromDiscriminatorValue'])),
             'sharepointIds' => fn(ParseNode $n) => $o->setSharepointIds($n->getObjectValue([SharepointIds::class, 'createFromDiscriminatorValue'])),
             'versions' => fn(ParseNode $n) => $o->setVersions($n->getCollectionOfObjectValues([ListItemVersion::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -116,6 +117,20 @@ class ListItem extends BaseItem implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'fields'");
+    }
+
+    /**
+     * Gets the permissions property value. The permissions property
+     * @return array<Permission>|null
+    */
+    public function getPermissions(): ?array {
+        $val = $this->getBackingStore()->get('permissions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Permission::class);
+            /** @var array<Permission>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissions'");
     }
 
     /**
@@ -156,6 +171,7 @@ class ListItem extends BaseItem implements Parsable
         $writer->writeCollectionOfObjectValues('documentSetVersions', $this->getDocumentSetVersions());
         $writer->writeObjectValue('driveItem', $this->getDriveItem());
         $writer->writeObjectValue('fields', $this->getFields());
+        $writer->writeCollectionOfObjectValues('permissions', $this->getPermissions());
         $writer->writeObjectValue('sharepointIds', $this->getSharepointIds());
         $writer->writeCollectionOfObjectValues('versions', $this->getVersions());
     }
@@ -206,6 +222,14 @@ class ListItem extends BaseItem implements Parsable
     */
     public function setFields(?FieldValueSet $value): void {
         $this->getBackingStore()->set('fields', $value);
+    }
+
+    /**
+     * Sets the permissions property value. The permissions property
+     * @param array<Permission>|null $value Value to set for the permissions property.
+    */
+    public function setPermissions(?array $value): void {
+        $this->getBackingStore()->set('permissions', $value);
     }
 
     /**

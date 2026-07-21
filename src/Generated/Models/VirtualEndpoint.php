@@ -81,6 +81,7 @@ class VirtualEndpoint extends Entity implements Parsable
             'onPremisesConnections' => fn(ParseNode $n) => $o->setOnPremisesConnections($n->getCollectionOfObjectValues([CloudPcOnPremisesConnection::class, 'createFromDiscriminatorValue'])),
             'provisioningPolicies' => fn(ParseNode $n) => $o->setProvisioningPolicies($n->getCollectionOfObjectValues([CloudPcProvisioningPolicy::class, 'createFromDiscriminatorValue'])),
             'report' => fn(ParseNode $n) => $o->setReport($n->getObjectValue([CloudPcReport::class, 'createFromDiscriminatorValue'])),
+            'servicePlans' => fn(ParseNode $n) => $o->setServicePlans($n->getCollectionOfObjectValues([CloudPcServicePlan::class, 'createFromDiscriminatorValue'])),
             'userSettings' => fn(ParseNode $n) => $o->setUserSettings($n->getCollectionOfObjectValues([CloudPcUserSetting::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -140,6 +141,20 @@ class VirtualEndpoint extends Entity implements Parsable
     }
 
     /**
+     * Gets the servicePlans property value. A collection of Cloud PC service plans.
+     * @return array<CloudPcServicePlan>|null
+    */
+    public function getServicePlans(): ?array {
+        $val = $this->getBackingStore()->get('servicePlans');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudPcServicePlan::class);
+            /** @var array<CloudPcServicePlan>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePlans'");
+    }
+
+    /**
      * Gets the userSettings property value. A collection of Cloud PC user settings.
      * @return array<CloudPcUserSetting>|null
     */
@@ -166,6 +181,7 @@ class VirtualEndpoint extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('onPremisesConnections', $this->getOnPremisesConnections());
         $writer->writeCollectionOfObjectValues('provisioningPolicies', $this->getProvisioningPolicies());
         $writer->writeObjectValue('report', $this->getReport());
+        $writer->writeCollectionOfObjectValues('servicePlans', $this->getServicePlans());
         $writer->writeCollectionOfObjectValues('userSettings', $this->getUserSettings());
     }
 
@@ -223,6 +239,14 @@ class VirtualEndpoint extends Entity implements Parsable
     */
     public function setReport(?CloudPcReport $value): void {
         $this->getBackingStore()->set('report', $value);
+    }
+
+    /**
+     * Sets the servicePlans property value. A collection of Cloud PC service plans.
+     * @param array<CloudPcServicePlan>|null $value Value to set for the servicePlans property.
+    */
+    public function setServicePlans(?array $value): void {
+        $this->getBackingStore()->set('servicePlans', $value);
     }
 
     /**

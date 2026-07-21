@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Desk extends Place implements Parsable 
 {
@@ -48,6 +49,7 @@ class Desk extends Place implements Parsable
             'heightAdjustableState' => fn(ParseNode $n) => $o->setHeightAdjustableState($n->getEnumValue(PlaceFeatureEnablement::class)),
             'mailboxDetails' => fn(ParseNode $n) => $o->setMailboxDetails($n->getObjectValue([MailboxDetails::class, 'createFromDiscriminatorValue'])),
             'mode' => fn(ParseNode $n) => $o->setMode($n->getObjectValue([PlaceMode::class, 'createFromDiscriminatorValue'])),
+            'servicePlans' => fn(ParseNode $n) => $o->setServicePlans($n->getCollectionOfObjectValues([PlaceServicePlanInfo::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -88,6 +90,20 @@ class Desk extends Place implements Parsable
     }
 
     /**
+     * Gets the servicePlans property value. The service plans associated with the desk.
+     * @return array<PlaceServicePlanInfo>|null
+    */
+    public function getServicePlans(): ?array {
+        $val = $this->getBackingStore()->get('servicePlans');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PlaceServicePlanInfo::class);
+            /** @var array<PlaceServicePlanInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePlans'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -97,6 +113,7 @@ class Desk extends Place implements Parsable
         $writer->writeEnumValue('heightAdjustableState', $this->getHeightAdjustableState());
         $writer->writeObjectValue('mailboxDetails', $this->getMailboxDetails());
         $writer->writeObjectValue('mode', $this->getMode());
+        $writer->writeCollectionOfObjectValues('servicePlans', $this->getServicePlans());
     }
 
     /**
@@ -129,6 +146,14 @@ class Desk extends Place implements Parsable
     */
     public function setMode(?PlaceMode $value): void {
         $this->getBackingStore()->set('mode', $value);
+    }
+
+    /**
+     * Sets the servicePlans property value. The service plans associated with the desk.
+     * @param array<PlaceServicePlanInfo>|null $value Value to set for the servicePlans property.
+    */
+    public function setServicePlans(?array $value): void {
+        $this->getBackingStore()->set('servicePlans', $value);
     }
 
 }

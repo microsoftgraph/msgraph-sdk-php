@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Field
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -80,6 +81,13 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function lastModifiedByUser(): LastModifiedByUserRequestBuilder {
         return new LastModifiedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.listItem entity.
+    */
+    public function permissions(): PermissionsRequestBuilder {
+        return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
