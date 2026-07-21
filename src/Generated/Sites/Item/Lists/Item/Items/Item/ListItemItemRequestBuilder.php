@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Fields\FieldsRequ
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -80,6 +81,13 @@ class ListItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function lastModifiedByUser(): LastModifiedByUserRequestBuilder {
         return new LastModifiedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.listItem entity.
+    */
+    public function permissions(): PermissionsRequestBuilder {
+        return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

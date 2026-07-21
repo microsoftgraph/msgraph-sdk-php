@@ -73,7 +73,6 @@ class Workspace extends Place implements Parsable
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
             'mode' => fn(ParseNode $n) => $o->setMode($n->getObjectValue([PlaceMode::class, 'createFromDiscriminatorValue'])),
             'nickname' => fn(ParseNode $n) => $o->setNickname($n->getStringValue()),
-            'placeId' => fn(ParseNode $n) => $o->setPlaceId($n->getStringValue()),
         ]);
     }
 
@@ -102,18 +101,6 @@ class Workspace extends Place implements Parsable
     }
 
     /**
-     * Gets the placeId property value. An alternative immutable unique identifier of the workspace. Read-only.
-     * @return string|null
-    */
-    public function getPlaceId(): ?string {
-        $val = $this->getBackingStore()->get('placeId');
-        if (is_null($val) || is_string($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'placeId'");
-    }
-
-    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -124,7 +111,6 @@ class Workspace extends Place implements Parsable
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
         $writer->writeObjectValue('mode', $this->getMode());
         $writer->writeStringValue('nickname', $this->getNickname());
-        $writer->writeStringValue('placeId', $this->getPlaceId());
     }
 
     /**
@@ -165,14 +151,6 @@ class Workspace extends Place implements Parsable
     */
     public function setNickname(?string $value): void {
         $this->getBackingStore()->set('nickname', $value);
-    }
-
-    /**
-     * Sets the placeId property value. An alternative immutable unique identifier of the workspace. Read-only.
-     * @param string|null $value Value to set for the placeId property.
-    */
-    public function setPlaceId(?string $value): void {
-        $this->getBackingStore()->set('placeId', $value);
     }
 
 }

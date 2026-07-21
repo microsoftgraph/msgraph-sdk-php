@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Drives\Item\EscapedList\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\LastModifiedByUser\LastModifiedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Permissions\PermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EscapedList;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -71,6 +72,13 @@ class ListRequestBuilder extends BaseRequestBuilder
     */
     public function operations(): OperationsRequestBuilder {
         return new OperationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.list entity.
+    */
+    public function permissions(): PermissionsRequestBuilder {
+        return new PermissionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
