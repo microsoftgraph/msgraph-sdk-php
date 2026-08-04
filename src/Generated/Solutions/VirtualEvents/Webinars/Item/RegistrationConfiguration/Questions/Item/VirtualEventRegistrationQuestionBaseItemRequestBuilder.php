@@ -31,7 +31,7 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
+     * Delete a registration question from a webinar or town hall. The question can either be a predefined registration question or a custom registration question. 
      * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
@@ -75,7 +75,7 @@ class VirtualEventRegistrationQuestionBaseItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Delete a registration question from a webinar. The question can either be a predefined registration question or a custom registration question. 
+     * Delete a registration question from a webinar or town hall. The question can either be a predefined registration question or a custom registration question. 
      * @param VirtualEventRegistrationQuestionBaseItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

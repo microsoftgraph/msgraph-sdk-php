@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
 
+use Microsoft\Graph\Generated\Models\AccessPackageCatalog;
 use Microsoft\Graph\Generated\Models\AccessReviewSet;
 use Microsoft\Graph\Generated\Models\AppConsentApprovalRoute;
 use Microsoft\Graph\Generated\Models\EntitlementManagement;
@@ -14,6 +15,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -85,6 +87,20 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the catalogs property value. The catalogs property
+     * @return array<AccessPackageCatalog>|null
+    */
+    public function getCatalogs(): ?array {
+        $val = $this->getBackingStore()->get('catalogs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageCatalog::class);
+            /** @var array<AccessPackageCatalog>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'catalogs'");
+    }
+
+    /**
      * Gets the entitlementManagement property value. The entitlementManagement property
      * @return EntitlementManagement|null
     */
@@ -105,6 +121,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'accessReviews' => fn(ParseNode $n) => $o->setAccessReviews($n->getObjectValue([AccessReviewSet::class, 'createFromDiscriminatorValue'])),
             'appConsent' => fn(ParseNode $n) => $o->setAppConsent($n->getObjectValue([AppConsentApprovalRoute::class, 'createFromDiscriminatorValue'])),
+            'catalogs' => fn(ParseNode $n) => $o->setCatalogs($n->getCollectionOfObjectValues([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'entitlementManagement' => fn(ParseNode $n) => $o->setEntitlementManagement($n->getObjectValue([EntitlementManagement::class, 'createFromDiscriminatorValue'])),
             'lifecycleWorkflows' => fn(ParseNode $n) => $o->setLifecycleWorkflows($n->getObjectValue([LifecycleWorkflowsContainer::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -168,6 +185,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('accessReviews', $this->getAccessReviews());
         $writer->writeObjectValue('appConsent', $this->getAppConsent());
+        $writer->writeCollectionOfObjectValues('catalogs', $this->getCatalogs());
         $writer->writeObjectValue('entitlementManagement', $this->getEntitlementManagement());
         $writer->writeObjectValue('lifecycleWorkflows', $this->getLifecycleWorkflows());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -206,6 +224,14 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the catalogs property value. The catalogs property
+     * @param array<AccessPackageCatalog>|null $value Value to set for the catalogs property.
+    */
+    public function setCatalogs(?array $value): void {
+        $this->getBackingStore()->set('catalogs', $value);
     }
 
     /**

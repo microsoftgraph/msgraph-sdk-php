@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceR
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Role\Resource\Refresh\RefreshRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Role\Resource\Roles\RolesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Role\Resource\Scopes\ScopesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ResourceRoleScopes\Item\Role\Resource\UploadSessions\UploadSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageResource;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -46,6 +47,13 @@ class ResourceRequestBuilder extends BaseRequestBuilder
     */
     public function scopes(): ScopesRequestBuilder {
         return new ScopesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the uploadSessions property of the microsoft.graph.accessPackageResource entity.
+    */
+    public function uploadSessions(): UploadSessionsRequestBuilder {
+        return new UploadSessionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

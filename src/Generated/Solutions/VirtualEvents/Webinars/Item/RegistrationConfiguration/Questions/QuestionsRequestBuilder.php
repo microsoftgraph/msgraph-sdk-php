@@ -52,7 +52,7 @@ class QuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      * @param QuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistrationQuestionBaseCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class QuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a registration question for a webinar. You can create either a predefined registration question or a custom registration question.
+     * Create a registration question for a webinar or town hall. You can create either a predefined registration question or a custom registration question.
      * @param VirtualEventRegistrationQuestionBase $body The request body
      * @param QuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistrationQuestionBase|null>
@@ -83,7 +83,7 @@ class QuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      * @param QuestionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +104,7 @@ class QuestionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a registration question for a webinar. You can create either a predefined registration question or a custom registration question.
+     * Create a registration question for a webinar or town hall. You can create either a predefined registration question or a custom registration question.
      * @param VirtualEventRegistrationQuestionBase $body The request body
      * @param QuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

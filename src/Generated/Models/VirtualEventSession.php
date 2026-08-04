@@ -26,6 +26,18 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
     }
 
     /**
+     * Gets the capacity property value. Represents the expected number of attendees for the virtual event session.
+     * @return int|null
+    */
+    public function getCapacity(): ?int {
+        $val = $this->getBackingStore()->get('capacity');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'capacity'");
+    }
+
+    /**
      * Gets the endDateTime property value. The virtual event session end time.
      * @return DateTimeTimeZone|null
     */
@@ -44,6 +56,7 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'capacity' => fn(ParseNode $n) => $o->setCapacity($n->getIntegerValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'videoOnDemandWebUrl' => fn(ParseNode $n) => $o->setVideoOnDemandWebUrl($n->getStringValue()),
@@ -80,9 +93,18 @@ class VirtualEventSession extends OnlineMeetingBase implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeIntegerValue('capacity', $this->getCapacity());
         $writer->writeObjectValue('endDateTime', $this->getEndDateTime());
         $writer->writeObjectValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('videoOnDemandWebUrl', $this->getVideoOnDemandWebUrl());
+    }
+
+    /**
+     * Sets the capacity property value. Represents the expected number of attendees for the virtual event session.
+     * @param int|null $value Value to set for the capacity property.
+    */
+    public function setCapacity(?int $value): void {
+        $this->getBackingStore()->set('capacity', $value);
     }
 
     /**

@@ -98,6 +98,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
             'directoryScopeId' => fn(ParseNode $n) => $o->setDirectoryScopeId($n->getStringValue()),
             'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'principalId' => fn(ParseNode $n) => $o->setPrincipalId($n->getStringValue()),
+            'principalOrganizationId' => fn(ParseNode $n) => $o->setPrincipalOrganizationId($n->getStringValue()),
             'roleDefinition' => fn(ParseNode $n) => $o->setRoleDefinition($n->getObjectValue([UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'])),
             'roleDefinitionId' => fn(ParseNode $n) => $o->setRoleDefinitionId($n->getStringValue()),
         ]);
@@ -125,6 +126,18 @@ class UnifiedRoleAssignment extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'principalId'");
+    }
+
+    /**
+     * Gets the principalOrganizationId property value. The principalOrganizationId property
+     * @return string|null
+    */
+    public function getPrincipalOrganizationId(): ?string {
+        $val = $this->getBackingStore()->get('principalOrganizationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalOrganizationId'");
     }
 
     /**
@@ -164,6 +177,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
         $writer->writeStringValue('directoryScopeId', $this->getDirectoryScopeId());
         $writer->writeObjectValue('principal', $this->getPrincipal());
         $writer->writeStringValue('principalId', $this->getPrincipalId());
+        $writer->writeStringValue('principalOrganizationId', $this->getPrincipalOrganizationId());
         $writer->writeObjectValue('roleDefinition', $this->getRoleDefinition());
         $writer->writeStringValue('roleDefinitionId', $this->getRoleDefinitionId());
     }
@@ -222,6 +236,14 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     */
     public function setPrincipalId(?string $value): void {
         $this->getBackingStore()->set('principalId', $value);
+    }
+
+    /**
+     * Sets the principalOrganizationId property value. The principalOrganizationId property
+     * @param string|null $value Value to set for the principalOrganizationId property.
+    */
+    public function setPrincipalOrganizationId(?string $value): void {
+        $this->getBackingStore()->set('principalOrganizationId', $value);
     }
 
     /**

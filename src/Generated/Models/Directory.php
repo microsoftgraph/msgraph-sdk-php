@@ -126,6 +126,7 @@ class Directory extends Entity implements Parsable
             'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
             'publicKeyInfrastructure' => fn(ParseNode $n) => $o->setPublicKeyInfrastructure($n->getObjectValue([PublicKeyInfrastructureRoot::class, 'createFromDiscriminatorValue'])),
             'recovery' => fn(ParseNode $n) => $o->setRecovery($n->getObjectValue([Recovery::class, 'createFromDiscriminatorValue'])),
+            'remoteTenantGroups' => fn(ParseNode $n) => $o->setRemoteTenantGroups($n->getCollectionOfObjectValues([RemoteTenantGroup::class, 'createFromDiscriminatorValue'])),
             'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([CompanySubscription::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -169,6 +170,20 @@ class Directory extends Entity implements Parsable
     }
 
     /**
+     * Gets the remoteTenantGroups property value. Collection of groups in remote Microsoft Entra tenants that are available in the directory.
+     * @return array<RemoteTenantGroup>|null
+    */
+    public function getRemoteTenantGroups(): ?array {
+        $val = $this->getBackingStore()->get('remoteTenantGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RemoteTenantGroup::class);
+            /** @var array<RemoteTenantGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remoteTenantGroups'");
+    }
+
+    /**
      * Gets the subscriptions property value. List of commercial subscriptions that an organization acquired.
      * @return array<CompanySubscription>|null
     */
@@ -197,6 +212,7 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
         $writer->writeObjectValue('publicKeyInfrastructure', $this->getPublicKeyInfrastructure());
         $writer->writeObjectValue('recovery', $this->getRecovery());
+        $writer->writeCollectionOfObjectValues('remoteTenantGroups', $this->getRemoteTenantGroups());
         $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());
     }
 
@@ -270,6 +286,14 @@ class Directory extends Entity implements Parsable
     */
     public function setRecovery(?Recovery $value): void {
         $this->getBackingStore()->set('recovery', $value);
+    }
+
+    /**
+     * Sets the remoteTenantGroups property value. Collection of groups in remote Microsoft Entra tenants that are available in the directory.
+     * @param array<RemoteTenantGroup>|null $value Value to set for the remoteTenantGroups property.
+    */
+    public function setRemoteTenantGroups(?array $value): void {
+        $this->getBackingStore()->set('remoteTenantGroups', $value);
     }
 
     /**

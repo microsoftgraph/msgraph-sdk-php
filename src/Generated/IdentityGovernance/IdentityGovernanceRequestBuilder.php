@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\Catalogs\CatalogsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\LifecycleWorkflowsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\PrivilegedAccessRequestBuilder;
@@ -34,6 +35,13 @@ class IdentityGovernanceRequestBuilder extends BaseRequestBuilder
     */
     public function appConsent(): AppConsentRequestBuilder {
         return new AppConsentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.identityGovernance entity.
+    */
+    public function catalogs(): CatalogsRequestBuilder {
+        return new CatalogsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

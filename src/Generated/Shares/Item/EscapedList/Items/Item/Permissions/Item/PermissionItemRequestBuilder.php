@@ -53,7 +53,7 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      * @param PermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Permission|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      * @param PermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

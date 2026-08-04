@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfi
 use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
 use Microsoft\Graph\Generated\Directory\PublicKeyInfrastructure\PublicKeyInfrastructureRequestBuilder;
 use Microsoft\Graph\Generated\Directory\Recovery\RecoveryRequestBuilder;
+use Microsoft\Graph\Generated\Directory\RemoteTenantGroups\RemoteTenantGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
@@ -88,6 +89,13 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     */
     public function recovery(): RecoveryRequestBuilder {
         return new RecoveryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the remoteTenantGroups property of the microsoft.graph.directory entity.
+    */
+    public function remoteTenantGroups(): RemoteTenantGroupsRequestBuilder {
+        return new RemoteTenantGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

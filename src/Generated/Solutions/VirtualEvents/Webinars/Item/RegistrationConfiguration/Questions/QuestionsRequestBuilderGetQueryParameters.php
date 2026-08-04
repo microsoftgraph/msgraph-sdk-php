@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\VirtualEvents\Webinars\Item\Regist
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+ * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
 */
 class QuestionsRequestBuilderGetQueryParameters 
 {

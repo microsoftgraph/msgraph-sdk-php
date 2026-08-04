@@ -52,7 +52,7 @@ class RegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all registration records of a webinar.
+     * Get a list of all registration records of a webinar or town hall.
      * @param RegistrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistrationCollectionResponse|null>
      * @throws Exception
@@ -67,7 +67,7 @@ class RegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a registration record for a registrant of a webinar. This method registers the person for the webinar. 
+     * Create a registration record for a registrant of a webinar or town hall. This method registers the person for the webinar or town hall. 
      * @param VirtualEventRegistration $body The request body
      * @param RegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<VirtualEventRegistration|null>
@@ -83,7 +83,7 @@ class RegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all registration records of a webinar.
+     * Get a list of all registration records of a webinar or town hall.
      * @param RegistrationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +104,7 @@ class RegistrationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a registration record for a registrant of a webinar. This method registers the person for the webinar. 
+     * Create a registration record for a registrant of a webinar or town hall. This method registers the person for the webinar or town hall. 
      * @param VirtualEventRegistration $body The request body
      * @param RegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

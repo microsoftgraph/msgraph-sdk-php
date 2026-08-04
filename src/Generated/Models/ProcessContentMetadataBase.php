@@ -77,6 +77,18 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
+     * Gets the contentCategory property value. The contentCategory property
+     * @return ContentCategory|null
+    */
+    public function getContentCategory(): ?ContentCategory {
+        $val = $this->getBackingStore()->get('contentCategory');
+        if (is_null($val) || $val instanceof ContentCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentCategory'");
+    }
+
+    /**
      * Gets the correlationId property value. An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
      * @return string|null
     */
@@ -108,6 +120,7 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
         $o = $this;
         return  [
             'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([ContentBase::class, 'createFromDiscriminatorValue'])),
+            'contentCategory' => fn(ParseNode $n) => $o->setContentCategory($n->getEnumValue(ContentCategory::class)),
             'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'identifier' => fn(ParseNode $n) => $o->setIdentifier($n->getStringValue()),
@@ -210,6 +223,7 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('content', $this->getContent());
+        $writer->writeEnumValue('contentCategory', $this->getContentCategory());
         $writer->writeStringValue('correlationId', $this->getCorrelationId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeStringValue('identifier', $this->getIdentifier());
@@ -244,6 +258,14 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     */
     public function setContent(?ContentBase $value): void {
         $this->getBackingStore()->set('content', $value);
+    }
+
+    /**
+     * Sets the contentCategory property value. The contentCategory property
+     * @param ContentCategory|null $value Value to set for the contentCategory property.
+    */
+    public function setContentCategory(?ContentCategory $value): void {
+        $this->getBackingStore()->set('contentCategory', $value);
     }
 
     /**

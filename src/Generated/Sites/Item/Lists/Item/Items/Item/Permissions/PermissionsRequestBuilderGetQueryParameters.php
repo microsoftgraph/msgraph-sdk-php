@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Permissions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get permissions from sites
+ * Get a list of the permission objects associated with a listItem.
 */
 class PermissionsRequestBuilderGetQueryParameters 
 {
