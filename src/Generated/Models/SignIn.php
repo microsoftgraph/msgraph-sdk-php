@@ -65,6 +65,18 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
+     * Gets the authenticationAppDeviceDetails property value. The authenticationAppDeviceDetails property
+     * @return AuthenticationAppDeviceDetails|null
+    */
+    public function getAuthenticationAppDeviceDetails(): ?AuthenticationAppDeviceDetails {
+        $val = $this->getBackingStore()->get('authenticationAppDeviceDetails');
+        if (is_null($val) || $val instanceof AuthenticationAppDeviceDetails) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationAppDeviceDetails'");
+    }
+
+    /**
      * Gets the clientAppUsed property value. Identifies the client used for the sign-in activity. Modern authentication clients include Browser, modern clients. Legacy authentication clients include Exchange ActiveSync, IMAP, MAPI, SMTP, POP, and other clients.  Supports $filter (eq).
      * @return string|null
     */
@@ -134,16 +146,19 @@ class SignIn extends Entity implements Parsable
             'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'appliedConditionalAccessPolicies' => fn(ParseNode $n) => $o->setAppliedConditionalAccessPolicies($n->getCollectionOfObjectValues([AppliedConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
+            'authenticationAppDeviceDetails' => fn(ParseNode $n) => $o->setAuthenticationAppDeviceDetails($n->getObjectValue([AuthenticationAppDeviceDetails::class, 'createFromDiscriminatorValue'])),
             'clientAppUsed' => fn(ParseNode $n) => $o->setClientAppUsed($n->getStringValue()),
             'conditionalAccessStatus' => fn(ParseNode $n) => $o->setConditionalAccessStatus($n->getEnumValue(ConditionalAccessStatus::class)),
             'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'deviceDetail' => fn(ParseNode $n) => $o->setDeviceDetail($n->getObjectValue([DeviceDetail::class, 'createFromDiscriminatorValue'])),
+            'homeTenantId' => fn(ParseNode $n) => $o->setHomeTenantId($n->getStringValue()),
             'ipAddress' => fn(ParseNode $n) => $o->setIpAddress($n->getStringValue()),
             'isInteractive' => fn(ParseNode $n) => $o->setIsInteractive($n->getBooleanValue()),
             'location' => fn(ParseNode $n) => $o->setLocation($n->getObjectValue([SignInLocation::class, 'createFromDiscriminatorValue'])),
             'resourceDisplayName' => fn(ParseNode $n) => $o->setResourceDisplayName($n->getStringValue()),
             'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
+            'resourceTenantId' => fn(ParseNode $n) => $o->setResourceTenantId($n->getStringValue()),
             'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
             'riskEventTypes' => fn(ParseNode $n) => $o->setRiskEventTypes($n->getCollectionOfEnumValues(RiskEventType::class)),
             'riskEventTypes_v2' => function (ParseNode $n) {
@@ -157,11 +172,26 @@ class SignIn extends Entity implements Parsable
             'riskLevelAggregated' => fn(ParseNode $n) => $o->setRiskLevelAggregated($n->getEnumValue(RiskLevel::class)),
             'riskLevelDuringSignIn' => fn(ParseNode $n) => $o->setRiskLevelDuringSignIn($n->getEnumValue(RiskLevel::class)),
             'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
+            'servicePrincipalId' => fn(ParseNode $n) => $o->setServicePrincipalId($n->getStringValue()),
+            'servicePrincipalName' => fn(ParseNode $n) => $o->setServicePrincipalName($n->getStringValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getObjectValue([SignInStatus::class, 'createFromDiscriminatorValue'])),
+            'userAgent' => fn(ParseNode $n) => $o->setUserAgent($n->getStringValue()),
             'userDisplayName' => fn(ParseNode $n) => $o->setUserDisplayName($n->getStringValue()),
             'userId' => fn(ParseNode $n) => $o->setUserId($n->getStringValue()),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the homeTenantId property value. The homeTenantId property
+     * @return string|null
+    */
+    public function getHomeTenantId(): ?string {
+        $val = $this->getBackingStore()->get('homeTenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'homeTenantId'");
     }
 
     /**
@@ -222,6 +252,18 @@ class SignIn extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceId'");
+    }
+
+    /**
+     * Gets the resourceTenantId property value. The resourceTenantId property
+     * @return string|null
+    */
+    public function getResourceTenantId(): ?string {
+        $val = $this->getBackingStore()->get('resourceTenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceTenantId'");
     }
 
     /**
@@ -301,6 +343,30 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
+     * Gets the servicePrincipalId property value. The servicePrincipalId property
+     * @return string|null
+    */
+    public function getServicePrincipalId(): ?string {
+        $val = $this->getBackingStore()->get('servicePrincipalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePrincipalId'");
+    }
+
+    /**
+     * Gets the servicePrincipalName property value. The servicePrincipalName property
+     * @return string|null
+    */
+    public function getServicePrincipalName(): ?string {
+        $val = $this->getBackingStore()->get('servicePrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePrincipalName'");
+    }
+
+    /**
      * Gets the status property value. Sign-in status. Includes the error code and description of the error (if a sign-in failure occurs).  Supports $filter (eq) on errorCode property.
      * @return SignInStatus|null
     */
@@ -310,6 +376,18 @@ class SignIn extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
+    }
+
+    /**
+     * Gets the userAgent property value. The userAgent property
+     * @return string|null
+    */
+    public function getUserAgent(): ?string {
+        $val = $this->getBackingStore()->get('userAgent');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAgent'");
     }
 
     /**
@@ -357,23 +435,29 @@ class SignIn extends Entity implements Parsable
         $writer->writeStringValue('appDisplayName', $this->getAppDisplayName());
         $writer->writeStringValue('appId', $this->getAppId());
         $writer->writeCollectionOfObjectValues('appliedConditionalAccessPolicies', $this->getAppliedConditionalAccessPolicies());
+        $writer->writeObjectValue('authenticationAppDeviceDetails', $this->getAuthenticationAppDeviceDetails());
         $writer->writeStringValue('clientAppUsed', $this->getClientAppUsed());
         $writer->writeEnumValue('conditionalAccessStatus', $this->getConditionalAccessStatus());
         $writer->writeStringValue('correlationId', $this->getCorrelationId());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('deviceDetail', $this->getDeviceDetail());
+        $writer->writeStringValue('homeTenantId', $this->getHomeTenantId());
         $writer->writeStringValue('ipAddress', $this->getIpAddress());
         $writer->writeBooleanValue('isInteractive', $this->getIsInteractive());
         $writer->writeObjectValue('location', $this->getLocation());
         $writer->writeStringValue('resourceDisplayName', $this->getResourceDisplayName());
         $writer->writeStringValue('resourceId', $this->getResourceId());
+        $writer->writeStringValue('resourceTenantId', $this->getResourceTenantId());
         $writer->writeEnumValue('riskDetail', $this->getRiskDetail());
         $writer->writeCollectionOfEnumValues('riskEventTypes', $this->getRiskEventTypes());
         $writer->writeCollectionOfPrimitiveValues('riskEventTypes_v2', $this->getRiskEventTypesV2());
         $writer->writeEnumValue('riskLevelAggregated', $this->getRiskLevelAggregated());
         $writer->writeEnumValue('riskLevelDuringSignIn', $this->getRiskLevelDuringSignIn());
         $writer->writeEnumValue('riskState', $this->getRiskState());
+        $writer->writeStringValue('servicePrincipalId', $this->getServicePrincipalId());
+        $writer->writeStringValue('servicePrincipalName', $this->getServicePrincipalName());
         $writer->writeObjectValue('status', $this->getStatus());
+        $writer->writeStringValue('userAgent', $this->getUserAgent());
         $writer->writeStringValue('userDisplayName', $this->getUserDisplayName());
         $writer->writeStringValue('userId', $this->getUserId());
         $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
@@ -401,6 +485,14 @@ class SignIn extends Entity implements Parsable
     */
     public function setAppliedConditionalAccessPolicies(?array $value): void {
         $this->getBackingStore()->set('appliedConditionalAccessPolicies', $value);
+    }
+
+    /**
+     * Sets the authenticationAppDeviceDetails property value. The authenticationAppDeviceDetails property
+     * @param AuthenticationAppDeviceDetails|null $value Value to set for the authenticationAppDeviceDetails property.
+    */
+    public function setAuthenticationAppDeviceDetails(?AuthenticationAppDeviceDetails $value): void {
+        $this->getBackingStore()->set('authenticationAppDeviceDetails', $value);
     }
 
     /**
@@ -444,6 +536,14 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
+     * Sets the homeTenantId property value. The homeTenantId property
+     * @param string|null $value Value to set for the homeTenantId property.
+    */
+    public function setHomeTenantId(?string $value): void {
+        $this->getBackingStore()->set('homeTenantId', $value);
+    }
+
+    /**
      * Sets the ipAddress property value. IP address of the client used to sign in.  Supports $filter (eq, startsWith).
      * @param string|null $value Value to set for the ipAddress property.
     */
@@ -481,6 +581,14 @@ class SignIn extends Entity implements Parsable
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);
+    }
+
+    /**
+     * Sets the resourceTenantId property value. The resourceTenantId property
+     * @param string|null $value Value to set for the resourceTenantId property.
+    */
+    public function setResourceTenantId(?string $value): void {
+        $this->getBackingStore()->set('resourceTenantId', $value);
     }
 
     /**
@@ -532,11 +640,35 @@ class SignIn extends Entity implements Parsable
     }
 
     /**
+     * Sets the servicePrincipalId property value. The servicePrincipalId property
+     * @param string|null $value Value to set for the servicePrincipalId property.
+    */
+    public function setServicePrincipalId(?string $value): void {
+        $this->getBackingStore()->set('servicePrincipalId', $value);
+    }
+
+    /**
+     * Sets the servicePrincipalName property value. The servicePrincipalName property
+     * @param string|null $value Value to set for the servicePrincipalName property.
+    */
+    public function setServicePrincipalName(?string $value): void {
+        $this->getBackingStore()->set('servicePrincipalName', $value);
+    }
+
+    /**
      * Sets the status property value. Sign-in status. Includes the error code and description of the error (if a sign-in failure occurs).  Supports $filter (eq) on errorCode property.
      * @param SignInStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SignInStatus $value): void {
         $this->getBackingStore()->set('status', $value);
+    }
+
+    /**
+     * Sets the userAgent property value. The userAgent property
+     * @param string|null $value Value to set for the userAgent property.
+    */
+    public function setUserAgent(?string $value): void {
+        $this->getBackingStore()->set('userAgent', $value);
     }
 
     /**

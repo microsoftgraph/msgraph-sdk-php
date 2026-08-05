@@ -147,6 +147,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             'm365CollaborationInbound' => fn(ParseNode $n) => $o->setM365CollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyM365CollaborationInboundSetting::class, 'createFromDiscriminatorValue'])),
             'm365CollaborationOutbound' => fn(ParseNode $n) => $o->setM365CollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyM365CollaborationOutboundSetting::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'serviceProviderConstraints' => fn(ParseNode $n) => $o->setServiceProviderConstraints($n->getObjectValue([ServiceProviderConstraints::class, 'createFromDiscriminatorValue'])),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
             'tenantRestrictions' => fn(ParseNode $n) => $o->setTenantRestrictions($n->getObjectValue([CrossTenantAccessPolicyTenantRestrictions::class, 'createFromDiscriminatorValue'])),
         ];
@@ -237,6 +238,18 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
+     * Gets the serviceProviderConstraints property value. The serviceProviderConstraints property
+     * @return ServiceProviderConstraints|null
+    */
+    public function getServiceProviderConstraints(): ?ServiceProviderConstraints {
+        $val = $this->getBackingStore()->get('serviceProviderConstraints');
+        if (is_null($val) || $val instanceof ServiceProviderConstraints) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceProviderConstraints'");
+    }
+
+    /**
      * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return string|null
     */
@@ -278,6 +291,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
         $writer->writeObjectValue('m365CollaborationInbound', $this->getM365CollaborationInbound());
         $writer->writeObjectValue('m365CollaborationOutbound', $this->getM365CollaborationOutbound());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeObjectValue('serviceProviderConstraints', $this->getServiceProviderConstraints());
         $writer->writeStringValue('tenantId', $this->getTenantId());
         $writer->writeObjectValue('tenantRestrictions', $this->getTenantRestrictions());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -401,6 +415,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the serviceProviderConstraints property value. The serviceProviderConstraints property
+     * @param ServiceProviderConstraints|null $value Value to set for the serviceProviderConstraints property.
+    */
+    public function setServiceProviderConstraints(?ServiceProviderConstraints $value): void {
+        $this->getBackingStore()->set('serviceProviderConstraints', $value);
     }
 
     /**

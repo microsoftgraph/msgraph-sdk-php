@@ -140,7 +140,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the permissions property value. The permissions property
+     * Gets the permissions property value. The set of permissions for the item. Read-only. Nullable.
      * @return array<Permission>|null
     */
     public function getPermissions(): ?array {
@@ -267,7 +267,7 @@ class EscapedList extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the permissions property value. The permissions property
+     * Sets the permissions property value. The set of permissions for the item. Read-only. Nullable.
      * @param array<Permission>|null $value Value to set for the permissions property.
     */
     public function setPermissions(?array $value): void {

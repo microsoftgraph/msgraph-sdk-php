@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\CrossTenantAccessPolicyConfigurationPartner;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\Item\IdentitySynchronization\IdentitySynchronizationRequestBuilder;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\Item\ServiceProviderConstraints\ServiceProviderConstraintsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -22,6 +23,13 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     */
     public function identitySynchronization(): IdentitySynchronizationRequestBuilder {
         return new IdentitySynchronizationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the serviceProviderConstraints property of the microsoft.graph.crossTenantAccessPolicyConfigurationPartner entity.
+    */
+    public function serviceProviderConstraints(): ServiceProviderConstraintsRequestBuilder {
+        return new ServiceProviderConstraintsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

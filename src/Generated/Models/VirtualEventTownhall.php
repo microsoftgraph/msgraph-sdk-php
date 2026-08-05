@@ -39,6 +39,18 @@ class VirtualEventTownhall extends VirtualEvent implements Parsable
     }
 
     /**
+     * Gets the capacity property value. Represents the expected number of attendees for the town hall.
+     * @return int|null
+    */
+    public function getCapacity(): ?int {
+        $val = $this->getBackingStore()->get('capacity');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'capacity'");
+    }
+
+    /**
      * Gets the coOrganizers property value. Identity information of the coorganizers of the town hall.
      * @return array<CommunicationsUserIdentity>|null
     */
@@ -60,9 +72,12 @@ class VirtualEventTownhall extends VirtualEvent implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'audience' => fn(ParseNode $n) => $o->setAudience($n->getEnumValue(MeetingAudience::class)),
+            'capacity' => fn(ParseNode $n) => $o->setCapacity($n->getIntegerValue()),
             'coOrganizers' => fn(ParseNode $n) => $o->setCoOrganizers($n->getCollectionOfObjectValues([CommunicationsUserIdentity::class, 'createFromDiscriminatorValue'])),
             'invitedAttendees' => fn(ParseNode $n) => $o->setInvitedAttendees($n->getCollectionOfObjectValues([Identity::class, 'createFromDiscriminatorValue'])),
             'isInviteOnly' => fn(ParseNode $n) => $o->setIsInviteOnly($n->getBooleanValue()),
+            'registrationConfiguration' => fn(ParseNode $n) => $o->setRegistrationConfiguration($n->getObjectValue([VirtualEventTownhallRegistrationConfiguration::class, 'createFromDiscriminatorValue'])),
+            'registrations' => fn(ParseNode $n) => $o->setRegistrations($n->getCollectionOfObjectValues([VirtualEventRegistration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -93,15 +108,44 @@ class VirtualEventTownhall extends VirtualEvent implements Parsable
     }
 
     /**
+     * Gets the registrationConfiguration property value. Registration configuration of the town hall.
+     * @return VirtualEventTownhallRegistrationConfiguration|null
+    */
+    public function getRegistrationConfiguration(): ?VirtualEventTownhallRegistrationConfiguration {
+        $val = $this->getBackingStore()->get('registrationConfiguration');
+        if (is_null($val) || $val instanceof VirtualEventTownhallRegistrationConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registrationConfiguration'");
+    }
+
+    /**
+     * Gets the registrations property value. Registration records of the town hall.
+     * @return array<VirtualEventRegistration>|null
+    */
+    public function getRegistrations(): ?array {
+        $val = $this->getBackingStore()->get('registrations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VirtualEventRegistration::class);
+            /** @var array<VirtualEventRegistration>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registrations'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('audience', $this->getAudience());
+        $writer->writeIntegerValue('capacity', $this->getCapacity());
         $writer->writeCollectionOfObjectValues('coOrganizers', $this->getCoOrganizers());
         $writer->writeCollectionOfObjectValues('invitedAttendees', $this->getInvitedAttendees());
         $writer->writeBooleanValue('isInviteOnly', $this->getIsInviteOnly());
+        $writer->writeObjectValue('registrationConfiguration', $this->getRegistrationConfiguration());
+        $writer->writeCollectionOfObjectValues('registrations', $this->getRegistrations());
     }
 
     /**
@@ -110,6 +154,14 @@ class VirtualEventTownhall extends VirtualEvent implements Parsable
     */
     public function setAudience(?MeetingAudience $value): void {
         $this->getBackingStore()->set('audience', $value);
+    }
+
+    /**
+     * Sets the capacity property value. Represents the expected number of attendees for the town hall.
+     * @param int|null $value Value to set for the capacity property.
+    */
+    public function setCapacity(?int $value): void {
+        $this->getBackingStore()->set('capacity', $value);
     }
 
     /**
@@ -134,6 +186,22 @@ class VirtualEventTownhall extends VirtualEvent implements Parsable
     */
     public function setIsInviteOnly(?bool $value): void {
         $this->getBackingStore()->set('isInviteOnly', $value);
+    }
+
+    /**
+     * Sets the registrationConfiguration property value. Registration configuration of the town hall.
+     * @param VirtualEventTownhallRegistrationConfiguration|null $value Value to set for the registrationConfiguration property.
+    */
+    public function setRegistrationConfiguration(?VirtualEventTownhallRegistrationConfiguration $value): void {
+        $this->getBackingStore()->set('registrationConfiguration', $value);
+    }
+
+    /**
+     * Sets the registrations property value. Registration records of the town hall.
+     * @param array<VirtualEventRegistration>|null $value Value to set for the registrations property.
+    */
+    public function setRegistrations(?array $value): void {
+        $this->getBackingStore()->set('registrations', $value);
     }
 
 }

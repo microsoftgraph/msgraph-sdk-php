@@ -26,6 +26,7 @@ class VirtualEventRegistrationConfiguration extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.virtualEventTownhallRegistrationConfiguration': return new VirtualEventTownhallRegistrationConfiguration();
                 case '#microsoft.graph.virtualEventWebinarRegistrationConfiguration': return new VirtualEventWebinarRegistrationConfiguration();
             }
         }
@@ -52,9 +53,35 @@ class VirtualEventRegistrationConfiguration extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'capacity' => fn(ParseNode $n) => $o->setCapacity($n->getIntegerValue()),
+            'isManualApprovalEnabled' => fn(ParseNode $n) => $o->setIsManualApprovalEnabled($n->getBooleanValue()),
+            'isWaitlistEnabled' => fn(ParseNode $n) => $o->setIsWaitlistEnabled($n->getBooleanValue()),
             'questions' => fn(ParseNode $n) => $o->setQuestions($n->getCollectionOfObjectValues([VirtualEventRegistrationQuestionBase::class, 'createFromDiscriminatorValue'])),
             'registrationWebUrl' => fn(ParseNode $n) => $o->setRegistrationWebUrl($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the isManualApprovalEnabled property value. Indicates whether registrations require organizer approval before a participant is confirmed.
+     * @return bool|null
+    */
+    public function getIsManualApprovalEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isManualApprovalEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManualApprovalEnabled'");
+    }
+
+    /**
+     * Gets the isWaitlistEnabled property value. Indicates whether more registrants are automatically placed on a waitlist when capacity is reached.
+     * @return bool|null
+    */
+    public function getIsWaitlistEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isWaitlistEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isWaitlistEnabled'");
     }
 
     /**
@@ -90,6 +117,8 @@ class VirtualEventRegistrationConfiguration extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeIntegerValue('capacity', $this->getCapacity());
+        $writer->writeBooleanValue('isManualApprovalEnabled', $this->getIsManualApprovalEnabled());
+        $writer->writeBooleanValue('isWaitlistEnabled', $this->getIsWaitlistEnabled());
         $writer->writeCollectionOfObjectValues('questions', $this->getQuestions());
         $writer->writeStringValue('registrationWebUrl', $this->getRegistrationWebUrl());
     }
@@ -100,6 +129,22 @@ class VirtualEventRegistrationConfiguration extends Entity implements Parsable
     */
     public function setCapacity(?int $value): void {
         $this->getBackingStore()->set('capacity', $value);
+    }
+
+    /**
+     * Sets the isManualApprovalEnabled property value. Indicates whether registrations require organizer approval before a participant is confirmed.
+     * @param bool|null $value Value to set for the isManualApprovalEnabled property.
+    */
+    public function setIsManualApprovalEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isManualApprovalEnabled', $value);
+    }
+
+    /**
+     * Sets the isWaitlistEnabled property value. Indicates whether more registrants are automatically placed on a waitlist when capacity is reached.
+     * @param bool|null $value Value to set for the isWaitlistEnabled property.
+    */
+    public function setIsWaitlistEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isWaitlistEnabled', $value);
     }
 
     /**

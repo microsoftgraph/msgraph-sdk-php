@@ -868,6 +868,7 @@ class User extends DirectoryObject implements Parsable
                 $this->setSkills($val);
             },
             'solutions' => fn(ParseNode $n) => $o->setSolutions($n->getObjectValue([UserSolutionRoot::class, 'createFromDiscriminatorValue'])),
+            'sponsorOf' => fn(ParseNode $n) => $o->setSponsorOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'sponsors' => fn(ParseNode $n) => $o->setSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
             'streetAddress' => fn(ParseNode $n) => $o->setStreetAddress($n->getStringValue()),
@@ -1830,6 +1831,20 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the sponsorOf property value. Directory objects that this user sponsors, such as guest users, agent users, agent blueprints, agent blueprint principals, and agent identities. If the user is a member of a group that's a sponsor, the objects sponsored by that group are also included. Read-only. Nullable. Supports $filter, $count, $select, $expand, $top, and $skip.
+     * @return array<DirectoryObject>|null
+    */
+    public function getSponsorOf(): ?array {
+        $val = $this->getBackingStore()->get('sponsorOf');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sponsorOf'");
+    }
+
+    /**
      * Gets the sponsors property value. The users and groups responsible for this guest's privileges in the tenant and keeping the guest's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return array<DirectoryObject>|null
     */
@@ -2083,6 +2098,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeDateTimeValue('signInSessionsValidFromDateTime', $this->getSignInSessionsValidFromDateTime());
         $writer->writeCollectionOfPrimitiveValues('skills', $this->getSkills());
         $writer->writeObjectValue('solutions', $this->getSolutions());
+        $writer->writeCollectionOfObjectValues('sponsorOf', $this->getSponsorOf());
         $writer->writeCollectionOfObjectValues('sponsors', $this->getSponsors());
         $writer->writeStringValue('state', $this->getState());
         $writer->writeStringValue('streetAddress', $this->getStreetAddress());
@@ -3085,6 +3101,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setSolutions(?UserSolutionRoot $value): void {
         $this->getBackingStore()->set('solutions', $value);
+    }
+
+    /**
+     * Sets the sponsorOf property value. Directory objects that this user sponsors, such as guest users, agent users, agent blueprints, agent blueprint principals, and agent identities. If the user is a member of a group that's a sponsor, the objects sponsored by that group are also included. Read-only. Nullable. Supports $filter, $count, $select, $expand, $top, and $skip.
+     * @param array<DirectoryObject>|null $value Value to set for the sponsorOf property.
+    */
+    public function setSponsorOf(?array $value): void {
+        $this->getBackingStore()->set('sponsorOf', $value);
     }
 
     /**

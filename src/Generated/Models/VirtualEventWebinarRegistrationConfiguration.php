@@ -31,33 +31,7 @@ class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRegistrat
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'isManualApprovalEnabled' => fn(ParseNode $n) => $o->setIsManualApprovalEnabled($n->getBooleanValue()),
-            'isWaitlistEnabled' => fn(ParseNode $n) => $o->setIsWaitlistEnabled($n->getBooleanValue()),
         ]);
-    }
-
-    /**
-     * Gets the isManualApprovalEnabled property value. The isManualApprovalEnabled property
-     * @return bool|null
-    */
-    public function getIsManualApprovalEnabled(): ?bool {
-        $val = $this->getBackingStore()->get('isManualApprovalEnabled');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManualApprovalEnabled'");
-    }
-
-    /**
-     * Gets the isWaitlistEnabled property value. The isWaitlistEnabled property
-     * @return bool|null
-    */
-    public function getIsWaitlistEnabled(): ?bool {
-        $val = $this->getBackingStore()->get('isWaitlistEnabled');
-        if (is_null($val) || is_bool($val)) {
-            return $val;
-        }
-        throw new \UnexpectedValueException("Invalid type found in backing store for 'isWaitlistEnabled'");
     }
 
     /**
@@ -66,24 +40,6 @@ class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRegistrat
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
-        $writer->writeBooleanValue('isManualApprovalEnabled', $this->getIsManualApprovalEnabled());
-        $writer->writeBooleanValue('isWaitlistEnabled', $this->getIsWaitlistEnabled());
-    }
-
-    /**
-     * Sets the isManualApprovalEnabled property value. The isManualApprovalEnabled property
-     * @param bool|null $value Value to set for the isManualApprovalEnabled property.
-    */
-    public function setIsManualApprovalEnabled(?bool $value): void {
-        $this->getBackingStore()->set('isManualApprovalEnabled', $value);
-    }
-
-    /**
-     * Sets the isWaitlistEnabled property value. The isWaitlistEnabled property
-     * @param bool|null $value Value to set for the isWaitlistEnabled property.
-    */
-    public function setIsWaitlistEnabled(?bool $value): void {
-        $this->getBackingStore()->set('isWaitlistEnabled', $value);
     }
 
 }

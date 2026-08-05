@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Permissions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get permissions from shares
+ * The set of permissions for the item. Read-only. Nullable.
 */
 class PermissionsRequestBuilderGetQueryParameters 
 {

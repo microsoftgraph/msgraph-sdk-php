@@ -23,6 +23,13 @@ class AccessPackageResource extends Entity implements Parsable
      * @return AccessPackageResource
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AccessPackageResource {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.customDataProvidedResource': return new CustomDataProvidedResource();
+            }
+        }
         return new AccessPackageResource();
     }
 
@@ -105,6 +112,7 @@ class AccessPackageResource extends Entity implements Parsable
             'originSystem' => fn(ParseNode $n) => $o->setOriginSystem($n->getStringValue()),
             'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfObjectValues([AccessPackageResourceRole::class, 'createFromDiscriminatorValue'])),
             'scopes' => fn(ParseNode $n) => $o->setScopes($n->getCollectionOfObjectValues([AccessPackageResourceScope::class, 'createFromDiscriminatorValue'])),
+            'uploadSessions' => fn(ParseNode $n) => $o->setUploadSessions($n->getCollectionOfObjectValues([CustomDataProvidedResourceUploadSession::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -173,6 +181,20 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
+     * Gets the uploadSessions property value. The upload sessions for uploading external access data to this resource through the Bring Your Own Data (BYOD) flow.
+     * @return array<CustomDataProvidedResourceUploadSession>|null
+    */
+    public function getUploadSessions(): ?array {
+        $val = $this->getBackingStore()->get('uploadSessions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CustomDataProvidedResourceUploadSession::class);
+            /** @var array<CustomDataProvidedResourceUploadSession>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uploadSessions'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -188,6 +210,7 @@ class AccessPackageResource extends Entity implements Parsable
         $writer->writeStringValue('originSystem', $this->getOriginSystem());
         $writer->writeCollectionOfObjectValues('roles', $this->getRoles());
         $writer->writeCollectionOfObjectValues('scopes', $this->getScopes());
+        $writer->writeCollectionOfObjectValues('uploadSessions', $this->getUploadSessions());
     }
 
     /**
@@ -268,6 +291,14 @@ class AccessPackageResource extends Entity implements Parsable
     */
     public function setScopes(?array $value): void {
         $this->getBackingStore()->set('scopes', $value);
+    }
+
+    /**
+     * Sets the uploadSessions property value. The upload sessions for uploading external access data to this resource through the Bring Your Own Data (BYOD) flow.
+     * @param array<CustomDataProvidedResourceUploadSession>|null $value Value to set for the uploadSessions property.
+    */
+    public function setUploadSessions(?array $value): void {
+        $this->getBackingStore()->set('uploadSessions', $value);
     }
 
 }

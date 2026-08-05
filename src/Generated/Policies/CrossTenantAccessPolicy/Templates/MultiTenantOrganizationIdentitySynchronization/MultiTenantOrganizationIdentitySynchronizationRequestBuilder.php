@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\MultiTenantOrganizationIdentitySyncPolicyTemplate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Templates\MultiTenantOrganizationIdentitySynchronization\ResetToDefaultSettings\ResetToDefaultSettingsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -16,6 +17,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class MultiTenantOrganizationIdentitySynchronizationRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the resetToDefaultSettings method.
+    */
+    public function resetToDefaultSettings(): ResetToDefaultSettingsRequestBuilder {
+        return new ResetToDefaultSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new MultiTenantOrganizationIdentitySynchronizationRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

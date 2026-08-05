@@ -7,6 +7,10 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VirtualEventTownhall;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\Presenters\PresentersRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\RegistrationConfiguration\RegistrationConfigurationRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\Registrations\RegistrationsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\RegistrationsWithEmail\RegistrationsWithEmailRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\RegistrationsWithUserId\RegistrationsWithUserIdRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\Townhalls\Item\Sessions\SessionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,6 +27,20 @@ class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder
     */
     public function presenters(): PresentersRequestBuilder {
         return new PresentersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the registrationConfiguration property of the microsoft.graph.virtualEventTownhall entity.
+    */
+    public function registrationConfiguration(): RegistrationConfigurationRequestBuilder {
+        return new RegistrationConfigurationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventTownhall entity.
+    */
+    public function registrations(): RegistrationsRequestBuilder {
+        return new RegistrationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -89,6 +107,24 @@ class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [VirtualEventTownhall::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventTownhall entity.
+     * @param string $email Alternate key of virtualEventRegistration
+     * @return RegistrationsWithEmailRequestBuilder
+    */
+    public function registrationsWithEmail(string $email): RegistrationsWithEmailRequestBuilder {
+        return new RegistrationsWithEmailRequestBuilder($this->pathParameters, $this->requestAdapter, $email);
+    }
+
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventTownhall entity.
+     * @param string $userId Alternate key of virtualEventRegistration
+     * @return RegistrationsWithUserIdRequestBuilder
+    */
+    public function registrationsWithUserId(string $userId): RegistrationsWithUserIdRequestBuilder {
+        return new RegistrationsWithUserIdRequestBuilder($this->pathParameters, $this->requestAdapter, $userId);
     }
 
     /**

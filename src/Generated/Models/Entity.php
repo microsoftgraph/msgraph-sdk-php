@@ -398,6 +398,10 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.crossTenantAccessPolicyConfigurationDefault': return new CrossTenantAccessPolicyConfigurationDefault();
                 case '#microsoft.graph.customAuthenticationExtension': return new CustomAuthenticationExtension();
                 case '#microsoft.graph.customCalloutExtension': return new CustomCalloutExtension();
+                case '#microsoft.graph.customDataProvidedResource': return new CustomDataProvidedResource();
+                case '#microsoft.graph.customDataProvidedResourceAccessReviewUploadSession': return new CustomDataProvidedResourceAccessReviewUploadSession();
+                case '#microsoft.graph.customDataProvidedResourceFile': return new CustomDataProvidedResourceFile();
+                case '#microsoft.graph.customDataProvidedResourceUploadSession': return new CustomDataProvidedResourceUploadSession();
                 case '#microsoft.graph.customExtensionStageSetting': return new CustomExtensionStageSetting();
                 case '#microsoft.graph.customSecurityAttributeDefinition': return new CustomSecurityAttributeDefinition();
                 case '#microsoft.graph.dataPolicyOperation': return new DataPolicyOperation();
@@ -410,6 +414,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.delegatedAdminRelationshipOperation': return new DelegatedAdminRelationshipOperation();
                 case '#microsoft.graph.delegatedAdminRelationshipRequest': return new DelegatedAdminRelationshipRequest();
                 case '#microsoft.graph.delegatedAdminServiceManagementDetail': return new DelegatedAdminServiceManagementDetail();
+                case '#microsoft.graph.delegatedAdminServiceProviderConstraints': return new DelegatedAdminServiceProviderConstraints();
                 case '#microsoft.graph.delegatedPermissionClassification': return new DelegatedPermissionClassification();
                 case '#microsoft.graph.deletedChat': return new DeletedChat();
                 case '#microsoft.graph.deletedItemContainer': return new DeletedItemContainer();
@@ -888,6 +893,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.relyingPartyDetailedSummary': return new RelyingPartyDetailedSummary();
                 case '#microsoft.graph.remoteAssistancePartner': return new RemoteAssistancePartner();
                 case '#microsoft.graph.remoteDesktopSecurityConfiguration': return new RemoteDesktopSecurityConfiguration();
+                case '#microsoft.graph.remoteTenantGroup': return new RemoteTenantGroup();
                 case '#microsoft.graph.reportsRoot': return new ReportsRoot();
                 case '#microsoft.graph.request': return new Request();
                 case '#microsoft.graph.resellerDelegatedAdminRelationship': return new ResellerDelegatedAdminRelationship();
@@ -1023,6 +1029,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.serviceHealthIssue': return new ServiceHealthIssue();
                 case '#microsoft.graph.servicePrincipal': return new ServicePrincipal();
                 case '#microsoft.graph.servicePrincipalRiskDetection': return new ServicePrincipalRiskDetection();
+                case '#microsoft.graph.serviceProviderConstraints': return new ServiceProviderConstraints();
                 case '#microsoft.graph.serviceStorageQuotaBreakdown': return new ServiceStorageQuotaBreakdown();
                 case '#microsoft.graph.serviceUpdateMessage': return new ServiceUpdateMessage();
                 case '#microsoft.graph.settingStateDeviceSummary': return new SettingStateDeviceSummary();
@@ -1225,6 +1232,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.virtualEventSession': return new VirtualEventSession();
                 case '#microsoft.graph.virtualEventsRoot': return new VirtualEventsRoot();
                 case '#microsoft.graph.virtualEventTownhall': return new VirtualEventTownhall();
+                case '#microsoft.graph.virtualEventTownhallRegistrationConfiguration': return new VirtualEventTownhallRegistrationConfiguration();
                 case '#microsoft.graph.virtualEventWebinar': return new VirtualEventWebinar();
                 case '#microsoft.graph.virtualEventWebinarRegistrationConfiguration': return new VirtualEventWebinarRegistrationConfiguration();
                 case '#microsoft.graph.voiceAuthenticationMethodConfiguration': return new VoiceAuthenticationMethodConfiguration();

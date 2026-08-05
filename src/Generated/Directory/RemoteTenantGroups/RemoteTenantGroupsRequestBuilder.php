@@ -1,0 +1,134 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Directory\RemoteTenantGroups;
+
+use Exception;
+use Http\Promise\Promise;
+use Microsoft\Graph\Generated\Directory\RemoteTenantGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Directory\RemoteTenantGroups\Item\RemoteTenantGroupItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Models\RemoteTenantGroup;
+use Microsoft\Graph\Generated\Models\RemoteTenantGroupCollectionResponse;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
+use Microsoft\Kiota\Abstractions\HttpMethod;
+use Microsoft\Kiota\Abstractions\RequestAdapter;
+use Microsoft\Kiota\Abstractions\RequestInformation;
+
+/**
+ * Provides operations to manage the remoteTenantGroups property of the microsoft.graph.directory entity.
+*/
+class RemoteTenantGroupsRequestBuilder extends BaseRequestBuilder 
+{
+    /**
+     * Provides operations to count the resources in the collection.
+    */
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the remoteTenantGroups property of the microsoft.graph.directory entity.
+     * @param string $remoteTenantGroupId The unique identifier of remoteTenantGroup
+     * @return RemoteTenantGroupItemRequestBuilder
+    */
+    public function byRemoteTenantGroupId(string $remoteTenantGroupId): RemoteTenantGroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['remoteTenantGroup%2Did'] = $remoteTenantGroupId;
+        return new RemoteTenantGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Instantiates a new RemoteTenantGroupsRequestBuilder and sets the default values.
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
+     * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+    */
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
+        parent::__construct($requestAdapter, [], '{+baseurl}/directory/remoteTenantGroups{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}');
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
+    }
+
+    /**
+     * Get a list of the remoteTenantGroup objects and their properties.
+     * @param RemoteTenantGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<RemoteTenantGroupCollectionResponse|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/directory-list-remotetenantgroups?view=graph-rest-1.0 Find more info here
+    */
+    public function get(?RemoteTenantGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toGetRequestInformation($requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [RemoteTenantGroupCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Create new navigation property to remoteTenantGroups for directory
+     * @param RemoteTenantGroup $body The request body
+     * @param RemoteTenantGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<RemoteTenantGroup|null>
+     * @throws Exception
+    */
+    public function post(RemoteTenantGroup $body, ?RemoteTenantGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [RemoteTenantGroup::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Get a list of the remoteTenantGroup objects and their properties.
+     * @param RemoteTenantGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toGetRequestInformation(?RemoteTenantGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::GET;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            if ($requestConfiguration->queryParameters !== null) {
+                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
+            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        return $requestInfo;
+    }
+
+    /**
+     * Create new navigation property to remoteTenantGroups for directory
+     * @param RemoteTenantGroup $body The request body
+     * @param RemoteTenantGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPostRequestInformation(RemoteTenantGroup $body, ?RemoteTenantGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::POST;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
+        return $requestInfo;
+    }
+
+    /**
+     * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
+     * @param string $rawUrl The raw URL to use for the request builder.
+     * @return RemoteTenantGroupsRequestBuilder
+    */
+    public function withUrl(string $rawUrl): RemoteTenantGroupsRequestBuilder {
+        return new RemoteTenantGroupsRequestBuilder($rawUrl, $this->requestAdapter);
+    }
+
+}

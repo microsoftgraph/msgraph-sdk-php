@@ -80,6 +80,7 @@ use Microsoft\Graph\Generated\Users\Item\SendMail\SendMailRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ServiceProvisioningErrors\ServiceProvisioningErrorsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Settings\SettingsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Solutions\SolutionsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\SponsorOf\SponsorOfRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Sponsors\SponsorsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\TeamworkRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\TodoRequestBuilder;
@@ -598,6 +599,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     */
     public function solutions(): SolutionsRequestBuilder {
         return new SolutionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sponsorOf property of the microsoft.graph.user entity.
+    */
+    public function sponsorOf(): SponsorOfRequestBuilder {
+        return new SponsorOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
