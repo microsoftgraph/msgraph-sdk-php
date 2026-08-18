@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\Recovery\Jobs\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get jobs from directory
+ * Collection of all recovery jobs (both preview and recovery) for the tenant.
 */
 class RecoveryJobBaseItemRequestBuilderGetQueryParameters 
 {

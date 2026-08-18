@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\Recovery\Snapshots\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get snapshots from directory
+ * Collection of backup snapshots available for the tenant.
 */
 class SnapshotItemRequestBuilderGetQueryParameters 
 {

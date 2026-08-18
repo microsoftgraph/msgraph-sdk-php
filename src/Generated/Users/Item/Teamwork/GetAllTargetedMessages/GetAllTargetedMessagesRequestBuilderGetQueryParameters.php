@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork\GetAllTargetedMessages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function getAllTargetedMessages
+ * Get all targeted messages sent to a specific user in group chats and channels.
 */
 class GetAllTargetedMessagesRequestBuilderGetQueryParameters 
 {

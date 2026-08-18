@@ -57,7 +57,7 @@ class EntityTypeAndIds implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the entityIds property value. The entityIds property
+     * Gets the entityIds property value. The list of entity IDs for the specified entity type.
      * @return array<string>|null
     */
     public function getEntityIds(): ?array {
@@ -142,7 +142,7 @@ class EntityTypeAndIds implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the entityIds property value. The entityIds property
+     * Sets the entityIds property value. The list of entity IDs for the specified entity type.
      * @param array<string>|null $value Value to set for the entityIds property.
     */
     public function setEntityIds(?array $value): void {

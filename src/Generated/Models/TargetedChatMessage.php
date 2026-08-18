@@ -37,7 +37,7 @@ class TargetedChatMessage extends ChatMessage implements Parsable
     }
 
     /**
-     * Gets the recipient property value. The recipient property
+     * Gets the recipient property value. The intended recipient of the targeted message.
      * @return Identity|null
     */
     public function getRecipient(): ?Identity {
@@ -58,7 +58,7 @@ class TargetedChatMessage extends ChatMessage implements Parsable
     }
 
     /**
-     * Sets the recipient property value. The recipient property
+     * Sets the recipient property value. The intended recipient of the targeted message.
      * @param Identity|null $value Value to set for the recipient property.
     */
     public function setRecipient(?Identity $value): void {

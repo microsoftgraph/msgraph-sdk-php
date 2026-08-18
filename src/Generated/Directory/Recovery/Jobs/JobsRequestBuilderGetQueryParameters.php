@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\Recovery\Jobs;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get jobs from directory
+ * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
 */
 class JobsRequestBuilderGetQueryParameters 
 {

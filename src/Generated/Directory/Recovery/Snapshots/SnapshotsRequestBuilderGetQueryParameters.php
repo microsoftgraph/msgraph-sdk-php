@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\Recovery\Snapshots;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get snapshots from directory
+ * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
 */
 class SnapshotsRequestBuilderGetQueryParameters 
 {

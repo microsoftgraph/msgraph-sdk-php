@@ -236,7 +236,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the targetedMessages property value. The targetedMessages property
+     * Gets the targetedMessages property value. A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can't expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @return array<TargetedChatMessage>|null
     */
     public function getTargetedMessages(): ?array {
@@ -437,7 +437,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the targetedMessages property value. The targetedMessages property
+     * Sets the targetedMessages property value. A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can't expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @param array<TargetedChatMessage>|null $value Value to set for the targetedMessages property.
     */
     public function setTargetedMessages(?array $value): void {

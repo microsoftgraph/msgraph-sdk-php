@@ -31,7 +31,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the administrativeUnitIdFilters property value. The administrative units tagged to an audit log record.
+     * Gets the administrativeUnitIdFilters property value. The collection of administrative unit IDs to filter on.
      * @return array<string>|null
     */
     public function getAdministrativeUnitIdFilters(): ?array {
@@ -45,7 +45,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The display name of the saved audit log query.
+     * Gets the displayName property value. The display name of the audit log query.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -122,7 +122,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the filterEndDateTime property value. The end date of the date range in the query.
+     * Gets the filterEndDateTime property value. The end date and time of the audit log query filter.
      * @return DateTime|null
     */
     public function getFilterEndDateTime(): ?DateTime {
@@ -134,7 +134,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the filterStartDateTime property value. The start date of the date range in the query.
+     * Gets the filterStartDateTime property value. The start date and time of the audit log query filter.
      * @return DateTime|null
     */
     public function getFilterStartDateTime(): ?DateTime {
@@ -146,7 +146,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the ipAddressFilters property value. The IP address of the device that was used when the activity was logged.
+     * Gets the ipAddressFilters property value. The collection of IP addresses to filter on.
      * @return array<string>|null
     */
     public function getIpAddressFilters(): ?array {
@@ -160,7 +160,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
+     * Gets the keywordFilter property value. The keyword to filter on.
      * @return string|null
     */
     public function getKeywordFilter(): ?string {
@@ -172,7 +172,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the objectIdFilters property value. For SharePoint and OneDrive for Business activity, the full path name of the file or folder accessed by the user. For Exchange admin audit logging, the name of the object that was modified by the cmdlet.
+     * Gets the objectIdFilters property value. The collection of object IDs to filter on.
      * @return array<string>|null
     */
     public function getObjectIdFilters(): ?array {
@@ -186,7 +186,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the operationFilters property value. The name of the user or admin activity. For a description of the most common operations/activities, see Search the audit log in the Office 365 Protection Center.
+     * Gets the operationFilters property value. The collection of operations to filter on.
      * @return array<string>|null
     */
     public function getOperationFilters(): ?array {
@@ -200,7 +200,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the records property value. An individual audit log record.
+     * Gets the records property value. The collection of audit log records retrieved by the query.
      * @return array<AuditLogRecord>|null
     */
     public function getRecords(): ?array {
@@ -214,7 +214,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the recordTypeFilters property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Gets the recordTypeFilters property value. The collection of record types to filter on.
      * @return array<AuditLogRecordType>|null
     */
     public function getRecordTypeFilters(): ?array {
@@ -228,7 +228,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceFilters property value. The serviceFilters property
+     * Gets the serviceFilters property value. The collection of services to filter on.
      * @return array<string>|null
     */
     public function getServiceFilters(): ?array {
@@ -242,7 +242,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. Describes the current status of the query. The possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
+     * Gets the status property value. The status of the audit log query. Possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
      * @return AuditLogQueryStatus|null
     */
     public function getStatus(): ?AuditLogQueryStatus {
@@ -254,7 +254,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the userPrincipalNameFilters property value. The UPN (user principal name) of the user who performed the action (specified in the operation property) that resulted in the record being logged; for example, myname@mydomain_name.
+     * Gets the userPrincipalNameFilters property value. The collection of user principal names to filter on.
      * @return array<string>|null
     */
     public function getUserPrincipalNameFilters(): ?array {
@@ -289,7 +289,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the administrativeUnitIdFilters property value. The administrative units tagged to an audit log record.
+     * Sets the administrativeUnitIdFilters property value. The collection of administrative unit IDs to filter on.
      * @param array<string>|null $value Value to set for the administrativeUnitIdFilters property.
     */
     public function setAdministrativeUnitIdFilters(?array $value): void {
@@ -297,7 +297,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The display name of the saved audit log query.
+     * Sets the displayName property value. The display name of the audit log query.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -305,7 +305,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the filterEndDateTime property value. The end date of the date range in the query.
+     * Sets the filterEndDateTime property value. The end date and time of the audit log query filter.
      * @param DateTime|null $value Value to set for the filterEndDateTime property.
     */
     public function setFilterEndDateTime(?DateTime $value): void {
@@ -313,7 +313,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the filterStartDateTime property value. The start date of the date range in the query.
+     * Sets the filterStartDateTime property value. The start date and time of the audit log query filter.
      * @param DateTime|null $value Value to set for the filterStartDateTime property.
     */
     public function setFilterStartDateTime(?DateTime $value): void {
@@ -321,7 +321,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the ipAddressFilters property value. The IP address of the device that was used when the activity was logged.
+     * Sets the ipAddressFilters property value. The collection of IP addresses to filter on.
      * @param array<string>|null $value Value to set for the ipAddressFilters property.
     */
     public function setIpAddressFilters(?array $value): void {
@@ -329,7 +329,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the keywordFilter property value. Free text field to search non-indexed properties of the audit log.
+     * Sets the keywordFilter property value. The keyword to filter on.
      * @param string|null $value Value to set for the keywordFilter property.
     */
     public function setKeywordFilter(?string $value): void {
@@ -337,7 +337,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the objectIdFilters property value. For SharePoint and OneDrive for Business activity, the full path name of the file or folder accessed by the user. For Exchange admin audit logging, the name of the object that was modified by the cmdlet.
+     * Sets the objectIdFilters property value. The collection of object IDs to filter on.
      * @param array<string>|null $value Value to set for the objectIdFilters property.
     */
     public function setObjectIdFilters(?array $value): void {
@@ -345,7 +345,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the operationFilters property value. The name of the user or admin activity. For a description of the most common operations/activities, see Search the audit log in the Office 365 Protection Center.
+     * Sets the operationFilters property value. The collection of operations to filter on.
      * @param array<string>|null $value Value to set for the operationFilters property.
     */
     public function setOperationFilters(?array $value): void {
@@ -353,7 +353,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the records property value. An individual audit log record.
+     * Sets the records property value. The collection of audit log records retrieved by the query.
      * @param array<AuditLogRecord>|null $value Value to set for the records property.
     */
     public function setRecords(?array $value): void {
@@ -361,7 +361,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the recordTypeFilters property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Sets the recordTypeFilters property value. The collection of record types to filter on.
      * @param array<AuditLogRecordType>|null $value Value to set for the recordTypeFilters property.
     */
     public function setRecordTypeFilters(?array $value): void {
@@ -369,7 +369,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceFilters property value. The serviceFilters property
+     * Sets the serviceFilters property value. The collection of services to filter on.
      * @param array<string>|null $value Value to set for the serviceFilters property.
     */
     public function setServiceFilters(?array $value): void {
@@ -377,7 +377,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. Describes the current status of the query. The possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
+     * Sets the status property value. The status of the audit log query. Possible values are: notStarted, running, succeeded, failed, cancelled, unknownFutureValue.
      * @param AuditLogQueryStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AuditLogQueryStatus $value): void {
@@ -385,7 +385,7 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the userPrincipalNameFilters property value. The UPN (user principal name) of the user who performed the action (specified in the operation property) that resulted in the record being logged; for example, myname@mydomain_name.
+     * Sets the userPrincipalNameFilters property value. The collection of user principal names to filter on.
      * @param array<string>|null $value Value to set for the userPrincipalNameFilters property.
     */
     public function setUserPrincipalNameFilters(?array $value): void {

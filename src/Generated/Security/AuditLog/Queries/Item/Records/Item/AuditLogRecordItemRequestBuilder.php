@@ -31,7 +31,7 @@ class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      * @param AuditLogRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuditLogRecord|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class AuditLogRecordItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * An individual audit log record.
+     * The collection of audit log records retrieved by the query.
      * @param AuditLogRecordItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

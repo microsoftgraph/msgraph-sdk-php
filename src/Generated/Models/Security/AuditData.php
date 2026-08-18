@@ -457,7 +457,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dynamicProperties property value. The dynamicProperties property
+     * Gets the dynamicProperties property value. An open-type dictionary that contains dynamic audit event properties as name-value pairs.
      * @return AuditRecordTypeDictionary|null
     */
     public function getDynamicProperties(): ?AuditRecordTypeDictionary {
@@ -519,7 +519,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dynamicProperties property value. The dynamicProperties property
+     * Sets the dynamicProperties property value. An open-type dictionary that contains dynamic audit event properties as name-value pairs.
      * @param AuditRecordTypeDictionary|null $value Value to set for the dynamicProperties property.
     */
     public function setDynamicProperties(?AuditRecordTypeDictionary $value): void {

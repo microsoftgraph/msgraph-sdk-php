@@ -30,10 +30,11 @@ class GetAllTargetedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllTargetedMessages
+     * Get all targeted messages sent to a specific user in group chats and channels.
      * @param GetAllTargetedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllTargetedMessagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userteamwork-getalltargetedmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllTargetedMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAllTargetedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllTargetedMessages
+     * Get all targeted messages sent to a specific user in group chats and channels.
      * @param GetAllTargetedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -30,11 +30,12 @@ class DeleteTargetedMessageRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action deleteTargetedMessage
+     * Delete a specific targeted message from a channel context. Teams administrators can use this API to remove targeted messages by providing the message ID, team ID, and channel ID.
      * @param DeleteTargetedMessagePostRequestBody $body The request body
      * @param DeleteTargetedMessageRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userteamwork-deletetargetedmessage?view=graph-rest-1.0 Find more info here
     */
     public function post(DeleteTargetedMessagePostRequestBody $body, ?DeleteTargetedMessageRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -45,7 +46,7 @@ class DeleteTargetedMessageRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action deleteTargetedMessage
+     * Delete a specific targeted message from a channel context. Teams administrators can use this API to remove targeted messages by providing the message ID, team ID, and channel ID.
      * @param DeleteTargetedMessagePostRequestBody $body The request body
      * @param DeleteTargetedMessageRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
