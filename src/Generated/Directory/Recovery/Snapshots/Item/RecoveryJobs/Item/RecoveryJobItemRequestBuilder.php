@@ -31,7 +31,7 @@ class RecoveryJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @param RecoveryJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RecoveryJob|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class RecoveryJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get recoveryJobs from directory
+     * Collection of recovery jobs created for this snapshot.
      * @param RecoveryJobItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

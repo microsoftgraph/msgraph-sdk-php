@@ -53,7 +53,7 @@ class RecoveryJobBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get jobs from directory
+     * Collection of all recovery jobs (both preview and recovery) for the tenant.
      * @param RecoveryJobBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RecoveryJobBase|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class RecoveryJobBaseItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get jobs from directory
+     * Collection of all recovery jobs (both preview and recovery) for the tenant.
      * @param RecoveryJobBaseItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

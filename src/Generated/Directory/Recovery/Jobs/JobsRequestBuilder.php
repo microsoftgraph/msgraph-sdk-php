@@ -52,10 +52,11 @@ class JobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      * @param JobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RecoveryJobBaseCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/entrarecoveryservices-recovery-list-jobs?view=graph-rest-1.0 Find more info here
     */
     public function get(?JobsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class JobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get jobs from directory
+     * Get a list of all recovery recoveryJobBase objects (both preview and recovery jobs) across all snapshots for the tenant.
      * @param JobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

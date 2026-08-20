@@ -39,7 +39,7 @@ class RecoveryJob extends RecoveryJobBase implements Parsable
     }
 
     /**
-     * Gets the totalFailedChanges property value. The totalFailedChanges property
+     * Gets the totalFailedChanges property value. The count of changes (including both objects and links) that failed to apply during recovery.
      * @return int|null
     */
     public function getTotalFailedChanges(): ?int {
@@ -51,7 +51,7 @@ class RecoveryJob extends RecoveryJobBase implements Parsable
     }
 
     /**
-     * Gets the totalLinksModified property value. The totalLinksModified property
+     * Gets the totalLinksModified property value. The count of directory object links (relationships) that were successfully modified during recovery. This value may be less than totalChangedLinksCalculated if some link changes failed.
      * @return int|null
     */
     public function getTotalLinksModified(): ?int {
@@ -63,7 +63,7 @@ class RecoveryJob extends RecoveryJobBase implements Parsable
     }
 
     /**
-     * Gets the totalObjectsModified property value. The totalObjectsModified property
+     * Gets the totalObjectsModified property value. The count of directory objects that were successfully modified during recovery. This value may be less than totalChangedObjectsCalculated if some object changes failed.
      * @return int|null
     */
     public function getTotalObjectsModified(): ?int {
@@ -86,7 +86,7 @@ class RecoveryJob extends RecoveryJobBase implements Parsable
     }
 
     /**
-     * Sets the totalFailedChanges property value. The totalFailedChanges property
+     * Sets the totalFailedChanges property value. The count of changes (including both objects and links) that failed to apply during recovery.
      * @param int|null $value Value to set for the totalFailedChanges property.
     */
     public function setTotalFailedChanges(?int $value): void {
@@ -94,7 +94,7 @@ class RecoveryJob extends RecoveryJobBase implements Parsable
     }
 
     /**
-     * Sets the totalLinksModified property value. The totalLinksModified property
+     * Sets the totalLinksModified property value. The count of directory object links (relationships) that were successfully modified during recovery. This value may be less than totalChangedLinksCalculated if some link changes failed.
      * @param int|null $value Value to set for the totalLinksModified property.
     */
     public function setTotalLinksModified(?int $value): void {
@@ -102,7 +102,7 @@ class RecoveryJob extends RecoveryJobBase implements Parsable
     }
 
     /**
-     * Sets the totalObjectsModified property value. The totalObjectsModified property
+     * Sets the totalObjectsModified property value. The count of directory objects that were successfully modified during recovery. This value may be less than totalChangedObjectsCalculated if some object changes failed.
      * @param int|null $value Value to set for the totalObjectsModified property.
     */
     public function setTotalObjectsModified(?int $value): void {

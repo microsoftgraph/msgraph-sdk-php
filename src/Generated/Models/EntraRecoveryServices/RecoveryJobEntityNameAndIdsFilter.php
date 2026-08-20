@@ -38,7 +38,7 @@ class RecoveryJobEntityNameAndIdsFilter extends RecoveryJobFilteringCriteriaBase
     }
 
     /**
-     * Gets the filterValues property value. The filterValues property
+     * Gets the filterValues property value. The list of entity type and ID pairs to include in the recovery job. Duplicate entity types are not allowed and return a 400 Bad Request error.
      * @return array<EntityTypeAndIds>|null
     */
     public function getFilterValues(): ?array {
@@ -61,7 +61,7 @@ class RecoveryJobEntityNameAndIdsFilter extends RecoveryJobFilteringCriteriaBase
     }
 
     /**
-     * Sets the filterValues property value. The filterValues property
+     * Sets the filterValues property value. The list of entity type and ID pairs to include in the recovery job. Duplicate entity types are not allowed and return a 400 Bad Request error.
      * @param array<EntityTypeAndIds>|null $value Value to set for the filterValues property.
     */
     public function setFilterValues(?array $value): void {

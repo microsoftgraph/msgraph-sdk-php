@@ -30,10 +30,11 @@ class GetAllRetainedTargetedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      * @param GetAllRetainedTargetedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GetAllRetainedTargetedMessagesGetResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/userteamwork-getallretainedtargetedmessages?view=graph-rest-1.0 Find more info here
     */
     public function get(?GetAllRetainedTargetedMessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class GetAllRetainedTargetedMessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function getAllRetainedTargetedMessages
+     * Get all retained targeted messages sent to a specific user in group chats and channels.
      * @param GetAllRetainedTargetedMessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

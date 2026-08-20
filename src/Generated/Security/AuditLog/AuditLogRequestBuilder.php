@@ -53,7 +53,7 @@ class AuditLogRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get auditLog from security
+     * The entry point for the audit log query API.
      * @param AuditLogRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<AuditCoreRoot|null>
      * @throws Exception
@@ -100,7 +100,7 @@ class AuditLogRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get auditLog from security
+     * The entry point for the audit log query API.
      * @param AuditLogRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

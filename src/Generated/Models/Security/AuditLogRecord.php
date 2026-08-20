@@ -31,7 +31,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the administrativeUnits property value. The administrative units tagged to an audit log record.
+     * Gets the administrativeUnits property value. The collection of administrative units associated with the record.
      * @return array<string>|null
     */
     public function getAdministrativeUnits(): ?array {
@@ -45,7 +45,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the auditData property value. A JSON object that contains the actual audit log data.
+     * Gets the auditData property value. The audit data associated with the record.
      * @return AuditData|null
     */
     public function getAuditData(): ?AuditData {
@@ -57,7 +57,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the auditLogRecordType property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Gets the auditLogRecordType property value. The type of the audit log record.
      * @return AuditLogRecordType|null
     */
     public function getAuditLogRecordType(): ?AuditLogRecordType {
@@ -69,7 +69,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the clientIp property value. The IP address of the device used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.
+     * Gets the clientIp property value. The IP address of the client that performed the activity.
      * @return string|null
     */
     public function getClientIp(): ?string {
@@ -81,7 +81,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The date and time in UTC when the user performed the activity.
+     * Gets the createdDateTime property value. The date and time when the activity was performed.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -122,7 +122,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the objectId property value. For Exchange admin audit logging, the name of the object modified by the cmdlet. For SharePoint activity, the full URL path name of the file or folder accessed by a user. For Microsoft Entra activity, the name of the user account that was modified.
+     * Gets the objectId property value. The identifier of the object that was affected by the activity.
      * @return string|null
     */
     public function getObjectId(): ?string {
@@ -134,7 +134,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the operation property value. The name of the user or admin activity.
+     * Gets the operation property value. The name of the activity that was performed.
      * @return string|null
     */
     public function getOperation(): ?string {
@@ -146,7 +146,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the organizationId property value. The GUID for your organization.
+     * Gets the organizationId property value. The GUID of the organization's Microsoft 365 tenant.
      * @return string|null
     */
     public function getOrganizationId(): ?string {
@@ -170,7 +170,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the userId property value. The user who performed the action (specified in the Operation property) that resulted in the record being logged. Audit records for activity performed by system accounts (such as SHAREPOINT/system or NT AUTHORITY/SYSTEM) are also included in the audit log. Another common value for the UserId property is app@sharepoint. It indicates that the 'user' who performed the activity was an application with the necessary permissions in SharePoint to perform organization-wide actions (such as searching a SharePoint site or OneDrive account) on behalf of a user, admin, or service.
+     * Gets the userId property value. The identifier of the user, system account, service, or application that performed the activity.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -182,7 +182,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the userPrincipalName property value. UPN of the user who performed the action.
+     * Gets the userPrincipalName property value. The user principal name of the user who performed the activity.
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -194,7 +194,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the userType property value. The type of user that performed the operation. The possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
+     * Gets the userType property value. The type of user who performed the activity. Possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
      * @return AuditLogUserType|null
     */
     public function getUserType(): ?AuditLogUserType {
@@ -226,7 +226,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the administrativeUnits property value. The administrative units tagged to an audit log record.
+     * Sets the administrativeUnits property value. The collection of administrative units associated with the record.
      * @param array<string>|null $value Value to set for the administrativeUnits property.
     */
     public function setAdministrativeUnits(?array $value): void {
@@ -234,7 +234,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the auditData property value. A JSON object that contains the actual audit log data.
+     * Sets the auditData property value. The audit data associated with the record.
      * @param AuditData|null $value Value to set for the auditData property.
     */
     public function setAuditData(?AuditData $value): void {
@@ -242,7 +242,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the auditLogRecordType property value. The type of operation indicated by the record. For the list of member values, see auditLogRecordType.
+     * Sets the auditLogRecordType property value. The type of the audit log record.
      * @param AuditLogRecordType|null $value Value to set for the auditLogRecordType property.
     */
     public function setAuditLogRecordType(?AuditLogRecordType $value): void {
@@ -250,7 +250,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the clientIp property value. The IP address of the device used when the activity was logged. The IP address is displayed in either an IPv4 or IPv6 address format.
+     * Sets the clientIp property value. The IP address of the client that performed the activity.
      * @param string|null $value Value to set for the clientIp property.
     */
     public function setClientIp(?string $value): void {
@@ -258,7 +258,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The date and time in UTC when the user performed the activity.
+     * Sets the createdDateTime property value. The date and time when the activity was performed.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -266,7 +266,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the objectId property value. For Exchange admin audit logging, the name of the object modified by the cmdlet. For SharePoint activity, the full URL path name of the file or folder accessed by a user. For Microsoft Entra activity, the name of the user account that was modified.
+     * Sets the objectId property value. The identifier of the object that was affected by the activity.
      * @param string|null $value Value to set for the objectId property.
     */
     public function setObjectId(?string $value): void {
@@ -274,7 +274,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the operation property value. The name of the user or admin activity.
+     * Sets the operation property value. The name of the activity that was performed.
      * @param string|null $value Value to set for the operation property.
     */
     public function setOperation(?string $value): void {
@@ -282,7 +282,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the organizationId property value. The GUID for your organization.
+     * Sets the organizationId property value. The GUID of the organization's Microsoft 365 tenant.
      * @param string|null $value Value to set for the organizationId property.
     */
     public function setOrganizationId(?string $value): void {
@@ -298,7 +298,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the userId property value. The user who performed the action (specified in the Operation property) that resulted in the record being logged. Audit records for activity performed by system accounts (such as SHAREPOINT/system or NT AUTHORITY/SYSTEM) are also included in the audit log. Another common value for the UserId property is app@sharepoint. It indicates that the 'user' who performed the activity was an application with the necessary permissions in SharePoint to perform organization-wide actions (such as searching a SharePoint site or OneDrive account) on behalf of a user, admin, or service.
+     * Sets the userId property value. The identifier of the user, system account, service, or application that performed the activity.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
@@ -306,7 +306,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the userPrincipalName property value. UPN of the user who performed the action.
+     * Sets the userPrincipalName property value. The user principal name of the user who performed the activity.
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
@@ -314,7 +314,7 @@ class AuditLogRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the userType property value. The type of user that performed the operation. The possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
+     * Sets the userType property value. The type of user who performed the activity. Possible values are: regular, reserved, admin, dcAdmin, system, application, servicePrincipal, customPolicy, systemPolicy, partnerTechnician, guest, unknownFutureValue.
      * @param AuditLogUserType|null $value Value to set for the userType property.
     */
     public function setUserType(?AuditLogUserType $value): void {

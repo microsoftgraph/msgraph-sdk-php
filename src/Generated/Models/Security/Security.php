@@ -76,7 +76,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the auditLog property value. The auditLog property
+     * Gets the auditLog property value. The entry point for the audit log query API.
      * @return AuditCoreRoot|null
     */
     public function getAuditLog(): ?AuditCoreRoot {
@@ -314,7 +314,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the auditLog property value. The auditLog property
+     * Sets the auditLog property value. The entry point for the audit log query API.
      * @param AuditCoreRoot|null $value Value to set for the auditLog property.
     */
     public function setAuditLog(?AuditCoreRoot $value): void {

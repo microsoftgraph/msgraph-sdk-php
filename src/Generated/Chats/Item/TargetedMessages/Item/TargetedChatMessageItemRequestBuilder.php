@@ -61,7 +61,7 @@ class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can't expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @param TargetedChatMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TargetedChatMessage|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get targetedMessages from chats
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can't expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
      * @param TargetedChatMessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

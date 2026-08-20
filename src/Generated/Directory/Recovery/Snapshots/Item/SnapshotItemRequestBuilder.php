@@ -61,7 +61,7 @@ class SnapshotItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get snapshots from directory
+     * Collection of backup snapshots available for the tenant.
      * @param SnapshotItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<Snapshot|null>
      * @throws Exception
@@ -108,7 +108,7 @@ class SnapshotItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get snapshots from directory
+     * Collection of backup snapshots available for the tenant.
      * @param SnapshotItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

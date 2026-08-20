@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\Recovery\Snapshots\Item\RecoveryJo
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get recoveryJobs from directory
+ * Collection of recovery jobs created for this snapshot.
 */
 class RecoveryJobItemRequestBuilderGetQueryParameters 
 {

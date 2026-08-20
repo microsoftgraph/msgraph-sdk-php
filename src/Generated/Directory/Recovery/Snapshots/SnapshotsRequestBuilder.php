@@ -52,10 +52,11 @@ class SnapshotsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      * @param SnapshotsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SnapshotCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/entrarecoveryservices-recovery-list-snapshots?view=graph-rest-1.0 Find more info here
     */
     public function get(?SnapshotsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class SnapshotsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get snapshots from directory
+     * Get a list of available backup snapshot objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
      * @param SnapshotsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

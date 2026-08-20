@@ -28,7 +28,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the snapshot was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -54,7 +54,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Gets the recoveryJobs property value. The recoveryJobs property
+     * Gets the recoveryJobs property value. Collection of recovery jobs created for this snapshot.
      * @return array<RecoveryJob>|null
     */
     public function getRecoveryJobs(): ?array {
@@ -68,7 +68,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Gets the recoveryPreviewJobs property value. The recoveryPreviewJobs property
+     * Gets the recoveryPreviewJobs property value. Collection of preview jobs created for this snapshot.
      * @return array<RecoveryPreviewJob>|null
     */
     public function getRecoveryPreviewJobs(): ?array {
@@ -82,7 +82,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Gets the totalChangedObjects property value. The totalChangedObjects property
+     * Gets the totalChangedObjects property value. The total number of changed objects identified in this snapshot.
      * @return int|null
     */
     public function getTotalChangedObjects(): ?int {
@@ -106,7 +106,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the snapshot was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -114,7 +114,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Sets the recoveryJobs property value. The recoveryJobs property
+     * Sets the recoveryJobs property value. Collection of recovery jobs created for this snapshot.
      * @param array<RecoveryJob>|null $value Value to set for the recoveryJobs property.
     */
     public function setRecoveryJobs(?array $value): void {
@@ -122,7 +122,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Sets the recoveryPreviewJobs property value. The recoveryPreviewJobs property
+     * Sets the recoveryPreviewJobs property value. Collection of preview jobs created for this snapshot.
      * @param array<RecoveryPreviewJob>|null $value Value to set for the recoveryPreviewJobs property.
     */
     public function setRecoveryPreviewJobs(?array $value): void {
@@ -130,7 +130,7 @@ class Snapshot extends Entity implements Parsable
     }
 
     /**
-     * Sets the totalChangedObjects property value. The totalChangedObjects property
+     * Sets the totalChangedObjects property value. The total number of changed objects identified in this snapshot.
      * @param int|null $value Value to set for the totalChangedObjects property.
     */
     public function setTotalChangedObjects(?int $value): void {

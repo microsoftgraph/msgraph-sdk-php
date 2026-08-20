@@ -27,7 +27,7 @@ class RecoveryJobEntityNamesFilter extends RecoveryJobFilteringCriteriaBase impl
     }
 
     /**
-     * Gets the entityTypes property value. The entityTypes property
+     * Gets the entityTypes property value. The list of entity types to include in the recovery job.
      * @return array<ResourceTypeName>|null
     */
     public function getEntityTypes(): ?array {
@@ -61,7 +61,7 @@ class RecoveryJobEntityNamesFilter extends RecoveryJobFilteringCriteriaBase impl
     }
 
     /**
-     * Sets the entityTypes property value. The entityTypes property
+     * Sets the entityTypes property value. The list of entity types to include in the recovery job.
      * @param array<ResourceTypeName>|null $value Value to set for the entityTypes property.
     */
     public function setEntityTypes(?array $value): void {

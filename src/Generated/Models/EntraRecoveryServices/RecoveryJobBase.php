@@ -52,7 +52,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the filteringCriteria property value. The filteringCriteria property
+     * Gets the filteringCriteria property value. Optional filtering criteria used to scope the job to specific entity types or entity IDs.
      * @return RecoveryJobFilteringCriteriaBase|null
     */
     public function getFilteringCriteria(): ?RecoveryJobFilteringCriteriaBase {
@@ -64,7 +64,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the jobCompletionDateTime property value. The jobCompletionDateTime property
+     * Gets the jobCompletionDateTime property value. The date and time when the job completed. Null if the job is still running.
      * @return DateTime|null
     */
     public function getJobCompletionDateTime(): ?DateTime {
@@ -76,7 +76,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the jobStartDateTime property value. The jobStartDateTime property
+     * Gets the jobStartDateTime property value. The date and time when the job started.
      * @return DateTime|null
     */
     public function getJobStartDateTime(): ?DateTime {
@@ -100,7 +100,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the targetStateDateTime property value. The targetStateDateTime property
+     * Gets the targetStateDateTime property value. The target snapshot timestamp to which the tenant is being restored. Supports $filter (eq, ne).
      * @return DateTime|null
     */
     public function getTargetStateDateTime(): ?DateTime {
@@ -112,7 +112,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the totalChangedLinksCalculated property value. The totalChangedLinksCalculated property
+     * Gets the totalChangedLinksCalculated property value. The total count of changed directory object links (relationships) calculated by the job. null until the job completes calculation. Not all calculated link changes may be successfully applied; see totalLinksModified on derived types for the count of links that were actually modified.
      * @return int|null
     */
     public function getTotalChangedLinksCalculated(): ?int {
@@ -124,7 +124,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the totalChangedObjectsCalculated property value. The totalChangedObjectsCalculated property
+     * Gets the totalChangedObjectsCalculated property value. The total count of changed directory objects calculated by the job. null until the job completes calculation. Not all calculated object changes may be successfully applied; see totalObjectsModified on derived types for the count of objects that were actually modified.
      * @return int|null
     */
     public function getTotalChangedObjectsCalculated(): ?int {
@@ -151,7 +151,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the filteringCriteria property value. The filteringCriteria property
+     * Sets the filteringCriteria property value. Optional filtering criteria used to scope the job to specific entity types or entity IDs.
      * @param RecoveryJobFilteringCriteriaBase|null $value Value to set for the filteringCriteria property.
     */
     public function setFilteringCriteria(?RecoveryJobFilteringCriteriaBase $value): void {
@@ -159,7 +159,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the jobCompletionDateTime property value. The jobCompletionDateTime property
+     * Sets the jobCompletionDateTime property value. The date and time when the job completed. Null if the job is still running.
      * @param DateTime|null $value Value to set for the jobCompletionDateTime property.
     */
     public function setJobCompletionDateTime(?DateTime $value): void {
@@ -167,7 +167,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the jobStartDateTime property value. The jobStartDateTime property
+     * Sets the jobStartDateTime property value. The date and time when the job started.
      * @param DateTime|null $value Value to set for the jobStartDateTime property.
     */
     public function setJobStartDateTime(?DateTime $value): void {
@@ -183,7 +183,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the targetStateDateTime property value. The targetStateDateTime property
+     * Sets the targetStateDateTime property value. The target snapshot timestamp to which the tenant is being restored. Supports $filter (eq, ne).
      * @param DateTime|null $value Value to set for the targetStateDateTime property.
     */
     public function setTargetStateDateTime(?DateTime $value): void {
@@ -191,7 +191,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the totalChangedLinksCalculated property value. The totalChangedLinksCalculated property
+     * Sets the totalChangedLinksCalculated property value. The total count of changed directory object links (relationships) calculated by the job. null until the job completes calculation. Not all calculated link changes may be successfully applied; see totalLinksModified on derived types for the count of links that were actually modified.
      * @param int|null $value Value to set for the totalChangedLinksCalculated property.
     */
     public function setTotalChangedLinksCalculated(?int $value): void {
@@ -199,7 +199,7 @@ class RecoveryJobBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the totalChangedObjectsCalculated property value. The totalChangedObjectsCalculated property
+     * Sets the totalChangedObjectsCalculated property value. The total count of changed directory objects calculated by the job. null until the job completes calculation. Not all calculated object changes may be successfully applied; see totalObjectsModified on derived types for the count of objects that were actually modified.
      * @param int|null $value Value to set for the totalChangedObjectsCalculated property.
     */
     public function setTotalChangedObjectsCalculated(?int $value): void {

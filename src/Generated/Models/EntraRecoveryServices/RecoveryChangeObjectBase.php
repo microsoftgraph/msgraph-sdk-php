@@ -26,7 +26,7 @@ class RecoveryChangeObjectBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the changed object in its current state, used to uniquely identify the object. Supports $filter (eq, ne, startswith).
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -50,7 +50,7 @@ class RecoveryChangeObjectBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the failureMessage property value. The failureMessage property
+     * Gets the failureMessage property value. The error message if the change failed to apply. Only populated in getFailedChanges responses. null otherwise.
      * @return string|null
     */
     public function getFailureMessage(): ?string {
@@ -100,7 +100,7 @@ class RecoveryChangeObjectBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the changed object in its current state, used to uniquely identify the object. Supports $filter (eq, ne, startswith).
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -116,7 +116,7 @@ class RecoveryChangeObjectBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the failureMessage property value. The failureMessage property
+     * Sets the failureMessage property value. The error message if the change failed to apply. Only populated in getFailedChanges responses. null otherwise.
      * @param string|null $value Value to set for the failureMessage property.
     */
     public function setFailureMessage(?string $value): void {

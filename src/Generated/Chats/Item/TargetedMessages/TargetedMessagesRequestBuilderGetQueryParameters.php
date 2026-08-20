@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\Item\TargetedMessages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get targetedMessages from chats
+ * A collection of targeted messages in the chat that are visible only to specific users. Nullable. You can't expand this relationship using $expand. Targeted messages can also be retrieved via the userTeamwork: getAllTargetedMessages API.
 */
 class TargetedMessagesRequestBuilderGetQueryParameters 
 {

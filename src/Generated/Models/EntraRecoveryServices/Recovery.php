@@ -39,7 +39,7 @@ class Recovery extends Entity implements Parsable
     }
 
     /**
-     * Gets the jobs property value. The jobs property
+     * Gets the jobs property value. Collection of all recovery jobs (both preview and recovery) for the tenant.
      * @return array<RecoveryJobBase>|null
     */
     public function getJobs(): ?array {
@@ -53,7 +53,7 @@ class Recovery extends Entity implements Parsable
     }
 
     /**
-     * Gets the snapshots property value. The snapshots property
+     * Gets the snapshots property value. Collection of backup snapshots available for the tenant.
      * @return array<Snapshot>|null
     */
     public function getSnapshots(): ?array {
@@ -77,7 +77,7 @@ class Recovery extends Entity implements Parsable
     }
 
     /**
-     * Sets the jobs property value. The jobs property
+     * Sets the jobs property value. Collection of all recovery jobs (both preview and recovery) for the tenant.
      * @param array<RecoveryJobBase>|null $value Value to set for the jobs property.
     */
     public function setJobs(?array $value): void {
@@ -85,7 +85,7 @@ class Recovery extends Entity implements Parsable
     }
 
     /**
-     * Sets the snapshots property value. The snapshots property
+     * Sets the snapshots property value. Collection of backup snapshots available for the tenant.
      * @param array<Snapshot>|null $value Value to set for the snapshots property.
     */
     public function setSnapshots(?array $value): void {

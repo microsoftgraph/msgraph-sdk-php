@@ -41,7 +41,7 @@ class AuditCoreRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the queries property value. The queries property
+     * Gets the queries property value. The collection of audit log queries.
      * @return array<AuditLogQuery>|null
     */
     public function getQueries(): ?array {
@@ -64,7 +64,7 @@ class AuditCoreRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the queries property value. The queries property
+     * Sets the queries property value. The collection of audit log queries.
      * @param array<AuditLogQuery>|null $value Value to set for the queries property.
     */
     public function setQueries(?array $value): void {
