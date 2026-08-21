@@ -39,7 +39,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     }
 
     /**
-     * Gets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
+     * Gets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review. Use an accessReviewPrincipalScope object to select a well-known population of principals, such as all guest users.
      * @return array<AccessReviewScope>|null
     */
     public function getPrincipalScopes(): ?array {
@@ -53,7 +53,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     }
 
     /**
-     * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
+     * Gets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed. Use an accessReviewResourceScope object to identify the resource, or an accessReviewAccessPackageAssignmentPolicyScope object when the resource is an access package assignment policy.
      * @return array<AccessReviewScope>|null
     */
     public function getResourceScopes(): ?array {
@@ -77,7 +77,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     }
 
     /**
-     * Sets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review.
+     * Sets the principalScopes property value. Defines the scopes of the principals whose access to resources are reviewed in the access review. Use an accessReviewPrincipalScope object to select a well-known population of principals, such as all guest users.
      * @param array<AccessReviewScope>|null $value Value to set for the principalScopes property.
     */
     public function setPrincipalScopes(?array $value): void {
@@ -85,7 +85,7 @@ class PrincipalResourceMembershipsScope extends AccessReviewScope implements Par
     }
 
     /**
-     * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed.
+     * Sets the resourceScopes property value. Defines the scopes of the resources for which access is reviewed. Use an accessReviewResourceScope object to identify the resource, or an accessReviewAccessPackageAssignmentPolicyScope object when the resource is an access package assignment policy.
      * @param array<AccessReviewScope>|null $value Value to set for the resourceScopes property.
     */
     public function setResourceScopes(?array $value): void {
