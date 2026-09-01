@@ -172,6 +172,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'targetSubjectType' => fn(ParseNode $n) => $o->setTargetSubjectType($n->getEnumValue(SubjectType::class)),
             'tasks' => fn(ParseNode $n) => $o->setTasks($n->getCollectionOfObjectValues([Task::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -237,6 +238,18 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the targetSubjectType property value. The targetSubjectType property
+     * @return SubjectType|null
+    */
+    public function getTargetSubjectType(): ?SubjectType {
+        $val = $this->getBackingStore()->get('targetSubjectType');
+        if (is_null($val) || $val instanceof SubjectType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetSubjectType'");
+    }
+
+    /**
      * Gets the tasks property value. The tasks in the workflow.
      * @return array<Task>|null
     */
@@ -267,6 +280,7 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('targetSubjectType', $this->getTargetSubjectType());
         $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -381,6 +395,14 @@ class WorkflowBase implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the targetSubjectType property value. The targetSubjectType property
+     * @param SubjectType|null $value Value to set for the targetSubjectType property.
+    */
+    public function setTargetSubjectType(?SubjectType $value): void {
+        $this->getBackingStore()->set('targetSubjectType', $value);
     }
 
     /**

@@ -4,9 +4,7 @@ namespace Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationS
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationSnapshotJobs\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationSnapshotJobs\Item\ConfigurationSnapshotJobItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConfigurationSnapshotJob;
 use Microsoft\Graph\Generated\Models\ConfigurationSnapshotJobCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -19,13 +17,6 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the configurationSnapshotJobs property of the microsoft.graph.configurationManagement entity.
      * @param string $configurationSnapshotJobId The unique identifier of configurationSnapshotJob
@@ -67,21 +58,6 @@ class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to configurationSnapshotJobs for admin
-     * @param ConfigurationSnapshotJob $body The request body
-     * @param ConfigurationSnapshotJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationSnapshotJob|null>
-     * @throws Exception
-    */
-    public function post(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationSnapshotJob::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Get a list of the configurationSnapshotJob objects and their properties.
      * @param ConfigurationSnapshotJobsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -99,26 +75,6 @@ class ConfigurationSnapshotJobsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Create new navigation property to configurationSnapshotJobs for admin
-     * @param ConfigurationSnapshotJob $body The request body
-     * @param ConfigurationSnapshotJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPostRequestInformation(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::POST;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

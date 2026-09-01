@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationDrifts\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationDrifts\Item\ConfigurationDriftItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConfigurationDrift;
 use Microsoft\Graph\Generated\Models\ConfigurationDriftCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -67,21 +66,6 @@ class ConfigurationDriftsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to configurationDrifts for admin
-     * @param ConfigurationDrift $body The request body
-     * @param ConfigurationDriftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationDrift|null>
-     * @throws Exception
-    */
-    public function post(ConfigurationDrift $body, ?ConfigurationDriftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationDrift::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Get a list of the configurationDrift objects and their properties.
      * @param ConfigurationDriftsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -99,26 +83,6 @@ class ConfigurationDriftsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Create new navigation property to configurationDrifts for admin
-     * @param ConfigurationDrift $body The request body
-     * @param ConfigurationDriftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPostRequestInformation(ConfigurationDrift $body, ?ConfigurationDriftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::POST;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

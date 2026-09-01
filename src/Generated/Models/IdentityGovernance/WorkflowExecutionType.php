@@ -10,4 +10,5 @@ class WorkflowExecutionType extends Enum {
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     public const ACTIVATED_WITH_SCOPE = "activatedWithScope";
     public const PREVIEW = "preview";
+    public const EXTENSIBILITY_ON_DEMAND = "extensibilityOnDemand";
 }

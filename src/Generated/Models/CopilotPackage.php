@@ -35,6 +35,18 @@ class CopilotPackage extends Entity implements Parsable
     }
 
     /**
+     * Gets the agentIdentityId property value. The agentIdentityId property
+     * @return string|null
+    */
+    public function getAgentIdentityId(): ?string {
+        $val = $this->getBackingStore()->get('agentIdentityId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'agentIdentityId'");
+    }
+
+    /**
      * Gets the appId property value. The appId property
      * @return string|null
     */
@@ -127,6 +139,7 @@ class CopilotPackage extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'agentIdentityId' => fn(ParseNode $n) => $o->setAgentIdentityId($n->getStringValue()),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'assetId' => fn(ParseNode $n) => $o->setAssetId($n->getStringValue()),
             'availableTo' => fn(ParseNode $n) => $o->setAvailableTo($n->getEnumValue(PackageStatus::class)),
@@ -315,6 +328,7 @@ class CopilotPackage extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('agentIdentityId', $this->getAgentIdentityId());
         $writer->writeStringValue('appId', $this->getAppId());
         $writer->writeStringValue('assetId', $this->getAssetId());
         $writer->writeEnumValue('availableTo', $this->getAvailableTo());
@@ -334,6 +348,14 @@ class CopilotPackage extends Entity implements Parsable
         $writer->writeEnumValue('type', $this->getType());
         $writer->writeStringValue('version', $this->getVersion());
         $writer->writeBinaryContent('zipFile', $this->getZipFile());
+    }
+
+    /**
+     * Sets the agentIdentityId property value. The agentIdentityId property
+     * @param string|null $value Value to set for the agentIdentityId property.
+    */
+    public function setAgentIdentityId(?string $value): void {
+        $this->getBackingStore()->set('agentIdentityId', $value);
     }
 
     /**

@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationMonitoringResults\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationMonitoringResults\Item\ConfigurationMonitoringResultItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConfigurationMonitoringResult;
 use Microsoft\Graph\Generated\Models\ConfigurationMonitoringResultCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -67,21 +66,6 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to configurationMonitoringResults for admin
-     * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationMonitoringResult|null>
-     * @throws Exception
-    */
-    public function post(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationMonitoringResult::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Get a list of the configurationMonitoringResult objects and their properties.
      * @param ConfigurationMonitoringResultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -99,26 +83,6 @@ class ConfigurationMonitoringResultsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Create new navigation property to configurationMonitoringResults for admin
-     * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPostRequestInformation(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::POST;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

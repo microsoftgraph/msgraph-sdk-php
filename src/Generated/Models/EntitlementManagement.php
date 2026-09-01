@@ -166,6 +166,20 @@ class EntitlementManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalOriginResourceConnectors property value. Represents the connectors used to communicate with external resource systems.
+     * @return array<ExternalOriginResourceConnector>|null
+    */
+    public function getExternalOriginResourceConnectors(): ?array {
+        $val = $this->getBackingStore()->get('externalOriginResourceConnectors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ExternalOriginResourceConnector::class);
+            /** @var array<ExternalOriginResourceConnector>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalOriginResourceConnectors'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -182,6 +196,7 @@ class EntitlementManagement extends Entity implements Parsable
             'catalogs' => fn(ParseNode $n) => $o->setCatalogs($n->getCollectionOfObjectValues([AccessPackageCatalog::class, 'createFromDiscriminatorValue'])),
             'connectedOrganizations' => fn(ParseNode $n) => $o->setConnectedOrganizations($n->getCollectionOfObjectValues([ConnectedOrganization::class, 'createFromDiscriminatorValue'])),
             'controlConfigurations' => fn(ParseNode $n) => $o->setControlConfigurations($n->getCollectionOfObjectValues([ControlConfiguration::class, 'createFromDiscriminatorValue'])),
+            'externalOriginResourceConnectors' => fn(ParseNode $n) => $o->setExternalOriginResourceConnectors($n->getCollectionOfObjectValues([ExternalOriginResourceConnector::class, 'createFromDiscriminatorValue'])),
             'resourceEnvironments' => fn(ParseNode $n) => $o->setResourceEnvironments($n->getCollectionOfObjectValues([AccessPackageResourceEnvironment::class, 'createFromDiscriminatorValue'])),
             'resourceRequests' => fn(ParseNode $n) => $o->setResourceRequests($n->getCollectionOfObjectValues([AccessPackageResourceRequest::class, 'createFromDiscriminatorValue'])),
             'resourceRoleScopes' => fn(ParseNode $n) => $o->setResourceRoleScopes($n->getCollectionOfObjectValues([AccessPackageResourceRoleScope::class, 'createFromDiscriminatorValue'])),
@@ -289,6 +304,7 @@ class EntitlementManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('catalogs', $this->getCatalogs());
         $writer->writeCollectionOfObjectValues('connectedOrganizations', $this->getConnectedOrganizations());
         $writer->writeCollectionOfObjectValues('controlConfigurations', $this->getControlConfigurations());
+        $writer->writeCollectionOfObjectValues('externalOriginResourceConnectors', $this->getExternalOriginResourceConnectors());
         $writer->writeCollectionOfObjectValues('resourceEnvironments', $this->getResourceEnvironments());
         $writer->writeCollectionOfObjectValues('resourceRequests', $this->getResourceRequests());
         $writer->writeCollectionOfObjectValues('resourceRoleScopes', $this->getResourceRoleScopes());
@@ -375,6 +391,14 @@ class EntitlementManagement extends Entity implements Parsable
     */
     public function setControlConfigurations(?array $value): void {
         $this->getBackingStore()->set('controlConfigurations', $value);
+    }
+
+    /**
+     * Sets the externalOriginResourceConnectors property value. Represents the connectors used to communicate with external resource systems.
+     * @param array<ExternalOriginResourceConnector>|null $value Value to set for the externalOriginResourceConnectors property.
+    */
+    public function setExternalOriginResourceConnectors(?array $value): void {
+        $this->getBackingStore()->set('externalOriginResourceConnectors', $value);
     }
 
     /**

@@ -3,21 +3,31 @@
 namespace Microsoft\Graph\Generated\Models;
 
 use DateTime;
+use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Singleton entity that acts as a container for all device app management functionality.
 */
-class DeviceAppManagement extends Entity implements Parsable 
+class DeviceAppManagement implements AdditionalDataHolder, BackedModel, Parsable 
 {
+    /**
+     * @var BackingStore $backingStore Stores model information.
+    */
+    private BackingStore $backingStore;
+    
     /**
      * Instantiates a new DeviceAppManagement and sets the default values.
     */
     public function __construct() {
-        parent::__construct();
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
+        $this->setAdditionalData([]);
     }
 
     /**
@@ -27,6 +37,19 @@ class DeviceAppManagement extends Entity implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): DeviceAppManagement {
         return new DeviceAppManagement();
+    }
+
+    /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return array<string, mixed>|null
+    */
+    public function getAdditionalData(): ?array {
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -41,6 +64,14 @@ class DeviceAppManagement extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'androidManagedAppProtections'");
+    }
+
+    /**
+     * Gets the BackingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -63,7 +94,7 @@ class DeviceAppManagement extends Entity implements Parsable
     */
     public function getFieldDeserializers(): array {
         $o = $this;
-        return array_merge(parent::getFieldDeserializers(), [
+        return  [
             'androidManagedAppProtections' => fn(ParseNode $n) => $o->setAndroidManagedAppProtections($n->getCollectionOfObjectValues([AndroidManagedAppProtection::class, 'createFromDiscriminatorValue'])),
             'defaultManagedAppProtections' => fn(ParseNode $n) => $o->setDefaultManagedAppProtections($n->getCollectionOfObjectValues([DefaultManagedAppProtection::class, 'createFromDiscriminatorValue'])),
             'iosManagedAppProtections' => fn(ParseNode $n) => $o->setIosManagedAppProtections($n->getCollectionOfObjectValues([IosManagedAppProtection::class, 'createFromDiscriminatorValue'])),
@@ -80,10 +111,11 @@ class DeviceAppManagement extends Entity implements Parsable
             'mobileAppConfigurations' => fn(ParseNode $n) => $o->setMobileAppConfigurations($n->getCollectionOfObjectValues([ManagedDeviceMobileAppConfiguration::class, 'createFromDiscriminatorValue'])),
             'mobileAppRelationships' => fn(ParseNode $n) => $o->setMobileAppRelationships($n->getCollectionOfObjectValues([MobileAppRelationship::class, 'createFromDiscriminatorValue'])),
             'mobileApps' => fn(ParseNode $n) => $o->setMobileApps($n->getCollectionOfObjectValues([MobileApp::class, 'createFromDiscriminatorValue'])),
+            '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'targetedManagedAppConfigurations' => fn(ParseNode $n) => $o->setTargetedManagedAppConfigurations($n->getCollectionOfObjectValues([TargetedManagedAppConfiguration::class, 'createFromDiscriminatorValue'])),
             'vppTokens' => fn(ParseNode $n) => $o->setVppTokens($n->getCollectionOfObjectValues([VppToken::class, 'createFromDiscriminatorValue'])),
             'windowsInformationProtectionPolicies' => fn(ParseNode $n) => $o->setWindowsInformationProtectionPolicies($n->getCollectionOfObjectValues([WindowsInformationProtectionPolicy::class, 'createFromDiscriminatorValue'])),
-        ]);
+        ];
     }
 
     /**
@@ -275,6 +307,18 @@ class DeviceAppManagement extends Entity implements Parsable
     }
 
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return string|null
+    */
+    public function getOdataType(): ?string {
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
+    }
+
+    /**
      * Gets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
      * @return array<TargetedManagedAppConfiguration>|null
     */
@@ -321,7 +365,6 @@ class DeviceAppManagement extends Entity implements Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
-        parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('androidManagedAppProtections', $this->getAndroidManagedAppProtections());
         $writer->writeCollectionOfObjectValues('defaultManagedAppProtections', $this->getDefaultManagedAppProtections());
         $writer->writeCollectionOfObjectValues('iosManagedAppProtections', $this->getIosManagedAppProtections());
@@ -338,9 +381,19 @@ class DeviceAppManagement extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('mobileAppConfigurations', $this->getMobileAppConfigurations());
         $writer->writeCollectionOfObjectValues('mobileAppRelationships', $this->getMobileAppRelationships());
         $writer->writeCollectionOfObjectValues('mobileApps', $this->getMobileApps());
+        $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('targetedManagedAppConfigurations', $this->getTargetedManagedAppConfigurations());
         $writer->writeCollectionOfObjectValues('vppTokens', $this->getVppTokens());
         $writer->writeCollectionOfObjectValues('windowsInformationProtectionPolicies', $this->getWindowsInformationProtectionPolicies());
+        $writer->writeAdditionalData($this->getAdditionalData());
+    }
+
+    /**
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
+    */
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
@@ -349,6 +402,14 @@ class DeviceAppManagement extends Entity implements Parsable
     */
     public function setAndroidManagedAppProtections(?array $value): void {
         $this->getBackingStore()->set('androidManagedAppProtections', $value);
+    }
+
+    /**
+     * Sets the BackingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
@@ -469,6 +530,14 @@ class DeviceAppManagement extends Entity implements Parsable
     */
     public function setMobileApps(?array $value): void {
         $this->getBackingStore()->set('mobileApps', $value);
+    }
+
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param string|null $value Value to set for the @odata.type property.
+    */
+    public function setOdataType(?string $value): void {
+        $this->getBackingStore()->set('odataType', $value);
     }
 
     /**

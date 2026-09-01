@@ -79,6 +79,7 @@ class MailboxFolder extends Entity implements Parsable
             'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'totalItemCount' => fn(ParseNode $n) => $o->setTotalItemCount($n->getIntegerValue()),
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
+            'wellKnownName' => fn(ParseNode $n) => $o->setWellKnownName($n->getStringValue()),
         ]);
     }
 
@@ -161,6 +162,18 @@ class MailboxFolder extends Entity implements Parsable
     }
 
     /**
+     * Gets the wellKnownName property value. The locale-independent well-known name of the folder for folders created by Outlook, such as inbox, sentitems, drafts, deleteditems, or archive. For user-created folders, the value is null. Read-only.
+     * @return string|null
+    */
+    public function getWellKnownName(): ?string {
+        $val = $this->getBackingStore()->get('wellKnownName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wellKnownName'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -175,6 +188,7 @@ class MailboxFolder extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
         $writer->writeIntegerValue('totalItemCount', $this->getTotalItemCount());
         $writer->writeStringValue('type', $this->getType());
+        $writer->writeStringValue('wellKnownName', $this->getWellKnownName());
     }
 
     /**
@@ -247,6 +261,14 @@ class MailboxFolder extends Entity implements Parsable
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
+    }
+
+    /**
+     * Sets the wellKnownName property value. The locale-independent well-known name of the folder for folders created by Outlook, such as inbox, sentitems, drafts, deleteditems, or archive. For user-created folders, the value is null. Read-only.
+     * @param string|null $value Value to set for the wellKnownName property.
+    */
+    public function setWellKnownName(?string $value): void {
+        $this->getBackingStore()->set('wellKnownName', $value);
     }
 
 }

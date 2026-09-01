@@ -9,4 +9,5 @@ class LifecycleWorkflowCategory extends Enum {
     public const LEAVER = "leaver";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     public const MOVER = "mover";
+    public const EXTENSIBILITY = "extensibility";
 }

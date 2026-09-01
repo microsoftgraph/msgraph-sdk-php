@@ -38,6 +38,30 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
     }
 
     /**
+     * Gets the appRoleDisplayName property value. The display name of the app role.
+     * @return string|null
+    */
+    public function getAppRoleDisplayName(): ?string {
+        $val = $this->getBackingStore()->get('appRoleDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appRoleDisplayName'");
+    }
+
+    /**
+     * Gets the appRoleId property value. The identifier of the app role.
+     * @return string|null
+    */
+    public function getAppRoleId(): ?string {
+        $val = $this->getBackingStore()->get('appRoleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appRoleId'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -45,6 +69,8 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
+            'appRoleDisplayName' => fn(ParseNode $n) => $o->setAppRoleDisplayName($n->getStringValue()),
+            'appRoleId' => fn(ParseNode $n) => $o->setAppRoleId($n->getStringValue()),
         ]);
     }
 
@@ -55,6 +81,8 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('appId', $this->getAppId());
+        $writer->writeStringValue('appRoleDisplayName', $this->getAppRoleDisplayName());
+        $writer->writeStringValue('appRoleId', $this->getAppRoleId());
     }
 
     /**
@@ -63,6 +91,22 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
+    }
+
+    /**
+     * Sets the appRoleDisplayName property value. The display name of the app role.
+     * @param string|null $value Value to set for the appRoleDisplayName property.
+    */
+    public function setAppRoleDisplayName(?string $value): void {
+        $this->getBackingStore()->set('appRoleDisplayName', $value);
+    }
+
+    /**
+     * Sets the appRoleId property value. The identifier of the app role.
+     * @param string|null $value Value to set for the appRoleId property.
+    */
+    public function setAppRoleId(?string $value): void {
+        $this->getBackingStore()->set('appRoleId', $value);
     }
 
 }

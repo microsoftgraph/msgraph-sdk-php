@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\Catalogs\Item\ResourceSco
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\Catalogs\Item\ResourceScopes\Item\Resource\Environment\EnvironmentRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\Catalogs\Item\ResourceScopes\Item\Resource\ExternalOriginResourceConnector\ExternalOriginResourceConnectorRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\Catalogs\Item\ResourceScopes\Item\Resource\Refresh\RefreshRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\Catalogs\Item\ResourceScopes\Item\Resource\Roles\RolesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\Catalogs\Item\ResourceScopes\Item\Resource\Scopes\ScopesRequestBuilder;
@@ -26,6 +27,13 @@ class ResourceRequestBuilder extends BaseRequestBuilder
     */
     public function environment(): EnvironmentRequestBuilder {
         return new EnvironmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the externalOriginResourceConnector property of the microsoft.graph.accessPackageResource entity.
+    */
+    public function externalOriginResourceConnector(): ExternalOriginResourceConnectorRequestBuilder {
+        return new ExternalOriginResourceConnectorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

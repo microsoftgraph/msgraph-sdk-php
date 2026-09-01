@@ -78,6 +78,7 @@ class TaskProcessingResult extends Entity implements Parsable
             'startedDateTime' => fn(ParseNode $n) => $o->setStartedDateTime($n->getDateTimeValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
             'task' => fn(ParseNode $n) => $o->setTask($n->getObjectValue([Task::class, 'createFromDiscriminatorValue'])),
+            'workflowSubject' => fn(ParseNode $n) => $o->setWorkflowSubject($n->getObjectValue([WorkflowSubject::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -142,6 +143,18 @@ class TaskProcessingResult extends Entity implements Parsable
     }
 
     /**
+     * Gets the workflowSubject property value. The workflow subject associated with this task processing result. Populated for extensibility and provisioning workflows.
+     * @return WorkflowSubject|null
+    */
+    public function getWorkflowSubject(): ?WorkflowSubject {
+        $val = $this->getBackingStore()->get('workflowSubject');
+        if (is_null($val) || $val instanceof WorkflowSubject) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workflowSubject'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -155,6 +168,7 @@ class TaskProcessingResult extends Entity implements Parsable
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());
         $writer->writeObjectValue('subject', $this->getSubject());
         $writer->writeObjectValue('task', $this->getTask());
+        $writer->writeObjectValue('workflowSubject', $this->getWorkflowSubject());
     }
 
     /**
@@ -219,6 +233,14 @@ class TaskProcessingResult extends Entity implements Parsable
     */
     public function setTask(?Task $value): void {
         $this->getBackingStore()->set('task', $value);
+    }
+
+    /**
+     * Sets the workflowSubject property value. The workflow subject associated with this task processing result. Populated for extensibility and provisioning workflows.
+     * @param WorkflowSubject|null $value Value to set for the workflowSubject property.
+    */
+    public function setWorkflowSubject(?WorkflowSubject $value): void {
+        $this->getBackingStore()->set('workflowSubject', $value);
     }
 
 }

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\DefinitionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\HistoryDefinitionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Unified\UnifiedRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewSet;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -30,6 +31,13 @@ class AccessReviewsRequestBuilder extends BaseRequestBuilder
     */
     public function historyDefinitions(): HistoryDefinitionsRequestBuilder {
         return new HistoryDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the unified property of the microsoft.graph.accessReviewSet entity.
+    */
+    public function unified(): UnifiedRequestBuilder {
+        return new UnifiedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

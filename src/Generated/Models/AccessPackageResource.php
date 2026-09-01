@@ -96,6 +96,18 @@ class AccessPackageResource extends Entity implements Parsable
     }
 
     /**
+     * Gets the externalOriginResourceConnector property value. The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
+     * @return ExternalOriginResourceConnector|null
+    */
+    public function getExternalOriginResourceConnector(): ?ExternalOriginResourceConnector {
+        $val = $this->getBackingStore()->get('externalOriginResourceConnector');
+        if (is_null($val) || $val instanceof ExternalOriginResourceConnector) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalOriginResourceConnector'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -107,6 +119,7 @@ class AccessPackageResource extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'environment' => fn(ParseNode $n) => $o->setEnvironment($n->getObjectValue([AccessPackageResourceEnvironment::class, 'createFromDiscriminatorValue'])),
+            'externalOriginResourceConnector' => fn(ParseNode $n) => $o->setExternalOriginResourceConnector($n->getObjectValue([ExternalOriginResourceConnector::class, 'createFromDiscriminatorValue'])),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
             'originId' => fn(ParseNode $n) => $o->setOriginId($n->getStringValue()),
             'originSystem' => fn(ParseNode $n) => $o->setOriginSystem($n->getStringValue()),
@@ -205,6 +218,7 @@ class AccessPackageResource extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('environment', $this->getEnvironment());
+        $writer->writeObjectValue('externalOriginResourceConnector', $this->getExternalOriginResourceConnector());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
         $writer->writeStringValue('originId', $this->getOriginId());
         $writer->writeStringValue('originSystem', $this->getOriginSystem());
@@ -251,6 +265,14 @@ class AccessPackageResource extends Entity implements Parsable
     */
     public function setEnvironment(?AccessPackageResourceEnvironment $value): void {
         $this->getBackingStore()->set('environment', $value);
+    }
+
+    /**
+     * Sets the externalOriginResourceConnector property value. The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
+     * @param ExternalOriginResourceConnector|null $value Value to set for the externalOriginResourceConnector property.
+    */
+    public function setExternalOriginResourceConnector(?ExternalOriginResourceConnector $value): void {
+        $this->getBackingStore()->set('externalOriginResourceConnector', $value);
     }
 
     /**
