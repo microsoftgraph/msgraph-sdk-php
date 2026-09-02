@@ -4,7 +4,6 @@ namespace Microsoft\Graph\Generated\EmployeeExperience\Communities;
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\EmployeeExperience\Communities\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\Communities\Item\CommunityItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Community;
 use Microsoft\Graph\Generated\Models\CommunityCollectionResponse;
@@ -19,13 +18,6 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class CommunitiesRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the communities property of the microsoft.graph.employeeExperience entity.
      * @param string $communityId The unique identifier of community

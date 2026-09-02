@@ -175,7 +175,7 @@ class DeviceAppManagementRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update the properties of a deviceAppManagement object.
-     * @param DeviceAppManagement $body The request body
+     * @param DeviceAppManagement $body Singleton entity that acts as a container for all device app management functionality.
      * @param DeviceAppManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeviceAppManagement|null>
      * @throws Exception
@@ -212,7 +212,7 @@ class DeviceAppManagementRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update the properties of a deviceAppManagement object.
-     * @param DeviceAppManagement $body The request body
+     * @param DeviceAppManagement $body Singleton entity that acts as a container for all device app management functionality.
      * @param DeviceAppManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

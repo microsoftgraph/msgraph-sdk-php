@@ -4,9 +4,7 @@ namespace Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationS
 
 use Exception;
 use Http\Promise\Promise;
-use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationSnapshots\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ConfigurationManagement\ConfigurationSnapshots\Item\ConfigurationBaselineItemRequestBuilder;
-use Microsoft\Graph\Generated\Models\ConfigurationBaseline;
 use Microsoft\Graph\Generated\Models\ConfigurationBaselineCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -19,13 +17,6 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ConfigurationSnapshotsRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the configurationSnapshots property of the microsoft.graph.configurationManagement entity.
      * @param string $configurationBaselineId The unique identifier of configurationBaseline
@@ -67,21 +58,6 @@ class ConfigurationSnapshotsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to configurationSnapshots for admin
-     * @param ConfigurationBaseline $body The request body
-     * @param ConfigurationSnapshotsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationBaseline|null>
-     * @throws Exception
-    */
-    public function post(ConfigurationBaseline $body, ?ConfigurationSnapshotsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationBaseline::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Get a list of configurationBaseline objects that represent configuration snapshots and their properties.
      * @param ConfigurationSnapshotsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -99,26 +75,6 @@ class ConfigurationSnapshotsRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Create new navigation property to configurationSnapshots for admin
-     * @param ConfigurationBaseline $body The request body
-     * @param ConfigurationSnapshotsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPostRequestInformation(ConfigurationBaseline $body, ?ConfigurationSnapshotsRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::POST;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

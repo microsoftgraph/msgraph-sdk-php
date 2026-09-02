@@ -64,6 +64,7 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
         return  [
             'query' => fn(ParseNode $n) => $o->setQuery($n->getStringValue()),
             'timespan' => fn(ParseNode $n) => $o->setTimespan($n->getStringValue()),
+            'workspaceId' => fn(ParseNode $n) => $o->setWorkspaceId($n->getStringValue()),
         ];
     }
 
@@ -92,12 +93,25 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
+     * Gets the workspaceId property value. The workspaceId property
+     * @return string|null
+    */
+    public function getWorkspaceId(): ?string {
+        $val = $this->getBackingStore()->get('workspaceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workspaceId'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('query', $this->getQuery());
         $writer->writeStringValue('timespan', $this->getTimespan());
+        $writer->writeStringValue('workspaceId', $this->getWorkspaceId());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -131,6 +145,14 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     */
     public function setTimespan(?string $value): void {
         $this->getBackingStore()->set('timespan', $value);
+    }
+
+    /**
+     * Sets the workspaceId property value. The workspaceId property
+     * @param string|null $value Value to set for the workspaceId property.
+    */
+    public function setWorkspaceId(?string $value): void {
+        $this->getBackingStore()->set('workspaceId', $value);
     }
 
 }

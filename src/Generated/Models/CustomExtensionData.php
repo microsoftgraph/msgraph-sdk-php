@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Models;
 
 use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtensionCallbackData;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtensionCalloutData;
+use Microsoft\Graph\Generated\Models\IdentityGovernance\CustomTaskExtensionResponseData;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -41,6 +42,7 @@ class CustomExtensionData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.assignmentRequestApprovalStageCallbackData': return new AssignmentRequestApprovalStageCallbackData();
                 case '#microsoft.graph.identityGovernance.customTaskExtensionCallbackData': return new CustomTaskExtensionCallbackData();
                 case '#microsoft.graph.identityGovernance.customTaskExtensionCalloutData': return new CustomTaskExtensionCalloutData();
+                case '#microsoft.graph.identityGovernance.customTaskExtensionResponseData': return new CustomTaskExtensionResponseData();
             }
         }
         return new CustomExtensionData();

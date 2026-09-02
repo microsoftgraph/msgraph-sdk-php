@@ -31,20 +31,6 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property configurationMonitoringResults for admin
-     * @param ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<void|null>
-     * @throws Exception
-    */
-    public function delete(?ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-    }
-
-    /**
      * Read the properties and relationships of a configurationMonitoringResult object.
      * @param ConfigurationMonitoringResultItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationMonitoringResult|null>
@@ -57,39 +43,6 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationMonitoringResult::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Update the navigation property configurationMonitoringResults in admin
-     * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationMonitoringResult|null>
-     * @throws Exception
-    */
-    public function patch(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationMonitoringResult::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Delete navigation property configurationMonitoringResults for admin
-     * @param ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toDeleteRequestInformation(?ConfigurationMonitoringResultItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
     }
 
     /**
@@ -110,26 +63,6 @@ class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property configurationMonitoringResults in admin
-     * @param ConfigurationMonitoringResult $body The request body
-     * @param ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(ConfigurationMonitoringResult $body, ?ConfigurationMonitoringResultItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

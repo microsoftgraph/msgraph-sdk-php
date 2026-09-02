@@ -39,20 +39,6 @@ class EngagementRoleItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property roles for employeeExperience
-     * @param EngagementRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<void|null>
-     * @throws Exception
-    */
-    public function delete(?EngagementRoleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-    }
-
-    /**
      * A collection of roles in Viva Engage.
      * @param EngagementRoleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<EngagementRole|null>
@@ -64,39 +50,6 @@ class EngagementRoleItemRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [EngagementRole::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Update the navigation property roles in employeeExperience
-     * @param EngagementRole $body The request body
-     * @param EngagementRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<EngagementRole|null>
-     * @throws Exception
-    */
-    public function patch(EngagementRole $body, ?EngagementRoleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [EngagementRole::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Delete navigation property roles for employeeExperience
-     * @param EngagementRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toDeleteRequestInformation(?EngagementRoleItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
     }
 
     /**
@@ -117,26 +70,6 @@ class EngagementRoleItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property roles in employeeExperience
-     * @param EngagementRole $body The request body
-     * @param EngagementRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(EngagementRole $body, ?EngagementRoleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

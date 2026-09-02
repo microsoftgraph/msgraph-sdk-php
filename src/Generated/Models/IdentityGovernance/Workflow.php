@@ -69,6 +69,7 @@ class Workflow extends WorkflowBase implements Parsable
             'quarantineDetails' => fn(ParseNode $n) => $o->setQuarantineDetails($n->getObjectValue([QuarantineDetails::class, 'createFromDiscriminatorValue'])),
             'runs' => fn(ParseNode $n) => $o->setRuns($n->getCollectionOfObjectValues([Run::class, 'createFromDiscriminatorValue'])),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([WorkflowSetting::class, 'createFromDiscriminatorValue'])),
+            'subjectProcessingResults' => fn(ParseNode $n) => $o->setSubjectProcessingResults($n->getCollectionOfObjectValues([SubjectProcessingResult::class, 'createFromDiscriminatorValue'])),
             'taskReports' => fn(ParseNode $n) => $o->setTaskReports($n->getCollectionOfObjectValues([TaskReport::class, 'createFromDiscriminatorValue'])),
             'userProcessingResults' => fn(ParseNode $n) => $o->setUserProcessingResults($n->getCollectionOfObjectValues([UserProcessingResult::class, 'createFromDiscriminatorValue'])),
             'version' => fn(ParseNode $n) => $o->setVersion($n->getIntegerValue()),
@@ -153,6 +154,20 @@ class Workflow extends WorkflowBase implements Parsable
     }
 
     /**
+     * Gets the subjectProcessingResults property value. Per-subject workflow execution results.
+     * @return array<SubjectProcessingResult>|null
+    */
+    public function getSubjectProcessingResults(): ?array {
+        $val = $this->getBackingStore()->get('subjectProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectProcessingResult::class);
+            /** @var array<SubjectProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectProcessingResults'");
+    }
+
+    /**
      * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
      * @return array<TaskReport>|null
     */
@@ -220,6 +235,7 @@ class Workflow extends WorkflowBase implements Parsable
         $writer->writeObjectValue('quarantineDetails', $this->getQuarantineDetails());
         $writer->writeCollectionOfObjectValues('runs', $this->getRuns());
         $writer->writeObjectValue('settings', $this->getSettings());
+        $writer->writeCollectionOfObjectValues('subjectProcessingResults', $this->getSubjectProcessingResults());
         $writer->writeCollectionOfObjectValues('taskReports', $this->getTaskReports());
         $writer->writeCollectionOfObjectValues('userProcessingResults', $this->getUserProcessingResults());
         $writer->writeIntegerValue('version', $this->getVersion());
@@ -288,6 +304,14 @@ class Workflow extends WorkflowBase implements Parsable
     */
     public function setSettings(?WorkflowSetting $value): void {
         $this->getBackingStore()->set('settings', $value);
+    }
+
+    /**
+     * Sets the subjectProcessingResults property value. Per-subject workflow execution results.
+     * @param array<SubjectProcessingResult>|null $value Value to set for the subjectProcessingResults property.
+    */
+    public function setSubjectProcessingResults(?array $value): void {
+        $this->getBackingStore()->set('subjectProcessingResults', $value);
     }
 
     /**

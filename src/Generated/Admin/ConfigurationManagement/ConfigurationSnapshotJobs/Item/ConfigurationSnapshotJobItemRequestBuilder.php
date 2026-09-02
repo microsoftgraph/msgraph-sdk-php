@@ -61,21 +61,6 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property configurationSnapshotJobs in admin
-     * @param ConfigurationSnapshotJob $body The request body
-     * @param ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationSnapshotJob|null>
-     * @throws Exception
-    */
-    public function patch(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationSnapshotJob::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Delete a configurationSnapshotJob object.
      * @param ConfigurationSnapshotJobItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -111,26 +96,6 @@ class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property configurationSnapshotJobs in admin
-     * @param ConfigurationSnapshotJob $body The request body
-     * @param ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(ConfigurationSnapshotJob $body, ?ConfigurationSnapshotJobItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

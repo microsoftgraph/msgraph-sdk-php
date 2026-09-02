@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\ReprocessedRuns\ReprocessedRunsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\SubjectProcessingResults\SubjectProcessingResultsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\TaskProcessingResults\TaskProcessingResultsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\DeletedItems\Workflows\Item\Runs\Item\UserProcessingResults\UserProcessingResultsRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\Run;
@@ -24,6 +25,13 @@ class RunItemRequestBuilder extends BaseRequestBuilder
     */
     public function reprocessedRuns(): ReprocessedRunsRequestBuilder {
         return new ReprocessedRunsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.run entity.
+    */
+    public function subjectProcessingResults(): SubjectProcessingResultsRequestBuilder {
+        return new SubjectProcessingResultsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

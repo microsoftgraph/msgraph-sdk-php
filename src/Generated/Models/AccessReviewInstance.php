@@ -67,6 +67,20 @@ class AccessReviewInstance extends Entity implements Parsable
     }
 
     /**
+     * Gets the errors property value. Collection of errors in an access review instance lifecycle. Read-only.
+     * @return array<AccessReviewError>|null
+    */
+    public function getErrors(): ?array {
+        $val = $this->getBackingStore()->get('errors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewError::class);
+            /** @var array<AccessReviewError>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errors'");
+    }
+
+    /**
      * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
      * @return array<AccessReviewReviewerScope>|null
     */
@@ -90,6 +104,7 @@ class AccessReviewInstance extends Entity implements Parsable
             'contactedReviewers' => fn(ParseNode $n) => $o->setContactedReviewers($n->getCollectionOfObjectValues([AccessReviewReviewer::class, 'createFromDiscriminatorValue'])),
             'decisions' => fn(ParseNode $n) => $o->setDecisions($n->getCollectionOfObjectValues([AccessReviewInstanceDecisionItem::class, 'createFromDiscriminatorValue'])),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'errors' => fn(ParseNode $n) => $o->setErrors($n->getCollectionOfObjectValues([AccessReviewError::class, 'createFromDiscriminatorValue'])),
             'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
             'reviewers' => fn(ParseNode $n) => $o->setReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
             'scope' => fn(ParseNode $n) => $o->setScope($n->getObjectValue([AccessReviewScope::class, 'createFromDiscriminatorValue'])),
@@ -172,6 +187,7 @@ class AccessReviewInstance extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('contactedReviewers', $this->getContactedReviewers());
         $writer->writeCollectionOfObjectValues('decisions', $this->getDecisions());
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeCollectionOfObjectValues('errors', $this->getErrors());
         $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->getFallbackReviewers());
         $writer->writeCollectionOfObjectValues('reviewers', $this->getReviewers());
         $writer->writeObjectValue('scope', $this->getScope());
@@ -202,6 +218,14 @@ class AccessReviewInstance extends Entity implements Parsable
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
+    }
+
+    /**
+     * Sets the errors property value. Collection of errors in an access review instance lifecycle. Read-only.
+     * @param array<AccessReviewError>|null $value Value to set for the errors property.
+    */
+    public function setErrors(?array $value): void {
+        $this->getBackingStore()->set('errors', $value);
     }
 
     /**

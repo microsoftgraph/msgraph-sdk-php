@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -144,6 +145,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
             'isInMultiTenantOrganization' => fn(ParseNode $n) => $o->setIsInMultiTenantOrganization($n->getBooleanValue()),
             'isServiceProvider' => fn(ParseNode $n) => $o->setIsServiceProvider($n->getBooleanValue()),
+            'm365Capabilities' => fn(ParseNode $n) => $o->setM365Capabilities($n->getCollectionOfObjectValues([M365CapabilityBase::class, 'createFromDiscriminatorValue'])),
             'm365CollaborationInbound' => fn(ParseNode $n) => $o->setM365CollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyM365CollaborationInboundSetting::class, 'createFromDiscriminatorValue'])),
             'm365CollaborationOutbound' => fn(ParseNode $n) => $o->setM365CollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyM365CollaborationOutboundSetting::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -199,6 +201,20 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isServiceProvider'");
+    }
+
+    /**
+     * Gets the m365Capabilities property value. Defines the partner-specific Microsoft 365 cross-tenant capabilities for inbound access from the partner organization.
+     * @return array<M365CapabilityBase>|null
+    */
+    public function getM365Capabilities(): ?array {
+        $val = $this->getBackingStore()->get('m365Capabilities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, M365CapabilityBase::class);
+            /** @var array<M365CapabilityBase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'm365Capabilities'");
     }
 
     /**
@@ -288,6 +304,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
         $writer->writeBooleanValue('isInMultiTenantOrganization', $this->getIsInMultiTenantOrganization());
         $writer->writeBooleanValue('isServiceProvider', $this->getIsServiceProvider());
+        $writer->writeCollectionOfObjectValues('m365Capabilities', $this->getM365Capabilities());
         $writer->writeObjectValue('m365CollaborationInbound', $this->getM365CollaborationInbound());
         $writer->writeObjectValue('m365CollaborationOutbound', $this->getM365CollaborationOutbound());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -391,6 +408,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setIsServiceProvider(?bool $value): void {
         $this->getBackingStore()->set('isServiceProvider', $value);
+    }
+
+    /**
+     * Sets the m365Capabilities property value. Defines the partner-specific Microsoft 365 cross-tenant capabilities for inbound access from the partner organization.
+     * @param array<M365CapabilityBase>|null $value Value to set for the m365Capabilities property.
+    */
+    public function setM365Capabilities(?array $value): void {
+        $this->getBackingStore()->set('m365Capabilities', $value);
     }
 
     /**

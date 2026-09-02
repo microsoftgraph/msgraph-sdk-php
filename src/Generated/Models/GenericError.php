@@ -31,6 +31,13 @@ class GenericError implements AdditionalDataHolder, BackedModel, Parsable
      * @return GenericError
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): GenericError {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.accessReviewError': return new AccessReviewError();
+            }
+        }
         return new GenericError();
     }
 

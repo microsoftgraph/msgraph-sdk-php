@@ -36,6 +36,7 @@ class WorkflowExecutionConditions implements AdditionalDataHolder, BackedModel, 
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
                 case '#microsoft.graph.identityGovernance.onDemandExecutionOnly': return new OnDemandExecutionOnly();
+                case '#microsoft.graph.identityGovernance.provisioningAttributeMapping': return new ProvisioningAttributeMapping();
                 case '#microsoft.graph.identityGovernance.triggerAndScopeBasedConditions': return new TriggerAndScopeBasedConditions();
             }
         }

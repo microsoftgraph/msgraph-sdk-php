@@ -77,6 +77,7 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'replyMode' => fn(ParseNode $n) => $o->setReplyMode($n->getEnumValue(CustomTaskExtensionReplyMode::class)),
         ]);
     }
 
@@ -105,6 +106,18 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
     }
 
     /**
+     * Gets the replyMode property value. The replyMode property
+     * @return CustomTaskExtensionReplyMode|null
+    */
+    public function getReplyMode(): ?CustomTaskExtensionReplyMode {
+        $val = $this->getBackingStore()->get('replyMode');
+        if (is_null($val) || $val instanceof CustomTaskExtensionReplyMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'replyMode'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -115,6 +128,7 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeEnumValue('replyMode', $this->getReplyMode());
     }
 
     /**
@@ -155,6 +169,14 @@ class CustomTaskExtension extends CustomCalloutExtension implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the replyMode property value. The replyMode property
+     * @param CustomTaskExtensionReplyMode|null $value Value to set for the replyMode property.
+    */
+    public function setReplyMode(?CustomTaskExtensionReplyMode $value): void {
+        $this->getBackingStore()->set('replyMode', $value);
     }
 
 }

@@ -35,6 +35,7 @@ class CustomTaskExtensionCalloutData extends CustomExtensionData implements Pars
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getObjectValue([User::class, 'createFromDiscriminatorValue'])),
+            'targetSubject' => fn(ParseNode $n) => $o->setTargetSubject($n->getObjectValue([WorkflowSubject::class, 'createFromDiscriminatorValue'])),
             'task' => fn(ParseNode $n) => $o->setTask($n->getObjectValue([Task::class, 'createFromDiscriminatorValue'])),
             'taskProcessingresult' => fn(ParseNode $n) => $o->setTaskProcessingresult($n->getObjectValue([TaskProcessingResult::class, 'createFromDiscriminatorValue'])),
             'workflow' => fn(ParseNode $n) => $o->setWorkflow($n->getObjectValue([Workflow::class, 'createFromDiscriminatorValue'])),
@@ -51,6 +52,18 @@ class CustomTaskExtensionCalloutData extends CustomExtensionData implements Pars
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
+    }
+
+    /**
+     * Gets the targetSubject property value. The target subject for workflow execution.
+     * @return WorkflowSubject|null
+    */
+    public function getTargetSubject(): ?WorkflowSubject {
+        $val = $this->getBackingStore()->get('targetSubject');
+        if (is_null($val) || $val instanceof WorkflowSubject) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetSubject'");
     }
 
     /**
@@ -96,6 +109,7 @@ class CustomTaskExtensionCalloutData extends CustomExtensionData implements Pars
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('subject', $this->getSubject());
+        $writer->writeObjectValue('targetSubject', $this->getTargetSubject());
         $writer->writeObjectValue('task', $this->getTask());
         $writer->writeObjectValue('taskProcessingresult', $this->getTaskProcessingresult());
         $writer->writeObjectValue('workflow', $this->getWorkflow());
@@ -107,6 +121,14 @@ class CustomTaskExtensionCalloutData extends CustomExtensionData implements Pars
     */
     public function setSubject(?User $value): void {
         $this->getBackingStore()->set('subject', $value);
+    }
+
+    /**
+     * Sets the targetSubject property value. The target subject for workflow execution.
+     * @param WorkflowSubject|null $value Value to set for the targetSubject property.
+    */
+    public function setTargetSubject(?WorkflowSubject $value): void {
+        $this->getBackingStore()->set('targetSubject', $value);
     }
 
     /**

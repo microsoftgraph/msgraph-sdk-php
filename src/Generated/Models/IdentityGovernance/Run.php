@@ -91,6 +91,7 @@ class Run extends Entity implements Parsable
             'reprocessedRuns' => fn(ParseNode $n) => $o->setReprocessedRuns($n->getCollectionOfObjectValues([Run::class, 'createFromDiscriminatorValue'])),
             'scheduledDateTime' => fn(ParseNode $n) => $o->setScheduledDateTime($n->getDateTimeValue()),
             'startedDateTime' => fn(ParseNode $n) => $o->setStartedDateTime($n->getDateTimeValue()),
+            'subjectProcessingResults' => fn(ParseNode $n) => $o->setSubjectProcessingResults($n->getCollectionOfObjectValues([SubjectProcessingResult::class, 'createFromDiscriminatorValue'])),
             'successfulUsersCount' => fn(ParseNode $n) => $o->setSuccessfulUsersCount($n->getIntegerValue()),
             'taskProcessingResults' => fn(ParseNode $n) => $o->setTaskProcessingResults($n->getCollectionOfObjectValues([TaskProcessingResult::class, 'createFromDiscriminatorValue'])),
             'totalTasksCount' => fn(ParseNode $n) => $o->setTotalTasksCount($n->getIntegerValue()),
@@ -161,6 +162,20 @@ class Run extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'startedDateTime'");
+    }
+
+    /**
+     * Gets the subjectProcessingResults property value. The processing results for each subject in this workflow run.
+     * @return array<SubjectProcessingResult>|null
+    */
+    public function getSubjectProcessingResults(): ?array {
+        $val = $this->getBackingStore()->get('subjectProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectProcessingResult::class);
+            /** @var array<SubjectProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectProcessingResults'");
     }
 
     /**
@@ -266,6 +281,7 @@ class Run extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('reprocessedRuns', $this->getReprocessedRuns());
         $writer->writeDateTimeValue('scheduledDateTime', $this->getScheduledDateTime());
         $writer->writeDateTimeValue('startedDateTime', $this->getStartedDateTime());
+        $writer->writeCollectionOfObjectValues('subjectProcessingResults', $this->getSubjectProcessingResults());
         $writer->writeIntegerValue('successfulUsersCount', $this->getSuccessfulUsersCount());
         $writer->writeCollectionOfObjectValues('taskProcessingResults', $this->getTaskProcessingResults());
         $writer->writeIntegerValue('totalTasksCount', $this->getTotalTasksCount());
@@ -345,6 +361,14 @@ class Run extends Entity implements Parsable
     */
     public function setStartedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startedDateTime', $value);
+    }
+
+    /**
+     * Sets the subjectProcessingResults property value. The processing results for each subject in this workflow run.
+     * @param array<SubjectProcessingResult>|null $value Value to set for the subjectProcessingResults property.
+    */
+    public function setSubjectProcessingResults(?array $value): void {
+        $this->getBackingStore()->set('subjectProcessingResults', $value);
     }
 
     /**

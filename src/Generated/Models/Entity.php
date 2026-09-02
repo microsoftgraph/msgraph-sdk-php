@@ -27,6 +27,7 @@ use Microsoft\Graph\Generated\Models\IdentityGovernance\Insights;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\LifecycleManagementSettings;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\LifecycleWorkflowsContainer;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\Run;
+use Microsoft\Graph\Generated\Models\IdentityGovernance\SubjectProcessingResult;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\Task;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskDefinition;
 use Microsoft\Graph\Generated\Models\IdentityGovernance\TaskProcessingResult;
@@ -396,6 +397,17 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.copilotReportRoot': return new CopilotReportRoot();
                 case '#microsoft.graph.crossTenantAccessPolicy': return new CrossTenantAccessPolicy();
                 case '#microsoft.graph.crossTenantAccessPolicyConfigurationDefault': return new CrossTenantAccessPolicyConfigurationDefault();
+                case '#microsoft.graph.crossTenantCalendarAvailabilityBasic': return new CrossTenantCalendarAvailabilityBasic();
+                case '#microsoft.graph.crossTenantCalendarAvailabilityLimitedDetails': return new CrossTenantCalendarAvailabilityLimitedDetails();
+                case '#microsoft.graph.crossTenantCalendarSharingFreeBusyDetail': return new CrossTenantCalendarSharingFreeBusyDetail();
+                case '#microsoft.graph.crossTenantCalendarSharingFreeBusyReviewer': return new CrossTenantCalendarSharingFreeBusyReviewer();
+                case '#microsoft.graph.crossTenantCalendarSharingFreeBusySimple': return new CrossTenantCalendarSharingFreeBusySimple();
+                case '#microsoft.graph.crossTenantMailTipsAll': return new CrossTenantMailTipsAll();
+                case '#microsoft.graph.crossTenantMailTipsLimited': return new CrossTenantMailTipsLimited();
+                case '#microsoft.graph.crossTenantMigration': return new CrossTenantMigration();
+                case '#microsoft.graph.crossTenantOpenProfileCard': return new CrossTenantOpenProfileCard();
+                case '#microsoft.graph.crossTenantPlacesDeskBooking': return new CrossTenantPlacesDeskBooking();
+                case '#microsoft.graph.crossTenantPlacesRoomBooking': return new CrossTenantPlacesRoomBooking();
                 case '#microsoft.graph.customAuthenticationExtension': return new CustomAuthenticationExtension();
                 case '#microsoft.graph.customCalloutExtension': return new CustomCalloutExtension();
                 case '#microsoft.graph.customDataProvidedResource': return new CustomDataProvidedResource();
@@ -425,7 +437,6 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.device': return new Device();
                 case '#microsoft.graph.deviceAndAppManagementRoleAssignment': return new DeviceAndAppManagementRoleAssignment();
                 case '#microsoft.graph.deviceAndAppManagementRoleDefinition': return new DeviceAndAppManagementRoleDefinition();
-                case '#microsoft.graph.deviceAppManagement': return new DeviceAppManagement();
                 case '#microsoft.graph.deviceCategory': return new DeviceCategory();
                 case '#microsoft.graph.deviceComplianceActionItem': return new DeviceComplianceActionItem();
                 case '#microsoft.graph.deviceComplianceDeviceOverview': return new DeviceComplianceDeviceOverview();
@@ -562,6 +573,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.externalConnectors.identity': return new Identity();
                 case '#microsoft.graph.externalConnectors.schema': return new Schema();
                 case '#microsoft.graph.externalDomainName': return new ExternalDomainName();
+                case '#microsoft.graph.externalOriginResourceConnector': return new ExternalOriginResourceConnector();
                 case '#microsoft.graph.externalUsersSelfServiceSignUpEventsFlow': return new ExternalUsersSelfServiceSignUpEventsFlow();
                 case '#microsoft.graph.featureRolloutPolicy': return new FeatureRolloutPolicy();
                 case '#microsoft.graph.federatedIdentityCredential': return new FederatedIdentityCredential();
@@ -603,6 +615,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.identityGovernance.lifecycleManagementSettings': return new LifecycleManagementSettings();
                 case '#microsoft.graph.identityGovernance.lifecycleWorkflowsContainer': return new LifecycleWorkflowsContainer();
                 case '#microsoft.graph.identityGovernance.run': return new Run();
+                case '#microsoft.graph.identityGovernance.subjectProcessingResult': return new SubjectProcessingResult();
                 case '#microsoft.graph.identityGovernance.task': return new Task();
                 case '#microsoft.graph.identityGovernance.taskDefinition': return new TaskDefinition();
                 case '#microsoft.graph.identityGovernance.taskProcessingResult': return new TaskProcessingResult();
@@ -666,6 +679,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.loginPage': return new LoginPage();
                 case '#microsoft.graph.longRunningOperation': return new LongRunningOperation();
                 case '#microsoft.graph.m365AppsInstallationOptions': return new M365AppsInstallationOptions();
+                case '#microsoft.graph.m365CapabilityBase': return new M365CapabilityBase();
                 case '#microsoft.graph.macOSCompliancePolicy': return new MacOSCompliancePolicy();
                 case '#microsoft.graph.macOSCustomConfiguration': return new MacOSCustomConfiguration();
                 case '#microsoft.graph.macOSDeviceFeaturesConfiguration': return new MacOSDeviceFeaturesConfiguration();
@@ -1170,6 +1184,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.unifiedRoleManagementPolicyRule': return new UnifiedRoleManagementPolicyRule();
                 case '#microsoft.graph.unifiedRoleScheduleBase': return new UnifiedRoleScheduleBase();
                 case '#microsoft.graph.unifiedRoleScheduleInstanceBase': return new UnifiedRoleScheduleInstanceBase();
+                case '#microsoft.graph.unifiedRoot': return new UnifiedRoot();
                 case '#microsoft.graph.unifiedStorageQuota': return new UnifiedStorageQuota();
                 case '#microsoft.graph.unitMap': return new UnitMap();
                 case '#microsoft.graph.unmuteParticipantOperation': return new UnmuteParticipantOperation();

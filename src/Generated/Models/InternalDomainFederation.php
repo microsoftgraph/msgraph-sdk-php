@@ -64,6 +64,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
             'promptLoginBehavior' => fn(ParseNode $n) => $o->setPromptLoginBehavior($n->getEnumValue(PromptLoginBehavior::class)),
             'signingCertificateUpdateStatus' => fn(ParseNode $n) => $o->setSigningCertificateUpdateStatus($n->getObjectValue([SigningCertificateUpdateStatus::class, 'createFromDiscriminatorValue'])),
             'signOutUri' => fn(ParseNode $n) => $o->setSignOutUri($n->getStringValue()),
+            'systemBrowserEnabledOn' => fn(ParseNode $n) => $o->setSystemBrowserEnabledOn($n->getEnumValue(SystemBrowserEnabledOn::class)),
         ]);
     }
 
@@ -140,6 +141,18 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     }
 
     /**
+     * Gets the systemBrowserEnabledOn property value. The systemBrowserEnabledOn property
+     * @return SystemBrowserEnabledOn|null
+    */
+    public function getSystemBrowserEnabledOn(): ?SystemBrowserEnabledOn {
+        $val = $this->getBackingStore()->get('systemBrowserEnabledOn');
+        if (is_null($val) || $val instanceof SystemBrowserEnabledOn) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'systemBrowserEnabledOn'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -153,6 +166,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
         $writer->writeEnumValue('promptLoginBehavior', $this->getPromptLoginBehavior());
         $writer->writeObjectValue('signingCertificateUpdateStatus', $this->getSigningCertificateUpdateStatus());
         $writer->writeStringValue('signOutUri', $this->getSignOutUri());
+        $writer->writeEnumValue('systemBrowserEnabledOn', $this->getSystemBrowserEnabledOn());
     }
 
     /**
@@ -217,6 +231,14 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
     */
     public function setSignOutUri(?string $value): void {
         $this->getBackingStore()->set('signOutUri', $value);
+    }
+
+    /**
+     * Sets the systemBrowserEnabledOn property value. The systemBrowserEnabledOn property
+     * @param SystemBrowserEnabledOn|null $value Value to set for the systemBrowserEnabledOn property.
+    */
+    public function setSystemBrowserEnabledOn(?SystemBrowserEnabledOn $value): void {
+        $this->getBackingStore()->set('systemBrowserEnabledOn', $value);
     }
 
 }

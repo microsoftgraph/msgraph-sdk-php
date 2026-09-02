@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\It
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\ExecutionScope\ExecutionScopeRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\LastModifiedBy\LastModifiedByRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivate\MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivateAndWait\MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceActivateWithScope\MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceCancelProcessing\MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceClearQuarantine\MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder;
@@ -18,6 +19,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\It
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\MicrosoftGraphIdentityGovernanceRestore\MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\PreviewScope\PreviewScopeRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Runs\RunsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\SubjectProcessingResults\SubjectProcessingResultsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\TaskReports\TaskReportsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\Tasks\TasksRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Workflows\Item\UserProcessingResults\UserProcessingResultsRequestBuilder;
@@ -67,6 +69,13 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     */
     public function microsoftGraphIdentityGovernanceActivate(): MicrosoftGraphIdentityGovernanceActivateRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the activateAndWait method.
+    */
+    public function microsoftGraphIdentityGovernanceActivateAndWait(): MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder {
+        return new MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -130,6 +139,13 @@ class WorkflowItemRequestBuilder extends BaseRequestBuilder
     */
     public function runs(): RunsRequestBuilder {
         return new RunsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.workflow entity.
+    */
+    public function subjectProcessingResults(): SubjectProcessingResultsRequestBuilder {
+        return new SubjectProcessingResultsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

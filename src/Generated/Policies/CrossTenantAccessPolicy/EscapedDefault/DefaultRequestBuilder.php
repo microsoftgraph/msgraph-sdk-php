@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\CrossTenantAccessPolicyConfigurationDefault;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefault\M365Capabilities\M365CapabilitiesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefault\ResetToSystemDefault\ResetToSystemDefaultRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class DefaultRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the m365Capabilities property of the microsoft.graph.crossTenantAccessPolicyConfigurationDefault entity.
+    */
+    public function m365Capabilities(): M365CapabilitiesRequestBuilder {
+        return new M365CapabilitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the resetToSystemDefault method.
     */

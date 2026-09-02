@@ -31,6 +31,13 @@ class ConnectionInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return ConnectionInfo
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ConnectionInfo {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.externalTokenBasedSapIagConnectionInfo': return new ExternalTokenBasedSapIagConnectionInfo();
+            }
+        }
         return new ConnectionInfo();
     }
 

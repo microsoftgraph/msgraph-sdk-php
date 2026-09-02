@@ -68,21 +68,6 @@ class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property members in employeeExperience
-     * @param EngagementRoleMember $body The request body
-     * @param EngagementRoleMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<EngagementRoleMember|null>
-     * @throws Exception
-    */
-    public function patch(EngagementRoleMember $body, ?EngagementRoleMemberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [EngagementRoleMember::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
      * Delete a Viva Engage role from a user.
      * @param EngagementRoleMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -118,26 +103,6 @@ class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property members in employeeExperience
-     * @param EngagementRoleMember $body The request body
-     * @param EngagementRoleMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(EngagementRoleMember $body, ?EngagementRoleMemberItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

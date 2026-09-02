@@ -31,20 +31,6 @@ class ConfigurationDriftItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property configurationDrifts for admin
-     * @param ConfigurationDriftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<void|null>
-     * @throws Exception
-    */
-    public function delete(?ConfigurationDriftItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-    }
-
-    /**
      * Get the properties and relationships of a configurationDrift object.
      * @param ConfigurationDriftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ConfigurationDrift|null>
@@ -57,39 +43,6 @@ class ConfigurationDriftItemRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationDrift::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Update the navigation property configurationDrifts in admin
-     * @param ConfigurationDrift $body The request body
-     * @param ConfigurationDriftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise<ConfigurationDrift|null>
-     * @throws Exception
-    */
-    public function patch(ConfigurationDrift $body, ?ConfigurationDriftItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        $errorMappings = [
-                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
-        ];
-        return $this->requestAdapter->sendAsync($requestInfo, [ConfigurationDrift::class, 'createFromDiscriminatorValue'], $errorMappings);
-    }
-
-    /**
-     * Delete navigation property configurationDrifts for admin
-     * @param ConfigurationDriftItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toDeleteRequestInformation(?ConfigurationDriftItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
     }
 
     /**
@@ -110,26 +63,6 @@ class ConfigurationDriftItemRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
-        return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property configurationDrifts in admin
-     * @param ConfigurationDrift $body The request body
-     * @param ConfigurationDriftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(ConfigurationDrift $body, ?ConfigurationDriftItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        if ($requestConfiguration !== null) {
-            $requestInfo->addHeaders($requestConfiguration->headers);
-            $requestInfo->addRequestOptions(...$requestConfiguration->options);
-        }
-        $requestInfo->tryAddHeader('Accept', "application/json");
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 
