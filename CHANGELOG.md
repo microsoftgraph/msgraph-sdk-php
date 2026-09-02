@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.6.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v3.5.0...v3.6.0) (2026-09-02)
+
+
+### Features
+
+* **generation:** update request builders and models ([100003f](https://github.com/microsoftgraph/msgraph-sdk-php/commit/100003f867d55c8b03c3c24e90d19372e53b563f))
+* **generation:** update request builders and models ([b1d1f00](https://github.com/microsoftgraph/msgraph-sdk-php/commit/b1d1f00927d6f789859ae78d1f4ad3310b95e592))
+
 ## [3.5.0](https://github.com/microsoftgraph/msgraph-sdk-php/compare/v3.4.0...v3.5.0) (2026-08-05)
 
 
