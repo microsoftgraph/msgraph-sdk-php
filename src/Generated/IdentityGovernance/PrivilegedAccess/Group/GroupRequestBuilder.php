@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\Assignme
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleInstances\EligibilityScheduleInstancesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilityScheduleRequests\EligibilityScheduleRequestsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\EligibilitySchedules\EligibilitySchedulesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrivilegedAccessGroup;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -70,6 +71,13 @@ class GroupRequestBuilder extends BaseRequestBuilder
     */
     public function eligibilitySchedules(): EligibilitySchedulesRequestBuilder {
         return new EligibilitySchedulesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.privilegedAccessGroup entity.
+    */
+    public function resources(): ResourcesRequestBuilder {
+        return new ResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

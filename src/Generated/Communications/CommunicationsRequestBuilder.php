@@ -110,7 +110,7 @@ class CommunicationsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update communications
-     * @param CloudCommunications $body Represents a container that exposes navigation properties for cloud communications resources.
+     * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<CloudCommunications|null>
      * @throws Exception
@@ -146,7 +146,7 @@ class CommunicationsRequestBuilder extends BaseRequestBuilder
 
     /**
      * Update communications
-     * @param CloudCommunications $body Represents a container that exposes navigation properties for cloud communications resources.
+     * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

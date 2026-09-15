@@ -35,6 +35,7 @@ class DlpActionInfo implements AdditionalDataHolder, BackedModel, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.policyTipAction': return new PolicyTipAction();
                 case '#microsoft.graph.restrictAccessAction': return new RestrictAccessAction();
                 case '#microsoft.graph.restrictAccessActionBase': return new RestrictAccessActionBase();
             }

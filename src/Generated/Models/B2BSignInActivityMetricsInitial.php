@@ -1,0 +1,69 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Models;
+
+use DateTime;
+use Microsoft\Kiota\Abstractions\Serialization\Parsable;
+use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
+use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+
+class B2BSignInActivityMetricsInitial extends B2BSignInActivityMetricsBase implements Parsable 
+{
+    /**
+     * Instantiates a new B2BSignInActivityMetricsInitial and sets the default values.
+    */
+    public function __construct() {
+        parent::__construct();
+        $this->setOdataType('#microsoft.graph.b2BSignInActivityMetricsInitial');
+    }
+
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param ParseNode $parseNode The parse node to use to read the discriminator value and create the object
+     * @return B2BSignInActivityMetricsInitial
+    */
+    public static function createFromDiscriminatorValue(ParseNode $parseNode): B2BSignInActivityMetricsInitial {
+        return new B2BSignInActivityMetricsInitial();
+    }
+
+    /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return DateTime|null
+    */
+    public function getCreatedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
+    }
+
+    /**
+     * The deserialization information for the current model
+     * @return array<string, callable(ParseNode): void>
+    */
+    public function getFieldDeserializers(): array {
+        $o = $this;
+        return array_merge(parent::getFieldDeserializers(), [
+            'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+        ]);
+    }
+
+    /**
+     * Serializes information the current object
+     * @param SerializationWriter $writer Serialization writer to use to serialize this model
+    */
+    public function serialize(SerializationWriter $writer): void {
+        parent::serialize($writer);
+        $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+    }
+
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param DateTime|null $value Value to set for the createdDateTime property.
+    */
+    public function setCreatedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+}

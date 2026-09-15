@@ -33,8 +33,30 @@ class AgentIdentityBlueprintPrincipal extends ServicePrincipal implements Parsab
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'managerApplications' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setManagerApplications($val);
+            },
             'sponsors' => fn(ParseNode $n) => $o->setSponsors($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the managerApplications property value. The collection of application IDs designated as managers of this agent identity blueprint principal's backing agentIdentityBlueprint. Read-only; the value is server-managed and reflects the managerApplications of the backing agentIdentityBlueprint. To change the managers, an owner or administrator must update the managerApplications property on the backing agentIdentityBlueprint in the tenant where it's registered. For multitenant agent identity blueprints, admins in a tenant where the blueprint is only consumed can't make this change — they must ask an owner or administrator in the blueprint's home tenant. Not nullable. Returned only on $select.
+     * @return array<string>|null
+    */
+    public function getManagerApplications(): ?array {
+        $val = $this->getBackingStore()->get('managerApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managerApplications'");
     }
 
     /**
@@ -58,6 +80,14 @@ class AgentIdentityBlueprintPrincipal extends ServicePrincipal implements Parsab
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('sponsors', $this->getSponsors());
+    }
+
+    /**
+     * Sets the managerApplications property value. The collection of application IDs designated as managers of this agent identity blueprint principal's backing agentIdentityBlueprint. Read-only; the value is server-managed and reflects the managerApplications of the backing agentIdentityBlueprint. To change the managers, an owner or administrator must update the managerApplications property on the backing agentIdentityBlueprint in the tenant where it's registered. For multitenant agent identity blueprints, admins in a tenant where the blueprint is only consumed can't make this change — they must ask an owner or administrator in the blueprint's home tenant. Not nullable. Returned only on $select.
+     * @param array<string>|null $value Value to set for the managerApplications property.
+    */
+    public function setManagerApplications(?array $value): void {
+        $this->getBackingStore()->set('managerApplications', $value);
     }
 
     /**

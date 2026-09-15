@@ -128,6 +128,7 @@ class Directory extends Entity implements Parsable
             'recovery' => fn(ParseNode $n) => $o->setRecovery($n->getObjectValue([Recovery::class, 'createFromDiscriminatorValue'])),
             'remoteTenantGroups' => fn(ParseNode $n) => $o->setRemoteTenantGroups($n->getCollectionOfObjectValues([RemoteTenantGroup::class, 'createFromDiscriminatorValue'])),
             'subscriptions' => fn(ParseNode $n) => $o->setSubscriptions($n->getCollectionOfObjectValues([CompanySubscription::class, 'createFromDiscriminatorValue'])),
+            'tenantGovernance' => fn(ParseNode $n) => $o->setTenantGovernance($n->getObjectValue([TenantGovernance::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -198,6 +199,18 @@ class Directory extends Entity implements Parsable
     }
 
     /**
+     * Gets the tenantGovernance property value. The tenantGovernance property
+     * @return TenantGovernance|null
+    */
+    public function getTenantGovernance(): ?TenantGovernance {
+        $val = $this->getBackingStore()->get('tenantGovernance');
+        if (is_null($val) || $val instanceof TenantGovernance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantGovernance'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -214,6 +227,7 @@ class Directory extends Entity implements Parsable
         $writer->writeObjectValue('recovery', $this->getRecovery());
         $writer->writeCollectionOfObjectValues('remoteTenantGroups', $this->getRemoteTenantGroups());
         $writer->writeCollectionOfObjectValues('subscriptions', $this->getSubscriptions());
+        $writer->writeObjectValue('tenantGovernance', $this->getTenantGovernance());
     }
 
     /**
@@ -302,6 +316,14 @@ class Directory extends Entity implements Parsable
     */
     public function setSubscriptions(?array $value): void {
         $this->getBackingStore()->set('subscriptions', $value);
+    }
+
+    /**
+     * Sets the tenantGovernance property value. The tenantGovernance property
+     * @param TenantGovernance|null $value Value to set for the tenantGovernance property.
+    */
+    public function setTenantGovernance(?TenantGovernance $value): void {
+        $this->getBackingStore()->set('tenantGovernance', $value);
     }
 
 }
