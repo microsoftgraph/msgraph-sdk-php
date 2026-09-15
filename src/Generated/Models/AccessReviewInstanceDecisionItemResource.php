@@ -38,6 +38,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
                 case '#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource': return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
                 case '#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageResource': return new AccessReviewInstanceDecisionItemAccessPackageResource();
                 case '#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource': return new AccessReviewInstanceDecisionItemAzureRoleResource();
+                case '#microsoft.graph.accessReviewInstanceDecisionItemCustomDataProvidedResource': return new AccessReviewInstanceDecisionItemCustomDataProvidedResource();
                 case '#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource': return new AccessReviewInstanceDecisionItemServicePrincipalResource();
             }
         }
@@ -66,6 +67,18 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
+     * Gets the description property value. The description property
+     * @return string|null
+    */
+    public function getDescription(): ?string {
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
+    }
+
+    /**
      * Gets the displayName property value. Display name of the resource
      * @return string|null
     */
@@ -84,6 +97,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'id' => fn(ParseNode $n) => $o->setId($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -132,6 +146,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('id', $this->getId());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -153,6 +168,14 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the description property value. The description property
+     * @param string|null $value Value to set for the description property.
+    */
+    public function setDescription(?string $value): void {
+        $this->getBackingStore()->set('description', $value);
     }
 
     /**

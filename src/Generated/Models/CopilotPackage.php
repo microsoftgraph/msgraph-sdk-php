@@ -161,6 +161,8 @@ class CopilotPackage extends Entity implements Parsable
             'ownerId' => fn(ParseNode $n) => $o->setOwnerId($n->getStringValue()),
             'platform' => fn(ParseNode $n) => $o->setPlatform($n->getStringValue()),
             'publisher' => fn(ParseNode $n) => $o->setPublisher($n->getStringValue()),
+            'requestStatus' => fn(ParseNode $n) => $o->setRequestStatus($n->getEnumValue(CopilotPackageRequestStatus::class)),
+            'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(CopilotPackageRequestType::class)),
             'shortDescription' => fn(ParseNode $n) => $o->setShortDescription($n->getStringValue()),
             'supportedHosts' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -261,6 +263,30 @@ class CopilotPackage extends Entity implements Parsable
     }
 
     /**
+     * Gets the requestStatus property value. The requestStatus property
+     * @return CopilotPackageRequestStatus|null
+    */
+    public function getRequestStatus(): ?CopilotPackageRequestStatus {
+        $val = $this->getBackingStore()->get('requestStatus');
+        if (is_null($val) || $val instanceof CopilotPackageRequestStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestStatus'");
+    }
+
+    /**
+     * Gets the requestType property value. The requestType property
+     * @return CopilotPackageRequestType|null
+    */
+    public function getRequestType(): ?CopilotPackageRequestType {
+        $val = $this->getBackingStore()->get('requestType');
+        if (is_null($val) || $val instanceof CopilotPackageRequestType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestType'");
+    }
+
+    /**
      * Gets the shortDescription property value. The shortDescription property
      * @return string|null
     */
@@ -343,6 +369,8 @@ class CopilotPackage extends Entity implements Parsable
         $writer->writeStringValue('ownerId', $this->getOwnerId());
         $writer->writeStringValue('platform', $this->getPlatform());
         $writer->writeStringValue('publisher', $this->getPublisher());
+        $writer->writeEnumValue('requestStatus', $this->getRequestStatus());
+        $writer->writeEnumValue('requestType', $this->getRequestType());
         $writer->writeStringValue('shortDescription', $this->getShortDescription());
         $writer->writeCollectionOfPrimitiveValues('supportedHosts', $this->getSupportedHosts());
         $writer->writeEnumValue('type', $this->getType());
@@ -468,6 +496,22 @@ class CopilotPackage extends Entity implements Parsable
     */
     public function setPublisher(?string $value): void {
         $this->getBackingStore()->set('publisher', $value);
+    }
+
+    /**
+     * Sets the requestStatus property value. The requestStatus property
+     * @param CopilotPackageRequestStatus|null $value Value to set for the requestStatus property.
+    */
+    public function setRequestStatus(?CopilotPackageRequestStatus $value): void {
+        $this->getBackingStore()->set('requestStatus', $value);
+    }
+
+    /**
+     * Sets the requestType property value. The requestType property
+     * @param CopilotPackageRequestType|null $value Value to set for the requestType property.
+    */
+    public function setRequestType(?CopilotPackageRequestType $value): void {
+        $this->getBackingStore()->set('requestType', $value);
     }
 
     /**

@@ -16,6 +16,7 @@ use Microsoft\Graph\Generated\Directory\Recovery\RecoveryRequestBuilder;
 use Microsoft\Graph\Generated\Directory\RemoteTenantGroups\RemoteTenantGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\SubscriptionsWithCommerceSubscriptionId\SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
+use Microsoft\Graph\Generated\Directory\TenantGovernance\TenantGovernanceRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -103,6 +104,13 @@ class DirectoryRequestBuilder extends BaseRequestBuilder
     */
     public function subscriptions(): SubscriptionsRequestBuilder {
         return new SubscriptionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the tenantGovernance property of the microsoft.graph.directory entity.
+    */
+    public function tenantGovernance(): TenantGovernanceRequestBuilder {
+        return new TenantGovernanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

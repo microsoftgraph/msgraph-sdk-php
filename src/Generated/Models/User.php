@@ -780,6 +780,7 @@ class User extends DirectoryObject implements Parsable
             'messages' => fn(ParseNode $n) => $o->setMessages($n->getCollectionOfObjectValues([Message::class, 'createFromDiscriminatorValue'])),
             'mobilePhone' => fn(ParseNode $n) => $o->setMobilePhone($n->getStringValue()),
             'mySite' => fn(ParseNode $n) => $o->setMySite($n->getStringValue()),
+            'notes' => fn(ParseNode $n) => $o->setNotes($n->getCollectionOfObjectValues([Note::class, 'createFromDiscriminatorValue'])),
             'oauth2PermissionGrants' => fn(ParseNode $n) => $o->setOauth2PermissionGrants($n->getCollectionOfObjectValues([OAuth2PermissionGrant::class, 'createFromDiscriminatorValue'])),
             'officeLocation' => fn(ParseNode $n) => $o->setOfficeLocation($n->getStringValue()),
             'onenote' => fn(ParseNode $n) => $o->setOnenote($n->getObjectValue([Onenote::class, 'createFromDiscriminatorValue'])),
@@ -1240,6 +1241,20 @@ class User extends DirectoryObject implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'mySite'");
+    }
+
+    /**
+     * Gets the notes property value. The notes in the user's Notes folder. Read-only. Nullable.
+     * @return array<Note>|null
+    */
+    public function getNotes(): ?array {
+        $val = $this->getBackingStore()->get('notes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Note::class);
+            /** @var array<Note>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notes'");
     }
 
     /**
@@ -2052,6 +2067,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
         $writer->writeStringValue('mobilePhone', $this->getMobilePhone());
         $writer->writeStringValue('mySite', $this->getMySite());
+        $writer->writeCollectionOfObjectValues('notes', $this->getNotes());
         $writer->writeCollectionOfObjectValues('oauth2PermissionGrants', $this->getOauth2PermissionGrants());
         $writer->writeStringValue('officeLocation', $this->getOfficeLocation());
         $writer->writeObjectValue('onenote', $this->getOnenote());
@@ -2733,6 +2749,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setMySite(?string $value): void {
         $this->getBackingStore()->set('mySite', $value);
+    }
+
+    /**
+     * Sets the notes property value. The notes in the user's Notes folder. Read-only. Nullable.
+     * @param array<Note>|null $value Value to set for the notes property.
+    */
+    public function setNotes(?array $value): void {
+        $this->getBackingStore()->set('notes', $value);
     }
 
     /**

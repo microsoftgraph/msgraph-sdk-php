@@ -13,4 +13,5 @@ class ExchangeMessageTraceStatus extends Enum {
     public const QUARANTINED = "quarantined";
     public const FILTERED_AS_SPAM = "filteredAsSpam";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const RECALLED = "recalled";
 }

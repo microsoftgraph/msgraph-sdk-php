@@ -49,6 +49,7 @@ class DirectoryObject extends Entity implements Parsable
                 case '#microsoft.graph.extensionProperty': return new ExtensionProperty();
                 case '#microsoft.graph.federatedTokenValidationPolicy': return new FederatedTokenValidationPolicy();
                 case '#microsoft.graph.group': return new Group();
+                case '#microsoft.graph.groupResource': return new GroupResource();
                 case '#microsoft.graph.groupSettingTemplate': return new GroupSettingTemplate();
                 case '#microsoft.graph.homeRealmDiscoveryPolicy': return new HomeRealmDiscoveryPolicy();
                 case '#microsoft.graph.identitySecurityDefaultsEnforcementPolicy': return new IdentitySecurityDefaultsEnforcementPolicy();

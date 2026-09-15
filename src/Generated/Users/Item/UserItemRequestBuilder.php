@@ -55,6 +55,7 @@ use Microsoft\Graph\Generated\Users\Item\ManagedDevices\ManagedDevicesRequestBui
 use Microsoft\Graph\Generated\Users\Item\Manager\ManagerRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Notes\NotesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\OnlineMeetingsRequestBuilder;
@@ -431,6 +432,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the notes property of the microsoft.graph.user entity.
+    */
+    public function notes(): NotesRequestBuilder {
+        return new NotesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

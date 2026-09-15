@@ -113,6 +113,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
             'decision' => fn(ParseNode $n) => $o->setDecision($n->getStringValue()),
             'insights' => fn(ParseNode $n) => $o->setInsights($n->getCollectionOfObjectValues([GovernanceInsight::class, 'createFromDiscriminatorValue'])),
             'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
+            'permission' => fn(ParseNode $n) => $o->setPermission($n->getObjectValue([AccessReviewInstanceDecisionItemPermission::class, 'createFromDiscriminatorValue'])),
             'principal' => fn(ParseNode $n) => $o->setPrincipal($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'principalLink' => fn(ParseNode $n) => $o->setPrincipalLink($n->getStringValue()),
             'recommendation' => fn(ParseNode $n) => $o->setRecommendation($n->getStringValue()),
@@ -147,6 +148,18 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
+    }
+
+    /**
+     * Gets the permission property value. The permission property
+     * @return AccessReviewInstanceDecisionItemPermission|null
+    */
+    public function getPermission(): ?AccessReviewInstanceDecisionItemPermission {
+        $val = $this->getBackingStore()->get('permission');
+        if (is_null($val) || $val instanceof AccessReviewInstanceDecisionItemPermission) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permission'");
     }
 
     /**
@@ -247,6 +260,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         $writer->writeStringValue('decision', $this->getDecision());
         $writer->writeCollectionOfObjectValues('insights', $this->getInsights());
         $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeObjectValue('permission', $this->getPermission());
         $writer->writeObjectValue('principal', $this->getPrincipal());
         $writer->writeStringValue('principalLink', $this->getPrincipalLink());
         $writer->writeStringValue('recommendation', $this->getRecommendation());
@@ -318,6 +332,14 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
+    }
+
+    /**
+     * Sets the permission property value. The permission property
+     * @param AccessReviewInstanceDecisionItemPermission|null $value Value to set for the permission property.
+    */
+    public function setPermission(?AccessReviewInstanceDecisionItemPermission $value): void {
+        $this->getBackingStore()->set('permission', $value);
     }
 
     /**

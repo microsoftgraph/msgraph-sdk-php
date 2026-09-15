@@ -116,6 +116,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'customExtensionCalloutInstances' => fn(ParseNode $n) => $o->setCustomExtensionCalloutInstances($n->getCollectionOfObjectValues([CustomExtensionCalloutInstance::class, 'createFromDiscriminatorValue'])),
             'justification' => fn(ParseNode $n) => $o->setJustification($n->getStringValue()),
+            'parameters' => fn(ParseNode $n) => $o->setParameters($n->getObjectValue([AccessPackageAssignmentRequestParameters::class, 'createFromDiscriminatorValue'])),
             'requestor' => fn(ParseNode $n) => $o->setRequestor($n->getObjectValue([AccessPackageSubject::class, 'createFromDiscriminatorValue'])),
             'requestType' => fn(ParseNode $n) => $o->setRequestType($n->getEnumValue(AccessPackageRequestType::class)),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
@@ -134,6 +135,18 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
+    }
+
+    /**
+     * Gets the parameters property value. The parameters property
+     * @return AccessPackageAssignmentRequestParameters|null
+    */
+    public function getParameters(): ?AccessPackageAssignmentRequestParameters {
+        $val = $this->getBackingStore()->get('parameters');
+        if (is_null($val) || $val instanceof AccessPackageAssignmentRequestParameters) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parameters'");
     }
 
     /**
@@ -209,6 +222,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeCollectionOfObjectValues('customExtensionCalloutInstances', $this->getCustomExtensionCalloutInstances());
         $writer->writeStringValue('justification', $this->getJustification());
+        $writer->writeObjectValue('parameters', $this->getParameters());
         $writer->writeObjectValue('requestor', $this->getRequestor());
         $writer->writeEnumValue('requestType', $this->getRequestType());
         $writer->writeObjectValue('schedule', $this->getSchedule());
@@ -270,6 +284,14 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
+    }
+
+    /**
+     * Sets the parameters property value. The parameters property
+     * @param AccessPackageAssignmentRequestParameters|null $value Value to set for the parameters property.
+    */
+    public function setParameters(?AccessPackageAssignmentRequestParameters $value): void {
+        $this->getBackingStore()->set('parameters', $value);
     }
 
     /**

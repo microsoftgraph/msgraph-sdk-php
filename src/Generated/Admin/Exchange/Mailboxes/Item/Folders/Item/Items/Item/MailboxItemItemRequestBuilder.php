@@ -31,6 +31,21 @@ class MailboxItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Delete a mailboxItem from a mailboxFolder in a mailbox. Use the disposalType query parameter to specify whether to soft-delete or hard-delete the item.
+     * @param MailboxItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<void|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailboxfolder-delete-items?view=graph-rest-1.0 Find more info here
+    */
+    public function delete(?MailboxItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
+    }
+
+    /**
      * Read the properties and relationships of a mailboxItem object.
      * @param MailboxItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxItem|null>
@@ -43,6 +58,24 @@ class MailboxItemItemRequestBuilder extends BaseRequestBuilder
                 'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
         ];
         return $this->requestAdapter->sendAsync($requestInfo, [MailboxItem::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
+     * Delete a mailboxItem from a mailboxFolder in a mailbox. Use the disposalType query parameter to specify whether to soft-delete or hard-delete the item.
+     * @param MailboxItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toDeleteRequestInformation(?MailboxItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::DELETE;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        return $requestInfo;
     }
 
     /**

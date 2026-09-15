@@ -14,9 +14,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
-/**
- * Security singleton providing access to audit log resources.
-*/
 class Security extends Entity implements Parsable 
 {
     /**

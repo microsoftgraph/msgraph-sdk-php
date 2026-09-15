@@ -137,7 +137,22 @@ class PrivilegedAccessGroup extends Entity implements Parsable
             'eligibilityScheduleInstances' => fn(ParseNode $n) => $o->setEligibilityScheduleInstances($n->getCollectionOfObjectValues([PrivilegedAccessGroupEligibilityScheduleInstance::class, 'createFromDiscriminatorValue'])),
             'eligibilityScheduleRequests' => fn(ParseNode $n) => $o->setEligibilityScheduleRequests($n->getCollectionOfObjectValues([PrivilegedAccessGroupEligibilityScheduleRequest::class, 'createFromDiscriminatorValue'])),
             'eligibilitySchedules' => fn(ParseNode $n) => $o->setEligibilitySchedules($n->getCollectionOfObjectValues([PrivilegedAccessGroupEligibilitySchedule::class, 'createFromDiscriminatorValue'])),
+            'resources' => fn(ParseNode $n) => $o->setResources($n->getCollectionOfObjectValues([GroupResource::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the resources property value. The resources property
+     * @return array<GroupResource>|null
+    */
+    public function getResources(): ?array {
+        $val = $this->getBackingStore()->get('resources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, GroupResource::class);
+            /** @var array<GroupResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resources'");
     }
 
     /**
@@ -153,6 +168,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('eligibilityScheduleInstances', $this->getEligibilityScheduleInstances());
         $writer->writeCollectionOfObjectValues('eligibilityScheduleRequests', $this->getEligibilityScheduleRequests());
         $writer->writeCollectionOfObjectValues('eligibilitySchedules', $this->getEligibilitySchedules());
+        $writer->writeCollectionOfObjectValues('resources', $this->getResources());
     }
 
     /**
@@ -209,6 +225,14 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     */
     public function setEligibilitySchedules(?array $value): void {
         $this->getBackingStore()->set('eligibilitySchedules', $value);
+    }
+
+    /**
+     * Sets the resources property value. The resources property
+     * @param array<GroupResource>|null $value Value to set for the resources property.
+    */
+    public function setResources(?array $value): void {
+        $this->getBackingStore()->set('resources', $value);
     }
 
 }
