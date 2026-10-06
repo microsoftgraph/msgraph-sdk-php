@@ -69,7 +69,7 @@ class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The template ID of the Microsoft Entra role (e.g., 62e90394-69f5-4237-9190-012177145e10 for Global Administrator).
      * @return string|null
     */
     public function getId(): ?string {
@@ -81,7 +81,7 @@ class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The display name of the role (e.g., 'Global Administrator', 'Helpdesk Administrator').
      * @return string|null
     */
     public function getName(): ?string {
@@ -132,7 +132,7 @@ class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The template ID of the Microsoft Entra role (e.g., 62e90394-69f5-4237-9190-012177145e10 for Global Administrator).
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -140,7 +140,7 @@ class RoleTemplate implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The display name of the role (e.g., 'Global Administrator', 'Helpdesk Administrator').
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

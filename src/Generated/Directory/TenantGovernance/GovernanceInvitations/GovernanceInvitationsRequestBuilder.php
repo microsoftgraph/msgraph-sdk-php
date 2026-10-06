@@ -52,10 +52,11 @@ class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      * @param GovernanceInvitationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceInvitationCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governanceinvitations?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernanceInvitationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to governanceInvitations for directory
+     * Create a new governanceInvitation to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
      * @param GovernanceInvitation $body The request body
      * @param GovernanceInvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceInvitation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governanceinvitations?view=graph-rest-1.0 Find more info here
     */
     public function post(GovernanceInvitation $body, ?GovernanceInvitationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceInvitations from directory
+     * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
      * @param GovernanceInvitationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class GovernanceInvitationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to governanceInvitations for directory
+     * Create a new governanceInvitation to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
      * @param GovernanceInvitation $body The request body
      * @param GovernanceInvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

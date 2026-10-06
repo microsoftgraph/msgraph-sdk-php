@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\GovernanceInvitat
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get governanceInvitations from directory
+ * Get a list of the governanceInvitation objects and their properties. This API method returns all governance invitations where the calling tenant is either the governing tenant or the governed tenant.
 */
 class GovernanceInvitationsRequestBuilderGetQueryParameters 
 {

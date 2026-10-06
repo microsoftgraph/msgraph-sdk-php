@@ -93,7 +93,7 @@ class TenantGovernanceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      * @param TenantGovernanceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernance|null>
      * @throws Exception
@@ -140,7 +140,7 @@ class TenantGovernanceRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get tenantGovernance from directory
+     * Container for Microsoft Entra Tenant Governance capabilities.
      * @param TenantGovernanceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

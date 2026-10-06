@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get tenantGovernance from directory
+ * Container for Microsoft Entra Tenant Governance capabilities.
 */
 class TenantGovernanceRequestBuilderGetQueryParameters 
 {

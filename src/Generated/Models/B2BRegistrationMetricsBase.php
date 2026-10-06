@@ -47,7 +47,7 @@ class B2BRegistrationMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the inboundTotalUsers property value. The inboundTotalUsers property
+     * Gets the inboundTotalUsers property value. The total number of inbound B2B guest users registered.
      * @return string|null
     */
     public function getInboundTotalUsers(): ?string {
@@ -59,7 +59,7 @@ class B2BRegistrationMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the outboundTotalUsers property value. The outboundTotalUsers property
+     * Gets the outboundTotalUsers property value. The total number of outbound B2B users from this tenant registered in other tenants.
      * @return string|null
     */
     public function getOutboundTotalUsers(): ?string {
@@ -71,7 +71,7 @@ class B2BRegistrationMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return DateTime|null
     */
     public function getWatermarkDateTime(): ?DateTime {
@@ -94,7 +94,7 @@ class B2BRegistrationMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the inboundTotalUsers property value. The inboundTotalUsers property
+     * Sets the inboundTotalUsers property value. The total number of inbound B2B guest users registered.
      * @param string|null $value Value to set for the inboundTotalUsers property.
     */
     public function setInboundTotalUsers(?string $value): void {
@@ -102,7 +102,7 @@ class B2BRegistrationMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the outboundTotalUsers property value. The outboundTotalUsers property
+     * Sets the outboundTotalUsers property value. The total number of outbound B2B users from this tenant registered in other tenants.
      * @param string|null $value Value to set for the outboundTotalUsers property.
     */
     public function setOutboundTotalUsers(?string $value): void {
@@ -110,7 +110,7 @@ class B2BRegistrationMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param DateTime|null $value Value to set for the watermarkDateTime property.
     */
     public function setWatermarkDateTime(?DateTime $value): void {

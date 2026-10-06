@@ -53,10 +53,11 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernanceSetting|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +68,12 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in directory
+     * Update the canReceiveInvitations property of the tenantGovernanceSetting singleton. This property controls whether the tenant can receive governance invitations.
      * @param TenantGovernanceSetting $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernanceSetting|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TenantGovernanceSetting $body, ?SettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -100,7 +102,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get settings from directory
+     * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +123,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in directory
+     * Update the canReceiveInvitations property of the tenantGovernanceSetting singleton. This property controls whether the tenant can receive governance invitations.
      * @param TenantGovernanceSetting $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -27,7 +27,7 @@ class B2BSignInActivityMetricsInitial extends B2BSignInActivityMetricsBase imple
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Timestamp that represents when the time B2B sign-in activity content was initially aggregated for the related tenant.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -59,7 +59,7 @@ class B2BSignInActivityMetricsInitial extends B2BSignInActivityMetricsBase imple
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Timestamp that represents when the time B2B sign-in activity content was initially aggregated for the related tenant.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {

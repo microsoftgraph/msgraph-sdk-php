@@ -45,10 +45,11 @@ class GovernanceRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRelationships from directory
+     * Read the properties of a governanceRelationship object.
      * @param GovernanceRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRelationship|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancerelationship-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernanceRelationshipItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +60,12 @@ class GovernanceRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property governanceRelationships in directory
+     * Update the status property of a governanceRelationship to initiate the termination process. There are two models for termination:1) Initiated by the governing tenant: After the governing tenant updates the status to terminationRequestedByGoverningTenant, the governed tenant may subsequently update the status to terminated.1) Directly terminated by the governed tenant: The governed tenant updates the status to terminated to immediately terminate the relationship. When the governed tenant updates the status to terminated in either model, the resources that were provisioned in the governed tenant upon relationship creation are deleted.
      * @param GovernanceRelationship $body The request body
      * @param GovernanceRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRelationship|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancerelationship-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(GovernanceRelationship $body, ?GovernanceRelationshipItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -92,7 +94,7 @@ class GovernanceRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRelationships from directory
+     * Read the properties of a governanceRelationship object.
      * @param GovernanceRelationshipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +115,7 @@ class GovernanceRelationshipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property governanceRelationships in directory
+     * Update the status property of a governanceRelationship to initiate the termination process. There are two models for termination:1) Initiated by the governing tenant: After the governing tenant updates the status to terminationRequestedByGoverningTenant, the governed tenant may subsequently update the status to terminated.1) Directly terminated by the governed tenant: The governed tenant updates the status to terminated to immediately terminate the relationship. When the governed tenant updates the status to terminated in either model, the resources that were provisioned in the governed tenant upon relationship creation are deleted.
      * @param GovernanceRelationship $body The request body
      * @param GovernanceRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -37,7 +37,7 @@ class MultiTenantApplicationMetricsRecent extends MultiTenantApplicationMetricsB
     }
 
     /**
-     * Gets the updateDateTime property value. The updateDateTime property
+     * Gets the updateDateTime property value. Timestamp that represents when multitenant application metrics are aggregated and have sufficiently changed for the related tenant.
      * @return DateTime|null
     */
     public function getUpdateDateTime(): ?DateTime {
@@ -58,7 +58,7 @@ class MultiTenantApplicationMetricsRecent extends MultiTenantApplicationMetricsB
     }
 
     /**
-     * Sets the updateDateTime property value. The updateDateTime property
+     * Sets the updateDateTime property value. Timestamp that represents when multitenant application metrics are aggregated and have sufficiently changed for the related tenant.
      * @param DateTime|null $value Value to set for the updateDateTime property.
     */
     public function setUpdateDateTime(?DateTime $value): void {

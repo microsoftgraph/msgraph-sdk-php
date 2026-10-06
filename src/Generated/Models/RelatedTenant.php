@@ -26,7 +26,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the appB2BSignInActivityMetrics property value. The appB2BSignInActivityMetrics property
+     * Gets the appB2BSignInActivityMetrics property value. B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @return B2BSignInActivityMetrics|null
     */
     public function getAppB2BSignInActivityMetrics(): ?B2BSignInActivityMetrics {
@@ -38,7 +38,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the b2BRegistrationMetrics property value. The b2BRegistrationMetrics property
+     * Gets the b2BRegistrationMetrics property value. B2B registration metrics for this related tenant. Expanded by default.
      * @return B2bRegistrationMetrics|null
     */
     public function getB2BRegistrationMetrics(): ?B2bRegistrationMetrics {
@@ -50,7 +50,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the b2BSignInActivityMetrics property value. The b2BSignInActivityMetrics property
+     * Gets the b2BSignInActivityMetrics property value. B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @return B2BSignInActivityMetrics|null
     */
     public function getB2BSignInActivityMetrics(): ?B2BSignInActivityMetrics {
@@ -62,7 +62,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the billingMetrics property value. The billingMetrics property
+     * Gets the billingMetrics property value. Billing metrics for this related tenant. Expanded by default.
      * @return BillingMetrics|null
     */
     public function getBillingMetrics(): ?BillingMetrics {
@@ -74,7 +74,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the related tenant was discovered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -103,7 +103,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the isMicrosoftInfrastructure property value. Indicates whether this tenant is a Microsoft infrastructure tenant.
+     * Gets the isMicrosoftInfrastructure property value. Indicates whether the related tenant is a Microsoft infrastructure tenant. Read-only.
      * @return bool|null
     */
     public function getIsMicrosoftInfrastructure(): ?bool {
@@ -115,7 +115,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Gets the multiTenantApplicationMetrics property value. The multiTenantApplicationMetrics property
+     * Gets the multiTenantApplicationMetrics property value. Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @return MultiTenantApplicationMetrics|null
     */
     public function getMultiTenantApplicationMetrics(): ?MultiTenantApplicationMetrics {
@@ -141,7 +141,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the appB2BSignInActivityMetrics property value. The appB2BSignInActivityMetrics property
+     * Sets the appB2BSignInActivityMetrics property value. B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @param B2BSignInActivityMetrics|null $value Value to set for the appB2BSignInActivityMetrics property.
     */
     public function setAppB2BSignInActivityMetrics(?B2BSignInActivityMetrics $value): void {
@@ -149,7 +149,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the b2BRegistrationMetrics property value. The b2BRegistrationMetrics property
+     * Sets the b2BRegistrationMetrics property value. B2B registration metrics for this related tenant. Expanded by default.
      * @param B2bRegistrationMetrics|null $value Value to set for the b2BRegistrationMetrics property.
     */
     public function setB2BRegistrationMetrics(?B2bRegistrationMetrics $value): void {
@@ -157,7 +157,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the b2BSignInActivityMetrics property value. The b2BSignInActivityMetrics property
+     * Sets the b2BSignInActivityMetrics property value. B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @param B2BSignInActivityMetrics|null $value Value to set for the b2BSignInActivityMetrics property.
     */
     public function setB2BSignInActivityMetrics(?B2BSignInActivityMetrics $value): void {
@@ -165,7 +165,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the billingMetrics property value. The billingMetrics property
+     * Sets the billingMetrics property value. Billing metrics for this related tenant. Expanded by default.
      * @param BillingMetrics|null $value Value to set for the billingMetrics property.
     */
     public function setBillingMetrics(?BillingMetrics $value): void {
@@ -173,7 +173,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the related tenant was discovered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -181,7 +181,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the isMicrosoftInfrastructure property value. Indicates whether this tenant is a Microsoft infrastructure tenant.
+     * Sets the isMicrosoftInfrastructure property value. Indicates whether the related tenant is a Microsoft infrastructure tenant. Read-only.
      * @param bool|null $value Value to set for the isMicrosoftInfrastructure property.
     */
     public function setIsMicrosoftInfrastructure(?bool $value): void {
@@ -189,7 +189,7 @@ class RelatedTenant extends Entity implements Parsable
     }
 
     /**
-     * Sets the multiTenantApplicationMetrics property value. The multiTenantApplicationMetrics property
+     * Sets the multiTenantApplicationMetrics property value. Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @param MultiTenantApplicationMetrics|null $value Value to set for the multiTenantApplicationMetrics property.
     */
     public function setMultiTenantApplicationMetrics(?MultiTenantApplicationMetrics $value): void {

@@ -49,7 +49,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the inboundMonthlyTotalApplications property value. The inboundMonthlyTotalApplications property
+     * Gets the inboundMonthlyTotalApplications property value. The total number of applications accessed by inbound users in the last month.
      * @return string|null
     */
     public function getInboundMonthlyTotalApplications(): ?string {
@@ -61,7 +61,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the inboundMonthlyTotalUsers property value. The inboundMonthlyTotalUsers property
+     * Gets the inboundMonthlyTotalUsers property value. The total number of unique inbound users with sign-in activity in the last month.
      * @return string|null
     */
     public function getInboundMonthlyTotalUsers(): ?string {
@@ -73,7 +73,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the outboundMonthlyTotalApplications property value. The outboundMonthlyTotalApplications property
+     * Gets the outboundMonthlyTotalApplications property value. The total number of applications accessed by outbound users in the last month.
      * @return string|null
     */
     public function getOutboundMonthlyTotalApplications(): ?string {
@@ -85,7 +85,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the outboundMonthlyTotalUsers property value. The outboundMonthlyTotalUsers property
+     * Gets the outboundMonthlyTotalUsers property value. The total number of unique outbound users with sign-in activity in the last month.
      * @return string|null
     */
     public function getOutboundMonthlyTotalUsers(): ?string {
@@ -97,7 +97,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return DateTime|null
     */
     public function getWatermarkDateTime(): ?DateTime {
@@ -122,7 +122,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the inboundMonthlyTotalApplications property value. The inboundMonthlyTotalApplications property
+     * Sets the inboundMonthlyTotalApplications property value. The total number of applications accessed by inbound users in the last month.
      * @param string|null $value Value to set for the inboundMonthlyTotalApplications property.
     */
     public function setInboundMonthlyTotalApplications(?string $value): void {
@@ -130,7 +130,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the inboundMonthlyTotalUsers property value. The inboundMonthlyTotalUsers property
+     * Sets the inboundMonthlyTotalUsers property value. The total number of unique inbound users with sign-in activity in the last month.
      * @param string|null $value Value to set for the inboundMonthlyTotalUsers property.
     */
     public function setInboundMonthlyTotalUsers(?string $value): void {
@@ -138,7 +138,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the outboundMonthlyTotalApplications property value. The outboundMonthlyTotalApplications property
+     * Sets the outboundMonthlyTotalApplications property value. The total number of applications accessed by outbound users in the last month.
      * @param string|null $value Value to set for the outboundMonthlyTotalApplications property.
     */
     public function setOutboundMonthlyTotalApplications(?string $value): void {
@@ -146,7 +146,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the outboundMonthlyTotalUsers property value. The outboundMonthlyTotalUsers property
+     * Sets the outboundMonthlyTotalUsers property value. The total number of unique outbound users with sign-in activity in the last month.
      * @param string|null $value Value to set for the outboundMonthlyTotalUsers property.
     */
     public function setOutboundMonthlyTotalUsers(?string $value): void {
@@ -154,7 +154,7 @@ class B2BSignInActivityMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param DateTime|null $value Value to set for the watermarkDateTime property.
     */
     public function setWatermarkDateTime(?DateTime $value): void {

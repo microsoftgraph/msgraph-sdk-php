@@ -31,10 +31,11 @@ class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete navigation property governancePolicyTemplates for directory
+     * Delete a tenantGovernancePolicyTemplate object. You can't delete the default template or templates currently used by active relationships.
      * @param TenantGovernancePolicyTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-delete-governancepolicytemplates?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TenantGovernancePolicyTemplateItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @param TenantGovernancePolicyTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernancePolicyTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TenantGovernancePolicyTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the navigation property governancePolicyTemplates in directory
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param TenantGovernancePolicyTemplate $body The request body
      * @param TenantGovernancePolicyTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernancePolicyTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancepolicytemplate-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TenantGovernancePolicyTemplate $body, ?TenantGovernancePolicyTemplateItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete navigation property governancePolicyTemplates for directory
+     * Delete a tenantGovernancePolicyTemplate object. You can't delete the default template or templates currently used by active relationships.
      * @param TenantGovernancePolicyTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Get governancePolicyTemplates from directory
+     * Read the properties of a tenantGovernancePolicyTemplate object.
      * @param TenantGovernancePolicyTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class TenantGovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the navigation property governancePolicyTemplates in directory
+     * Update the properties of a tenantGovernancePolicyTemplate object.
      * @param TenantGovernancePolicyTemplate $body The request body
      * @param TenantGovernancePolicyTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

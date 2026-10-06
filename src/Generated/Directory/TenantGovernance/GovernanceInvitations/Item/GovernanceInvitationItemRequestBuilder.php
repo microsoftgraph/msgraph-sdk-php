@@ -31,10 +31,11 @@ class GovernanceInvitationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property governanceInvitations for directory
+     * Delete a governanceInvitation object.
      * @param GovernanceInvitationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governanceinvitation-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?GovernanceInvitationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class GovernanceInvitationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceInvitations from directory
+     * Read the properties of a governanceInvitation object.
      * @param GovernanceInvitationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceInvitation|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governanceinvitation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernanceInvitationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -74,7 +76,7 @@ class GovernanceInvitationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property governanceInvitations for directory
+     * Delete a governanceInvitation object.
      * @param GovernanceInvitationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +94,7 @@ class GovernanceInvitationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceInvitations from directory
+     * Read the properties of a governanceInvitation object.
      * @param GovernanceInvitationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

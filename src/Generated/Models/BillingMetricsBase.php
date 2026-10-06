@@ -60,7 +60,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the foreignAssociatedTenantBillingManagementActiveCount property value. The foreignAssociatedTenantBillingManagementActiveCount property
+     * Gets the foreignAssociatedTenantBillingManagementActiveCount property value. The number of foreign associated tenants with active billing management.
      * @return string|null
     */
     public function getForeignAssociatedTenantBillingManagementActiveCount(): ?string {
@@ -72,7 +72,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the foreignAssociatedTenantCount property value. The foreignAssociatedTenantCount property
+     * Gets the foreignAssociatedTenantCount property value. The total number of foreign associated tenants.
      * @return string|null
     */
     public function getForeignAssociatedTenantCount(): ?string {
@@ -84,7 +84,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the foreignAssociatedTenantProvisioningActiveCount property value. The foreignAssociatedTenantProvisioningActiveCount property
+     * Gets the foreignAssociatedTenantProvisioningActiveCount property value. The number of foreign associated tenants with active provisioning.
      * @return string|null
     */
     public function getForeignAssociatedTenantProvisioningActiveCount(): ?string {
@@ -96,7 +96,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the localAssociatedTenantBillingManagementActiveCount property value. The localAssociatedTenantBillingManagementActiveCount property
+     * Gets the localAssociatedTenantBillingManagementActiveCount property value. The number of local associated tenants with active billing management.
      * @return string|null
     */
     public function getLocalAssociatedTenantBillingManagementActiveCount(): ?string {
@@ -108,7 +108,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the localAssociatedTenantCount property value. The localAssociatedTenantCount property
+     * Gets the localAssociatedTenantCount property value. The total number of local associated tenants.
      * @return string|null
     */
     public function getLocalAssociatedTenantCount(): ?string {
@@ -120,7 +120,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the localAssociatedTenantIds property value. The localAssociatedTenantIds property
+     * Gets the localAssociatedTenantIds property value. The list of local associated tenant IDs.
      * @return array<string>|null
     */
     public function getLocalAssociatedTenantIds(): ?array {
@@ -134,7 +134,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the localAssociatedTenantProvisioningActiveCount property value. The localAssociatedTenantProvisioningActiveCount property
+     * Gets the localAssociatedTenantProvisioningActiveCount property value. The number of local associated tenants with active provisioning.
      * @return string|null
     */
     public function getLocalAssociatedTenantProvisioningActiveCount(): ?string {
@@ -146,7 +146,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the watermarkDateTime property value. The watermarkDateTime property
+     * Gets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @return DateTime|null
     */
     public function getWatermarkDateTime(): ?DateTime {
@@ -174,7 +174,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the foreignAssociatedTenantBillingManagementActiveCount property value. The foreignAssociatedTenantBillingManagementActiveCount property
+     * Sets the foreignAssociatedTenantBillingManagementActiveCount property value. The number of foreign associated tenants with active billing management.
      * @param string|null $value Value to set for the foreignAssociatedTenantBillingManagementActiveCount property.
     */
     public function setForeignAssociatedTenantBillingManagementActiveCount(?string $value): void {
@@ -182,7 +182,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the foreignAssociatedTenantCount property value. The foreignAssociatedTenantCount property
+     * Sets the foreignAssociatedTenantCount property value. The total number of foreign associated tenants.
      * @param string|null $value Value to set for the foreignAssociatedTenantCount property.
     */
     public function setForeignAssociatedTenantCount(?string $value): void {
@@ -190,7 +190,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the foreignAssociatedTenantProvisioningActiveCount property value. The foreignAssociatedTenantProvisioningActiveCount property
+     * Sets the foreignAssociatedTenantProvisioningActiveCount property value. The number of foreign associated tenants with active provisioning.
      * @param string|null $value Value to set for the foreignAssociatedTenantProvisioningActiveCount property.
     */
     public function setForeignAssociatedTenantProvisioningActiveCount(?string $value): void {
@@ -198,7 +198,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the localAssociatedTenantBillingManagementActiveCount property value. The localAssociatedTenantBillingManagementActiveCount property
+     * Sets the localAssociatedTenantBillingManagementActiveCount property value. The number of local associated tenants with active billing management.
      * @param string|null $value Value to set for the localAssociatedTenantBillingManagementActiveCount property.
     */
     public function setLocalAssociatedTenantBillingManagementActiveCount(?string $value): void {
@@ -206,7 +206,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the localAssociatedTenantCount property value. The localAssociatedTenantCount property
+     * Sets the localAssociatedTenantCount property value. The total number of local associated tenants.
      * @param string|null $value Value to set for the localAssociatedTenantCount property.
     */
     public function setLocalAssociatedTenantCount(?string $value): void {
@@ -214,7 +214,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the localAssociatedTenantIds property value. The localAssociatedTenantIds property
+     * Sets the localAssociatedTenantIds property value. The list of local associated tenant IDs.
      * @param array<string>|null $value Value to set for the localAssociatedTenantIds property.
     */
     public function setLocalAssociatedTenantIds(?array $value): void {
@@ -222,7 +222,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the localAssociatedTenantProvisioningActiveCount property value. The localAssociatedTenantProvisioningActiveCount property
+     * Sets the localAssociatedTenantProvisioningActiveCount property value. The number of local associated tenants with active provisioning.
      * @param string|null $value Value to set for the localAssociatedTenantProvisioningActiveCount property.
     */
     public function setLocalAssociatedTenantProvisioningActiveCount(?string $value): void {
@@ -230,7 +230,7 @@ class BillingMetricsBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the watermarkDateTime property value. The watermarkDateTime property
+     * Sets the watermarkDateTime property value. The date and time when the metrics snapshot was taken.
      * @param DateTime|null $value Value to set for the watermarkDateTime property.
     */
     public function setWatermarkDateTime(?DateTime $value): void {

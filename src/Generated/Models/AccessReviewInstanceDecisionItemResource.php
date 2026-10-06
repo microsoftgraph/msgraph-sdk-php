@@ -67,7 +67,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the resource.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -130,7 +130,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy.
+     * Gets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
      * @return string|null
     */
     public function getType(): ?string {
@@ -171,7 +171,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the resource.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -203,7 +203,7 @@ class AccessReviewInstanceDecisionItemResource implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy.
+     * Sets the type property value. Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackage, AccessPackageAssignmentPolicy, and CustomDataProvidedResource.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\GovernanceRequest
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get governanceRequests from directory
+ * Get a list of the governanceRequest objects and their properties. This API method returns all governance requests where the calling tenant is either the governing tenant or the governed tenant.
 */
 class GovernanceRequestsRequestBuilderGetQueryParameters 
 {

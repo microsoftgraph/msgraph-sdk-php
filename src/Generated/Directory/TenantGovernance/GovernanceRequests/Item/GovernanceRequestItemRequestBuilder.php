@@ -53,10 +53,11 @@ class GovernanceRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRequests from directory
+     * Read the properties of a governanceRequest object.
      * @param GovernanceRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancerequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernanceRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -67,11 +68,12 @@ class GovernanceRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property governanceRequests in directory
+     * Update the status property of a governanceRequest to accept or reject the governance request. Only the governed tenant can update the request status.
      * @param GovernanceRequest $body The request body
      * @param GovernanceRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-governancerequest-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(GovernanceRequest $body, ?GovernanceRequestItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -100,7 +102,7 @@ class GovernanceRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRequests from directory
+     * Read the properties of a governanceRequest object.
      * @param GovernanceRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +123,7 @@ class GovernanceRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property governanceRequests in directory
+     * Update the status property of a governanceRequest to accept or reject the governance request. Only the governed tenant can update the request status.
      * @param GovernanceRequest $body The request body
      * @param GovernanceRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

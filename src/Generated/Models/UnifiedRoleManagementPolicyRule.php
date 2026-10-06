@@ -27,6 +27,7 @@ class UnifiedRoleManagementPolicyRule extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.unifiedRoleManagementPolicyApprovalRule': return new UnifiedRoleManagementPolicyApprovalRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyAuthenticationContextRule': return new UnifiedRoleManagementPolicyAuthenticationContextRule();
+                case '#microsoft.graph.unifiedRoleManagementPolicyCustomExtensionRule': return new UnifiedRoleManagementPolicyCustomExtensionRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyEnablementRule': return new UnifiedRoleManagementPolicyEnablementRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyExpirationRule': return new UnifiedRoleManagementPolicyExpirationRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyNotificationRule': return new UnifiedRoleManagementPolicyNotificationRule();

@@ -52,10 +52,11 @@ class GovernanceRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRelationships from directory
+     * Get a list of the governanceRelationship objects and their properties. This API method returns all governance relationships where the calling tenant is either the governing tenant or the governed tenant.
      * @param GovernanceRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRelationshipCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governancerelationships?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernanceRelationshipsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class GovernanceRelationshipsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRelationships from directory
+     * Get a list of the governanceRelationship objects and their properties. This API method returns all governance relationships where the calling tenant is either the governing tenant or the governed tenant.
      * @param GovernanceRelationshipsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

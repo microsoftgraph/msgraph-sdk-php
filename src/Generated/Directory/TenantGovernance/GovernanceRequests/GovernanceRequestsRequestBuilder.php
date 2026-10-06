@@ -52,10 +52,11 @@ class GovernanceRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRequests from directory
+     * Get a list of the governanceRequest objects and their properties. This API method returns all governance requests where the calling tenant is either the governing tenant or the governed tenant.
      * @param GovernanceRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRequestCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governancerequests?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernanceRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class GovernanceRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to governanceRequests for directory
+     * Create a new governanceRequest to establish a governance relationship with a governed tenant. The governed tenant can then accept or reject the request.
      * @param GovernanceRequest $body The request body
      * @param GovernanceRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GovernanceRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governancerequests?view=graph-rest-1.0 Find more info here
     */
     public function post(GovernanceRequest $body, ?GovernanceRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class GovernanceRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governanceRequests from directory
+     * Get a list of the governanceRequest objects and their properties. This API method returns all governance requests where the calling tenant is either the governing tenant or the governed tenant.
      * @param GovernanceRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class GovernanceRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to governanceRequests for directory
+     * Create a new governanceRequest to establish a governance relationship with a governed tenant. The governed tenant can then accept or reject the request.
      * @param GovernanceRequest $body The request body
      * @param GovernanceRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

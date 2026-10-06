@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\GovernanceRelatio
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get governanceRelationships from directory
+ * Get a list of the governanceRelationship objects and their properties. This API method returns all governance relationships where the calling tenant is either the governing tenant or the governed tenant.
 */
 class GovernanceRelationshipsRequestBuilderGetQueryParameters 
 {

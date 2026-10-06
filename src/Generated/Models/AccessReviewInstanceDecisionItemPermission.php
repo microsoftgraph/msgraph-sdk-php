@@ -56,7 +56,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the permission.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -68,7 +68,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the permission.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -95,7 +95,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The identifier of the permission.
      * @return string|null
     */
     public function getId(): ?string {
@@ -119,7 +119,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. The type of the permission.
      * @return string|null
     */
     public function getType(): ?string {
@@ -160,7 +160,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the permission.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -168,7 +168,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the permission.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -176,7 +176,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The identifier of the permission.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -192,7 +192,7 @@ class AccessReviewInstanceDecisionItemPermission implements AdditionalDataHolder
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. The type of the permission.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

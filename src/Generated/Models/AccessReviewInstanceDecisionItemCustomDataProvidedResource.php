@@ -26,7 +26,7 @@ class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends AccessR
     }
 
     /**
-     * Gets the customData property value. The customData property
+     * Gets the customData property value. Custom data to include with the decision.
      * @return string|null
     */
     public function getCustomData(): ?string {
@@ -51,7 +51,7 @@ class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends AccessR
     }
 
     /**
-     * Gets the scopeDisplayName property value. The scopeDisplayName property
+     * Gets the scopeDisplayName property value. The name of the scope for the decision.
      * @return string|null
     */
     public function getScopeDisplayName(): ?string {
@@ -63,7 +63,7 @@ class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends AccessR
     }
 
     /**
-     * Gets the scopeId property value. The scopeId property
+     * Gets the scopeId property value. The identifier of the scope for the decision.
      * @return string|null
     */
     public function getScopeId(): ?string {
@@ -86,7 +86,7 @@ class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends AccessR
     }
 
     /**
-     * Sets the customData property value. The customData property
+     * Sets the customData property value. Custom data to include with the decision.
      * @param string|null $value Value to set for the customData property.
     */
     public function setCustomData(?string $value): void {
@@ -94,7 +94,7 @@ class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends AccessR
     }
 
     /**
-     * Sets the scopeDisplayName property value. The scopeDisplayName property
+     * Sets the scopeDisplayName property value. The name of the scope for the decision.
      * @param string|null $value Value to set for the scopeDisplayName property.
     */
     public function setScopeDisplayName(?string $value): void {
@@ -102,7 +102,7 @@ class AccessReviewInstanceDecisionItemCustomDataProvidedResource extends AccessR
     }
 
     /**
-     * Sets the scopeId property value. The scopeId property
+     * Sets the scopeId property value. The identifier of the scope for the decision.
      * @param string|null $value Value to set for the scopeId property.
     */
     public function setScopeId(?string $value): void {

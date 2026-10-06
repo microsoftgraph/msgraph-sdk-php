@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\GovernancePolicyT
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get governancePolicyTemplates from directory
+ * Get a list of the tenantGovernancePolicyTemplate objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
 */
 class GovernancePolicyTemplatesRequestBuilderGetQueryParameters 
 {
