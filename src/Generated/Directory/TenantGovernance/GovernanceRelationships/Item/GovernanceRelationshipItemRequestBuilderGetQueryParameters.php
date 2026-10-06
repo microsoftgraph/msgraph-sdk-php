@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\GovernanceRelatio
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get governanceRelationships from directory
+ * Read the properties of a governanceRelationship object.
 */
 class GovernanceRelationshipItemRequestBuilderGetQueryParameters 
 {

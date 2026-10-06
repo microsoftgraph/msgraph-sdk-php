@@ -71,7 +71,7 @@ class DelegatedAdministrationRoleAssignmentSnapshot implements AdditionalDataHol
     }
 
     /**
-     * Gets the groupDisplayName property value. The groupDisplayName property
+     * Gets the groupDisplayName property value. The display name of the security group identified by groupId at the time the snapshot was created. Read-only.
      * @return string|null
     */
     public function getGroupDisplayName(): ?string {
@@ -83,7 +83,7 @@ class DelegatedAdministrationRoleAssignmentSnapshot implements AdditionalDataHol
     }
 
     /**
-     * Gets the groupId property value. The groupId property
+     * Gets the groupId property value. The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -107,7 +107,7 @@ class DelegatedAdministrationRoleAssignmentSnapshot implements AdditionalDataHol
     }
 
     /**
-     * Gets the roleTemplates property value. The roleTemplates property
+     * Gets the roleTemplates property value. The collection of role templates that define the Microsoft Entra roles to be assigned.
      * @return array<RoleTemplate>|null
     */
     public function getRoleTemplates(): ?array {
@@ -149,7 +149,7 @@ class DelegatedAdministrationRoleAssignmentSnapshot implements AdditionalDataHol
     }
 
     /**
-     * Sets the groupDisplayName property value. The groupDisplayName property
+     * Sets the groupDisplayName property value. The display name of the security group identified by groupId at the time the snapshot was created. Read-only.
      * @param string|null $value Value to set for the groupDisplayName property.
     */
     public function setGroupDisplayName(?string $value): void {
@@ -157,7 +157,7 @@ class DelegatedAdministrationRoleAssignmentSnapshot implements AdditionalDataHol
     }
 
     /**
-     * Sets the groupId property value. The groupId property
+     * Sets the groupId property value. The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -173,7 +173,7 @@ class DelegatedAdministrationRoleAssignmentSnapshot implements AdditionalDataHol
     }
 
     /**
-     * Sets the roleTemplates property value. The roleTemplates property
+     * Sets the roleTemplates property value. The collection of role templates that define the Microsoft Entra roles to be assigned.
      * @param array<RoleTemplate>|null $value Value to set for the roleTemplates property.
     */
     public function setRoleTemplates(?array $value): void {

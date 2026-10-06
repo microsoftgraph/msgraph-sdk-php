@@ -30,11 +30,12 @@ class BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke action batchApplyCustomDataProvidedResourceDecisions
+     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state. This action is part of the unified access reviews surface and is available only through the /identityGovernance/accessReviews/unified route. For more information, see unifiedRoot.
      * @param BatchApplyCustomDataProvidedResourceDecisionsPostRequestBody $body The request body
      * @param BatchApplyCustomDataProvidedResourceDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/accessreviewinstance-batchapplycustomdataprovidedresourcedecisions?view=graph-rest-1.0 Find more info here
     */
     public function post(BatchApplyCustomDataProvidedResourceDecisionsPostRequestBody $body, ?BatchApplyCustomDataProvidedResourceDecisionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -45,7 +46,7 @@ class BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder extends BaseRe
     }
 
     /**
-     * Invoke action batchApplyCustomDataProvidedResourceDecisions
+     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state. This action is part of the unified access reviews surface and is available only through the /identityGovernance/accessReviews/unified route. For more information, see unifiedRoot.
      * @param BatchApplyCustomDataProvidedResourceDecisionsPostRequestBody $body The request body
      * @param BatchApplyCustomDataProvidedResourceDecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

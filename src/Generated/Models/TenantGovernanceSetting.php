@@ -25,7 +25,7 @@ class TenantGovernanceSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the canReceiveInvitations property value. The canReceiveInvitations property
+     * Gets the canReceiveInvitations property value. Indicates whether the tenant can receive governance invitations. When set to false, the tenant cannot receive new governance invitations. When set to true, other tenants can send your tenant invitations by providing your tenant id or domain name. Default value is false.
      * @return bool|null
     */
     public function getCanReceiveInvitations(): ?bool {
@@ -49,7 +49,7 @@ class TenantGovernanceSetting extends Entity implements Parsable
     }
 
     /**
-     * Gets the isRelatedTenantsEnabled property value. The isRelatedTenantsEnabled property
+     * Gets the isRelatedTenantsEnabled property value. Indicates whether the related tenants feature is enabled for tenant discovery. When set to false, related tenant APIs don't work. This property can be enabled by calling the enableRelatedTenants action. Default value is false.
      * @return bool|null
     */
     public function getIsRelatedTenantsEnabled(): ?bool {
@@ -71,7 +71,7 @@ class TenantGovernanceSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the canReceiveInvitations property value. The canReceiveInvitations property
+     * Sets the canReceiveInvitations property value. Indicates whether the tenant can receive governance invitations. When set to false, the tenant cannot receive new governance invitations. When set to true, other tenants can send your tenant invitations by providing your tenant id or domain name. Default value is false.
      * @param bool|null $value Value to set for the canReceiveInvitations property.
     */
     public function setCanReceiveInvitations(?bool $value): void {
@@ -79,7 +79,7 @@ class TenantGovernanceSetting extends Entity implements Parsable
     }
 
     /**
-     * Sets the isRelatedTenantsEnabled property value. The isRelatedTenantsEnabled property
+     * Sets the isRelatedTenantsEnabled property value. Indicates whether the related tenants feature is enabled for tenant discovery. When set to false, related tenant APIs don't work. This property can be enabled by calling the enableRelatedTenants action. Default value is false.
      * @param bool|null $value Value to set for the isRelatedTenantsEnabled property.
     */
     public function setIsRelatedTenantsEnabled(?bool $value): void {

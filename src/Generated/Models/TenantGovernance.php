@@ -42,7 +42,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Gets the governanceInvitations property value. The governanceInvitations property
+     * Gets the governanceInvitations property value. Collection of governance invitations associated with the tenant.
      * @return array<GovernanceInvitation>|null
     */
     public function getGovernanceInvitations(): ?array {
@@ -56,7 +56,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Gets the governancePolicyTemplates property value. The governancePolicyTemplates property
+     * Gets the governancePolicyTemplates property value. Collection of governance policy templates associated with the tenant.
      * @return array<TenantGovernancePolicyTemplate>|null
     */
     public function getGovernancePolicyTemplates(): ?array {
@@ -70,7 +70,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Gets the governanceRelationships property value. The governanceRelationships property
+     * Gets the governanceRelationships property value. Collection of governance relationships associated with the tenant.
      * @return array<GovernanceRelationship>|null
     */
     public function getGovernanceRelationships(): ?array {
@@ -84,7 +84,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Gets the governanceRequests property value. The governanceRequests property
+     * Gets the governanceRequests property value. Collection of governance requests associated with the tenant.
      * @return array<GovernanceRequest>|null
     */
     public function getGovernanceRequests(): ?array {
@@ -98,7 +98,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Gets the relatedTenants property value. The relatedTenants property
+     * Gets the relatedTenants property value. Collection of related tenants associated with the tenant.
      * @return array<RelatedTenant>|null
     */
     public function getRelatedTenants(): ?array {
@@ -112,7 +112,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Gets the settings property value. The settings property
+     * Gets the settings property value. Settings for the tenant governance container.
      * @return TenantGovernanceSetting|null
     */
     public function getSettings(): ?TenantGovernanceSetting {
@@ -138,7 +138,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Sets the governanceInvitations property value. The governanceInvitations property
+     * Sets the governanceInvitations property value. Collection of governance invitations associated with the tenant.
      * @param array<GovernanceInvitation>|null $value Value to set for the governanceInvitations property.
     */
     public function setGovernanceInvitations(?array $value): void {
@@ -146,7 +146,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Sets the governancePolicyTemplates property value. The governancePolicyTemplates property
+     * Sets the governancePolicyTemplates property value. Collection of governance policy templates associated with the tenant.
      * @param array<TenantGovernancePolicyTemplate>|null $value Value to set for the governancePolicyTemplates property.
     */
     public function setGovernancePolicyTemplates(?array $value): void {
@@ -154,7 +154,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Sets the governanceRelationships property value. The governanceRelationships property
+     * Sets the governanceRelationships property value. Collection of governance relationships associated with the tenant.
      * @param array<GovernanceRelationship>|null $value Value to set for the governanceRelationships property.
     */
     public function setGovernanceRelationships(?array $value): void {
@@ -162,7 +162,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Sets the governanceRequests property value. The governanceRequests property
+     * Sets the governanceRequests property value. Collection of governance requests associated with the tenant.
      * @param array<GovernanceRequest>|null $value Value to set for the governanceRequests property.
     */
     public function setGovernanceRequests(?array $value): void {
@@ -170,7 +170,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Sets the relatedTenants property value. The relatedTenants property
+     * Sets the relatedTenants property value. Collection of related tenants associated with the tenant.
      * @param array<RelatedTenant>|null $value Value to set for the relatedTenants property.
     */
     public function setRelatedTenants(?array $value): void {
@@ -178,7 +178,7 @@ class TenantGovernance extends Entity implements Parsable
     }
 
     /**
-     * Sets the settings property value. The settings property
+     * Sets the settings property value. Settings for the tenant governance container.
      * @param TenantGovernanceSetting|null $value Value to set for the settings property.
     */
     public function setSettings(?TenantGovernanceSetting $value): void {

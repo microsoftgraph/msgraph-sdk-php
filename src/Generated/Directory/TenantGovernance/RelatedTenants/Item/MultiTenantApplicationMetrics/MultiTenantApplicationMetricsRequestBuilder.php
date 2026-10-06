@@ -31,7 +31,7 @@ class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @param MultiTenantApplicationMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MultiTenantApplicationMetrics|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get multiTenantApplicationMetrics from directory
+     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
      * @param MultiTenantApplicationMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

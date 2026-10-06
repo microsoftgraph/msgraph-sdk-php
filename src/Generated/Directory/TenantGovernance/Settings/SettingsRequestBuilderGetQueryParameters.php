@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\Settings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get settings from directory
+ * Read the properties of the tenantGovernanceSetting singleton, which controls related tenant discovery and invitation capabilities.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

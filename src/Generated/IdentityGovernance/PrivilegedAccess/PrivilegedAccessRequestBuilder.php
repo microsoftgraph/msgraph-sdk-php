@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess;
 
 use Exception;
 use Http\Promise\Promise;
+use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\CustomExtensions\CustomExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrivilegedAccessRoot;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class PrivilegedAccessRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the customExtensions property of the microsoft.graph.privilegedAccessRoot entity.
+    */
+    public function customExtensions(): CustomExtensionsRequestBuilder {
+        return new CustomExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the group property of the microsoft.graph.privilegedAccessRoot entity.
     */

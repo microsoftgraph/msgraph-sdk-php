@@ -31,7 +31,7 @@ class B2BRegistrationMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get b2BRegistrationMetrics from directory
+     * B2B registration metrics for this related tenant. Expanded by default.
      * @param B2BRegistrationMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<B2bRegistrationMetrics|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class B2BRegistrationMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get b2BRegistrationMetrics from directory
+     * B2B registration metrics for this related tenant. Expanded by default.
      * @param B2BRegistrationMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

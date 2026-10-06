@@ -31,7 +31,7 @@ class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get b2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @param B2BSignInActivityMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<B2BSignInActivityMetrics|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get b2BSignInActivityMetrics from directory
+     * B2B sign-in activity metrics for this related tenant. Expanded by default.
      * @param B2BSignInActivityMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

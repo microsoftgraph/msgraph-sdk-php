@@ -38,7 +38,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the creationDateTime property value. The creationDateTime property
+     * Gets the creationDateTime property value. The date and time when the relationship was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is 2026-01-01T00:00:00Z. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return DateTime|null
     */
     public function getCreationDateTime(): ?DateTime {
@@ -68,7 +68,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the governedTenantId property value. The governedTenantId property
+     * Gets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGovernedTenantId(): ?string {
@@ -80,7 +80,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the governedTenantName property value. The governedTenantName property
+     * Gets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGovernedTenantName(): ?string {
@@ -92,7 +92,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the governingTenantId property value. The governingTenantId property
+     * Gets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGoverningTenantId(): ?string {
@@ -104,7 +104,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the governingTenantName property value. The governingTenantName property
+     * Gets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGoverningTenantName(): ?string {
@@ -164,7 +164,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the creationDateTime property value. The creationDateTime property
+     * Sets the creationDateTime property value. The date and time when the relationship was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is 2026-01-01T00:00:00Z. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param DateTime|null $value Value to set for the creationDateTime property.
     */
     public function setCreationDateTime(?DateTime $value): void {
@@ -172,7 +172,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the governedTenantId property value. The governedTenantId property
+     * Sets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governedTenantId property.
     */
     public function setGovernedTenantId(?string $value): void {
@@ -180,7 +180,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the governedTenantName property value. The governedTenantName property
+     * Sets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governedTenantName property.
     */
     public function setGovernedTenantName(?string $value): void {
@@ -188,7 +188,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the governingTenantId property value. The governingTenantId property
+     * Sets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governingTenantId property.
     */
     public function setGoverningTenantId(?string $value): void {
@@ -196,7 +196,7 @@ class GovernanceRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the governingTenantName property value. The governingTenantName property
+     * Sets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governingTenantName property.
     */
     public function setGoverningTenantName(?string $value): void {

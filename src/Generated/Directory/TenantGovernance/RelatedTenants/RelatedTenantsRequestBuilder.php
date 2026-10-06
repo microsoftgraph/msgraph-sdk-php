@@ -60,10 +60,11 @@ class RelatedTenantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      * @param RelatedTenantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RelatedTenantCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-relatedtenants?view=graph-rest-1.0 Find more info here
     */
     public function get(?RelatedTenantsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,7 +90,7 @@ class RelatedTenantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get relatedTenants from directory
+     * Get a list of relatedTenant objects and their properties, including relationship metrics.
      * @param RelatedTenantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

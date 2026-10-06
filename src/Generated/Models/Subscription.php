@@ -130,6 +130,9 @@ class Subscription extends Entity implements Parsable
             'notificationUrl' => fn(ParseNode $n) => $o->setNotificationUrl($n->getStringValue()),
             'notificationUrlAppId' => fn(ParseNode $n) => $o->setNotificationUrlAppId($n->getStringValue()),
             'resource' => fn(ParseNode $n) => $o->setResource($n->getStringValue()),
+            'vapidPublicKey' => fn(ParseNode $n) => $o->setVapidPublicKey($n->getStringValue()),
+            'webPushEncryptionP256dhPublicKey' => fn(ParseNode $n) => $o->setWebPushEncryptionP256dhPublicKey($n->getStringValue()),
+            'webPushEncryptionSecret' => fn(ParseNode $n) => $o->setWebPushEncryptionSecret($n->getStringValue()),
         ]);
     }
 
@@ -218,6 +221,42 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
+     * Gets the vapidPublicKey property value. Optional. The application server's VAPID public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained by calling the getVapidPublicKey function on the subscription collection. The browser passes this value to PushManager.subscribe({ applicationServerKey: vapidPublicKey }) to bind the push subscription to this server identity. Required when notificationUrl targets a known Web Push service origin (for example, *.push.apple.com, fcm.googleapis.com, updates.push.services.mozilla.com); rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8292.
+     * @return string|null
+    */
+    public function getVapidPublicKey(): ?string {
+        $val = $this->getBackingStore()->get('vapidPublicKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vapidPublicKey'");
+    }
+
+    /**
+     * Gets the webPushEncryptionP256dhPublicKey property value. Optional. The subscriber's ECDH public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey('p256dh'). Used as the peer public key during ECDH key agreement to derive the per-message content encryption key for RFC 8291 payload encryption. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @return string|null
+    */
+    public function getWebPushEncryptionP256dhPublicKey(): ?string {
+        $val = $this->getBackingStore()->get('webPushEncryptionP256dhPublicKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webPushEncryptionP256dhPublicKey'");
+    }
+
+    /**
+     * Gets the webPushEncryptionSecret property value. Optional. The subscriber's auth secret, base64url-encoded (16 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey('auth'). Used as the HMAC-SHA-256 salt for the HKDF combine step that derives key material for RFC 8291 payload encryption. Write-only: this value is never returned in GET responses (returned as null). Treat as a secret. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @return string|null
+    */
+    public function getWebPushEncryptionSecret(): ?string {
+        $val = $this->getBackingStore()->get('webPushEncryptionSecret');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webPushEncryptionSecret'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -237,6 +276,9 @@ class Subscription extends Entity implements Parsable
         $writer->writeStringValue('notificationUrl', $this->getNotificationUrl());
         $writer->writeStringValue('notificationUrlAppId', $this->getNotificationUrlAppId());
         $writer->writeStringValue('resource', $this->getResource());
+        $writer->writeStringValue('vapidPublicKey', $this->getVapidPublicKey());
+        $writer->writeStringValue('webPushEncryptionP256dhPublicKey', $this->getWebPushEncryptionP256dhPublicKey());
+        $writer->writeStringValue('webPushEncryptionSecret', $this->getWebPushEncryptionSecret());
     }
 
     /**
@@ -349,6 +391,30 @@ class Subscription extends Entity implements Parsable
     */
     public function setResource(?string $value): void {
         $this->getBackingStore()->set('resource', $value);
+    }
+
+    /**
+     * Sets the vapidPublicKey property value. Optional. The application server's VAPID public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained by calling the getVapidPublicKey function on the subscription collection. The browser passes this value to PushManager.subscribe({ applicationServerKey: vapidPublicKey }) to bind the push subscription to this server identity. Required when notificationUrl targets a known Web Push service origin (for example, *.push.apple.com, fcm.googleapis.com, updates.push.services.mozilla.com); rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8292.
+     * @param string|null $value Value to set for the vapidPublicKey property.
+    */
+    public function setVapidPublicKey(?string $value): void {
+        $this->getBackingStore()->set('vapidPublicKey', $value);
+    }
+
+    /**
+     * Sets the webPushEncryptionP256dhPublicKey property value. Optional. The subscriber's ECDH public key, base64url-encoded (P-256 uncompressed point, 65 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey('p256dh'). Used as the peer public key during ECDH key agreement to derive the per-message content encryption key for RFC 8291 payload encryption. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @param string|null $value Value to set for the webPushEncryptionP256dhPublicKey property.
+    */
+    public function setWebPushEncryptionP256dhPublicKey(?string $value): void {
+        $this->getBackingStore()->set('webPushEncryptionP256dhPublicKey', $value);
+    }
+
+    /**
+     * Sets the webPushEncryptionSecret property value. Optional. The subscriber's auth secret, base64url-encoded (16 bytes pre-encoding). Obtained from the browser via PushSubscription.getKey('auth'). Used as the HMAC-SHA-256 salt for the HKDF combine step that derives key material for RFC 8291 payload encryption. Write-only: this value is never returned in GET responses (returned as null). Treat as a secret. Required when notificationUrl targets a known Web Push service origin; rejected with 400 Bad Request if supplied on a standard webhook subscription. For more information, see RFC 8291 Section 3.
+     * @param string|null $value Value to set for the webPushEncryptionSecret property.
+    */
+    public function setWebPushEncryptionSecret(?string $value): void {
+        $this->getBackingStore()->set('webPushEncryptionSecret', $value);
     }
 
 }

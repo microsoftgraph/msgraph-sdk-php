@@ -36,7 +36,7 @@ class RelatedTenantsRefreshRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. The location URL where the status of the refresh request can be retrieved.
      * @return string|null
     */
     public function getLocation(): ?string {
@@ -57,7 +57,7 @@ class RelatedTenantsRefreshRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. The location URL where the status of the refresh request can be retrieved.
      * @param string|null $value Value to set for the location property.
     */
     public function setLocation(?string $value): void {

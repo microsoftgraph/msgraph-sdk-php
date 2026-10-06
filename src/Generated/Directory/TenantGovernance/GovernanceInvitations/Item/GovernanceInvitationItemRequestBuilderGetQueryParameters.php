@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\GovernanceInvitat
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get governanceInvitations from directory
+ * Read the properties of a governanceInvitation object.
 */
 class GovernanceInvitationItemRequestBuilderGetQueryParameters 
 {

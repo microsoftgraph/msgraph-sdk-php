@@ -83,7 +83,7 @@ class DelegatedAdministrationRoleAssignment implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the groupDisplayName property value. The groupDisplayName property
+     * Gets the groupDisplayName property value. The display name of the security group referenced by the group navigation property. Server-populated and read-only; returns null if the referenced group has been deleted.
      * @return string|null
     */
     public function getGroupDisplayName(): ?string {
@@ -107,7 +107,7 @@ class DelegatedAdministrationRoleAssignment implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the roleTemplates property value. The roleTemplates property
+     * Gets the roleTemplates property value. A collection of role templates that define the roles to be assigned to the group in the governed tenant.
      * @return array<RoleTemplate>|null
     */
     public function getRoleTemplates(): ?array {
@@ -157,7 +157,7 @@ class DelegatedAdministrationRoleAssignment implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the groupDisplayName property value. The groupDisplayName property
+     * Sets the groupDisplayName property value. The display name of the security group referenced by the group navigation property. Server-populated and read-only; returns null if the referenced group has been deleted.
      * @param string|null $value Value to set for the groupDisplayName property.
     */
     public function setGroupDisplayName(?string $value): void {
@@ -173,7 +173,7 @@ class DelegatedAdministrationRoleAssignment implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the roleTemplates property value. The roleTemplates property
+     * Sets the roleTemplates property value. A collection of role templates that define the roles to be assigned to the group in the governed tenant.
      * @param array<RoleTemplate>|null $value Value to set for the roleTemplates property.
     */
     public function setRoleTemplates(?array $value): void {

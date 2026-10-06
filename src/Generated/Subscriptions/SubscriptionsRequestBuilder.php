@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Subscription;
 use Microsoft\Graph\Generated\Models\SubscriptionCollectionResponse;
+use Microsoft\Graph\Generated\Subscriptions\GetVapidPublicKey\GetVapidPublicKeyRequestBuilder;
 use Microsoft\Graph\Generated\Subscriptions\Item\SubscriptionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SubscriptionsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to call the getVapidPublicKey method.
+    */
+    public function getVapidPublicKey(): GetVapidPublicKeyRequestBuilder {
+        return new GetVapidPublicKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the collection of subscription entities.
      * @param string $subscriptionId The unique identifier of subscription

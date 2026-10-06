@@ -948,6 +948,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.riskyUserHistoryItem': return new RiskyUserHistoryItem();
                 case '#microsoft.graph.roleAssignment': return new RoleAssignment();
                 case '#microsoft.graph.roleDefinition': return new RoleDefinition();
+                case '#microsoft.graph.roleManagementCustomCalloutExtension': return new RoleManagementCustomCalloutExtension();
                 case '#microsoft.graph.room': return new Room();
                 case '#microsoft.graph.roomList': return new RoomList();
                 case '#microsoft.graph.samlOrWsFedExternalDomainFederation': return new SamlOrWsFedExternalDomainFederation();
@@ -1204,6 +1205,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.unifiedRoleManagementPolicyApprovalRule': return new UnifiedRoleManagementPolicyApprovalRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyAssignment': return new UnifiedRoleManagementPolicyAssignment();
                 case '#microsoft.graph.unifiedRoleManagementPolicyAuthenticationContextRule': return new UnifiedRoleManagementPolicyAuthenticationContextRule();
+                case '#microsoft.graph.unifiedRoleManagementPolicyCustomExtensionRule': return new UnifiedRoleManagementPolicyCustomExtensionRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyEnablementRule': return new UnifiedRoleManagementPolicyEnablementRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyExpirationRule': return new UnifiedRoleManagementPolicyExpirationRule();
                 case '#microsoft.graph.unifiedRoleManagementPolicyNotificationRule': return new UnifiedRoleManagementPolicyNotificationRule();

@@ -82,7 +82,7 @@ class ApplicationsRequiredResourceAccess implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the permissions property value. The permissions property
+     * Gets the permissions property value. The collection of resource permissions required by the application.
      * @return array<ApplicationResourcePermission>|null
     */
     public function getPermissions(): ?array {
@@ -96,7 +96,7 @@ class ApplicationsRequiredResourceAccess implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the resourceAppId property value. The resourceAppId property
+     * Gets the resourceAppId property value. The appId (client ID) of the resource that the application needs to access.
      * @return string|null
     */
     public function getResourceAppId(): ?string {
@@ -143,7 +143,7 @@ class ApplicationsRequiredResourceAccess implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the permissions property value. The permissions property
+     * Sets the permissions property value. The collection of resource permissions required by the application.
      * @param array<ApplicationResourcePermission>|null $value Value to set for the permissions property.
     */
     public function setPermissions(?array $value): void {
@@ -151,7 +151,7 @@ class ApplicationsRequiredResourceAccess implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the resourceAppId property value. The resourceAppId property
+     * Sets the resourceAppId property value. The appId (client ID) of the resource that the application needs to access.
      * @param string|null $value Value to set for the resourceAppId property.
     */
     public function setResourceAppId(?string $value): void {

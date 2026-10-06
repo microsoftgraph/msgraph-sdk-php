@@ -52,10 +52,11 @@ class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governancePolicyTemplates from directory
+     * Get a list of the tenantGovernancePolicyTemplate objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
      * @param GovernancePolicyTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernancePolicyTemplateCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governancepolicytemplates?view=graph-rest-1.0 Find more info here
     */
     public function get(?GovernancePolicyTemplatesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to governancePolicyTemplates for directory
+     * Create a new tenantGovernancePolicyTemplate that defines the configuration for establishing governance relationships, including role assignments and applications to provision.
      * @param TenantGovernancePolicyTemplate $body The request body
      * @param GovernancePolicyTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernancePolicyTemplate|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governancepolicytemplates?view=graph-rest-1.0 Find more info here
     */
     public function post(TenantGovernancePolicyTemplate $body, ?GovernancePolicyTemplatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governancePolicyTemplates from directory
+     * Get a list of the tenantGovernancePolicyTemplate objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
      * @param GovernancePolicyTemplatesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to governancePolicyTemplates for directory
+     * Create a new tenantGovernancePolicyTemplate that defines the configuration for establishing governance relationships, including role assignments and applications to provision.
      * @param TenantGovernancePolicyTemplate $body The request body
      * @param GovernancePolicyTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

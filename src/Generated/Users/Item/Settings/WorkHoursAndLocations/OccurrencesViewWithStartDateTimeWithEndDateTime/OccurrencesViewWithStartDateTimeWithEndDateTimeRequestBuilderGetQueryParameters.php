@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Settings\WorkHoursAndLocations\Oc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get work plan occurrences from your own work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
+ * Get work plan occurrences from a user's work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
 */
 class OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters 
 {

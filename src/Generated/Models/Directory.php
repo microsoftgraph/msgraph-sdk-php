@@ -199,7 +199,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantGovernance property value. The tenantGovernance property
+     * Gets the tenantGovernance property value. Container for Microsoft Entra Tenant Governance capabilities.
      * @return TenantGovernance|null
     */
     public function getTenantGovernance(): ?TenantGovernance {
@@ -319,7 +319,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantGovernance property value. The tenantGovernance property
+     * Sets the tenantGovernance property value. Container for Microsoft Entra Tenant Governance capabilities.
      * @param TenantGovernance|null $value Value to set for the tenantGovernance property.
     */
     public function setTenantGovernance(?TenantGovernance $value): void {

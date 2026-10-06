@@ -49,7 +49,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The appId (client ID) of the multi-tenant application.
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -69,7 +69,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the application.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -96,7 +96,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Gets the objectId property value. The objectId property
+     * Gets the objectId property value. The object ID of the service principal in the governing tenant.
      * @return string|null
     */
     public function getObjectId(): ?string {
@@ -120,7 +120,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Gets the requiredResourceAccesses property value. The requiredResourceAccesses property
+     * Gets the requiredResourceAccesses property value. The collection of resource accesses (permissions) required by the application.
      * @return array<ApplicationsRequiredResourceAccess>|null
     */
     public function getRequiredResourceAccesses(): ?array {
@@ -155,7 +155,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The appId (client ID) of the multi-tenant application.
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
@@ -171,7 +171,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the application.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -179,7 +179,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Sets the objectId property value. The objectId property
+     * Sets the objectId property value. The object ID of the service principal in the governing tenant.
      * @param string|null $value Value to set for the objectId property.
     */
     public function setObjectId(?string $value): void {
@@ -195,7 +195,7 @@ class MultiTenantApplicationsToProvisionSnapshot implements AdditionalDataHolder
     }
 
     /**
-     * Sets the requiredResourceAccesses property value. The requiredResourceAccesses property
+     * Sets the requiredResourceAccesses property value. The collection of resource accesses (permissions) required by the application.
      * @param array<ApplicationsRequiredResourceAccess>|null $value Value to set for the requiredResourceAccesses property.
     */
     public function setRequiredResourceAccesses(?array $value): void {

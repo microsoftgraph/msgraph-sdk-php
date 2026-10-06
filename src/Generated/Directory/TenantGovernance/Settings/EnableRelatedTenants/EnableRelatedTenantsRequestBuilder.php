@@ -30,10 +30,11 @@ class EnableRelatedTenantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action enableRelatedTenants
+     * Enable the related tenants feature for tenant discovery. After calling this action, the isRelatedTenantsEnabled property of tenantGovernanceSetting is set to true, which allows the use of related tenant APIs.
      * @param EnableRelatedTenantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-tenantgovernancesetting-enablerelatedtenants?view=graph-rest-1.0 Find more info here
     */
     public function post(?EnableRelatedTenantsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -44,7 +45,7 @@ class EnableRelatedTenantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action enableRelatedTenants
+     * Enable the related tenants feature for tenant discovery. After calling this action, the isRelatedTenantsEnabled property of tenantGovernanceSetting is set to true, which allows the use of related tenant APIs.
      * @param EnableRelatedTenantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PrivilegedAccessRoot extends Entity implements Parsable 
 {
@@ -25,12 +26,27 @@ class PrivilegedAccessRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the customExtensions property value. The customExtensions property
+     * @return array<RoleManagementCustomCalloutExtension>|null
+    */
+    public function getCustomExtensions(): ?array {
+        $val = $this->getBackingStore()->get('customExtensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RoleManagementCustomCalloutExtension::class);
+            /** @var array<RoleManagementCustomCalloutExtension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customExtensions'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'customExtensions' => fn(ParseNode $n) => $o->setCustomExtensions($n->getCollectionOfObjectValues([RoleManagementCustomCalloutExtension::class, 'createFromDiscriminatorValue'])),
             'group' => fn(ParseNode $n) => $o->setGroup($n->getObjectValue([PrivilegedAccessGroup::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -53,7 +69,16 @@ class PrivilegedAccessRoot extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('customExtensions', $this->getCustomExtensions());
         $writer->writeObjectValue('group', $this->getGroup());
+    }
+
+    /**
+     * Sets the customExtensions property value. The customExtensions property
+     * @param array<RoleManagementCustomCalloutExtension>|null $value Value to set for the customExtensions property.
+    */
+    public function setCustomExtensions(?array $value): void {
+        $this->getBackingStore()->set('customExtensions', $value);
     }
 
     /**

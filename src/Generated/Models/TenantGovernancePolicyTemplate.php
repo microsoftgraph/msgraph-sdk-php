@@ -27,7 +27,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the template was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -39,7 +39,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Gets the delegatedAdministrationRoleAssignments property value. A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established.
      * @return array<DelegatedAdministrationRoleAssignment>|null
     */
     public function getDelegatedAdministrationRoleAssignments(): ?array {
@@ -53,7 +53,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -65,7 +65,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -95,7 +95,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Gets the governedTenantCanTerminate property value. Not implemented.
      * @return bool|null
     */
     public function getGovernedTenantCanTerminate(): ?bool {
@@ -107,7 +107,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -119,7 +119,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Gets the multiTenantApplicationsToProvision property value. A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.
      * @return array<MultiTenantApplicationsToProvision>|null
     */
     public function getMultiTenantApplicationsToProvision(): ?array {
@@ -133,7 +133,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the policy template. Version count increased by 1 when updated. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return string|null
     */
     public function getVersion(): ?string {
@@ -161,7 +161,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the template was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -169,7 +169,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Sets the delegatedAdministrationRoleAssignments property value. A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established.
      * @param array<DelegatedAdministrationRoleAssignment>|null $value Value to set for the delegatedAdministrationRoleAssignments property.
     */
     public function setDelegatedAdministrationRoleAssignments(?array $value): void {
@@ -177,7 +177,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -185,7 +185,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the policy template. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -193,7 +193,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Sets the governedTenantCanTerminate property value. Not implemented.
      * @param bool|null $value Value to set for the governedTenantCanTerminate property.
     */
     public function setGovernedTenantCanTerminate(?bool $value): void {
@@ -201,7 +201,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -209,7 +209,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Sets the multiTenantApplicationsToProvision property value. A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.
      * @param array<MultiTenantApplicationsToProvision>|null $value Value to set for the multiTenantApplicationsToProvision property.
     */
     public function setMultiTenantApplicationsToProvision(?array $value): void {
@@ -217,7 +217,7 @@ class TenantGovernancePolicyTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the policy template. Version count increased by 1 when updated. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {

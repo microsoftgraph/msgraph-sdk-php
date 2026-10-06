@@ -31,7 +31,7 @@ class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      * @param GovernancePolicyTemplateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<TenantGovernancePolicyTemplate|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class GovernancePolicyTemplateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get governancePolicyTemplate from directory
+     * The governance policy template associated with this request.
      * @param GovernancePolicyTemplateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

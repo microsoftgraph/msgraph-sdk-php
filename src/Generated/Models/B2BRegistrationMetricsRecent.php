@@ -38,7 +38,7 @@ class B2BRegistrationMetricsRecent extends B2BRegistrationMetricsBase implements
     }
 
     /**
-     * Gets the updateDateTime property value. The updateDateTime property
+     * Gets the updateDateTime property value. Timestamp that represents the most recent time B2B registration data was aggregated and have sufficiently changed for the related tenant.
      * @return DateTime|null
     */
     public function getUpdateDateTime(): ?DateTime {
@@ -59,7 +59,7 @@ class B2BRegistrationMetricsRecent extends B2BRegistrationMetricsBase implements
     }
 
     /**
-     * Sets the updateDateTime property value. The updateDateTime property
+     * Sets the updateDateTime property value. Timestamp that represents the most recent time B2B registration data was aggregated and have sufficiently changed for the related tenant.
      * @param DateTime|null $value Value to set for the updateDateTime property.
     */
     public function setUpdateDateTime(?DateTime $value): void {

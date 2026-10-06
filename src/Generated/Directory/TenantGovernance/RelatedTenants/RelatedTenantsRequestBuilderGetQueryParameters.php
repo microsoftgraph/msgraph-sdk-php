@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\RelatedTenants;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get relatedTenants from directory
+ * Get a list of relatedTenant objects and their properties, including relationship metrics.
 */
 class RelatedTenantsRequestBuilderGetQueryParameters 
 {

@@ -31,7 +31,7 @@ class BillingMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      * @param BillingMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<BillingMetrics|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class BillingMetricsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get billingMetrics from directory
+     * Billing metrics for this related tenant. Expanded by default.
      * @param BillingMetricsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -35,7 +35,7 @@ class OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilder extends Base
     }
 
     /**
-     * Get work plan occurrences from your own work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
+     * Get work plan occurrences from a user's work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
      * @param OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OccurrencesViewWithStartDateTimeWithEndDateTimeGetResponse|null>
      * @throws Exception
@@ -50,7 +50,7 @@ class OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilder extends Base
     }
 
     /**
-     * Get work plan occurrences from your own work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
+     * Get work plan occurrences from a user's work plan within a specified date range. This function requires the startDateTime and endDateTime parameters.
      * @param OccurrencesViewWithStartDateTimeWithEndDateTimeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -57,7 +57,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Gets the delegatedAdministrationRoleAssignments property value. A snapshot of the delegated administration role assignments configured in this policy.
      * @return array<DelegatedAdministrationRoleAssignmentSnapshot>|null
     */
     public function getDelegatedAdministrationRoleAssignments(): ?array {
@@ -87,7 +87,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Gets the governedTenantCanTerminate property value. Indicates whether the governed tenant can terminate the relationship.
      * @return bool|null
     */
     public function getGovernedTenantCanTerminate(): ?bool {
@@ -99,7 +99,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Gets the multiTenantApplicationsToProvision property value. A snapshot of the multi-tenant applications to be provisioned in the governed tenant.
      * @return array<MultiTenantApplicationsToProvisionSnapshot>|null
     */
     public function getMultiTenantApplicationsToProvision(): ?array {
@@ -125,7 +125,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the policyId property value. The policyId property
+     * Gets the policyId property value. The identifier of the source policy template from which this snapshot was created.
      * @return string|null
     */
     public function getPolicyId(): ?string {
@@ -137,7 +137,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the source policy template from which this snapshot was created.
      * @return int|null
     */
     public function getVersion(): ?int {
@@ -178,7 +178,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the delegatedAdministrationRoleAssignments property value. The delegatedAdministrationRoleAssignments property
+     * Sets the delegatedAdministrationRoleAssignments property value. A snapshot of the delegated administration role assignments configured in this policy.
      * @param array<DelegatedAdministrationRoleAssignmentSnapshot>|null $value Value to set for the delegatedAdministrationRoleAssignments property.
     */
     public function setDelegatedAdministrationRoleAssignments(?array $value): void {
@@ -186,7 +186,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the governedTenantCanTerminate property value. The governedTenantCanTerminate property
+     * Sets the governedTenantCanTerminate property value. Indicates whether the governed tenant can terminate the relationship.
      * @param bool|null $value Value to set for the governedTenantCanTerminate property.
     */
     public function setGovernedTenantCanTerminate(?bool $value): void {
@@ -194,7 +194,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the multiTenantApplicationsToProvision property value. The multiTenantApplicationsToProvision property
+     * Sets the multiTenantApplicationsToProvision property value. A snapshot of the multi-tenant applications to be provisioned in the governed tenant.
      * @param array<MultiTenantApplicationsToProvisionSnapshot>|null $value Value to set for the multiTenantApplicationsToProvision property.
     */
     public function setMultiTenantApplicationsToProvision(?array $value): void {
@@ -210,7 +210,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the policyId property value. The policyId property
+     * Sets the policyId property value. The identifier of the source policy template from which this snapshot was created.
      * @param string|null $value Value to set for the policyId property.
     */
     public function setPolicyId(?string $value): void {
@@ -218,7 +218,7 @@ class RelationshipPolicy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the source policy template from which this snapshot was created.
      * @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value): void {

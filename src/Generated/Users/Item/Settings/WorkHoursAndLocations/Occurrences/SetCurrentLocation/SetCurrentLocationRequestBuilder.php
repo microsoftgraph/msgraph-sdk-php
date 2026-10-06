@@ -30,7 +30,7 @@ class SetCurrentLocationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update your work location for the current day or current active segment. This action allows you to quickly update your work location without modifying individual occurrences.
+     * Update a user's work location for the current day or current active segment. This action quickly updates the user's work location without modifying individual occurrences.
      * @param SetCurrentLocationPostRequestBody $body The request body
      * @param SetCurrentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
@@ -46,7 +46,7 @@ class SetCurrentLocationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update your work location for the current day or current active segment. This action allows you to quickly update your work location without modifying individual occurrences.
+     * Update a user's work location for the current day or current active segment. This action quickly updates the user's work location without modifying individual occurrences.
      * @param SetCurrentLocationPostRequestBody $body The request body
      * @param SetCurrentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

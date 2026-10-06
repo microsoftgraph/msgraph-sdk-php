@@ -26,7 +26,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The date and time when the request expires if not accepted or rejected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -57,7 +57,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the governancePolicyTemplate property value. The governancePolicyTemplate property
+     * Gets the governancePolicyTemplate property value. The governance policy template associated with this request.
      * @return TenantGovernancePolicyTemplate|null
     */
     public function getGovernancePolicyTemplate(): ?TenantGovernancePolicyTemplate {
@@ -69,7 +69,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the governedTenantId property value. The governedTenantId property
+     * Gets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGovernedTenantId(): ?string {
@@ -81,7 +81,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the governedTenantName property value. The governedTenantName property
+     * Gets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGovernedTenantName(): ?string {
@@ -93,7 +93,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the governingTenantId property value. The governingTenantId property
+     * Gets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGoverningTenantId(): ?string {
@@ -105,7 +105,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the governingTenantName property value. The governingTenantName property
+     * Gets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @return string|null
     */
     public function getGoverningTenantName(): ?string {
@@ -129,7 +129,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the requestDateTime property value. The requestDateTime property
+     * Gets the requestDateTime property value. The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @return DateTime|null
     */
     public function getRequestDateTime(): ?DateTime {
@@ -170,7 +170,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The date and time when the request expires if not accepted or rejected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -178,7 +178,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the governancePolicyTemplate property value. The governancePolicyTemplate property
+     * Sets the governancePolicyTemplate property value. The governance policy template associated with this request.
      * @param TenantGovernancePolicyTemplate|null $value Value to set for the governancePolicyTemplate property.
     */
     public function setGovernancePolicyTemplate(?TenantGovernancePolicyTemplate $value): void {
@@ -186,7 +186,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the governedTenantId property value. The governedTenantId property
+     * Sets the governedTenantId property value. The Microsoft Entra tenant ID of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governedTenantId property.
     */
     public function setGovernedTenantId(?string $value): void {
@@ -194,7 +194,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the governedTenantName property value. The governedTenantName property
+     * Sets the governedTenantName property value. The display name of the governed tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governedTenantName property.
     */
     public function setGovernedTenantName(?string $value): void {
@@ -202,7 +202,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the governingTenantId property value. The governingTenantId property
+     * Sets the governingTenantId property value. The Microsoft Entra tenant ID of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governingTenantId property.
     */
     public function setGoverningTenantId(?string $value): void {
@@ -210,7 +210,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the governingTenantName property value. The governingTenantName property
+     * Sets the governingTenantName property value. The display name of the governing tenant. Supports $filter (eq, ne) and $orderBy.
      * @param string|null $value Value to set for the governingTenantName property.
     */
     public function setGoverningTenantName(?string $value): void {
@@ -226,7 +226,7 @@ class GovernanceRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the requestDateTime property value. The requestDateTime property
+     * Sets the requestDateTime property value. The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. Supports $filter (lt, le, gt, ge, eq, ne) and $orderBy.
      * @param DateTime|null $value Value to set for the requestDateTime property.
     */
     public function setRequestDateTime(?DateTime $value): void {

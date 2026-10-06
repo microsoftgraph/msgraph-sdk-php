@@ -26,7 +26,7 @@ class MultiTenantApplicationMetricsInitial extends MultiTenantApplicationMetrics
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Timestamp that represents when multitenant application metrics are initially aggregated for the related tenant.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -58,7 +58,7 @@ class MultiTenantApplicationMetricsInitial extends MultiTenantApplicationMetrics
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Timestamp that represents when multitenant application metrics are initially aggregated for the related tenant.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {

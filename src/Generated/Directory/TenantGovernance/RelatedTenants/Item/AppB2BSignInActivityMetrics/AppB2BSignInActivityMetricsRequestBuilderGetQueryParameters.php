@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\TenantGovernance\RelatedTenants\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get appB2BSignInActivityMetrics from directory
+ * B2B sign-in activity metrics for this related tenant. Expanded by default.
 */
 class AppB2BSignInActivityMetricsRequestBuilderGetQueryParameters 
 {

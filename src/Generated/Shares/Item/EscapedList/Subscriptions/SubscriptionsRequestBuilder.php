@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Subscription;
 use Microsoft\Graph\Generated\Models\SubscriptionCollectionResponse;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions\GetVapidPublicKey\GetVapidPublicKeyRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions\Item\SubscriptionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class SubscriptionsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getVapidPublicKey method.
+    */
+    public function getVapidPublicKey(): GetVapidPublicKeyRequestBuilder {
+        return new GetVapidPublicKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

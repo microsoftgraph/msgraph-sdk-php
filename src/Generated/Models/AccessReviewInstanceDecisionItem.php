@@ -151,7 +151,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the permission property value. The permission property
+     * Gets the permission property value. The permission that grants the principal access to a resource. Read-only.
      * @return AccessReviewInstanceDecisionItemPermission|null
     */
     public function getPermission(): ?AccessReviewInstanceDecisionItemPermission {
@@ -335,7 +335,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the permission property value. The permission property
+     * Sets the permission property value. The permission that grants the principal access to a resource. Read-only.
      * @param AccessReviewInstanceDecisionItemPermission|null $value Value to set for the permission property.
     */
     public function setPermission(?AccessReviewInstanceDecisionItemPermission $value): void {

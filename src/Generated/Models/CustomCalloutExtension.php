@@ -36,6 +36,7 @@ class CustomCalloutExtension extends Entity implements Parsable
                 case '#microsoft.graph.onPasswordSubmitCustomExtension': return new OnPasswordSubmitCustomExtension();
                 case '#microsoft.graph.onTokenIssuanceStartCustomExtension': return new OnTokenIssuanceStartCustomExtension();
                 case '#microsoft.graph.onVerifiedIdClaimValidationCustomExtension': return new OnVerifiedIdClaimValidationCustomExtension();
+                case '#microsoft.graph.roleManagementCustomCalloutExtension': return new RoleManagementCustomCalloutExtension();
             }
         }
         return new CustomCalloutExtension();

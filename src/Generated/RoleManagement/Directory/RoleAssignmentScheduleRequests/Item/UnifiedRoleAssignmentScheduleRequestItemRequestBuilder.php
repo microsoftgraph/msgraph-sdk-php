@@ -13,6 +13,7 @@ use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleReq
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\UpdateRequest\UpdateRequestRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -70,6 +71,13 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends BaseRequest
     */
     public function targetSchedule(): TargetScheduleRequestBuilder {
         return new TargetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the updateRequest method.
+    */
+    public function updateRequest(): UpdateRequestRequestBuilder {
+        return new UpdateRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
