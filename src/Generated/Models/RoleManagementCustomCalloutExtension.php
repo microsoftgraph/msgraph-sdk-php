@@ -27,7 +27,7 @@ class RoleManagementCustomCalloutExtension extends CustomCalloutExtension implem
     }
 
     /**
-     * Gets the customAttributes property value. The customAttributes property
+     * Gets the customAttributes property value. The custom attribute names to include in the callout payload.
      * @return array<string>|null
     */
     public function getCustomAttributes(): ?array {
@@ -96,7 +96,7 @@ class RoleManagementCustomCalloutExtension extends CustomCalloutExtension implem
     }
 
     /**
-     * Sets the customAttributes property value. The customAttributes property
+     * Sets the customAttributes property value. The custom attribute names to include in the callout payload.
      * @param array<string>|null $value Value to set for the customAttributes property.
     */
     public function setCustomAttributes(?array $value): void {

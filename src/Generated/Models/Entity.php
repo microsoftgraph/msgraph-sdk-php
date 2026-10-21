@@ -248,6 +248,9 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.androidWorkProfileCompliancePolicy': return new AndroidWorkProfileCompliancePolicy();
                 case '#microsoft.graph.androidWorkProfileCustomConfiguration': return new AndroidWorkProfileCustomConfiguration();
                 case '#microsoft.graph.androidWorkProfileGeneralDeviceConfiguration': return new AndroidWorkProfileGeneralDeviceConfiguration();
+                case '#microsoft.graph.anonymousCalendarSharingFreeBusyDetail': return new AnonymousCalendarSharingFreeBusyDetail();
+                case '#microsoft.graph.anonymousCalendarSharingFreeBusyReviewer': return new AnonymousCalendarSharingFreeBusyReviewer();
+                case '#microsoft.graph.anonymousCalendarSharingFreeBusySimple': return new AnonymousCalendarSharingFreeBusySimple();
                 case '#microsoft.graph.anonymousGuestConversationMember': return new AnonymousGuestConversationMember();
                 case '#microsoft.graph.appCatalogs': return new AppCatalogs();
                 case '#microsoft.graph.appConsentApprovalRoute': return new AppConsentApprovalRoute();
@@ -934,6 +937,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.reportsRoot': return new ReportsRoot();
                 case '#microsoft.graph.request': return new Request();
                 case '#microsoft.graph.resellerDelegatedAdminRelationship': return new ResellerDelegatedAdminRelationship();
+                case '#microsoft.graph.resourceAccountKeyAuthenticationMethod': return new ResourceAccountKeyAuthenticationMethod();
                 case '#microsoft.graph.resourceOperation': return new ResourceOperation();
                 case '#microsoft.graph.resourceSpecificPermissionGrant': return new ResourceSpecificPermissionGrant();
                 case '#microsoft.graph.restoreArtifactBase': return new RestoreArtifactBase();

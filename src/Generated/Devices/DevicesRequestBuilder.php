@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Devices\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Devices\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Devices\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\DeviceItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Provision\ProvisionRequestBuilder;
 use Microsoft\Graph\Generated\Devices\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Device;
 use Microsoft\Graph\Generated\Models\DeviceCollectionResponse;
@@ -49,6 +50,13 @@ class DevicesRequestBuilder extends BaseRequestBuilder
     */
     public function getByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the provision method.
+    */
+    public function provision(): ProvisionRequestBuilder {
+        return new ProvisionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

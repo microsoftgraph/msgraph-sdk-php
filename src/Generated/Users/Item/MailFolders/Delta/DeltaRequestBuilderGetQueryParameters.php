@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Delta;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a set of mail folders that have been added, deleted, or removed from the user's mailbox. A delta function call for mail folders in a mailbox is similar to a GET request, except that by appropriatelyapplying state tokens in one or more of these calls,you can query for incremental changes in the mail folders. This allows you to maintain and synchronizea local store of a user's mail folders without having to fetch all the mail folders of that mailbox from the server every time.
+ * Get a set of mail folders that have been added, deleted, or removed from the user's mailbox. A delta function call for mail folders in a mailbox is similar to a GET request, except that by appropriatelyapplying state tokens in one or more of these calls,you can query for incremental changes in the mail folders. This allows you to maintain and synchronizea local store of a user's mail folders without having to fetch all the mail folders of that mailbox from the server every time. Delta processing may create or update synchronization state stored in the mailbox. These writes are subject to mailbox storage quota enforcement. If a mailbox has reached its applicable storage quota, a mail folder delta request can return 403 ErrorQuotaExceeded, even when ordinary folder read requests continue to succeed. Reduce mailbox usage below the quota and retry the delta request. Applications should handle this error and direct affected users or administrators to address mailbox storage usage.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

@@ -26,6 +26,9 @@ class M365CapabilityBase extends Entity implements Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.anonymousCalendarSharingFreeBusyDetail': return new AnonymousCalendarSharingFreeBusyDetail();
+                case '#microsoft.graph.anonymousCalendarSharingFreeBusyReviewer': return new AnonymousCalendarSharingFreeBusyReviewer();
+                case '#microsoft.graph.anonymousCalendarSharingFreeBusySimple': return new AnonymousCalendarSharingFreeBusySimple();
                 case '#microsoft.graph.crossTenantCalendarAvailabilityBasic': return new CrossTenantCalendarAvailabilityBasic();
                 case '#microsoft.graph.crossTenantCalendarAvailabilityLimitedDetails': return new CrossTenantCalendarAvailabilityLimitedDetails();
                 case '#microsoft.graph.crossTenantCalendarSharingFreeBusyDetail': return new CrossTenantCalendarSharingFreeBusyDetail();

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Permissions\Item;
 use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\Permissions\Item\Grant\GrantRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Permissions\Item\RevokeGrants\RevokeGrantsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -22,6 +23,13 @@ class PermissionItemRequestBuilder extends BaseRequestBuilder
     */
     public function grant(): GrantRequestBuilder {
         return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the revokeGrants method.
+    */
+    public function revokeGrants(): RevokeGrantsRequestBuilder {
+        return new RevokeGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
