@@ -26,7 +26,7 @@ class PrivilegedAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the customExtensions property value. The customExtensions property
+     * Gets the customExtensions property value. The custom extensions configured for PIM role management operations.
      * @return array<RoleManagementCustomCalloutExtension>|null
     */
     public function getCustomExtensions(): ?array {
@@ -74,7 +74,7 @@ class PrivilegedAccessRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the customExtensions property value. The customExtensions property
+     * Sets the customExtensions property value. The custom extensions configured for PIM role management operations.
      * @param array<RoleManagementCustomCalloutExtension>|null $value Value to set for the customExtensions property.
     */
     public function setCustomExtensions(?array $value): void {

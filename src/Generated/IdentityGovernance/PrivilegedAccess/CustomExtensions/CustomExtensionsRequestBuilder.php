@@ -52,10 +52,11 @@ class CustomExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customExtensions from identityGovernance
+     * Get a list of roleManagementCustomCalloutExtension objects configured for Privileged Identity Management (PIM).
      * @param CustomExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleManagementCustomCalloutExtensionCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessroot-list-customextensions?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomExtensionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -66,11 +67,12 @@ class CustomExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customExtensions for identityGovernance
+     * Create a new roleManagementCustomCalloutExtension object for Privileged Identity Management (PIM).
      * @param RoleManagementCustomCalloutExtension $body The request body
      * @param CustomExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleManagementCustomCalloutExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessroot-post-customextensions?view=graph-rest-1.0 Find more info here
     */
     public function post(RoleManagementCustomCalloutExtension $body, ?CustomExtensionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -81,7 +83,7 @@ class CustomExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get customExtensions from identityGovernance
+     * Get a list of roleManagementCustomCalloutExtension objects configured for Privileged Identity Management (PIM).
      * @param CustomExtensionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -102,7 +104,7 @@ class CustomExtensionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customExtensions for identityGovernance
+     * Create a new roleManagementCustomCalloutExtension object for Privileged Identity Management (PIM).
      * @param RoleManagementCustomCalloutExtension $body The request body
      * @param CustomExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

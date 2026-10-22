@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Graph\Generated\Shares\Item\Permission\Grant\GrantRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\Permission\RevokeGrants\RevokeGrantsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -22,6 +23,13 @@ class PermissionRequestBuilder extends BaseRequestBuilder
     */
     public function grant(): GrantRequestBuilder {
         return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the revokeGrants method.
+    */
+    public function revokeGrants(): RevokeGrantsRequestBuilder {
+        return new RevokeGrantsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

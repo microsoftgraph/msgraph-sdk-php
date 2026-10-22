@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Directory\TenantGovernance\RelatedTenants\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Directory\TenantGovernance\RelatedTenants\Item\RelatedTenantItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\TenantGovernance\RelatedTenants\Refresh\RefreshRequestBuilder;
+use Microsoft\Graph\Generated\Directory\TenantGovernance\RelatedTenants\RefreshStatus\RefreshStatusRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RelatedTenant;
 use Microsoft\Graph\Generated\Models\RelatedTenantCollectionResponse;
@@ -32,6 +33,13 @@ class RelatedTenantsRequestBuilder extends BaseRequestBuilder
     */
     public function refresh(): RefreshRequestBuilder {
         return new RefreshRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the refreshStatus method.
+    */
+    public function refreshStatus(): RefreshStatusRequestBuilder {
+        return new RefreshStatusRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

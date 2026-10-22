@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\CustomEx
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get customExtensions from identityGovernance
+ * Get a list of roleManagementCustomCalloutExtension objects configured for Privileged Identity Management (PIM).
 */
 class CustomExtensionsRequestBuilderGetQueryParameters 
 {

@@ -15,6 +15,7 @@ use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\OperationsReq
 use Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\PasswordMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\PhoneMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\PlatformCredentialMethods\PlatformCredentialMethodsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\ResourceAccountKeyAuthenticationMethods\ResourceAccountKeyAuthenticationMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\SoftwareOathMethods\SoftwareOathMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\TemporaryAccessPassMethods\TemporaryAccessPassMethodsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\WindowsHelloForBusinessMethodsRequestBuilder;
@@ -89,6 +90,13 @@ class AuthenticationRequestBuilder extends BaseRequestBuilder
     */
     public function platformCredentialMethods(): PlatformCredentialMethodsRequestBuilder {
         return new PlatformCredentialMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the resourceAccountKeyAuthenticationMethods property of the microsoft.graph.authentication entity.
+    */
+    public function resourceAccountKeyAuthenticationMethods(): ResourceAccountKeyAuthenticationMethodsRequestBuilder {
+        return new ResourceAccountKeyAuthenticationMethodsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

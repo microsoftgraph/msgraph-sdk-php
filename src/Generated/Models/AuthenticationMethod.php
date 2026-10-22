@@ -34,6 +34,7 @@ class AuthenticationMethod extends Entity implements Parsable
                 case '#microsoft.graph.phoneAuthenticationMethod': return new PhoneAuthenticationMethod();
                 case '#microsoft.graph.platformCredentialAuthenticationMethod': return new PlatformCredentialAuthenticationMethod();
                 case '#microsoft.graph.qrCodePinAuthenticationMethod': return new QrCodePinAuthenticationMethod();
+                case '#microsoft.graph.resourceAccountKeyAuthenticationMethod': return new ResourceAccountKeyAuthenticationMethod();
                 case '#microsoft.graph.softwareOathAuthenticationMethod': return new SoftwareOathAuthenticationMethod();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethod': return new TemporaryAccessPassAuthenticationMethod();
                 case '#microsoft.graph.windowsHelloForBusinessAuthenticationMethod': return new WindowsHelloForBusinessAuthenticationMethod();

@@ -31,11 +31,12 @@ class UpdateRequestRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action updateRequest
+     * Update a privilegedAccessGroupAssignmentScheduleRequest object with the result of a custom extension evaluation. This action is used to submit the result of a custom extension evaluation for a role assignment request.
      * @param UpdateRequestPostRequestBody $body The request body
      * @param UpdateRequestRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<PrivilegedAccessGroupAssignmentScheduleRequest|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-updaterequest?view=graph-rest-1.0 Find more info here
     */
     public function post(UpdateRequestPostRequestBody $body, ?UpdateRequestRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -46,7 +47,7 @@ class UpdateRequestRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action updateRequest
+     * Update a privilegedAccessGroupAssignmentScheduleRequest object with the result of a custom extension evaluation. This action is used to submit the result of a custom extension evaluation for a role assignment request.
      * @param UpdateRequestPostRequestBody $body The request body
      * @param UpdateRequestRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

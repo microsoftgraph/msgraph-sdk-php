@@ -31,10 +31,11 @@ class RoleManagementCustomCalloutExtensionItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Delete navigation property customExtensions for identityGovernance
+     * Delete a roleManagementCustomCalloutExtension object.
      * @param RoleManagementCustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<void|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RoleManagementCustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -45,10 +46,11 @@ class RoleManagementCustomCalloutExtensionItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      * @param RoleManagementCustomCalloutExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleManagementCustomCalloutExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleManagementCustomCalloutExtensionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -59,11 +61,12 @@ class RoleManagementCustomCalloutExtensionItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Update the navigation property customExtensions in identityGovernance
+     * Update the properties of a roleManagementCustomCalloutExtension object.
      * @param RoleManagementCustomCalloutExtension $body The request body
      * @param RoleManagementCustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RoleManagementCustomCalloutExtension|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/rolemanagementcustomcalloutextension-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(RoleManagementCustomCalloutExtension $body, ?RoleManagementCustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -74,7 +77,7 @@ class RoleManagementCustomCalloutExtensionItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Delete navigation property customExtensions for identityGovernance
+     * Delete a roleManagementCustomCalloutExtension object.
      * @param RoleManagementCustomCalloutExtensionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -92,7 +95,7 @@ class RoleManagementCustomCalloutExtensionItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Get customExtensions from identityGovernance
+     * Retrieve the properties of a roleManagementCustomCalloutExtension object.
      * @param RoleManagementCustomCalloutExtensionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +116,7 @@ class RoleManagementCustomCalloutExtensionItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Update the navigation property customExtensions in identityGovernance
+     * Update the properties of a roleManagementCustomCalloutExtension object.
      * @param RoleManagementCustomCalloutExtension $body The request body
      * @param RoleManagementCustomCalloutExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
