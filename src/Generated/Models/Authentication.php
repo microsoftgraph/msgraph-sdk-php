@@ -83,6 +83,7 @@ class Authentication extends Entity implements Parsable
             'passwordMethods' => fn(ParseNode $n) => $o->setPasswordMethods($n->getCollectionOfObjectValues([PasswordAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
             'phoneMethods' => fn(ParseNode $n) => $o->setPhoneMethods($n->getCollectionOfObjectValues([PhoneAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
             'platformCredentialMethods' => fn(ParseNode $n) => $o->setPlatformCredentialMethods($n->getCollectionOfObjectValues([PlatformCredentialAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
+            'resourceAccountKeyAuthenticationMethods' => fn(ParseNode $n) => $o->setResourceAccountKeyAuthenticationMethods($n->getCollectionOfObjectValues([ResourceAccountKeyAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
             'softwareOathMethods' => fn(ParseNode $n) => $o->setSoftwareOathMethods($n->getCollectionOfObjectValues([SoftwareOathAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
             'temporaryAccessPassMethods' => fn(ParseNode $n) => $o->setTemporaryAccessPassMethods($n->getCollectionOfObjectValues([TemporaryAccessPassAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
             'windowsHelloForBusinessMethods' => fn(ParseNode $n) => $o->setWindowsHelloForBusinessMethods($n->getCollectionOfObjectValues([WindowsHelloForBusinessAuthenticationMethod::class, 'createFromDiscriminatorValue'])),
@@ -174,6 +175,20 @@ class Authentication extends Entity implements Parsable
     }
 
     /**
+     * Gets the resourceAccountKeyAuthenticationMethods property value. Represents the resource account key credentials registered to a user for authentication on shared devices.
+     * @return array<ResourceAccountKeyAuthenticationMethod>|null
+    */
+    public function getResourceAccountKeyAuthenticationMethods(): ?array {
+        $val = $this->getBackingStore()->get('resourceAccountKeyAuthenticationMethods');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ResourceAccountKeyAuthenticationMethod::class);
+            /** @var array<ResourceAccountKeyAuthenticationMethod>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceAccountKeyAuthenticationMethods'");
+    }
+
+    /**
      * Gets the softwareOathMethods property value. The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return array<SoftwareOathAuthenticationMethod>|null
     */
@@ -230,6 +245,7 @@ class Authentication extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('passwordMethods', $this->getPasswordMethods());
         $writer->writeCollectionOfObjectValues('phoneMethods', $this->getPhoneMethods());
         $writer->writeCollectionOfObjectValues('platformCredentialMethods', $this->getPlatformCredentialMethods());
+        $writer->writeCollectionOfObjectValues('resourceAccountKeyAuthenticationMethods', $this->getResourceAccountKeyAuthenticationMethods());
         $writer->writeCollectionOfObjectValues('softwareOathMethods', $this->getSoftwareOathMethods());
         $writer->writeCollectionOfObjectValues('temporaryAccessPassMethods', $this->getTemporaryAccessPassMethods());
         $writer->writeCollectionOfObjectValues('windowsHelloForBusinessMethods', $this->getWindowsHelloForBusinessMethods());
@@ -305,6 +321,14 @@ class Authentication extends Entity implements Parsable
     */
     public function setPlatformCredentialMethods(?array $value): void {
         $this->getBackingStore()->set('platformCredentialMethods', $value);
+    }
+
+    /**
+     * Sets the resourceAccountKeyAuthenticationMethods property value. Represents the resource account key credentials registered to a user for authentication on shared devices.
+     * @param array<ResourceAccountKeyAuthenticationMethod>|null $value Value to set for the resourceAccountKeyAuthenticationMethods property.
+    */
+    public function setResourceAccountKeyAuthenticationMethods(?array $value): void {
+        $this->getBackingStore()->set('resourceAccountKeyAuthenticationMethods', $value);
     }
 
     /**

@@ -9,5 +9,6 @@ class SystemBrowserEnabledOn extends Enum {
     public const IOS = "ios";
     public const ANDROID = "android";
     public const MAC = "mac";
+    public const LINUX = "linux";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

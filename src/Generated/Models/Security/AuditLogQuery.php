@@ -45,6 +45,18 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
+     * Gets the approximateReturnedRecordCount property value. The approximate number of records retrieved by the query. This value can be higher or lower than recordCountLimit due to distributed counting. Read-only.
+     * @return int|null
+    */
+    public function getApproximateReturnedRecordCount(): ?int {
+        $val = $this->getBackingStore()->get('approximateReturnedRecordCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'approximateReturnedRecordCount'");
+    }
+
+    /**
      * Gets the displayName property value. The display name of the audit log query.
      * @return string|null
     */
@@ -71,6 +83,7 @@ class AuditLogQuery extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setAdministrativeUnitIdFilters($val);
             },
+            'approximateReturnedRecordCount' => fn(ParseNode $n) => $o->setApproximateReturnedRecordCount($n->getIntegerValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'filterEndDateTime' => fn(ParseNode $n) => $o->setFilterEndDateTime($n->getDateTimeValue()),
             'filterStartDateTime' => fn(ParseNode $n) => $o->setFilterStartDateTime($n->getDateTimeValue()),
@@ -82,6 +95,7 @@ class AuditLogQuery extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setIpAddressFilters($val);
             },
+            'isRecordCountLimitExceeded' => fn(ParseNode $n) => $o->setIsRecordCountLimitExceeded($n->getBooleanValue()),
             'keywordFilter' => fn(ParseNode $n) => $o->setKeywordFilter($n->getStringValue()),
             'objectIdFilters' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -99,6 +113,7 @@ class AuditLogQuery extends Entity implements Parsable
                 /** @var array<string>|null $val */
                 $this->setOperationFilters($val);
             },
+            'recordCountLimit' => fn(ParseNode $n) => $o->setRecordCountLimit($n->getIntegerValue()),
             'records' => fn(ParseNode $n) => $o->setRecords($n->getCollectionOfObjectValues([AuditLogRecord::class, 'createFromDiscriminatorValue'])),
             'recordTypeFilters' => fn(ParseNode $n) => $o->setRecordTypeFilters($n->getCollectionOfEnumValues(AuditLogRecordType::class)),
             'serviceFilters' => function (ParseNode $n) {
@@ -160,7 +175,19 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Gets the keywordFilter property value. The keyword to filter on.
+     * Gets the isRecordCountLimitExceeded property value. Indicates whether the query exceeded the per-search record-count limit. The default value is false. A value of true is authoritative and isn't derived from approximateReturnedRecordCount. Read-only.
+     * @return bool|null
+    */
+    public function getIsRecordCountLimitExceeded(): ?bool {
+        $val = $this->getBackingStore()->get('isRecordCountLimitExceeded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRecordCountLimitExceeded'");
+    }
+
+    /**
+     * Gets the keywordFilter property value. Free text to match against the non-indexed content of each record: the workload-specific properties inside auditData, including its AppAccessContext object. The indexed common-schema properties, such as the operation name, aren't matched by keyword; use their own filters, such as operationFilters, for those.
      * @return string|null
     */
     public function getKeywordFilter(): ?string {
@@ -197,6 +224,18 @@ class AuditLogQuery extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'operationFilters'");
+    }
+
+    /**
+     * Gets the recordCountLimit property value. The record-count threshold used to limit query result retrieval. Read-only.
+     * @return int|null
+    */
+    public function getRecordCountLimit(): ?int {
+        $val = $this->getBackingStore()->get('recordCountLimit');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recordCountLimit'");
     }
 
     /**
@@ -297,6 +336,14 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
+     * Sets the approximateReturnedRecordCount property value. The approximate number of records retrieved by the query. This value can be higher or lower than recordCountLimit due to distributed counting. Read-only.
+     * @param int|null $value Value to set for the approximateReturnedRecordCount property.
+    */
+    public function setApproximateReturnedRecordCount(?int $value): void {
+        $this->getBackingStore()->set('approximateReturnedRecordCount', $value);
+    }
+
+    /**
      * Sets the displayName property value. The display name of the audit log query.
      * @param string|null $value Value to set for the displayName property.
     */
@@ -329,7 +376,15 @@ class AuditLogQuery extends Entity implements Parsable
     }
 
     /**
-     * Sets the keywordFilter property value. The keyword to filter on.
+     * Sets the isRecordCountLimitExceeded property value. Indicates whether the query exceeded the per-search record-count limit. The default value is false. A value of true is authoritative and isn't derived from approximateReturnedRecordCount. Read-only.
+     * @param bool|null $value Value to set for the isRecordCountLimitExceeded property.
+    */
+    public function setIsRecordCountLimitExceeded(?bool $value): void {
+        $this->getBackingStore()->set('isRecordCountLimitExceeded', $value);
+    }
+
+    /**
+     * Sets the keywordFilter property value. Free text to match against the non-indexed content of each record: the workload-specific properties inside auditData, including its AppAccessContext object. The indexed common-schema properties, such as the operation name, aren't matched by keyword; use their own filters, such as operationFilters, for those.
      * @param string|null $value Value to set for the keywordFilter property.
     */
     public function setKeywordFilter(?string $value): void {
@@ -350,6 +405,14 @@ class AuditLogQuery extends Entity implements Parsable
     */
     public function setOperationFilters(?array $value): void {
         $this->getBackingStore()->set('operationFilters', $value);
+    }
+
+    /**
+     * Sets the recordCountLimit property value. The record-count threshold used to limit query result retrieval. Read-only.
+     * @param int|null $value Value to set for the recordCountLimit property.
+    */
+    public function setRecordCountLimit(?int $value): void {
+        $this->getBackingStore()->set('recordCountLimit', $value);
     }
 
     /**

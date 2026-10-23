@@ -64,6 +64,7 @@ class FileStorageContainerTypeRegistrationSettings implements AdditionalDataHold
         return  [
             'isDiscoverabilityEnabled' => fn(ParseNode $n) => $o->setIsDiscoverabilityEnabled($n->getBooleanValue()),
             'isItemVersioningEnabled' => fn(ParseNode $n) => $o->setIsItemVersioningEnabled($n->getBooleanValue()),
+            'isOfficeRestricted' => fn(ParseNode $n) => $o->setIsOfficeRestricted($n->getBooleanValue()),
             'isSearchEnabled' => fn(ParseNode $n) => $o->setIsSearchEnabled($n->getBooleanValue()),
             'isSharingRestricted' => fn(ParseNode $n) => $o->setIsSharingRestricted($n->getBooleanValue()),
             'itemMajorVersionLimit' => fn(ParseNode $n) => $o->setItemMajorVersionLimit($n->getIntegerValue()),
@@ -96,6 +97,18 @@ class FileStorageContainerTypeRegistrationSettings implements AdditionalDataHold
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isItemVersioningEnabled'");
+    }
+
+    /**
+     * Gets the isOfficeRestricted property value. Indicates whether Office apps (Word, Excel, and PowerPoint) for desktop and web are restricted for containers of this container type.
+     * @return bool|null
+    */
+    public function getIsOfficeRestricted(): ?bool {
+        $val = $this->getBackingStore()->get('isOfficeRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOfficeRestricted'");
     }
 
     /**
@@ -189,6 +202,7 @@ class FileStorageContainerTypeRegistrationSettings implements AdditionalDataHold
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isDiscoverabilityEnabled', $this->getIsDiscoverabilityEnabled());
         $writer->writeBooleanValue('isItemVersioningEnabled', $this->getIsItemVersioningEnabled());
+        $writer->writeBooleanValue('isOfficeRestricted', $this->getIsOfficeRestricted());
         $writer->writeBooleanValue('isSearchEnabled', $this->getIsSearchEnabled());
         $writer->writeBooleanValue('isSharingRestricted', $this->getIsSharingRestricted());
         $writer->writeIntegerValue('itemMajorVersionLimit', $this->getItemMajorVersionLimit());
@@ -229,6 +243,14 @@ class FileStorageContainerTypeRegistrationSettings implements AdditionalDataHold
     */
     public function setIsItemVersioningEnabled(?bool $value): void {
         $this->getBackingStore()->set('isItemVersioningEnabled', $value);
+    }
+
+    /**
+     * Sets the isOfficeRestricted property value. Indicates whether Office apps (Word, Excel, and PowerPoint) for desktop and web are restricted for containers of this container type.
+     * @param bool|null $value Value to set for the isOfficeRestricted property.
+    */
+    public function setIsOfficeRestricted(?bool $value): void {
+        $this->getBackingStore()->set('isOfficeRestricted', $value);
     }
 
     /**

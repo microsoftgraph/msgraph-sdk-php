@@ -37,7 +37,7 @@ class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration implement
     }
 
     /**
-     * Gets the targetUrl property value. The HTTP endpoint that a custom extension calls.
+     * Gets the targetUrl property value. The URL of the HTTP endpoint that Microsoft Entra ID calls for the custom extension.
      * @return string|null
     */
     public function getTargetUrl(): ?string {
@@ -58,7 +58,7 @@ class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration implement
     }
 
     /**
-     * Sets the targetUrl property value. The HTTP endpoint that a custom extension calls.
+     * Sets the targetUrl property value. The URL of the HTTP endpoint that Microsoft Entra ID calls for the custom extension.
      * @param string|null $value Value to set for the targetUrl property.
     */
     public function setTargetUrl(?string $value): void {

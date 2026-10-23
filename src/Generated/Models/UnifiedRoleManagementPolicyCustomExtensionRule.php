@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Gets the customAttributes property value. The customAttributes property
+     * Gets the customAttributes property value. The custom attributes associated with the policy rule. Read-only.
      * @return array<string>|null
     */
     public function getCustomAttributes(): ?array {
@@ -41,7 +41,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Gets the customExtensionId property value. The customExtensionId property
+     * Gets the customExtensionId property value. The unique identifier of the roleManagementCustomCalloutExtension associated with this rule.
      * @return string|null
     */
     public function getCustomExtensionId(): ?string {
@@ -53,7 +53,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the policy rule. Read-only.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -86,7 +86,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the custom extension rule is enabled.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -110,7 +110,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Sets the customAttributes property value. The customAttributes property
+     * Sets the customAttributes property value. The custom attributes associated with the policy rule. Read-only.
      * @param array<string>|null $value Value to set for the customAttributes property.
     */
     public function setCustomAttributes(?array $value): void {
@@ -118,7 +118,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Sets the customExtensionId property value. The customExtensionId property
+     * Sets the customExtensionId property value. The unique identifier of the roleManagementCustomCalloutExtension associated with this rule.
      * @param string|null $value Value to set for the customExtensionId property.
     */
     public function setCustomExtensionId(?string $value): void {
@@ -126,7 +126,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the policy rule. Read-only.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -134,7 +134,7 @@ class UnifiedRoleManagementPolicyCustomExtensionRule extends UnifiedRoleManageme
     }
 
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the custom extension rule is enabled.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {

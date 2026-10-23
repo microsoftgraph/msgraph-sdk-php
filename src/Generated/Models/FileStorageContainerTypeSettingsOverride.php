@@ -12,4 +12,5 @@ class FileStorageContainerTypeSettingsOverride extends Enum {
     public const ITEM_MAJOR_VERSION_LIMIT = "itemMajorVersionLimit";
     public const MAX_STORAGE_PER_CONTAINER_IN_BYTES = "maxStoragePerContainerInBytes";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const IS_OFFICE_RESTRICTED = "isOfficeRestricted";
 }
