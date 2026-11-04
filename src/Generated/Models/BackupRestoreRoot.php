@@ -143,6 +143,7 @@ class BackupRestoreRoot extends Entity implements Parsable
             'oneDriveForBusinessRestoreSessions' => fn(ParseNode $n) => $o->setOneDriveForBusinessRestoreSessions($n->getCollectionOfObjectValues([OneDriveForBusinessRestoreSession::class, 'createFromDiscriminatorValue'])),
             'protectionPolicies' => fn(ParseNode $n) => $o->setProtectionPolicies($n->getCollectionOfObjectValues([ProtectionPolicyBase::class, 'createFromDiscriminatorValue'])),
             'protectionUnits' => fn(ParseNode $n) => $o->setProtectionUnits($n->getCollectionOfObjectValues([ProtectionUnitBase::class, 'createFromDiscriminatorValue'])),
+            'reports' => fn(ParseNode $n) => $o->setReports($n->getObjectValue([BackupReport::class, 'createFromDiscriminatorValue'])),
             'restorePoints' => fn(ParseNode $n) => $o->setRestorePoints($n->getCollectionOfObjectValues([RestorePoint::class, 'createFromDiscriminatorValue'])),
             'restoreSessions' => fn(ParseNode $n) => $o->setRestoreSessions($n->getCollectionOfObjectValues([RestoreSessionBase::class, 'createFromDiscriminatorValue'])),
             'serviceApps' => fn(ParseNode $n) => $o->setServiceApps($n->getCollectionOfObjectValues([ServiceApp::class, 'createFromDiscriminatorValue'])),
@@ -266,6 +267,18 @@ class BackupRestoreRoot extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'protectionUnits'");
+    }
+
+    /**
+     * Gets the reports property value. The backup reports available in the tenant.
+     * @return BackupReport|null
+    */
+    public function getReports(): ?BackupReport {
+        $val = $this->getBackingStore()->get('reports');
+        if (is_null($val) || $val instanceof BackupReport) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reports'");
     }
 
     /**
@@ -427,6 +440,7 @@ class BackupRestoreRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('oneDriveForBusinessRestoreSessions', $this->getOneDriveForBusinessRestoreSessions());
         $writer->writeCollectionOfObjectValues('protectionPolicies', $this->getProtectionPolicies());
         $writer->writeCollectionOfObjectValues('protectionUnits', $this->getProtectionUnits());
+        $writer->writeObjectValue('reports', $this->getReports());
         $writer->writeCollectionOfObjectValues('restorePoints', $this->getRestorePoints());
         $writer->writeCollectionOfObjectValues('restoreSessions', $this->getRestoreSessions());
         $writer->writeCollectionOfObjectValues('serviceApps', $this->getServiceApps());
@@ -557,6 +571,14 @@ class BackupRestoreRoot extends Entity implements Parsable
     */
     public function setProtectionUnits(?array $value): void {
         $this->getBackingStore()->set('protectionUnits', $value);
+    }
+
+    /**
+     * Sets the reports property value. The backup reports available in the tenant.
+     * @param BackupReport|null $value Value to set for the reports property.
+    */
+    public function setReports(?BackupReport $value): void {
+        $this->getBackingStore()->set('reports', $value);
     }
 
     /**

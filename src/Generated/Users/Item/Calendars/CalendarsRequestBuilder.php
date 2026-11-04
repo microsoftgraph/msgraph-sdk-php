@@ -8,6 +8,7 @@ use Microsoft\Graph\Generated\Models\Calendar;
 use Microsoft\Graph\Generated\Models\CalendarCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Calendars\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Calendars\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Calendars\Item\CalendarItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,6 +25,13 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

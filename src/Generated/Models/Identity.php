@@ -44,6 +44,7 @@ class Identity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.communicationsGuestIdentity': return new CommunicationsGuestIdentity();
                 case '#microsoft.graph.communicationsPhoneIdentity': return new CommunicationsPhoneIdentity();
                 case '#microsoft.graph.communicationsUserIdentity': return new CommunicationsUserIdentity();
+                case '#microsoft.graph.copilotPackageRequestPrincipal': return new CopilotPackageRequestPrincipal();
                 case '#microsoft.graph.emailIdentity': return new EmailIdentity();
                 case '#microsoft.graph.initiator': return new Initiator();
                 case '#microsoft.graph.provisionedIdentity': return new ProvisionedIdentity();

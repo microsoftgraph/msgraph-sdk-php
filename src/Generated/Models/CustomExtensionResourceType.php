@@ -9,4 +9,6 @@ class CustomExtensionResourceType extends Enum {
     public const AZURE_RESOURCES = "azureResources";
     public const ENTRA_GROUPS = "entraGroups";
     public const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public const APPLICATION_AUTHORIZATION = "applicationAuthorization";
+    public const APP_ROLES = "appRoles";
 }

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\SolutionsRoot;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\BackupRestoreRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\Migrations\MigrationsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\VirtualEvents\VirtualEventsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -39,6 +40,13 @@ class SolutionsRequestBuilder extends BaseRequestBuilder
     */
     public function bookingCurrencies(): BookingCurrenciesRequestBuilder {
         return new BookingCurrenciesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the migrations property of the microsoft.graph.solutionsRoot entity.
+    */
+    public function migrations(): MigrationsRequestBuilder {
+        return new MigrationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

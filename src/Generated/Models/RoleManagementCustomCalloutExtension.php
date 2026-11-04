@@ -55,9 +55,22 @@ class RoleManagementCustomCalloutExtension extends CustomCalloutExtension implem
                 /** @var array<string>|null $val */
                 $this->setCustomAttributes($val);
             },
+            'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
             'resourceType' => fn(ParseNode $n) => $o->setResourceType($n->getEnumValue(CustomExtensionResourceType::class)),
             'type' => fn(ParseNode $n) => $o->setType($n->getEnumValue(CustomCalloutExtensionType::class)),
         ]);
+    }
+
+    /**
+     * Gets the isEnabled property value. When true, enables the custom extension. When false, disables it. Nullable.
+     * @return bool|null
+    */
+    public function getIsEnabled(): ?bool {
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -91,6 +104,7 @@ class RoleManagementCustomCalloutExtension extends CustomCalloutExtension implem
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfPrimitiveValues('customAttributes', $this->getCustomAttributes());
+        $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
         $writer->writeEnumValue('resourceType', $this->getResourceType());
         $writer->writeEnumValue('type', $this->getType());
     }
@@ -101,6 +115,14 @@ class RoleManagementCustomCalloutExtension extends CustomCalloutExtension implem
     */
     public function setCustomAttributes(?array $value): void {
         $this->getBackingStore()->set('customAttributes', $value);
+    }
+
+    /**
+     * Sets the isEnabled property value. When true, enables the custom extension. When false, disables it. Nullable.
+     * @param bool|null $value Value to set for the isEnabled property.
+    */
+    public function setIsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isEnabled', $value);
     }
 
     /**

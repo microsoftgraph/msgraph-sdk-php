@@ -187,6 +187,7 @@ class TodoTask extends Entity implements Parsable
             'linkedResources' => fn(ParseNode $n) => $o->setLinkedResources($n->getCollectionOfObjectValues([LinkedResource::class, 'createFromDiscriminatorValue'])),
             'recurrence' => fn(ParseNode $n) => $o->setRecurrence($n->getObjectValue([PatternedRecurrence::class, 'createFromDiscriminatorValue'])),
             'reminderDateTime' => fn(ParseNode $n) => $o->setReminderDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
+            'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(TaskStatus::class)),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
@@ -280,6 +281,20 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
+     * Gets the singleValueExtendedProperties property value. A collection of custom fields linked to the task.
+     * @return array<SingleValueExtendedProperty>|null
+    */
+    public function getSingleValueExtendedProperties(): ?array {
+        $val = $this->getBackingStore()->get('singleValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SingleValueExtendedProperty::class);
+            /** @var array<SingleValueExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleValueExtendedProperties'");
+    }
+
+    /**
      * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @return DateTimeTimeZone|null
     */
@@ -338,6 +353,7 @@ class TodoTask extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('linkedResources', $this->getLinkedResources());
         $writer->writeObjectValue('recurrence', $this->getRecurrence());
         $writer->writeObjectValue('reminderDateTime', $this->getReminderDateTime());
+        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
         $writer->writeObjectValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('status', $this->getStatus());
         $writer->writeStringValue('title', $this->getTitle());
@@ -477,6 +493,14 @@ class TodoTask extends Entity implements Parsable
     */
     public function setReminderDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('reminderDateTime', $value);
+    }
+
+    /**
+     * Sets the singleValueExtendedProperties property value. A collection of custom fields linked to the task.
+     * @param array<SingleValueExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+    */
+    public function setSingleValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('singleValueExtendedProperties', $value);
     }
 
     /**

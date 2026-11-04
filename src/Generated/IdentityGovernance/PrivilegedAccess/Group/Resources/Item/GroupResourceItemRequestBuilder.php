@@ -45,10 +45,11 @@ class GroupResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from identityGovernance
+     * Read the properties and relationships of a groupResource object.
      * @param GroupResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupResource|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/groupresource-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?GroupResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,7 +93,7 @@ class GroupResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from identityGovernance
+     * Read the properties and relationships of a groupResource object.
      * @param GroupResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -138,7 +138,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. Additional parameters that control how the request is processed, such as bypassing the approval requirement configured on the access package policy.
      * @return AccessPackageAssignmentRequestParameters|null
     */
     public function getParameters(): ?AccessPackageAssignmentRequestParameters {
@@ -287,7 +287,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. Additional parameters that control how the request is processed, such as bypassing the approval requirement configured on the access package policy.
      * @param AccessPackageAssignmentRequestParameters|null $value Value to set for the parameters property.
     */
     public function setParameters(?AccessPackageAssignmentRequestParameters $value): void {

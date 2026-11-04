@@ -173,6 +173,7 @@ class Calendar extends Entity implements Parsable
             'hexColor' => fn(ParseNode $n) => $o->setHexColor($n->getStringValue()),
             'isDefaultCalendar' => fn(ParseNode $n) => $o->setIsDefaultCalendar($n->getBooleanValue()),
             'isRemovable' => fn(ParseNode $n) => $o->setIsRemovable($n->getBooleanValue()),
+            'isSharedWithMe' => fn(ParseNode $n) => $o->setIsSharedWithMe($n->getBooleanValue()),
             'isTallyingResponses' => fn(ParseNode $n) => $o->setIsTallyingResponses($n->getBooleanValue()),
             'multiValueExtendedProperties' => fn(ParseNode $n) => $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues([MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
@@ -215,6 +216,18 @@ class Calendar extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isRemovable'");
+    }
+
+    /**
+     * Gets the isSharedWithMe property value. true if someone shared this calendar with the user; false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client and can be reset when sharing is canceled through the client or the corresponding calendarPermission resource. Read-only.
+     * @return bool|null
+    */
+    public function getIsSharedWithMe(): ?bool {
+        $val = $this->getBackingStore()->get('isSharedWithMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSharedWithMe'");
     }
 
     /**
@@ -300,6 +313,7 @@ class Calendar extends Entity implements Parsable
         $writer->writeStringValue('hexColor', $this->getHexColor());
         $writer->writeBooleanValue('isDefaultCalendar', $this->getIsDefaultCalendar());
         $writer->writeBooleanValue('isRemovable', $this->getIsRemovable());
+        $writer->writeBooleanValue('isSharedWithMe', $this->getIsSharedWithMe());
         $writer->writeBooleanValue('isTallyingResponses', $this->getIsTallyingResponses());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
         $writer->writeStringValue('name', $this->getName());
@@ -409,6 +423,14 @@ class Calendar extends Entity implements Parsable
     */
     public function setIsRemovable(?bool $value): void {
         $this->getBackingStore()->set('isRemovable', $value);
+    }
+
+    /**
+     * Sets the isSharedWithMe property value. true if someone shared this calendar with the user; false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client and can be reset when sharing is canceled through the client or the corresponding calendarPermission resource. Read-only.
+     * @param bool|null $value Value to set for the isSharedWithMe property.
+    */
+    public function setIsSharedWithMe(?bool $value): void {
+        $this->getBackingStore()->set('isSharedWithMe', $value);
     }
 
     /**

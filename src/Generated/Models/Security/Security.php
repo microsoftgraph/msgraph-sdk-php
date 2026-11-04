@@ -137,6 +137,7 @@ class Security extends Entity implements Parsable
             'identities' => fn(ParseNode $n) => $o->setIdentities($n->getObjectValue([IdentityContainer::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'labels' => fn(ParseNode $n) => $o->setLabels($n->getObjectValue([LabelsRoot::class, 'createFromDiscriminatorValue'])),
+            'rules' => fn(ParseNode $n) => $o->setRules($n->getObjectValue([RulesRoot::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
             'subjectRightsRequests' => fn(ParseNode $n) => $o->setSubjectRightsRequests($n->getCollectionOfObjectValues([SubjectRightsRequest::class, 'createFromDiscriminatorValue'])),
@@ -182,6 +183,18 @@ class Security extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'labels'");
+    }
+
+    /**
+     * Gets the rules property value. Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
+     * @return RulesRoot|null
+    */
+    public function getRules(): ?RulesRoot {
+        $val = $this->getBackingStore()->get('rules');
+        if (is_null($val) || $val instanceof RulesRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rules'");
     }
 
     /**
@@ -278,6 +291,7 @@ class Security extends Entity implements Parsable
         $writer->writeObjectValue('identities', $this->getIdentities());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeObjectValue('labels', $this->getLabels());
+        $writer->writeObjectValue('rules', $this->getRules());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
         $writer->writeCollectionOfObjectValues('subjectRightsRequests', $this->getSubjectRightsRequests());
@@ -364,6 +378,14 @@ class Security extends Entity implements Parsable
     */
     public function setLabels(?LabelsRoot $value): void {
         $this->getBackingStore()->set('labels', $value);
+    }
+
+    /**
+     * Sets the rules property value. Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
+     * @param RulesRoot|null $value Value to set for the rules property.
+    */
+    public function setRules(?RulesRoot $value): void {
+        $this->getBackingStore()->set('rules', $value);
     }
 
     /**

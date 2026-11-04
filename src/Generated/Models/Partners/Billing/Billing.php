@@ -27,12 +27,25 @@ class Billing extends Entity implements Parsable
     }
 
     /**
+     * Gets the aggregatedUsage property value. The aggregatedUsage property
+     * @return AzureAggregatedUsage|null
+    */
+    public function getAggregatedUsage(): ?AzureAggregatedUsage {
+        $val = $this->getBackingStore()->get('aggregatedUsage');
+        if (is_null($val) || $val instanceof AzureAggregatedUsage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'aggregatedUsage'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'aggregatedUsage' => fn(ParseNode $n) => $o->setAggregatedUsage($n->getObjectValue([AzureAggregatedUsage::class, 'createFromDiscriminatorValue'])),
             'manifests' => fn(ParseNode $n) => $o->setManifests($n->getCollectionOfObjectValues([Manifest::class, 'createFromDiscriminatorValue'])),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([Operation::class, 'createFromDiscriminatorValue'])),
             'reconciliation' => fn(ParseNode $n) => $o->setReconciliation($n->getObjectValue([BillingReconciliation::class, 'createFromDiscriminatorValue'])),
@@ -98,10 +111,19 @@ class Billing extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('aggregatedUsage', $this->getAggregatedUsage());
         $writer->writeCollectionOfObjectValues('manifests', $this->getManifests());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeObjectValue('reconciliation', $this->getReconciliation());
         $writer->writeObjectValue('usage', $this->getUsage());
+    }
+
+    /**
+     * Sets the aggregatedUsage property value. The aggregatedUsage property
+     * @param AzureAggregatedUsage|null $value Value to set for the aggregatedUsage property.
+    */
+    public function setAggregatedUsage(?AzureAggregatedUsage $value): void {
+        $this->getBackingStore()->set('aggregatedUsage', $value);
     }
 
     /**

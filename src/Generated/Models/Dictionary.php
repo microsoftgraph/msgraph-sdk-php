@@ -39,6 +39,7 @@ class Dictionary implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.fileStorageContainerCustomPropertyDictionary': return new FileStorageContainerCustomPropertyDictionary();
                 case '#microsoft.graph.openComplexDictionaryType': return new OpenComplexDictionaryType();
                 case '#microsoft.graph.resultTemplateDictionary': return new ResultTemplateDictionary();
+                case '#microsoft.graph.stringDictionary': return new StringDictionary();
             }
         }
         return new Dictionary();

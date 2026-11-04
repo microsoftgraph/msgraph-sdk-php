@@ -52,6 +52,20 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
+     * Gets the engagements property value. The list of real-time participant interaction behaviors during a meeting.
+     * @return array<MeetingEngagement>|null
+    */
+    public function getEngagements(): ?array {
+        $val = $this->getBackingStore()->get('engagements');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MeetingEngagement::class);
+            /** @var array<MeetingEngagement>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'engagements'");
+    }
+
+    /**
      * Gets the externalRegistrationInformation property value. The external information for a virtualEventRegistration.
      * @return VirtualEventExternalRegistrationInformation|null
     */
@@ -72,6 +86,7 @@ class AttendanceRecord extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'attendanceIntervals' => fn(ParseNode $n) => $o->setAttendanceIntervals($n->getCollectionOfObjectValues([AttendanceInterval::class, 'createFromDiscriminatorValue'])),
             'emailAddress' => fn(ParseNode $n) => $o->setEmailAddress($n->getStringValue()),
+            'engagements' => fn(ParseNode $n) => $o->setEngagements($n->getCollectionOfObjectValues([MeetingEngagement::class, 'createFromDiscriminatorValue'])),
             'externalRegistrationInformation' => fn(ParseNode $n) => $o->setExternalRegistrationInformation($n->getObjectValue([VirtualEventExternalRegistrationInformation::class, 'createFromDiscriminatorValue'])),
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([Identity::class, 'createFromDiscriminatorValue'])),
             'registrationId' => fn(ParseNode $n) => $o->setRegistrationId($n->getStringValue()),
@@ -136,6 +151,7 @@ class AttendanceRecord extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('attendanceIntervals', $this->getAttendanceIntervals());
         $writer->writeStringValue('emailAddress', $this->getEmailAddress());
+        $writer->writeCollectionOfObjectValues('engagements', $this->getEngagements());
         $writer->writeObjectValue('externalRegistrationInformation', $this->getExternalRegistrationInformation());
         $writer->writeObjectValue('identity', $this->getIdentity());
         $writer->writeStringValue('registrationId', $this->getRegistrationId());
@@ -157,6 +173,14 @@ class AttendanceRecord extends Entity implements Parsable
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
+    }
+
+    /**
+     * Sets the engagements property value. The list of real-time participant interaction behaviors during a meeting.
+     * @param array<MeetingEngagement>|null $value Value to set for the engagements property.
+    */
+    public function setEngagements(?array $value): void {
+        $this->getBackingStore()->set('engagements', $value);
     }
 
     /**

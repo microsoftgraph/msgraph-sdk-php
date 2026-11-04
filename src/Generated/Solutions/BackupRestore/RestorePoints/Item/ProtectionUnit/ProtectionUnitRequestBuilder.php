@@ -31,7 +31,7 @@ class ProtectionUnitRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @param ProtectionUnitRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<ProtectionUnitBase|null>
      * @throws Exception
@@ -45,7 +45,7 @@ class ProtectionUnitRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The site, drive, or mailbox units that are protected under a protection policy.
+     * The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @param ProtectionUnitRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

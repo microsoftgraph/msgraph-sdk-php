@@ -74,7 +74,7 @@ class RelatedTenantsRefreshStatus implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the isFirstRefresh property value. The isFirstRefresh property
+     * Gets the isFirstRefresh property value. Indicates whether the operation is the first refresh of the related tenants list.
      * @return bool|null
     */
     public function getIsFirstRefresh(): ?bool {
@@ -86,7 +86,7 @@ class RelatedTenantsRefreshStatus implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the mostRecentRefreshDateTime property value. The mostRecentRefreshDateTime property
+     * Gets the mostRecentRefreshDateTime property value. The date and time of the most recent refresh operation. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getMostRecentRefreshDateTime(): ?DateTime {
@@ -98,7 +98,7 @@ class RelatedTenantsRefreshStatus implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
+     * Gets the mostRecentRefreshRequestStatus property value. The status of the most recent refresh operation.
      * @return string|null
     */
     public function getMostRecentRefreshRequestStatus(): ?string {
@@ -150,7 +150,7 @@ class RelatedTenantsRefreshStatus implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the isFirstRefresh property value. The isFirstRefresh property
+     * Sets the isFirstRefresh property value. Indicates whether the operation is the first refresh of the related tenants list.
      * @param bool|null $value Value to set for the isFirstRefresh property.
     */
     public function setIsFirstRefresh(?bool $value): void {
@@ -158,7 +158,7 @@ class RelatedTenantsRefreshStatus implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the mostRecentRefreshDateTime property value. The mostRecentRefreshDateTime property
+     * Sets the mostRecentRefreshDateTime property value. The date and time of the most recent refresh operation. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the mostRecentRefreshDateTime property.
     */
     public function setMostRecentRefreshDateTime(?DateTime $value): void {
@@ -166,7 +166,7 @@ class RelatedTenantsRefreshStatus implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
+     * Sets the mostRecentRefreshRequestStatus property value. The status of the most recent refresh operation.
      * @param string|null $value Value to set for the mostRecentRefreshRequestStatus property.
     */
     public function setMostRecentRefreshRequestStatus(?string $value): void {

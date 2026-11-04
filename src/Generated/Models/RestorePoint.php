@@ -64,7 +64,7 @@ class RestorePoint extends Entity implements Parsable
     }
 
     /**
-     * Gets the protectionUnit property value. The site, drive, or mailbox units that are protected under a protection policy.
+     * Gets the protectionUnit property value. The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @return ProtectionUnitBase|null
     */
     public function getProtectionUnit(): ?ProtectionUnitBase {
@@ -116,7 +116,7 @@ class RestorePoint extends Entity implements Parsable
     }
 
     /**
-     * Sets the protectionUnit property value. The site, drive, or mailbox units that are protected under a protection policy.
+     * Sets the protectionUnit property value. The site, drive, or mailbox unit protected under a protection policy. Supports $expand and $filter on protectionUnit/policyId using the eq operator.
      * @param ProtectionUnitBase|null $value Value to set for the protectionUnit property.
     */
     public function setProtectionUnit(?ProtectionUnitBase $value): void {

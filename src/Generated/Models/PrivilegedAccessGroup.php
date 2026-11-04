@@ -142,7 +142,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. The groups managed through PIM for groups.
      * @return array<GroupResource>|null
     */
     public function getResources(): ?array {
@@ -228,7 +228,7 @@ class PrivilegedAccessGroup extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. The groups managed through PIM for groups.
      * @param array<GroupResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {
