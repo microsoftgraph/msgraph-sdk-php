@@ -38,6 +38,18 @@ class SensitivityLabel extends Entity implements Parsable
     }
 
     /**
+     * Gets the applicationMode property value. The applicationMode property
+     * @return ApplicationMode|null
+    */
+    public function getApplicationMode(): ?ApplicationMode {
+        $val = $this->getBackingStore()->get('applicationMode');
+        if (is_null($val) || $val instanceof ApplicationMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationMode'");
+    }
+
+    /**
      * Gets the autoTooltip property value. The autoTooltip property
      * @return string|null
     */
@@ -81,6 +93,7 @@ class SensitivityLabel extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'actionSource' => fn(ParseNode $n) => $o->setActionSource($n->getEnumValue(LabelActionSource::class)),
+            'applicationMode' => fn(ParseNode $n) => $o->setApplicationMode($n->getEnumValue(ApplicationMode::class)),
             'autoTooltip' => fn(ParseNode $n) => $o->setAutoTooltip($n->getStringValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
@@ -226,6 +239,7 @@ class SensitivityLabel extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeEnumValue('actionSource', $this->getActionSource());
+        $writer->writeEnumValue('applicationMode', $this->getApplicationMode());
         $writer->writeStringValue('autoTooltip', $this->getAutoTooltip());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
@@ -247,6 +261,14 @@ class SensitivityLabel extends Entity implements Parsable
     */
     public function setActionSource(?LabelActionSource $value): void {
         $this->getBackingStore()->set('actionSource', $value);
+    }
+
+    /**
+     * Sets the applicationMode property value. The applicationMode property
+     * @param ApplicationMode|null $value Value to set for the applicationMode property.
+    */
+    public function setApplicationMode(?ApplicationMode $value): void {
+        $this->getBackingStore()->set('applicationMode', $value);
     }
 
     /**

@@ -31,10 +31,11 @@ class RefreshStatusRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function refreshStatus
+     * Get the status of the most recent related tenants refresh operation.
      * @param RefreshStatusRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RelatedTenantsRefreshStatus|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/tenantgovernanceservices-relatedtenant-refreshstatus?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefreshStatusRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -45,7 +46,7 @@ class RefreshStatusRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function refreshStatus
+     * Get the status of the most recent related tenants refresh operation.
      * @param RefreshStatusRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

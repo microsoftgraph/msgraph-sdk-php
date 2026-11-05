@@ -31,7 +31,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. You can also provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param SearchPostRequestBody $body The request body
      * @param SearchRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<RestorePointSearchResponse|null>
@@ -47,7 +47,7 @@ class SearchRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. You can also provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param SearchPostRequestBody $body The request body
      * @param SearchRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

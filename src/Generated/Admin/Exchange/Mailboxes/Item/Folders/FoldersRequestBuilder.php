@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Item\MailboxFolderItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\MailboxFolder;
 use Microsoft\Graph\Generated\Models\MailboxFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -74,6 +75,22 @@ class FoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Create a new mailboxFolder or child mailboxFolder in a user's mailbox.
+     * @param MailboxFolder $body The request body
+     * @param FoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<MailboxFolder|null>
+     * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/mailbox-post-folders?view=graph-rest-1.0 Find more info here
+    */
+    public function post(MailboxFolder $body, ?FoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [MailboxFolder::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
      * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
      * @param FoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -91,6 +108,26 @@ class FoldersRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
+        return $requestInfo;
+    }
+
+    /**
+     * Create a new mailboxFolder or child mailboxFolder in a user's mailbox.
+     * @param MailboxFolder $body The request body
+     * @param FoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPostRequestInformation(MailboxFolder $body, ?FoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::POST;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

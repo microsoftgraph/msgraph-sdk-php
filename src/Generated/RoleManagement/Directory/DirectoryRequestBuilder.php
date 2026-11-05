@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RbacApplication;
+use Microsoft\Graph\Generated\RoleManagement\Directory\DeletedItems\DeletedItemsRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\ResourceNamespacesRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\RoleAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\RoleAssignmentScheduleInstancesRequestBuilder;
@@ -25,6 +26,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class DirectoryRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.rbacApplication entity.
+    */
+    public function deletedItems(): DeletedItemsRequestBuilder {
+        return new DeletedItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
     */

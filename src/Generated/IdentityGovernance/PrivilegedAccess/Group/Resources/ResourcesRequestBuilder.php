@@ -52,10 +52,11 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from identityGovernance
+     * Get a list of the groupResource objects and their properties.
      * @param ResourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<GroupResourceCollectionResponse|null>
      * @throws Exception
+     * @link https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-resources?view=graph-rest-1.0 Find more info here
     */
     public function get(?ResourcesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,7 +82,7 @@ class ResourcesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from identityGovernance
+     * Get a list of the groupResource objects and their properties.
      * @param ResourcesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -17,6 +17,7 @@ use Microsoft\Graph\Generated\Security\Identities\IdentitiesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Labels\LabelsRequestBuilder;
 use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
+use Microsoft\Graph\Generated\Security\Rules\RulesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
 use Microsoft\Graph\Generated\Security\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
@@ -108,6 +109,13 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     */
     public function microsoftGraphSecurityRunHuntingQuery(): MicrosoftGraphSecurityRunHuntingQueryRequestBuilder {
         return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the rules property of the microsoft.graph.security entity.
+    */
+    public function rules(): RulesRequestBuilder {
+        return new RulesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

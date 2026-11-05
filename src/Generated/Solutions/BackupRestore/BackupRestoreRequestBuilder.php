@@ -22,6 +22,7 @@ use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessProtect
 use Microsoft\Graph\Generated\Solutions\BackupRestore\OneDriveForBusinessRestoreSessions\OneDriveForBusinessRestoreSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionPolicies\ProtectionPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ProtectionUnits\ProtectionUnitsRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BackupRestore\Reports\ReportsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\RestorePoints\RestorePointsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\RestoreSessions\RestoreSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BackupRestore\ServiceApps\ServiceAppsRequestBuilder;
@@ -151,6 +152,13 @@ class BackupRestoreRequestBuilder extends BaseRequestBuilder
     */
     public function protectionUnits(): ProtectionUnitsRequestBuilder {
         return new ProtectionUnitsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the reports property of the microsoft.graph.backupRestoreRoot entity.
+    */
+    public function reports(): ReportsRequestBuilder {
+        return new ReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

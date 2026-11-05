@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -129,6 +130,7 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'sensitivityLabels' => fn(ParseNode $n) => $o->setSensitivityLabels($n->getCollectionOfObjectValues([CurrentLabel::class, 'createFromDiscriminatorValue'])),
             'sequenceNumber' => fn(ParseNode $n) => $o->setSequenceNumber($n->getIntegerValue()),
         ];
     }
@@ -206,6 +208,20 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
+     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * @return array<CurrentLabel>|null
+    */
+    public function getSensitivityLabels(): ?array {
+        $val = $this->getBackingStore()->get('sensitivityLabels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CurrentLabel::class);
+            /** @var array<CurrentLabel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sensitivityLabels'");
+    }
+
+    /**
      * Gets the sequenceNumber property value. A sequence number indicating the order in which content was generated or should be processed, required when correlationId is used.
      * @return int|null
     */
@@ -232,6 +248,7 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
         $writer->writeStringValue('name', $this->getName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('sensitivityLabels', $this->getSensitivityLabels());
         $writer->writeIntegerValue('sequenceNumber', $this->getSequenceNumber());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -330,6 +347,14 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * @param array<CurrentLabel>|null $value Value to set for the sensitivityLabels property.
+    */
+    public function setSensitivityLabels(?array $value): void {
+        $this->getBackingStore()->set('sensitivityLabels', $value);
     }
 
     /**

@@ -39,6 +39,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
                 case '#microsoft.graph.security.a365AiExecuteTool': return new A365AiExecuteTool();
+                case '#microsoft.graph.security.a365AiGuardrail': return new A365AiGuardrail();
                 case '#microsoft.graph.security.a365AiInferenceCall': return new A365AiInferenceCall();
                 case '#microsoft.graph.security.a365AiInvokeAgent': return new A365AiInvokeAgent();
                 case '#microsoft.graph.security.a365AiRunSummary': return new A365AiRunSummary();
@@ -49,6 +50,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.agentSettingAdminActivity': return new AgentSettingAdminActivity();
                 case '#microsoft.graph.security.aiAppInteractionAuditRecord': return new AiAppInteractionAuditRecord();
                 case '#microsoft.graph.security.aiExecuteToolAuditRecord': return new AiExecuteToolAuditRecord();
+                case '#microsoft.graph.security.aiGuardrail': return new AiGuardrail();
                 case '#microsoft.graph.security.aiInteractionsChangeNotificationAuditRecord': return new AiInteractionsChangeNotificationAuditRecord();
                 case '#microsoft.graph.security.aiInteractionsExportAuditRecord': return new AiInteractionsExportAuditRecord();
                 case '#microsoft.graph.security.aiInteractionsSubscriptionAuditRecord': return new AiInteractionsSubscriptionAuditRecord();
@@ -87,6 +89,9 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.cdpLogRecord': return new CdpLogRecord();
                 case '#microsoft.graph.security.cdpOcrBillingRecord': return new CdpOcrBillingRecord();
                 case '#microsoft.graph.security.cdpResourceScopeChangeEventRecord': return new CdpResourceScopeChangeEventRecord();
+                case '#microsoft.graph.security.cloudSecurityConnector': return new CloudSecurityConnector();
+                case '#microsoft.graph.security.cloudSecurityEnablement': return new CloudSecurityEnablement();
+                case '#microsoft.graph.security.cloudSecurityManagement': return new CloudSecurityManagement();
                 case '#microsoft.graph.security.cloudUpdateDeviceConfigAuditRecord': return new CloudUpdateDeviceConfigAuditRecord();
                 case '#microsoft.graph.security.cloudUpdateProfileConfigAuditRecord': return new CloudUpdateProfileConfigAuditRecord();
                 case '#microsoft.graph.security.cloudUpdateTenantConfigAuditRecord': return new CloudUpdateTenantConfigAuditRecord();
@@ -106,6 +111,8 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.complianceDLPSharePointClassificationAuditRecord': return new ComplianceDLPSharePointClassificationAuditRecord();
                 case '#microsoft.graph.security.complianceDLPSharePointClassificationCdpRecord': return new ComplianceDLPSharePointClassificationCdpRecord();
                 case '#microsoft.graph.security.complianceDLPSharePointClassificationExtendedAuditRecord': return new ComplianceDLPSharePointClassificationExtendedAuditRecord();
+                case '#microsoft.graph.security.complianceEndpointEvaluationIncomplete': return new ComplianceEndpointEvaluationIncomplete();
+                case '#microsoft.graph.security.complianceEvaluationIncomplete': return new ComplianceEvaluationIncomplete();
                 case '#microsoft.graph.security.complianceExchangeOcrAuditRecord': return new ComplianceExchangeOcrAuditRecord();
                 case '#microsoft.graph.security.complianceManagerActionRecord': return new ComplianceManagerActionRecord();
                 case '#microsoft.graph.security.compliancePolicyGradingSharePointAuditRecord': return new CompliancePolicyGradingSharePointAuditRecord();
@@ -129,6 +136,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.criticalAssetManagementClassificationRecord': return new CriticalAssetManagementClassificationRecord();
                 case '#microsoft.graph.security.crmEntityOperationAuditRecord': return new CrmEntityOperationAuditRecord();
                 case '#microsoft.graph.security.crossTenantAccessPolicyAuditRecord': return new CrossTenantAccessPolicyAuditRecord();
+                case '#microsoft.graph.security.cscContentMetadata': return new CscContentMetadata();
                 case '#microsoft.graph.security.customerKeyServiceEncryptionAuditRecord': return new CustomerKeyServiceEncryptionAuditRecord();
                 case '#microsoft.graph.security.dataCenterSecurityCmdletAuditRecord': return new DataCenterSecurityCmdletAuditRecord();
                 case '#microsoft.graph.security.dataGovernanceAuditRecord': return new DataGovernanceAuditRecord();
@@ -137,7 +145,10 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.dataSecurityInvestigationAuditRecord': return new DataSecurityInvestigationAuditRecord();
                 case '#microsoft.graph.security.dataShareOperationAuditRecord': return new DataShareOperationAuditRecord();
                 case '#microsoft.graph.security.defaultAuditData': return new DefaultAuditData();
+                case '#microsoft.graph.security.defenderAutomationRule': return new DefenderAutomationRule();
                 case '#microsoft.graph.security.defenderCaseManagementAuditRecord': return new DefenderCaseManagementAuditRecord();
+                case '#microsoft.graph.security.defenderGeneratedPlaybook': return new DefenderGeneratedPlaybook();
+                case '#microsoft.graph.security.defenderIntegration': return new DefenderIntegration();
                 case '#microsoft.graph.security.defenderPreviewFeaturesRecord': return new DefenderPreviewFeaturesRecord();
                 case '#microsoft.graph.security.defenderSecurityForAIConfigurationAuditRecord': return new DefenderSecurityForAIConfigurationAuditRecord();
                 case '#microsoft.graph.security.deployFeatureActivityRecord': return new DeployFeatureActivityRecord();
@@ -152,7 +163,9 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.dragonCopilotAdminRecord': return new DragonCopilotAdminRecord();
                 case '#microsoft.graph.security.dragonCopilotClinicalDataRecord': return new DragonCopilotClinicalDataRecord();
                 case '#microsoft.graph.security.dragonCopilotSessionRecord': return new DragonCopilotSessionRecord();
+                case '#microsoft.graph.security.dspmAdminActivity': return new DspmAdminActivity();
                 case '#microsoft.graph.security.dynamics365BusinessCentralAuditRecord': return new Dynamics365BusinessCentralAuditRecord();
+                case '#microsoft.graph.security.ecsContentMetadata': return new EcsContentMetadata();
                 case '#microsoft.graph.security.ehrConnectorAuditBaseRecord': return new EhrConnectorAuditBaseRecord();
                 case '#microsoft.graph.security.eopSubmissionFeedEntityAuditRecord': return new EopSubmissionFeedEntityAuditRecord();
                 case '#microsoft.graph.security.exchangeAdminAuditRecord': return new ExchangeAdminAuditRecord();
@@ -162,6 +175,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.exchangeMailboxAuditRecord': return new ExchangeMailboxAuditRecord();
                 case '#microsoft.graph.security.fabricAuditRecord': return new FabricAuditRecord();
                 case '#microsoft.graph.security.fabricPolicyRecord': return new FabricPolicyRecord();
+                case '#microsoft.graph.security.filteringTeamsMessageFileInfo': return new FilteringTeamsMessageFileInfo();
                 case '#microsoft.graph.security.healthcareSignalRecord': return new HealthcareSignalRecord();
                 case '#microsoft.graph.security.hostedRpaAuditRecord': return new HostedRpaAuditRecord();
                 case '#microsoft.graph.security.hrSignalAuditRecord': return new HrSignalAuditRecord();
@@ -190,6 +204,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.mapgPolicyAuditRecord': return new MapgPolicyAuditRecord();
                 case '#microsoft.graph.security.mapgRemediationAuditRecord': return new MapgRemediationAuditRecord();
                 case '#microsoft.graph.security.mcasAlertsAuditRecord': return new McasAlertsAuditRecord();
+                case '#microsoft.graph.security.mcsRawEmailContentMetadata': return new McsRawEmailContentMetadata();
                 case '#microsoft.graph.security.mdaAuditRecord': return new MdaAuditRecord();
                 case '#microsoft.graph.security.mdaDataSecuritySignalRecord': return new MdaDataSecuritySignalRecord();
                 case '#microsoft.graph.security.mDASHAuditRecord': return new MDASHAuditRecord();
@@ -197,6 +212,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.mdcEventsRecord': return new MdcEventsRecord();
                 case '#microsoft.graph.security.mdiAuditRecord': return new MdiAuditRecord();
                 case '#microsoft.graph.security.meshWorldsAuditRecord': return new MeshWorldsAuditRecord();
+                case '#microsoft.graph.security.mesRawEmailContentMetadata': return new MesRawEmailContentMetadata();
                 case '#microsoft.graph.security.microsoft365BackupBackupItemAuditRecord': return new Microsoft365BackupBackupItemAuditRecord();
                 case '#microsoft.graph.security.microsoft365BackupBackupPolicyAuditRecord': return new Microsoft365BackupBackupPolicyAuditRecord();
                 case '#microsoft.graph.security.microsoft365BackupGranularBrowseTaskAuditRecord': return new Microsoft365BackupGranularBrowseTaskAuditRecord();
@@ -214,11 +230,14 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.microsoftPurviewPolicyOperationRecord': return new MicrosoftPurviewPolicyOperationRecord();
                 case '#microsoft.graph.security.microsoftPurviewPrivacyAuditEvent': return new MicrosoftPurviewPrivacyAuditEvent();
                 case '#microsoft.graph.security.microsoftPurviewUnifiedCatalogOperationRecord': return new MicrosoftPurviewUnifiedCatalogOperationRecord();
+                case '#microsoft.graph.security.microsoftSecurityForAiConfiguration': return new MicrosoftSecurityForAiConfiguration();
+                case '#microsoft.graph.security.microsoftSecurityForAiRealTimeProtection': return new MicrosoftSecurityForAiRealTimeProtection();
                 case '#microsoft.graph.security.microsoftStreamAuditRecord': return new MicrosoftStreamAuditRecord();
                 case '#microsoft.graph.security.microsoftTeamsAdminAuditRecord': return new MicrosoftTeamsAdminAuditRecord();
                 case '#microsoft.graph.security.microsoftTeamsAnalyticsAuditRecord': return new MicrosoftTeamsAnalyticsAuditRecord();
                 case '#microsoft.graph.security.microsoftTeamsAuditRecord': return new MicrosoftTeamsAuditRecord();
                 case '#microsoft.graph.security.microsoftTeamsDeviceAuditRecord': return new MicrosoftTeamsDeviceAuditRecord();
+                case '#microsoft.graph.security.microsoftTeamsMoveMessages': return new MicrosoftTeamsMoveMessages();
                 case '#microsoft.graph.security.microsoftTeamsRetentionLabelActionAuditRecord': return new MicrosoftTeamsRetentionLabelActionAuditRecord();
                 case '#microsoft.graph.security.microsoftTeamsSensitivityLabelActionAuditRecord': return new MicrosoftTeamsSensitivityLabelActionAuditRecord();
                 case '#microsoft.graph.security.microsoftTeamsShiftsAuditRecord': return new MicrosoftTeamsShiftsAuditRecord();
@@ -245,11 +264,13 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.msdeRolesSettingsAuditRecord': return new MsdeRolesSettingsAuditRecord();
                 case '#microsoft.graph.security.mspVectorSearchContentMetadataAuditRecord': return new MspVectorSearchContentMetadataAuditRecord();
                 case '#microsoft.graph.security.msticNationStateNotificationRecord': return new MsticNationStateNotificationRecord();
+                case '#microsoft.graph.security.mtpContentMetadata': return new MtpContentMetadata();
                 case '#microsoft.graph.security.multiStageDispositionAuditRecord': return new MultiStageDispositionAuditRecord();
                 case '#microsoft.graph.security.myAnalyticsSettingsAuditRecord': return new MyAnalyticsSettingsAuditRecord();
                 case '#microsoft.graph.security.noisyAlertPolicyAuditRecord': return new NoisyAlertPolicyAuditRecord();
                 case '#microsoft.graph.security.officeNativeAuditRecord': return new OfficeNativeAuditRecord();
                 case '#microsoft.graph.security.omePortalAuditRecord': return new OmePortalAuditRecord();
+                case '#microsoft.graph.security.onDemandExchangeClassification': return new OnDemandExchangeClassification();
                 case '#microsoft.graph.security.onDemandSharePointClassificationAuditRecord': return new OnDemandSharePointClassificationAuditRecord();
                 case '#microsoft.graph.security.oneDriveAuditRecord': return new OneDriveAuditRecord();
                 case '#microsoft.graph.security.onPremisesFileShareScannerDLPAuditRecord': return new OnPremisesFileShareScannerDLPAuditRecord();
@@ -261,13 +282,20 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.p4aiAssessmentFabricScannerRecord': return new P4aiAssessmentFabricScannerRecord();
                 case '#microsoft.graph.security.p4aiAssessmentLocationResultRecord': return new P4aiAssessmentLocationResultRecord();
                 case '#microsoft.graph.security.p4aiAssessmentRecord': return new P4aiAssessmentRecord();
+                case '#microsoft.graph.security.p4AiDagSitePermissionsRecord': return new P4AiDagSitePermissionsRecord();
                 case '#microsoft.graph.security.p4AIRiskScoreRecord': return new P4AIRiskScoreRecord();
                 case '#microsoft.graph.security.peopleAdminSettingsAuditRecord': return new PeopleAdminSettingsAuditRecord();
+                case '#microsoft.graph.security.peopleSkillsAdmin': return new PeopleSkillsAdmin();
+                case '#microsoft.graph.security.peopleSkillsUser': return new PeopleSkillsUser();
                 case '#microsoft.graph.security.physicalBadgingSignalAuditRecord': return new PhysicalBadgingSignalAuditRecord();
                 case '#microsoft.graph.security.placesDirectoryAuditRecord': return new PlacesDirectoryAuditRecord();
                 case '#microsoft.graph.security.plannerChatMessageAuditRecord': return new PlannerChatMessageAuditRecord();
                 case '#microsoft.graph.security.plannerChatMessageListAuditRecord': return new PlannerChatMessageListAuditRecord();
                 case '#microsoft.graph.security.plannerCopyPlanAuditRecord': return new PlannerCopyPlanAuditRecord();
+                case '#microsoft.graph.security.plannerCustomFieldDefinition': return new PlannerCustomFieldDefinition();
+                case '#microsoft.graph.security.plannerCustomFieldDefinitionList': return new PlannerCustomFieldDefinitionList();
+                case '#microsoft.graph.security.plannerDependency': return new PlannerDependency();
+                case '#microsoft.graph.security.plannerDependencyList': return new PlannerDependencyList();
                 case '#microsoft.graph.security.plannerGoalAuditRecord': return new PlannerGoalAuditRecord();
                 case '#microsoft.graph.security.plannerGoalListAuditRecord': return new PlannerGoalListAuditRecord();
                 case '#microsoft.graph.security.plannerPlanAuditRecord': return new PlannerPlanAuditRecord();
@@ -354,6 +382,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.sharePointContentTypeOperationAuditRecord': return new SharePointContentTypeOperationAuditRecord();
                 case '#microsoft.graph.security.sharePointESignatureAuditRecord': return new SharePointESignatureAuditRecord();
                 case '#microsoft.graph.security.sharePointFieldOperationAuditRecord': return new SharePointFieldOperationAuditRecord();
+                case '#microsoft.graph.security.sharePointFileArchivePolicy': return new SharePointFileArchivePolicy();
                 case '#microsoft.graph.security.sharePointFileOperationAuditRecord': return new SharePointFileOperationAuditRecord();
                 case '#microsoft.graph.security.sharePointListItemOperationAuditRecord': return new SharePointListItemOperationAuditRecord();
                 case '#microsoft.graph.security.sharePointListOperationAuditRecord': return new SharePointListOperationAuditRecord();
@@ -369,6 +398,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.sparkCoreCustomLivePoolRecord': return new SparkCoreCustomLivePoolRecord();
                 case '#microsoft.graph.security.submissionEntityAuditRecord': return new SubmissionEntityAuditRecord();
                 case '#microsoft.graph.security.supervisoryReviewDayXInsightsAuditRecord': return new SupervisoryReviewDayXInsightsAuditRecord();
+                case '#microsoft.graph.security.syntheticMediaDetectionEvent': return new SyntheticMediaDetectionEvent();
                 case '#microsoft.graph.security.syntheticProbeAuditRecord': return new SyntheticProbeAuditRecord();
                 case '#microsoft.graph.security.teamCopilotInteractionAuditRecord': return new TeamCopilotInteractionAuditRecord();
                 case '#microsoft.graph.security.teamsEasyApprovalsAuditRecord': return new TeamsEasyApprovalsAuditRecord();
@@ -392,6 +422,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.unifiedSimulationSummaryAuditRecord': return new UnifiedSimulationSummaryAuditRecord();
                 case '#microsoft.graph.security.universalPrintManagementAuditRecord': return new UniversalPrintManagementAuditRecord();
                 case '#microsoft.graph.security.universalPrintPrintJobAuditRecord': return new UniversalPrintPrintJobAuditRecord();
+                case '#microsoft.graph.security.universalPrintSecureScan': return new UniversalPrintSecureScan();
                 case '#microsoft.graph.security.urbacAssignmentAuditRecord': return new UrbacAssignmentAuditRecord();
                 case '#microsoft.graph.security.urbacEnableStateAuditRecord': return new UrbacEnableStateAuditRecord();
                 case '#microsoft.graph.security.urbacRoleAuditRecord': return new UrbacRoleAuditRecord();
@@ -406,6 +437,8 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.vivaEngageSegmentAuditRecord': return new VivaEngageSegmentAuditRecord();
                 case '#microsoft.graph.security.vivaGlintAdvancedConfigurationAuditRecord': return new VivaGlintAdvancedConfigurationAuditRecord();
                 case '#microsoft.graph.security.vivaGlintAgenticCampaignAuditRecord': return new VivaGlintAgenticCampaignAuditRecord();
+                case '#microsoft.graph.security.vivaGlintClientConfiguration': return new VivaGlintClientConfiguration();
+                case '#microsoft.graph.security.vivaGlintDataRetention': return new VivaGlintDataRetention();
                 case '#microsoft.graph.security.vivaGlintFeedbackProgramAuditRecord': return new VivaGlintFeedbackProgramAuditRecord();
                 case '#microsoft.graph.security.vivaGlintOrganizationalDataAuditRecord': return new VivaGlintOrganizationalDataAuditRecord();
                 case '#microsoft.graph.security.vivaGlintPulseProgramAuditRecord': return new VivaGlintPulseProgramAuditRecord();
@@ -417,6 +450,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.vivaGlintSystemAuditRecord': return new VivaGlintSystemAuditRecord();
                 case '#microsoft.graph.security.vivaGlintUserAuditRecord': return new VivaGlintUserAuditRecord();
                 case '#microsoft.graph.security.vivaGlintUserGroupAuditRecord': return new VivaGlintUserGroupAuditRecord();
+                case '#microsoft.graph.security.vivaGlintVivaInsightsIntegration': return new VivaGlintVivaInsightsIntegration();
                 case '#microsoft.graph.security.vivaGoalsAuditRecord': return new VivaGoalsAuditRecord();
                 case '#microsoft.graph.security.vivaLearningAdminAuditRecord': return new VivaLearningAdminAuditRecord();
                 case '#microsoft.graph.security.vivaLearningAuditRecord': return new VivaLearningAuditRecord();
@@ -427,6 +461,7 @@ class AuditData implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.security.wdatpAlertsAuditRecord': return new WdatpAlertsAuditRecord();
                 case '#microsoft.graph.security.webContentFilteringAuditRecord': return new WebContentFilteringAuditRecord();
                 case '#microsoft.graph.security.windows365CustomerLockboxAuditRecord': return new Windows365CustomerLockboxAuditRecord();
+                case '#microsoft.graph.security.workIQAdminActivity': return new WorkIQAdminActivity();
                 case '#microsoft.graph.security.workplaceAnalyticsAuditRecord': return new WorkplaceAnalyticsAuditRecord();
                 case '#microsoft.graph.security.yammerAuditRecord': return new YammerAuditRecord();
                 case '#microsoft.graph.security.yammerUserHidingAuditRecord': return new YammerUserHidingAuditRecord();

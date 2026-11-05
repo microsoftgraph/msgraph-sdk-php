@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleDefinition;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\InheritsPermissionsFrom\InheritsPermissionsFromRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleDefinitions\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -22,6 +23,13 @@ class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder
     */
     public function inheritsPermissionsFrom(): InheritsPermissionsFromRequestBuilder {
         return new InheritsPermissionsFromRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

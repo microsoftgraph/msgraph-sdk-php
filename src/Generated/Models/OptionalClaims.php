@@ -79,6 +79,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'accessToken' => fn(ParseNode $n) => $o->setAccessToken($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
             'idToken' => fn(ParseNode $n) => $o->setIdToken($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
+            'kerberosTicket' => fn(ParseNode $n) => $o->setKerberosTicket($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'saml2Token' => fn(ParseNode $n) => $o->setSaml2Token($n->getCollectionOfObjectValues([OptionalClaim::class, 'createFromDiscriminatorValue'])),
         ];
@@ -96,6 +97,20 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'idToken'");
+    }
+
+    /**
+     * Gets the kerberosTicket property value. The kerberosTicket property
+     * @return array<OptionalClaim>|null
+    */
+    public function getKerberosTicket(): ?array {
+        $val = $this->getBackingStore()->get('kerberosTicket');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OptionalClaim::class);
+            /** @var array<OptionalClaim>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'kerberosTicket'");
     }
 
     /**
@@ -131,6 +146,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfObjectValues('accessToken', $this->getAccessToken());
         $writer->writeCollectionOfObjectValues('idToken', $this->getIdToken());
+        $writer->writeCollectionOfObjectValues('kerberosTicket', $this->getKerberosTicket());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfObjectValues('saml2Token', $this->getSaml2Token());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -166,6 +182,14 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setIdToken(?array $value): void {
         $this->getBackingStore()->set('idToken', $value);
+    }
+
+    /**
+     * Sets the kerberosTicket property value. The kerberosTicket property
+     * @param array<OptionalClaim>|null $value Value to set for the kerberosTicket property.
+    */
+    public function setKerberosTicket(?array $value): void {
+        $this->getBackingStore()->set('kerberosTicket', $value);
     }
 
     /**

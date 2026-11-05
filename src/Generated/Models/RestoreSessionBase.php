@@ -95,6 +95,7 @@ class RestoreSessionBase extends Entity implements Parsable
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
             'restoreJobType' => fn(ParseNode $n) => $o->setRestoreJobType($n->getEnumValue(RestoreJobType::class)),
             'restoreSessionArtifactCount' => fn(ParseNode $n) => $o->setRestoreSessionArtifactCount($n->getObjectValue([RestoreSessionArtifactCount::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(RestoreSessionStatus::class)),
@@ -123,6 +124,18 @@ class RestoreSessionBase extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
+    }
+
+    /**
+     * Gets the policyId property value. The identifier of the protection policy that scopes the restore session. When supplied during creation or update, the service validates that the referenced protection units belong to the specified policy.
+     * @return string|null
+    */
+    public function getPolicyId(): ?string {
+        $val = $this->getBackingStore()->get('policyId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyId'");
     }
 
     /**
@@ -173,6 +186,7 @@ class RestoreSessionBase extends Entity implements Parsable
         $writer->writeObjectValue('error', $this->getError());
         $writer->writeObjectValue('lastModifiedBy', $this->getLastModifiedBy());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeStringValue('policyId', $this->getPolicyId());
         $writer->writeEnumValue('restoreJobType', $this->getRestoreJobType());
         $writer->writeObjectValue('restoreSessionArtifactCount', $this->getRestoreSessionArtifactCount());
         $writer->writeEnumValue('status', $this->getStatus());
@@ -224,6 +238,14 @@ class RestoreSessionBase extends Entity implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the policyId property value. The identifier of the protection policy that scopes the restore session. When supplied during creation or update, the service validates that the referenced protection units belong to the specified policy.
+     * @param string|null $value Value to set for the policyId property.
+    */
+    public function setPolicyId(?string $value): void {
+        $this->getBackingStore()->set('policyId', $value);
     }
 
     /**

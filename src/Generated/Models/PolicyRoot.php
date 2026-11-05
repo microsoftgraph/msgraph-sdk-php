@@ -194,7 +194,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
+     * Gets the federatedTokenValidationPolicy property value. Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @return FederatedTokenValidationPolicy|null
     */
     public function getFederatedTokenValidationPolicy(): ?FederatedTokenValidationPolicy {
@@ -480,7 +480,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
+     * Sets the federatedTokenValidationPolicy property value. Represents a policy to control enabling or disabling validation of federation authentication tokens.
      * @param FederatedTokenValidationPolicy|null $value Value to set for the federatedTokenValidationPolicy property.
     */
     public function setFederatedTokenValidationPolicy(?FederatedTokenValidationPolicy $value): void {

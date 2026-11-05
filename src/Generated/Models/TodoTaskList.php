@@ -62,6 +62,7 @@ class TodoTaskList extends Entity implements Parsable
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'isOwner' => fn(ParseNode $n) => $o->setIsOwner($n->getBooleanValue()),
             'isShared' => fn(ParseNode $n) => $o->setIsShared($n->getBooleanValue()),
+            'singleValueExtendedProperties' => fn(ParseNode $n) => $o->setSingleValueExtendedProperties($n->getCollectionOfObjectValues([SingleValueExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'tasks' => fn(ParseNode $n) => $o->setTasks($n->getCollectionOfObjectValues([TodoTask::class, 'createFromDiscriminatorValue'])),
             'wellknownListName' => fn(ParseNode $n) => $o->setWellknownListName($n->getEnumValue(WellknownListName::class)),
         ]);
@@ -89,6 +90,20 @@ class TodoTaskList extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isShared'");
+    }
+
+    /**
+     * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Nullable.
+     * @return array<SingleValueExtendedProperty>|null
+    */
+    public function getSingleValueExtendedProperties(): ?array {
+        $val = $this->getBackingStore()->get('singleValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SingleValueExtendedProperty::class);
+            /** @var array<SingleValueExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleValueExtendedProperties'");
     }
 
     /**
@@ -127,6 +142,7 @@ class TodoTaskList extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeBooleanValue('isOwner', $this->getIsOwner());
         $writer->writeBooleanValue('isShared', $this->getIsShared());
+        $writer->writeCollectionOfObjectValues('singleValueExtendedProperties', $this->getSingleValueExtendedProperties());
         $writer->writeCollectionOfObjectValues('tasks', $this->getTasks());
         $writer->writeEnumValue('wellknownListName', $this->getWellknownListName());
     }
@@ -161,6 +177,14 @@ class TodoTaskList extends Entity implements Parsable
     */
     public function setIsShared(?bool $value): void {
         $this->getBackingStore()->set('isShared', $value);
+    }
+
+    /**
+     * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task list. Nullable.
+     * @param array<SingleValueExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+    */
+    public function setSingleValueExtendedProperties(?array $value): void {
+        $this->getBackingStore()->set('singleValueExtendedProperties', $value);
     }
 
     /**

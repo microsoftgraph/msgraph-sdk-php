@@ -106,9 +106,22 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
             'backupRestore' => fn(ParseNode $n) => $o->setBackupRestore($n->getObjectValue([BackupRestoreRoot::class, 'createFromDiscriminatorValue'])),
             'bookingBusinesses' => fn(ParseNode $n) => $o->setBookingBusinesses($n->getCollectionOfObjectValues([BookingBusiness::class, 'createFromDiscriminatorValue'])),
             'bookingCurrencies' => fn(ParseNode $n) => $o->setBookingCurrencies($n->getCollectionOfObjectValues([BookingCurrency::class, 'createFromDiscriminatorValue'])),
+            'migrations' => fn(ParseNode $n) => $o->setMigrations($n->getObjectValue([MigrationsRoot::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'virtualEvents' => fn(ParseNode $n) => $o->setVirtualEvents($n->getObjectValue([VirtualEventsRoot::class, 'createFromDiscriminatorValue'])),
         ];
+    }
+
+    /**
+     * Gets the migrations property value. The entry point for cross-tenant migration operations.
+     * @return MigrationsRoot|null
+    */
+    public function getMigrations(): ?MigrationsRoot {
+        $val = $this->getBackingStore()->get('migrations');
+        if (is_null($val) || $val instanceof MigrationsRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'migrations'");
     }
 
     /**
@@ -143,6 +156,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeObjectValue('backupRestore', $this->getBackupRestore());
         $writer->writeCollectionOfObjectValues('bookingBusinesses', $this->getBookingBusinesses());
         $writer->writeCollectionOfObjectValues('bookingCurrencies', $this->getBookingCurrencies());
+        $writer->writeObjectValue('migrations', $this->getMigrations());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('virtualEvents', $this->getVirtualEvents());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -186,6 +200,14 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBookingCurrencies(?array $value): void {
         $this->getBackingStore()->set('bookingCurrencies', $value);
+    }
+
+    /**
+     * Sets the migrations property value. The entry point for cross-tenant migration operations.
+     * @param MigrationsRoot|null $value Value to set for the migrations property.
+    */
+    public function setMigrations(?MigrationsRoot $value): void {
+        $this->getBackingStore()->set('migrations', $value);
     }
 
     /**

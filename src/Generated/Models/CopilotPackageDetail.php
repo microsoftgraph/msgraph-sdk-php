@@ -128,6 +128,7 @@ class CopilotPackageDetail extends CopilotPackage implements Parsable
             'exceptionRate' => fn(ParseNode $n) => $o->setExceptionRate($n->getFloatValue()),
             'lastUsedDateTime' => fn(ParseNode $n) => $o->setLastUsedDateTime($n->getDateTimeValue()),
             'longDescription' => fn(ParseNode $n) => $o->setLongDescription($n->getStringValue()),
+            'requestMetadata' => fn(ParseNode $n) => $o->setRequestMetadata($n->getObjectValue([CopilotPackageRequestMetadata::class, 'createFromDiscriminatorValue'])),
             'sensitivity' => fn(ParseNode $n) => $o->setSensitivity($n->getStringValue()),
             'sharedWithUsersAndGroups' => fn(ParseNode $n) => $o->setSharedWithUsersAndGroups($n->getCollectionOfObjectValues([PackageAccessEntity::class, 'createFromDiscriminatorValue'])),
             'totalRunTimeInHours' => fn(ParseNode $n) => $o->setTotalRunTimeInHours($n->getFloatValue()),
@@ -157,6 +158,18 @@ class CopilotPackageDetail extends CopilotPackage implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'longDescription'");
+    }
+
+    /**
+     * Gets the requestMetadata property value. Request metadata returned by an explicit opt-in package detail read. Null when not loaded.
+     * @return CopilotPackageRequestMetadata|null
+    */
+    public function getRequestMetadata(): ?CopilotPackageRequestMetadata {
+        $val = $this->getBackingStore()->get('requestMetadata');
+        if (is_null($val) || $val instanceof CopilotPackageRequestMetadata) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestMetadata'");
     }
 
     /**
@@ -291,6 +304,14 @@ class CopilotPackageDetail extends CopilotPackage implements Parsable
     */
     public function setLongDescription(?string $value): void {
         $this->getBackingStore()->set('longDescription', $value);
+    }
+
+    /**
+     * Sets the requestMetadata property value. Request metadata returned by an explicit opt-in package detail read. Null when not loaded.
+     * @param CopilotPackageRequestMetadata|null $value Value to set for the requestMetadata property.
+    */
+    public function setRequestMetadata(?CopilotPackageRequestMetadata $value): void {
+        $this->getBackingStore()->set('requestMetadata', $value);
     }
 
     /**

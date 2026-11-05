@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Partners\Billing\Billing;
+use Microsoft\Graph\Generated\Reports\Partners\Billing\AggregatedUsage\AggregatedUsageRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Manifests\ManifestsRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Partners\Billing\Reconciliation\ReconciliationRequestBuilder;
@@ -20,6 +21,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class BillingRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the aggregatedUsage property of the microsoft.graph.partners.billing.billing entity.
+    */
+    public function aggregatedUsage(): AggregatedUsageRequestBuilder {
+        return new AggregatedUsageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the manifests property of the microsoft.graph.partners.billing.billing entity.
     */

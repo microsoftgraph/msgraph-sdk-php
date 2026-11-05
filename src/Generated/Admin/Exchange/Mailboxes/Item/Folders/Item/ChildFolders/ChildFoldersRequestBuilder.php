@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Item\ChildFolders\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Item\ChildFolders\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Item\ChildFolders\Item\MailboxFolderItemRequestBuilder;
+use Microsoft\Graph\Generated\Models\MailboxFolder;
 use Microsoft\Graph\Generated\Models\MailboxFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -74,6 +75,21 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Create new navigation property to childFolders for admin
+     * @param MailboxFolder $body The request body
+     * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise<MailboxFolder|null>
+     * @throws Exception
+    */
+    public function post(MailboxFolder $body, ?ChildFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        $errorMappings = [
+                'XXX' => [ODataError::class, 'createFromDiscriminatorValue'],
+        ];
+        return $this->requestAdapter->sendAsync($requestInfo, [MailboxFolder::class, 'createFromDiscriminatorValue'], $errorMappings);
+    }
+
+    /**
      * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -91,6 +107,26 @@ class ChildFoldersRequestBuilder extends BaseRequestBuilder
             $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->tryAddHeader('Accept', "application/json");
+        return $requestInfo;
+    }
+
+    /**
+     * Create new navigation property to childFolders for admin
+     * @param MailboxFolder $body The request body
+     * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPostRequestInformation(MailboxFolder $body, ?ChildFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::POST;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->tryAddHeader('Accept', "application/json");
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

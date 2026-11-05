@@ -31,6 +31,13 @@ class Dictionary implements AdditionalDataHolder, BackedModel, Parsable
      * @return Dictionary
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): Dictionary {
+        $mappingValueNode = $parseNode->getChildNode("@odata.type");
+        if ($mappingValueNode !== null) {
+            $mappingValue = $mappingValueNode->getStringValue();
+            switch ($mappingValue) {
+                case '#microsoft.graph.security.alertCustomDetails': return new AlertCustomDetails();
+            }
+        }
         return new Dictionary();
     }
 

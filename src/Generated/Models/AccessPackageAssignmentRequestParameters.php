@@ -56,7 +56,7 @@ class AccessPackageAssignmentRequestParameters implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the bypassApproval property value. The bypassApproval property
+     * Gets the bypassApproval property value. When true, bypasses the approval requirement configured on the access package policy for this request.
      * @return bool|null
     */
     public function getBypassApproval(): ?bool {
@@ -118,7 +118,7 @@ class AccessPackageAssignmentRequestParameters implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the bypassApproval property value. The bypassApproval property
+     * Sets the bypassApproval property value. When true, bypasses the approval requirement configured on the access package policy for this request.
      * @param bool|null $value Value to set for the bypassApproval property.
     */
     public function setBypassApproval(?bool $value): void {

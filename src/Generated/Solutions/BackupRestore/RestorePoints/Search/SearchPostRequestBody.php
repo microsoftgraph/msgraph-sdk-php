@@ -80,6 +80,7 @@ class SearchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
         $o = $this;
         return  [
             'artifactQuery' => fn(ParseNode $n) => $o->setArtifactQuery($n->getObjectValue([ArtifactQuery::class, 'createFromDiscriminatorValue'])),
+            'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
             'protectionTimePeriod' => fn(ParseNode $n) => $o->setProtectionTimePeriod($n->getObjectValue([TimePeriod::class, 'createFromDiscriminatorValue'])),
             'protectionUnitIds' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
@@ -92,6 +93,18 @@ class SearchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
             'restorePointPreference' => fn(ParseNode $n) => $o->setRestorePointPreference($n->getEnumValue(RestorePointPreference::class)),
             'tags' => fn(ParseNode $n) => $o->setTags($n->getEnumValue(RestorePointTags::class)),
         ];
+    }
+
+    /**
+     * Gets the policyId property value. The policyId property
+     * @return string|null
+    */
+    public function getPolicyId(): ?string {
+        $val = $this->getBackingStore()->get('policyId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyId'");
     }
 
     /**
@@ -150,6 +163,7 @@ class SearchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeObjectValue('artifactQuery', $this->getArtifactQuery());
+        $writer->writeStringValue('policyId', $this->getPolicyId());
         $writer->writeObjectValue('protectionTimePeriod', $this->getProtectionTimePeriod());
         $writer->writeCollectionOfPrimitiveValues('protectionUnitIds', $this->getProtectionUnitIds());
         $writer->writeEnumValue('restorePointPreference', $this->getRestorePointPreference());
@@ -179,6 +193,14 @@ class SearchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the policyId property value. The policyId property
+     * @param string|null $value Value to set for the policyId property.
+    */
+    public function setPolicyId(?string $value): void {
+        $this->getBackingStore()->set('policyId', $value);
     }
 
     /**

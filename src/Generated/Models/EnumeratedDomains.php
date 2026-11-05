@@ -27,7 +27,7 @@ class EnumeratedDomains extends ValidatingDomains implements Parsable
     }
 
     /**
-     * Gets the domainNames property value. The domainNames property
+     * Gets the domainNames property value. List of federated or managed root domains that Microsoft Entra ID validates.
      * @return array<string>|null
     */
     public function getDomainNames(): ?array {
@@ -68,7 +68,7 @@ class EnumeratedDomains extends ValidatingDomains implements Parsable
     }
 
     /**
-     * Sets the domainNames property value. The domainNames property
+     * Sets the domainNames property value. List of federated or managed root domains that Microsoft Entra ID validates.
      * @param array<string>|null $value Value to set for the domainNames property.
     */
     public function setDomainNames(?array $value): void {

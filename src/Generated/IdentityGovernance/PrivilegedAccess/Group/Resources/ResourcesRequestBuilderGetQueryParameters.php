@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\PrivilegedAccess\Group\Re
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get resources from identityGovernance
+ * Get a list of the groupResource objects and their properties.
 */
 class ResourcesRequestBuilderGetQueryParameters 
 {
