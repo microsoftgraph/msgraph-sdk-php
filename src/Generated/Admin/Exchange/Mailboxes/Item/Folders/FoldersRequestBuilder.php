@@ -60,7 +60,7 @@ class FoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren't returned. To include them, specify includeHiddenFolders=true.
      * @param FoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<MailboxFolderCollectionResponse|null>
      * @throws Exception
@@ -91,7 +91,7 @@ class FoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+     * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren't returned. To include them, specify includeHiddenFolders=true.
      * @param FoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,7 +53,7 @@ class DeletedItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @param DeletedItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<DeletedItemContainer|null>
      * @throws Exception
@@ -85,7 +85,7 @@ class DeletedItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Deleted workflows in your lifecycle workflows instance.
+     * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @param DeletedItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

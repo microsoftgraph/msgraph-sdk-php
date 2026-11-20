@@ -58,6 +58,18 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the error property value. Contains error details if the restoration fails or completes with an error.
+     * @return PublicError|null
+    */
+    public function getError(): ?PublicError {
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof PublicError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable(ParseNode): void>
     */
@@ -66,6 +78,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'browseSessionId' => fn(ParseNode $n) => $o->setBrowseSessionId($n->getStringValue()),
             'completionDateTime' => fn(ParseNode $n) => $o->setCompletionDateTime($n->getDateTimeValue()),
+            'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             'restoredItemKey' => fn(ParseNode $n) => $o->setRestoredItemKey($n->getStringValue()),
             'restoredItemPath' => fn(ParseNode $n) => $o->setRestoredItemPath($n->getStringValue()),
             'restoredItemWebUrl' => fn(ParseNode $n) => $o->setRestoredItemWebUrl($n->getStringValue()),
@@ -168,6 +181,7 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeStringValue('browseSessionId', $this->getBrowseSessionId());
         $writer->writeDateTimeValue('completionDateTime', $this->getCompletionDateTime());
+        $writer->writeObjectValue('error', $this->getError());
         $writer->writeStringValue('restoredItemKey', $this->getRestoredItemKey());
         $writer->writeStringValue('restoredItemPath', $this->getRestoredItemPath());
         $writer->writeStringValue('restoredItemWebUrl', $this->getRestoredItemWebUrl());
@@ -191,6 +205,14 @@ class GranularRestoreArtifactBase extends Entity implements Parsable
     */
     public function setCompletionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('completionDateTime', $value);
+    }
+
+    /**
+     * Sets the error property value. Contains error details if the restoration fails or completes with an error.
+     * @param PublicError|null $value Value to set for the error property.
+    */
+    public function setError(?PublicError $value): void {
+        $this->getBackingStore()->set('error', $value);
     }
 
     /**

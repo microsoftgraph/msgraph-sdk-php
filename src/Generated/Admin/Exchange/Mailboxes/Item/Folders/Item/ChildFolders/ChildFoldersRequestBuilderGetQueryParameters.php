@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders\Item\C
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
+ * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox. By default, hidden child folders aren't returned. To include them, specify includeHiddenFolders=true.
 */
 class ChildFoldersRequestBuilderGetQueryParameters 
 {

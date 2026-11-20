@@ -35,6 +35,18 @@ class ProtectionUnitBase extends Entity implements Parsable
     }
 
     /**
+     * Gets the backupRetentionPeriodInDays property value. The policy-configured retention period of the backup, in days. Not nullable.
+     * @return int|null
+    */
+    public function getBackupRetentionPeriodInDays(): ?int {
+        $val = $this->getBackingStore()->get('backupRetentionPeriodInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'backupRetentionPeriodInDays'");
+    }
+
+    /**
      * Gets the createdBy property value. The identity of the person who created the protection unit.
      * @return IdentitySet|null
     */
@@ -77,12 +89,14 @@ class ProtectionUnitBase extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'backupRetentionPeriodInDays' => fn(ParseNode $n) => $o->setBackupRetentionPeriodInDays($n->getIntegerValue()),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'error' => fn(ParseNode $n) => $o->setError($n->getObjectValue([PublicError::class, 'createFromDiscriminatorValue'])),
             'lastModifiedBy' => fn(ParseNode $n) => $o->setLastModifiedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'offboardRequestedDateTime' => fn(ParseNode $n) => $o->setOffboardRequestedDateTime($n->getDateTimeValue()),
+            'pendingRetentionPeriodChange' => fn(ParseNode $n) => $o->setPendingRetentionPeriodChange($n->getObjectValue([RetentionPeriodChange::class, 'createFromDiscriminatorValue'])),
             'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
             'protectionSources' => fn(ParseNode $n) => $o->setProtectionSources($n->getEnumValue(ProtectionSource::class)),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(ProtectionUnitStatus::class)),
@@ -123,6 +137,18 @@ class ProtectionUnitBase extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'offboardRequestedDateTime'");
+    }
+
+    /**
+     * Gets the pendingRetentionPeriodChange property value. The retention period change to be applied to the protection unit when it moves between policies with different retention periods. Read-only. null when no change is pending.
+     * @return RetentionPeriodChange|null
+    */
+    public function getPendingRetentionPeriodChange(): ?RetentionPeriodChange {
+        $val = $this->getBackingStore()->get('pendingRetentionPeriodChange');
+        if (is_null($val) || $val instanceof RetentionPeriodChange) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pendingRetentionPeriodChange'");
     }
 
     /**
@@ -167,6 +193,7 @@ class ProtectionUnitBase extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeIntegerValue('backupRetentionPeriodInDays', $this->getBackupRetentionPeriodInDays());
         $writer->writeObjectValue('createdBy', $this->getCreatedBy());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('error', $this->getError());
@@ -176,6 +203,14 @@ class ProtectionUnitBase extends Entity implements Parsable
         $writer->writeStringValue('policyId', $this->getPolicyId());
         $writer->writeEnumValue('protectionSources', $this->getProtectionSources());
         $writer->writeEnumValue('status', $this->getStatus());
+    }
+
+    /**
+     * Sets the backupRetentionPeriodInDays property value. The policy-configured retention period of the backup, in days. Not nullable.
+     * @param int|null $value Value to set for the backupRetentionPeriodInDays property.
+    */
+    public function setBackupRetentionPeriodInDays(?int $value): void {
+        $this->getBackingStore()->set('backupRetentionPeriodInDays', $value);
     }
 
     /**
@@ -224,6 +259,14 @@ class ProtectionUnitBase extends Entity implements Parsable
     */
     public function setOffboardRequestedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('offboardRequestedDateTime', $value);
+    }
+
+    /**
+     * Sets the pendingRetentionPeriodChange property value. The retention period change to be applied to the protection unit when it moves between policies with different retention periods. Read-only. null when no change is pending.
+     * @param RetentionPeriodChange|null $value Value to set for the pendingRetentionPeriodChange property.
+    */
+    public function setPendingRetentionPeriodChange(?RetentionPeriodChange $value): void {
+        $this->getBackingStore()->set('pendingRetentionPeriodChange', $value);
     }
 
     /**

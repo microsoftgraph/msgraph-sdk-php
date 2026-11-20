@@ -503,6 +503,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.directoryRole': return new DirectoryRole();
                 case '#microsoft.graph.directoryRoleManagementDeletedItemContainer': return new DirectoryRoleManagementDeletedItemContainer();
                 case '#microsoft.graph.directoryRoleTemplate': return new DirectoryRoleTemplate();
+                case '#microsoft.graph.distributionList': return new DistributionList();
+                case '#microsoft.graph.distributionListMember': return new DistributionListMember();
                 case '#microsoft.graph.documentSetVersion': return new DocumentSetVersion();
                 case '#microsoft.graph.domain': return new Domain();
                 case '#microsoft.graph.domainDnsCnameRecord': return new DomainDnsCnameRecord();
@@ -770,6 +772,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.mobileAppCategory': return new MobileAppCategory();
                 case '#microsoft.graph.mobileAppContent': return new MobileAppContent();
                 case '#microsoft.graph.mobileAppContentFile': return new MobileAppContentFile();
+                case '#microsoft.graph.mobileAppContentScript': return new MobileAppContentScript();
                 case '#microsoft.graph.mobileAppRelationship': return new MobileAppRelationship();
                 case '#microsoft.graph.mobileAppTroubleshootingEvent': return new MobileAppTroubleshootingEvent();
                 case '#microsoft.graph.mobileContainedApp': return new MobileContainedApp();
@@ -1303,6 +1306,9 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.webApplicationFirewallVerificationModel': return new WebApplicationFirewallVerificationModel();
                 case '#microsoft.graph.webPart': return new WebPart();
                 case '#microsoft.graph.win32LobApp': return new Win32LobApp();
+                case '#microsoft.graph.win32LobAppInstallPowerShellScript': return new Win32LobAppInstallPowerShellScript();
+                case '#microsoft.graph.win32LobAppScript': return new Win32LobAppScript();
+                case '#microsoft.graph.win32LobAppUninstallPowerShellScript': return new Win32LobAppUninstallPowerShellScript();
                 case '#microsoft.graph.windows10CompliancePolicy': return new Windows10CompliancePolicy();
                 case '#microsoft.graph.windows10CustomConfiguration': return new Windows10CustomConfiguration();
                 case '#microsoft.graph.windows10EndpointProtectionConfiguration': return new Windows10EndpointProtectionConfiguration();

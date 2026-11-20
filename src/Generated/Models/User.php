@@ -501,6 +501,20 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the distributionLists property value. The personal distribution lists in the user's mailbox. Read-only. Nullable.
+     * @return array<DistributionList>|null
+    */
+    public function getDistributionLists(): ?array {
+        $val = $this->getBackingStore()->get('distributionLists');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DistributionList::class);
+            /** @var array<DistributionList>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'distributionLists'");
+    }
+
+    /**
      * Gets the drive property value. The user's OneDrive. Read-only.
      * @return Drive|null
     */
@@ -724,6 +738,7 @@ class User extends DirectoryObject implements Parsable
             'deviceManagementTroubleshootingEvents' => fn(ParseNode $n) => $o->setDeviceManagementTroubleshootingEvents($n->getCollectionOfObjectValues([DeviceManagementTroubleshootingEvent::class, 'createFromDiscriminatorValue'])),
             'directReports' => fn(ParseNode $n) => $o->setDirectReports($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'distributionLists' => fn(ParseNode $n) => $o->setDistributionLists($n->getCollectionOfObjectValues([DistributionList::class, 'createFromDiscriminatorValue'])),
             'drive' => fn(ParseNode $n) => $o->setDrive($n->getObjectValue([Drive::class, 'createFromDiscriminatorValue'])),
             'drives' => fn(ParseNode $n) => $o->setDrives($n->getCollectionOfObjectValues([Drive::class, 'createFromDiscriminatorValue'])),
             'employeeExperience' => fn(ParseNode $n) => $o->setEmployeeExperience($n->getObjectValue([EmployeeExperienceUser::class, 'createFromDiscriminatorValue'])),
@@ -2025,6 +2040,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('deviceManagementTroubleshootingEvents', $this->getDeviceManagementTroubleshootingEvents());
         $writer->writeCollectionOfObjectValues('directReports', $this->getDirectReports());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('distributionLists', $this->getDistributionLists());
         $writer->writeObjectValue('drive', $this->getDrive());
         $writer->writeCollectionOfObjectValues('drives', $this->getDrives());
         $writer->writeObjectValue('employeeExperience', $this->getEmployeeExperience());
@@ -2413,6 +2429,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the distributionLists property value. The personal distribution lists in the user's mailbox. Read-only. Nullable.
+     * @param array<DistributionList>|null $value Value to set for the distributionLists property.
+    */
+    public function setDistributionLists(?array $value): void {
+        $this->getBackingStore()->set('distributionLists', $value);
     }
 
     /**

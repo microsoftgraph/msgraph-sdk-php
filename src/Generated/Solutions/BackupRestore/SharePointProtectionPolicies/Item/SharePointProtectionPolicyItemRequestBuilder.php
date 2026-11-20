@@ -83,7 +83,7 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
+     * Update a SharePoint protection policy. This method updates retention settings or adds a siteProtectionUnit to or removes it from the protection policy.
      * @param SharePointProtectionPolicy $body The request body
      * @param SharePointProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<SharePointProtectionPolicy|null>
@@ -138,7 +138,7 @@ class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
+     * Update a SharePoint protection policy. This method updates retention settings or adds a siteProtectionUnit to or removes it from the protection policy.
      * @param SharePointProtectionPolicy $body The request body
      * @param SharePointProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

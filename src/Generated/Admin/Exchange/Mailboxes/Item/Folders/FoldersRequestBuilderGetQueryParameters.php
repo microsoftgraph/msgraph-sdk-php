@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Exchange\Mailboxes\Item\Folders;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get all the mailboxFolder objects in the specified mailbox, including any search folders.
+ * Get all the mailboxFolder objects in the specified mailbox, including any search folders. By default, hidden folders aren't returned. To include them, specify includeHiddenFolders=true.
 */
 class FoldersRequestBuilderGetQueryParameters 
 {

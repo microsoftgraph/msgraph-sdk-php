@@ -51,6 +51,7 @@ class MobileAppContent extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'containedApps' => fn(ParseNode $n) => $o->setContainedApps($n->getCollectionOfObjectValues([MobileContainedApp::class, 'createFromDiscriminatorValue'])),
             'files' => fn(ParseNode $n) => $o->setFiles($n->getCollectionOfObjectValues([MobileAppContentFile::class, 'createFromDiscriminatorValue'])),
+            'scripts' => fn(ParseNode $n) => $o->setScripts($n->getCollectionOfObjectValues([MobileAppContentScript::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -69,6 +70,20 @@ class MobileAppContent extends Entity implements Parsable
     }
 
     /**
+     * Gets the scripts property value. The list of scripts for this app content version.
+     * @return array<MobileAppContentScript>|null
+    */
+    public function getScripts(): ?array {
+        $val = $this->getBackingStore()->get('scripts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileAppContentScript::class);
+            /** @var array<MobileAppContentScript>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scripts'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -76,6 +91,7 @@ class MobileAppContent extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('containedApps', $this->getContainedApps());
         $writer->writeCollectionOfObjectValues('files', $this->getFiles());
+        $writer->writeCollectionOfObjectValues('scripts', $this->getScripts());
     }
 
     /**
@@ -92,6 +108,14 @@ class MobileAppContent extends Entity implements Parsable
     */
     public function setFiles(?array $value): void {
         $this->getBackingStore()->set('files', $value);
+    }
+
+    /**
+     * Sets the scripts property value. The list of scripts for this app content version.
+     * @param array<MobileAppContentScript>|null $value Value to set for the scripts property.
+    */
+    public function setScripts(?array $value): void {
+        $this->getBackingStore()->set('scripts', $value);
     }
 
 }

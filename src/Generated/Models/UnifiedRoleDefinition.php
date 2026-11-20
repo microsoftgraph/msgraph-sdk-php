@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
@@ -23,6 +24,18 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): UnifiedRoleDefinition {
         return new UnifiedRoleDefinition();
+    }
+
+    /**
+     * Gets the deletedDateTime property value. The date and time when the custom role definition was deleted. The value is null for active and restored role definitions. Read-only.
+     * @return DateTime|null
+    */
+    public function getDeletedDateTime(): ?DateTime {
+        $val = $this->getBackingStore()->get('deletedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedDateTime'");
     }
 
     /**
@@ -56,11 +69,13 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'deletedDateTime' => fn(ParseNode $n) => $o->setDeletedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'inheritsPermissionsFrom' => fn(ParseNode $n) => $o->setInheritsPermissionsFrom($n->getCollectionOfObjectValues([UnifiedRoleDefinition::class, 'createFromDiscriminatorValue'])),
             'isBuiltIn' => fn(ParseNode $n) => $o->setIsBuiltIn($n->getBooleanValue()),
             'isEnabled' => fn(ParseNode $n) => $o->setIsEnabled($n->getBooleanValue()),
+            'isPrivileged' => fn(ParseNode $n) => $o->setIsPrivileged($n->getBooleanValue()),
             'resourceScopes' => function (ParseNode $n) {
                 $val = $n->getCollectionOfPrimitiveValues();
                 if (is_array($val)) {
@@ -111,6 +126,18 @@ class UnifiedRoleDefinition extends Entity implements Parsable
             return $val;
         }
         throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
+    }
+
+    /**
+     * Gets the isPrivileged property value. Flag indicating whether the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the allowedResourceActions collection of rolePermissions. Applies only to actions in the microsoft.directory resource namespace. Nullable. A value of null indicates that the privileged classification is unavailable, not that the role is nonprivileged. Read-only. Supports $filter (eq).
+     * @return bool|null
+    */
+    public function getIsPrivileged(): ?bool {
+        $val = $this->getBackingStore()->get('isPrivileged');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPrivileged'");
     }
 
     /**
@@ -171,15 +198,25 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeDateTimeValue('deletedDateTime', $this->getDeletedDateTime());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeCollectionOfObjectValues('inheritsPermissionsFrom', $this->getInheritsPermissionsFrom());
         $writer->writeBooleanValue('isBuiltIn', $this->getIsBuiltIn());
         $writer->writeBooleanValue('isEnabled', $this->getIsEnabled());
+        $writer->writeBooleanValue('isPrivileged', $this->getIsPrivileged());
         $writer->writeCollectionOfPrimitiveValues('resourceScopes', $this->getResourceScopes());
         $writer->writeCollectionOfObjectValues('rolePermissions', $this->getRolePermissions());
         $writer->writeStringValue('templateId', $this->getTemplateId());
         $writer->writeStringValue('version', $this->getVersion());
+    }
+
+    /**
+     * Sets the deletedDateTime property value. The date and time when the custom role definition was deleted. The value is null for active and restored role definitions. Read-only.
+     * @param DateTime|null $value Value to set for the deletedDateTime property.
+    */
+    public function setDeletedDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('deletedDateTime', $value);
     }
 
     /**
@@ -220,6 +257,14 @@ class UnifiedRoleDefinition extends Entity implements Parsable
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
+    }
+
+    /**
+     * Sets the isPrivileged property value. Flag indicating whether the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the allowedResourceActions collection of rolePermissions. Applies only to actions in the microsoft.directory resource namespace. Nullable. A value of null indicates that the privileged classification is unavailable, not that the role is nonprivileged. Read-only. Supports $filter (eq).
+     * @param bool|null $value Value to set for the isPrivileged property.
+    */
+    public function setIsPrivileged(?bool $value): void {
+        $this->getBackingStore()->set('isPrivileged', $value);
     }
 
     /**

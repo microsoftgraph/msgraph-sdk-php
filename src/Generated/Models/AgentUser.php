@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AgentUser extends User implements Parsable 
 {
@@ -32,7 +33,29 @@ class AgentUser extends User implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'managerApplications' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setManagerApplications($val);
+            },
         ]);
+    }
+
+    /**
+     * Gets the managerApplications property value. The application IDs (appId values) authorized to manage the agent user's backing agent blueprint. Read-only. Not nullable. Returns an empty collection when no manager applications are configured. Returned only with $select and the microsoft.graph.agentUser type cast; see Get agentUser. Doesn't support $filter.
+     * @return array<string>|null
+    */
+    public function getManagerApplications(): ?array {
+        $val = $this->getBackingStore()->get('managerApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managerApplications'");
     }
 
     /**
@@ -41,6 +64,14 @@ class AgentUser extends User implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+    }
+
+    /**
+     * Sets the managerApplications property value. The application IDs (appId values) authorized to manage the agent user's backing agent blueprint. Read-only. Not nullable. Returns an empty collection when no manager applications are configured. Returned only with $select and the microsoft.graph.agentUser type cast; see Get agentUser. Doesn't support $filter.
+     * @param array<string>|null $value Value to set for the managerApplications property.
+    */
+    public function setManagerApplications(?array $value): void {
+        $this->getBackingStore()->set('managerApplications', $value);
     }
 
 }
