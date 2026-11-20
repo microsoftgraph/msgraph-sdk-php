@@ -34,6 +34,7 @@ class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfigura
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([SmsAuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            'telecomProviderSettings' => fn(ParseNode $n) => $o->setTelecomProviderSettings($n->getObjectValue([TelecomProviderSettings::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -52,12 +53,25 @@ class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfigura
     }
 
     /**
+     * Gets the telecomProviderSettings property value. Settings for routing SMS authentication traffic through a telecom provider integration.
+     * @return TelecomProviderSettings|null
+    */
+    public function getTelecomProviderSettings(): ?TelecomProviderSettings {
+        $val = $this->getBackingStore()->get('telecomProviderSettings');
+        if (is_null($val) || $val instanceof TelecomProviderSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'telecomProviderSettings'");
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
+        $writer->writeObjectValue('telecomProviderSettings', $this->getTelecomProviderSettings());
     }
 
     /**
@@ -66,6 +80,14 @@ class SmsAuthenticationMethodConfiguration extends AuthenticationMethodConfigura
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
+    }
+
+    /**
+     * Sets the telecomProviderSettings property value. Settings for routing SMS authentication traffic through a telecom provider integration.
+     * @param TelecomProviderSettings|null $value Value to set for the telecomProviderSettings property.
+    */
+    public function setTelecomProviderSettings(?TelecomProviderSettings $value): void {
+        $this->getBackingStore()->set('telecomProviderSettings', $value);
     }
 
 }

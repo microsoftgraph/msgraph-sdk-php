@@ -29,6 +29,7 @@ class OutlookItem extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.calendarSharingMessage': return new CalendarSharingMessage();
                 case '#microsoft.graph.contact': return new Contact();
+                case '#microsoft.graph.distributionList': return new DistributionList();
                 case '#microsoft.graph.event': return new Event();
                 case '#microsoft.graph.eventMessage': return new EventMessage();
                 case '#microsoft.graph.eventMessageRequest': return new EventMessageRequest();

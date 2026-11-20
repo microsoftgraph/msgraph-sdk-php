@@ -208,7 +208,7 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the sensitivityLabels property value. The sensitivityLabels property
+     * Gets the sensitivityLabels property value. Caller-supplied sensitivity labels describing the content.
      * @return array<CurrentLabel>|null
     */
     public function getSensitivityLabels(): ?array {
@@ -350,7 +350,7 @@ class ProcessContentMetadataBase implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the sensitivityLabels property value. The sensitivityLabels property
+     * Sets the sensitivityLabels property value. Caller-supplied sensitivity labels describing the content.
      * @param array<CurrentLabel>|null $value Value to set for the sensitivityLabels property.
     */
     public function setSensitivityLabels(?array $value): void {

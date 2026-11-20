@@ -30,6 +30,30 @@ class Win32LobApp extends MobileLobApp implements Parsable
     }
 
     /**
+     * Gets the activeInstallScript property value. Contains the unique identifier of the associated install script for this Win32 app to be used instead of the install command line by the managed device during app installation. When null, the install command line is used instead.
+     * @return MobileAppScriptReference|null
+    */
+    public function getActiveInstallScript(): ?MobileAppScriptReference {
+        $val = $this->getBackingStore()->get('activeInstallScript');
+        if (is_null($val) || $val instanceof MobileAppScriptReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeInstallScript'");
+    }
+
+    /**
+     * Gets the activeUninstallScript property value. Contains the unique identifier of the associated uninstall script for this Win32 app to be used instead of the uninstall command line by the managed device during app uninstallation. When null, the uninstall command line is used instead.
+     * @return MobileAppScriptReference|null
+    */
+    public function getActiveUninstallScript(): ?MobileAppScriptReference {
+        $val = $this->getBackingStore()->get('activeUninstallScript');
+        if (is_null($val) || $val instanceof MobileAppScriptReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeUninstallScript'");
+    }
+
+    /**
      * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral.
      * @return WindowsArchitecture|null
     */
@@ -60,6 +84,8 @@ class Win32LobApp extends MobileLobApp implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'activeInstallScript' => fn(ParseNode $n) => $o->setActiveInstallScript($n->getObjectValue([MobileAppScriptReference::class, 'createFromDiscriminatorValue'])),
+            'activeUninstallScript' => fn(ParseNode $n) => $o->setActiveUninstallScript($n->getObjectValue([MobileAppScriptReference::class, 'createFromDiscriminatorValue'])),
             'allowedArchitectures' => fn(ParseNode $n) => $o->setAllowedArchitectures($n->getEnumValue(WindowsArchitecture::class)),
             'applicableArchitectures' => fn(ParseNode $n) => $o->setApplicableArchitectures($n->getEnumValue(WindowsArchitecture::class)),
             'installCommandLine' => fn(ParseNode $n) => $o->setInstallCommandLine($n->getStringValue()),
@@ -231,6 +257,8 @@ class Win32LobApp extends MobileLobApp implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('activeInstallScript', $this->getActiveInstallScript());
+        $writer->writeObjectValue('activeUninstallScript', $this->getActiveUninstallScript());
         $writer->writeEnumValue('allowedArchitectures', $this->getAllowedArchitectures());
         $writer->writeEnumValue('applicableArchitectures', $this->getApplicableArchitectures());
         $writer->writeStringValue('installCommandLine', $this->getInstallCommandLine());
@@ -245,6 +273,22 @@ class Win32LobApp extends MobileLobApp implements Parsable
         $writer->writeCollectionOfObjectValues('rules', $this->getRules());
         $writer->writeStringValue('setupFilePath', $this->getSetupFilePath());
         $writer->writeStringValue('uninstallCommandLine', $this->getUninstallCommandLine());
+    }
+
+    /**
+     * Sets the activeInstallScript property value. Contains the unique identifier of the associated install script for this Win32 app to be used instead of the install command line by the managed device during app installation. When null, the install command line is used instead.
+     * @param MobileAppScriptReference|null $value Value to set for the activeInstallScript property.
+    */
+    public function setActiveInstallScript(?MobileAppScriptReference $value): void {
+        $this->getBackingStore()->set('activeInstallScript', $value);
+    }
+
+    /**
+     * Sets the activeUninstallScript property value. Contains the unique identifier of the associated uninstall script for this Win32 app to be used instead of the uninstall command line by the managed device during app uninstallation. When null, the uninstall command line is used instead.
+     * @param MobileAppScriptReference|null $value Value to set for the activeUninstallScript property.
+    */
+    public function setActiveUninstallScript(?MobileAppScriptReference $value): void {
+        $this->getBackingStore()->set('activeUninstallScript', $value);
     }
 
     /**

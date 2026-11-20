@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphAndroidLobApp\ContentVersions\Item\ContainedApps\ContainedAppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphAndroidLobApp\ContentVersions\Item\Files\FilesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphAndroidLobApp\ContentVersions\Item\Scripts\ScriptsRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileAppContent;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -30,6 +31,13 @@ class MobileAppContentItemRequestBuilder extends BaseRequestBuilder
     */
     public function files(): FilesRequestBuilder {
         return new FilesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the scripts property of the microsoft.graph.mobileAppContent entity.
+    */
+    public function scripts(): ScriptsRequestBuilder {
+        return new ScriptsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

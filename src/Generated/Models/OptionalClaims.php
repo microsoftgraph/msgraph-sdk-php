@@ -100,7 +100,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the kerberosTicket property value. The kerberosTicket property
+     * Gets the kerberosTicket property value. Optional claims that control group SID resolution for Kerberos tickets. The supported claim name is groups.
      * @return array<OptionalClaim>|null
     */
     public function getKerberosTicket(): ?array {
@@ -185,7 +185,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the kerberosTicket property value. The kerberosTicket property
+     * Sets the kerberosTicket property value. Optional claims that control group SID resolution for Kerberos tickets. The supported claim name is groups.
      * @param array<OptionalClaim>|null $value Value to set for the kerberosTicket property.
     */
     public function setKerberosTicket(?array $value): void {

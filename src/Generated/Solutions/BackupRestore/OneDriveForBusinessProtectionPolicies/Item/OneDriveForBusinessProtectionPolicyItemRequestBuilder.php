@@ -83,7 +83,7 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the protection policy for the OneDrive service in Microsoft 365. This method adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
+     * Update the protection policy for the OneDrive service in Microsoft 365. This method updates retention settings or adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
      * @param OneDriveForBusinessProtectionPolicy $body The request body
      * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise<OneDriveForBusinessProtectionPolicy|null>
@@ -138,7 +138,7 @@ class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the protection policy for the OneDrive service in Microsoft 365. This method adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
+     * Update the protection policy for the OneDrive service in Microsoft 365. This method updates retention settings or adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
      * @param OneDriveForBusinessProtectionPolicy $body The request body
      * @param OneDriveForBusinessProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

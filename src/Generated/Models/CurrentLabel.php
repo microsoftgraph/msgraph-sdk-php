@@ -48,7 +48,7 @@ class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the applicationMode property value. The applicationMode property
+     * Gets the applicationMode property value. The application mode associated with the sensitivity label. The possible values are: manual, automatic, recommended, unknownFutureValue.
      * @return ApplicationMode|null
     */
     public function getApplicationMode(): ?ApplicationMode {
@@ -81,7 +81,7 @@ class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. The GUID that identifies the sensitivity label.
      * @return string|null
     */
     public function getId(): ?string {
@@ -124,7 +124,7 @@ class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the applicationMode property value. The applicationMode property
+     * Sets the applicationMode property value. The application mode associated with the sensitivity label. The possible values are: manual, automatic, recommended, unknownFutureValue.
      * @param ApplicationMode|null $value Value to set for the applicationMode property.
     */
     public function setApplicationMode(?ApplicationMode $value): void {
@@ -140,7 +140,7 @@ class CurrentLabel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. The GUID that identifies the sensitivity label.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

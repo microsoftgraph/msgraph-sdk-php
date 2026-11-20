@@ -73,6 +73,7 @@ class MailboxFolder extends Entity implements Parsable
             'childFolderCount' => fn(ParseNode $n) => $o->setChildFolderCount($n->getIntegerValue()),
             'childFolders' => fn(ParseNode $n) => $o->setChildFolders($n->getCollectionOfObjectValues([MailboxFolder::class, 'createFromDiscriminatorValue'])),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isHidden' => fn(ParseNode $n) => $o->setIsHidden($n->getBooleanValue()),
             'items' => fn(ParseNode $n) => $o->setItems($n->getCollectionOfObjectValues([MailboxItem::class, 'createFromDiscriminatorValue'])),
             'multiValueExtendedProperties' => fn(ParseNode $n) => $o->setMultiValueExtendedProperties($n->getCollectionOfObjectValues([MultiValueLegacyExtendedProperty::class, 'createFromDiscriminatorValue'])),
             'parentFolderId' => fn(ParseNode $n) => $o->setParentFolderId($n->getStringValue()),
@@ -81,6 +82,18 @@ class MailboxFolder extends Entity implements Parsable
             'type' => fn(ParseNode $n) => $o->setType($n->getStringValue()),
             'wellKnownName' => fn(ParseNode $n) => $o->setWellKnownName($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the isHidden property value. Indicates whether the folder is hidden. The default value is false. This property can be set only when you create the folder; it can't be updated using PATCH. By default, listing folders or listing child folders returns only folders that aren't hidden. To include hidden folders in the response, use the optional query parameter includeHiddenFolders=true. The response includes both hidden and nonhidden folders. If you use $select to limit the returned properties, include isHidden in the selection.
+     * @return bool|null
+    */
+    public function getIsHidden(): ?bool {
+        $val = $this->getBackingStore()->get('isHidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isHidden'");
     }
 
     /**
@@ -182,6 +195,7 @@ class MailboxFolder extends Entity implements Parsable
         $writer->writeIntegerValue('childFolderCount', $this->getChildFolderCount());
         $writer->writeCollectionOfObjectValues('childFolders', $this->getChildFolders());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isHidden', $this->getIsHidden());
         $writer->writeCollectionOfObjectValues('items', $this->getItems());
         $writer->writeCollectionOfObjectValues('multiValueExtendedProperties', $this->getMultiValueExtendedProperties());
         $writer->writeStringValue('parentFolderId', $this->getParentFolderId());
@@ -213,6 +227,14 @@ class MailboxFolder extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the isHidden property value. Indicates whether the folder is hidden. The default value is false. This property can be set only when you create the folder; it can't be updated using PATCH. By default, listing folders or listing child folders returns only folders that aren't hidden. To include hidden folders in the response, use the optional query parameter includeHiddenFolders=true. The response includes both hidden and nonhidden folders. If you use $select to limit the returned properties, include isHidden in the selection.
+     * @param bool|null $value Value to set for the isHidden property.
+    */
+    public function setIsHidden(?bool $value): void {
+        $this->getBackingStore()->set('isHidden', $value);
     }
 
     /**

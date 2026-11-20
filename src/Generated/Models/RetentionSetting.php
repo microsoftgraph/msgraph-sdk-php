@@ -70,7 +70,7 @@ class RetentionSetting implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the interval property value. The frequency of the backup.
+     * Gets the interval property value. The backup frequency, expressed as an ISO 8601 repeating interval. The service defines the backup intervals: R/PT10M for 10-minute copies and R/P1W for weekly copies. Use R/P1W when specifying the policy retention period in a create or update request.
      * @return string|null
     */
     public function getInterval(): ?string {
@@ -94,7 +94,7 @@ class RetentionSetting implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the period property value. The period of time to retain the protected data for a single Microsoft 365 service.
+     * Gets the period property value. The period of time to retain the protected data for a single Microsoft 365 service, expressed as an ISO 8601 duration. The supported policy retention periods in create and update requests are: P90D, P180D, P365D, P730D, P1095D, P1460D, P1825D, P2190D, P2555D, P2920D, P3285D, and P3650D. Other policy retention periods aren't supported.
      * @return DateInterval|null
     */
     public function getPeriod(): ?DateInterval {
@@ -133,7 +133,7 @@ class RetentionSetting implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the interval property value. The frequency of the backup.
+     * Sets the interval property value. The backup frequency, expressed as an ISO 8601 repeating interval. The service defines the backup intervals: R/PT10M for 10-minute copies and R/P1W for weekly copies. Use R/P1W when specifying the policy retention period in a create or update request.
      * @param string|null $value Value to set for the interval property.
     */
     public function setInterval(?string $value): void {
@@ -149,7 +149,7 @@ class RetentionSetting implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the period property value. The period of time to retain the protected data for a single Microsoft 365 service.
+     * Sets the period property value. The period of time to retain the protected data for a single Microsoft 365 service, expressed as an ISO 8601 duration. The supported policy retention periods in create and update requests are: P90D, P180D, P365D, P730D, P1095D, P1460D, P1825D, P2190D, P2555D, P2920D, P3285D, and P3650D. Other policy retention periods aren't supported.
      * @param DateInterval|null $value Value to set for the period property.
     */
     public function setPeriod(?DateInterval $value): void {

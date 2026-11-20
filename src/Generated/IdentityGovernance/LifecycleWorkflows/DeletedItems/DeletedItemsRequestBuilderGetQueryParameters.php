@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\Delete
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Deleted workflows in your lifecycle workflows instance.
+ * Deleted workflows and lifecycle policies in your lifecycle workflows instance.
 */
 class DeletedItemsRequestBuilderGetQueryParameters 
 {

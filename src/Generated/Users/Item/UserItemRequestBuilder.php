@@ -28,6 +28,7 @@ use Microsoft\Graph\Generated\Users\Item\CreatedObjects\CreatedObjectsRequestBui
 use Microsoft\Graph\Generated\Users\Item\DataSecurityAndGovernance\DataSecurityAndGovernanceRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\DeviceManagementTroubleshootingEvents\DeviceManagementTroubleshootingEventsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\DirectReports\DirectReportsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\DistributionLists\DistributionListsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\EmployeeExperience\EmployeeExperienceRequestBuilder;
@@ -250,6 +251,13 @@ class UserItemRequestBuilder extends BaseRequestBuilder
     */
     public function directReports(): DirectReportsRequestBuilder {
         return new DirectReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the distributionLists property of the microsoft.graph.user entity.
+    */
+    public function distributionLists(): DistributionListsRequestBuilder {
+        return new DistributionListsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

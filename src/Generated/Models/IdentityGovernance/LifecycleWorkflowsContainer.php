@@ -42,7 +42,7 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
+     * Gets the deletedItems property value. Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @return DeletedItemContainer|null
     */
     public function getDeletedItems(): ?DeletedItemContainer {
@@ -160,7 +160,7 @@ class LifecycleWorkflowsContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the deletedItems property value. Deleted workflows in your lifecycle workflows instance.
+     * Sets the deletedItems property value. Deleted workflows and lifecycle policies in your lifecycle workflows instance.
      * @param DeletedItemContainer|null $value Value to set for the deletedItems property.
     */
     public function setDeletedItems(?DeletedItemContainer $value): void {
